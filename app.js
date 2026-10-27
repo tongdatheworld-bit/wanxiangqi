@@ -52,7 +52,7 @@ function renderList() {
         <div class="lineup-main">
             <div class="lineup-top">
                 <div class="lineup-name">${item.name}</div>
-                <span class="ban-first-tag">BAN位</span>
+                <span class="tag ban-first-tag">BAN位</span>
                 ${Array.isArray(item["ban位"]) ? item["ban位"].map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
             </div>
             <div class="lineup-meta">
