@@ -6,7 +6,7 @@
         "player": "嬴律",
         "playerImg": "images/players/yinglv.png",
         "hard": "中等",
-        "lineupCode": "38337677766581410",
+        "lineupCode": "38337677766581410（点击复制）",
         "ban位": ["逐鹿", "大河流", "三分"],
         "heroList": [
             {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
@@ -28,7 +28,7 @@
         "player": "玉环",
         "playerImg": "images/players/yuhuan.png",
         "hard": "困难",
-        "lineupCode": "76616412643475690",
+        "lineupCode": "76616412643475690（点击复制）",
         "ban位": ["日落海"],
         "heroList": [],
         "equip": []
@@ -40,7 +40,7 @@
         "player": "孙小宾",
         "playerImg": "images/players/sunxiaobin.png",
         "hard": "中等",
-        "lineupCode": "77743464511520968",
+        "lineupCode": "77743464511520968（点击复制）",
         "ban位": ["逐鹿", "大河流", "河洛"],
         "heroList": [],
         "equip": []
@@ -52,7 +52,7 @@
         "player": "昭君",
         "playerImg": "images/players/zhaojun.png",
         "hard": "中等",
-        "lineupCode": "30456997313626170",
+        "lineupCode": "30456997313626170（点击复制）",
         "ban位": ["逐鹿", "河洛", "三分", "日落海"],
         "heroList": [],
         "equip": []
@@ -64,7 +64,7 @@
         "player": "昭君",
         "playerImg": "images/players/zhaojun.png",
         "hard": "中等",
-        "lineupCode": "94633913646845962",
+        "lineupCode": "94633913646845962（点击复制）",
         "ban位": ["逐鹿", "河洛", "日落海"],
         "heroList": [],
         "equip": []
@@ -76,7 +76,7 @@
         "player": "昭君",
         "playerImg": "images/players/zhaojun.png",
         "hard": "中等",
-        "lineupCode": "119403711597433866",
+        "lineupCode": "119403711597433866（点击复制）",
         "ban位": ["逐鹿", "河洛", "三分", "日落海"],
         "heroList": [],
         "equip": []
