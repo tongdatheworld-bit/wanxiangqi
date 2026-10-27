@@ -120,7 +120,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
-    border: 2px solid #333844;
+    border: 3px solid #333844;
     background: #1c212c;
     transition: 0.2s ease;
 }
