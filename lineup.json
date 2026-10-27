@@ -9,7 +9,13 @@
         "lineupCode": "38337677766581410",
         "ban位": ["逐鹿", "大河流", "三分"],
         "heroList": [
-            {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true}
+            {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
+            {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+            {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+            {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+            {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
         ],
         "equip": [
             {"name":"贤者的庇护","img":"images/equip/fuhuo.png"}
