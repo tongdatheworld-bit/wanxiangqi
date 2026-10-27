@@ -1,430 +1,92 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+// app.js
+let allLineupData = [];
+let currentFilterPlayer = 'all';
+let currentFilterRank = 'all';
+let currentFilterCamp = 'all';
+
+// 加载json
+fetch('./data.json')
+.then(res => res.json())
+.then(data => {
+    allLineupData = data;
+    renderList();
+})
+
+function renderList(){
+    const wrap = document.getElementById('lineupList');
+    let filterArr = [...allLineupData];
+
+    // 棋手筛选
+    if(currentFilterPlayer !== 'all'){
+        filterArr = filterArr.filter(item => item.player === currentFilterPlayer)
+    }
+    // 强度筛选
+    if(currentFilterRank !== 'all'){
+        filterArr = filterArr.filter(item => item.rank === currentFilterRank)
+    }
+    // 阵营筛选（ban位就是标签）
+    if(currentFilterCamp !== 'all'){
+        filterArr = filterArr.filter(item => item.ban位.includes(currentFilterCamp))
+    }
+
+    if (!filterArr.length) {
+        wrap.innerHTML = `<div style="text-align:center;color:#686e7c;padding:40px">没有匹配的阵容</div>`
+        return
+    }
+
+    wrap.innerHTML = filterArr.map(item=>`
+    <div class="lineup-card">
+        <div class="lineup-avatar">
+            <img src="${item.playerImg}" alt="${item.player}">
+        </>
+        <div class="lineup-rank">${item.rank}</div>
+        <div class="lineup-main">
+            <div class="lineup-top">
+                <div class="lineup-name">${item.name}</div>
+                ${item.ban位.map(tag=>`<span class="tag">${tag}</span>`).join('')}
+            </div>
+            <div class="lineup-meta">
+                <span>棋手：${item.player}</span>
+                <span>成型难度：${item.hard}</span>
+                <span>阵容码：${item.lineupCode}</span>
+            </div>
+            <div class="hero-row">
+                ${
+                    item.heroList && item.heroList.length
+                    ? item.heroList.map(h=>`
+                        <div class="mini-hero ${h.isCore?'core':''}">
+                            <img src="${h.img}" alt="${h.name}">
+                        </div>
+                    `).join('')
+                    : `<span style=" color:#686e7c; font-size:13px;">暂无英雄</span>`
+                }
+            </div>
+        </div>
+    </div>
+    `).join('')
 }
 
-body {
-    background-color: #12161f;
-    color: #e6e8ef;
-    background-image: radial-gradient(circle at 40% 20%, rgba(204, 164, 79, 0.08), transparent 45%);
-    min-height: 100vh;
-}
+// 筛选点击事件
+document.querySelectorAll('.filter-chip')..forEach(el=>{
+    el.addEventListener('click',()=>{
+        const type = el.dataset.filter;
+        const val = el.dataset.val;
+        // 同组取消active
+        el.parentElement.querySelectorAll('.filter-chip')..forEach(i=>i.classList.remove('active'))
+        el.classList.add('active')
+        if(type === 'player') currentFilterPlayer = val
+        if(type === 'rank') currentFilterRank = val
+        if(type === 'camp') currentFilterCamp = val
+        renderList()
+    })
+})
 
-/* 顶部导航 */
-.top-nav-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 16px 20px;
-    background-color: rgba(18, 22, 31, 0.75);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 99;
-}
-
-.top-nav-wrap a {
-    text-decoration: none;
-    color: #b4b9c6;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 15px;
-    transition: all 0.2s;
-}
-
-.top-nav-wrap a:hover {
-    color: #ffd369;
-    background-color: rgba(255,211,105,0.08);
-}
-
-.top-nav-wrap a.active {
-    color: #ffd369;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.page-title {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 24px;
-    color: #ffd369;
-}
-
-/* 搜索框 */
-.search-box {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto 20px;
-    background: #1c212c;
-    border: 1px solid #333844;
-    border-radius: 12px;
-    padding: 12px 18px;
-}
-
-.search-box input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #e6e8ef;
-    font-size: 16px;
-    padding-left: 10px;
-}
-
-.search-box input::placeholder {
-    color: #686e7c;
-}
-
-/* 筛选区 */
-.filter-wrap {
-    margin-bottom: 24px;
-}
-.filter-row {
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:12px;
-}
-.filter-label{
-    color:#9aa0b0;
-    width:50px;
-}
-/* 【普通文字筛选按钮：强度、阵营 保持原样】 */
-.filter-chip{
-    padding:6px 12px;
-    border-radius:8px;
-    background:#1c212c;
-    border:1px solid #333844;
-    color:#b4b9c6;
-    cursor:pointer;
-    transition:0.2s;
-}
-.filter-chip.active{
-    border-color:#ffd369;
-    color:#ffd369;
-    background:rgba(255,211,105,0.08);
-}
-/* ========== 棋手头像筛选栏 ========== */
-/* 普通棋手圆形头像 */
-.filter-row:first-child .filter-chip.player-chip {
-    width: 84px;
-    height: 84px;
-    padding: 0;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    border: 2px solid #333844;
-    background: #1c212c;
-    transition: 0.2s ease;
-}
-.filter-row:first-child .filter-chip.player-chip img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.filter-row:first-child .filter-chip.player-chip:hover {
-    transform: scale(1.08);
-}
-.filter-row:first-child .filter-chip.player-chip.active {
-    border-color:#ffd369;
-    box-shadow:  0  0  0  2px rgba(255,211,105,0.35), 0  0  10px rgba(255,211,105,0.45);
-}
-/* 棋手栏【全部】胶囊按钮（单独样式，不再是圆形） */
-.filter-row:first-child .filter-chip.player-chip-all {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 84px;
-    padding: 0 20px;
-    border-radius: 14px;
-    border: 2px solid #333844;
-    background: #1c212c;
-    flex-shrink: 0;
-    font-size: 20px;
-    color: #b4b9c6;
-    cursor: pointer;
-    transition: 0.2s ease;
-    white-space: nowrap;
-}
-.filter-row:first-child .filter-chip.player-chip-all span {
-    display: inline-block;
-    line-height: 1;
-    transform: translateY(-1px);
-}
-.filter-row:first-child .filter-chip.player-chip-all:hover {
-    transform: scale(1.08);
-}
-.filter-row:first-child .filter-chip.player-chip-all.active {
-    border-color: #ffd369;
-    color: #ffd369;
-    background: rgba(255,211,105,0.08);
-    box-shadow: 0  0  0  2px rgba(255,211,105,0.35), 0  0  10px rgba(255,211,105,0.45);
-}
-/* 棋手整行容器 */
-.filter-row:first-child {
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-    padding: 6px 0 12px 0;
-    border-bottom: 1px solid #2c313f;
-    gap: 16px;
-    align-items: center;
-}
-.filter-row:first-child::-webkit-scrollbar {
-    height: 4px;
-}
-.filter-row:first-child::-webkit-scrollbar-track {
-    background: #12161f;
-}
-.filter-row:first-child::-webkit-scrollbar-thumb {
-    background: #333844;
-    border-radius: 2px;
-}
-
-.reset-btn{
-    margin-left:auto;
-    padding:6px 14px;
-    border-radius:8px;
-    background:#1c212c;
-    border:1px solid #333844;
-    color:#b4b9c6;
-    cursor:pointer;
-}
-.reset-btn:hover{
-    color:#ffd369;
-    border-color:#ffd369;
-}
-
-/* 阵容列表 */
-.lineup-list {
-    display: flex;
-    flex-direction: column;
-    gap:16px;
-}
-
-/* 阵容卡片（横向长条卡片，和截图一致） */
-.lineup-card {
-    background: linear-gradient(135deg, #1c212c 0%, #272d3b 100%);
-    border: 1px solid #333844;
-    border-radius: 16px;
-    transition: 0.3s;
-    cursor: pointer;
-    padding:16px;
-    display:flex;
-    align-items:center;
-    gap:16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-}
-
-.lineup-card:hover {
-    border-color: rgba(255, 211, 105, 0.5);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(255, 211, 105, 0.15);
-}
-
-/* 棋手头像 */
-.lineup-avatar {
-    width:64px;
-    height:64px;
-    border-radius:12px;
-    flex-shrink:0;
-    border:2px solid #333844;
-    overflow:hidden;
-}
-.lineup-avatar img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* 强度方块 */
-.lineup-rank{
-    width:54px;
-    height:54px;
-    flex-shrink:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background: #7b3fd8;
-    border-radius:10px;
-    font-weight:bold;
-    font-size:20px;
-    color:#fff;
-}
-
-.lineup-main{
-    flex:1;
-    min-width:0;
-}
-.lineup-top{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:6px;
-}
-.lineup-name{
-    font-size:20px;
-    font-weight:700;
-    color:#ffd369;
-}
-.tag{
-    padding:3px 8px;
-    border-radius:6px;
-    font-size:12px;
-    background:rgba(255,211,105,0.12);
-    color:#ffd369;
-}
-.lineup-meta{
-    font-size:12px;
-    color:#9aa0b0;
-    margin-bottom:8px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-}
-.hero-row{
-    display:flex;
-    gap:6px;
-    align-items:center;
-}
-.mini-hero{
-    width:42px;
-    height:42px;
-    border-radius:8px;
-    border:1px solid #333844;
-    position:relative;
-}
-.mini-hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-.mini-hero.core::after{
-    content:"核";
-    position:absolute;
-    top:-4px;
-    right:-4px;
-    width:18px;
-    height:18px;
-    border-radius:50%;
-    background:#7b3fd8;
-    color:#fff;
-    font-size:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-.arrow{
-    color:#9aa0b0;
-    font-size:22px;
-    padding:0 8px;
-}
-
-/* 弹窗 */
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.78);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    padding: 20px;
-    backdrop-filter: blur(4px);
-}
-
-.modal-content {
-    width: min(820px, 100%);
-    background: #181c26;
-    border: 1px solid #333844;
-    border-radius: 20px;
-    max-height: 86vh;
-    overflow-y: auto;
-    padding: 32px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
-
-.modal-close {
-    float: right;
-    color: #888;
-    font-size: 26px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.modal-close:hover {
-    color: #ffd369;
-}
-
-.modal h2 {
-    color: #ffd369;
-    margin-bottom: 10px;
-    font-size: 26px;
-}
-.modal-sub{
-    color:#9aa0b0;
-    margin-bottom:16px;
-}
-.modal-block {
-    margin: 16px 0;
-    background: #1c212c;
-    border: 1px solid #282d38;
-    border-radius: 14px;
-    padding: 16px 18px;
-}
-
-.modal-block h4 {
-    color: #ffd369;
-    margin-bottom: 8px;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.modal-block h4::before {
-    content: "";
-    width: 3px;
-    height: 14px;
-    background: #ffd369;
-    border-radius: 2px;
-}
-
-.modal-block p {
-    color: #b4b9c6;
-    line-height: 1.8;
-    font-size: 14px;
-}
-.link-official{
-    display:inline-block;
-    margin-top:10px;
-    padding:8px 14px;
-    background:#7b3fd8;
-    color:#fff;
-    border-radius:8px;
-    text-decoration:none;
-}
-.link-official:hover{
-    opacity:0.9;
-}
-
-/* 滚动条美化 */
-.modal-content::-webkit-scrollbar {
-    width: 8px;
-}
-.modal-content::-webkit-scrollbar-thumb {
-    background: #333844;
-    border-radius: 4px;
-}
-.modal-content::-webkit-scrollbar-thumb:hover {
-    background: #ffd369;
-}
+// 重置按钮
+document.getElementById('resetFilter').addEventListener('click',()=>{
+    currentFilterPlayer = 'all';
+    currentFilterRank = 'all';
+    currentFilterCamp = 'all';
+    document.querySelectorAll('.filter-chip')..forEach(i=>i.classList.remove('active'))
+    document.querySelectorAll('.filter-chip[data-val="all"]')..forEach(x=>x.classList.add('active'))
+    renderList()
+})
