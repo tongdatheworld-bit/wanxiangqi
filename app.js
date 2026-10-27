@@ -3,33 +3,39 @@ let currentFilterPlayer = 'all';
 let currentFilterRank = 'all';
 let currentFilterCamp = 'all';
 
-// 只在阵容列表存在时加载数据
 const lineupWrap = document.getElementById('lineupList');
-if(lineupWrap){
+if (lineupWrap) {
     fetch('./data.json')
-    .then(res => res.json())
-    .then(data => {
-        allLineupData = data;
-        renderList();
-    })
+        .then(res => {
+            if (!res.ok) throw new Error('json读取失败');
+            return res.json();
+        })
+        .then(data => {
+            allLineupData = data;
+            renderList();
+        })
+        .catch(err => {
+            console.error('数据加载失败：', err);
+            lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 data.json</div>`;
+        })
 }
 
-function renderList(){
+function renderList() {
     const wrap = document.getElementById('lineupList');
-    if(!wrap) return;
+    if (!wrap) return;
     let filterArr = [...allLineupData];
 
     // 棋手筛选
-    if(currentFilterPlayer !== 'all'){
+    if (currentFilterPlayer !== 'all') {
         filterArr = filterArr.filter(item => item.player === currentFilterPlayer)
     }
     // 强度筛选
-    if(currentFilterRank !== 'all'){
+    if (currentFilterRank !== 'all') {
         filterArr = filterArr.filter(item => item.rank === currentFilterRank)
     }
-    // 阵营筛选
-    if(currentFilterCamp !== 'all'){
-        filterArr = filterArr.filter(item => item.ban位.includes(currentFilterCamp))
+    // 阵营筛选，增加容错：先判断是不是数组
+    if (currentFilterCamp !== 'all') {
+        filterArr = filterArr.filter(item => Array.isArray(item.ban位) && item.ban位.includes(currentFilterCamp))
     }
 
     if (!filterArr.length) {
@@ -37,15 +43,15 @@ function renderList(){
         return
     }
 
-    wrap.innerHTML = filterArr.map(item=>`
-    <div class="lineup-card">
+    wrap.innerHTML = filterArr.map(item => `
+    <div class="lineup-card" data-id="${item.id}">
         <div class="card-top">
             <div class="lineup-rank">${item.rank}</div>
             <div class="hero-row">
                 ${
-                    item.heroList && item.heroList.length
-                    ? item.heroList.map(h=>`
-                        <div class="mini-hero ${h.isCore?'core':''}">
+                    item.heroList && Array.isArray(item.heroList) && item.heroList.length
+                    ? item.heroList.map(h => `
+                        <div class="mini-hero ${h.isCore ? 'core' : ''}">
                             <img src="${h.img}" alt="${h.name}">
                         </div>
                     `).join('')
@@ -56,7 +62,7 @@ function renderList(){
         <div class="card-bottom">
             <div class="lineup-top">
                 <div class="lineup-name">${item.name}</div>
-                ${item.ban位.map(tag=>`<span class="tag">${tag}</span>`).join('')}
+                ${Array.isArray(item.ban位) ? item.ban位.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
             </div>
             <div class="lineup-meta">
                 <span>棋手：${item.player}</span>
@@ -66,35 +72,84 @@ function renderList(){
         </div>
     </div>
     `).join('')
+
+    // 卡片点击弹窗绑定（如果你不需要弹窗，直接删掉这块）
+    bindCardClick();
 }
 
-// 筛选点击事件（只在筛选标签存在时绑定）
+// 卡片点击弹窗
+function bindCardClick() {
+    const modal = document.getElementById('detailModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeModalBtn = document.getElementById('closeModal');
+    if (!modal || !modalBody) return;
+
+    document.querySelectorAll('.lineup-card').forEach(card => {
+        card.onclick = () => {
+            const id = Number(card.dataset.id);
+            const find = allLineupData.find(x => x.id === id);
+            if (!find) return;
+
+            modalBody.innerHTML = `
+                <h2>${find.name}</h2>
+                <div class="modal-sub">棋手：${find.player}｜强度：${find.rank}｜难度：${find.hard}</div>
+                <div class="modal-block">
+                    <h4>BAN阵营</h4>
+                    <p>${Array.isArray(find.ban位) ? find.ban位.join('、') : '无'}</p>
+                </div>
+                <div class="modal-block">
+                    <h4>英雄</h4>
+                    <p>${Array.isArray(find.heroList) ? find.heroList.map(h => h.isCore ? `【核】${h.name}` : h.name).join('、') : '无'}</p>
+                </div>
+                <div class="modal-block">
+                    <h4>装备</h4>
+                    <p>${Array.isArray(find.equip) && find.equip.length ? find.equip.map(e => e.name).join('、') : '无'}</p>
+                </div>
+                <div class="modal-block">
+                    <h4>阵容码</h4>
+                    <p style="font-family:monospace">${find.lineupCode}</p>
+                </div>
+            `
+            modal.style.display = 'flex';
+        }
+    })
+
+    // 关闭弹窗
+    if (closeModalBtn) {
+        closeModalBtn.onclick = () => modal.style.display = 'none';
+    }
+    modal.onclick = (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    }
+}
+
+// 筛选点击事件
 const filterChips = document.querySelectorAll('.filter-chip');
-if(filterChips.length > 0){
-    filterChips.forEach(el=>{
-        el.addEventListener('click',()=>{
+if (filterChips.length > 0) {
+    filterChips.forEach(el => {
+        el.addEventListener('click', () => {
             const type = el.dataset.filter;
             const val = el.dataset.val;
             // 同组取消active
-            el.parentElement.querySelectorAll('.filter-chip').forEach(i=>i.classList.remove('active'))
+            el.parentElement.querySelectorAll('.filter-chip').forEach(i => i.classList.remove('active'))
             el.classList.add('active')
-            if(type === 'player') currentFilterPlayer = val
-            if(type === 'rank') currentFilterRank = val
-            if(type === 'camp') currentFilterCamp = val
+            if (type === 'player') currentFilterPlayer = val
+            if (type === 'rank') currentFilterRank = val
+            if (type === 'camp') currentFilterCamp = val
             renderList()
         })
     })
 }
 
-// 重置按钮，先判断元素是否存在！！
+// 重置按钮
 const resetBtn = document.getElementById('resetFilter');
-if(resetBtn){
-    resetBtn.addEventListener('click',()=>{
+if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
         currentFilterPlayer = 'all';
         currentFilterRank = 'all';
         currentFilterCamp = 'all';
-        document.querySelectorAll('.filter-chip').forEach(i=>i.classList.remove('active'))
-        document.querySelectorAll('.filter-chip[data-val="all"]').forEach(x=>x.classList.add('active'))
+        document.querySelectorAll('.filter-chip').forEach(i => i.classList.remove('active'))
+        document.querySelectorAll('.filter-chip[data-val="all"]').forEach(x => x.classList.add('active'))
         renderList()
     })
 }
