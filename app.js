@@ -76,3 +76,16 @@ function renderLineupList() {
         list.appendChild(card);
     });
 }
+// 加载 data.json 全局数据
+fetch("./data.json")
+  .then(res => {
+    if (!res.ok) throw new Error("json加载失败");
+    return res.json();
+  })
+  .then(data => {
+    window.gameData = data;
+    renderCurrentPage();
+  })
+  .catch(err => {
+    console.error("data.json 读取错误：", err);
+  })
