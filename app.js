@@ -70,6 +70,7 @@ function renderLineupList() {
         card.className = "card";
         card.innerHTML = `
             <h4>${lineup.name || "未知阵容"}</h4>
+            <p>棋手：${lineup.player || "-"}</p>
             <p>英雄：${lineup.heroes ? lineup.heroes.join("、") : "-"}</p>
             <p>阵容码：${lineup.code || "-"}</p>
         `;
