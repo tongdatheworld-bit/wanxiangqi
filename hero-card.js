@@ -1,4 +1,19 @@
-let allHeroCardData = [];
+let allHeroCardData = [
+    {
+        "id": 1,
+        "name": "孙尚香",
+        "stage": 1,
+        "camp": "三分之地",
+        "img": "images/hero-card/sunshangxiang.png",
+        "desc": "登场：获得1次免费刷新。",
+        "keywords": ["登场", "刷新"],
+        "hp": 210,
+        "mp": 15,
+        "physicalAtk": 40,
+        "magicAtk": 0
+    }
+    // 在这里继续加英雄，逗号隔开
+];
 let currentStage = 'all';
 let currentCamp = 'all';
 let currentKeyword = 'all';
@@ -7,20 +22,6 @@ let searchKw = '';
 document.addEventListener('DOMContentLoaded', function () {
     const heroCardWrap = document.getElementById('heroCardList');
     if (!heroCardWrap) return;
-
-    fetch('./hero-card.json')
-        .then(res => {
-            if (!res.ok) throw new Error('json读取失败');
-            return res.json();
-        })
-        .then(data => {
-            allHeroCardData = data;
-            renderHeroCardList();
-        })
-        .catch(err => {
-            console.error('数据加载失败：', err);
-            heroCardWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 hero-card.json</div>`;
-        });
 
     document.getElementById('stageFilter').addEventListener('change', e => {
         currentStage = e.target.value;
@@ -41,6 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
         searchKw = e.target.value.trim().toLowerCase();
         renderHeroCardList();
     });
+
+    // 直接渲染，不用fetch
+    renderHeroCardList();
 });
 
 function renderHeroCardList() {
