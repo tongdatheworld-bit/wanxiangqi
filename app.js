@@ -74,7 +74,7 @@ function renderLineupList() {
             <p>评级：${lineup.level || "-"}</p>
             <p>难度：${lineup.hard || "-"}</p>
             <p>天赋：${lineup.talent || "-"}</p>
-            <p>ban位：${lineup.ban || "-"}</p>
+            <p>ban：${lineup.ban || "-"}</p>
             <p>阵容码：${lineup.code || "-"}</p>
             ${lineup.url ? `<p><a href="${lineup.url}" target="_blank">查看详情</a></p>` : ""}
         `;
