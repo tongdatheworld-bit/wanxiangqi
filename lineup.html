@@ -3,709 +3,458 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>万象棋阵容库</title>
-
+<title>王者万象棋 - 阵容大全</title>
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-family: "Microsoft YaHei", sans-serif;
 }
-
 body {
-    background: #12161f;
-    color: #e6e8ef;
-    min-height: 100vh;
+    background-color: #171922;
+    color: #e2e4ec;
+    padding-bottom: 40px;
 }
-
-/* 顶部导航 */
-.top-nav {
+/* ========== 【换回你原来的旧版导航】 ========== */
+.old-top-nav {
     display: flex;
     justify-content: center;
-    gap: 6px;
-    padding: 12px 0;
-    background: rgba(18, 22, 31, 0.85);
-    position: sticky;
-    top: 0;
-    z-index: 50;
+    background-color: #1e202b;
+    border-bottom: 1px solid #2c303f;
+    gap: 4px;
+    padding: 0 12px;
 }
-
-.top-nav a {
-    color: #b4b9c6;
+.old-top-nav a {
+    padding:14px 18px;
+    color: #b0b4c2;
     text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 14px;
+    font-size: 15px;
+    position: relative;
 }
-
-.top-nav a.active {
-    color: #ffd369;
+.old-top-nav a.active {
+    color: #ffd358;
 }
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 24px 20px 40px;
+.old-top-nav a.active::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:12%;
+    width:76%;
+    height:3px;
+    background:#ffd358;
+    border-radius:2px 2px 0 0;
 }
-
+/* 页面标题 */
 .page-title {
     text-align: center;
-    font-size: 28px;
-    color: #ffd369;
-    margin-bottom: 24px;
+    font-size: 26px;
+    color: #ffd358;
+    margin:20px 0;
 }
-
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
 /* 搜索框 */
-.search-box {
-    background: #1c212c;
-    border: 1px solid #333844;
-    border-radius: 12px;
-    padding: 12px 16px;
-    margin-bottom: 20px;
-}
-
-.search-box input {
+.search-bar {
     width: 100%;
-    background: transparent;
-    border: none;
+    background: #20232f;
+    border: 1px solid #2c303f;
+    border-radius: 6px;
+    padding: 9px 14px;
+    color: #fff;
     outline: none;
-    color: #e6e8ef;
-    font-size: 15px;
+    margin-bottom: 16px;
 }
-
-.search-box input::placeholder {
-    color: #686e7c;
+.search-bar::placeholder {
+    color: #74798c;
 }
-
-/* 筛选区 */
-.filter-section {
-    margin-bottom: 24px;
-}
-
-.filter-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+/* 筛选组通用 */
+.filter-group {
     margin-bottom: 12px;
-}
-
-.filter-label {
-    font-size: 14px;
-    color: #9aa0b0;
-    width: 46px;
-    flex-shrink: 0;
-}
-
-.filter-chip {
-    padding: 6px 12px;
-    border-radius: 8px;
-    background: #1c212c;
-    border: 1px solid #333844;
-    color: #b4b9c6;
-    cursor: pointer;
-    font-size: 14px;
-    white-space: nowrap;
-}
-
-.filter-chip.active {
-    border-color: #ffd369;
-    color: #ffd369;
-    background: rgba(255, 211, 105, 0.08);
-}
-
-/* 棋手筛选：头像横向 */
-.player-filter {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    overflow-x: auto;
-    padding-bottom: 6px;
-}
-
-.player-chip {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    cursor: pointer;
-    border: 2px solid #333844;
-    overflow: hidden;
-    background: #1c212c;
-    transition: 0.2s;
-}
-
-.player-chip img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.player-chip.active {
-    border-color: #ffd369;
-    box-shadow: 0 0 0 2px rgba(255, 211, 105, 0.35);
-}
-
-/* 强度、阵营筛选 */
-.rank-filter,
-.camp-filter {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
 }
-
-.reset-btn {
-    margin-left: auto;
-    padding: 8px 14px;
-    border-radius: 8px;
-    background: #1c212c;
-    border: 1px solid #333844;
-    color: #b4b9c6;
-    cursor: pointer;
+.filter-label {
+    width: 44px;
+    color: #9297a8;
     font-size: 14px;
-}
-
-.reset-btn:hover {
-    color: #ffd369;
-    border-color: #ffd369;
-}
-
-/* 阵容列表 */
-.lineup-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-/* 阵容卡片：左侧棋手头像，右侧文字和英雄 */
-.lineup-card {
-    background: linear-gradient(135deg, #1c212c 0%, #272d3b 100%);
-    border: 1px solid #333844;
-    border-radius: 16px;
-    padding: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    gap: 14px;
-}
-
-.lineup-card:hover {
-    border-color: rgba(255, 211, 105, 0.45);
-    transform: translateY(-2px);
-}
-
-.player-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    border: 2px solid #333844;
-    overflow: hidden;
     flex-shrink: 0;
-    background: #1c212c;
 }
-
-.player-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.card-main {
+.filter-wrap {
+    display: flex;
+    gap: 8px;
     flex: 1;
-    min-width: 0;
-}
-
-.card-top {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px;
-}
-
-.rank-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
-    background: #7b3fd8;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.lineup-name {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffd369;
-}
-
-.tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-left: 8px;
-}
-
-.tag {
-    padding: 2px 7px;
-    border-radius: 6px;
-    font-size: 11px;
-    background: rgba(255, 211, 105, 0.12);
-    color: #ffd369;
-}
-
-.lineup-meta {
-    font-size: 12px;
-    color: #9aa0b0;
-    margin-bottom: 8px;
-}
-
-/* 英雄头像在文字下面 */
-.hero-row {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 4px;
 }
-
-.mini-hero {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    border: 1px solid #333844;
-    position: relative;
-    flex-shrink: 0;
-    overflow: hidden;
-    background: #1c212c;
+.filter-chip {
+    padding: 5px 12px;
+    border-radius: 4px;
+    background: #20232f;
+    color: #b0b4c2;
+    font-size:14px;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 1px solid transparent;
 }
-
-.mini-hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.filter-chip.active {
+    background: #322b58;
+    color: #ffd358;
+    border-color: #ffd358;
 }
-
-.mini-hero.core::after {
-    content: "核";
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    width: 18px;
-    height: 18px;
+/* 棋手头像筛选 */
+.player-avatar-chip {
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: #7b3fd8;
-    color: #fff;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+    cursor: pointer;
+    background:#20232f;
 }
-
+.player-avatar-chip.active {
+    border-color:#ffd358;
+}
+.player-avatar-chip img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.reset-btn {
+    padding:5px 12px;
+    background:#20232f;
+    color:#b0b4c2;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:14px;
+    border:1px solid #2c303f;
+    white-space:nowrap;
+}
+/* 阵容卡片 */
+.lineup-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.lineup-card {
+    background:#20232f;
+    border-radius:6px;
+    padding:12px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+}
+.card-avatar {
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    overflow:hidden;
+    flex-shrink:0;
+    background:#2c303f;
+}
+.card-avatar img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.rank-tag {
+    width:40px;
+    height:40px;
+    border-radius:6px;
+    background:#7b42d8;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    flex-shrink:0;
+}
+.card-body {
+    flex:1;
+}
+.card-name-row {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:4px;
+}
+.lineup-name {
+    font-weight:bold;
+    font-size:15px;
+}
+.camp-tag {
+    padding:2px 6px;
+    background:#2c303f;
+    color:#ffd358;
+    font-size:12px;
+    border-radius:3px;
+}
+.card-desc {
+    color:#868b9e;
+    font-size:12px;
+}
+.arrow {
+    color:#74798c;
+}
 /* 弹窗 */
 .modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    padding: 20px;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:99;
 }
-
 .modal.show {
-    display: flex;
+    display:flex;
 }
-
-.modal-content {
-    background: #181c26;
-    border: 1px solid #333844;
-    border-radius: 18px;
-    width: min(760px, 100%);
-    max-height: 80vh;
-    overflow-y: auto;
-    padding: 24px;
-    position: relative;
+.modal-box {
+    width:min(700px,92%);
+    background:#20232f;
+    border-radius:10px;
+    padding:20px;
 }
-
-.modal-close {
-    position: absolute;
-    top: 16px;
-    right: 20px;
-    font-size: 24px;
-    color: #888;
-    cursor: pointer;
-}
-
 .modal-title {
-    color: #ffd369;
-    font-size: 22px;
-    margin-bottom: 8px;
-}
-
-.modal-sub {
-    color: #9aa0b0;
-    font-size: 13px;
-    margin-bottom: 16px;
-}
-
-.modal-block {
-    background: #1c212c;
-    border: 1px solid #282d38;
-    border-radius: 14px;
-    padding: 14px 16px;
-    margin-bottom: 14px;
-}
-
-.modal-block h4 {
-    color: #ffd369;
-    margin-bottom: 8px;
-    font-size: 15px;
-}
-
-.modal-block p {
-    color: #b4b9c6;
-    line-height: 1.7;
-    font-size: 14px;
+    color:#ffd358;
+    font-size:20px;
+    margin-bottom:12px;
 }
 </style>
 </head>
-
 <body>
-
-<div class="top-nav">
-    <a href="#" class="active">全部阵容</a>
-    <a href="#">S+</a>
-    <a href="#">S</a>
+<!-- ========== 【旧版导航栏，就是你原来那套】 ========== -->
+<div class="old-top-nav">
+    <a href="#">首页</a>
+    <a href="#" class="active">阵容大全</a>
+    <a href="#">棋手</a>
+    <a href="#">英雄牌</a>
+    <a href="#">天赋牌</a>
+    <a href="#">装备牌</a>
+    <a href="#">效果牌</a>
+    <a href="#">信息差</a>
 </div>
 
 <div class="container">
-    <h1 class="page-title">万象棋阵容库</h1>
+    <h2 class="page-title">阵容大全</h2>
+    <input class="search-bar" id="search" placeholder="搜索阵容名称 / 核心英雄..." />
 
-    <div class="search-box">
-        <input id="searchInput" placeholder="搜索阵容名称、棋手、核心英雄..." />
-    </div>
-
-    <div class="filter-section">
-        <!-- 棋手筛选 -->
-        <div class="filter-row">
-            <span class="filter-label">棋手</span>
-            <div class="player-filter" id="playerFilter"></div>
-        </div>
-
-        <!-- 强度筛选 -->
-        <div class="filter-row">
-            <span class="filter-label">强度</span>
-            <div class="rank-filter" id="rankFilter"></div>
-        </div>
-
-        <!-- 阵营筛选 -->
-        <div class="filter-row">
-            <span class="filter-label">阵营</span>
-            <div class="camp-filter" id="campFilter"></div>
-            <div class="reset-btn" id="resetBtn">重置</div>
+    <!-- 棋手筛选 -->
+    <div class="filter-group">
+        <div class="filter-label">棋手</div>
+        <div class="filter-wrap" id="playerWrap">
+            <div class="filter-chip active" data-player="">全部</div>
         </div>
     </div>
+    <!-- 强度筛选 -->
+    <div class="filter-group">
+        <div class="filter-label">强度</div>
+        <div class="filter-wrap" id="rankWrap">
+            <div class="filter-chip active" data-rank="">全部</div>
+            <div class="filter-chip" data-rank="S+">S+</div>
+            <div class="filter-chip" data-rank="S">S</div>
+            <div class="filter-chip" data-rank="A+">A+</div>
+            <div class="filter-chip" data-rank="A">A</div>
+        </div>
+    </div>
+    <!-- 阵营筛选 -->
+    <div class="filter-group">
+        <div class="filter-label">阵营</div>
+        <div class="filter-wrap" id="campWrap">
+            <div class="filter-chip active" data-camp="">全部</div>
+            <div class="filter-chip" data-camp="河洛">河洛</div>
+            <div class="filter-chip" data-camp="三分">三分</div>
+            <div class="filter-chip" data-camp="无阵营">无阵营</div>
+            <div class="filter-chip" data-camp="逐鹿">逐鹿</div>
+            <div class="filter-chip" data-camp="大河流">大河流</div>
+            <div class="filter-chip" data-camp="日落海">日落海</div>
+        </div>
+        <div class="reset-btn" id="reset">重置</div>
+    </div>
 
-    <div class="lineup-list" id="listWrap"></div>
+    <!-- 阵容列表 -->
+    <div class="lineup-list" id="list"></div>
 </div>
 
+<!-- 弹窗 -->
 <div class="modal" id="modal">
-    <div class="modal-content">
-        <span class="modal-close" id="modalClose">&times;</span>
-        <div class="modal-title" id="modalTitle"></div>
-        <div class="modal-sub" id="modalSub"></div>
-        <div id="modalBody"></div>
+    <div class="modal-box">
+        <div class="modal-title" id="mTitle"></div>
+        <div id="mBody"></div>
     </div>
 </div>
 
 <script>
-const data = [
+const lineupData = [
     {
-        id: 1,
-        name: "无限复活花木兰",
-        rank: "S+",
-        player: "嬴律",
-        playerImg: "images/players/yinlv.png",
-        hard: "中等",
-        lineupCode: "38337677766581410",
-        ban位: ["逐鹿", "大河流", "三分"],
-        heroList: [
-            { name: "花木兰", img: "images/heroes/huamulan.png", isCore: true },
-            { name: "武则天", img: "images/heroes/wuzetian.png", isCore: false },
-            { name: "李白", img: "images/heroes/libai.png", isCore: false },
-            { name: "上官婉儿", img: "images/heroes/shangguanwaner.png", isCore: false },
-            { name: "程咬金", img: "images/heroes/chenyaojin.png", isCore: false },
-            { name: "钟馗", img: "images/heroes/zhongkui.png", isCore: false },
-            { name: "露娜", img: "images/heroes/luna.png", isCore: false }
-        ],
-        equip: [
-            { name: "贤者的庇护", img: "images/equip/fuhuo.png" }
-        ]
+        id:1,
+        name:"无限复活花木兰",
+        rank:"S+",
+        player:"嬴律",
+        playerImg:"img/yinglv.png",
+        camp:["逐鹿","大河流","三分"],
+        hard:"中等",
+        code:"38337677766581410"
     },
     {
-        id: 2,
-        name: "日落海司空震",
-        rank: "S+",
-        player: "玉环",
-        playerImg: "images/players/yuhuan.png",
-        hard: "困难",
-        lineupCode: "76616412643475690",
-        ban位: ["日落海"],
-        heroList: [],
-        equip: []
+        id:2,
+        name:"日落海司空震",
+        rank:"S+",
+        player:"玉环",
+        playerImg:"img/yuhuan.png",
+        camp:["日落海"],
+        hard:"困难",
+        code:"76616412643475690"
     },
     {
-        id: 3,
-        name: "孙膑三分体系",
-        rank: "S+",
-        player: "孙小宾",
-        playerImg: "images/players/sunxiaobin.png",
-        hard: "中等",
-        lineupCode: "77743464511520968",
-        ban位: ["逐鹿", "大河流", "河洛"],
-        heroList: [],
-        equip: []
+        id:3,
+        name:"孙膑三分体系",
+        rank:"S+",
+        player:"孙小宾",
+        playerImg:"img/sunxiaobin.png",
+        camp:["逐鹿","大河流","河洛"],
+        hard:"中等",
+        code:"77743464511520968"
     },
     {
-        id: 4,
-        name: "昭君河洛5+2",
-        rank: "S+",
-        player: "昭君",
-        playerImg: "images/players/zhaojun.png",
-        hard: "中等",
-        lineupCode: "30456997313626170",
-        ban位: ["逐鹿", "河洛", "三分", "日落海"],
-        heroList: [],
-        equip: []
+        id:4,
+        name:"昭君河洛5+2",
+        rank:"S+",
+        player:"昭君",
+        playerImg:"img/zhaojun.png",
+        camp:["逐鹿","河洛","三分","日落海"],
+        hard:"中等",
+        code:"30456997313626170"
     },
     {
-        id: 5,
-        name: "昭君75速冲",
-        rank: "S+",
-        player: "昭君",
-        playerImg: "images/players/zhaojun.png",
-        hard: "中等",
-        lineupCode: "94633913646845962",
-        ban位: ["逐鹿", "河洛", "日落海"],
-        heroList: [],
-        equip: []
+        id:5,
+        name:"昭君75速冲",
+        rank:"S+",
+        player:"昭君",
+        playerImg:"img/zhaojun.png",
+        camp:["逐鹿","河洛","日落海"],
+        hard:"中等",
+        code:"94633913646845962"
     },
     {
-        id: 6,
-        name: "低阶龙蛇",
-        rank: "S",
-        player: "昭君",
-        playerImg: "images/players/zhaojun.png",
-        hard: "中等",
-        lineupCode: "119403711597433866",
-        ban位: ["逐鹿", "河洛", "三分", "日落海"],
-        heroList: [],
-        equip: []
+        id:6,
+        name:"低阶龙蛇",
+        rank:"S",
+        player:"昭君",
+        playerImg:"img/zhaojun.png",
+        camp:["逐鹿","河洛","三分","日落海"],
+        hard:"中等",
+        code:"119403711597433866"
     }
 ];
+// 收集棋手列表
+const playerList = [...new Set(lineupData.map(x=>x.player))];
+const playerWrap = document.getElementById('playerWrap');
+playerList.forEach(p=>{
+    const div = document.createElement('div');
+    div.className = "player-avatar-chip";
+    div.dataset.player = p;
+    div.innerHTML = `<img src="${lineupData.find(i=>i.player===p).playerImg}" alt="${p}">`;
+    playerWrap.appendChild(div);
+})
 
-const listWrap = document.getElementById("listWrap");
-const playerFilter = document.getElementById("playerFilter");
-const rankFilter = document.getElementById("rankFilter");
-const campFilter = document.getElementById("campFilter");
-const searchInput = document.getElementById("searchInput");
-const modal = document.getElementById("modal");
-const modalClose = document.getElementById("modalClose");
-const modalTitle = document.getElementById("modalTitle");
-const modalSub = document.getElementById("modalSub");
-const modalBody = document.getElementById("modalBody");
-const resetBtn = document.getElementById("resetBtn");
-
-let activePlayer = "";
-let activeRank = "all";
-let activeCamp = "all";
-
-// 生成棋手头像筛选
-const players = [...new Set(data.map(item => item.player))];
-players.forEach(player => {
-    const chip = document.createElement("div");
-    chip.className = "player-chip";
-    chip.dataset.player = player;
-
-    const img = document.createElement("img");
-    img.src = data.find(i => i.player === player).playerImg;
-    img.alt = player;
-    img.onerror = function () {
-        this.style.display = "none";
-        chip.style.background = "#272d3b";
-        chip.textContent = player.charAt(0);
-        chip.style.color = "#ffd369";
-        chip.style.display = "flex";
-        chip.style.alignItems = "center";
-        chip.style.justifyContent = "center";
-        chip.style.fontSize = "20px";
-    };
-
-    chip.appendChild(img);
-    chip.onclick = () => {
-        activePlayer = activePlayer === player ? "" : player;
-        render();
-    };
-
-    playerFilter.appendChild(chip);
-});
-
-// 生成强度筛选
-const ranks = ["all", "S+", "S", "A", "B"];
-ranks.forEach(rank => {
-    const chip = document.createElement("div");
-    chip.className = "filter-chip";
-    chip.dataset.rank = rank;
-    chip.textContent = rank === "all" ? "全部" : rank;
-
-    chip.onclick = () => {
-        activeRank = rank;
-        render();
-    };
-
-    rankFilter.appendChild(chip);
-});
-
-// 生成阵营筛选
-const camps = ["all", "逐鹿", "大河流", "三分", "河洛", "日落海", "无阵营"];
-camps.forEach(camp => {
-    const chip = document.createElement("div");
-    chip.className = "filter-chip";
-    chip.dataset.camp = camp;
-    chip.textContent = camp === "all" ? "全部" : camp;
-
-    chip.onclick = () => {
-        activeCamp = camp;
-        render();
-    };
-
-    campFilter.appendChild(chip);
-});
-
-function render() {
-    let filterData = [...data];
-
-    if (activePlayer) {
-        filterData = filterData.filter(item => item.player === activePlayer);
-    }
-
-    if (activeRank !== "all") {
-        filterData = filterData.filter(item => item.rank === activeRank);
-    }
-
-    if (activeCamp !== "all") {
-        filterData = filterData.filter(item => item.ban位.includes(activeCamp));
-    }
-
-    const keyword = searchInput.value.trim().toLowerCase();
-    if (keyword) {
-        filterData = filterData.filter(item =>
-            item.name.toLowerCase().includes(keyword) ||
-            item.player.toLowerCase().includes(keyword)
-        );
-    }
-
-    // 棋手筛选高亮
-    document.querySelectorAll(".player-chip").forEach(chip => {
-        chip.classList.toggle("active", chip.dataset.player === activePlayer);
-    });
-
-    // 强度筛选高亮
-    document.querySelectorAll("#rankFilter .filter-chip").forEach(chip => {
-        chip.classList.toggle("active", chip.dataset.rank === activeRank);
-    });
-
-    // 阵营筛选高亮
-    document.querySelectorAll("#campFilter .filter-chip").forEach(chip => {
-        chip.classList.toggle("active", chip.dataset.camp === activeCamp);
-    });
-
-    if (filterData.length === 0) {
-        listWrap.innerHTML = `<div style="text-align:center;color:#686e7c;padding:40px;">没有匹配的阵容</div>`;
-        return;
-    }
-
-    listWrap.innerHTML = filterData.map(item => {
-        let heroHtml = "";
-
-        if (item.heroList && item.heroList.length > 0) {
-            heroHtml = item.heroList.map(h => `
-                <div class="mini-hero ${h.isCore ? "core" : ""}">
-                    <img src="${h.img}" alt="${h.name}" />
-                </div>
-            `).join("");
-        } else {
-            heroHtml = `<span style="color:#777;font-size:13px;">暂未更新</span>`;
-        }
-
-        const tagHtml = item.ban位.map(tag => `<span class="tag">${tag}</span>`).join("");
-
-        return `
-            <div class="lineup-card" data-id="${item.id}">
-                <div class="player-avatar">
-                    <img src="${item.playerImg}" alt="${item.player}" />
-                </div>
-                <div class="card-main">
-                    <div class="card-top">
-                        <div class="rank-box">${item.rank}</div>
-                        <div class="lineup-name">${item.name}</div>
-                        <div class="tag-row">${tagHtml}</div>
-                    </div>
-                    <div class="lineup-meta">
-                        棋手：${item.player}｜难度：${item.hard}｜代码：${item.lineupCode}
-                    </div>
-                    <div class="hero-row">${heroHtml}</div>
-                </div>
-            </div>
-        `;
-    }).join("");
-
-    // 卡片点击弹窗
-    document.querySelectorAll(".lineup-card").forEach(card => {
-        card.onclick = () => {
-            const item = data.find(i => i.id == card.dataset.id);
-            modalTitle.textContent = item.name;
-            modalSub.textContent = `棋手：${item.player}｜难度：${item.hard}｜代码：${item.lineupCode}`;
-
-            modalBody.innerHTML = `
-                <div class="modal-block">
-                    <h4>ban位</h4>
-                    <p>${item.ban位.join("、")}</p>
-                </div>
-            `;
-
-            modal.classList.add("show");
-        };
-    });
+let filter = {
+    player:"",
+    rank:"",
+    camp:"",
+    keyword:""
 }
+const listDom = document.getElementById('list');
+const modal = document.getElementById('modal');
+const mTitle = document.getElementById('mTitle');
+const mBody = document.getElementById('mBody');
 
-modalClose.onclick = () => modal.classList.remove("show");
-modal.onclick = e => {
-    if (e.target === modal) modal.classList.remove("show");
-};
-
-resetBtn.onclick = () => {
-    activePlayer = "";
-    activeRank = "all";
-    activeCamp = "all";
-    searchInput.value = "";
+// 渲染
+function render(){
+    let arr = [...lineupData];
+    if(filter.player) arr = arr.filter(x=>x.player === filter.player);
+    if(filter.rank) arr = arr.filter(x=>x.rank === filter.rank);
+    if(filter.camp) arr = arr.filter(x=>x.camp.includes(filter.camp));
+    if(filter.keyword){
+        let kw = filter.keyword.toLowerCase();
+        arr = arr.filter(x=>x.name.toLowerCase().includes(kw))
+    }
+    listDom.innerHTML = arr.map(item=>{
+        const campHtml = item.camp.map(c=>`<span class="camp-tag">${c}</span>`).join('');
+        return `
+        <div class="lineup-card" data-id="${item.id}">
+            <div class="card-avatar"><img src="${item.playerImg}"></div>
+            <div class="rank-tag">${item.rank}</div>
+            <div class="card-body">
+                <div class="card-name-row">
+                    <span class="lineup-name">${item.name}</span>
+                    ${campHtml}
+                </div>
+                <div class="card-desc">棋手：${item.player} · 成型难度：${item.hard} · 阵容码：${item.code}</div>
+            </div>
+            <div class="arrow">></div>
+        </div>
+        `
+    }).join('')
+    // 卡片点击弹窗
+    document.querySelectorAll('.lineup-card').forEach(card=>{
+        card.onclick = ()=>{
+            const d = lineupData.find(x=>x.id == card.dataset.id);
+            mTitle.innerText = d.name;
+            mBody.innerHTML = `<p>棋手：${d.player}</p><p>难度：${d.hard}</p><p>阵营：${d.camp.join('、')}</p><p>阵容码：${d.code}</p>`
+            modal.classList.add('show')
+        }
+    })
+}
+modal.onclick = (e)=>{
+    if(e.target === modal) modal.classList.remove('show')
+}
+// 筛选点击
+document.querySelectorAll('#playerWrap .filter-chip, #playerWrap .player-avatar-chip').forEach(el=>{
+    el.onclick = ()=>{
+        filter.player = el.dataset.player;
+        document.querySelectorAll('#playerWrap *').forEach(x=>x.classList.remove('active'));
+        el.classList.add('active');
+        render();
+    }
+})
+document.querySelectorAll('#rankWrap .filter-chip').forEach(el=>{
+    el.onclick = ()=>{
+        filter.rank = el.dataset.rank;
+        document.querySelectorAll('#rankWrap .filter-chip').forEach(x=>x.classList.remove('active'));
+        el.classList.add('active');
+        render();
+    }
+})
+document.querySelectorAll('#campWrap .filter-chip').forEach(el=>{
+    el.onclick = ()=>{
+        filter.camp = el.dataset.camp;
+        document.querySelectorAll('#campWrap .filter-chip').forEach(x=>x.classList.remove('active'));
+        el.classList.add('active');
+        render();
+    }
+})
+document.getElementById('search').oninput = (e)=>{
+    filter.keyword = e.target.value;
     render();
-};
-
-searchInput.oninput = render;
-
+}
+document.getElementById('reset').onclick = ()=>{
+    filter = {player:"",rank:"",camp:"",keyword:""};
+    document.querySelectorAll('.filter-chip').forEach(x=>x.classList.remove('active'));
+    document.querySelector('#playerWrap [data-player=""]').classList.add('active');
+    document.querySelector('#rankWrap [data-rank=""]').classList.add('active');
+    document.querySelector('#campWrap [data-camp=""]').classList.add('active');
+    document.getElementById('search').value = '';
+    render();
+}
 render();
 </script>
-
 </body>
 </html>
