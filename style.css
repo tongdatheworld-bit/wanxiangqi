@@ -97,7 +97,6 @@ body {
     color:#9aa0b0;
     width:50px;
 }
-/* 【普通文字筛选按钮：强度、阵营 保持原样】 */
 .filter-chip{
     padding:6px 12px;
     border-radius:8px;
@@ -112,8 +111,8 @@ body {
     color:#ffd369;
     background:rgba(255,211,105,0.08);
 }
-/* ========== 棋手头像筛选栏 ========== */
-/* 普通棋手圆形头像 */
+
+/* ========== 棋手筛选栏样式 ========== */
 .filter-row:first-child .filter-chip.player-chip {
     width: 84px;
     height: 84px;
@@ -138,7 +137,6 @@ body {
     border-color:#ffd369;
     box-shadow:  0  0  0  2px rgba(255,211,105,0.35), 0  0  10px rgba(255,211,105,0.45);
 }
-/* 棋手栏【全部】胶囊按钮（单独样式，不再是圆形） */
 .filter-row:first-child .filter-chip.player-chip-all {
     display: inline-flex;
     align-items: center;
@@ -169,7 +167,6 @@ body {
     background: rgba(255,211,105,0.08);
     box-shadow: 0  0  0  2px rgba(255,211,105,0.35), 0  0  10px rgba(255,211,105,0.45);
 }
-/* 棋手整行容器 */
 .filter-row:first-child {
     overflow-x: auto;
     overflow-y: hidden;
@@ -204,24 +201,23 @@ body {
     border-color:#ffd369;
 }
 
-/* 阵容列表 */
+/* ===================== 阵容卡片【核心修改部分】 ===================== */
 .lineup-list {
     display: flex;
     flex-direction: column;
     gap:16px;
 }
 
-/* 阵容卡片（横向长条卡片，和截图一致） */
 .lineup-card {
     background: linear-gradient(135deg, #1c212c 0%, #272d3b 100%);
     border: 1px solid #333844;
     border-radius: 16px;
     transition: 0.3s;
     cursor: pointer;
-    padding:16px;
-    display:flex;
-    align-items:center;
-    gap:16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -231,22 +227,20 @@ body {
     box-shadow: 0 8px 30px rgba(255, 211, 105, 0.15);
 }
 
-/* 棋手头像 */
-.lineup-avatar {
-    width:64px;
-    height:64px;
-    border-radius:12px;
-    flex-shrink:0;
-    border:2px solid #333844;
-    overflow:hidden;
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
-.lineup-avatar img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.card-bottom {
+    width: 100%;
 }
 
-/* 强度方块 */
+/* 隐藏卡片里的棋手头像 */
+.lineup-avatar {
+    display: none;
+}
+
 .lineup-rank{
     width:54px;
     height:54px;
@@ -261,32 +255,27 @@ body {
     color:#fff;
 }
 
-.lineup-main{
-    flex:1;
-    min-width:0;
-}
 .lineup-top{
     display:flex;
     align-items:center;
     gap:10px;
-    margin-bottom:6px;
+    margin-bottom: 5px;
 }
 .lineup-name{
-    font-size:20px;
+    font-size: 17px;
     font-weight:700;
     color:#ffd369;
 }
 .tag{
-    padding:3px 8px;
+    padding:2px 7px;
     border-radius:6px;
-    font-size:12px;
+    font-size:11px;
     background:rgba(255,211,105,0.12);
     color:#ffd369;
 }
 .lineup-meta{
     font-size:12px;
     color:#9aa0b0;
-    margin-bottom:8px;
     display:flex;
     flex-wrap:wrap;
     gap:8px;
@@ -295,6 +284,9 @@ body {
     display:flex;
     gap:6px;
     align-items:center;
+    flex-wrap: nowrap;
+    overflow-x:auto;
+    padding-bottom: 4px;
 }
 .mini-hero{
     width:42px;
@@ -417,7 +409,6 @@ body {
     opacity:0.9;
 }
 
-/* 滚动条美化 */
 .modal-content::-webkit-scrollbar {
     width: 8px;
 }
