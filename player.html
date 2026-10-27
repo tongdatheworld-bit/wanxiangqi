@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>棋手 | 王者万象棋 - 万象数据站</title>
+    <title>棋手 | 王者万象棋 - 万象一图诀</title>
     <base href="./">
     <style>
         * {
@@ -208,7 +208,7 @@
     </div>
 
 <script>
-// 棋手数据，就是咱们之前整理的全部棋手
+// 全部棋手数据
 const playerList = [
     {
         name:"武凤",
@@ -278,6 +278,159 @@ const playerList = [
         secretCard:{name:"灵异探测大改装",desc:""},
         unique:{name:"超级连接",desc:""},
         derivedCardList:[]
+    },
+    {
+        name:"瑶妹",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"阿离",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"镜",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"乔汐",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"常小娥",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"玉环",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"庄小鱼",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"马可",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"白歌",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"昭君",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"班叔",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"弈星",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"孙小宾",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"明先生",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"闹闹",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"姜导",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
+    },
+    {
+        name:"嬴律",
+        quote:"",
+        skill:{name:"",desc:""},
+        secret:{name:"",desc:""},
+        secretCard:{name:"",desc:""},
+        unique:{name:"",desc:""},
+        derivedCardList:[]
     }
 ];
 
@@ -299,7 +452,7 @@ function render(list){
                 <div class="player-name">${p.name}</div>
             </div>
             <div class="card-body">
-                <span class="tag">技能</span>${p.skill.name}
+                <span class="tag">技能</span>${p.skill?.name || "待补充"}
             </div>
         `;
         card.onclick = ()=>openDetail(p);
@@ -310,12 +463,12 @@ function openDetail(p){
     let html = `<h2>${p.name}</h2>`;
     if(p.quote) html += `<div class="modal-block"><h4>台词</h4><p>${p.quote}</p></div>`;
     html += `
-        <div class="modal-block"><h4>【技能】${p.skill.name}</h4><p>${p.skill.desc}</p></div>
-        <div class="modal-block"><h4>【秘技触发】${p.secret.name}</h4><p>${p.secret.desc}</p></div>
-        <div class="modal-block"><h4>【秘技牌】${p.secretCard.name}</h4><p>${p.secretCard.desc}</p></div>
-        <div class="modal-block"><h4>【专属】${p.unique.name}</h4><p>${p.unique.desc}</p></div>
+        <div class="modal-block"><h4>【技能】${p.skill?.name || "待补充"}</h4><p>${p.skill?.desc || "待补充"}</p></div>
+        <div class="modal-block"><h4>【秘技触发】${p.secret?.name || "待补充"}</h4><p>${p.secret?.desc || "待补充"}</p></div>
+        <div class="modal-block"><h4>【秘技牌】${p.secretCard?.name || "待补充"}</h4><p>${p.secretCard?.desc || "待补充"}</p></div>
+        <div class="modal-block"><h4>【专属】${p.unique?.name || "待补充"}</h4><p>${p.unique?.desc || "待补充"}</p></div>
     `;
-    if(p.derivedCardList.length>0){
+    if(p.derivedCardList && p.derivedCardList.length>0){
         html += `<div class="modal-block"><h4>衍生卡牌</h4>`;
         p.derivedCardList.forEach(d=>{
             html += `<p><span class="tag">${d.name}</span> ${d.desc}</p>`
