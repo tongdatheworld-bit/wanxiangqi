@@ -45,8 +45,20 @@ function renderList() {
 
     wrap.innerHTML = filterArr.map(item => `
     <div class="lineup-card" data-id="${item.id}">
-        <div class="card-top">
-            <div class="lineup-rank">${item.rank}</div>
+        <div class="lineup-avatar">
+            <img src="${item.playerImg}" alt="${item.player}">
+        </div>
+        <div class="lineup-rank">${item.rank}</div>
+        <div class="lineup-main">
+            <div class="lineup-top">
+                <div class="lineup-name">${item.name}</div>
+                ${Array.isArray(item.ban位) ? item.ban位.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+            </div>
+            <div class="lineup-meta">
+                <span>棋手：${item.player}</span>
+                <span>成型难度：${item.hard}</span>
+                <span>阵容码：${item.lineupCode}</span>
+            </div>
             <div class="hero-row">
                 ${
                     item.heroList && Array.isArray(item.heroList) && item.heroList.length
@@ -59,21 +71,9 @@ function renderList() {
                 }
             </div>
         </div>
-        <div class="card-bottom">
-            <div class="lineup-top">
-                <div class="lineup-name">${item.name}</div>
-                ${Array.isArray(item.ban位) ? item.ban位.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
-            </div>
-            <div class="lineup-meta">
-                <span>棋手：${item.player}</span>
-                <span>成型难度：${item.hard}</span>
-                <span>阵容码：${item.lineupCode}</span>
-            </div>
-        </div>
     </div>
     `).join('')
 
-    // 卡片点击弹窗绑定（如果你不需要弹窗，直接删掉这块）
     bindCardClick();
 }
 
@@ -114,7 +114,6 @@ function bindCardClick() {
         }
     })
 
-    // 关闭弹窗
     if (closeModalBtn) {
         closeModalBtn.onclick = () => modal.style.display = 'none';
     }
@@ -130,7 +129,6 @@ if (filterChips.length > 0) {
         el.addEventListener('click', () => {
             const type = el.dataset.filter;
             const val = el.dataset.val;
-            // 同组取消active
             el.parentElement.querySelectorAll('.filter-chip').forEach(i => i.classList.remove('active'))
             el.classList.add('active')
             if (type === 'player') currentFilterPlayer = val
@@ -151,5 +149,22 @@ if (resetBtn) {
         document.querySelectorAll('.filter-chip').forEach(i => i.classList.remove('active'))
         document.querySelectorAll('.filter-chip[data-val="all"]').forEach(x => x.classList.add('active'))
         renderList()
+    })
+}
+
+// 搜索框
+const searchInput = document.getElementById('searchInput');
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const searchKw = e.target.value.trim().toLowerCase();
+        let filterArr = [...allLineupData];
+        if(searchKw){
+            filterArr = filterArr.filter(item => {
+                const name = item.name?.toLowerCase() || '';
+                const heroText = Array.isArray(item.heroList) ? item.heroList.map(h => h.name).join('').toLowerCase() : '';
+                return name.includes(searchKw) || heroText.includes(searchKw);
+            })
+        }
+        renderList();
     })
 }
