@@ -45,6 +45,18 @@
         }
         .top-nav-wrap a.active {
             color: #ffd369;
+            position: relative;
+        }
+        /* 加上底部黄色下划线，和你截图效果一致 */
+        .top-nav-wrap a.active::after{
+            content:'';
+            position:absolute;
+            left:16px;
+            right:16px;
+            bottom:-4px;
+            height:4px;
+            background:#ffd369;
+            border-radius:99px;
         }
         .container {
             max-width: 1100px;
@@ -63,7 +75,7 @@
             line-height: 1.2;
             font-weight: 600;
         }
-        h1 span {
+        .yellow-text {
             color: #ffd369;
         }
         .desc-line {
