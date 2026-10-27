@@ -16,6 +16,27 @@
     <div class="container">
         <h1>阵容大全</h1>
         <p>浏览热门阵容，一键复制阵容码</p>
+        <!-- 双筛选栏：棋手 + 阵容强度 -->
+        <div class="filter-bar" style="margin:16px 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+            <div style="display:flex;gap:6px;align-items:center;">
+                <label>棋手：</label>
+                <select id="playerFilter" style="padding:4px 8px;">
+                    <option value="">全部棋手</option>
+                </select>
+            </div>
+            <div style="display:flex;gap:6px;align-items:center;">
+                <label>强度：</label>
+                <select id="levelFilter" style="padding:4px 8px;">
+                    <option value="">全部强度</option>
+                    <option value="S+">S+</option>
+                    <option value="S">S</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+            </div>
+            <span id="resultCount"></span>
+        </div>
+
         <div id="lineup-list" class="card-wrap">
             <!-- JS渲染阵容卡片 -->
         </div>
