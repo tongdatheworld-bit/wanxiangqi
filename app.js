@@ -1,19 +1,22 @@
-// app.js
 let allLineupData = [];
 let currentFilterPlayer = 'all';
 let currentFilterRank = 'all';
 let currentFilterCamp = 'all';
 
-// 加载json
-fetch('./data.json')
-.then(res => res.json())
-.then(data => {
-    allLineupData = data;
-    renderList();
-})
+// 只在阵容列表存在时加载数据
+const lineupWrap = document.getElementById('lineupList');
+if(lineupWrap){
+    fetch('./data.json')
+    .then(res => res.json())
+    .then(data => {
+        allLineupData = data;
+        renderList();
+    })
+}
 
 function renderList(){
     const wrap = document.getElementById('lineupList');
+    if(!wrap) return;
     let filterArr = [...allLineupData];
 
     // 棋手筛选
@@ -24,7 +27,7 @@ function renderList(){
     if(currentFilterRank !== 'all'){
         filterArr = filterArr.filter(item => item.rank === currentFilterRank)
     }
-    // 阵营筛选（ban位就是标签）
+    // 阵营筛选
     if(currentFilterCamp !== 'all'){
         filterArr = filterArr.filter(item => item.ban位.includes(currentFilterCamp))
     }
@@ -65,27 +68,33 @@ function renderList(){
     `).join('')
 }
 
-// 筛选点击事件
-document.querySelectorAll('.filter-chip').forEach(el=>{
-    el.addEventListener('click',()=>{
-        const type = el.dataset.filter;
-        const val = el.dataset.val;
-        // 同组取消active
-        el.parentElement.querySelectorAll('.filter-chip').forEach(i=>i.classList.remove('active'))
-        el.classList.add('active')
-        if(type === 'player') currentFilterPlayer = val
-        if(type === 'rank') currentFilterRank = val
-        if(type === 'camp') currentFilterCamp = val
+// 筛选点击事件（只在筛选标签存在时绑定）
+const filterChips = document.querySelectorAll('.filter-chip');
+if(filterChips.length > 0){
+    filterChips.forEach(el=>{
+        el.addEventListener('click',()=>{
+            const type = el.dataset.filter;
+            const val = el.dataset.val;
+            // 同组取消active
+            el.parentElement.querySelectorAll('.filter-chip').forEach(i=>i.classList.remove('active'))
+            el.classList.add('active')
+            if(type === 'player') currentFilterPlayer = val
+            if(type === 'rank') currentFilterRank = val
+            if(type === 'camp') currentFilterCamp = val
+            renderList()
+        })
+    })
+}
+
+// 重置按钮，先判断元素是否存在！！
+const resetBtn = document.getElementById('resetFilter');
+if(resetBtn){
+    resetBtn.addEventListener('click',()=>{
+        currentFilterPlayer = 'all';
+        currentFilterRank = 'all';
+        currentFilterCamp = 'all';
+        document.querySelectorAll('.filter-chip').forEach(i=>i.classList.remove('active'))
+        document.querySelectorAll('.filter-chip[data-val="all"]').forEach(x=>x.classList.add('active'))
         renderList()
     })
-})
-
-// 重置按钮
-document.getElementById('resetFilter').addEventListener('click',()=>{
-    currentFilterPlayer = 'all';
-    currentFilterRank = 'all';
-    currentFilterCamp = 'all';
-    document.querySelectorAll('.filter-chip').forEach(i=>i.classList.remove('active'))
-    document.querySelectorAll('.filter-chip[data-val="all"]').forEach(x=>x.classList.add('active'))
-    renderList()
-})
+}
