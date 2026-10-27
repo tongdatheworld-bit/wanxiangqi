@@ -1,885 +1,127 @@
-{
-    "heros": [],
-    "lineups": [
-        {
-            "name": "无限复活花木兰",
-            "level": "S+",
-            "player": "赢律",
-            "hard": "中等",
-            "code": "【万象一图诀】【无限复活木兰】38337677766581410",
-            "talent": "",
-            "ban": "逐鹿,大河流域,三分之地",
-            "url": "https://mp.weixin.qq.com/s/AJWkzhmwNtzLIeR5Zyk6VQ"
-        },
-        {
-            "name": "玉环日落海司空震",
-            "level": "S+",
-            "player": "玉环",
-            "hard": "困难",
-            "code": "【万象一图诀】【玉环日落海司空震】76616412643475690",
-            "talent": "",
-            "ban": "大河流域",
-            "url": "https://mp.weixin.qq.com/s/bDxNQm5SB18JFR0-ZaBnpw"
-        },
-        {
-            "name": "孙小膑三分倒转",
-            "level": "S+",
-            "player": "孙小宾",
-            "hard": "中等",
-            "code": "【万象一图诀】【孙小宾三分倒转刺】77743464511520968",
-            "talent": "是",
-            "ban": "逐鹿,大河流域,河洛",
-            "url": "https://mp.weixin.qq.com/s/bcmeV8P_EyzXC5slW-7Z9A"
-        },
-        {
-            "name": "昭君大河5+2",
-            "level": "S+",
-            "player": "昭君",
-            "hard": "中等",
-            "code": "【万象一图诀】【昭君大河龙蛇】30456997313626170",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "昭君75",
-            "level": "S+",
-            "player": "昭君",
-            "hard": "中等",
-            "code": "【万象一图诀】【昭君诸葛75】94633913646845962",
-            "talent": "",
-            "ban": "逐鹿,河洛,日落海",
-            "url": ""
-        },
-        {
-            "name": "昭君低阶龙蛇",
-            "level": "S",
-            "player": "昭君",
-            "hard": "中等",
-            "code": "【万象一图诀】【昭君低阶大河龙蛇】119403711597433866",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/Q4gCxM2U2iDaRZrGXGu66w"
-        },
-        {
-            "name": "马可单核养猪",
-            "level": "S",
-            "player": "马可",
-            "hard": "中等",
-            "code": "【万象一图诀】【马可养猪】129533708748664088",
-            "talent": "",
-            "ban": "逐鹿,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/Os-IPoQB21weBzouodmE2Q"
-        },
-        {
-            "name": "班叔李信陷阱流",
-            "level": "S",
-            "player": "班叔",
-            "hard": "中等",
-            "code": "【万象一图诀】【班叔李信】71552965556481190",
-            "talent": "",
-            "ban": "逐鹿,大河流域,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/eDmiFVDsOmM7owtwIZlhtw"
-        },
-        {
-            "name": "瑶妹李信牺牲流",
-            "level": "S",
-            "player": "瑶妹",
-            "hard": "简单",
-            "code": "【万象一图诀】【瑶妹李信】24825016001651854",
-            "talent": "",
-            "ban": "逐鹿,大河流域,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/STCWpxfZ8gKYmuhiW_Aw3Q"
-        },
-        {
-            "name": "白歌三分倒转",
-            "level": "S",
-            "player": "白歌",
-            "hard": "困难",
-            "code": "【万象一图诀】【白歌三分倒转刺】45090461592400206",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛",
-            "url": ""
-        },
-        {
-            "name": "嫦小娥海陆空",
-            "level": "S",
-            "player": "嫦小娥",
-            "hard": "中等",
-            "code": "【万象一图诀】【常小娥海陆空】29327862896598384",
-            "talent": "",
-            "ban": "逐鹿,三分之地,日落海,大河流域",
-            "url": "https://mp.weixin.qq.com/s/gC0A9BIW5cIfxQfJSFY3gA"
-        },
-        {
-            "name": "阿离伞守约",
-            "level": "S",
-            "player": "阿离",
-            "hard": "简单",
-            "code": "【万象一图诀】【阿离伞守约】31018086349015196",
-            "talent": "",
-            "ban": "逐鹿,大河流域,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/nrUIttPt5IoFSw3w6pOe9A"
-        },
-        {
-            "name": "班叔奶瓶流",
-            "level": "S",
-            "player": "班叔",
-            "hard": "中等",
-            "code": "【万象一图诀】【班叔奶屏流】24263928931041370",
-            "talent": "",
-            "ban": "河洛,日落海",
-            "url": "https://mp.weixin.qq.com/s/cJI4qFWNpY2enQ4u9pS3mw"
-        },
-        {
-            "name": "香香大河开团射",
-            "level": "S",
-            "player": "香香",
-            "hard": "简单",
-            "code": "【万象一图诀】【大河开团射】100825741915125774",
-            "talent": "是",
-            "ban": "逐鹿,三分之地,日落海,河洛",
-            "url": "https://mp.weixin.qq.com/s/CLtj2enWZTCGPJ-E7TZ1fw"
-        },
-        {
-            "name": "明先生大河猪离",
-            "level": "S",
-            "player": "明先生",
-            "hard": "简单",
-            "code": "【万象一图诀】【明先生大河猪离】81682962224372016",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/vOpsVAGr7h1GnYsMZmWIyg"
-        },
-        {
-            "name": "安琪拉爆盾廉颇",
-            "level": "S",
-            "player": "安琪拉",
-            "hard": "简单",
-            "code": "【万象一图诀】【安琪拉爆盾廉颇】24263218411795460",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/4H_67XGdshpqsPgTuPLHlg"
-        },
-        {
-            "name": "白歌三分吕布",
-            "level": "S",
-            "player": "白歌",
-            "hard": "中等",
-            "code": "【万象一图诀】【白歌三分吕布】94630811153043792",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛",
-            "url": "https://mp.weixin.qq.com/s/uaMPISu7bABxdc_qqbFqwQ"
-        },
-        {
-            "name": "低压赢率大河猪离",
-            "level": "S",
-            "player": "赢律",
-            "hard": "简单",
-            "code": "【万象一图诀】【低压赢律大河猪离】126157870952132776",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/o9Miekf3RnQP_0kIz2saMg"
-        },
-        {
-            "name": "小妲己日落海倒转",
-            "level": "S",
-            "player": "小妲己",
-            "hard": "中等",
-            "code": "【万象一图诀】【小妲己日落海倒转】55226795263681668",
-            "talent": "",
-            "ban": "大河流域",
-            "url": "https://mp.weixin.qq.com/s/jrWzStmxXWGgIsWt-fh8LA?scene=1&click_id=470618072"
-        },
-        {
-            "name": "孙小宾三分换帅",
-            "level": "S",
-            "player": "孙小宾",
-            "hard": "中等",
-            "code": "【万象一图诀】【孙小宾三分换帅】39464817719035910",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛",
-            "url": ""
-        },
-        {
-            "name": "明先生花木兰",
-            "level": "S",
-            "player": "明先生",
-            "hard": "中等",
-            "code": "【万象一图诀】【无限复活木兰】38337677766581410",
-            "talent": "",
-            "ban": "大河流域,逐鹿,三分之地",
-            "url": ""
-        },
-        {
-            "name": "小妲己鲸吞",
-            "level": "S",
-            "player": "小妲己",
-            "hard": "简单",
-            "code": "【万象一图诀】【鲸吞流】103078162947891208",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "阿离4.0狄仁杰",
-            "level": "S",
-            "player": "阿离",
-            "hard": "简单",
-            "code": "【万象一图诀】【阿离4.0狄仁杰】42279567486039058",
-            "talent": "",
-            "ban": "逐鹿,大河流域,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "阿离不死芈月",
-            "level": "S",
-            "player": "阿离",
-            "hard": "简单",
-            "code": "【万象一图诀】【阿离不死芈月】39464817719035922",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "崛起双生（联动天赋）",
-            "level": "S",
-            "player": "阿离",
-            "hard": "简单",
-            "code": "【万象一图诀】【崛起双生流】87877892986907668",
-            "talent": "是",
-            "ban": "逐鹿,大河流域,三分之地",
-            "url": ""
-        },
-        {
-            "name": "逐鹿毒奶",
-            "level": "S",
-            "player": "嫦小娥",
-            "hard": "简单",
-            "code": "【万象一图诀】【蔡文姬毒奶】25390447732756502",
-            "talent": "是",
-            "ban": "大河流域,河洛,日落海",
-            "url": ""
-        },
-        {
-            "name": "姜导古币镜",
-            "level": "A",
-            "player": "姜导",
-            "hard": "简单",
-            "code": "",
-            "talent": "",
-            "ban": "日落海,三分之地,大河流域",
-            "url": ""
-        },
-        {
-            "name": "赢律雷霆战机",
-            "level": "A",
-            "player": "赢律",
-            "hard": "中等",
-            "code": "【万象一图诀】【逐鹿雷霆战机】90130314019473440",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/C4CLU2n4qpFsnTzlZTcGkQ"
-        },
-        {
-            "name": "明先生雷霆战机",
-            "level": "A",
-            "player": "明先生",
-            "hard": "中等",
-            "code": "【万象一图诀】【逐鹿雷霆战机】81686064718258190",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/C4CLU2n4qpFsnTzlZTcGkQ"
-        },
-        {
-            "name": "小妲己蒙恬召唤流",
-            "level": "A",
-            "player": "小妲己",
-            "hard": "中等",
-            "code": "【万象一图诀】【小妲己蒙恬召唤流】51849095543161870",
-            "talent": "是",
-            "ban": "大河流域,河洛,三分之地",
-            "url": "https://mp.weixin.qq.com/s/KlhpRwebs4SXZJdlnPnjRw"
-        },
-        {
-            "name": "小妲己算盘流",
-            "level": "A",
-            "player": "小妲己",
-            "hard": "中等",
-            "code": "【万象一图诀】【小妲嬴政雷霆战机】58042166181778446",
-            "talent": "是",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/BFZpsTfIj3F-q-krOOhFww"
-        },
-        {
-            "name": "小妲己雷霆战机",
-            "level": "A",
-            "player": "小妲己",
-            "hard": "中等",
-            "code": "【万象一图诀】【小妲嬴政雷霆战机】58042166181778446",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "阿离遗志转生",
-            "level": "A",
-            "player": "阿离",
-            "hard": "困难",
-            "code": "【万象一图诀】【阿离遗志海月】123341259261075608",
-            "talent": "",
-            "ban": "河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/rhQ9i6OUyzd36UwcHYMUsw"
-        },
-        {
-            "name": "乔汐河洛司空震",
-            "level": "A",
-            "player": "乔汐",
-            "hard": "简单",
-            "code": "【万象一图诀】【乔汐河洛司空震】95759813553811484",
-            "talent": "",
-            "ban": "逐鹿,大河流域,日落海,三分之地",
-            "url": ""
-        },
-        {
-            "name": "乔汐海月司空震",
-            "level": "A",
-            "player": "乔汐",
-            "hard": "简单",
-            "code": "【万象一图诀】【乔汐司空震】86189043126872090",
-            "talent": "",
-            "ban": "日落海,大河流域,逐鹿",
-            "url": ""
-        },
-        {
-            "name": "逐鹿蒙犽",
-            "level": "A",
-            "player": "明先生",
-            "hard": "中等",
-            "code": "【万象一图诀】【明先生逐鹿蒙犽】80558214278639676",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/pxXWBXI8IluXftre_P51GQ"
-        },
-        {
-            "name": "逐鹿蒙犽",
-            "level": "A",
-            "player": "赢律",
-            "hard": "中等",
-            "code": "【万象一图诀】【赢律逐鹿蒙犽】22013369162768414",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/o9Miekf3RnQP_0kIz2saMg"
-        },
-        {
-            "name": "庄小鱼无阵营",
-            "level": "A",
-            "player": "庄小鱼",
-            "hard": "简单",
-            "code": "【万象一图诀】【庄周无阵营】87314943033672704",
-            "talent": "",
-            "ban": "无限制",
-            "url": ""
-        },
-        {
-            "name": "明先生山鬼流",
-            "level": "A",
-            "player": "明先生",
-            "hard": "简单",
-            "code": "【万象一图诀】【明先生山鬼流】80557682811107548",
-            "talent": "",
-            "ban": "河洛,三分之地",
-            "url": "https://mp.weixin.qq.com/s/SkpWC3MZj7fN99aLNOOChw"
-        },
-        {
-            "name": "香香三分登场",
-            "level": "A",
-            "player": "香香",
-            "hard": "简单",
-            "code": "【万象一图诀】【香香三分登场】123907311224235024",
-            "talent": "是",
-            "ban": "大河流域,逐鹿,河洛,日落海",
-            "url": ""
-        },
-        {
-            "name": "镜999猪虎",
-            "level": "A",
-            "player": "镜",
-            "hard": "中等",
-            "code": "【万象一图诀】【镜999猪老虎】53538566554329126",
-            "talent": "",
-            "ban": "无限制",
-            "url": "https://mp.weixin.qq.com/s/QH4gNZwZzSPI1rcJcUoyrQ"
-        },
-        {
-            "name": "嫦小娥艾琳",
-            "level": "A",
-            "player": "嫦小娥",
-            "hard": "中等",
-            "code": "【万象一图诀】【嫦小娥艾琳】91253111432502540",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地",
-            "url": ""
-        },
-        {
-            "name": "嫦小娥马瑶",
-            "level": "A",
-            "player": "嫦小娥",
-            "hard": "中等",
-            "code": "【万象一图诀】【嫦小娥马瑶】74927562783215920",
-            "talent": "",
-            "ban": "逐鹿,日落海",
-            "url": ""
-        },
-        {
-            "name": "安琪拉刘邦炸盾",
-            "level": "A",
-            "player": "安琪拉",
-            "hard": "中等",
-            "code": "【万象一图诀】【安琪拉刘邦炸盾】56914315710236676",
-            "talent": "",
-            "ban": "河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/4H_67XGdshpqsPgTuPLHlg"
-        },
-        {
-            "name": "重装凯（兄妹）",
-            "level": "A",
-            "player": "嫦小娥",
-            "hard": "简单",
-            "code": "【万象一图诀】【重装凯（兄妹）】15820298524206098",
-            "talent": "是",
-            "ban": "三分之地,大河流域,逐鹿",
-            "url": ""
-        },
-        {
-            "name": "三等登场起舞貂蝉",
-            "level": "A",
-            "player": "白歌",
-            "hard": "中等",
-            "code": "【万象一图诀】【三分登场起舞】78870693731684380",
-            "talent": "是",
-            "ban": "逐鹿,大河流域",
-            "url": ""
-        },
-        {
-            "name": "日落海整备海诺",
-            "level": "A",
-            "player": "白歌",
-            "hard": "中等",
-            "code": "【万象一图诀】【日落海整备999】29331718557211664",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛,三分之地",
-            "url": ""
-        },
-        {
-            "name": "孙小宾雷霆战机",
-            "level": "A",
-            "player": "孙小宾",
-            "hard": "中等",
-            "code": "【万象一图诀】【孙小嬴政雷霆战机】113774212063414284",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "孙小宾逐鹿蒙犽",
-            "level": "A",
-            "player": "孙小宾",
-            "hard": "中等",
-            "code": "【万象一图诀】【逐鹿最强蒙犽】129536810758673424",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "庄小鱼无限复活木兰",
-            "level": "A",
-            "player": "庄小鱼",
-            "hard": "中等",
-            "code": "【万象一图诀】【庄周无限复活木兰】120529611504499876",
-            "talent": "",
-            "ban": "逐鹿,大河流域,三分之地",
-            "url": ""
-        },
-        {
-            "name": "庄小鱼逐鹿蒙犽",
-            "level": "A",
-            "player": "庄小鱼",
-            "hard": "简单",
-            "code": "【万象一图诀】【庄小鱼逐鹿蒙犽】19198619395585036",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "庄小鱼雷霆战机",
-            "level": "A",
-            "player": "庄小鱼",
-            "hard": "简单",
-            "code": "【万象一图诀】【庄小鱼雷霆战机】130099760711864330",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "庄小鱼大河龙蛇",
-            "level": "A",
-            "player": "庄小鱼",
-            "hard": "简单",
-            "code": "【万象一图诀】【庄小鱼龙蛇】15257969721994254",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "白歌雷霆战机",
-            "level": "A",
-            "player": "白歌",
-            "hard": "中等",
-            "code": "【万象一图诀】【白歌嬴政雷霆战机】94633913646845974",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "镜三分倒转",
-            "level": "A",
-            "player": "镜",
-            "hard": "中等",
-            "code": "【万象一图诀】【镜三分倒转】117151911783888918",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛",
-            "url": ""
-        },
-        {
-            "name": "镜马瑶",
-            "level": "A",
-            "player": "镜",
-            "hard": "中等",
-            "code": "【万象一图诀】【镜马瑶】66486415483056146",
-            "talent": "",
-            "ban": "逐鹿,河洛,日落海",
-            "url": ""
-        },
-        {
-            "name": "镜养貂蝉",
-            "level": "A",
-            "player": "镜",
-            "hard": "中等",
-            "code": "【万象一图诀】【镜养貂蝉】107581762575355920",
-            "talent": "",
-            "ban": "逐鹿,河洛,日落海",
-            "url": ""
-        },
-        {
-            "name": "瑶妹COS班叔",
-            "level": "A",
-            "player": "瑶妹",
-            "hard": "简单",
-            "code": "【万象一图诀】【瑶妹COS班叔】23702219022923788",
-            "talent": "",
-            "ban": "河洛,日落海",
-            "url": ""
-        },
-        {
-            "name": "瑶妹虎鸟兽觉",
-            "level": "A",
-            "player": "瑶妹",
-            "hard": "简单",
-            "code": "【万象一图诀】【瑶妹虎鸟兽觉】72115915510023186",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "阿离炸弹猫",
-            "level": "A",
-            "player": "阿离",
-            "hard": "简单",
-            "code": "【万象一图诀】【阿离炸弹猫】97448663413610506",
-            "talent": "",
-            "ban": "逐鹿,大河流域,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "香香双狙",
-            "level": "A",
-            "player": "香香",
-            "hard": "简单",
-            "code": "【万象一图诀】【香香双狙】25391068883294220",
-            "talent": "是",
-            "ban": "逐鹿,大河流域,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "基层提拔炸盾曜（逐星）",
-            "level": "A",
-            "player": "赢律",
-            "hard": "简单",
-            "code": "【万象一图诀】【基层提拔炸盾曜】3435399549339666",
-            "talent": "是",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/o9Miekf3RnQP_0kIz2saMg"
-        },
-        {
-            "name": "孙小宾999猪虎",
-            "level": "A",
-            "player": "孙小宾",
-            "hard": "中等",
-            "code": "【万象一图诀】【孙小宾无阵营猪虎】63108715762614280",
-            "talent": "",
-            "ban": "无限制",
-            "url": ""
-        },
-        {
-            "name": "安琪拉自爆海月",
-            "level": "A",
-            "player": "安琪拉",
-            "hard": "中等",
-            "code": "【万象一图诀】【安琪拉自爆海月】44529416734963712",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/4H_67XGdshpqsPgTuPLHlg"
-        },
-        {
-            "name": "姜导封神韩信",
-            "level": "A",
-            "player": "姜导",
-            "hard": "中等",
-            "code": "【万象一图诀】【姜导封神韩信】96320281506898962",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地",
-            "url": "https://mp.weixin.qq.com/s/Aeq2_Bv9RWMk7sKKFhFn5w"
-        },
-        {
-            "name": "明先生泳池派对",
-            "level": "A",
-            "player": "明先生",
-            "hard": "简单",
-            "code": "【万象一图诀】【明先生泳池派对】130659608655536434",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地",
-            "url": ""
-        },
-        {
-            "name": "三分诸葛亮貂蝉",
-            "level": "A",
-            "player": "闹闹",
-            "hard": "简单",
-            "code": "【万象一图诀】【三分诸葛貂蝉】30454515535914298",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛,日落海",
-            "url": ""
-        },
-        {
-            "name": "姜导封神玄策",
-            "level": "A",
-            "player": "姜导",
-            "hard": "简单",
-            "code": "【万象一图诀】【姜导封神玄策】38336435743492112",
-            "talent": "",
-            "ban": "大河流域,逐鹿,日落海,三分之地",
-            "url": "https://mp.weixin.qq.com/s/OXbWMbKV_qgv72SeCVnmgQ"
-        },
-        {
-            "name": "安琪拉芈月",
-            "level": "A",
-            "player": "安琪拉",
-            "hard": "简单",
-            "code": "【万象一图诀】【安琪拉芈月】107016862089396228",
-            "talent": "",
-            "ban": "河洛,三分之地,日落海",
-            "url": "https://mp.weixin.qq.com/s/4H_67XGdshpqsPgTuPLHlg"
-        },
-        {
-            "name": "嫦娥兽觉",
-            "level": "A",
-            "player": "嫦小娥",
-            "hard": "简单",
-            "code": "【万象一图诀】【虎鸟兽觉】5687199362583572",
-            "talent": "是",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "马克旋刃李元芳",
-            "level": "A",
-            "player": "马可",
-            "hard": "简单",
-            "code": "【万象一图诀】【马克旋刃李元芳】28205197499772948",
-            "talent": "是",
-            "ban": "三分之地,大河流域",
-            "url": ""
-        },
-        {
-            "name": "闹闹日落海整备999",
-            "level": "A",
-            "player": "闹闹",
-            "hard": "简单",
-            "code": "【万象一图诀】【日落海整备999】54663845310749730",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛,三分之地",
-            "url": ""
-        },
-        {
-            "name": "闹闹大河龙蛇",
-            "level": "A",
-            "player": "闹闹",
-            "hard": "简单",
-            "code": "【万象一图诀】【闹闹大河龙蛇】65923465529672718",
-            "talent": "",
-            "ban": "逐鹿,三分之地,河洛,日落海",
-            "url": ""
-        },
-        {
-            "name": "闹闹艾琳",
-            "level": "A",
-            "player": "闹闹",
-            "hard": "简单",
-            "code": "【万象一图诀】【闹闹艾琳】121092561457134616",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛,三分之地",
-            "url": ""
-        },
-        {
-            "name": "闹闹花木兰",
-            "level": "A",
-            "player": "闹闹",
-            "hard": "中等",
-            "code": "【万象一图诀】【闹闹河洛花木兰】45094317253082124",
-            "talent": "",
-            "ban": "大河流域,逐鹿,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "瑶妹诸葛亮",
-            "level": "B",
-            "player": "瑶妹",
-            "hard": "简单",
-            "code": "【万象一图诀】【瑶妹诸葛亮】37213017905168398",
-            "talent": "",
-            "ban": "逐鹿,大河流域,日落海,河洛",
-            "url": ""
-        },
-        {
-            "name": "镜三分登场",
-            "level": "B",
-            "player": "镜",
-            "hard": "简单",
-            "code": "【万象一图诀】【镜三分登场】89004414112901138",
-            "talent": "",
-            "ban": "河洛,大河流域,逐鹿",
-            "url": ""
-        },
-        {
-            "name": "奕星日落海",
-            "level": "B",
-            "player": "奕星",
-            "hard": "简单",
-            "code": "【万象一图诀】【奕星日落海】74930665277087754",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛,三分之地",
-            "url": ""
-        },
-        {
-            "name": "奕星三分倒转",
-            "level": "B",
-            "player": "奕星",
-            "hard": "中等",
-            "code": "【万象一图诀】【奕星三分倒转】40027767671950374",
-            "talent": "",
-            "ban": "逐鹿,大河流域,河洛",
-            "url": ""
-        },
-        {
-            "name": "奕星龙蛇偷分",
-            "level": "B",
-            "player": "奕星",
-            "hard": "简单",
-            "code": "【万象一图诀】【奕星龙蛇偷分】86189664345710606",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "奕星偷花木兰",
-            "level": "B",
-            "player": "奕星",
-            "hard": "简单",
-            "code": "【万象一图诀】【奕星偷花木兰】65923465529672726",
-            "talent": "",
-            "ban": "逐鹿,大河流域,三分之地",
-            "url": ""
-        },
-        {
-            "name": "奕星召唤",
-            "level": "B",
-            "player": "奕星",
-            "hard": "简单",
-            "code": "【万象一图诀】【奕星召唤】19198619395585046",
-            "talent": "",
-            "ban": "三分之地",
-            "url": ""
-        },
-        {
-            "name": "马可养耀",
-            "level": "B",
-            "player": "马可",
-            "hard": "简单",
-            "code": "【万象一图诀】【马可养耀】99137513274245152",
-            "talent": "",
-            "ban": "大河流域,河洛",
-            "url": ""
-        },
-        {
-            "name": "马可三分射",
-            "level": "B",
-            "player": "马可",
-            "hard": "简单",
-            "code": "【万象一图诀】【马可三分射】106455862668619804",
-            "talent": "",
-            "ban": "大河流域,逐鹿,日落海,河洛",
-            "url": ""
-        },
-        {
-            "name": "马克养镜",
-            "level": "B",
-            "player": "马可",
-            "hard": "简单",
-            "code": "【万象一图诀】【马克养镜】37775967858784280",
-            "talent": "",
-            "ban": "河洛,大河流域,三分之地",
-            "url": ""
-        },
-        {
-            "name": "瑶妹大河开团",
-            "level": "B",
-            "player": "瑶妹",
-            "hard": "简单",
-            "code": "【万象一图诀】【瑶妹虎鸟兽觉】72115915510023186",
-            "talent": "",
-            "ban": "逐鹿,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "姜导炸盾曜",
-            "level": "B",
-            "player": "姜导",
-            "hard": "简单",
-            "code": "【万象一图诀】【姜导炸盾曜】39464817719035912",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
-        },
-        {
-            "name": "姜导炸盾廉颇",
-            "level": "B",
-            "player": "姜导",
-            "hard": "简单",
-            "code": "【万象一图诀】【姜导廉颇炸盾流】127847960898184198",
-            "talent": "",
-            "ban": "大河流域,河洛,三分之地,日落海",
-            "url": ""
+document.addEventListener("DOMContentLoaded", function () {
+    initNavActive();
+    renderCurrentPage();
+});
+
+function initNavActive() {
+    const path = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav a").forEach(function (link) {
+        link.classList.remove("active");
+        const href = link.getAttribute("href") || "";
+        if (href === "./" + path || href === path) {
+            link.classList.add("active");
         }
-    ]
+    });
 }
+
+function renderCurrentPage() {
+    const path = location.pathname.split("/").pop() || "index.html";
+    if (path === "hero.html") {
+        renderHeroList();
+    } else if (path === "lineup.html") {
+        renderLineupList();
+    }
+}
+
+// 英雄页面渲染
+function renderHeroList() {
+    const list = document.getElementById("hero-list");
+    if (!list) return;
+    if (!window.gameData || !window.gameData.heroes) {
+        list.innerHTML = '<p class="empty-tip">暂无英雄数据，请检查 data.json 是否加载。</p>';
+        return;
+    }
+    list.innerHTML = "";
+    gameData.heroes.forEach(function (hero) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h4>${hero.name || "未知英雄"}</h4>
+            <p>阵营：${hero.faction || "-"}</p>
+            <p>技能：${hero.skill || "-"}</p>
+        `;
+        list.appendChild(card);
+    });
+}
+
+// 阵容页面：棋手 + 评级筛选，排版和截图完全一致
+function renderLineupList() {
+    const list = document.getElementById("lineup-list");
+    const playerSelect = document.getElementById("playerFilter");
+    const levelSelect = document.getElementById("levelFilter");
+    const countDom = document.getElementById("resultCount");
+    if (!list || !playerSelect || !levelSelect) return;
+
+    if (!window.gameData || !window.gameData.lineups) {
+        list.innerHTML = '<p class="empty-tip">暂无阵容数据，请检查 data.json 是否加载。</p>';
+        return;
+    }
+
+    // 自动收集棋手去重
+    const playerSet = new Set();
+    gameData.lineups.forEach(item => {
+        if (item.player) playerSet.add(item.player);
+    });
+    playerSelect.innerHTML = `<option value="">全部棋手</option>`;
+    playerSet.forEach(p => {
+        playerSelect.innerHTML += `<option value="${p}">${p}</option>`;
+    });
+
+    // 渲染卡片，文字顺序和截图一模一样
+    function renderCards(filterPlayer, filterLevel) {
+        list.innerHTML = "";
+        let arr = gameData.lineups;
+        if (filterPlayer) {
+            arr = arr.filter(x => x.player === filterPlayer);
+        }
+        if (filterLevel) {
+            arr = arr.filter(x => x.level === filterLevel);
+        }
+        countDom.innerText = `共 ${arr.length} 套阵容`;
+        arr.forEach(function (lineup) {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                <h4>${lineup.name || "未知阵容"}</h4>
+                <p>棋手：${lineup.player || "-"}</p>
+                <p>评级：${lineup.level || "-"}</p>
+                <p>难度：${lineup.hard || "-"}</p>
+                <p>天赋：${lineup.talent || "-"}</p>
+                <p>ban：${lineup.ban || "-"}</p>
+                <p class="copy-code" style="cursor:pointer;color:#2b5cb8;text-decoration:underline;">阵容码：${lineup.code || "-"}</p>
+                ${lineup.url ? `<p><a href="${lineup.url}" target="_blank">查看详情</a></p>` : ""}
+            `;
+            list.appendChild(card);
+            // 点击复制逻辑
+            const codeDom = card.querySelector(".copy-code");
+            codeDom.onclick = async () => {
+                try {
+                    await navigator.clipboard.writeText(lineup.code);
+                    alert("✅ 阵容码复制成功！");
+                } catch (e) {
+                    alert("复制失败，请手动复制");
+                }
+            }
+        });
+    }
+
+    renderCards("", "");
+    function onChange() {
+        renderCards(playerSelect.value, levelSelect.value);
+    }
+    playerSelect.onchange = onChange;
+    levelSelect.onchange = onChange;
+}
+
+fetch("./data.json")
+    .then(res => {
+        if (!res.ok) throw new Error("json加载失败");
+        return res.json();
+    })
+    .then(data => {
+        window.gameData = data;
+        renderCurrentPage();
+    })
+    .catch(err => {
+        console.error("data.json 读取错误：", err);
+    })
