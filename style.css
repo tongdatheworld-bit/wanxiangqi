@@ -6,8 +6,8 @@
 
 body {
     font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
-    background: #f6f7fb;
-    color: #222;
+    background: #121212;
+    color: #e8e8e8;
     line-height: 1.6;
 }
 
@@ -17,15 +17,15 @@ a {
 }
 
 .nav {
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    background: #1c1c1c;
     padding: 14px 20px;
     display: flex;
     gap: 24px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .nav a {
-    color: #fff;
+    color: #ddd;
     font-size: 15px;
     padding: 6px 10px;
     border-radius: 6px;
@@ -33,12 +33,12 @@ a {
 }
 
 .nav a:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .nav a.active {
-    background: #ffb400;
-    color: #222;
+    background: #d4ac45;
+    color: #121212;
     font-weight: bold;
 }
 
@@ -51,11 +51,11 @@ a {
 h1 {
     font-size: 28px;
     margin-bottom: 8px;
-    color: #1e3c72;
+    color: #d4ac45;
 }
 
 .desc {
-    color: #666;
+    color: #999;
     margin-bottom: 24px;
 }
 
@@ -66,27 +66,27 @@ h1 {
 }
 
 .home-card {
-    background: #fff;
+    background: #1e1e1e;
     border-radius: 14px;
     padding: 28px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #eee;
+    border: 1px solid #2c2c2c;
 }
 
 .home-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .home-card h3 {
     font-size: 20px;
     margin-bottom: 8px;
-    color: #2a5298;
+    color: #e2be60;
 }
 
 .home-card p {
-    color: #555;
+    color: #aaa;
     font-size: 14px;
 }
 
@@ -97,80 +97,79 @@ h1 {
 }
 
 .card {
-    background: #fff;
+    background: #1e1e1e;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eee;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2c2c2c;
 }
 
 .card h4 {
     margin-bottom: 8px;
-    color: #1e3c72;
+    color: #e2be60;
 }
 
 .card p {
     font-size: 14px;
-    color: #555;
+    color: #aaa;
 }
 
 .empty-tip {
-    color: #999;
+    color: #777;
     font-size: 14px;
     margin-top: 20px;
 }
-/* ===== 棋手筛选栏 黑金样式 ===== */
-.player-filter-row {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 8px 0;
-  gap: 10px;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-}
 
-.player-chip {
-  /* 固定圆形方框，这里控制头像大小 */
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  border: 2px solid #282828;
-  background-color: #181818;
-  cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+/* ========== 棋手筛选栏（适配你现有的 filter-row / filter-chip）黑金样式 ========== */
+.filter-wrap {
+    margin: 12px 0;
 }
-
-.player-chip img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px 0;
 }
-
-/* 选中：金色边框 */
-.player-chip.active {
-  border-color: #d4ac45;
-  box-shadow: 0 0 6px rgba(212, 172, 69, 0.35);
+.filter-label {
+    color: #d4ac45;
+    white-space: nowrap;
 }
-
-.player-chip:hover {
-  border-color: #e2be60;
+.filter-chip.player-chip {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #282828;
+    background-color: #181818;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
-/* 横向滚动条美化 */
-.player-filter-row::-webkit-scrollbar {
-  height: 4px;
+.filter-chip.player-chip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
-.player-filter-row::-webkit-scrollbar-track {
-  background: #181818;
-  border-radius: 4px;
+.filter-chip.player-chip.active {
+    border-color: #d4ac45;
+    box-shadow: 0 0  6px rgba(212, 172, 69, 0.32);
 }
-.player-filter-row::-webkit-scrollbar-thumb {
-  background: #77622c;
-  border-radius: 4px;
+.filter-chip.player-chip:hover {
+    border-color: #e2be60;
+}
+/* 滚动条 */
+.filter-row::-webkit-scrollbar {
+    height: 4px;
+}
+.filter-row::-webkit-scrollbar-track {
+    background: #181818;
+    border-radius: 4px;
+}
+.filter-row::-webkit-scrollbar-thumb {
+    background: #77622c;
+    border-radius: 4px;
 }
