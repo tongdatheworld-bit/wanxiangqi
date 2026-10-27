@@ -120,10 +120,10 @@ h1 {
     margin-top: 20px;
 }
 
-/* ========== 棋手筛选栏（适配你现有的 filter-row / filter-chip）黑金样式 ========== */
 .filter-wrap {
     margin: 12px 0;
 }
+
 .filter-row {
     display: flex;
     align-items: center;
@@ -132,10 +132,12 @@ h1 {
     overflow-y: hidden;
     padding: 8px 0;
 }
+
 .filter-label {
     color: #d4ac45;
     white-space: nowrap;
 }
+
 .filter-chip.player-chip {
     width: 42px;
     height: 42px;
@@ -147,6 +149,7 @@ h1 {
     cursor: pointer;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
 .filter-chip.player-chip img {
     width: 100%;
     height: 100%;
@@ -154,21 +157,25 @@ h1 {
     object-position: center;
     display: block;
 }
+
 .filter-chip.player-chip.active {
     border-color: #d4ac45;
-    box-shadow: 0 0  6px rgba(212, 172, 69, 0.32);
+    box-shadow: 0 0 6px rgba(212, 172, 69, 0.32);
 }
+
 .filter-chip.player-chip:hover {
     border-color: #e2be60;
 }
-/* 滚动条 */
+
 .filter-row::-webkit-scrollbar {
     height: 4px;
 }
+
 .filter-row::-webkit-scrollbar-track {
     background: #181818;
     border-radius: 4px;
 }
+
 .filter-row::-webkit-scrollbar-thumb {
     background: #77622c;
     border-radius: 4px;
