@@ -18,7 +18,7 @@
             {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
         ],
         "equip": [
-            {"name":"贤者的庇护","img":"images/equip/fuhuo.png"}
+            {"name":"无尽巨剑","img":"images/equip/fuhuo.png"}
         ]
     },
     {
@@ -30,55 +30,95 @@
         "hard": "困难",
         "lineupCode": "76616412643475690（点击复制）",
         "ban位": ["日落海"],
-        "heroList": [],
+        "heroList": [
+            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+            {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
+            {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
+            {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
+            {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+        ],
         "equip": []
     },
     {
         "id": 3,
-        "name": "孙膑三分体系",
+        "name": "孙小宾三分倒转",
         "rank": "S+",
         "player": "孙小宾",
         "playerImg": "images/players/sunxiaobin.png",
         "hard": "中等",
         "lineupCode": "77743464511520968（点击复制）",
         "ban位": ["逐鹿", "大河流", "河洛"],
-        "heroList": [],
+        "heroList": [
+            {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+            {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
+            {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+            {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+            {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
+            {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
+            {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
+        ],
         "equip": []
     },
     {
         "id": 4,
-        "name": "昭君河洛5+2",
+        "name": "昭君大河5+2",
         "rank": "S+",
         "player": "昭君",
         "playerImg": "images/players/zhaojun.png",
         "hard": "中等",
         "lineupCode": "30456997313626170（点击复制）",
         "ban位": ["逐鹿", "河洛", "三分", "日落海"],
-        "heroList": [],
+        "heroList": [
+            {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
+            {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+            {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
+            {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+            {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+            {"name":"杨玉环","img":"images/heroes/yuyanghuan.png","isCore":false},
+            {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
+        ],
         "equip": []
     },
     {
         "id": 5,
-        "name": "昭君75速冲",
+        "name": "昭君75",
         "rank": "S+",
         "player": "昭君",
         "playerImg": "images/players/zhaojun.png",
         "hard": "中等",
         "lineupCode": "94633913646845962（点击复制）",
-        "ban位": ["逐鹿", "河洛", "日落海"],
-        "heroList": [],
+        "ban位": ["逐鹿", "河洛", "三分", "日落海"],
+        "heroList": [
+            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+            {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+            {"name":"杨玉环","img":"images/heroes/yuyanghuan.png","isCore":false},
+            {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false},
+            {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
+            {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false},
+            {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false}
+        ],
         "equip": []
     },
     {
         "id": 6,
-        "name": "低阶龙蛇",
+        "name": "昭君低阶龙蛇",
         "rank": "S",
         "player": "昭君",
         "playerImg": "images/players/zhaojun.png",
         "hard": "中等",
         "lineupCode": "119403711597433866（点击复制）",
         "ban位": ["逐鹿", "河洛", "三分", "日落海"],
-        "heroList": [],
+        "heroList": [
+            {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
+               {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+            {"name":"虞姬","img":"images/heroes/yuji.png","isCore":false},
+            {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
+           {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+            {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+            {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+        ],
         "equip": []
     }
 ]
