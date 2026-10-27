@@ -3,66 +3,70 @@
         "id": 1,
         "name": "无限复活花木兰",
         "rank": "S+",
-        "player": "赢律",
+        "player": "阿离",
         "hard": "中等",
         "lineupCode": "38337677766581410",
-        "ban位": ["逐鹿", "大河流域", "三分之地"],
-        "heroList": [],
-        "equip": ""
+        "ban位": ["逐鹿", "大河流", "三分"],
+        "heroList": [
+            {"name":"花木兰","img":"images/hero/huamulan.png","isCore":true}
+        ],
+        "equip": [
+            {"name":"贤者的庇护","img":"images/equip/fuhuo.png"}
+        ]
     },
     {
         "id": 2,
-        "name": "玉环日落海司空震",
+        "name": "日落海司空震",
         "rank": "S+",
-        "player": "玉环",
+        "player": "乔汐",
         "hard": "困难",
         "lineupCode": "76616412643475690",
-        "ban位": ["大河流域"],
+        "ban位": ["日落海"],
         "heroList": [],
-        "equip": ""
+        "equip": []
     },
     {
         "id": 3,
-        "name": "孙小膑三分倒转",
+        "name": "孙膑三分体系",
         "rank": "S+",
-        "player": "孙小宾",
+        "player": "常小娥",
         "hard": "中等",
         "lineupCode": "77743464511520968",
-        "ban位": ["逐鹿", "大河流域", "河洛"],
+        "ban位": ["逐鹿", "大河流", "河洛"],
         "heroList": [],
-        "equip": ""
+        "equip": []
     },
     {
         "id": 4,
-        "name": "昭君大河5+2",
+        "name": "昭君河洛5+2",
         "rank": "S+",
-        "player": "昭君",
+        "player": "庄小鱼",
         "hard": "中等",
         "lineupCode": "30456997313626170",
-        "ban位": ["逐鹿", "河洛", "三分之地", "日落海"],
+        "ban位": ["逐鹿", "河洛", "三分", "日落海"],
         "heroList": [],
-        "equip": ""
+        "equip": []
     },
     {
         "id": 5,
-        "name": "昭君75",
+        "name": "昭君75速冲",
         "rank": "S+",
-        "player": "昭君",
+        "player": "马可",
         "hard": "中等",
         "lineupCode": "94633913646845962",
         "ban位": ["逐鹿", "河洛", "日落海"],
         "heroList": [],
-        "equip": ""
+        "equip": []
     },
     {
         "id": 6,
-        "name": "昭君低阶龙蛇",
+        "name": "低阶龙蛇",
         "rank": "S",
-        "player": "昭君",
+        "player": "白歌",
         "hard": "中等",
         "lineupCode": "119403711597433866",
-        "ban位": ["逐鹿", "河洛", "三分之地", "日落海"],
+        "ban位": ["逐鹿", "河洛", "三分", "日落海"],
         "heroList": [],
-        "equip": ""
+        "equip": []
     }
 ]
