@@ -97,7 +97,7 @@ function renderLineupList() {
             codeDom.onclick = async () => {
                 try {
                     await navigator.clipboard.writeText(lineup.code);
-                    alert("✅ 阵容码复制成功！");
+                    alert("阵容码复制成功！");
                 } catch (e) {
                     alert("复制失败，请手动复制");
                 }
