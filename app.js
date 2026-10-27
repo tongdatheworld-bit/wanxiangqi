@@ -33,9 +33,9 @@ function renderList() {
     if (currentFilterRank !== 'all') {
         filterArr = filterArr.filter(item => item.rank === currentFilterRank)
     }
-    // 阵营筛选，增加容错：先判断是不是数组
+    // BAN阵营筛选，容错判断数组
     if (currentFilterCamp !== 'all') {
-        filterArr = filterArr.filter(item => Array.isArray(item.ban位) && item.ban位.includes(currentFilterCamp))
+        filterArr = filterArr.filter(item => Array.isArray(item["ban位"]) && item["ban位"].includes(currentFilterCamp))
     }
 
     if (!filterArr.length) {
@@ -52,7 +52,7 @@ function renderList() {
         <div class="lineup-main">
             <div class="lineup-top">
                 <div class="lineup-name">${item.name}</div>
-                ${Array.isArray(item.ban位) ? item.ban位.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+                ${Array.isArray(item["ban位"]) ? item["ban位"].map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
             </div>
             <div class="lineup-meta">
                 <span>棋手：${item.player}</span>
@@ -95,7 +95,7 @@ function bindCardClick() {
                 <div class="modal-sub">棋手：${find.player}｜强度：${find.rank}｜难度：${find.hard}</div>
                 <div class="modal-block">
                     <h4>BAN阵营</h4>
-                    <p>${Array.isArray(find.ban位) ? find.ban位.join('、') : '无'}</p>
+                    <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
                 </div>
                 <div class="modal-block">
                     <h4>英雄</h4>
@@ -139,32 +139,11 @@ if (filterChips.length > 0) {
     })
 }
 
-// 重置按钮
-const resetBtn = document.getElementById('resetFilter');
-if (resetBtn) {
-    resetBtn.addEventListener('click', () => {
-        currentFilterPlayer = 'all';
-        currentFilterRank = 'all';
-        currentFilterCamp = 'all';
-        document.querySelectorAll('.filter-chip').forEach(i => i.classList.remove('active'))
-        document.querySelectorAll('.filter-chip[data-val="all"]').forEach(x => x.classList.add('active'))
-        renderList()
-    })
-}
-
 // 搜索框
 const searchInput = document.getElementById('searchInput');
 if (searchInput) {
     searchInput.addEventListener('input', (e) => {
         const searchKw = e.target.value.trim().toLowerCase();
-        let filterArr = [...allLineupData];
-        if(searchKw){
-            filterArr = filterArr.filter(item => {
-                const name = item.name?.toLowerCase() || '';
-                const heroText = Array.isArray(item.heroList) ? item.heroList.map(h => h.name).join('').toLowerCase() : '';
-                return name.includes(searchKw) || heroText.includes(searchKw);
-            })
-        }
         renderList();
     })
 }
