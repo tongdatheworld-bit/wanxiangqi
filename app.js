@@ -23,7 +23,6 @@ function renderCurrentPage() {
     }
 }
 
-// 英雄页面渲染
 function renderHeroList() {
     const list = document.getElementById("hero-list");
     if (!list) return;
@@ -44,7 +43,6 @@ function renderHeroList() {
     });
 }
 
-// 阵容页面：棋手 + 强度 双筛选
 function renderLineupList() {
     const list = document.getElementById("lineup-list");
     const playerSelect = document.getElementById("playerFilter");
@@ -57,7 +55,6 @@ function renderLineupList() {
         return;
     }
 
-    // 自动收集所有棋手、去重填充下拉
     const playerSet = new Set();
     gameData.lineups.forEach(item => {
         if (item.player) playerSet.add(item.player);
@@ -67,10 +64,9 @@ function renderLineupList() {
         playerSelect.innerHTML += `<option value="${p}">${p}</option>`;
     });
 
-    // 渲染卡片函数，两个条件叠加过滤
     function renderCards(filterPlayer, filterLevel) {
         list.innerHTML = "";
-        let arr = gameData.lineups;
+        let arr = [...gameData.lineups];
         if (filterPlayer) {
             arr = arr.filter(x => x.player === filterPlayer);
         }
@@ -78,27 +74,34 @@ function renderLineupList() {
             arr = arr.filter(x => x.level === filterLevel);
         }
         countDom.innerText = `共 ${arr.length} 套阵容`;
+
         arr.forEach(function (lineup) {
             const card = document.createElement("div");
             card.className = "card";
             card.innerHTML = `
                 <h4>${lineup.name || "未知阵容"}</h4>
-                <p>阵容强度：${lineup.level || "-"}</p>
                 <p>棋手：${lineup.player || "-"}</p>
-                <p>成型难度：${lineup.hard || "-"}</p>
-                <p>阵容码：${lineup.code || "-"}</p>
-                <p>联动天赋：${lineup.talent || "-"}</p>
-                <p>禁图：${lineup.ban || "-"}</p>
+                <p>评级：${lineup.level || "-"}</p>
+                <p>难度：${lineup.hard || "-"}</p>
+                <p>天赋：${lineup.talent || "-"}</p>
+                <p>ban：${lineup.ban || "-"}</p>
+                <p class="copy-code" style="cursor:pointer;color:#2b5cb8;text-decoration:underline;">阵容码：${lineup.code || "-"}</p>
                 ${lineup.url ? `<p><a href="${lineup.url}" target="_blank">查看详情</a></p>` : ""}
             `;
             list.appendChild(card);
+            const codeDom = card.querySelector(".copy-code");
+            codeDom.onclick = async () => {
+                try {
+                    await navigator.clipboard.writeText(lineup.code);
+                    alert("✅ 阵容码复制成功！");
+                } catch (e) {
+                    alert("复制失败，请手动复制");
+                }
+            }
         });
     }
 
-    // 初始渲染全部
     renderCards("", "");
-
-    // 切换筛选触发重渲染
     function onChange() {
         renderCards(playerSelect.value, levelSelect.value);
     }
