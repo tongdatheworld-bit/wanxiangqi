@@ -1,95 +1,31 @@
-const toast = document.createElement('div');
-toast.className = 'toast';
-toast.innerText = '复制成功';
-document.body.appendChild(toast);
-function showToast(){
-    toast.style.display='block';
-    setTimeout(()=>toast.style.display='none',1200);
+{
+    "heroes": [
+        {
+            "name": "英雄1",
+            "faction": "阵营A",
+            "skill": "技能描述"
+        },
+        {
+            "name": "英雄2",
+            "faction": "阵营B",
+            "skill": "技能描述"
+        },
+        {
+            "name": "英雄3",
+            "faction": "阵营A",
+            "skill": "技能描述"
+        }
+    ],
+    "lineups": [
+        {
+            "name": "热门阵容1",
+            "heroes": ["英雄1", "英雄2", "英雄3"],
+            "code": "ABC123"
+        },
+        {
+            "name": "热门阵容2",
+            "heroes": ["英雄1", "英雄3"],
+            "code": "DEF456"
+        }
+    ]
 }
-
-let data = null;
-async function loadData(){
-    const res = await fetch('data.json');
-    data = await res.json();
-    renderPage();
-}
-
-function renderPage(){
-    const path = window.location.pathname;
-    if(path.includes('hero.html')){
-        renderHero();
-    }else if(path.includes('lineup.html')){
-        renderLineup();
-    }
-}
-
-// 英雄渲染（不变）
-function renderHero(){
-    const wrap = document.getElementById('heroList');
-    const input = document.getElementById('heroSearch');
-    function render(list){
-        wrap.innerHTML = '';
-        list.forEach(h=>{
-            wrap.innerHTML += `
-            <div class="card">
-                <img src="img/${h.img}" alt="${h.name}">
-                <h3>${h.name}</h3>
-                <p>阵营：${h.camp}</p>
-                <p>${h.desc}</p>
-            </div>`
-        })
-    }
-    render(data.hero);
-    input.oninput = ()=>{
-        const kw = input.value.toLowerCase();
-        const filter = data.hero.filter(i=>i.name.includes(kw) || i.camp.includes(kw));
-        render(filter);
-    }
-}
-
-// ======新版阵容渲染：适配你的表格！======
-function renderLineup(){
-    const wrap = document.getElementById('lineupList');
-    const input = document.getElementById('lineupSearch');
-    const levelSelect = document.getElementById('levelFilter');
-
-    function render(list){
-        wrap.innerHTML = '';
-        list.forEach(l=>{
-            wrap.innerHTML += `
-            <div class="card">
-                <h3>${l.name}</h3>
-                <p><strong>强度：</strong>${l.level}</p>
-                <p><strong>棋手：</strong>${l.player}</p>
-                <p><strong>成型难度：</strong>${l.hard}</p>
-                <p><strong>联动天赋：</strong>${l.talent}</p>
-                <p><strong>BAN羁绊：</strong>${l.ban}</p>
-                <button class="copy-btn" data-code="${l.code}">📋 复制阵容码</button>
-                ${l.url ? `<a class="link-btn" href="${l.url}" target="_blank">👉 查看攻略</a>` : ""}
-            </div>`
-        })
-        document.querySelectorAll('.copy-btn').forEach(btn=>{
-            btn.onclick = async ()=>{
-                await navigator.clipboard.writeText(btn.dataset.code);
-                showToast();
-            }
-        })
-    }
-
-    // 筛选函数：文本搜索 + 强度下拉筛选
-    function filterData(){
-        const kw = input.value.toLowerCase();
-        const selLevel = levelSelect.value;
-        let result = data.lineup.filter(item=>{
-            const matchKey = item.name.toLowerCase().includes(kw) || item.player.toLowerCase().includes(kw) || item.level.toLowerCase().includes(kw);
-            const matchLevel = selLevel ? item.level === selLevel : true;
-            return matchKey && matchLevel;
-        })
-        render(result);
-    }
-    filterData();
-    input.oninput = filterData;
-    levelSelect.onchange = filterData;
-}
-
-loadData();
