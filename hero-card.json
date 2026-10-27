@@ -1,15 +1,1 @@
-[
-    {
-        "id": 1,
-        "name": "孙尚香",
-        "stage": 1,
-        "camp": "三分之地",
-        "img": "images/hero-card/sunshangxiang.png",
-        "desc": "登场：获得1次免费刷新。",
-        "keywords": ["登场", "刷新"],
-        "hp": 210,
-        "mp": 15,
-        "physicalAtk": 40,
-        "magicAtk": 0
-    }
-]
+
