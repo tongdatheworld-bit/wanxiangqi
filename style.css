@@ -114,8 +114,8 @@ body {
 }
 /* ========== 棋手头像单独覆盖样式 ========== */
 .filter-row:first-child .filter-chip.player-chip {
-    width: 42px;
-    height: 42px;
+    width: 84px;
+    height: 84px;
     padding: 0;
     border-radius: 50%;
     overflow: hidden;
