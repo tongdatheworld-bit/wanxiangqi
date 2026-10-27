@@ -71,12 +71,17 @@ function renderLineupList() {
         card.innerHTML = `
             <h4>${lineup.name || "未知阵容"}</h4>
             <p>棋手：${lineup.player || "-"}</p>
-            <p>英雄：${lineup.heroes ? lineup.heroes.join("、") : "-"}</p>
+            <p>评级：${lineup.level || "-"}</p>
+            <p>难度：${lineup.hard || "-"}</p>
+            <p>天赋：${lineup.talent || "-"}</p>
+            <p>ban位：${lineup.ban || "-"}</p>
             <p>阵容码：${lineup.code || "-"}</p>
+            ${lineup.url ? `<p><a href="${lineup.url}" target="_blank">查看详情</a></p>` : ""}
         `;
         list.appendChild(card);
     });
 }
+
 // 加载 data.json 全局数据
 fetch("./data.json")
   .then(res => {
