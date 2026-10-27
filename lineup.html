@@ -99,13 +99,13 @@
             display:flex;
             align-items:center;
             gap:10px;
-            flex-wrap:wrap;
             margin-bottom:12px;
         }
         .filter-label{
             color:#9aa0b0;
             width:50px;
         }
+        /* 【普通文字筛选按钮：强度、阵营 保持原样】 */
         .filter-chip{
             padding:6px 12px;
             border-radius:8px;
@@ -119,6 +119,46 @@
             border-color:#ffd369;
             color:#ffd369;
             background:rgba(255,211,105,0.08);
+        }
+        /* ========== 棋手头像单独覆盖样式 ========== */
+        .filter-row:first-child .filter-chip.player-chip {
+            all: unset;
+            display: block;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 2px solid #333844;
+            background: #1c212c;
+            cursor: pointer;
+        }
+        .filter-row:first-child .filter-chip.player-chip img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .filter-row:first-child .filter-chip.player-chip.active {
+            border-color:#ffd369;
+            box-shadow: 0  0  6px rgba(255,211,105,0.25);
+        }
+        /* 棋手那一行开启横向滚动，不再换行 */
+        .filter-row:first-child {
+            overflow-x: auto;
+            overflow-y: hidden;
+            flex-wrap: nowrap;
+            padding: 6px 0;
+        }
+        .filter-row:first-child::-webkit-scrollbar {
+            height: 4px;
+        }
+        .filter-row:first-child::-webkit-scrollbar-track {
+            background: #12161f;
+        }
+        .filter-row:first-child::-webkit-scrollbar-thumb {
+            background: #333844;
+            border-radius: 2px;
         }
         .reset-btn{
             margin-left:auto;
