@@ -137,43 +137,27 @@ body {
     border-color:#ffd369;
     box-shadow:  0  0  0  2px rgba(255,211,105,0.35), 0  0  10px rgba(255,211,105,0.45);
 }
-/* 【全部】文字同步放大 */
+/* 【全部】文字按钮，修正歪斜、避开金边 */
 .filter-row:first-child .filter-chip.player-chip[data-val="all"] {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 20px;
+    padding: 8px;
+    transform: translateY(-3px);
 }
 .filter-row:first-child .filter-chip.player-chip[data-val="all"] img {
     display: none;
 }
+/* 棋手整行容器 */
 .filter-row:first-child {
     overflow-x: auto;
     overflow-y: hidden;
     flex-wrap: nowrap;
     padding: 6px 0 12px 0;
     border-bottom: 1px solid #2c313f;
-    gap: 20px;  /* 间距同步放大，避免挤 */
+    gap: 20px;
     align-items: center;
-}
-
-/* 单独处理【全部】文字按钮 */
-.filter-row:first-child .filter-chip.player-chip[data-val="all"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-}
-.filter-row:first-child .filter-chip.player-chip[data-val="all"] img {
-    display: none;
-}
-/* 棋手那一行开启横向滚动，不再换行 + 底部分隔线 */
-.filter-row:first-child {
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-    padding: 6px 0 12px 0;
-    border-bottom: 1px solid #2c313f;
 }
 .filter-row:first-child::-webkit-scrollbar {
     height: 4px;
@@ -185,6 +169,7 @@ body {
     background: #333844;
     border-radius: 2px;
 }
+
 .reset-btn{
     margin-left:auto;
     padding:6px 14px;
