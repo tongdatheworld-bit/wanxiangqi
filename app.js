@@ -52,12 +52,12 @@ function renderList() {
         <div class="lineup-main">
             <div class="lineup-top">
                 <div class="lineup-name">${item.name}</div>
+                <span class="tag ban-first-tag">BAN位</span>
                 ${Array.isArray(item["ban位"]) ? item["ban位"].map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
             </div>
             <div class="lineup-meta">
-                <span>棋手：${item.player}</span>
                 <span>成型难度：${item.hard}</span>
-                <span>阵容码：${item.lineupCode}</span>
+                <span class="copy-code" onclick="event.stopPropagation();copyCode('${item.lineupCode}')">阵容码：${item.lineupCode}</span>
             </div>
             <div class="hero-row">
                 ${
@@ -92,7 +92,7 @@ function bindCardClick() {
 
             modalBody.innerHTML = `
                 <h2>${find.name}</h2>
-                <div class="modal-sub">棋手：${find.player}｜强度：${find.rank}｜难度：${find.hard}</div>
+                <div class="modal-sub">强度：${find.rank}｜难度：${find.hard}</div>
                 <div class="modal-block">
                     <h4>BAN阵营</h4>
                     <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
@@ -146,4 +146,14 @@ if (searchInput) {
         const searchKw = e.target.value.trim().toLowerCase();
         renderList();
     })
+}
+
+// 复制阵容码函数
+async function copyCode(code) {
+    try {
+        await navigator.clipboard.writeText(code)
+        alert("阵容码已复制！")
+    } catch (e) {
+        alert("复制失败，请手动复制：" + code)
+    }
 }
