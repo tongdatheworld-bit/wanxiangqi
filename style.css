@@ -112,7 +112,8 @@ body {
     color:#ffd369;
     background:rgba(255,211,105,0.08);
 }
-/* ========== 棋手头像单独覆盖样式 ========== */
+/* ========== 棋手头像筛选栏 ========== */
+/* 普通棋手圆形头像 */
 .filter-row:first-child .filter-chip.player-chip {
     width: 84px;
     height: 84px;
@@ -137,17 +138,36 @@ body {
     border-color:#ffd369;
     box-shadow:  0  0  0  2px rgba(255,211,105,0.35), 0  0  10px rgba(255,211,105,0.45);
 }
-/* 【全部】文字按钮，修正歪斜、避开金边 */
-.filter-row:first-child .filter-chip.player-chip[data-val="all"] {
-    display: flex;
+/* 棋手栏【全部】胶囊按钮（单独样式，不再是圆形） */
+.filter-row:first-child .filter-chip.player-chip-all {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    height: 84px;
+    padding: 0 20px;
+    border-radius: 14px;
+    border: 2px solid #333844;
+    background: #1c212c;
+    flex-shrink: 0;
     font-size: 20px;
-    padding: 8px;
-    transform: translateY(-3px);
+    color: #b4b9c6;
+    cursor: pointer;
+    transition: 0.2s ease;
+    white-space: nowrap;
 }
-.filter-row:first-child .filter-chip.player-chip[data-val="all"] img {
-    display: none;
+.filter-row:first-child .filter-chip.player-chip-all span {
+    display: inline-block;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+.filter-row:first-child .filter-chip.player-chip-all:hover {
+    transform: scale(1.08);
+}
+.filter-row:first-child .filter-chip.player-chip-all.active {
+    border-color: #ffd369;
+    color: #ffd369;
+    background: rgba(255,211,105,0.08);
+    box-shadow: 0  0  0  2px rgba(255,211,105,0.35), 0  0  10px rgba(255,211,105,0.45);
 }
 /* 棋手整行容器 */
 .filter-row:first-child {
@@ -156,7 +176,7 @@ body {
     flex-wrap: nowrap;
     padding: 6px 0 12px 0;
     border-bottom: 1px solid #2c313f;
-    gap: 20px;
+    gap: 16px;
     align-items: center;
 }
 .filter-row:first-child::-webkit-scrollbar {
