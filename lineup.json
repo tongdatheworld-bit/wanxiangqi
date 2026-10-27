@@ -13,7 +13,7 @@
             {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
             {"name":"李白","img":"images/heroes/libai.png","isCore":false},
             {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
             {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
             {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
         ],
