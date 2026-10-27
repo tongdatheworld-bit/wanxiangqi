@@ -54,10 +54,23 @@
     background: #333844;
     border-radius: 2px;
 }
-/* BAN位标签单独样式 */
-.tag.ban-first-tag{
-    background:#483238;
-    color:#ffb8bc;
+/* BAN位标签，醒目红标 */
+.ban-first-tag{
+    background:#c83232;
+    color:#fff;
+    padding:3px 9px;
+    border-radius:6px;
+    font-size:12px;
+    font-weight:bold;
+    margin-right:4px;
+}
+/* 后面阵营普通标签，和截图原生质感对齐 */
+.tag{
+    background:#303036;
+    color:#ffd878;
+    padding:3px 9px;
+    border-radius:6px;
+    font-size:12px;
 }
 /* 阵容码可点击复制 */
 .copy-code{
