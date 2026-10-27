@@ -120,7 +120,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
-    border: 3px solid #333844;
+    border: 2px solid #333844;
     background: #1c212c;
     transition: 0.2s ease;
 }
@@ -136,6 +136,16 @@ body {
 .filter-row:first-child .filter-chip.player-chip.active {
     border-color:#ffd369;
     box-shadow:  0  0  0  2px rgba(255,211,105,0.35), 0  0  10px rgba(255,211,105,0.45);
+}
+/* 单独处理【全部】文字按钮 */
+.filter-row:first-child .filter-chip.player-chip[data-val="all"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+.filter-row:first-child .filter-chip.player-chip[data-val="all"] img {
+    display: none;
 }
 /* 棋手那一行开启横向滚动，不再换行 + 底部分隔线 */
 .filter-row:first-child {
