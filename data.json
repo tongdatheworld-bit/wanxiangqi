@@ -23,7 +23,6 @@ function renderCurrentPage() {
     }
 }
 
-// 英雄页面渲染
 function renderHeroList() {
     const list = document.getElementById("hero-list");
     if (!list) return;
@@ -44,7 +43,6 @@ function renderHeroList() {
     });
 }
 
-// 阵容页面：棋手 + 评级筛选，排版和截图完全一致
 function renderLineupList() {
     const list = document.getElementById("lineup-list");
     const playerSelect = document.getElementById("playerFilter");
@@ -57,7 +55,6 @@ function renderLineupList() {
         return;
     }
 
-    // 自动收集棋手去重
     const playerSet = new Set();
     gameData.lineups.forEach(item => {
         if (item.player) playerSet.add(item.player);
@@ -67,10 +64,9 @@ function renderLineupList() {
         playerSelect.innerHTML += `<option value="${p}">${p}</option>`;
     });
 
-    // 渲染卡片，文字顺序和截图一模一样
     function renderCards(filterPlayer, filterLevel) {
         list.innerHTML = "";
-        let arr = gameData.lineups;
+        let arr = [...gameData.lineups];
         if (filterPlayer) {
             arr = arr.filter(x => x.player === filterPlayer);
         }
@@ -78,6 +74,7 @@ function renderLineupList() {
             arr = arr.filter(x => x.level === filterLevel);
         }
         countDom.innerText = `共 ${arr.length} 套阵容`;
+
         arr.forEach(function (lineup) {
             const card = document.createElement("div");
             card.className = "card";
@@ -92,12 +89,11 @@ function renderLineupList() {
                 ${lineup.url ? `<p><a href="${lineup.url}" target="_blank">查看详情</a></p>` : ""}
             `;
             list.appendChild(card);
-            // 点击复制逻辑
             const codeDom = card.querySelector(".copy-code");
             codeDom.onclick = async () => {
                 try {
                     await navigator.clipboard.writeText(lineup.code);
-                    alert("阵容码复制成功！");
+                    alert("✅ 阵容码复制成功！");
                 } catch (e) {
                     alert("复制失败，请手动复制");
                 }
