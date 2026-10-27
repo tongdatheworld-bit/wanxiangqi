@@ -5,7 +5,7 @@ let currentFilterCamp = 'all';
 
 const lineupWrap = document.getElementById('lineupList');
 if (lineupWrap) {
-    fetch('./data.json')
+    fetch('./lineup.json')
         .then(res => {
             if (!res.ok) throw new Error('json读取失败');
             return res.json();
@@ -16,7 +16,7 @@ if (lineupWrap) {
         })
         .catch(err => {
             console.error('数据加载失败：', err);
-            lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 data.json</div>`;
+            lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 lineup.json</div>`;
         })
 }
 
