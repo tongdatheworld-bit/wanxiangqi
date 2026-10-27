@@ -12,7 +12,6 @@ let allHeroCardData = [
         "physicalAtk": 40,
         "magicAtk": 0
     }
-    // 在这里继续加英雄，逗号隔开
 ];
 let currentStage = 'all';
 let currentCamp = 'all';
@@ -43,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         renderHeroCardList();
     });
 
-    // 直接渲染，不用fetch
     renderHeroCardList();
 });
 
