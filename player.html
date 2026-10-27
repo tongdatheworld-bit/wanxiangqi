@@ -208,7 +208,6 @@
     </div>
 
 <script>
-// 全部棋手数据
 const playerList = [
     {
         name:"武凤",
@@ -271,166 +270,242 @@ const playerList = [
         ]
     },
     {
-        name:"香香",
-        quote:"",
-        skill:{name:"特制灵异追踪器",desc:""},
-        secret:{name:"驱鬼!加大力度!",desc:""},
-        secretCard:{name:"灵异探测大改装",desc:""},
-        unique:{name:"超级连接",desc:""},
-        derivedCardList:[]
+        name:"瑶",
+        quote:"我来啦，要不要贴贴~",
+        skill:{name:"灵鹿相伴",desc:"获得灵鹿，灵鹿可以附身到一名友军身上，为其提供护盾，护盾破碎时对周围敌人造成魔法伤害。"},
+        secret:{name:"鹿灵同心",desc:"灵鹿累计吸收护盾值达到阈值，获得秘技牌【鹿灵赐福】。"},
+        secretCard:{name:"鹿灵赐福",desc:"选择一个灵鹿强化词条。"},
+        unique:{name:"双生灵鹿",desc:"获得一张鹿灵赐福，灵鹿附身目标阵亡时，灵鹿不会消失，会自动寻找下一名友军附身。"},
+        derivedCardList:[
+            {name:"厚甲",desc:"护盾上限提升。"},
+            {name:"回春",desc:"护盾存在时，附身目标持续回血。"},
+            {name:"冲击",desc:"护盾破碎的爆炸伤害提升。"},
+            {name:"迅捷",desc:"附身单位移速、攻速提升。"}
+        ]
     },
     {
-        name:"瑶妹",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
-    },
-    {
-        name:"阿离",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        name:"公孙离",
+        quote:"来和我一起跳舞吧。",
+        skill:{name:"离伞",desc:"获得一把离伞，离伞会跟随阿离，阿离释放技能可以位移换位，伞所在位置留下印记。"},
+        secret:{name:"步步生花",desc:"累计触发印记达到指定数量，获得秘技牌【花影】。"},
+        secretCard:{name:"花影",desc:"选择一个离伞词条强化。"},
+        unique:{name:"伞影成双",desc:"额外生成一把离伞，两把伞同时存在。"},
+        derivedCardList:[
+            {name:"破甲",desc:"印记附带减甲效果。"},
+            {name:"焚影",desc:"印记附带持续法术灼烧。"},
+            {name:"疾行",desc:"阿离位移后短时间获得高额攻速。"},
+            {name:"留痕",desc:"印记持续时间延长。"}
+        ]
     },
     {
         name:"镜",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"破镜，亦能重圆。",
+        skill:{name:"镜像",desc:"开局生成镜像本体，镜像可以同步本体部分效果，镜像受到伤害会破碎。"},
+        secret:{name:"镜流不息",desc:"镜像累计破碎次数达标，获得秘技牌【镜衍】。"},
+        secretCard:{name:"镜衍",desc:"选择镜像强化词条。"},
+        unique:{name:"万镜归宗",desc:"镜像破碎后会分裂成两个更小镜像。"},
+        derivedCardList:[
+            {name:"镜像增伤",desc:"镜像伤害提升。"},
+            {name:"镜像承伤",desc:"镜像可以分担本体伤害。"},
+            {name:"碎镜冲击",desc:"镜像破碎时产生冲击波。"},
+            {name:"速生",desc:"镜像破碎后重生冷却缩短。"}
+        ]
     },
     {
         name:"乔汐",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"海浪会记住每一个故事。",
+        skill:{name:"潮汐",desc:"周期性生成潮汐区域，区域内友军回血、敌军减速。"},
+        secret:{name:"潮起潮落",desc:"潮汐覆盖敌方英雄达到次数，获得秘技牌【汐涌】。"},
+        secretCard:{name:"汐涌",desc:"选择潮汐强化词条。"},
+        unique:{name:"永潮",desc:"潮汐区域永久存在，不再周期性消失。"},
+        derivedCardList:[
+            {name:"疗愈",desc:"潮汐回血效果提升。"},
+            {name:"冰封",desc:"潮汐附带冰冻效果。"},
+            {name:"侵蚀",desc:"潮汐降低敌方魔抗。"},
+            {name:"广域",desc:"潮汐范围变大。"}
+        ]
     },
     {
         name:"常小娥",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"月亮，会照亮归途。",
+        skill:{name:"月轮",desc:"释放月轮，月轮来回弹射，造成法术伤害。"},
+        secret:{name:"月华流转",desc:"月轮弹射命中累计达标，获得秘技牌【月华】。"},
+        secretCard:{name:"月华",desc:"选择月轮强化词条。"},
+        unique:{name:"双月",desc:"同时存在两轮月轮。"},
+        derivedCardList:[
+            {name:"月蚀",desc:"月轮命中减疗。"},
+            {name:"月辉",desc:"月轮命中友方加护盾。"},
+            {name:"远射",desc:"月轮弹射距离增加。"},
+            {name:"裂月",desc:"月轮命中产生范围伤害。"}
+        ]
     },
     {
-        name:"玉环",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        name:"杨玉环",
+        quote:"弦歌不断，此曲绵长。",
+        skill:{name:"霓裳曲调",desc:"切换清平/长恨曲调，清平回血，长恨输出。"},
+        secret:{name:"曲动人心",desc:"曲调生效累计次数达标，获得秘技牌【曲韵】。"},
+        secretCard:{name:"曲韵",desc:"选择曲调强化词条。"},
+        unique:{name:"双曲同奏",desc:"清平、长恨曲调同时生效。"},
+        derivedCardList:[
+            {name:"延音",desc:"曲调持续时间加长。"},
+            {name:"狂想",desc:"长恨伤害提升。"},
+            {name:"妙愈",desc:"清平治疗量提升。"},
+            {name:"协律",desc:"曲调附带移速buff。"}
+        ]
     },
     {
         name:"庄小鱼",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"逍遥游，游于天地之间。",
+        skill:{name:"梦蝶",desc:"生成梦蝶领域，领域内友军免控。"},
+        secret:{name:"蝶梦浮生",desc:"梦蝶抵挡控制次数达标，获得秘技牌【蝶变】。"},
+        secretCard:{name:"蝶变",desc:"选择梦蝶词条。"},
+        unique:{name:"蝶海",desc:"梦蝶领域范围翻倍。"},
+        derivedCardList:[
+            {name:"幻梦",desc:"领域内敌方攻速降低。"},
+            {name:"醒梦",desc:"领域结束瞬间给友军回血。"},
+            {name:"固梦",desc:"免控持续时间延长。"},
+            {name:"蝶刺",desc:"领域对敌人持续法术伤害。"}
+        ]
     },
     {
-        name:"马可",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        name:"马可波罗",
+        quote:"出发，去寻找新大陆！",
+        skill:{name:"热情弹幕",desc:"马可的弹幕攻击，持续扫射敌人。"},
+        secret:{name:"漫游旅途",desc:"弹幕命中累计达标，获得秘技牌【远航】。"},
+        secretCard:{name:"远航",desc:"选择弹幕强化词条。"},
+        unique:{name:"双重弹幕",desc:"同时发射两组弹幕。"},
+        derivedCardList:[
+            {name:"破防弹幕",desc:"弹幕降低护甲。"},
+            {name:"燃弹",desc:"弹幕附带灼烧。"},
+            {name:"远距",desc:"扫射距离增加。"},
+            {name:"速射",desc:"扫射攻速提升。"}
+        ]
     },
     {
         name:"白歌",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"笔墨落处，自有山河。",
+        skill:{name:"墨韵",desc:"笔墨在场上留下墨痕，墨痕爆炸造成范围伤害。"},
+        secret:{name:"墨染山河",desc:"墨痕爆炸次数达标，获得秘技牌【挥毫】。"},
+        secretCard:{name:"挥毫",desc:"选择墨韵词条。"},
+        unique:{name:"千墨",desc:"墨痕生成速度大幅加快。"},
+        derivedCardList:[
+            {name:"浓墨",desc:"爆炸伤害提高。"},
+            {name:"滞墨",desc:"墨痕爆炸减速敌人。"},
+            {name:"墨护",desc:"墨痕给友方护盾。"},
+            {name:"广墨",desc:"爆炸范围扩大。"}
+        ]
     },
     {
-        name:"昭君",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        name:"王昭君",
+        quote:"凛冬将至。",
+        skill:{name:"凛冬法阵",desc:"生成寒冰法阵，持续减速敌人，结束冰冻。"},
+        secret:{name:"风雪同归",desc:"冰冻敌人次数达标，获得秘技牌【霜华】。"},
+        secretCard:{name:"霜华",desc:"选择寒冰词条。"},
+        unique:{name:"双寒阵",desc:"场上同时存在两个寒冰法阵。"},
+        derivedCardList:[
+            {name:"深寒",desc:"冰冻时长增加。"},
+            {name:"寒蚀",desc:"法阵降低魔抗。"},
+            {name:"霜护",desc:"法阵内友方获得法抗。"},
+            {name:"广寒",desc:"法阵范围变大。"}
+        ]
     },
     {
         name:"班叔",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"机关之道，在于巧思。",
+        skill:{name:"机关匣",desc:"投放机关匣，自动攻击附近敌人。"},
+        secret:{name:"巧构天工",desc:"机关匣击杀/命中达标，获得秘技牌【机括】。"},
+        secretCard:{name:"机括",desc:"选择机关匣词条。"},
+        unique:{name:"匣阵",desc:"一次放置两个机关匣。"},
+        derivedCardList:[
+            {name:"穿刺",desc:"机关攻击可以穿透敌人。"},
+            {name:"爆匣",desc:"机关摧毁时爆炸。"},
+            {name:"加固",desc:"机关匣血量提升。"},
+            {name:"连射",desc:"机关匣攻速提升。"}
+        ]
     },
     {
         name:"弈星",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"落子，无悔。",
+        skill:{name:"天元棋盘",desc:"布下棋盘，棋子互相碰撞造成伤害、禁锢敌人。"},
+        secret:{name:"星罗棋布",desc:"禁锢敌人累计次数达标，获得秘技牌【弈道】。"},
+        secretCard:{name:"弈道",desc:"选择棋盘词条。"},
+        unique:{name:"双盘",desc:"同时存在两块棋盘。"},
+        derivedCardList:[
+            {name:"紧气",desc:"禁锢时间延长。"},
+            {name:"棋焰",desc:"棋子附带灼烧。"},
+            {name:"棋护",desc:"棋盘内友方减伤。"},
+            {name:"阔盘",desc:"棋盘范围变大。"}
+        ]
     },
     {
         name:"孙小宾",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"雷电，听我号令！",
+        skill:{name:"奔雷",desc:"召唤落雷，链式传导伤害。"},
+        secret:{name:"雷引万钧",desc:"落雷传导命中达标，获得秘技牌【雷霆】。"},
+        secretCard:{name:"雷霆",desc:"选择落雷词条。"},
+        unique:{name:"雷域",desc:"持续雷场代替单次落雷。"},
+        derivedCardList:[
+            {name:"麻痹",desc:"落雷附带眩晕。"},
+            {name:"雷穿",desc:"传导次数增加。"},
+            {name:"雷蚀",desc:"落雷降低魔抗。"},
+            {name:"狂雷",desc:"落雷伤害提高。"}
+        ]
     },
     {
         name:"明先生",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"明灯照路，护你前行。",
+        skill:{name:"明灯",desc:"明灯链接友军，分担伤害并且提供增伤。"},
+        secret:{name:"明烛相伴",desc:"明灯分担伤害累计达标，获得秘技牌【烛火】。"},
+        secretCard:{name:"烛火",desc:"选择明灯词条。"},
+        unique:{name:"双灯",desc:"同时链接两名友军。"},
+        derivedCardList:[
+            {name:"强链",desc:"增伤比例提升。"},
+            {name:"暖光",desc:"链接目标持续回血。"},
+            {name:"光盾",desc:"链接目标获得护盾。"},
+            {name:"韧链",desc:"分担伤害比例提高。"}
+        ]
     },
     {
         name:"闹闹",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"别惹我，我超凶的！",
+        skill:{name:"淘气炸弹",desc:"投掷淘气炸弹，延迟爆炸范围伤害。"},
+        secret:{name:"胡闹一通",desc:"炸弹命中敌人达标，获得秘技牌【恶作剧】。"},
+        secretCard:{name:"恶作剧",desc:"选择炸弹词条。"},
+        unique:{name:"连环爆",desc:"一次扔两颗炸弹。"},
+        derivedCardList:[
+            {name:"迟爆",desc:"炸弹延迟变长，范围更大。"},
+            {name:"眩晕爆",desc:"炸弹附带眩晕。"},
+            {name:"燃爆",desc:"炸弹持续灼烧。"},
+            {name:"大炸",desc:"爆炸伤害提高。"}
+        ]
     },
     {
         name:"姜导",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"寒冰与烈火，皆为我所用。",
+        skill:{name:"冰火双仪",desc:"交替释放冰、火法术，冰减速，火增伤。"},
+        secret:{name:"冰火交融",desc:"冰火交替命中达标，获得秘技牌【融元】。"},
+        secretCard:{name:"融元",desc:"选择冰火词条。"},
+        unique:{name:"同释",desc:"冰法火法同时释放。"},
+        derivedCardList:[
+            {name:"冰封",desc:"冰法有概率冻结。"},
+            {name:"焚尽",desc:"火法伤害提高。"},
+            {name:"冰火减抗",desc:"冰火叠加降低双抗。"},
+            {name:"速切",desc:"冰火切换冷却缩短。"}
+        ]
     },
     {
         name:"嬴律",
-        quote:"",
-        skill:{name:"",desc:""},
-        secret:{name:"",desc:""},
-        secretCard:{name:"",desc:""},
-        unique:{name:"",desc:""},
-        derivedCardList:[]
+        quote:"律法之下，众生平等。",
+        skill:{name:"律令枷锁",desc:"给敌方挂上律令，一段时间后爆发伤害并禁锢。"},
+        secret:{name:"法网恢恢",desc:"律令禁锢敌人达标，获得秘技牌【法旨】。"},
+        secretCard:{name:"法旨",desc:"选择律令词条。"},
+        unique:{name:"双律",desc:"可以同时给两个敌人挂律令。"},
+        derivedCardList:[
+            {name:"重律",desc:"爆发伤害提高。"},
+            {name:"久锢",desc:"禁锢时间延长。"},
+            {name:"律罚",desc:"律令目标受到伤害加深。"},
+            {name:"速律",desc:"律令结算速度加快。"}
+        ]
     }
 ];
 
@@ -452,7 +527,7 @@ function render(list){
                 <div class="player-name">${p.name}</div>
             </div>
             <div class="card-body">
-                <span class="tag">技能</span>${p.skill?.name || "待补充"}
+                <span class="tag">技能</span>${p.skill.name}
             </div>
         `;
         card.onclick = ()=>openDetail(p);
@@ -463,10 +538,10 @@ function openDetail(p){
     let html = `<h2>${p.name}</h2>`;
     if(p.quote) html += `<div class="modal-block"><h4>台词</h4><p>${p.quote}</p></div>`;
     html += `
-        <div class="modal-block"><h4>【技能】${p.skill?.name || "待补充"}</h4><p>${p.skill?.desc || "待补充"}</p></div>
-        <div class="modal-block"><h4>【秘技触发】${p.secret?.name || "待补充"}</h4><p>${p.secret?.desc || "待补充"}</p></div>
-        <div class="modal-block"><h4>【秘技牌】${p.secretCard?.name || "待补充"}</h4><p>${p.secretCard?.desc || "待补充"}</p></div>
-        <div class="modal-block"><h4>【专属】${p.unique?.name || "待补充"}</h4><p>${p.unique?.desc || "待补充"}</p></div>
+        <div class="modal-block"><h4>【技能】${p.skill.name}</h4><p>${p.skill.desc}</p></div>
+        <div class="modal-block"><h4>【秘技触发】${p.secret.name}</h4><p>${p.secret.desc}</p></div>
+        <div class="modal-block"><h4>【秘技牌】${p.secretCard.name}</h4><p>${p.secretCard.desc}</p></div>
+        <div class="modal-block"><h4>【专属】${p.unique.name}</h4><p>${p.unique.desc}</p></div>
     `;
     if(p.derivedCardList && p.derivedCardList.length>0){
         html += `<div class="modal-block"><h4>衍生卡牌</h4>`;
