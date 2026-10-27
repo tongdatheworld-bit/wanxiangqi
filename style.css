@@ -119,120 +119,58 @@ h1 {
     font-size: 14px;
     margin-top: 20px;
 }
-/* 棋手头像筛选：黑金风格 */
-.filter-row:has(.player-chip) {
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 6px 0;
-    gap: 10px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+/* ===== 棋手筛选栏 黑金样式 ===== */
+.player-filter-row {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 0;
+  gap: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .player-chip {
-    /* 预设小方框 */
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    border: 2px solid #2a2520;
-    background-color: #171512;
-    cursor: pointer;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  /* 固定圆形方框，这里控制头像大小 */
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #282828;
+  background-color: #181818;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .player-chip img {
-    /* 图片居中填充进圆形方框，不拉伸 */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
-/* 选中：金色高亮，黑底风格 */
+/* 选中：金色边框 */
 .player-chip.active {
-    border-color: #d6ae47;
-    box-shadow: 0 0 0 2px rgba(214, 174, 71, 0.18);
+  border-color: #d4ac45;
+  box-shadow: 0 0 6px rgba(212, 172, 69, 0.35);
 }
 
 .player-chip:hover {
-    border-color: #e6c565;
+  border-color: #e2be60;
 }
 
-/* 黑金滚动条 */
-.filter-row:has(.player-chip)::-webkit-scrollbar {
-    height: 4px;
+/* 横向滚动条美化 */
+.player-filter-row::-webkit-scrollbar {
+  height: 4px;
 }
-
-.filter-row:has(.player-chip)::-webkit-scrollbar-track {
-    background: #171512;
-    border-radius: 4px;
+.player-filter-row::-webkit-scrollbar-track {
+  background: #181818;
+  border-radius: 4px;
 }
-
-.filter-row:has(.player-chip)::-webkit-scrollbar-thumb {
-    background: #8a7336;
-    border-radius: 4px;
+.player-filter-row::-webkit-scrollbar-thumb {
+  background: #77622c;
+  border-radius: 4px;
 }
-/* 棋手头像筛选：黑金风格 */
-.filter-row:has(.player-chip) {
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 6px 0;
-    gap: 10px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-
-.player-chip {
-    /* 预设小方框 */
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    border: 2px solid #2a2520;
-    background-color: #171512;
-    cursor: pointer;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.player-chip img {
-    /* 图片居中填充进圆形方框，不拉伸 */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-/* 选中：金色高亮，黑底风格 */
-.player-chip.active {
-    border-color: #d6ae47;
-    box-shadow: 0 0 0 2px rgba(214, 174, 71, 0.18);
-}
-
-.player-chip:hover {
-    border-color: #e6c565;
-}
-
-/* 黑金滚动条 */
-.filter-row:has(.player-chip)::-webkit-scrollbar {
-    height: 4px;
-}
-
-.filter-row:has(.player-chip)::-webkit-scrollbar-track {
-    background: #171512;
-    border-radius: 4px;
-}
-
-.filter-row:has(.player-chip)::-webkit-scrollbar-thumb {
-    background: #8a7336;
-    border-radius: 4px;
-}
-
