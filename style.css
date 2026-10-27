@@ -54,23 +54,22 @@
     background: #333844;
     border-radius: 2px;
 }
-/* BAN位标签，醒目红标 */
+/* BAN位：红底白字 */
 .ban-first-tag {
-    background: #d92424;
-    color: #fff;
-    padding: 3px 9px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-right: 4px;
-    border: 1px solid #ff5454;
+    background:#d92424;
+    color:#ffffff;
+    padding:2px 8px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+    margin-right:4px;
 }
-/* 后面阵营普通标签，和截图原生质感对齐 */
-.tag{
+/* 阵营标签：深色底金色字，保持你现在截图里的样子 */
+.tag {
     background:#303036;
     color:#ffd878;
-    padding:3px 9px;
-    border-radius:6px;
+    padding:2px 8px;
+    border-radius:5px;
     font-size:12px;
 }
 /* 阵容码可点击复制 */
