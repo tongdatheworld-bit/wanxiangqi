@@ -56,13 +56,11 @@
 }
 /* BAN位标签，醒目红标 */
 .ban-first-tag{
-    background:#c83232;
-    color:#fff;
-    padding:3px 9px;
-    border-radius:6px;
-    font-size:12px;
-    font-weight:bold;
-    margin-right:4px;
+   background: #303036;
+    color: #ffd878;
+    padding: 3px 9px;
+    border-radius: 6px;
+    font-size: 12px;
 }
 /* 后面阵营普通标签，和截图原生质感对齐 */
 .tag{
