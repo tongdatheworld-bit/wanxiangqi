@@ -76,7 +76,7 @@
             {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
             {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
             {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-            {"name":"杨玉环","img":"images/heroes/yuyanghuan.png","isCore":false},
+            {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
             {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
         ],
         "equip": []
@@ -93,7 +93,7 @@
         "heroList": [
             {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
             {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
-            {"name":"杨玉环","img":"images/heroes/yuyanghuan.png","isCore":false},
+            {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
             {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false},
             {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
             {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false},
