@@ -4,9 +4,11 @@ let currentCamp = 'all';
 let currentKeyword = 'all';
 let searchKw = '';
 
-const heroCardWrap = document.getElementById('heroCardList');
-if (heroCardWrap) {
-    fetch('./hero_card.json')
+document.addEventListener('DOMContentLoaded', function () {
+    const heroCardWrap = document.getElementById('heroCardList');
+    if (!heroCardWrap) return;
+
+    fetch('./hero-card.json')
         .then(res => {
             if (!res.ok) throw new Error('json读取失败');
             return res.json();
@@ -17,9 +19,29 @@ if (heroCardWrap) {
         })
         .catch(err => {
             console.error('数据加载失败：', err);
-            heroCardWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 hero_card.json</div>`;
-        })
-}
+            heroCardWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 hero-card.json</div>`;
+        });
+
+    document.getElementById('stageFilter').addEventListener('change', e => {
+        currentStage = e.target.value;
+        renderHeroCardList();
+    });
+
+    document.getElementById('campFilter').addEventListener('change', e => {
+        currentCamp = e.target.value;
+        renderHeroCardList();
+    });
+
+    document.getElementById('keywordFilter').addEventListener('change', e => {
+        currentKeyword = e.target.value;
+        renderHeroCardList();
+    });
+
+    document.getElementById('searchInput').addEventListener('input', e => {
+        searchKw = e.target.value.trim().toLowerCase();
+        renderHeroCardList();
+    });
+});
 
 function renderHeroCardList() {
     const wrap = document.getElementById('heroCardList');
@@ -27,7 +49,7 @@ function renderHeroCardList() {
     let filterArr = [...allHeroCardData];
 
     if (currentStage !== 'all') {
-        filterArr = filterArr.filter(item => item.stage === currentStage);
+        filterArr = filterArr.filter(item => item.stage == currentStage);
     }
     if (currentCamp !== 'all') {
         filterArr = filterArr.filter(item => item.camp === currentCamp);
@@ -74,6 +96,7 @@ function bindHeroCardClick() {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeModalBtn = document.getElementById('closeModal');
+    if (!modal || !modalBody) return;
 
     document.querySelectorAll('.hero-card-item').forEach(card => {
         card.onclick = () => {
@@ -111,39 +134,3 @@ function bindHeroCardClick() {
         if (e.target === modal) modal.style.display = 'none';
     }
 }
-
-document.getElementById('stageFilter').addEventListener('change', e => {
-    currentStage = e.target.value;
-    renderHeroCardList();
-});
-
-document.getElementById('campFilter').addEventListener('change', e => {
-    currentCamp = e.target.value;
-    renderHeroCardList();
-});
-
-document.getElementById('keywordFilter').addEventListener('change', e => {
-    currentKeyword = e.target.value;
-    renderHeroCardList();
-});
-
-document.getElementById('searchInput').addEventListener('input', e => {
-    searchKw = e.target.value.trim().toLowerCase();
-    renderHeroCardList();
-});
-[
-    {
-        "id": 1,
-        "name": "孙尚香",
-        "stage": 1,
-        "camp": "三分之地",
-        "img": "images/hero-card/sunshangxiang.png",
-        "desc": "登场：获得1次免费刷新。",
-        "keywords": ["登场", "刷新"],
-        "hp": 210,
-        "mp": 15,
-        "physicalAtk": 40,
-        "magicAtk": 0
-    }
-]
-
