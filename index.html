@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>阵容大全 | 王者万象棋 - 万象一图诀</title>
+    <title>王者万象棋 - 万象一图诀</title>
     <base href="./">
     <style>
         * {
@@ -12,15 +12,13 @@
             box-sizing: border-box;
             font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
         }
-
         body {
             background-color: #12161f;
             color: #e6e8ef;
             background-image: radial-gradient(circle at 40% 20%, rgba(204, 164, 79, 0.08), transparent 45%);
             min-height: 100vh;
         }
-
-        /* 顶部导航 */
+        /* 顶部导航栏 */
         .top-nav-wrap {
             display: flex;
             align-items: center;
@@ -30,10 +28,9 @@
             background-color: rgba(18, 22, 31, 0.75);
             backdrop-filter: blur(10px);
             position: sticky;
-            top: 0;
-            z-index: 99;
+            top:0;
+            z-index:99;
         }
-
         .top-nav-wrap a {
             text-decoration: none;
             color: #b4b9c6;
@@ -42,368 +39,104 @@
             font-size: 15px;
             transition: all 0.2s;
         }
-
         .top-nav-wrap a:hover {
             color: #ffd369;
             background-color: rgba(255,211,105,0.08);
         }
-
         .top-nav-wrap a.active {
             color: #ffd369;
         }
-
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        .page-title {
-            font-size: 32px;
+            padding: 40px 20px;
             text-align: center;
-            margin-bottom: 24px;
-            color: #ffd369;
         }
-
-        /* 搜索框 */
-        .search-box {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            margin: 0 auto 20px;
-            background: #1c212c;
-            border: 1px solid #333844;
-            border-radius: 12px;
-            padding: 12px 18px;
-        }
-
-        .search-box input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            outline: none;
-            color: #e6e8ef;
-            font-size: 16px;
-            padding-left: 10px;
-        }
-
-        .search-box input::placeholder {
-            color: #686e7c;
-        }
-
-        /* 筛选区 */
-        .filter-wrap {
-            margin-bottom: 24px;
-        }
-        .filter-row {
-            display:flex;
-            align-items:center;
-            gap:10px;
+        .subtitle-tag {
+            color: #b8a060;
+            letter-spacing: 4px;
+            font-size:14px;
             margin-bottom:12px;
         }
-        .filter-label{
-            color:#9aa0b0;
-            width:50px;
+        h1 {
+            font-size: 64px;
+            line-height: 1.2;
+            font-weight: 600;
         }
-        /* 【普通文字筛选按钮：强度、阵营 保持原样】 */
-        .filter-chip{
-            padding:6px 12px;
-            border-radius:8px;
-            background:#1c212c;
-            border:1px solid #333844;
-            color:#b4b9c6;
-            cursor:pointer;
-            transition:0.2s;
+        h1 span {
+            color: #ffd369;
         }
-        .filter-chip.active{
-            border-color:#ffd369;
-            color:#ffd369;
-            background:rgba(255,211,105,0.08);
+        .desc-line {
+            color:#9298a6;
+            margin:14px 0 40px;
+            font-size:14px;
         }
-        /* ========== 棋手头像单独覆盖样式 ========== */
-        .filter-row:first-child .filter-chip.player-chip {
-            all: unset;
-            display: block;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            overflow: hidden;
-            flex-shrink: 0;
-            border: 2px solid #333844;
+        /* 搜索框 */
+        .search-box {
+            display:flex;
+            align-items:center;
+            width: min(900px, 100%);
+            margin:0 auto 40px;
             background: #1c212c;
-            cursor: pointer;
-        }
-        .filter-row:first-child .filter-chip.player-chip img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .filter-row:first-child .filter-chip.player-chip.active {
-            border-color:#ffd369;
-            box-shadow: 0  0  6px rgba(255,211,105,0.25);
-        }
-        /* 棋手那一行开启横向滚动，不再换行 */
-        .filter-row:first-child {
-            overflow-x: auto;
-            overflow-y: hidden;
-            flex-wrap: nowrap;
-            padding: 6px 0;
-        }
-        .filter-row:first-child::-webkit-scrollbar {
-            height: 4px;
-        }
-        .filter-row:first-child::-webkit-scrollbar-track {
-            background: #12161f;
-        }
-        .filter-row:first-child::-webkit-scrollbar-thumb {
-            background: #333844;
-            border-radius: 2px;
-        }
-        .reset-btn{
-            margin-left:auto;
-            padding:6px 14px;
-            border-radius:8px;
-            background:#1c212c;
-            border:1px solid #333844;
-            color:#b4b9c6;
-            cursor:pointer;
-        }
-        .reset-btn:hover{
-            color:#ffd369;
-            border-color:#ffd369;
-        }
-
-        /* 阵容列表 */
-        .lineup-list {
-            display: flex;
-            flex-direction: column;
-            gap:16px;
-        }
-
-        /* 阵容卡片（横向长条卡片，和截图一致） */
-        .lineup-card {
-            background: linear-gradient(135deg, #1c212c 0%, #272d3b 100%);
             border: 1px solid #333844;
-            border-radius: 16px;
-            transition: 0.3s;
-            cursor: pointer;
-            padding:16px;
-            display:flex;
-            align-items:center;
-            gap:16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-        }
-
-        .lineup-card:hover {
-            border-color: rgba(255, 211, 105, 0.5);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(255, 211, 105, 0.15);
-        }
-
-        /* 棋手头像 */
-        .lineup-avatar {
-            width:64px;
-            height:64px;
             border-radius:12px;
-            flex-shrink:0;
-            border:2px solid #333844;
-            overflow:hidden;
+            padding:14px 20px;
         }
-        .lineup-avatar img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
-
-        /* 强度方块 */
-        .lineup-rank{
-            width:54px;
-            height:54px;
-            flex-shrink:0;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            background: #7b3fd8;
-            border-radius:10px;
-            font-weight:bold;
-            font-size:20px;
-            color:#fff;
-        }
-
-        .lineup-main{
+        .search-box input {
             flex:1;
-            min-width:0;
+            background:transparent;
+            border:none;
+            outline:none;
+            color:#e6e8ef;
+            font-size:16px;
+            padding-left:10px;
         }
-        .lineup-top{
+        .search-box input::placeholder {
+            color:#686e7c;
+        }
+        .search-hint {
+            color:#686e7c;
+            font-size:13px;
+            margin-bottom:50px;
+        }
+        /* 卡片区域 */
+        .card-grid {
+            display:grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+            gap:16px;
+        }
+        .preview-card {
+            background:#1c212c;
+            border-radius:10px;
+            padding:14px;
             display:flex;
             align-items:center;
             gap:10px;
-            margin-bottom:6px;
+            border:1px solid #282d38;
+            transition:0.2s;
         }
-        .lineup-name{
-            font-size:20px;
-            font-weight:700;
-            color:#ffd369;
+        .preview-card:hover {
+            border-color:rgba(255,211,105,0.35);
         }
-        .tag{
-            padding:3px 8px;
+        .preview-card img {
+            width:48px;
+            height:48px;
             border-radius:6px;
-            font-size:12px;
-            background:rgba(255,211,105,0.12);
-            color:#ffd369;
-        }
-        .lineup-meta{
-            font-size:12px;
-            color:#9aa0b0;
-            margin-bottom:8px;
-            display:flex;
-            flex-wrap:wrap;
-            gap:8px;
-        }
-        .hero-row{
-            display:flex;
-            gap:6px;
-            align-items:center;
-        }
-        .mini-hero{
-            width:42px;
-            height:42px;
-            border-radius:8px;
-            border:1px solid #333844;
-            position:relative;
-        }
-        .mini-hero img{
-            width:100%;
-            height:100%;
             object-fit:cover;
         }
-        .mini-hero.core::after{
-            content:"核";
-            position:absolute;
-            top:-4px;
-            right:-4px;
-            width:18px;
-            height:18px;
-            border-radius:50%;
-            background:#7b3fd8;
-            color:#fff;
-            font-size:10px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
+        .card-text p:first-child {
+            color:#ffd369;
+            font-size:13px;
         }
-        .arrow{
-            color:#9aa0b0;
-            font-size:22px;
-            padding:0 8px;
-        }
-
-        /* 弹窗 */
-        .modal {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.78);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 999;
-            padding: 20px;
-            backdrop-filter: blur(4px);
-        }
-
-        .modal-content {
-            width: min(820px, 100%);
-            background: #181c26;
-            border: 1px solid #333844;
-            border-radius: 20px;
-            max-height: 86vh;
-            overflow-y: auto;
-            padding: 32px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-close {
-            float: right;
-            color: #888;
-            font-size: 26px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .modal-close:hover {
-            color: #ffd369;
-        }
-
-        .modal h2 {
-            color: #ffd369;
-            margin-bottom: 10px;
-            font-size: 26px;
-        }
-        .modal-sub{
-            color:#9aa0b0;
-            margin-bottom:16px;
-        }
-        .modal-block {
-            margin: 16px 0;
-            background: #1c212c;
-            border: 1px solid #282d38;
-            border-radius: 14px;
-            padding: 16px 18px;
-        }
-
-        .modal-block h4 {
-            color: #ffd369;
-            margin-bottom: 8px;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .modal-block h4::before {
-            content: "";
-            width: 3px;
-            height: 14px;
-            background: #ffd369;
-            border-radius: 2px;
-        }
-
-        .modal-block p {
-            color: #b4b9c6;
-            line-height: 1.8;
-            font-size: 14px;
-        }
-        .link-official{
-            display:inline-block;
-            margin-top:10px;
-            padding:8px 14px;
-            background:#7b3fd8;
-            color:#fff;
-            border-radius:8px;
-            text-decoration:none;
-        }
-        .link-official:hover{
-            opacity:0.9;
-        }
-
-        /* 滚动条美化 */
-        .modal-content::-webkit-scrollbar {
-            width: 8px;
-        }
-        .modal-content::-webkit-scrollbar-thumb {
-            background: #333844;
-            border-radius: 4px;
-        }
-        .modal-content::-webkit-scrollbar-thumb:hover {
-            background: #ffd369;
+        .card-text p:last-child {
+            font-size:15px;
         }
     </style>
 </head>
 <body>
-    <!-- 导航 -->
+    <!-- 顶部导航 -->
     <div class="top-nav-wrap">
-        <a href="./index.html">首页</a>
+        <a href="./index.html" class="active">首页</a>
         <a href="./lineup.html">阵容大全</a>
         <a href="./player.html">棋手</a>
         <a href="./hero-card.html">英雄牌</a>
@@ -414,134 +147,52 @@
     </div>
 
     <div class="container">
-        <h2 class="page-title">阵容大全</h2>
+        <div class="subtitle-tag">WANGZHE WANXIANGQI DATA</div>
+        <h1>致力于做王者万象棋最全攻略
+        <span>万象棋启动</span></h1>
+        <div class="desc-line">万象一图诀 · 友情打造</div>
 
         <div class="search-box">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#888e9c">
                 <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
             </svg>
-            <input id="searchInput" type="text" placeholder="搜索阵容名称 / 核心英雄...">
+            <input type="text" placeholder="搜索棋手、英雄牌、装备牌、效果牌...">
+            <span style="color:#777; font-size:13px;">⌘ K</span>
         </div>
+        <div class="search-hint">支持拼音与首字母 · 覆盖全部游戏资料 · 数据持续更新</div>
 
-        <div class="filter-wrap">
-            <div class="filter-row">
-              <span class="filter-label">棋手</span>
-    <div class="filter-chip player-chip active" data-filter="player" data-val="all" title="全部">
-        <img src="images/players/all.png" alt="全部">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="小妲己" title="小妲己">
-        <img src="images/players/xiaodaji.png" alt="小妲己">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="瑶妹" title="瑶妹">
-        <img src="images/players/yaomei.png" alt="瑶妹">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="阿离" title="阿离">
-        <img src="images/players/ali.png" alt="阿离">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="镜" title="镜">
-        <img src="images/players/jing.png" alt="镜">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="乔汐" title="乔汐">
-        <img src="images/players/qiaoxi.png" alt="乔汐">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="常小娥" title="常小娥">
-        <img src="images/players/changxiaoee.png" alt="常小娥">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="玉环" title="玉环">
-        <img src="images/players/yuhuan.png" alt="玉环">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="庄小鱼" title="庄小鱼">
-        <img src="images/players/zhuangxiaoyu.png" alt="庄小鱼">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="马可" title="马可">
-        <img src="images/players/make.png" alt="马可">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="白歌" title="白歌">
-        <img src="images/players/baige.png" alt="白歌">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="昭君" title="昭君">
-        <img src="images/players/zhaojun.png" alt="昭君">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="班叔" title="班叔">
-        <img src="images/players/banshu.png" alt="班叔">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="弈星" title="弈星">
-        <img src="images/players/yixing.png" alt="弈星">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="孙小宾" title="孙小宾">
-        <img src="images/players/sunxiaobin.png" alt="孙小宾">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="明先生" title="明先生">
-        <img src="images/players/mingxiansheng.png" alt="明先生">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="闹闹" title="闹闹">
-        <img src="images/players/naonao.png" alt="闹闹">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="姜导" title="姜导">
-        <img src="images/players/jiangdao.png" alt="姜导">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="嬴律" title="嬴律">
-        <img src="images/players/yinglv.png" alt="嬴律">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="香香" title="香香">
-        <img src="images/players/xiangxiang.png" alt="香香">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="武凤" title="武凤">
-        <img src="images/players/wufeng.png" alt="武凤">
-    </div>
-    <div class="filter-chip player-chip" data-filter="player" data-val="安琪拉" title="安琪拉">
-        <img src="images/players/anqila.png" alt="安琪拉">
-    </div>
-   
-</div>
-
+        <!-- 预览卡片区域，你后续可以替换图片 -->
+        <div class="card-grid">
+            <div class="preview-card">
+                <div style="width:48px;height:48px;border-radius:6px;background:#222;"></div>
+                <div class="card-text">
+                    <p>棋手</p>
+                    <p>阿离</p>
+                </div>
             </div>
-            <div class="filter-row">
-                <span class="filter-label">强度</span>
-                <div class="filter-chip active" data-filter="rank" data-val="all">全部</div>
-                <div class="filter-chip" data-filter="rank" data-val="S+">S+</div>
-                <div class="filter-chip" data-filter="rank" data-val="S">S</div>
-                <div class="filter-chip" data-filter="rank" data-val="A+">A+</div>
-                <div class="filter-chip" data-filter="rank" data-val="A">A</div>
+            <div class="preview-card">
+                <div style="width:48px;height:48px;border-radius:6px;background:#222;"></div>
+                <div class="card-text">
+                    <p>英雄牌</p>
+                    <p>亚连</p>
+                </div>
             </div>
-            <div class="filter-row">
-                <span class="filter-label">阵营</span>
-                <div class="filter-chip active" data-filter="camp" data-val="all">全部</div>
-                <div class="filter-chip" data-filter="camp" data-val="河洛">河洛</div>
-                <div class="filter-chip" data-filter="camp" data-val="三分">三分</div>
-                <div class="filter-chip" data-filter="camp" data-val="无阵营">无阵营</div>
-                <div class="filter-chip" data-filter="camp" data-val="逐鹿">逐鹿</div>
-                <div class="filter-chip" data-filter="camp" data-val="大河流">大河流</div>
-                <div class="filter-chip" data-filter="camp" data-val="日落海">日落海</div>
-                <button class="reset-btn" id="resetFilter">重置</button>
+            <div class="preview-card">
+                <div style="width:48px;height:48px;border-radius:6px;background:#222;"></div>
+                <div class="card-text">
+                    <p>装备牌</p>
+                    <p>雷鸣刃</p>
+                </div>
+            </div>
+            <div class="preview-card">
+                <div style="width:48px;height:48px;border-radius:6px;background:#222;"></div>
+                <div class="card-text">
+                    <p>效果牌</p>
+                    <p>幸运礼</p>
+                </div>
             </div>
         </div>
-
-        <div class="lineup-list" id="lineupList"></div>
     </div>
-
-    <!-- 详情弹窗 -->
-    <div class="modal" id="detailModal">
-        <div class="modal-content">
-            <span class="modal-close" id="closeModal">&times;</span>
-            <div id="modalBody"></div>
-        </div>
-    </div>
-
-    <script>
-        //导航高亮
-        (function(){
-          const navLinks = document.querySelectorAll('.top-nav-wrap a');
-          const currentPath = location.pathname.split('/').pop() || 'index.html';
-          navLinks.forEach(link => {
-            link.classList.remove('active');
-            const href = link.getAttribute('href').replace('./','');
-            if(href === currentPath){
-              link.classList.add('active');
-            }
-          })
-        })();
-    </script>
     <script src="./app.js"></script>
 </body>
 </html>
