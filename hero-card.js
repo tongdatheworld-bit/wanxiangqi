@@ -150,15 +150,6 @@ function bindHeroCardClick() {
                 <span class="tag-stage tag-stage-${find.stage}">${find.stage}阶</span>
             </div>
         </div>
-    </div>
-
-    <div class="hero-card-tag">英雄牌</div>
-</div>
-    <div class="hero-tags-top">
-        <span class="tag-camp">${find.camp}</span>
-        <span class="tag-stage tag-stage-${find.stage}">${find.stage}阶</span>
-    </div>
-</div>
 
     </div>
 </div>
