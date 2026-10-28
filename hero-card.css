@@ -309,6 +309,7 @@ body {
 }
 .skill-text {
     color:#d9cdb8;
+    font-size: 18px;
     line-height:1.6;
     margin-bottom:6px;
 }
@@ -318,8 +319,8 @@ body {
 }
 .skill-level {
     color:#c9b894;
-    font-size:13px;
-    line-height:1.8;
+    font-size:16px;
+    line-height:1.6;
 }
 
 /* 装备、阵容推荐区块 */
