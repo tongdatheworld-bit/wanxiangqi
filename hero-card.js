@@ -5,6 +5,7 @@ let allHeroCardData = [
         "stage": 1,
         "camp": "三分之地",
         "tag": "万象大赛",
+        "avatarImg": "wanxiangqi/images/heroes/sunshangxiang.png", // 英雄头像，放在heroes目录
         "img": "images/herocard/sunshangxiang.png",
         "awakeningImg": "images/herocard/awakening/sunshangxiang.png",
         "skillImg": "images/herocard/skills/honglianbaodan.png",
