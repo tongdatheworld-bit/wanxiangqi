@@ -1,61 +1,106 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>装备牌</title>
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<!-- 顶部导航 -->
-<div class="top-nav-wrap">
-    <a href="./index.html">首页</a>
-    <a href="./lineup.html">阵容大全</a>
-    <a href="./player.html">棋手</a>
-    <a href="./hero-card.html">英雄牌</a>
-    <a href="./talent.html">天赋牌</a>
-    <a href="./equip.html" class="active">装备牌</a>
-    <a href="./effect.html">效果牌</a>
-    <a href="./info-gap.html">信息差</a>
-</div>
-<div class="container">
-    <h2 class="page-title">装备牌</h2>
-    <!-- 搜索框 -->
-    <div class="search-box">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#888e9c">
-            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-        </svg>
-        <input id="searchInput" type="text" placeholder="搜索装备名称、效果关键词..." />
-    </div>
-    <!-- 筛选区 -->
-    <div class="filter-wrap">
-        <div class="filter-row">
-            <select id="typeFilter" class="filter-select">
-                <option value="all">全部类型</option>
-                <option value="基础装备">基础装备</option>
-                <option value="普通装备">普通装备</option>
-                <option value="天赋装备">天赋装备</option>
-                <option value="特殊装备">特殊装备</option>
-            </select>
-            <select id="posFilter" class="filter-select">
-                <option value="all">全部定位</option>
-                <option value="物理装备">物理装备</option>
-                <option value="法术装备">法术装备</option>
-                <option value="防御装备">防御装备</option>
-                <option value="通用装备">通用装备</option>
-            </select>
-        </div>
-    </div>
-    <!-- 装备卡片网格 -->
-    <div class="hero-card-grid" id="equipCardList"></div>
-</div>
-<!-- 弹窗 -->
-<div class="modal" id="detailModal">
-    <div class="modal-content">
-        <span class="modal-close" id="closeModal">&times;</span>
-        <div id="modalBody"></div>
-    </div>
-</div>
-<script src="equip-card.js"></script>
-</body>
-</html>
+document.addEventListener('DOMContentLoaded', function(){
+    console.log("✅ 装备JS加载完成");
+
+    // 测试数据
+    const equipList = [
+        {id:1,name:"大棒",type:"基础装备",pos:"法术装备",smallImg:"images/equip/dabang.png",img:"images/equip/dabang.png",desc:"法术强度+80",source:"选秀、野怪掉落",combine:"破碎圣杯 + 圣者法典"},
+        {id:2,name:"风暴巨剑",type:"基础装备",pos:"物理装备",smallImg:"images/equip/fengbaojujian.png",img:"images/equip/fengbaojujian.png",desc:"攻击力+45",source:"选秀、野怪掉落",combine:""},
+        {id:3,name:"力量腰带",type:"基础装备",pos:"防御装备",smallImg:"images/equip/liliangyaodai.png",img:"images/equip/liliangyaodai.png",desc:"生命值+200",source:"选秀、野怪掉落",combine:""}
+    ];
+
+    const equipCardList = document.getElementById('equipCardList');
+    const searchInput = document.getElementById('searchInput');
+    const typeFilter = document.getElementById('typeFilter');
+    const posFilter = document.getElementById('posFilter');
+    const modal = document.getElementById('detailModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeModal = document.getElementById('closeModal');
+
+    function renderList(list) {
+        if (!equipCardList) {
+            console.error("❌ 找不到容器 equipCardList！");
+            return;
+        }
+        console.log("📦 渲染装备数量：", list.length);
+        equipCardList.innerHTML = '';
+        if(list.length === 0){
+            equipCardList.innerHTML = `<div style="grid-column:1/-1;text-align:center;color:#9aa0b0;padding:60px 0;">没有匹配的装备</div>`;
+            return;
+        }
+        list.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'hero-card-item';
+            card.innerHTML = `
+                <div class="hero-card-cover">
+                    <img src="${item.smallImg}" alt="${item.name}" loading="lazy">
+                </div>
+            `;
+            card.onclick = () => openModal(item);
+            equipCardList.appendChild(card);
+        })
+    }
+
+    function filterData() {
+        // 容错：找不到元素就给默认空值，不报错
+        let kw = searchInput ? searchInput.value.trim().toLowerCase() : "";
+        let t = typeFilter ? typeFilter.value : "all";
+        let p = posFilter ? posFilter.value : "all";
+
+        const result = equipList.filter(item=>{
+            const matchType = t === 'all' || item.type === t;
+            const matchPos = p === 'all' || item.pos === p;
+            const matchKw = !kw || item.name.toLowerCase().includes(kw) || (item.desc && item.desc.toLowerCase().includes(kw));
+            return matchType && matchPos && matchKw;
+        })
+        renderList(result);
+    }
+
+    // 装备弹窗
+    function openModal(item) {
+        if(!modalBody || !modal) return;
+        modalBody.innerHTML = `
+            <div class="hero-header-bar">
+                <div class="hero-icon-wrap">
+                    <img class="hero-main-icon" src="${item.img}" alt="${item.name}" />
+                    <div class="hero-name-title">
+                        <div class="hero-name-large">${item.name}</div>
+                        <div class="hero-tags-top">
+                            <span class="tag-camp">${item.type}</span>
+                            <span class="tag-camp">${item.pos}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-block">
+                <h4>装备效果</h4>
+                <p>${item.desc || '暂无效果描述'}</p>
+            </div>
+            <div class="modal-block">
+                <h4>合成路线</h4>
+                <p>${item.combine || '不可合成 / 暂无合成信息'}</p>
+            </div>
+            <div class="modal-block">
+                <h4>获取途径</h4>
+                <p>${item.source || '暂无'}</p>
+            </div>
+        `;
+        modal.style.display = 'flex';
+    }
+
+    function closeModalFunc() {
+        if(modal) modal.style.display = 'none';
+    }
+    if(closeModal) closeModal.addEventListener('click', closeModalFunc);
+    if(modal) modal.addEventListener('click', e=>{
+        if(e.target === modal) closeModalFunc();
+    })
+
+    // 绑定事件前先判断元素是否存在，不存在就跳过绑定
+    if(searchInput) searchInput.addEventListener('input', filterData);
+    if(typeFilter) typeFilter.addEventListener('change', filterData);
+    if(posFilter) posFilter.addEventListener('change', filterData);
+
+    filterData();
+})
+
