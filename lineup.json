@@ -418,24 +418,23 @@
         "equip": []
     },
     {
-    "id": 22,
-    "name": "安琪拉爆盾廉颇",
-    "rank": "S",
-    "player": "安琪拉",
-    "playerImg": "images/players/anqila.png",
-    "hard": "简单",
-    "lineupCode": "24263218411795460（点击复制）",
-    "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
-    "heroList": [
-        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
-        {"name":"廉颇","img":"images/heroes/lianpo.png","isCore":true},
-        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-        {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
-        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ]
-}
-,
+        "id": 22,
+        "name": "安琪拉爆盾廉颇",
+        "rank": "S",
+        "player": "安琪拉",
+        "playerImg": "images/players/anqila.png",
+        "hard": "简单",
+        "lineupCode": "24263218411795460（点击复制）",
+        "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
+        "heroList": [
+            {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+            {"name":"廉颇","img":"images/heroes/lianpo.png","isCore":true},
+            {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+            {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
+            {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+        ]
+    },
     {
         "id": 23,
         "name": "阿离4.0狄仁杰",
@@ -644,87 +643,81 @@
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
             {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
         ]
-    },{
-    "id": 34,
-    "name": "乔汐河洛司空震",
-    "rank": "A",
-    "player": "乔汐",
-    "playerImg": "images/players/qiaoxi.png",
-    "hard": "简单",
-    "lineupCode": "95759813553811484（点击复制）",
-    "ban位": ["逐鹿", "大河流域", "三分之地"],
-    "heroList": [
-        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-        {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
-        {"name":"铠","img":"images/heroes/kai.png","isCore":false},
-        {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
-        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-        {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false}
-    ]
-},
-        {
-    "id": 35,
-    "name": "乔汐海月司空震",
-    "rank": "A",
-    "player": "乔汐",
-    "playerImg": "images/players/qiaoxi.png",
-    "hard": "简单",
-    "lineupCode": "86189043126872090（点击复制）",
-    "ban位": ["日落海", "大河流域", "逐鹿"],
-    "heroList": [
-        {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
-        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
-        {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
-        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false},
-        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-        {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false}
-    ]
-}
-,{
-    "id": 36,
-    "name": "明先生逐鹿蒙犽",
-    "rank": "A",
-    "player": "明先生",
-    "playerImg": "images/players/mingxiansheng.png",
-    "hard": "中等",
-    "lineupCode": "80558214278639676（点击复制）",
-    "ban位": ["大河流域", "河洛", "日落海","三分"],
-    "heroList": [
-        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
-        {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
-        {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
-        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
-        {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false},
-        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
-    ]
-}
-,
-        {
-    "id": 37,
-    "name": "嬴律逐鹿蒙犽",
-    "rank": "A",
-    "player": "嬴律",
-    "playerImg": "images/players/yinglv.png",
-    "hard": "中等",
-    "lineupCode": "22013369162768414（点击复制）",
-    "ban位": ["大河流域", "河洛", "日落海", "三分"],
-    "heroList": [
-        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
-        {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
-        {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
-        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
-        {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false},
-        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
-    ]
-}
-
-
-
-]
-
-    
+    },
+    {
+        "id": 34,
+        "name": "乔汐河洛司空震",
+        "rank": "A",
+        "player": "乔汐",
+        "playerImg": "images/players/qiaoxi.png",
+        "hard": "简单",
+        "lineupCode": "95759813553811484（点击复制）",
+        "ban位": ["逐鹿", "大河流域", "三分之地"],
+        "heroList": [
+            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+            {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+            {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false}
+        ]
+    },
+    {
+        "id": 35,
+        "name": "乔汐海月司空震",
+        "rank": "A",
+        "player": "乔汐",
+        "playerImg": "images/players/qiaoxi.png",
+        "hard": "简单",
+        "lineupCode": "86189043126872090（点击复制）",
+        "ban位": ["日落海", "大河流域", "逐鹿"],
+        "heroList": [
+            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+            {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+            {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
+            {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false},
+            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+            {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false}
+        ]
+    },
+    {
+        "id": 36,
+        "name": "明先生逐鹿蒙犽",
+        "rank": "A",
+        "player": "明先生",
+        "playerImg": "images/players/mingxiansheng.png",
+        "hard": "中等",
+        "lineupCode": "80558214278639676（点击复制）",
+        "ban位": ["大河流域", "河洛", "日落海","三分"],
+        "heroList": [
+            {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+            {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+            {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
+            {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+            {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false},
+            {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+            {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
+        ]
+    },
+    {
+        "id": 37,
+        "name": "嬴律逐鹿蒙犽",
+        "rank": "A",
+        "player": "嬴律",
+        "playerImg": "images/players/yinglv.png",
+        "hard": "中等",
+        "lineupCode": "22013369162768414（点击复制）",
+        "ban位": ["大河流域", "河洛", "日落海", "三分"],
+        "heroList": [
+            {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+            {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+            {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
+            {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+            {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false},
+            {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+            {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
+        ]
+    }
 ]
