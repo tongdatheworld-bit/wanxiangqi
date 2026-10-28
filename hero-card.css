@@ -338,3 +338,142 @@ body {
 .awaken-desc {
     color:#b4b9c6;
 }
+/* ========== 【新版黑金弹窗布局 替换】 ========== */
+.hero-modal-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 28px;
+}
+.modal-card-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.modal-hero-img {
+    width: 100%;
+    border-radius: 14px;
+}
+.modal-card-label {
+    background: #1c170f;
+    padding: 5px 14px;
+    border-radius: 99px;
+    font-size: 13px;
+    color: #c9b894;
+}
+.modal-tag-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.tag-small {
+    background: #272012;
+    color: #ffd369;
+    border:1px solid #6b5832;
+    padding: 4px 9px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+.modal-hero-desc {
+    color: #d9cdb8;
+    font-size: 15px;
+}
+.modal-source {
+    color: #948770;
+    font-size: 13px;
+    margin: 6px 0 10px;
+}
+.keyword-tags {
+    display: flex;
+    gap: 7px;
+}
+.keyword-tag {
+    background: #272012;
+    color: #ffd369;
+    border:1px solid #5c4b2b;
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.split-line {
+    height: 1px;
+    background: #4b3e24;
+    margin: 26px 0;
+}
+.attr-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:12px;
+}
+.attr-item {
+    background: #1c170f;
+    border:1px solid #4b3e24;
+    border-radius:14px;
+    padding:16px;
+}
+.attr-label {
+    color:#c9b894;
+    font-size:14px;
+    margin-bottom:6px;
+}
+.attr-val {
+    font-size:24px;
+    font-weight:bold;
+    color:#fff;
+}
+.skill-row {
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+}
+.skill-icon {
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+    border:1px solid #7c6538;
+}
+.skill-name {
+    color:#ffd369;
+    font-weight:bold;
+    font-size:16px;
+    margin-bottom:6px;
+}
+.skill-text {
+    color:#d9cdb8;
+    line-height:1.6;
+    margin-bottom:6px;
+}
+/* Lv.10 Lv.40 Lv.100 金色类 */
+.gold-text {
+    color: #ffd369;
+    font-weight: 500;
+}
+.skill-level {
+    color:#c9b894;
+    font-size:13px;
+    line-height:1.5;
+}
+/* 觉醒区块：加大和技能上方间距！ */
+.awaken-wrap {
+    margin-top: 36px;
+}
+.awaken-title {
+    color:#ffd369;
+    font-weight:bold;
+    font-size:16px;
+    margin-bottom:10px;
+}
+.awaken-row {
+    display:flex;
+    gap:16px;
+    align-items:center;
+}
+.awaken-card-img {
+    width:140px;
+    border-radius:10px;
+    border:1px solid #7c6538;
+}
+.awaken-desc {
+    color:#d9cdb8;
+}
