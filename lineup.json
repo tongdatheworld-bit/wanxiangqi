@@ -137,7 +137,8 @@
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ]
+     ],
+        "equip": []
 }
 
 ]
