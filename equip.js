@@ -21,12 +21,12 @@ const equipList = [
             {
                 name: "无尽巨剑",
                 effect: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
-                icon: "images/equip/equipsmall/wujinjujian.png"
+                icon: "images/equip/equipsmall/wujinjian.png"
             },
             {
                 name: "制裁之剑",
                 effect: "唯一。造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
-                icon: "images/equip/equipsmall/zhicaizhijian.png"
+                icon: "images/equip/equipsmall/zhicaijian.png"
             }
         ]
     },
@@ -60,7 +60,7 @@ const equipList = [
         desc: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
         source: "由风暴巨剑铸造而成",
         sourceImg: "images/equip/equipsmall/fengbaojujian.png",
-        img: "images/equip/wujinjujian.png",
+        img: "images/equip/wujinjian.png",
         castList: []
     },
     {
@@ -71,7 +71,7 @@ const equipList = [
         desc: "造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
         source: "由风暴巨剑铸造而成",
         sourceImg: "images/equip/equipsmall/fengbaojujian.png",
-        img: "images/equip/zhicaizhiren.png",
+        img: "images/equip/zhicaijian.png",
         castList: []
     }
 ];
@@ -94,20 +94,25 @@ function render() {
         if (!(matchKw && matchT && matchP)) return;
         const div = document.createElement("div");
         div.className = "equip-card-item";
-        // 【修改点1】卡片html改为单行模板，删掉源码换行
         div.innerHTML = `<div class="equip-card-cover"><img src="${item.img}" alt="${item.name}"></div>`;
         div.onclick = () => {
             let castHtml = "";
             if (item.castList.length > 0) {
                 item.castList.forEach(c => {
-                    // 【修改点2】铸造条目单行
                     castHtml += `<div class="cast-item"><img class="cast-icon" src="${c.icon}" alt=""><div class="cast-text"><span class="cast-name">${c.name}</span><span class="cast-effect">${c.effect}</span></div></div>`;
                 });
             } else {
                 castHtml = `<div style="color:#888;">该装备无法继续铸造</div>`;
             }
-            // 【修改点3】弹窗主体全部压缩单行！！核心解决报错！
-            modalBody.innerHTML = `<div class="equip-modal-wrap"><div class="equip-modal-left"><div class="equip-modal-card"><img src="${item.img}" alt="${item.name}"><div class="equip-modal-card-name">${item.name}</div></div></div><div class="equip-modal-right"><h2 class="equip-modal-title">${item.name}<span class="equip-modal-tag">${item.type} · ${item.pos}</span></h2><p class="equip-modal-desc">${item.desc}</p><p class="equip-modal-source">来源：${item.source}</p><hr class="equip-divider"><h3 class="equip-cast-title">可铸造成装</h3><div class="cast-list">${castHtml}</div></div></div>`;
+            // 拼接来源行，存在sourceImg就追加小图标
+            let sourceHtml = `<p class="equip-modal-source">来源：${item.source}`;
+            if(item.sourceImg){
+                sourceHtml += `<img style="width:24px;height:24px;margin-left:8px;border-radius:4px;vertical-align:middle;" src="${item.sourceImg}" alt="">`;
+            }
+            sourceHtml += `</p>`;
+
+            // ✅ 这里修复！把 sourceHtml 变量填进去，不再硬写来源p标签
+            modalBody.innerHTML = `<div class="equip-modal-wrap"><div class="equip-modal-left"><div class="equip-modal-card"><img src="${item.img}" alt="${item.name}"><div class="equip-modal-card-name">${item.name}</div></div></div><div class="equip-modal-right"><h2 class="equip-modal-title">${item.name}<span class="equip-modal-tag">${item.type} · ${item.pos}</span></h2><p class="equip-modal-desc">${item.desc}</p>${sourceHtml}<hr class="equip-divider"><h3 class="equip-cast-title">可铸造成装</h3><div class="cast-list">${castHtml}</div></div></div>`;
             detailModal.style.display = "flex";
         };
         equipCardList.appendChild(div);
