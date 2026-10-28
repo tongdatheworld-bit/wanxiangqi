@@ -2,121 +2,116 @@ const equipList = [
     {
         id: 1,
         name: "风暴巨剑",
-        tag: "基础装备",
-        descSource: "该卡牌通过商店购买、拍卖等渠道获得",
-        normalDesc: "穿戴给英雄，可以铸造成1件输出型普通装备。",
-        smallImg: "images/equip/fengbaojujian.png",
+        type: "基础装备",
+        pos: "物理装备",
+        desc: "穿戴给英雄，可以铸造成1件输出型普通装备。",
+        source: "该卡通过商店购买、效果锦裹、拍卖等渠道获得。",
         img: "images/equip/fengbaojujian.png",
-        combineList: [
+        castList: [
             {
                 name: "纯净苍穹",
-                desc: "唯一。每2秒获得10点法术攻击力，同时清除自身负面状态。",
-                smallImg: "images/equip/chunjingcangqiong.png"
+                effect: "唯一。每2秒获得10点法术攻击力，同时清除自身负面状态。",
+                icon: "images/equip/equipsmall/chunjingcangqiong.png"
             },
             {
                 name: "铸梦·逐风",
-                desc: "唯一。战斗开始及之后每过8秒，快速进行4次普通攻击。",
-                smallImg: "images/equip/zhumengzhufeng.png"
+                effect: "唯一。战斗开始及之后每过8秒，快速进行4次普通攻击。",
+                icon: "images/equip/equipsmall/zhumengzhufeng.png"
             },
             {
                 name: "无尽巨剑",
-                desc: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
-                smallImg: "images/equip/wujinjian.png"
+                effect: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
+                icon: "images/equip/equipsmall/wujinjian.png"
             },
             {
                 name: "制裁之剑",
-                desc: "唯一。造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
-                smallImg: "images/equip/zhicaijian.png"
-            }
-        ]
+                effect: "唯一。造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
+                icon: "images/equip/equipsmall/zhicaijian.png"
+    
     }
 ];
 
 const equipCardList = document.getElementById("equipCardList");
 const searchInput = document.getElementById("searchInput");
 const equipTypeFilter = document.getElementById("equipTypeFilter");
-const equipPosFilter = document.getElementById("equipPosFilter");
+const equipPosFilter = document.getElementById("detailModal");
 const detailModal = document.getElementById("detailModal");
 const modalBody = document.getElementById("modalBody");
 const closeModal = document.getElementById("closeModal");
 
-function renderList() {
-    const searchVal = searchInput.value.trim().toLowerCase();
-    const typeVal = equipTypeFilter.value;
-    const posVal = equipPosFilter.value;
-
-    const filtered = equipList.filter(item => {
-        const matchSearch = !searchVal ||
-            item.name.toLowerCase().includes(searchVal) ||
-            item.normalDesc.toLowerCase().includes(searchVal);
-        const matchType = typeVal === "all" || item.tag === typeVal;
-        const matchPos = posVal === "all" || item.tag === posVal;
-        return matchSearch && matchType && matchPos;
-    });
-
+function render() {
+    const kw = searchInput.value.trim().toLowerCase();
+    const filterType = equipTypeFilter.value;
+    const filterPos = equipPosFilter.value;
     equipCardList.innerHTML = "";
-    filtered.forEach(equip => {
-        const card = document.createElement("div");
-        card.className = "equip-card-item";
-        card.innerHTML = `
+
+    equipList.forEach(item => {
+        // 筛选逻辑
+        const matchKw = !kw || item.name.toLowerCase().includes(kw) || item.desc.toLowerCase().includes(kw);
+        const matchT = filterType === "all" || item.type === filterType;
+        const matchP = filterPos === "all" || item.pos === filterPos;
+        if (!(matchKw && matchT && matchP)) return;
+
+        const div = document.createElement("div");
+        div.className = "equip-card-item";
+        div.innerHTML = `
             <div class="equip-card-cover">
-                <img src="${equip.smallImg}" alt="${equip.name}">
+                <img src="${item.img}" alt="${item.name}">
             </div>
         `;
-        card.onclick = function () {
-            let combineHtml = "";
-            equip.combineList.forEach(cb => {
-                combineHtml += `
-                <div class="skill-item">
-                    <img class="skill-icon" src="${cb.smallImg}" alt="${cb.name}">
-                    <div class="skill-info">
-                        <div class="skill-name">${cb.name}</div>
-                        <div class="skill-desc">${cb.desc}</div>
+        div.onclick = () => {
+            let castHtml = "";
+            if (item.castList.length > 0) {
+                item.castList.forEach(c => {
+                    castHtml += `
+                    <div class="cast-item">
+                        <img class="cast-icon" src="${c.icon}" alt="">
+                        <div class="cast-text">
+                            <span class="cast-name">${c.name}</span>
+                            <span class="cast-effect">${c.effect}</span>
+                        </div>
                     </div>
-                </div>`;
-            });
+                    `;
+                });
+            } else {
+                castHtml = `<div style="color:#888;">该装备无法继续铸造</div>`;
+            }
 
             modalBody.innerHTML = `
-                <div class="modal-header">
-                    <div class="modal-avatar">
-                        <img src="${equip.img}" alt="${equip.name}">
-                    </div>
-                    <div class="modal-title-wrap">
-                        <h2>${equip.name}</h2>
-                        <div class="modal-sub-text">${equip.descSource}</div>
-                        <div class="tag-group">
-                            <span class="tag">${equip.tag}</span>
-                        </div>
-                        <div class="card-label">卡牌详情</div>
+            <div class="equip-modal-wrap">
+                <div class="equip-modal-left">
+                    <div class="equip-modal-card">
+                        <img src="${item.img}" alt="${item.name}">
+                        <div class="equip-modal-card-name">${item.name}</div>
                     </div>
                 </div>
-
-                <div class="form-block">
-                    <div class="form-title">普通形态</div>
-                    <div class="form-desc">${equip.normalDesc}</div>
+                <div class="equip-modal-right">
+                    <h2 class="equip-modal-title">${item.name}
+                        <span class="equip-modal-tag">${item.type} · ${item.pos}</span>
+                    </h2>
+                    <p class="equip-modal-desc">${item.desc}</p>
+                    <p class="equip-modal-source">来源：${item.source}</p>
+                    <hr class="equip-divider">
+                    <h3 class="equip-cast-title">可铸造成装</h3>
+                    <div class="cast-list">
+                        ${castHtml}
+                    </div>
                 </div>
-
-                <div class="section-title">可合成装备</div>
-                <div class="skill-block">
-                    ${combineHtml}
-                </div>
+            </div>
             `;
             detailModal.style.display = "flex";
         };
-        equipCardList.appendChild(card);
+        equipCardList.appendChild(div);
     });
 }
 
-closeModal.onclick = function () {
-    detailModal.style.display = "none";
-};
-window.onclick = function (e) {
-    if (e.target === detailModal) {
-        detailModal.style.display = "none";
-    }
+// 关闭弹窗
+closeModal.onclick = () => detailModal.style.display = "none";
+window.onclick = (e) => {
+    if (e.target === detailModal) detailModal.style.display = "none";
 };
 
-searchInput.addEventListener("input", renderList);
-equipTypeFilter.addEventListener("change", renderList);
-equipPosFilter.addEventListener("change", renderList);
-renderList();
+searchInput.addEventListener("input", render);
+equipTypeFilter.addEventListener("change", render);
+equipPosFilter.addEventListener("change", render);
+render();
