@@ -144,12 +144,11 @@ function bindHeroCardClick() {
         <div class="hero-name-title">
             <div class="hero-name-large">${find.name}</div>
             <div class="hero-subtitle">英雄牌</div>
+            <div class="hero-tags-top">
+                <span class="tag-camp">${find.camp}</span>
+                <span class="tag-stage tag-stage-${find.stage}">${find.stage}阶</span>
+            </div>
         </div>
-    </div>
-
-    <div class="hero-tags-top">
-        <span class="tag-camp">${find.camp}</span>
-        <span class="tag-stage tag-stage-${find.stage}">${find.stage}阶</span>
     </div>
 </div>
 
@@ -230,4 +229,3 @@ function bindHeroCardClick() {
         if (e.target === modal) modal.style.display = 'none';
     }
 }
-
