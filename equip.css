@@ -1,3 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #12161f;
+    color: #e6e8ef;
+    background-image:
+        radial-gradient(circle at 20% 10%, rgba(255, 211, 105, 0.08), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(123, 63, 216, 0.08), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(255, 255, 255, 0.03), transparent 50%);
+    min-height: 100vh;
+}
+
+/* 顶部导航 */
+.top-nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 16px 20px;
+    background-color: rgba(18, 22, 31, 0.75);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.top-nav-wrap a {
+    text-decoration: none;
+    color: #b4b9c6;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.top-nav-wrap a:hover {
+    color: #ffd369;
+    background-color: rgba(255, 211, 105, 0.08);
+}
+
+.top-nav-wrap a.active {
+    color: #ffd369;
+}
+.top-nav-wrap a.active::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 4px;
+    height: 3px;
+    background-color: #ffd369;
+    border-radius: 2px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #ffd369;
+}
+
+/* 搜索框 */
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 20px;
+    background: #1c212c;
+    border: 1px solid #333844;
+    border-radius: 12px;
+    padding: 12px 18px;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #e6e8ef;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.search-box input::placeholder {
+    color: #686e7c;
+}
+
+/* 筛选区 */
+.filter-wrap {
+    margin-bottom: 24px;
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.filter-select {
+    appearance: none;
+    background-color: #1c212c;
+    border: 1px solid #333844;
+    color: #e6e8ef;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+.filter-select:focus {
+    border-color: #ffd369;
+
 .equip-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
