@@ -71,7 +71,7 @@ const equipList = [
         desc: "造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
         source: "由风暴巨剑铸造而成",
         sourceImg: "images/equip/equipsmall/fengbaojujian.png",
-        img: "images/equip/zhicaizhijian.png",
+        img: "images/equip/zhicaizhiren.png",
         castList: []
     }
 ];
