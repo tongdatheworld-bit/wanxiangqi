@@ -287,8 +287,7 @@ const heroList = [
         "awakeningDesc": "你的英雄合成提升的等级+2。",
         "equipList": ["e1", "e2"],
         "teamList": ["t1"]
-    }
-    ，
+    },
     {
     "id": 10,
     "name": "廉颇",
