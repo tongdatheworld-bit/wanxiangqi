@@ -872,28 +872,28 @@ const modal = document.getElementById('detailModal');
 const modalBody = document.getElementById('modalBody');
 const closeModal = document.getElementById('closeModal');
 
+let debounceTimer = null;
+
 // 渲染装备卡片
 function render(list) {
     listDom.innerHTML = '';
-
     if (!list.length) {
         listDom.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:#888;padding:60px 0;">没有匹配到装备</div>';
         return;
     }
-
+    const frag = document.createDocumentFragment();
     list.forEach(item => {
         const card = document.createElement('div');
         card.className = 'hero-card-item';
-
         card.innerHTML = `
             <div class="card-frame">
-                <img src="${item.smallImg}" alt="${item.name}" />
+                <img src="${item.smallImg}" alt="${item.name}" loading="lazy" />
             </div>
         `;
-
         card.onclick = () => openModal(item);
-        listDom.appendChild(card);
+        frag.appendChild(card);
     });
+    listDom.appendChild(frag);
 }
 
 // 筛选逻辑
@@ -908,6 +908,14 @@ function filterData() {
         return matchType && matchPos && matchKw;
     })
     render(result);
+}
+
+// 防抖包装搜索
+function onSearchInput() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(()=>{
+        filterData();
+    },200);
 }
 
 // 打开弹窗详情
@@ -943,7 +951,7 @@ function closeModalFunc() {
 }
 
 // 绑定事件
-searchInput.addEventListener('input', filterData);
+searchInput.addEventListener('input', onSearchInput);
 typeFilter.addEventListener('change', filterData);
 posFilter.addEventListener('change', filterData);
 closeModal.addEventListener('click', closeModalFunc);
