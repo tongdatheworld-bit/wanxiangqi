@@ -2,18 +2,33 @@ const equipList = [
     {
         id: 1,
         name: "风暴巨剑",
-        type: "基础装备",
-        pos: "物理装备",
+        tag: "基础装备",
+        descSource: "该卡牌通过商店购买、拍卖等渠道获得",
+        normalDesc: "穿戴给英雄，可以铸造成1件输出型普通装备。",
+        combineList: [
+            {
+                name: "纯净苍穹",
+                desc: "唯一。每2秒获得10点法术攻击力，同时清除自身负面状态。",
+                smallImg: "images/equip/chunjingcangqiong.png"
+            },
+            {
+                name: "铸梦·逐风",
+                desc: "唯一。战斗开始及之后每过8秒，快速进行4次普通攻击。",
+                smallImg: "images/equip/zhumengzhufeng.png"
+            },
+            {
+                name: "无尽巨剑",
+                desc: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
+                smallImg: "images/equip/wujinjian.png"
+            },
+            {
+                name: "制裁之剑",
+                desc: "唯一。造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
+                smallImg: "images/equip/zhicaijian.png"
+            }
+        ],
         smallImg: "images/equip/fengbaojujian.png",
-        img: "images/equip/fengbaojujian.png",
-        desc: "穿戴给英雄，可以铸造成1件输出型普通装备。",
-        source: "该卡通过商店购买、效果锦囊、拍卖等渠道获得。",
-        combine: [
-            { name: "纯净苍穹", desc: "唯一。每2秒获得10点法术攻击力，同时清除自身负面状态。", smallImg: "images/equip/chunjingcangqiong.png" },
-            { name: "铸梦·逐风", desc: "唯一。战斗开始及之后每过8秒，快速进行4次普通攻击。", smallImg: "images/equip/zhumengzhufeng.png" },
-            { name: "无尽巨剑", desc: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。", smallImg: "images/equip/wujinjian.png" },
-            { name: "制裁之剑", desc: "唯一。造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。", smallImg: "images/equip/zhicaijian.png" }
-        ]
+        img: "images/equip/fengbaojujian.png"
     }
 ];
 
@@ -33,10 +48,9 @@ function renderList() {
     const filtered = equipList.filter(item => {
         const matchSearch = !searchVal ||
             item.name.toLowerCase().includes(searchVal) ||
-            item.desc.toLowerCase().includes(searchVal) ||
-            item.source.toLowerCase().includes(searchVal);
-        const matchType = typeVal === "all" || item.type === typeVal;
-        const matchPos = posVal === "all" || item.pos === posVal;
+            item.normalDesc.toLowerCase().includes(searchVal);
+        const matchType = typeVal === "all" || item.tag === typeVal;
+        const matchPos = posVal === "all" || item.tag === posVal;
         return matchSearch && matchType && matchPos;
     });
 
@@ -49,29 +63,42 @@ function renderList() {
                 <img src="${equip.smallImg}" alt="${equip.name}">
             </div>
         `;
-        // 点击打开弹窗
         card.onclick = function () {
             let combineHtml = "";
-            equip.combine.forEach(ce => {
-                combineHtml += `
-                <div class="modal-block">
-                    <h4>${ce.name}</h4>
-                    <p>${ce.desc}</p>
-                </div>
-                `
+            equip.combineList.forEach(cb => {
+                combineHtml += `<div class="skill-item">
+                    <img class="skill-icon" src="${cb.smallImg}" alt="${cb.name}">
+                    <div class="skill-info">
+                        <div class="skill-name">${cb.name}</div>
+                        <div class="skill-desc">${cb.desc}</div>
+                    </div>
+                </div>`
             })
+
             modalBody.innerHTML = `
-                <h2>${equip.name}</h2>
-                <div class="modal-sub">${equip.type} · ${equip.pos}</div>
-                <div class="modal-block">
-                    <p>${equip.desc}</p>
+                <div class="modal-header">
+                    <div class="modal-avatar">
+                        <img src="${equip.img}" alt="${equip.name}">
+                    </div>
+                    <div class="modal-title-wrap">
+                        <h2>${equip.name}</h2>
+                        <div class="modal-sub-text">${equip.descSource}</div>
+                        <div class="tag-group">
+                            <span class="tag">${equip.tag}</span>
+                        </div>
+                        <div class="card-label">卡牌详情</div>
+                    </div>
                 </div>
-                <div class="modal-block">
-                    <h4>来源</h4>
-                    <p>${equip.source}</p>
+
+                <div class="form-block">
+                    <div class="form-title">普通形态</div>
+                    <div class="form-desc">${equip.normalDesc}</div>
                 </div>
-                <h4>可铸造成装</h4>
-                ${combineHtml}
+
+                <div class="section-title">可合成装备</div>
+                <div class="skill-block">
+                    ${combineHtml}
+                </div>
             `;
             detailModal.style.display = "flex";
         };
@@ -79,15 +106,14 @@ function renderList() {
     })
 }
 
-// 关闭弹窗绑定
 closeModal.onclick = function () {
     detailModal.style.display = "none";
-}
+};
 window.onclick = function (e) {
     if (e.target === detailModal) {
         detailModal.style.display = "none";
     }
-}
+};
 
 searchInput.addEventListener("input", renderList);
 equipTypeFilter.addEventListener("change", renderList);
