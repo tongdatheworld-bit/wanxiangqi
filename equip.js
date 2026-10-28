@@ -21,12 +21,12 @@ const equipList = [
             {
                 name: "无尽巨剑",
                 effect: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
-                icon: "images/equip/equipsmall/wujinjian.png"
+                icon: "images/equip/equipsmall/wujinjujian.png"
             },
             {
                 name: "制裁之剑",
                 effect: "唯一。造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
-                icon: "images/equip/equipsmall/zhicaijian.png"
+                icon: "images/equip/equipsmall/zhicaizhijian.png"
             }
         ]
     },
@@ -60,7 +60,7 @@ const equipList = [
         desc: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
         source: "由风暴巨剑铸造而成",
         sourceImg: "images/equip/equipsmall/fengbaojujian.png",
-        img: "images/equip/wujinjian.png",
+        img: "images/equip/wujinjujian.png",
         castList: []
     },
     {
@@ -71,7 +71,7 @@ const equipList = [
         desc: "造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
         source: "由风暴巨剑铸造而成",
         sourceImg: "images/equip/equipsmall/fengbaojujian.png",
-        img: "images/equip/zhicaijian.png",
+        img: "images/equip/zhicaizhiren.png",
         castList: []
     }
 ];
