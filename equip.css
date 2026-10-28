@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #12161f;
+    color: #e6e8ef;
+    background-image:
+        radial-gradient(circle at 20% 10%, rgba(255, 211, 105, 0.08), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(123, 63, 216, 0.08), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(255, 255, 255, 0.03), transparent 50%);
+    min-height: 100vh;
+}
+
+/* 顶部导航 和英雄页完全一致 */
+.top-nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 16px 20px;
+    background-color: rgba(18, 22, 31, 0.75);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.top-nav-wrap a {
+    text-decoration: none;
+    color: #b4b9c6;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.top-nav-wrap a:hover {
+    color: #ffd369;
+    background-color: rgba(255, 211, 105, 0.08);
+}
+
+.top-nav-wrap a.active {
+    color: #ffd369;
+}
+.top-nav-wrap a.active::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 4px;
+    height: 3px;
+    background-color: #ffd369;
+    border-radius: 2px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #ffd369;
+}
+
+/* 搜索框 */
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 20px;
+    background: #1c212c;
+    border: 1px solid #333844;
+    border-radius: 12px;
+    padding: 12px 18px;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #e6e8ef;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.search-box input::placeholder {
+    color: #686e7c;
+}
+
+/* 筛选区 */
+.filter-wrap {
+    margin-bottom: 24px;
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.filter-select {
+    appearance: none;
+    background-color: #1c212c;
+    border: 1px solid #333844;
+    color: #e6e8ef;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+.filter-select:focus {
+    border-color: #ffd369;
+}
+
+/* ========== 装备卡片网格（正方形装备图标） ========== */
+.equip-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+}
+.equip-card-item {
+    background: transparent;
+    border: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    max-width: 140px;
+    margin: 0 auto;
+}
+.equip-card-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 211, 105, 0.15);
+}
+.equip-card-cover {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #1c170f;
+    border: 1px solid #4b3e24;
+}
+.equip-card-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    padding: 12px;
+}
+.equip-card-text {
+    padding: 10px 8px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(12,9,6,0.75), rgba(12,9,6,0.95));
+}
+.equip-card-name {
+    color: #ffd369;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.equip-card-sub {
+    color: #c9b894;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* ========== 弹窗（完全复用英雄弹窗样式，直接共用） ========== */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+}
+.modal.show {
+    display: flex;
+}
+.modal-content {
+    width: min(860px, 100%);
+    background: linear-gradient(145deg, #0c0906 0%, #17120a 45%, #0b0805 100%);
+    border: 1px solid #7c6538;
+    border-radius: 20px;
+    max-height: 86vh;
+    overflow-y: auto;
+    padding: 32px;
+    box-shadow: 0 0 40px rgba(255, 211, 105, 0.12);
+}
+
+.modal-close {
+    float: right;
+    color: #888;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.modal-close:hover {
+    color: #ffd369;
+}
+
+.modal h2 {
+    color: #ffd369;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+.modal-sub {
+    color: #9aa0b0;
+    margin-bottom: 16px;
+}
+.modal-block {
+    margin: 16px 0;
+    background: #1c212c;
+    border: 1px solid #282d38;
+    border-radius: 14px;
+    padding: 16px 18px;
+}
+.modal-content h4 {
+    color: #ffd369;
+    margin-bottom: 20px !important;
+    font-size: 15px;
+}
+.modal-block p {
+    color: #b4b9c6;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.split-line {
+    height: 1px;
+    background: #4b3e24;
+    margin: 26px 0;
+}
+
+.tag-camp {
+    padding: 6px 12px;
+    border-radius: 99px;
+    font-size: 13px;
+    border: 1px solid #7c6538;
+    background: linear-gradient(180deg, #3a2a14, #2a1e10);
+    color: #ffd369;
+}
+.tag-small {
+    padding: 6px 12px;
+    border-radius: 99px;
+    font-size: 13px;
+    border: 1px solid #444;
+    background: #222;
+    color: #ccc;
+}
+
+/* ========= 装备弹窗头部 ========= */
+.equip-header-bar {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    background: linear-gradient(180deg, rgba(255,211,105,0.08), rgba(255,211,105,0.02));
+    border: 1px solid #4b3e24;
+    border-radius: 16px;
+}
+.equip-main-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    border: 2px solid #c9a258;
+    object-fit: contain;
+    padding: 10px;
+    background: #1c170f;
+    display: block;
+}
+.equip-name-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.equip-name-large {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffd369;
+}
+.equip-subtitle {
+    font-size: 14px;
+    color: #c9b894;
+}
+.equip-tags-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* ========= 合成路线区块 ========= */
+.craft-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap:14px;
+    align-items: center;
+}
+.craft-item {
+    width: 72px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.craft-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(255,211,105,0.18);
+}
+.craft-item img {
+    width:100%;
+    border-radius:8px;
+    border:1px solid #4b3e24;
+}
+.craft-name {
+    text-align:center;
+    font-size:12px;
+    color:#c9b894;
+    margin-top:4px;
+}
+.plus-text {
+    color:#ffd369;
+    font-size:20px;
+}
+
+/* ========= 响应式 ========= */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+    }
+    .equip-header-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align:center;
+    }
+    .equip-tags-top {
+        justify-content: center;
+    }
+    .equip-card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    }
+}
+@media (max-width: 480px) {
+    .equip-card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+    .equip-main-icon {
+        width:70px;
+        height:70px;
+    }
+}
