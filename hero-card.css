@@ -244,3 +244,124 @@ body {
     line-height: 1.8;
     font-size: 14px;
 }
+/* ========== 弹窗新增布局样式（追加到最后） ========== */
+.hero-modal-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 28px;
+}
+.modal-card-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.modal-hero-img {
+    width: 100%;
+    border-radius: 14px;
+}
+.modal-card-label {
+    background: #1c212c;
+    padding: 5px 14px;
+    border-radius: 99px;
+    font-size: 13px;
+    color: #9aa0b0;
+}
+.modal-tag-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.tag-small {
+    background: #27241b;
+    color: #ffd369;
+    padding: 4px 9px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+.modal-hero-desc {
+    color: #b4b9c6;
+    font-size: 15px;
+}
+.modal-source {
+    color: #686e7c;
+    font-size: 13px;
+    margin: 6px 0 10px;
+}
+.keyword-tags {
+    display: flex;
+    gap: 7px;
+}
+.keyword-tag {
+    background: #222836;
+    color: #89c7ff;
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.split-line {
+    height: 1px;
+    background: #282d38;
+    margin: 22px 0;
+}
+.attr-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:12px;
+}
+.attr-item {
+    background: #1c212c;
+    border:1px solid #282d38;
+    border-radius:14px;
+    padding:16px;
+}
+.attr-label {
+    color:#9aa0b0;
+    font-size:14px;
+    margin-bottom:6px;
+}
+.attr-val {
+    font-size:24px;
+    font-weight:bold;
+    color:#fff;
+}
+.skill-row {
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+}
+.skill-icon {
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+}
+.skill-name {
+    color:#ffd369;
+    font-weight:bold;
+    font-size:16px;
+    margin-bottom:6px;
+}
+.skill-text {
+    color:#b4b9c6;
+    line-height:1.6;
+    margin-bottom:6px;
+}
+.skill-level {
+    color:#9aa0b0;
+    font-size:13px;
+    line-height:1.5;
+}
+.awaken-row {
+    display:flex;
+    gap:16px;
+    align-items:center;
+}
+.awaken-card-img {
+    width:140px;
+    border-radius:10px;
+}
+.awaken-desc {
+    color:#b4b9c6;
+}
+
