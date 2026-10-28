@@ -4,7 +4,6 @@ let allHeroCardData = [
         "name": "孙尚香",
         "stage": 1,
         "camp": "三分之地",
-        "tag": "万象大赛",
         "avatarImg": "wanxiangqi/images/heroes/sunshangxiang.png", // 英雄头像，放在heroes目录
         "img": "images/herocard/sunshangxiang.png",
         "awakeningImg": "images/herocard/awakening/sunshangxiang.png",
@@ -141,7 +140,7 @@ function bindHeroCardClick() {
 <!-- 弹窗头部：英雄图标 + 标签 -->
 <div class="hero-header-bar">
     <div class="hero-icon-wrap">
-        <img class="hero-main-icon" src="${find.skillImg}" alt="${find.name}">
+        <img class="hero-main-icon" src="${find.avatarImg}" alt="${find.name}">
         <div class="hero-name-title">
             <div class="hero-name-large">${find.name}</div>
             <div class="hero-subtitle">英雄牌</div>
