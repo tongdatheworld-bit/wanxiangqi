@@ -557,7 +557,7 @@ const heroList = [
     "avatarImg": "images/heroes/caiwenji.png",
     "img": "images/herocard/caiwenji.png",
     "awakeningImg": "images/herocard/awakening/caiwenji.png",
-    "skillImg": "images/herocard/skills/siwu xie.png",
+    "skillImg": "images/herocard/skills/siwuxie.png",
     "desc": "每当你使用【三分】英雄牌时，等级最低的其他3名【三分】英雄等级+1。",
     "source": "该卡牌通过商店购买、拍卖等渠道获得",
     "keywords": [],
@@ -619,38 +619,6 @@ const heroList = [
 }
 ,
                           {
-    "id": 20,
-    "name": "大乔",
-    "stage": 2,
-    "camp": "三分之地",
-    "avatarImg": "images/heroes/daqiao.png",
-    "img": "images/herocard/daqiao.png",
-    "awakeningImg": "images/herocard/awakening/daqiao.png",
-    "skillImg": "images/herocard/skills/liyuezhichao.png",
-    "desc": "你的英雄每触发2次登场效果，大乔的法力值上限永久-5且等级+1。",
-    "source": "该卡牌通过商店购买、拍卖等渠道获得",
-    "keywords": ["登场"],
-    "hp": 270,
-    "mp": 20,
-    "mpMax": 45,
-    "physicalAtk": 24,
-    "magicAtk": 20,
-    "physicalDef": 18,
-    "magicDef": 18,
-    "atkSpeed": 0.60,
-    "critRate": "0%",
-    "critDmg": "40%",
-    "atkRange": 4,
-    "skillName": "鲤跃之潮",
-    "skillDesc": "大乔唤出1道波浪前行，击飞并眩晕沿途敌人1秒，造成100+100%法术攻击力的法术伤害。",
-    "skillLv10": "技能伤害提升至100+150%法术攻击力",
-    "skillLv40": "每第3次施法会施放1道巨型波浪，造成100+200%法术攻击力的法术伤害",
-    "skillLv100": "每次施法都施放巨型波浪",
-    "awakeningDesc": "每当你的英雄触发登场效果，大乔的法力值上限永久-5且等级+1。",
-    "equipList": ["e1", "e2"],
-    "teamList": ["t1"]
-}
-,{
     "id": 20,
     "name": "大乔",
     "stage": 2,
@@ -1369,7 +1337,7 @@ const heroList = [
     "equipList": ["e1", "e2"],
     "teamList": ["t1"]
 }
-,
+    
 ];
 
 const heroCardList = document.getElementById('heroCardList');
