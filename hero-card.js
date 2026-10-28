@@ -92,21 +92,14 @@ function renderHeroCardList() {
         return;
     }
 
-    wrap.innerHTML = filterArr.map(item => `
-        <div class="hero-card-item" data-id="${item.id}">
-            <div class="hero-card-cover">
-                <img src="${item.img}" alt="${item.name}">
-            </div>
-            <div class="hero-card-body">
-                <div class="hero-card-name">${item.name}</div>
-                <div class="hero-card-meta">
-                    <span>${item.stage}阶</span>
-                    <span>${item.camp}</span>
-                </div>
-                <div class="hero-card-desc">${item.desc}</div>
-            </div>
+ wrap.innerHTML = filterArr.map(item => `
+    <div class="hero-card-item" data-id="${item.id}">
+        <div class="hero-card-cover">
+            <img src="${item.img}" alt="${item.name}">
         </div>
-    `).join('');
+    </div>
+`).join('');
+
 
     bindHeroCardClick();
 }
