@@ -150,7 +150,6 @@ function bindHeroCardClick() {
     <div class="hero-tags-top">
         <span class="tag-camp">${find.camp}</span>
         <span class="tag-stage tag-stage-${find.stage}">${find.stage}阶</span>
-        <span class="tag-small">${find.tag}</span>
     </div>
 </div>
 
@@ -169,32 +168,36 @@ function bindHeroCardClick() {
 
 <div class="split-line"></div>
 
-<h4>基础属性</h4>
-<div class="attr-grid">
-    <div class="attr-item"><div class="attr-label">生命值</div><div class="attr-val">${find.hp}</div></div>
-    <div class="attr-item"><div class="attr-label">法力值</div><div class="attr-val">${find.mp} / ${find.mpMax}</div></div>
-    <div class="attr-item"><div class="attr-label">物理攻击</div><div class="attr-val">${find.physicalAtk}</div></div>
-    <div class="attr-item"><div class="attr-label">法术攻击</div><div class="attr-val">${find.magicAtk}</div></div>
-    <div class="attr-item"><div class="attr-label">攻击速度</div><div class="attr-val">${find.atkSpeed}</div></div>
+<div class="modal-block">
+    <h4>基础属性</h4>
+    <div class="attr-grid">
+        <div class="attr-item"><div class="attr-label">生命值</div><div class="attr-val">${find.hp}</div></div>
+        <div class="attr-item"><div class="attr-label">法力值</div><div class="attr-val">${find.mp} / ${find.mpMax}</div></div>
+        <div class="attr-item"><div class="attr-label">物理攻击</div><div class="attr-val">${find.physicalAtk}</div></div>
+        <div class="attr-item"><div class="attr-label">法术攻击</div><div class="attr-val">${find.magicAtk}</div></div>
+        <div class="attr-item"><div class="attr-label">攻击速度</div><div class="attr-val">${find.atkSpeed}</div></div>
 
-    <div class="attr-item"><div class="attr-label">物理防御</div><div class="attr-val">${find.physicalDef}</div></div>
-    <div class="attr-item"><div class="attr-label">法术防御</div><div class="attr-val">${find.magicDef}</div></div>
-    <div class="attr-item"><div class="attr-label">暴击率</div><div class="attr-val">${find.critRate}</div></div>
-    <div class="attr-item"><div class="attr-label">暴击效果</div><div class="attr-val">${find.critDmg}</div></div>
-    <div class="attr-item"><div class="attr-label">攻击距离</div><div class="attr-val">${find.atkRange}</div></div>
+        <div class="attr-item"><div class="attr-label">物理防御</div><div class="attr-val">${find.physicalDef}</div></div>
+        <div class="attr-item"><div class="attr-label">法术防御</div><div class="attr-val">${find.magicDef}</div></div>
+        <div class="attr-item"><div class="attr-label">暴击率</div><div class="attr-val">${find.critRate}</div></div>
+        <div class="attr-item"><div class="attr-label">暴击效果</div><div class="attr-val">${find.critDmg}</div></div>
+        <div class="attr-item"><div class="attr-label">攻击距离</div><div class="attr-val">${find.atkRange}</div></div>
+    </div>
 </div>
 
 <div class="split-line"></div>
 
-<h4>英雄技能</h4>
-<div class="skill-row">
-    <img class="skill-icon" src="${find.skillImg}" alt="${find.skillName}">
-    <div class="skill-info">
-        <div class="skill-name">${find.skillName}</div>
-        <div class="skill-text">${find.skillDesc}</div>
-        <div class="skill-level">Lv.10 ${find.skillLv10}</div>
-        <div class="skill-level">Lv.40 ${find.skillLv40}</div>
-        <div class="skill-level">Lv.100 ${find.skillLv100}</div>
+<div class="modal-block">
+    <h4>英雄技能</h4>
+    <div class="skill-row">
+        <img class="skill-icon" src="${find.skillImg}" alt="${find.skillName}">
+        <div class="skill-info">
+            <div class="skill-name">${find.skillName}</div>
+            <div class="skill-text">${find.skillDesc}</div>
+            <div class="skill-level">Lv.10 ${find.skillLv10}</div>
+            <div class="skill-level">Lv.40 ${find.skillLv40}</div>
+            <div class="skill-level">Lv.100 ${find.skillLv100}</div>
+        </div>
     </div>
 </div>
 
@@ -228,11 +231,3 @@ function bindHeroCardClick() {
     }
 }
 
-function openItemModal(id) {
-    console.log("打开装备，id：", id);
-    itemModal.style.display = "flex";
-}
-function openTeamModal(id) {
-    console.log("打开阵容，id：", id);
-    teamModal.style.display = "flex";
-}
