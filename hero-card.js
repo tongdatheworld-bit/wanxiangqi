@@ -213,12 +213,10 @@ function bindHeroCardClick() {
     }
 }
 
-// 装备详情弹窗
 function openItemModal(id) {
     console.log("打开装备，id：", id);
     itemModal.style.display = "flex";
 }
-// 阵容详情弹窗
 function openTeamModal(id) {
     console.log("打开阵容，id：", id);
     teamModal.style.display = "flex";
