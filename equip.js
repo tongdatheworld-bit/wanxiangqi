@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function(){
+
 const equipList = [
     {id:1,name:"大棒",type:"基础装备",pos:"法术装备",smallImg:"images/equip/dabang.png",img:"images/equip/dabang.png",desc:"",source:"",combine:""},
     {id:2,name:"风暴巨剑",type:"基础装备",pos:"物理装备",smallImg:"images/equip/fengbaojujian.png",img:"images/equip/fengbaojujian.png",desc:"",source:"",combine:""},
@@ -77,7 +79,6 @@ const equipList = [
     {id:76,name:"银莲庇佑",type:"特殊装备",pos:"防御装备",smallImg:"images/equip/yinlianbiyou.png",img:"images/equip/yinlianbiyou.png",desc:"",source:"",combine:""},
     {id:77,name:"征服之剑",type:"特殊装备",pos:"物理装备",smallImg:"images/equip/zhengfuzhijian.png",img:"images/equip/zhengfuzhijian.png",desc:"",source:"",combine:""},
 ];
-
 const equipCardList = document.getElementById('equipCardList');
 const searchInput = document.getElementById('searchInput');
 const typeFilter = document.getElementById('typeFilter');
@@ -105,12 +106,11 @@ function renderList(list) {
         equipCardList.appendChild(card);
     })
 }
-
 function filterData() {
-    let kw = searchInput.value.trim().toLowerCase();
-    let t = typeFilter.value;
-    let p = posFilter.value;
-
+    // 容错，找不到元素不会报错终止
+    let kw = searchInput ? searchInput.value.trim().toLowerCase() : "";
+    let t = typeFilter ? typeFilter.value : "all";
+    let p = posFilter ? posFilter.value : "all";
     const result = equipList.filter(item => {
         const matchType = t === 'all' || item.type === t;
         const matchPos = p === 'all' || item.pos === p;
@@ -119,9 +119,9 @@ function filterData() {
     })
     renderList(result);
 }
-
 // 【装备专属弹窗面板，样式风格参照hero，但板块是装备的】
 function openModal(item) {
+    if(!modalBody || !modal) return;
     modalBody.innerHTML = `
         <div class="hero-header-bar">
             <div class="hero-icon-wrap">
@@ -135,17 +135,14 @@ function openModal(item) {
                 </div>
             </div>
         </div>
-
         <div class="modal-block">
             <h4>装备效果</h4>
             <p>${item.desc || '暂无效果描述'}</p>
         </div>
-
         <div class="modal-block">
             <h4>合成路线</h4>
             <p>${item.combine || '不可合成 / 暂无合成信息'}</p>
         </div>
-
         <div class="modal-block">
             <h4>获取途径</h4>
             <p>${item.source || '暂无'}</p>
@@ -153,17 +150,16 @@ function openModal(item) {
     `
     modal.style.display = 'flex';
 }
-
 function closeModalFunc() {
-    modal.style.display = 'none';
+    if(modal) modal.style.display = 'none';
 }
-
-searchInput.addEventListener('input', filterData);
-typeFilter.addEventListener('change', filterData);
-posFilter.addEventListener('change', filterData);
-closeModal.addEventListener('click', closeModalFunc);
-modal.addEventListener('click', e=>{
+// 绑定事件前判断元素存在
+if(searchInput) searchInput.addEventListener('input', filterData);
+if(typeFilter) typeFilter.addEventListener('change', filterData);
+if(posFilter) posFilter.addEventListener('change', filterData);
+if(closeModal) closeModal.addEventListener('click', closeModalFunc);
+if(modal) modal.addEventListener('click', e=>{
     if(e.target === modal) closeModalFunc();
 })
-
 filterData();
+})
