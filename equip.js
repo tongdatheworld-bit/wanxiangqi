@@ -35,15 +35,14 @@ function renderList() {
             item.name.toLowerCase().includes(searchVal) ||
             item.desc.toLowerCase().includes(searchVal) ||
             item.source.toLowerCase().includes(searchVal);
-        const matchType = typeVal === "all" || item.type === typeVal;
-        const matchPos = posVal === "all" || item.pos === posVal;
+        const matchType = typeVal === "all" || item.type === item.type;
+        const matchPos = posVal === "all" || item.pos === item.pos;
         return matchSearch && matchType && matchPos;
     });
 
     equipCardList.innerHTML = "";
     filtered.forEach(equip => {
         const card = document.createElement("div");
-        // 和英雄卡片class对齐！
         card.className = "equip-card-item";
         card.innerHTML = `
             <div class="equip-card-cover">
@@ -54,30 +53,15 @@ function renderList() {
             let combineHtml = "";
             equip.combine.forEach(ce => {
                 combineHtml += `
-                <div class="skill-row">
-                    <img class="skill-icon" src="${ce.smallImg}" alt="${ce.name}">
-                    <div>
-                        <div class="skill-name">${ce.name}</div>
-                        <div class="skill-text">${ce.desc}</div>
-                    </div>
+                <div class="modal-block">
+                    <h4>${ce.name}</h4>
+                    <p>${ce.desc}</p>
                 </div>
                 `
             })
-
             modalBody.innerHTML = `
-                <div class="hero-header-bar">
-                    <div class="hero-icon-wrap">
-                        <img class="hero-main-icon" src="${equip.img}" alt="${equip.name}">
-                        <div class="hero-name-title">
-                            <div class="hero-name-large">${equip.name}</div>
-                            <div class="hero-tags-top">
-                                <span class="tag-camp">${equip.type}</span>
-                                <span class="tag-camp">${equip.pos}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <h2>${equip.name}</h2>
+                <div class="modal-sub">${equip.type} · ${equip.pos}</div>
                 <div class="modal-block">
                     <p>${equip.desc}</p>
                 </div>
@@ -85,25 +69,21 @@ function renderList() {
                     <h4>来源</h4>
                     <p>${equip.source}</p>
                 </div>
-
-                <div class="split-line"></div>
-
                 <h4>可铸造成装</h4>
                 ${combineHtml}
             `;
             detailModal.style.display = "flex";
         };
         equipCardList.appendChild(card);
-    });
+    })
 }
 
 closeModal.onclick = () => detailModal.style.display = "none";
 window.onclick = (e) => {
-    if (e.target === detailModal) detailModal.style.display = "none";
-};
+    if(e.target === detailModal) detailModal.style.display = "none";
+}
 
 searchInput.addEventListener("input", renderList);
 equipTypeFilter.addEventListener("change", renderList);
 equipPosFilter.addEventListener("change", renderList);
-
 renderList();
