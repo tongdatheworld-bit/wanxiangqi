@@ -368,6 +368,20 @@ body {
     background: linear-gradient(180deg, rgba(255,211,105,0.08), rgba(255,211,105,0.02));
     border: 1px solid #4b3e24;
     border-radius: 16px;
+    position: relative; /* 新增，给内部绝对定位做锚点 */
+    
+}
+.hero-card-tag {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 12px;
+    border-radius: 99px;
+    font-size: 13px;
+    border: 1px solid #7c6538;
+    background: linear-gradient(180deg, #3a2a14, #2a1e10);
+    color: #ffd369;
 }
 
 .hero-icon-wrap {
