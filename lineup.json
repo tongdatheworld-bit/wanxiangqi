@@ -129,7 +129,7 @@
     "playerImg": "images/players/make.png",
     "hard": "中等",
     "lineupCode": "万象一图诀【马可奔猪】129533708748664088（点击复制）",
-    "ban位": ["逐鹿", "河洛",],
+    "ban位": ["逐鹿", "河洛"],
     "heroList": [
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true},
         {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
