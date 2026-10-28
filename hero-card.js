@@ -140,7 +140,7 @@ function bindHeroCardClick() {
 <!-- 弹窗头部：英雄图标 + 标签 -->
 <div class="hero-header-bar">
     <div class="hero-icon-wrap">
-        <img class="hero-main-icon" src="wanxiangqi/images/heroes/${find.avatarImg}" alt="${find.name}">
+        <img class="hero-main-icon" src="images/heroes/${find.avatarImg}" alt="${find.name}">
         <div class="hero-name-title">
             <div class="hero-name-large">${find.name}</div>
             <div class="hero-subtitle">英雄牌</div>
