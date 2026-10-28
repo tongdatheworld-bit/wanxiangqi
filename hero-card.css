@@ -358,11 +358,10 @@ body {
     margin-top:4px;
 }
 
-/* ========== 弹窗头部：英雄图标 + 标签【最终版】 ========== */
+/* ========== 弹窗头部：英雄图标 + 标签【按你的CSS改造】 ========== */
 .hero-header-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     margin-bottom: 18px;
     padding: 14px 16px;
@@ -373,7 +372,7 @@ body {
 
 .hero-icon-wrap {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 14px;
 }
 
@@ -389,23 +388,24 @@ body {
 .hero-name-title {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 4px;
 }
 .hero-name-large {
-    font-size: 20px;
+    font-size: 34px;
     font-weight: bold;
     color: #ffd369;
 }
 .hero-subtitle {
-    font-size: 13px;
+    font-size: 14px;
     color: #c9b894;
-    margin-top: 2px;
 }
 
 .hero-tags-top {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: 6px;
 }
 
 .tag-camp {
@@ -435,6 +435,7 @@ body {
 .tag-stage-3 { color: #7dc7ff; border-color: #2f6fbf; background: #132235; }
 .tag-stage-4 { color: #ffb152; border-color: #c2631a; background: #352113; }
 .tag-stage-5 { color: #ffe27a; border-color: #d4a520; background: #352a10; }
+
 
 /* ========= 手机响应式 ========= */
 @media (max-width: 768px) {
