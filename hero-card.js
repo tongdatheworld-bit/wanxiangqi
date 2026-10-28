@@ -4,7 +4,7 @@ let allHeroCardData = [
         "name": "孙尚香",
         "stage": 1,
         "camp": "三分之地",
-        "avatarImg": "wanxiangqi/images/heroes/sunshangxiang.png",
+        "avatarImg": "images/heroes/sunshangxiang.png",
         "img": "images/herocard/sunshangxiang.png",
         "awakeningImg": "images/herocard/awakening/sunshangxiang.png",
         "skillImg": "images/herocard/skills/honglianbaodan.png",
