@@ -340,7 +340,7 @@ function renderList() {
     heroCardList.innerHTML = arr.map(hero => `
         <div class="hero-card-item" data-id="${hero.id}">
             <div class="hero-card-cover">
-                <img src="${hero.avatarImg}" alt="${hero.name}">
+                <img src="${hero.img}" alt="${hero.name}">
             </div>
         </div>
     `).join('');
