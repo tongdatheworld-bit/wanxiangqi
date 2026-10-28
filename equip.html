@@ -2,28 +2,43 @@
     import { allEquipData } from './equip.js';
 
     let currentEquipType = 'all';
+    let currentEquipPos = 'all'; // 新增：装备定位
     let equipSearchKw = '';
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
 
+    // 装备分类筛选
     document.getElementById('equipTypeFilter').addEventListener('change', e=>{
         currentEquipType = e.target.value;
         renderEquipList();
     })
+    // 新增：装备定位筛选
+    document.getElementById('equipPosFilter').addEventListener('change', e=>{
+        currentEquipPos = e.target.value;
+        renderEquipList();
+    })
+    // 搜索
     document.getElementById('equipSearchInput').addEventListener('input', e=>{
         equipSearchKw = e.target.value.trim().toLowerCase();
         renderEquipList();
     })
+
     // 渲染函数
     function renderEquipList(){
         const wrap = document.getElementById('equipCardList');
         let filterArr = [...allEquipData];
+
         if(currentEquipType !== 'all'){
             filterArr = filterArr.filter(item => item.type === currentEquipType)
+        }
+        // 新增定位过滤条件
+        if(currentEquipPos !== 'all'){
+            filterArr = filterArr.filter(item => item.pos === currentEquipPos)
         }
         if(equipSearchKw){
             filterArr = filterArr.filter(item=> item.name.toLowerCase().includes(equipSearchKw))
         }
+
         if (!filterArr.length) {
             wrap.innerHTML = `<div style="text-align:center;color:#68707c;padding:40px">没有匹配的装备</div>`;
             return;
@@ -39,6 +54,7 @@
         `).join('');
         bindEquipClick();
     }
+
     // 点击弹窗，弹窗保持用原图img（大图）
     function bindEquipClick(){
         document.querySelectorAll('.hero-card-item').forEach(card=>{
@@ -56,6 +72,7 @@
                             </div>
                             <div class="hero-tags-top">
                                 <span class="tag-stage">${find.type}</span>
+                                <span class="tag-stage">${find.pos}</span>
                             </div>
                         </div>
                     </div>
@@ -83,3 +100,22 @@
     })
     renderEquipList();
 </script>
+<div class="search-box">
+    <input id="equipSearchInput" type="text" placeholder="搜索名称、描述、阵营或相关关键词...">
+</div>
+<div class="filter-wrap">
+    <select id="equipTypeFilter" class="filter-select">
+        <option value="all">全部装备分类</option>
+        <option value="基础装备">基础装备</option>
+        <option value="普通装备">普通装备</option>
+        <option value="天赋装备">天赋装备</option>
+        <option value="特殊装备">特殊装备</option>
+    </select>
+    <select id="equipPosFilter" class="filter-select">
+        <option value="all">全部装备定位</option>
+        <option value="物理装备">物理装备</option>
+        <option value="法术装备">法术装备</option>
+        <option value="通用装备">通用装备</option>
+        <option value="防御装备">防御装备</option>
+    </select>
+</div>
