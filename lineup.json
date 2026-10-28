@@ -210,7 +210,219 @@
         {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
         {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
     ]
+},
+{
+    "id": 12,
+    "name": "阿离伞守约",
+    "rank": "S",
+    "player": "阿离",
+    "playerImg": "images/players/ali.png",
+    "hard": "简单",
+    "lineupCode": "310180869349015196（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
+        {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+        {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ]
+},{
+    "id": 12,
+    "name": "阿离伞守约",
+    "rank": "S",
+    "player": "阿离",
+    "playerImg": "images/players/ali.png",
+    "hard": "简单",
+    "lineupCode": "310180869349015196（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
+        {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+        {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ]
 }
+,{
+    "id": 13,
+    "name": "班叔奶屏流",
+    "rank": "S",
+    "player": "班叔",
+    "playerImg": "images/players/banshu.png",
+    "hard": "中等",
+    "lineupCode": "2426393410431370（点击复制）",
+    "ban位": ["河洛", "日落海"],
+    "heroList": [
+        {"name":"诸葛亮","img":"images/heroes/zhugeliang.png","isCore":true},
+        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":true},
+        {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png","isCore":false},
+        {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
+        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ]
+},{
+    "id": 14,
+    "name": "香香大河开团射",
+    "rank": "S",
+    "player": "香香",
+    "playerImg": "images/players/xiangxiang.png",
+    "hard": "简单",
+    "lineupCode": "100825741915725774（点击复制）",
+    "ban位": ["逐鹿", "三分之地", "日落海", "河洛"],
+    "heroList": [
+        {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
+        {"name":"虞姬","img":"images/heroes/yuji.png","isCore":false},
+        {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
+        {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+        {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
+        {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+    ]
+},{
+    "id": 15,
+    "name": "明先生大河猪离",
+    "rank": "S",
+    "player": "明先生",
+    "playerImg": "images/players/mingxiansheng.png",
+    "hard": "简单",
+    "lineupCode": "81682962224372016（点击复制）",
+    "ban位": ["河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
+        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true},
+        {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
+        {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+        {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
+        {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+    ]
+}，{
+    "id": 17,
+    "name": "白歌三分吕布",
+    "rank": "S",
+    "player": "白歌",
+    "playerImg": "images/players/baige.png",
+    "hard": "中等",
+    "lineupCode": "9463061115304792（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "河洛"],
+    "heroList": [
+        {"name":"吕布","img":"images/heroes/lvbu.png","isCore":true},
+        {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+        {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":false},
+        {"name":"赵云","img":"images/heroes/zhaoyun.png","isCore":false},
+        {"name":"貂蝉","img":"images/heroes/diaochan.png","isCore":false},
+        {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+        {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false}
+    ]
+}，{
+    "id": 18,
+    "name": "低压嬴律大河猪离",
+    "rank": "S",
+    "player": "赢婵",
+    "playerImg": "images/players/yingchan.png",
+    "hard": "简单",
+    "lineupCode": "128157058792132776（点击复制）",
+    "ban位": ["逐鹿", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
+        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true},
+        {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
+        {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+        {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
+        {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+    ]
+}
+，
+    {
+    "id": 19,
+    "name": "小妲己日落海司空震",
+    "rank": "S",
+    "player": "小妲己",
+    "playerImg": "images/players/xiaodaji.png",
+    "hard": "中等",
+    "lineupCode": "55226795263681668（点击复制）",
+    "ban位": ["大河流域"],
+    "heroList": [
+        {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+        {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+        {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
+        {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
+        {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ]
+}，{
+    "id": 20,
+    "name": "孙小宾三分换帅",
+    "rank": "S",
+    "player": "孙小宾",
+    "playerImg": "images/players/sunxiaobin.png",
+    "hard": "中等",
+    "lineupCode": "39464817719035910（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "河洛"],
+    "heroList": [
+        {"name":"吕布","img":"images/heroes/lvbu.png","isCore":true},
+        {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
+        {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+        {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
+        {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
+    ]
+}，{
+    "id": 21,
+    "name": "明先生花木兰",
+    "rank": "S",
+    "player": "明先生",
+    "playerImg": "images/players/mingxiansheng.png",
+    "hard": "简单",
+    "lineupCode": "3833767766581410（点击复制）",
+    "ban位": ["大河流域", "逐鹿", "三分之地"],
+    "heroList": [
+        {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
+        {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
+        {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false}
+    ]
+}，
+    {
+    "id": 22,
+    "name": "小妲己鲸吞",
+    "rank": "S",
+    "player": "小妲己",
+    "playerImg": "images/players/xiaodaji.png",
+    "hard": "简单",
+    "lineupCode": "103078162947891208（点击复制）",
+    "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":true},
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+        {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":false}
+    ]
+}
+
+
+
+
+
+
+
+
+
 
 
     
