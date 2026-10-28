@@ -175,6 +175,7 @@ body {
     padding:0 10px 14px;
     text-align:center;
     line-height:1.45;
+    min-height: 36px;
 }
 
 /* ========== 弹窗 ========== */
@@ -212,6 +213,27 @@ body {
 }
 .modal-close:hover {
     color: #ffd369;
+}
+.modal-block{
+    margin-top:16px;
+}
+.modal-block h4{
+    color:#ffd369;
+    margin-bottom:6px;
+    font-size:16px;
+}
+.modal-block p{
+    color:#ddd;
+    line-height:1.6;
+}
+.tag-camp,.tag-small{
+    display:inline-block;
+    background:#2c2c38;
+    color:#ffd369;
+    padding:4px 10px;
+    border-radius:6px;
+    font-size:14px;
+    border:1px solid #4b4538;
 }
 
 /* 响应式 */
