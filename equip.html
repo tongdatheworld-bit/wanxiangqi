@@ -1,0 +1,85 @@
+<script type="module">
+    import { allEquipData } from './equip.js';
+
+    let currentEquipType = 'all';
+    let equipSearchKw = '';
+    const modal = document.getElementById('detailModal');
+    const modalBody = document.getElementById('modalBody');
+
+    document.getElementById('equipTypeFilter').addEventListener('change', e=>{
+        currentEquipType = e.target.value;
+        renderEquipList();
+    })
+    document.getElementById('equipSearchInput').addEventListener('input', e=>{
+        equipSearchKw = e.target.value.trim().toLowerCase();
+        renderEquipList();
+    })
+    // 渲染函数
+    function renderEquipList(){
+        const wrap = document.getElementById('equipCardList');
+        let filterArr = [...allEquipData];
+        if(currentEquipType !== 'all'){
+            filterArr = filterArr.filter(item => item.type === currentEquipType)
+        }
+        if(equipSearchKw){
+            filterArr = filterArr.filter(item=> item.name.toLowerCase().includes(equipSearchKw))
+        }
+        if (!filterArr.length) {
+            wrap.innerHTML = `<div style="text-align:center;color:#68707c;padding:40px">没有匹配的装备</div>`;
+            return;
+        }
+        // ✅ 列表卡片用 smallImg，不存在就回退 img，防止裂图
+        wrap.innerHTML = filterArr.map(item => `
+            <div class="hero-card-item" data-id="${item.id}">
+                <div class="hero-card-cover">
+                    <img src="${item.smallImg ?? item.img}" alt="${item.name}">
+                    <div style="text-align:center;margin-top:8px;color:#ffd369">${item.name}</div>
+                </div>
+            </div>
+        `).join('');
+        bindEquipClick();
+    }
+    // 点击弹窗，弹窗保持用原图img（大图）
+    function bindEquipClick(){
+        document.querySelectorAll('.hero-card-item').forEach(card=>{
+            card.onclick = ()=>{
+                const id = Number(card.dataset.id);
+                const find = allEquipData.find(x=>x.id === id);
+                if(!find) return;
+                modalBody.innerHTML = `
+                <div class="hero-header-bar">
+                    <div class="hero-icon-wrap">
+                        <img class="hero-main-icon" src="${find.img}" alt="${find.name}">
+                        <div class="hero-name-title">
+                            <div class="hero-name-main">
+                                <span class="hero-name-large">${find.name}</span>
+                            </div>
+                            <div class="hero-tags-top">
+                                <span class="tag-stage">${find.type}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="split-line"></div>
+                <div class="modal-block">
+                    <h4>装备效果</h4>
+                    <div style="font-size:18px; line-height:1.6;">${find.desc || "暂无数据"}</div>
+                </div>
+                <div class="split-line"></div>
+                <div class="modal-block">
+                    <h4>获取途径</h4>
+                    <div>${find.source || "暂无数据"}</div>
+                </div>
+                `;
+                modal.style.display = 'flex';
+            }
+        })
+    }
+    // 点击空白关闭弹窗
+    modal.addEventListener('click', (e)=>{
+        if(e.target === modal){
+            modal.style.display = 'none';
+        }
+    })
+    renderEquipList();
+</script>
