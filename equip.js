@@ -82,6 +82,32 @@ const equipPosFilter = document.getElementById("equipPosFilter");
 const detailModal = document.getElementById("detailModal");
 const modalBody = document.getElementById("modalBody");
 const closeModal = document.getElementById("closeModal");
+
+// 根据装备名打开弹窗
+function openEquipByName(name){
+    const target = equipList.find(e=>e.name === name);
+    if(!target) return;
+    renderModal(target);
+}
+// 单独抽离弹窗渲染函数，复用
+function renderModal(item){
+    let castHtml = "";
+    if (item.castList.length > 0) {
+        item.castList.forEach(c => {
+            castHtml += `<div class="cast-item"><img class="cast-icon" src="${c.icon}" alt=""><div class="cast-text"><span class="cast-name">${c.name}</span><span class="cast-effect">${c.effect}</span></div></div>`;
+        });
+    } else {
+        castHtml = `<div style="color:#888;">该装备无法继续铸造</div>`;
+    }
+    let sourceHtml = `<p class="equip-modal-source">来源：${item.source}`;
+    if(item.sourceImg){
+        sourceHtml += `<img style="width:24px;height:24px;margin-left:8px;border-radius:4px;vertical-align:middle;cursor:pointer;" onclick="openEquipByName('${item.source.split('由')[1].split('铸造而成')[0].trim()}')" src="${item.sourceImg}" alt="">`;
+    }
+    sourceHtml += `</p>`;
+    modalBody.innerHTML = `<div class="equip-modal-wrap"><div class="equip-modal-left"><div class="equip-modal-card"><img src="${item.img}" alt="${item.name}"><div class="equip-modal-card-name">${item.name}</div></div></div><div class="equip-modal-right"><h2 class="equip-modal-title">${item.name}<span class="equip-modal-tag">${item.type} · ${item.pos}</span></h2><p class="equip-modal-desc">${item.desc}</p>${sourceHtml}<hr class="equip-divider"><h3 class="equip-cast-title">可铸造成装</h3><div class="cast-list">${castHtml}</div></div></div>`;
+    detailModal.style.display = "flex";
+}
+
 function render() {
     const kw = searchInput.value.trim().toLowerCase();
     const filterType = equipTypeFilter.value;
@@ -95,26 +121,7 @@ function render() {
         const div = document.createElement("div");
         div.className = "equip-card-item";
         div.innerHTML = `<div class="equip-card-cover"><img src="${item.img}" alt="${item.name}"></div>`;
-        div.onclick = () => {
-            let castHtml = "";
-            if (item.castList.length > 0) {
-                item.castList.forEach(c => {
-                    castHtml += `<div class="cast-item"><img class="cast-icon" src="${c.icon}" alt=""><div class="cast-text"><span class="cast-name">${c.name}</span><span class="cast-effect">${c.effect}</span></div></div>`;
-                });
-            } else {
-                castHtml = `<div style="color:#888;">该装备无法继续铸造</div>`;
-            }
-            // 拼接来源行，存在sourceImg就追加小图标
-            let sourceHtml = `<p class="equip-modal-source">来源：${item.source}`;
-            if(item.sourceImg){
-                sourceHtml += `<img style="width:24px;height:24px;margin-left:8px;border-radius:4px;vertical-align:middle;" src="${item.sourceImg}" alt="">`;
-            }
-            sourceHtml += `</p>`;
-
-            // ✅ 这里修复！把 sourceHtml 变量填进去，不再硬写来源p标签
-            modalBody.innerHTML = `<div class="equip-modal-wrap"><div class="equip-modal-left"><div class="equip-modal-card"><img src="${item.img}" alt="${item.name}"><div class="equip-modal-card-name">${item.name}</div></div></div><div class="equip-modal-right"><h2 class="equip-modal-title">${item.name}<span class="equip-modal-tag">${item.type} · ${item.pos}</span></h2><p class="equip-modal-desc">${item.desc}</p>${sourceHtml}<hr class="equip-divider"><h3 class="equip-cast-title">可铸造成装</h3><div class="cast-list">${castHtml}</div></div></div>`;
-            detailModal.style.display = "flex";
-        };
+        div.onclick = () => renderModal(item);
         equipCardList.appendChild(div);
     });
 }
