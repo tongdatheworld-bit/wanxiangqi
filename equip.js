@@ -11,22 +11,22 @@ const equipList = [
             {
                 name: "纯净苍穹",
                 effect: "唯一。每2秒获得10点法术攻击力，同时清除自身负面状态。",
-                icon: "images/equip/chunjingcangqiong.png"
+                icon: "images/equip/equipsmall/chunjingcangqiong.png"
             },
             {
                 name: "铸梦·逐风",
                 effect: "唯一。战斗开始及之后每过8秒，快速进行4次普通攻击。",
-                icon: "images/equip/zhumengzhufeng.png"
+                icon: "images/equip/equipsmall/zhumengzhufeng.png"
             },
             {
                 name: "无尽巨剑",
                 effect: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
-                icon: "images/equip/wujinjian.png"
+                icon: "images/equip/equipsmall/wujinjian.png"
             },
             {
                 name: "制裁之剑",
                 effect: "唯一。造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
-                icon: "images/equip/zhicaijian.png"
+                icon: "images/equip/equipsmall/zhicaijian.png"
             }
         ]
     },
@@ -37,6 +37,7 @@ const equipList = [
         pos: "法术装备",
         desc: "每2秒获得10点法术攻击力，同时清除自身负面状态。",
         source: "由风暴巨剑铸造而成",
+        sourceImg: "images/equip/equipsmall/fengbaojujian.png",
         img: "images/equip/chunjingcangqiong.png",
         castList: []
     },
@@ -47,6 +48,7 @@ const equipList = [
         pos: "物理装备",
         desc: "战斗开始及之后每过8秒，快速进行4次普通攻击。",
         source: "由风暴巨剑铸造而成",
+        sourceImg: "images/equip/equipsmall/fengbaojujian.png",
         img: "images/equip/zhumengzhufeng.png",
         castList: []
     },
@@ -57,6 +59,7 @@ const equipList = [
         pos: "物理装备",
         desc: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
         source: "由风暴巨剑铸造而成",
+        sourceImg: "images/equip/equipsmall/fengbaojujian.png",
         img: "images/equip/wujinjian.png",
         castList: []
     },
@@ -67,6 +70,7 @@ const equipList = [
         pos: "物理装备",
         desc: "造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
         source: "由风暴巨剑铸造而成",
+        sourceImg: "images/equip/equipsmall/fengbaojujian.png",
         img: "images/equip/zhicaijian.png",
         castList: []
     }
