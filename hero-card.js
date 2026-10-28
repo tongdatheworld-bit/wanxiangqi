@@ -141,11 +141,19 @@ function bindHeroCardClick() {
 <div class="hero-header-bar">
     <div class="hero-icon-wrap">
         <img class="hero-main-icon" src="${find.avatarImg}" alt="${find.name}">
-       <div class="hero-name-title">
-    <div class="hero-name-row">
-        <span class="hero-name-large">${find.name}</span>
-        <span class="hero-subtitle">英雄牌</span>
+        <div class="hero-name-title">
+            <div class="hero-name-main">
+                <span class="hero-name-large">${find.name}</span>
+            </div>
+            <div class="hero-tags-top">
+                <span class="tag-camp">${find.camp}</span>
+                <span class="tag-stage tag-stage-${find.stage}">${find.stage}阶</span>
+            </div>
+        </div>
     </div>
+
+    <div class="hero-card-tag">英雄牌</div>
+</div>
     <div class="hero-tags-top">
         <span class="tag-camp">${find.camp}</span>
         <span class="tag-stage tag-stage-${find.stage}">${find.stage}阶</span>
