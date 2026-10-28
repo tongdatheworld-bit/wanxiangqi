@@ -383,6 +383,7 @@ body {
     border-radius: 16px;
     border: 2px solid #c9a258;
     object-fit: cover;
+    display: block;
 }
 
 .hero-name-title {
