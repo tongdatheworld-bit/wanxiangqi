@@ -4,13 +4,30 @@ let allHeroCardData = [
         "name": "孙尚香",
         "stage": 1,
         "camp": "三分之地",
-        "img": "images/hero-card/sunshangxiang.png",
+        "tag": "万象大赛",
+        "img": "images/herocard/sunshangxiang.png",
+        "awakeningImg": "images/herocard/awakening/sunshangxiang.png",
+        "skillImg": "images/herocard/skill/honglianbaodan.png",
         "desc": "登场：获得1次免费刷新。",
+        "source": "该卡牌通过商店购买、拍卖等渠道获得",
         "keywords": ["登场", "刷新"],
         "hp": 210,
         "mp": 15,
+        "mpMax": 50,
         "physicalAtk": 40,
-        "magicAtk": 0
+        "magicAtk": 0,
+        "physicalDef": 14,
+        "magicDef": 14,
+        "atkSpeed": 1.00,
+        "critRate": "0%",
+        "critDmg": "40%",
+        "atkRange": 4,
+        "skillName": "红莲爆弹",
+        "skillDesc": "孙尚香朝目标敌人发射1发弩炮，造成100+100%物理攻击力的物理伤害，并降低命中敌人50%物理防御，持续5秒。",
+        "skillLv10": "弩炮伤害提升至150+150%物理攻击力",
+        "skillLv40": "弩炮会在命中后爆炸，对附近敌人造成60%的技能伤害",
+        "skillLv100": "会额外发射1发更强力的弩炮，造成1.5倍的伤害",
+        "awakeningDesc": "登场：获得2次免费刷新。"
     }
 ];
 let currentStage = 'all';
@@ -107,23 +124,67 @@ function bindHeroCardClick() {
             if (!find) return;
 
             modalBody.innerHTML = `
-                <h2>${find.name}</h2>
-                <div class="modal-sub">${find.stage}阶 · ${find.camp}</div>
-                <div class="modal-block">
-                    <h4>登场描述</h4>
-                    <p>${find.desc}</p>
+            <div class="hero-modal-layout">
+                <!-- 左侧卡牌预览 -->
+                <div class="modal-card-preview">
+                    <img class="modal-hero-img" src="${find.img}" alt="${find.name}">
+                    <div class="modal-card-label">${find.stage}阶 · 英雄牌</div>
                 </div>
-                <div class="modal-block">
+                <!-- 右侧详情 -->
+                <div class="modal-info-area">
+                    <div class="modal-tag-row">
+                        <span class="tag-small">${find.tag}</span>
+                        <span class="tag-small">${find.camp}</span>
+                    </div>
+                    <h2>${find.name}</h2>
+                    <p class="modal-hero-desc">${find.desc}</p>
+                    <p class="modal-source">来源：${find.source}</p>
+                    <div class="keyword-tags">
+                        ${find.keywords.map(k=>`<span class="keyword-tag">${k}</span>`).join('')}
+                    </div>
+
+                    <div class="split-line"></div>
+
                     <h4>基础属性</h4>
-                    <p>生命值：${find.hp || 0}</p>
-                    <p>法力值：${find.mp || 0}</p>
-                    <p>物理攻击：${find.physicalAtk || 0}</p>
-                    <p>法术攻击：${find.magicAtk || 0}</p>
+                    <div class="attr-grid">
+                        <div class="attr-item"><div class="attr-label">生命值</div><div class="attr-val">${find.hp}</div></div>
+                        <div class="attr-item"><div class="attr-label">法力值</div><div class="attr-val">${find.mp} / ${find.mpMax}</div></div>
+                        <div class="attr-item"><div class="attr-label">物理攻击</div><div class="attr-val">${find.physicalAtk}</div></div>
+
+                        <div class="attr-item"><div class="attr-label">法术攻击</div><div class="attr-val">${find.magicAtk}</div></div>
+                        <div class="attr-item"><div class="attr-label">物理防御</div><div class="attr-val">${find.physicalDef}</div></div>
+                        <div class="attr-item"><div class="attr-label">法术防御</div><div class="attr-val">${find.magicDef}</div></div>
+
+                        <div class="attr-item"><div class="attr-label">攻击速度</div><div class="attr-val">${find.atkSpeed}</div></div>
+                        <div class="attr-item"><div class="attr-label">暴击率</div><div class="attr-val">${find.critRate}</div></div>
+                        <div class="attr-item"><div class="attr-label">暴击效果</div><div class="attr-val">${find.critDmg}</div></div>
+
+                        <div class="attr-item"><div class="attr-label">攻击距离</div><div class="attr-val">${find.atkRange}</div></div>
+                    </div>
+
+                    <div class="split-line"></div>
+
+                    <h4>英雄技能</h4>
+                    <div class="skill-row">
+                        <img class="skill-icon" src="${find.skillImg}" alt="${find.skillName}">
+                        <div class="skill-info">
+                            <div class="skill-name">${find.skillName}</div>
+                            <div class="skill-text">${find.skillDesc}</div>
+                            <div class="skill-level">Lv.10 ${find.skillLv10}</div>
+                            <div class="skill-level">Lv.40 ${find.skillLv40}</div>
+                            <div class="skill-level">Lv.100 ${find.skillLv100}</div>
+                        </div>
+                    </div>
+
+                    <div class="split-line"></div>
+
+                    <h4>觉醒效果</h4>
+                    <div class="awaken-row">
+                        <img class="awaken-card-img" src="${find.awakeningImg}" alt="觉醒${find.name}">
+                        <div class="awaken-desc">${find.awakeningDesc}</div>
+                    </div>
                 </div>
-                <div class="modal-block">
-                    <h4>关键词</h4>
-                    <p>${Array.isArray(find.keywords) ? find.keywords.join('、') : '无'}</p>
-                </div>
+            </div>
             `;
             modal.style.display = 'flex';
         }
