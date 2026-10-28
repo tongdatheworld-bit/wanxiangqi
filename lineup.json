@@ -120,5 +120,24 @@
             {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
         ],
         "equip": []
-    }
+    },
+    {
+    "id": 7,
+    "name": "马可单核养猪",
+    "rank": "S",
+    "player": "马可",
+    "playerImg": "images/players/make.png",
+    "hard": "中等",
+    "lineupCode": "万象一图诀【马可奔猪】129533708748664088（点击复制）",
+    "ban位": ["逐鹿", "河洛",],
+    "heroList": [
+        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true},
+        {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
+        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ]
+}
+
 ]
