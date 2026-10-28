@@ -1,43 +1,60 @@
-let allHeroCardData = [
-    {
-        "id": 1,
-        "name": "孙尚香",
-        "stage": 1,
-        "camp": "三分之地",
-        "avatarImg": "images/heroes/sunshangxiang.png",
-        "img": "images/herocard/sunshangxiang.png",
-        "awakeningImg": "images/herocard/awakening/sunshangxiang.png",
-        "skillImg": "images/herocard/skills/honglianbaodan.png",
-        "desc": "登场：获得1次免费刷新。",
-        "source": "该卡牌通过商店购买、拍卖等渠道获得",
-        "keywords": ["登场", "刷新"],
-        "hp": 210,
-        "mp": 15,
-        "mpMax": 50,
-        "physicalAtk": 40,
-        "magicAtk": 0,
-        "physicalDef": 14,
-        "magicDef": 14,
-        "atkSpeed": 1.00,
-        "critRate": "0%",
-        "critDmg": "40%",
-        "atkRange": 4,
-        "skillName": "红莲爆弹",
-        "skillDesc": "孙尚香朝目标敌人发射1发弩炮，造成100+100%物理攻击力的物理伤害，并降低命中敌人50%物理防御，持续5秒。",
-        "skillLv10": "弩炮伤害提升至150+150%物理攻击力",
-        "skillLv40": "弩炮会在命中后爆炸，对附近敌人造成60%的技能伤害",
-        "skillLv100": "会额外发射1发更强力的弩炮，造成1.5倍的伤害",
-        "awakeningDesc": "登场：获得2次免费刷新。",
-        "equipList": ["e1", "e2"],
-        "teamList": ["t1"]
-    }
-];
+// ========== 英雄名单（85个，按阶，以后增删只改这里） ==========
+const heroRaw = {
+    "1阶": ["干将莫邪", "狂铁", "李元芳", "牛魔", "苏烈", "孙膑", "孙尚香", "曜", "弈星"],
+    "2阶": ["百里守约", "百里玄策", "蔡文姬", "曹操", "大乔", "盾山", "公孙离", "鬼谷子", "廉颇", "马可波罗", "蒙恬", "梦奇", "米莱狄", "芈月", "墨子", "沈梦溪", "项羽", "亚连", "虞姬", "赵云"],
+    "3阶": ["阿轲", "安琪拉", "白起", "苍", "程咬金", "狄仁杰", "貂蝉", "朵莉亚", "姬小满", "镜", "铠", "老夫子", "刘禅", "马超", "明世隐", "裴擒虎", "少司缘", "西施", "亚瑟", "瑶", "云中君", "张良", "钟馗", "猪八戒"],
+    "4阶": ["艾琳", "扁鹊", "大司命", "韩信", "莱西奥", "李白", "李信", "刘邦", "蒙犽", "上官婉儿", "孙悟空", "太乙真人", "小乔", "雅典娜", "嬴政", "甄姬", "诸葛亮", "庄周"],
+    "5阶": ["敖隐", "东皇太一", "海诺", "海月", "花木兰", "姜子牙", "鲁班大师", "鲁班七号", "露娜", "吕布", "司空震", "武则天", "杨玉环", "周瑜"]
+};
+
+let allHeroCardData = [];
 let currentStage = 'all';
 let currentCamp = 'all';
 let currentKeyword = 'all';
 let searchKw = '';
 
 document.addEventListener('DOMContentLoaded', function () {
+    // 自动根据名单生成和你样板结构一致的数据
+    let idCounter = 1;
+    for (const tierName of ["1阶", "2阶", "3阶", "4阶", "5阶"]) {
+        const tierNum = parseInt(tierName);
+        const heroList = heroRaw[tierName];
+        for (const name of heroList) {
+            allHeroCardData.push({
+                "id": idCounter++,
+                "name": name,
+                "stage": tierNum,
+                "camp": "", // ✅ 阵营这里先空着，后面你逐个补
+                "avatarImg": `images/heroes/${name}.png`,
+                "img": `images/herocard/${name}.png`,
+                "awakeningImg": `images/herocard/awakening/${name}.png`,
+                "skillImg": `images/herocard/skills/${name}.png`,
+                "desc": "",
+                "source": "该卡牌通过商店购买、拍卖等渠道获得",
+                "keywords": [],
+                "hp": 0,
+                "mp": 0,
+                "mpMax": 0,
+                "physicalAtk": 0,
+                "magicAtk": 0,
+                "physicalDef": 0,
+                "magicDef": 0,
+                "atkSpeed": 1.00,
+                "critRate": "0%",
+                "critDmg": "40%",
+                "atkRange": 0,
+                "skillName": "",
+                "skillDesc": "",
+                "skillLv10": "",
+                "skillLv40": "",
+                "skillLv100": "",
+                "awakeningDesc": "",
+                "equipList": [],
+                "teamList": []
+            })
+        }
+    }
+
     const heroCardWrap = document.getElementById('heroCardList');
     if (!heroCardWrap) return;
 
@@ -64,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     renderHeroCardList();
 });
 
+// ========== 下面你原来的 renderHeroCardList、bindHeroCardClick 完全原样保留，不用改 ==========
 function renderHeroCardList() {
     const wrap = document.getElementById('heroCardList');
     if (!wrap) return;
