@@ -863,4 +863,91 @@ const equipList = [
     }
 ];
 
-export default equipList;
+// 渲染逻辑
+const listDom = document.getElementById('equipCardList');
+const searchInput = document.getElementById('searchInput');
+const typeFilter = document.getElementById('typeFilter');
+const posFilter = document.getElementById('posFilter');
+const modal = document.getElementById('detailModal');
+const modalBody = document.getElementById('modalBody');
+const closeModal = document.getElementById('closeModal');
+
+// 渲染装备卡片
+function render(list) {
+    listDom.innerHTML = '';
+    if (!list.length) {
+        listDom.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:#888;padding:60px 0;">没有匹配到装备</div>';
+        return;
+    }
+    list.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'hero-card-item';
+        card.innerHTML = `
+            <div class="hero-card-cover">
+                <img src="${item.smallImg}" alt="${item.name}" />
+            </div>
+            <div class="hero-card-name">${item.name}</div>
+            <div class="hero-card-desc">${item.desc || '暂未填写效果'}</div>
+        `;
+        card.onclick = () => openModal(item);
+        listDom.appendChild(card);
+    })
+}
+
+// 筛选逻辑
+function filterData() {
+    const kw = searchInput.value.trim().toLowerCase();
+    const type = typeFilter.value;
+    const pos = posFilter.value;
+    const result = equipList.filter(item => {
+        const matchType = type === 'all' || item.type === type;
+        const matchPos = pos === 'all' || item.pos === pos;
+        const matchKw = !kw || item.name.toLowerCase().includes(kw) || (item.desc && item.desc.toLowerCase().includes(kw));
+        return matchType && matchPos && matchKw;
+    })
+    render(result);
+}
+
+// 打开弹窗详情
+function openModal(item) {
+    modalBody.innerHTML = `
+    <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
+        <div style="width:220px;flex-shrink:0;text-align:center;">
+            <img src="${item.img}" style="width:180px;height:180px;border-radius:50%;object-fit:contain;border:2px solid #c9a258;background:#1c170f;padding:16px;" />
+        </div>
+        <div style="flex:1;min-width:260px;">
+            <h2 style="color:#ffd369;font-size:32px;margin-bottom:10px;">${item.name}</h2>
+            <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;">
+                <span class="tag-camp">${item.type}</span>
+                <span class="tag-small">${item.pos}</span>
+            </div>
+            <div class="modal-block">
+                <h4>装备效果</h4>
+                <p>${item.desc || '暂无效果描述'}</p>
+            </div>
+            <div class="modal-block">
+                <h4>获取途径</h4>
+                <p>${item.source || '暂无'}</p>
+            </div>
+        </div>
+    </div>
+    `
+    modal.classList.add('show');
+}
+
+// 关闭弹窗
+function closeModalFunc() {
+    modal.classList.remove('show');
+}
+
+// 绑定事件
+searchInput.addEventListener('input', filterData);
+typeFilter.addEventListener('change', filterData);
+posFilter.addEventListener('change', filterData);
+closeModal.addEventListener('click', closeModalFunc);
+modal.addEventListener('click', e => {
+    if (e.target === modal) closeModalFunc();
+})
+
+// 初始渲染
+filterData();
