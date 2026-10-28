@@ -7,7 +7,7 @@ let allHeroCardData = [
         "tag": "万象大赛",
         "img": "images/herocard/sunshangxiang.png",
         "awakeningImg": "images/herocard/awakening/sunshangxiang.png",
-        "skillImg": "images/herocard/skill/honglianbaodan.png",
+        "skillImg": "images/herocard/skills/honglianbaodan.png",
         "desc": "登场：获得1次免费刷新。",
         "source": "该卡牌通过商店购买、拍卖等渠道获得",
         "keywords": ["登场", "刷新"],
