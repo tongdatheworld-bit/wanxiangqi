@@ -320,7 +320,7 @@ const heroList = [
     "equipList": ["e1", "e2"],
     "teamList": ["t1"]
 }
-，{
+,{
     "id": 11,
     "name": "赵云",
     "stage": 2,
@@ -352,7 +352,7 @@ const heroList = [
     "equipList": ["e1", "e2"],
     "teamList": ["t1"]
 }
-，
+,
     {
     "id": 12,
     "name": "墨子",
@@ -385,7 +385,7 @@ const heroList = [
     "equipList": ["e1", "e2"],
     "teamList": ["t1"]
 }
-，
+,
     {
     "id": 13,
     "name": "芈月",
@@ -418,7 +418,7 @@ const heroList = [
     "equipList": ["e1", "e2"],
     "teamList": ["t1"]
 }
-，
+,
     {
     "id": 14,
     "name": "曹操",
@@ -451,7 +451,7 @@ const heroList = [
     "equipList": ["e1", "e2"],
     "teamList": ["t1"]
 }
-，
+,
     {
     "id": 15,
     "name": "马可波罗",
