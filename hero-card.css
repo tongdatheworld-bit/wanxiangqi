@@ -358,7 +358,7 @@ body {
     margin-top:4px;
 }
 
-/* ========== 弹窗头部：英雄图标 + 标签【按你的CSS改造】 ========== */
+/* ========== 弹窗头部：英雄图标 + 标签 ========== */
 .hero-header-bar {
     display: flex;
     align-items: flex-start;
@@ -368,8 +368,7 @@ body {
     background: linear-gradient(180deg, rgba(255,211,105,0.08), rgba(255,211,105,0.02));
     border: 1px solid #4b3e24;
     border-radius: 16px;
-    position: relative; /* 新增，给内部绝对定位做锚点 */
-    
+    position: relative;
 }
 .hero-card-tag {
     position: absolute;
@@ -468,6 +467,13 @@ body {
     .hero-header-bar {
         flex-direction: column;
         align-items: flex-start;
+        /* 移动端取消绝对定位，防止贴边挤在一起 */
+    }
+    .hero-card-tag {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        align-self: flex-start;
     }
     .hero-tags-top {
         width: 100%;
@@ -486,4 +492,3 @@ body {
         width: 64px;
     }
 }
-
