@@ -875,23 +875,25 @@ const closeModal = document.getElementById('closeModal');
 // 渲染装备卡片
 function render(list) {
     listDom.innerHTML = '';
+
     if (!list.length) {
         listDom.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:#888;padding:60px 0;">没有匹配到装备</div>';
         return;
     }
+
     list.forEach(item => {
         const card = document.createElement('div');
         card.className = 'hero-card-item';
+
         card.innerHTML = `
-            <div class="hero-card-cover">
+            <div class="card-frame">
                 <img src="${item.smallImg}" alt="${item.name}" />
             </div>
-            <div class="hero-card-name">${item.name}</div>
-            <div class="hero-card-desc">${item.desc || '暂未填写效果'}</div>
         `;
+
         card.onclick = () => openModal(item);
         listDom.appendChild(card);
-    })
+    });
 }
 
 // 筛选逻辑
