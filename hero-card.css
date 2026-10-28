@@ -233,10 +233,22 @@ body {
     font-size: 14px;
 }
 /* ========== 弹窗新增布局样式（追加到最后） ========== */
+/* 弹窗布局 */
 .hero-modal-layout {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 28px;
+}
+/* 手机适配：宽度小于768px的时候，改成单列上下布局 */
+@media (max-width: 768px) {
+    .hero-modal-layout {
+        grid-template-columns: 1fr;
+    }
+    .modal-hero-img {
+        max-width: 260px; /* 手机上图片不要拉满，限制图片宽度，居中 */
+    }
+}
+
 }
 .modal-card-preview {
     display: flex;
@@ -428,7 +440,7 @@ body {
 .attr-label {
     color:#c9b894;
     font-size:14px;
-    margin-bottom:6px;
+    margin-bottom:10px;
 }
 .attr-val {
     font-size:24px;
@@ -451,7 +463,7 @@ body {
     color:#ffd369;
     font-weight:bold;
     font-size:16px;
-    margin-bottom:6px;
+    margin-bottom:10px;
 }
 .skill-text {
     color:#d9cdb8;
