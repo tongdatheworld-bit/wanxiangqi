@@ -124,6 +124,9 @@ body {
     cursor: pointer;
     transition: 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    /* 核心：限制卡片最大宽度，不会撑大 */
+    max-width: 180px;
+    margin: 0 auto;
 }
 .hero-card-item:hover {
     transform: translateY(-4px);
@@ -142,9 +145,11 @@ body {
     display: block;
 }
 .hero-card-grid {
-    grid-template-columns: repeat(auto-fill, minmax(15px, 1fr));
-    gap: 2px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
 }
+
 
 
 /* 弹窗 */
