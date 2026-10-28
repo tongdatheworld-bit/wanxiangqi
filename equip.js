@@ -5,6 +5,8 @@ const equipList = [
         tag: "基础装备",
         descSource: "该卡牌通过商店购买、拍卖等渠道获得",
         normalDesc: "穿戴给英雄，可以铸造成1件输出型普通装备。",
+        smallImg: "images/equip/fengbaojujian.png",
+        img: "images/equip/fengbaojujian.png",
         combineList: [
             {
                 name: "纯净苍穹",
@@ -26,9 +28,7 @@ const equipList = [
                 desc: "唯一。造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
                 smallImg: "images/equip/zhicaijian.png"
             }
-        ],
-        smallImg: "images/equip/fengbaojujian.png",
-        img: "images/equip/fengbaojujian.png"
+        ]
     }
 ];
 
@@ -66,14 +66,15 @@ function renderList() {
         card.onclick = function () {
             let combineHtml = "";
             equip.combineList.forEach(cb => {
-                combineHtml += `<div class="skill-item">
+                combineHtml += `
+                <div class="skill-item">
                     <img class="skill-icon" src="${cb.smallImg}" alt="${cb.name}">
                     <div class="skill-info">
                         <div class="skill-name">${cb.name}</div>
                         <div class="skill-desc">${cb.desc}</div>
                     </div>
-                </div>`
-            })
+                </div>`;
+            });
 
             modalBody.innerHTML = `
                 <div class="modal-header">
@@ -103,7 +104,7 @@ function renderList() {
             detailModal.style.display = "flex";
         };
         equipCardList.appendChild(card);
-    })
+    });
 }
 
 closeModal.onclick = function () {
