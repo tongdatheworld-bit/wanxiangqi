@@ -393,14 +393,14 @@ body {
 .hero-icon-wrap {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .hero-main-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
-    border: 1px solid #7c6538;
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    border: 2px solid #c9a258;
     object-fit: cover;
 }
 
