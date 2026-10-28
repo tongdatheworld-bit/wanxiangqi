@@ -1,97 +1,46 @@
-document.addEventListener('DOMContentLoaded', function(){
-    console.log("✅ 装备JS加载完成");
-
-    // 测试数据，后面替换回你全部77条
-    const equipList = [
-        {id:1,name:"大棒",type:"基础装备",pos:"法术装备",smallImg:"images/equip/dabang.png",img:"images/equip/dabang.png",desc:"法术强度+80",source:"选秀、野怪掉落",combine:"破碎圣杯 + 圣者法典"},
-        {id:2,name:"风暴巨剑",type:"基础装备",pos:"物理装备",smallImg:"images/equip/fengbaojujian.png",img:"images/equip/fengbaojujian.png",desc:"攻击力+45",source:"选秀、野怪掉落",combine:""},
-        {id:3,name:"力量腰带",type:"基础装备",pos:"防御装备",smallImg:"images/equip/liliangyaodai.png",img:"images/equip/liliangyaodai.png",desc:"生命值+200",source:"选秀、野怪掉落",combine:""}
-    ];
-
-    const equipCardList = document.getElementById('equipCardList');
-    const searchInput = document.getElementById('searchInput');
-    const typeFilter = document.getElementById('typeFilter');
-    const posFilter = document.getElementById('posFilter');
-    const modal = document.getElementById('detailModal');
-    const modalBody = document.getElementById('modalBody');
-    const closeModal = document.getElementById('closeModal');
-
-    function renderList(list) {
-        console.log("📦 渲染装备数量：", list.length);
-        equipCardList.innerHTML = '';
-        if(list.length === 0){
-            equipCardList.innerHTML = `<div style="grid-column:1/-1;text-align:center;color:#9aa0b0;padding:60px 0;">没有匹配的装备</div>`;
-            return;
-        }
-        list.forEach(item => {
-            const card = document.createElement('div');
-            card.className = 'hero-card-item';
-            card.innerHTML = `
-                <div class="hero-card-cover">
-                    <img src="${item.smallImg}" alt="${item.name}" loading="lazy">
-                </div>
-            `;
-            card.onclick = () => openModal(item);
-            equipCardList.appendChild(card);
-        })
-    }
-
-    function filterData() {
-        let kw = searchInput.value.trim().toLowerCase();
-        let t = typeFilter.value;
-        let p = posFilter.value;
-        const result = equipList.filter(item=>{
-            const matchType = t === 'all' || item.type === t;
-            const matchPos = p === 'all' || item.pos === p;
-            const matchKw = !kw || item.name.toLowerCase().includes(kw) || (item.desc && item.desc.toLowerCase().includes(kw));
-            return matchType && matchPos && matchKw;
-        })
-        renderList(result);
-    }
-
-    // 装备弹窗，完全适配你现在这套英雄UI
-    function openModal(item) {
-        modalBody.innerHTML = `
-            <div class="hero-header-bar">
-                <div class="hero-icon-wrap">
-                    <img class="hero-main-icon" src="${item.img}" alt="${item.name}" />
-                    <div class="hero-name-title">
-                        <div class="hero-name-large">${item.name}</div>
-                        <div class="hero-tags-top">
-                            <span class="tag-camp">${item.type}</span>
-                            <span class="tag-camp">${item.pos}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal-block">
-                <h4>装备效果</h4>
-                <p>${item.desc || '暂无效果描述'}</p>
-            </div>
-            <div class="modal-block">
-                <h4>合成路线</h4>
-                <p>${item.combine || '不可合成 / 暂无合成信息'}</p>
-            </div>
-            <div class="modal-block">
-                <h4>获取途径</h4>
-                <p>${item.source || '暂无'}</p>
-            </div>
-        `;
-        modal.style.display = 'flex';
-    }
-
-    function closeModalFunc() {
-        modal.style.display = 'none';
-    }
-    closeModal.addEventListener('click', closeModalFunc);
-    modal.addEventListener('click', e=>{
-        if(e.target === modal) closeModalFunc();
-    })
-
-    searchInput.addEventListener('input', filterData);
-    typeFilter.addEventListener('change', filterData);
-    posFilter.addEventListener('change', filterData);
-
-    filterData();
-})
+.equip-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.equip-card {
+  background: #222836;
+  border-radius: 10px;
+  padding: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid #333b4f;
+}
+.equip-card:hover {
+  transform: translateY(-4px);
+  border-color: #5886ff;
+}
+.equip-type-tag {
+  font-size: 12px;
+  color: #a0b4ff;
+  margin-bottom: 8px;
+}
+.equip-name {
+  color: #fff;
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.equip-desc {
+  color: #c9cdd8;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.modal-type {
+  color:#88aaff;
+  margin:8px 0;
+}
+.modal-desc {
+  color:#fff;
+  margin:12px 0;
+  font-size:16px;
+}
+.modal-detail {
+  color:#b0b6c4;
+  line-height:1.6;
+}
