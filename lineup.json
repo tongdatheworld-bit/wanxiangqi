@@ -139,6 +139,81 @@
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
      ],
         "equip": []
+},
+    {
+    "id": 8,
+    "name": "班叔李信陷阱流",
+    "rank": "S",
+    "player": "班叔",
+    "playerImg": "images/players/banshu.png",
+    "hard": "中等",
+    "lineupCode": "7155296555481190（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"花木兰","img":"images/heroes/humulan.png","isCore":false},
+        {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false}
+    ]
+},
+{
+    "id": 9,
+    "name": "瑶妹李信牺牲流",
+    "rank": "S",
+    "player": "瑶妹",
+    "playerImg": "images/players/yaomei.png",
+    "hard": "简单",
+    "lineupCode": "24825016001651854（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+        {"name":"花木兰","img":"images/heroes/humulan.png","isCore":false}
+    ]
+},{
+    "id": 10,
+    "name": "白歌三分倒转",
+    "rank": "S",
+    "player": "白歌",
+    "playerImg": "images/players/baige.png",
+    "hard": "困难",
+    "lineupCode": "450904641592400206（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "河洛"],
+    "heroList": [
+        {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
+        {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
+        {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+        {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
+        {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
+    ]
+},{
+    "id": 11,
+    "name": "嫦小娥海陆空",
+    "rank": "S",
+    "player": "嫦小娥",
+    "playerImg": "images/players/changxiaoe.png",
+    "hard": "简单",
+    "lineupCode": "29327862806598384（点击复制）",
+    "ban位": ["逐鹿", "三分之地", "日落海", "大河流域"],
+    "heroList": [
+        {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false},
+        {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
+    ]
 }
+
+
+    
+
 
 ]
