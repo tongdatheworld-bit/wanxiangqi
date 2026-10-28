@@ -11,30 +11,71 @@ const equipList = [
             {
                 name: "纯净苍穹",
                 effect: "唯一。每2秒获得10点法术攻击力，同时清除自身负面状态。",
-                icon: "images/equip/equipsmall/chunjingcangqiong.png"
+                icon: "images/equip/chunjingcangqiong.png"
             },
             {
                 name: "铸梦·逐风",
                 effect: "唯一。战斗开始及之后每过8秒，快速进行4次普通攻击。",
-                icon: "images/equip/equipsmall/zhumengzhufeng.png"
+                icon: "images/equip/zhumengzhufeng.png"
             },
             {
                 name: "无尽巨剑",
                 effect: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
-                icon: "images/equip/equipsmall/wujinjian.png"
+                icon: "images/equip/wujinjian.png"
             },
             {
                 name: "制裁之剑",
                 effect: "唯一。造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
-                icon: "images/equip/equipsmall/zhicaijian.png"
-    
+                icon: "images/equip/zhicaijian.png"
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: "纯净苍穹",
+        type: "普通装备",
+        pos: "法术装备",
+        desc: "每2秒获得10点法术攻击力，同时清除自身负面状态。",
+        source: "由风暴巨剑铸造而成",
+        img: "images/equip/chunjingcangqiong.png",
+        castList: []
+    },
+    {
+        id: 3,
+        name: "铸梦·逐风",
+        type: "普通装备",
+        pos: "物理装备",
+        desc: "战斗开始及之后每过8秒，快速进行4次普通攻击。",
+        source: "由风暴巨剑铸造而成",
+        img: "images/equip/zhumengzhufeng.png",
+        castList: []
+    },
+    {
+        id: 4,
+        name: "无尽巨剑",
+        type: "普通装备",
+        pos: "物理装备",
+        desc: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
+        source: "由风暴巨剑铸造而成",
+        img: "images/equip/wujinjian.png",
+        castList: []
+    },
+    {
+        id: 5,
+        name: "制裁之剑",
+        type: "普通装备",
+        pos: "物理装备",
+        desc: "造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
+        source: "由风暴巨剑铸造而成",
+        img: "images/equip/zhicaijian.png",
+        castList: []
     }
 ];
 
 const equipCardList = document.getElementById("equipCardList");
 const searchInput = document.getElementById("searchInput");
 const equipTypeFilter = document.getElementById("equipTypeFilter");
-const equipPosFilter = document.getElementById("detailModal");
+const equipPosFilter = document.getElementById("equipPosFilter");
 const detailModal = document.getElementById("detailModal");
 const modalBody = document.getElementById("modalBody");
 const closeModal = document.getElementById("closeModal");
@@ -46,7 +87,6 @@ function render() {
     equipCardList.innerHTML = "";
 
     equipList.forEach(item => {
-        // 筛选逻辑
         const matchKw = !kw || item.name.toLowerCase().includes(kw) || item.desc.toLowerCase().includes(kw);
         const matchT = filterType === "all" || item.type === filterType;
         const matchP = filterPos === "all" || item.pos === filterPos;
@@ -105,7 +145,6 @@ function render() {
     });
 }
 
-// 关闭弹窗
 closeModal.onclick = () => detailModal.style.display = "none";
 window.onclick = (e) => {
     if (e.target === detailModal) detailModal.style.display = "none";
