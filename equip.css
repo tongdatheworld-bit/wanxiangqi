@@ -160,3 +160,117 @@ body {
     color:#b0b6c4;
     line-height:1.6;
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background-color: rgba(0,0,0,0.75);
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background: #171c29;
+    border-radius: 16px;
+    width: 92%;
+    max-width: 1000px;
+    padding: 32px;
+}
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+}
+.equip-modal-wrap {
+    display: flex;
+    gap: 32px;
+}
+.equip-modal-left {
+    flex-shrink: 0;
+    width: 240px;
+}
+.equip-modal-card {
+    background: #202636;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+.equip-modal-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.equip-modal-card-name {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #fff;
+}
+.equip-modal-right {
+    flex: 1;
+}
+.equip-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+.equip-modal-tag {
+    font-size: 14px;
+    color: #ffd369;
+    background: rgba(255,211,105,0.12);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+.equip-modal-desc {
+    margin-top: 16px;
+    color: #d4d8e3;
+    font-size: 15px;
+}
+.equip-modal-source {
+    margin-top: 8px;
+    color: #999fac;
+    font-size: 14px;
+}
+.equip-divider {
+    border: none;
+    height: 1px;
+    background-color: #30384b;
+    margin: 20px 0;
+}
+.equip-cast-title {
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+.cast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cast-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #1e2433;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+.cast-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+}
+.cast-text {
+    display: flex;
+    flex-direction: column;
+}
+.cast-name {
+    color: #fff;
+    font-size: 15px;
+}
+.cast-effect {
+    color: #b1b7c7;
+    font-size: 13px;
+}
