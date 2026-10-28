@@ -194,13 +194,14 @@ function bindHeroCardClick() {
         <img class="skill-icon" src="${find.skillImg}" alt="${find.skillName}">
         <div class="skill-info">
             <div class="skill-name">${find.skillName}</div>
-            <div class="skill-text">${find.skillDesc}</div>
-            <div class="skill-level">Lv.10 ${find.skillLv10}</div>
-            <div class="skill-level">Lv.40 ${find.skillLv40}</div>
-            <div class="skill-level">Lv.100 ${find.skillLv100}</div>
+            <div class="skill-text" style="font-size:18px; line-height:1.6;">${find.skillDesc}</div>
+            <div class="skill-level" style="font-size:18px; line-height:1.6;">Lv.10 ${find.skillLv10}</div>
+            <div class="skill-level" style="font-size:18px; line-height:1.6;">Lv.40 ${find.skillLv40}</div>
+            <div class="skill-level" style="font-size:18px; line-height:1.6;">Lv.100 ${find.skillLv100}</div>
         </div>
     </div>
 </div>
+
 
 <div class="split-line"></div>
 
