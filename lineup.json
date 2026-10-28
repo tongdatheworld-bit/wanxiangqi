@@ -416,7 +416,7 @@
             {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":false}
         ],
         "equip": []
-    },[
+    },
     {
     "id": 22,
     "name": "安琪拉爆盾廉颇",
@@ -690,7 +690,7 @@
     "playerImg": "images/players/mingxiansheng.png",
     "hard": "中等",
     "lineupCode": "80558214278639676（点击复制）",
-    "ban位": ["大河流域", "河洛", "日落海"，"三分"],
+    "ban位": ["大河流域", "河洛", "日落海","三分"],
     "heroList": [
         {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
         {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
