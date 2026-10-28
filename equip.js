@@ -1,4 +1,3 @@
-// 装备数据源
 const equipList = [
     {id:1,name:"大棒",type:"基础装备",pos:"法术装备",smallImg:"images/equip/dabang.png",img:"images/equip/dabang.png",desc:"",source:""},
     {id:2,name:"风暴巨剑",type:"基础装备",pos:"物理装备",smallImg:"images/equip/fengbaojujian.png",img:"images/equip/fengbaojujian.png",desc:"",source:""},
@@ -79,10 +78,7 @@ const equipList = [
     {id:77,name:"征服之剑",type:"特殊装备",pos:"物理装备",smallImg:"images/equip/zhengfuzhijian.png",img:"images/equip/zhengfuzhijian.png",desc:"",source:""},
 ];
 
-// DOM
-const virtualWrap = document.getElementById('virtualWrap');
-const virtualPhantom = document.getElementById('virtualPhantom');
-const virtualList = document.getElementById('virtualList');
+const equipCardList = document.getElementById('equipCardList');
 const searchInput = document.getElementById('searchInput');
 const typeFilter = document.getElementById('typeFilter');
 const posFilter = document.getElementById('posFilter');
@@ -90,122 +86,84 @@ const modal = document.getElementById('detailModal');
 const modalBody = document.getElementById('modalBody');
 const closeModal = document.getElementById('closeModal');
 
-// 虚拟滚动配置
-const config = {
-    cardHeight: 290,
-    buffer: 4,
-    rowCount: 4
-};
-let filterResult = [];
-let debounceTimer = null;
+// 渲染卡片
+function renderList(list) {
+    equipCardList.innerHTML = '';
+    if (list.length === 0) {
+        equipCardList.innerHTML = `<div style="grid-column: 1/-1;text-align:center;color:#888;padding:60px 0;">没有匹配的装备</div>`;
+        return;
+    }
+    list.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'hero-card';
+        card.innerHTML = `
+            <div class="hero-card-img">
+                <img src="${item.smallImg}" alt="${item.name}" loading="lazy">
+            </div>
+            <div class="hero-card-name">${item.name}</div>
+            <div class="hero-card-tag">
+                <span>${item.type}</span>
+                <span>${item.pos}</span>
+            </div>
+        `;
+        card.onclick = () => openModal(item);
+        equipCardList.appendChild(card);
+    })
+}
 
-// 筛选
+// 筛选逻辑
 function filterData() {
-    const kw = searchInput.value.trim().toLowerCase();
-    const type = typeFilter.value;
-    const pos = posFilter.value;
-    filterResult = equipList.filter(item => {
-        const matchType = type === 'all' || item.type === type;
-        const matchPos = pos === 'all' || item.pos === pos;
+    let kw = searchInput.value.trim().toLowerCase();
+    let t = typeFilter.value;
+    let p = posFilter.value;
+
+    const result = equipList.filter(item => {
+        const matchType = t === 'all' || item.type === t;
+        const matchPos = p === 'all' || item.pos === p;
         const matchKw = !kw || item.name.toLowerCase().includes(kw) || (item.desc && item.desc.toLowerCase().includes(kw));
         return matchType && matchPos && matchKw;
     })
-    renderVirtual();
-}
-
-// 网格虚拟渲染核心
-function renderVirtual(){
-    const wrapTop = virtualWrap.scrollTop;
-    const wrapH = virtualWrap.clientHeight;
-    const total = filterResult.length;
-    if(total === 0){
-        virtualPhantom.style.height = '0px';
-        virtualList.innerHTML = `<div style="grid-column:1/-1;text-align:center;color:#888;padding:60px 0;">没有匹配装备</div>`;
-        return;
-    }
-    const rows = Math.ceil(total / config.rowCount);
-    const totalHeight = rows * config.cardHeight;
-    virtualPhantom.style.height = totalHeight + 'px';
-
-    let startRow = Math.floor(wrapTop / config.cardHeight) - config.buffer;
-    let endRow = Math.ceil((wrapTop + wrapH) / config.cardHeight) + config.buffer;
-    startRow = Math.max(0, startRow);
-    endRow = Math.min(rows, endRow);
-
-    const startIndex = startRow * config.rowCount;
-    const endIndex = Math.min(endRow * config.rowCount, total);
-    const showList = filterResult.slice(startIndex, endIndex);
-
-    virtualList.style.transform = `translateY(${startRow * config.cardHeight}px)`;
-    const frag = document.createDocumentFragment();
-    showList.forEach(item=>{
-        const card = document.createElement('div');
-        card.className = 'equip-card';
-        card.innerHTML = `
-            <div class="equip-card__img">
-                <img src="${item.smallImg}" alt="${item.name}" loading="lazy">
-            </div>
-            <div class="equip-card__info">
-                <div class="equip-card__name">${item.name}</div>
-                <div class="equip-card__tag">
-                    <span>${item.type}</span>
-                    <span>${item.pos}</span>
-                </div>
-            </div>
-        `;
-        card.onclick = ()=>openModal(item);
-        frag.appendChild(card);
-    })
-    virtualList.innerHTML = '';
-    virtualList.appendChild(frag);
+    renderList(result);
 }
 
 // 弹窗
 function openModal(item) {
     modalBody.innerHTML = `
-    <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
-        <div style="width:220px;flex-shrink:0;text-align:center;">
-            <img src="${item.img}" style="width:180px;height:180px;border-radius:16px;object-fit:contain;border:2px solid #c9a258;background:#1c170f;padding:16px;" />
-        </div>
-        <div style="flex:1;min-width:260px;">
-            <h2 style="color:#ffd369;font-size:30px;margin-bottom:10px;">${item.name}</h2>
-            <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;">
-                <span class="equip-card__tag" style="padding:4px 10px;">${item.type}</span>
-                <span class="equip-card__tag" style="padding:4px 10px;">${item.pos}</span>
-            </div>
-            <div class="modal-block">
-                <h4>装备效果</h4>
-                <p>${item.desc || '暂无效果描述'}</p>
-            </div>
-            <div class="modal-block">
-                <h4>获取途径</h4>
-                <p>${item.source || '暂无'}</p>
+        <div class="hero-header-bar">
+            <div class="hero-icon-wrap">
+                <img class="hero-main-icon" src="${item.img}" />
+                <div class="hero-name-title">
+                    <div class="hero-name-large">${item.name}</div>
+                    <div class="hero-tags-top">
+                        <span class="tag-camp">${item.type}</span>
+                        <span class="tag-camp">${item.pos}</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="modal-block">
+            <h4>装备效果</h4>
+            <p>${item.desc || '暂无效果描述'}</p>
+        </div>
+        <div class="modal-block">
+            <h4>获取途径</h4>
+            <p>${item.source || '暂无'}</p>
+        </div>
     `
-    modal.classList.add('show');
+    modal.style.display = 'flex';
 }
 function closeModalFunc() {
-    modal.classList.remove('show');
+    modal.style.display = 'none';
 }
 
-// 防抖搜索
-function onSearchInput() {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(filterData,200);
-}
-
-// 绑定事件
-searchInput.addEventListener('input', onSearchInput);
+// 事件绑定
+searchInput.addEventListener('input', filterData);
 typeFilter.addEventListener('change', filterData);
 posFilter.addEventListener('change', filterData);
 closeModal.addEventListener('click', closeModalFunc);
 modal.addEventListener('click', e=>{
     if(e.target === modal) closeModalFunc();
 })
-virtualWrap.addEventListener('scroll', renderVirtual);
-window.addEventListener('resize', renderVirtual);
 
 // 初始化
 filterData();
