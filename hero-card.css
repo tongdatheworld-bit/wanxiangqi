@@ -217,7 +217,7 @@ body {
 
 .modal-block h4 {
     color: #ffd369;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     font-size: 15px;
 }
 
@@ -319,7 +319,7 @@ body {
 .skill-level {
     color:#c9b894;
     font-size:13px;
-    line-height:1.5;
+    line-height:1.8;
 }
 
 /* 装备、阵容推荐区块 */
