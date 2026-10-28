@@ -1,49 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>装备牌</title>
-<link rel="stylesheet" href="equip.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>装备库</title>
+<link rel="stylesheet" href="equip.css">
 </head>
 <body>
-
-<!-- 顶部导航 -->
 <div class="top-nav-wrap">
-    <a href="./index.html">首页</a>
-    <a href="./lineup.html">阵容大全</a>
-    <a href="./player.html">棋手</a>
-    <a href="./hero-card.html">英雄牌</a>
-    <a href="./talent.html">天赋牌</a>
-    <a href="./equip.html" class="active">装备牌</a>
-    <a href="./effect.html">效果牌</a>
-    <a href="./info-gap.html">信息差</a>
+    <a href="hero.html">英雄</a>
+    <a href="equip.html" class="active">装备</a>
 </div>
-
 <div class="container">
-    <h2 class="page-title">装备牌</h2>
-
-    <!-- 搜索框 -->
+    <h1 class="page-title">全部装备定位</h1>
     <div class="search-box">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#888e9c">
-            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-        </svg>
-        <input id="searchInput" type="text" placeholder="搜索名称、描述、阵营或相关关键词..." />
+        <input id="searchInput" placeholder="搜索装备名称、描述">
     </div>
-
-    <!-- 筛选区 -->
     <div class="filter-wrap">
         <div class="filter-row">
             <select id="typeFilter" class="filter-select">
-                <option value="all">全部装备分类</option>
+                <option value="all">全部类型</option>
                 <option value="基础装备">基础装备</option>
                 <option value="普通装备">普通装备</option>
                 <option value="天赋装备">天赋装备</option>
                 <option value="特殊装备">特殊装备</option>
             </select>
-
             <select id="posFilter" class="filter-select">
-                <option value="all">全部装备定位</option>
+                <option value="all">全部定位</option>
                 <option value="物理装备">物理装备</option>
                 <option value="法术装备">法术装备</option>
                 <option value="防御装备">防御装备</option>
@@ -52,14 +35,17 @@
         </div>
     </div>
 
-    <!-- 装备牌网格列表 -->
-    <div class="hero-card-grid" id="equipCardList"></div>
+    <!-- 虚拟滚动容器【核心】 -->
+    <div id="virtualWrap" class="virtual-wrap">
+        <div id="virtualPhantom" class="virtual-phantom"></div>
+        <div id="virtualList" class="virtual-list"></div>
+    </div>
 </div>
 
-<!-- 详情弹窗 -->
-<div class="modal" id="detailModal">
+<!-- 弹窗 -->
+<div id="detailModal" class="modal">
     <div class="modal-content">
-        <span class="modal-close" id="closeModal">&times;</span>
+        <span id="closeModal" class="modal-close">&times;</span>
         <div id="modalBody"></div>
     </div>
 </div>
