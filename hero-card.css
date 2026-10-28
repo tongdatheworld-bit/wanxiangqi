@@ -15,8 +15,6 @@ body {
     min-height: 100vh;
 }
 
-}
-
 /* 顶部导航 */
 .top-nav-wrap {
     display: flex;
@@ -38,6 +36,7 @@ body {
     border-radius: 8px;
     font-size: 15px;
     transition: all 0.2s;
+    position: relative; /* 给下划线定位用，新增 */
 }
 
 .top-nav-wrap a:hover {
@@ -47,6 +46,17 @@ body {
 
 .top-nav-wrap a.active {
     color: #ffd369;
+}
+/* 新增：底部金色下划线 */
+.top-nav-wrap a.active::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 4px;
+    height: 3px;
+    background-color: #ffd369;
+    border-radius: 2px;
 }
 
 .container {
@@ -61,6 +71,7 @@ body {
     margin-bottom: 24px;
     color: #ffd369;
 }
+
 
 /* 搜索框 */
 .search-box {
