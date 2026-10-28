@@ -90,7 +90,7 @@ function renderHeroCardList() {
     }
 
     if (!filterArr.length) {
-        wrap.innerHTML = `<div style="text-align:center;color:#686e7c;padding:40px">没有匹配的英雄牌</div>`;
+        wrap.innerHTML = `<div style="text-align:center;color:#68707c;padding:40px">没有匹配的英雄牌</div>`;
         return;
     }
 
@@ -137,22 +137,39 @@ function bindHeroCardClick() {
             }
 
             modalBody.innerHTML = `
-                <div class="card-compare-row">
-                    <div class="card-compare-item">
-                        <img class="compare-card-img" src="${find.img}" alt="${find.name}">
-                        <div class="compare-label">普通效果</div>
-                        <div class="awaken-desc-text">${find.desc}</div>
-                    </div>
-                    <div class="card-compare-item">
-                        <img class="compare-card-img" src="${find.awakeningImg}" alt="觉醒${find.name}">
-                        <div class="compare-label">觉醒效果</div>
-                        <div class="awaken-desc-text">${find.awakeningDesc}</div>
-                    </div>
-                </div>
+<!-- 弹窗头部：英雄图标 + 标签 -->
+<div class="hero-header-bar">
+    <div class="hero-icon-wrap">
+        <img class="hero-main-icon" src="${find.skillImg}" alt="${find.name}">
+        <div class="hero-name-title">
+            <div class="hero-name-large">${find.name}</div>
+            <div class="hero-subtitle">英雄牌</div>
+        </div>
+    </div>
 
-                <div class="split-line"></div>
+    <div class="hero-tags-top">
+        <span class="tag-camp">${find.camp}</span>
+        <span class="tag-stage tag-stage-${find.stage}">${find.stage}阶</span>
+        <span class="tag-small">${find.tag}</span>
+    </div>
+</div>
 
-               <h4>基础属性</h4>
+<div class="card-compare-row">
+    <div class="card-compare-item">
+        <img class="compare-card-img" src="${find.img}" alt="${find.name}">
+        <div class="compare-label">普通效果</div>
+        <div class="awaken-desc-text">${find.desc}</div>
+    </div>
+    <div class="card-compare-item">
+        <img class="compare-card-img" src="${find.awakeningImg}" alt="觉醒${find.name}">
+        <div class="compare-label">觉醒效果</div>
+        <div class="awaken-desc-text">${find.awakeningDesc}</div>
+    </div>
+</div>
+
+<div class="split-line"></div>
+
+<h4>基础属性</h4>
 <div class="attr-grid">
     <div class="attr-item"><div class="attr-label">生命值</div><div class="attr-val">${find.hp}</div></div>
     <div class="attr-item"><div class="attr-label">法力值</div><div class="attr-val">${find.mp} / ${find.mpMax}</div></div>
@@ -167,38 +184,38 @@ function bindHeroCardClick() {
     <div class="attr-item"><div class="attr-label">攻击距离</div><div class="attr-val">${find.atkRange}</div></div>
 </div>
 
-                <div class="split-line"></div>
+<div class="split-line"></div>
 
-                <h4>英雄技能</h4>
-                <div class="skill-row">
-                    <img class="skill-icon" src="${find.skillImg}" alt="${find.skillName}">
-                    <div class="skill-info">
-                        <div class="skill-name">${find.skillName}</div>
-                        <div class="skill-text">${find.skillDesc}</div>
-                        <div class="skill-level">Lv.10 ${find.skillLv10}</div>
-                        <div class="skill-level">Lv.40 ${find.skillLv40}</div>
-                        <div class="skill-level">Lv.100 ${find.skillLv100}</div>
-                    </div>
-                </div>
+<h4>英雄技能</h4>
+<div class="skill-row">
+    <img class="skill-icon" src="${find.skillImg}" alt="${find.skillName}">
+    <div class="skill-info">
+        <div class="skill-name">${find.skillName}</div>
+        <div class="skill-text">${find.skillDesc}</div>
+        <div class="skill-level">Lv.10 ${find.skillLv10}</div>
+        <div class="skill-level">Lv.40 ${find.skillLv40}</div>
+        <div class="skill-level">Lv.100 ${find.skillLv100}</div>
+    </div>
+</div>
 
-                <div class="split-line"></div>
+<div class="split-line"></div>
 
-                <div class="recommend-wrap">
-                    <div class="recommend-title">适配装备</div>
-                    <div class="item-grid">
-                        ${equipHtml}
-                    </div>
-                </div>
+<div class="recommend-wrap">
+    <div class="recommend-title">适配装备</div>
+    <div class="item-grid">
+        ${equipHtml}
+    </div>
+</div>
 
-                <div class="split-line"></div>
+<div class="split-line"></div>
 
-                <div class="recommend-wrap">
-                    <div class="recommend-title">适配阵容</div>
-                    <div class="item-grid">
-                        ${teamHtml}
-                    </div>
-                </div>
-            `;
+<div class="recommend-wrap">
+    <div class="recommend-title">适配阵容</div>
+    <div class="item-grid">
+        ${teamHtml}
+    </div>
+</div>
+`;
             modal.style.display = 'flex';
         }
     })
