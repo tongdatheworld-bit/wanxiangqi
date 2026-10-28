@@ -215,9 +215,9 @@ body {
     padding: 16px 18px;
 }
 
-.modal-block h4 {
+.modal-content h4 {
     color: #ffd369;
-    margin-bottom: 16px;
+    margin-bottom: 20px !important;
     font-size: 15px;
 }
 
@@ -470,3 +470,4 @@ body {
         width: 64px;
     }
 }
+
