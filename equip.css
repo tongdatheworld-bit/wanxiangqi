@@ -286,4 +286,9 @@ body {
 .cast-effect {
     color: #b1b7c7;
     font-size: 13px;
+.card-pos {
+  color: #888e9c;
+  font-size: 12px;
+  margin: 2px 0;
+}
 }
