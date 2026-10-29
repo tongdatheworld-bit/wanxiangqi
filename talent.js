@@ -967,6 +967,7 @@ function renderTalent() {
             if (selCampVal === "sunset") matchCamp = item.camp === "日落海";
             if (selCampVal === "heluo") matchCamp = item.camp === "河洛";
             if (selCampVal === "battle") matchCamp = item.camp === "逐鹿";
+            if (selCampVal === "nocamp") matchCamp = item.camp === "无阵营";
             if (selCampVal === "none") matchCamp = item.camp === "通用";
         }
 
