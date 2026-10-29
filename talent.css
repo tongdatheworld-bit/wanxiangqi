@@ -175,22 +175,24 @@ body {
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.72);
-    display: none; /* 默认隐藏 */
+    display: none;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 9999;
 }
 .modal.show {
-    display: flex; /* 加show类才启用flex居中 */
+    display: flex;
 }
 .modal-content {
     position: relative;
     width: 720px;
-    max-width: 94%;
+    max-width: 94vw;
     background: #1f222b;
     border-radius: 16px;
     padding: 36px;
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+    /* 增加这一行，防止被父容器transform影响居中 */
+    transform: translateZ(0);
 }
 .modal-close {
     color: #ffffff;
