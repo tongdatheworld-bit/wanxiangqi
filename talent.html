@@ -3,34 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>天赋牌 | 王者万象棋</title>
+    <title>天赋牌</title>
     <link rel="stylesheet" href="talent.css">
 </head>
 <body>
-    <div class="top-nav-wrap">
-        <a href="index.html">首页</a>
-        <a href="hero.html">英雄</a>
-        <a href="effect.html">效果牌</a>
-        <a href="talent.html" class="active">天赋牌</a>
-    </div>
+   <!-- 顶部导航 -->
+<div class="top-nav-wrap">
+    <a href="./index.html">首页</a>
+    <a href="./lineup.html">阵容大全</a>
+    <a href="./player.html">棋手</a>
+    <a href="./hero-card.html">英雄牌</a>
+    <a href="./talent.html">天赋牌</a>
+    <a href="./equip.html" class="active">装备牌</a>
+    <a href="./effect.html">效果牌</a>
+    <a href="./info-gap.html">信息差</a>
+</div>
     <div class="container">
-        <div class="subtitle-tag">TALENT CARD DATA</div>
+        <div class="subtitle-tag">TALENT CARD</div>
         <h1 class="page-title">天赋牌</h1>
-        <div class="desc-line">万象一图诀·友情打造 </div>
+        <div class="desc-line">万象一图诀·友情打造</div>
 
         <!-- 搜索 -->
         <div class="search-box">
             <input type="text" id="talentSearch" placeholder="搜索天赋名称 / 描述">
         </div>
 
-        <!-- 筛选 -->
+        <!-- 筛选区 -->
         <div class="filter-wrap">
             <div class="filter-row">
-                <select class="filter-select" id="talentTierFilter">
+                <select class="filter-select" id="rankFilter">
                     <option value="all">全部品阶</option>
-                    <option value="1">铜天赋</option>
-                    <option value="2">银天赋</option>
-                    <option value="3">金天赋</option>
+                    <option value="copper">铜天赋</option>
+                    <option value="silver">银天赋</option>
+                    <option value="gold">金天赋</option>
+                </select>
+                <select class="filter-select" id="effectTypeFilter">
+                    <option value="all">全部效果分类</option>
+                    <option value="resource">资源类</option>
+                    <option value="combat">战力类</option>
+                </select>
+                <select class="filter-select" id="campFilter">
+                    <option value="all">全部阵营</option>
+                    <option value="sand">三分之地</option>
+                    <option value="river">大河流域</option>
+                    <option value="sunset">日落海</option>
+                    <option value="heluo">河洛</option>
+                    <option value="battle">逐鹿</option>
+                    <option value="none">无阵营</option>
+                </select>
+                <select class="filter-select" id="boostTypeFilter">
+                    <option value="all">全部强化类型</option>
+                    <option value="link">联动强化天赋</option>
+                    <option value="single">单体英雄强化天赋</option>
                 </select>
             </div>
         </div>
