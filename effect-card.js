@@ -283,21 +283,21 @@ const effectList = [
     },
 ];
 const effectCardList = document.getElementById("effectCardList");
-const searchInput = document.getElementById("searchInput");
-const effectTypeFilter = document.getElementById("effectTypeFilter");
-const effectPosFilter = document.getElementById("effectPosFilter");
+const searchInput = document.getElementById("effectSearchInput");
+const effectTierFilter = document.getElementById("effectTierFilter");
+const effectCampFilter = document.getElementById("effectCampFilter");
 const detailModal = document.getElementById("detailModal");
 const modalBody = document.getElementById("modalBody");
 const closeModal = document.getElementById("closeModal");
 
-// 根据名称打开弹窗（和装备共用一套弹窗函数，如果你弹窗DOM是同一个）
+// 通过名字打开弹窗（预留，以后牌之间跳转用）
 function openEffectByName(name){
     const target = effectList.find(e=>e.name === name);
     if(!target) return;
     renderModal(target);
 }
 
-// 弹窗渲染函数，适配效果牌字段
+// 弹窗渲染，样式结构对齐装备弹窗
 function renderModal(item){
     let sourceHtml = `<p class="equip-modal-source">来源：${item.source || '暂无'}</p>`;
     modalBody.innerHTML = `
@@ -319,27 +319,37 @@ function renderModal(item){
 
 function render() {
     const kw = searchInput.value.trim().toLowerCase();
-    const filterType = effectTypeFilter.value;
-    const filterPos = effectPosFilter.value;
+    const filterTier = effectTierFilter.value;
+    const filterCamp = effectCampFilter.value;
     effectCardList.innerHTML = "";
+
     effectList.forEach(item => {
+        // 搜索：名称、描述
         const matchKw = !kw || item.name.toLowerCase().includes(kw) || item.desc.toLowerCase().includes(kw);
-        const matchT = filterType === "all" || item.type === filterType;
-        const matchP = filterPos === "all" || item.pos === filterPos;
-        if (!(matchKw && matchT && matchP)) return;
+        // 品阶筛选 type
+        const matchTier = filterTier === "all" || item.type === filterTier;
+        // 阵营筛选 pos
+        const matchCamp = filterCamp === "all" || item.pos === filterCamp;
+
+        if (!(matchKw && matchTier && matchCamp)) return;
+
         const div = document.createElement("div");
-        div.className = "equip-card-item"; // 复用你装备卡片的css类，不用新增样式
+        div.className = "equip-card-item";
         div.innerHTML = `<div class="equip-card-cover"><img src="${item.img}" alt="${item.name}"></div>`;
         div.onclick = () => renderModal(item);
         effectCardList.appendChild(div);
     });
 }
 
+// 弹窗关闭逻辑，和装备保持一致
 closeModal.onclick = () => detailModal.style.display = "none";
 window.onclick = (e) => {
     if (e.target === detailModal) detailModal.style.display = "none";
 };
+
+// 绑定事件
 searchInput.addEventListener("input", render);
-effectTypeFilter.addEventListener("change", render);
-effectPosFilter.addEventListener("change", render);
+effectTierFilter.addEventListener("change", render);
+effectCampFilter.addEventListener("change", render);
+
 render();
