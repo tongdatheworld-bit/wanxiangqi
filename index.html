@@ -149,59 +149,8 @@
     </style>
 </head>
 <body>
-<!-- 首页原本所有内容，不动，正常写在前面 -->
-<div class="home-page">
-  <!-- 你的首页图片、文字、导航，全部原样保留 -->
-</div>
-
-<!-- 【解锁遮罩弹窗，浮在首页上面】 -->
-<div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:9999;display:flex;align-items:center;justify-content:center;">
-  <div style="background:rgba(31, 41, 55, 0.92);backdrop-filter: blur(6px);padding:32px;border-radius:16px;text-align:center;color:#fff;max-width:360px;">
-    <h3 style="margin:0 0 16px;">🔒 内容解锁</h3>
-    <p style="margin:0 0 12px;font-size:14px;">扫码关注公众号，回复【验证码】获取解锁码</p>
-    <img src="./images/wanxiangyitujue.jpg" alt="公众号二维码" style="width:220px;margin-bottom:16px;border-radius:8px;">
-    <input id="codeInput" type="text" placeholder="请输入解锁验证码" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:12px;font-size:16px;">
-    <br>
-    <button id="unlockBtn" style="padding:10px 24px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;">确认解锁</button>
-    <p id="tipText" style="color:#f87171;margin-top:12px;font-size:14px;display:none;">验证码错误，请重新获取！</p>
-  </div>
-</div>
-
-<script>
-// 解锁逻辑，只控制这个弹窗，不碰首页任何内容
-document.addEventListener('DOMContentLoaded', function () {
-    const RIGHT_CODE = "万象一图诀";
-    const lockModal = document.getElementById('lockModal');
-    const codeInput = document.getElementById('codeInput');
-    const unlockBtn = document.getElementById('unlockBtn');
-    const tipText = document.getElementById('tipText');
-    const STORAGE_KEY = "wanxiang_unlock";
-
-    if (!lockModal) return;
-
-    // 如果之前已经解锁，直接隐藏弹窗
-    if(localStorage.getItem(STORAGE_KEY) === 'ok'){
-        lockModal.style.display = 'none';
-    }
-
-    unlockBtn.onclick = function(){
-        const val = codeInput.value.trim();
-        if(val === RIGHT_CODE){
-            lockModal.style.display = 'none';
-            localStorage.setItem(STORAGE_KEY, 'ok');
-        }else{
-            tipText.style.display = 'block';
-        }
-    }
-    // 回车触发
-    codeInput.onkeydown = function(e){
-        if(e.key === 'Enter') unlockBtn.click();
-    }
-})
-</script>
-
-<!-- 所有页面内容全部包进 mainContent 里面！解锁成功才显示 -->
-<div id="mainContent" style="display:none;">
+<!-- ========= 重点：mainContent 不再 display:none，默认直接显示 ========= -->
+<div id="mainContent">
     <!-- 顶部导航 -->
     <div class="top-nav-wrap">
         <a href="./index.html">首页</a>
@@ -252,7 +201,6 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
     </div>
-
     <script src="./app.js"></script>
     <!-- 导航自动高亮脚本 -->
     <script>
@@ -281,26 +229,35 @@ document.addEventListener('DOMContentLoaded', function () {
     </script>
 </div>
 
-<!-- ✅ 解锁逻辑JS，放在弹窗HTML后面！ -->
+<!-- 【解锁遮罩弹窗，浮在首页上面】 -->
+<div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:9999;display:flex;align-items:center;justify-content:center;">
+  <div style="background:rgba(31, 41, 55, 0.92);backdrop-filter: blur(6px);padding:32px;border-radius:16px;text-align:center;color:#fff;max-width:360px;">
+    <h3 style="margin:0 0 16px;">🔒 内容解锁</h3>
+    <p style="margin:0 0 12px;font-size:14px;">扫码关注公众号，回复【验证码】获取解锁码</p>
+    <img src="./images/wanxiangyitujue.jpg" alt="公众号二维码" style="width:220px;margin-bottom:16px;border-radius:8px;">
+    <input id="codeInput" type="text" placeholder="请输入解锁验证码" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:12px;font-size:16px;">
+    <br>
+    <button id="unlockBtn" style="padding:10px 24px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;">确认解锁</button>
+    <p id="tipText" style="color:#f87171;margin-top:12px;font-size:14px;display:none;">验证码错误，请重新获取！</p>
+  </div>
+</div>
+
 <script>
 const RIGHT_CODE = "万象一图诀";
 const lockModal = document.getElementById('lockModal');
-const mainContent = document.getElementById('mainContent');
 const codeInput = document.getElementById('codeInput');
 const unlockBtn = document.getElementById('unlockBtn');
 const tipText = document.getElementById('tipText');
 
-// 读取本地缓存，已经解锁直接放行
+// 读取本地缓存，已经解锁直接隐藏弹窗
 if(localStorage.getItem('wanxiang_unlock') === 'ok'){
   lockModal.style.display = 'none';
-  mainContent.style.display = 'block';
 }
 
 unlockBtn.onclick = function(){
   const val = codeInput.value.trim();
   if(val === RIGHT_CODE){
     lockModal.style.display = 'none';
-    mainContent.style.display = 'block';
     localStorage.setItem('wanxiang_unlock','ok');
   }else{
     tipText.style.display = 'block';
@@ -311,6 +268,5 @@ codeInput.addEventListener('keydown',function(e){
   if(e.key === 'Enter') unlockBtn.click();
 })
 </script>
-
 </body>
 </html>
