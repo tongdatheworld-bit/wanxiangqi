@@ -149,11 +149,16 @@
     </style>
 </head>
 <body>
-<!-- 解锁弹窗 -->
-<div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:9999;display:flex;align-items:center;justify-content:center;">
+<!-- 主内容【不再隐藏！style删掉display:none】 -->
+<div id="mainContent">
+    <!-- 你的导航、筛选、阵容列表、所有页面内容全部放这里 -->
+</div>
+
+<!-- 解锁弹窗 半透明遮罩，拦截点击 -->
+<div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:9999;display:flex;align-items:center;justify-content:center;">
   <div style="background:rgba(31, 41, 55, 0.92);backdrop-filter: blur(6px);padding:32px;border-radius:16px;text-align:center;color:#fff;max-width:360px;">
     <h3 style="margin:0 0 16px;">🔒 内容解锁</h3>
-    <p style="margin:0 0 12px;font-size:14px;">扫码关注公众号，回复【登录码】获取登录码</p>
+    <p style="margin:0 0 12px;font-size:14px;">扫码关注公众号，回复【验证码】获取解锁码</p>
     <img src="./images/wanxiangyitujue.jpg" alt="公众号二维码" style="width:220px;margin-bottom:16px;border-radius:8px;">
     <input id="codeInput" type="text" placeholder="请输入解锁验证码" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:12px;font-size:16px;">
     <br>
@@ -161,6 +166,9 @@
     <p id="tipText" style="color:#f87171;margin-top:12px;font-size:14px;display:none;">验证码错误，请重新获取！</p>
   </div>
 </div>
+
+<script src="./app.js"></script>
+
 
 <!-- 所有页面内容全部包进 mainContent 里面！解锁成功才显示 -->
 <div id="mainContent" style="display:none;">
