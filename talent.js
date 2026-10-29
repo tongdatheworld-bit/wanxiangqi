@@ -18,9 +18,9 @@ const talentList = [
         fitHero: {name:"嬴政", url:"#hero-yingzheng", avatar:"images/heroes/yingzheng.png"},
         fitPlayer: {name:"明先生", url:"#player-ming", avatar:"images/players/mingxiansheng.png"},
         fitTeam: {name:"明先生雷霆战机", url:"#team-mingleiting"}
-    },
-    {
-        {
+    }
+ },
+ {
     "id": 3,
     "name": "兵行诡招",
     "rank": "铜天赋",
