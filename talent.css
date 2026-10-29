@@ -131,6 +131,12 @@ body {
     border-color: #ffd369;
 }
 /* ========== 天赋卡片样式，5:7，只显示图片 ========== */
+.talent-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 180px);
+    gap: 12px;
+    justify-content: center;
+}
 .talent-card-item {
     background: transparent;
     border: 0;
@@ -139,8 +145,7 @@ body {
     cursor: pointer;
     transition: 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    max-width: 180px;
-    margin: 0 auto;
+    width: 180px;
 }
 .talent-card-item:hover {
     transform: translateY(-4px);
@@ -161,11 +166,6 @@ body {
 .talent-card-name,
 .talent-card-desc {
     display: none;
-}
-.talent-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 5px;
 }
 /* ========== 弹窗基础（匹配你HTML modal结构） ========== */
 .modal {
