@@ -802,12 +802,7 @@ const talentList = [
         "name": "无",
         "url": null
     }
-}
-
-
-
-]
-
+}    
 ];
 
 const talentCardList = document.getElementById("talentCardList");
