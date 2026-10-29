@@ -282,43 +282,64 @@ const effectList = [
         img: "images/effectcard/canghai-shiyi.png",
     },
 ];
+const effectCardList = document.getElementById("effectCardList");
+const searchInput = document.getElementById("searchInput");
+const effectTypeFilter = document.getElementById("effectTypeFilter");
+const effectPosFilter = document.getElementById("effectPosFilter");
+const detailModal = document.getElementById("detailModal");
+const modalBody = document.getElementById("modalBody");
+const closeModal = document.getElementById("closeModal");
 
-import { effectList } from './effect.js'; // 改成你实际文件名
-
-const searchInput = document.getElementById('searchInput');
-const tierSelect = document.getElementById('tierSelect');
-const posSelect = document.getElementById('posSelect'); // 新增
-
-function render() {
-  const keyword = searchInput.value.trim().toLowerCase();
-  const tierVal = tierSelect.value;
-  const posVal = posSelect.value; // 新增
-
-  const result = effectList.filter(item => {
-    const matchTier = tierVal === 'all' || item.type === tierVal;
-    const matchPos = posVal === 'all' || item.pos === posVal;
-    const matchName = item.name.toLowerCase().includes(keyword);
-    return matchTier && matchPos && matchName;
-  });
-
-  // 渲染卡片部分不变
-  cardGrid.innerHTML = result.map(item => `
-    <div class="card-item">
-      <div class="card-img">
-        <img src="${item.img}" alt="${item.name}" loading="lazy">
-      </div>
-      <div class="card-info">
-        <div class="card-name">${item.name}</div>
-        <div class="card-type">${item.type}</div>
-        <div class="card-pos">${item.pos}</div>
-        ${item.desc ? `<div class="card-desc">${item.desc}</div>` : ''}
-      </div>
-    </div>
-  `).join('');
+// 根据名称打开弹窗（和装备共用一套弹窗函数，如果你弹窗DOM是同一个）
+function openEffectByName(name){
+    const target = effectList.find(e=>e.name === name);
+    if(!target) return;
+    renderModal(target);
 }
 
-// 记得绑定pos下拉的change事件
-searchInput.addEventListener('input', render);
-tierSelect.addEventListener('change', render);
-posSelect.addEventListener('change', render); // 新增
+// 弹窗渲染函数，适配效果牌字段
+function renderModal(item){
+    let sourceHtml = `<p class="equip-modal-source">来源：${item.source || '暂无'}</p>`;
+    modalBody.innerHTML = `
+    <div class="equip-modal-wrap">
+        <div class="equip-modal-left">
+            <div class="equip-modal-card">
+                <img src="${item.img}" alt="${item.name}">
+                <div class="equip-modal-card-name">${item.name}</div>
+            </div>
+        </div>
+        <div class="equip-modal-right">
+            <h2 class="equip-modal-title">${item.name}<span class="equip-modal-tag">${item.type} · ${item.pos}</span></h2>
+            <p class="equip-modal-desc">${item.desc || '暂无描述'}</p>
+            ${sourceHtml}
+        </div>
+    </div>`;
+    detailModal.style.display = "flex";
+}
+
+function render() {
+    const kw = searchInput.value.trim().toLowerCase();
+    const filterType = effectTypeFilter.value;
+    const filterPos = effectPosFilter.value;
+    effectCardList.innerHTML = "";
+    effectList.forEach(item => {
+        const matchKw = !kw || item.name.toLowerCase().includes(kw) || item.desc.toLowerCase().includes(kw);
+        const matchT = filterType === "all" || item.type === filterType;
+        const matchP = filterPos === "all" || item.pos === filterPos;
+        if (!(matchKw && matchT && matchP)) return;
+        const div = document.createElement("div");
+        div.className = "equip-card-item"; // 复用你装备卡片的css类，不用新增样式
+        div.innerHTML = `<div class="equip-card-cover"><img src="${item.img}" alt="${item.name}"></div>`;
+        div.onclick = () => renderModal(item);
+        effectCardList.appendChild(div);
+    });
+}
+
+closeModal.onclick = () => detailModal.style.display = "none";
+window.onclick = (e) => {
+    if (e.target === detailModal) detailModal.style.display = "none";
+};
+searchInput.addEventListener("input", render);
+effectTypeFilter.addEventListener("change", render);
+effectPosFilter.addEventListener("change", render);
 render();
