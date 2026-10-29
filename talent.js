@@ -866,7 +866,7 @@ const talentList = [
     "rank": "铜天赋",
     "effectType": "数值类天赋",
     "camp": "通用",
-    "img": "weiruyoushi.png",
+    "img": "weiruoyoushi.png",
     "desc": "打出觉醒英雄牌时，其获得22%暴击率和11%物理及法术吸血（每名英雄仅1次）。",
     "source": "棋手升级时概率选择获取天赋。",
     "relatedProduct": {
