@@ -130,17 +130,23 @@ body {
     background-color: #1c212c;
     border: 1px solid #333844;
     color: #e6e8ef;
-    padding: 10px 16px;
-    border-radius: 10px;
-    font-size: 15px;
+    /* 上下内边距加大，右边留出箭头位置 */
+    padding: 14px 40px 14px 20px;
+    /* 更大圆角匹配截图 */
+    border-radius: 16px;
+    font-size: 18px;
     outline: none;
     cursor: pointer;
-    min-width: 180px;
+    /* 去掉固定最小宽度，自适应文字宽度 */
+    /* min-width: 180px; */
+    /* 下拉箭头svg */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%23888e9c'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
 }
 .filter-select:focus {
     border-color: #ffd369;
 }
-
 /* 效果牌网格（完全参照英雄牌网格样式复刻） */
 .effect-card-grid {
     display: grid;
