@@ -278,4 +278,120 @@ body {
         width: 100%;
         justify-content: flex-start;
     }
+    .talent-modal-wrap{
+    display: flex;
+    gap: 32px;
+    position: relative;
+    padding:24px;
+}
+.modal-left{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:16px;
+    width: 280px;
+    flex-shrink:0;
+}
+.talent-card-box{
+    width: 100%;
+    background:#333842;
+    padding:20px;
+    border-radius:16px;
+}
+.talent-card-img{
+    width:100%;
+    border-radius:12px;
+}
+.rank-tag{
+    padding:8px 24px;
+    border-radius:99px;
+    color:#fff;
+    font-size:16px;
+}
+.rank-tag.copper{
+    background:#7b4833;
+}
+.rank-tag.silver{
+    background:#747b88;
+}
+.rank-tag.gold{
+    background:#a17927;
+}
+
+.modal-right{
+    flex:1;
+    color:#fff;
+}
+.header-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:20px;
+}
+.talent-title{
+    font-size:36px;
+    margin:0;
+    color:#ffffff;
+}
+.type-tag{
+    padding:8px 20px;
+    border-radius:99px;
+    color:white;
+    font-size:16px;
+}
+.type-tag.resource{
+    background:#2e7d5b;
+}
+.type-tag.combat{
+    background:#8b3838;
+}
+
+.text-block{
+    margin-bottom:20px;
+}
+.effect-desc{
+    font-size:17px;
+    line-height:1.6;
+    margin:0 0 8px 0;
+}
+.source-line{
+    color:#c5c8cf;
+    margin:0;
+}
+
+.divider{
+    width:100%;
+    height:1px;
+    background:#444954;
+    margin:16px 0;
+}
+
+.info-row{
+    font-size:16px;
+    line-height:2;
+}
+.info-row .label{
+    color:#b0b4bd;
+    min-width:90px;
+    display:inline-block;
+}
+.modal-link{
+    color:#73b8ff;
+    text-decoration:none;
+}
+.modal-link:hover{
+    text-decoration:underline;
+}
+
+.modal-close-btn{
+    position:absolute;
+    top:12px;
+    right:16px;
+    background:transparent;
+    border:none;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+    padding:4px 8px;
+}
 }
