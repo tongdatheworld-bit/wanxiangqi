@@ -921,7 +921,7 @@ const talentList = [
 const talentCardList = document.getElementById("talentCardList");
 const talentSearch = document.getElementById("talentSearch");
 const rankFilter = document.getElementById("rankFilter");
-const effectTypeFilter = document.getElementById("effectTypeFilter");
+const talentTypeFilter = document.getElementById("talentTypeFilter");
 const campFilter = document.getElementById("campFilter");
 const boostTypeFilter = document.getElementById("boostTypeFilter");
 const talentModal = document.getElementById("talentModal");
@@ -934,7 +934,7 @@ function closeModal(){
 function renderTalent() {
     const kw = talentSearch.value.trim().toLowerCase();
     const selRankVal = rankFilter.value;
-    const selEffectVal = effectTypeFilter.value;
+    const seltalentVal = talentTypeFilter.value;
     const selCampVal = campFilter.value;
     const selBoostVal = boostTypeFilter.value;
 
@@ -952,16 +952,16 @@ function renderTalent() {
         }
 
         // talentType 筛选：新增 mechanism 匹配机制类天赋
-        let matchEffect = true;
-        if (selEffectVal !== "all") {
-            if (selEffectVal === "resource") {
-                matchEffect = item.talentType === "资源类天赋";
+        let matchtalent = true;
+        if (seltalentVal !== "all") {
+            if (seltalentVal === "resource") {
+                matchtalent = item.talentType === "资源类天赋";
             }
-            if (selEffectVal === "combat") {
-                matchEffect = item.talentType === "战斗类天赋";
+            if (seltalentVal === "combat") {
+                matchtalent = item.talentType === "战斗类天赋";
             }
-            if (selEffectVal === "mechanism") {
-                matchEffect = item.talentType === "机制类天赋";
+            if (seltalentVal === "mechanism") {
+                matchtalent = item.talentType === "机制类天赋";
             }
         }
 
@@ -978,7 +978,7 @@ function renderTalent() {
 
         const matchBoost = true;
 
-        if (!(matchSearch && matchRank && matchEffect && matchCamp && matchBoost)) return;
+        if (!(matchSearch && matchRank && matchtalent && matchCamp && matchBoost)) return;
 
         const cardDom = document.createElement("div");
         cardDom.className = "talent-card-item";
@@ -1009,7 +1009,7 @@ function renderTalent() {
 
 talentSearch.addEventListener("input", renderTalent);
 rankFilter.addEventListener("change", renderTalent);
-effectTypeFilter.addEventListener("change", renderTalent);
+talentTypeFilter.addEventListener("change", renderTalent);
 campFilter.addEventListener("change", renderTalent);
 boostTypeFilter.addEventListener("change", renderTalent);
 
@@ -1053,7 +1053,7 @@ function openModal(item) {
                 <div class="type-tag ${item.talentType.includes('资源') ? 'resource' : 'combat'}">
                     ${item.talentType}
                 </div>
-                <p class="effect-desc">${item.desc}</p>
+                <p class="talent-desc">${item.desc}</p>
                 <p class="source-line">来源：${item.source || "未知"}</p>
                 <div class="info-row">
                     <span class="label">相关产物：</span>
