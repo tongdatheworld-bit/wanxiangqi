@@ -175,26 +175,24 @@ body {
     position: fixed;
     inset: 0;
     background-color: rgba(0,0,0,0.7);
-    /* 核心居中 */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 999;
 }
 .modal-content {
-    /* 你弹窗里面的卡片盒子 */
-    width: 600px;
-    max-width: 90%;
+    position: relative; /* 给关闭按钮做定位父容器！ */
+    width: 640px;
+    max-width: 92%;
     background: #1f222b;
-    border-radius: 12px;
-    padding: 24px;
+    border-radius: 14px;
+    padding: 32px; /* 【改】内边距放大，四周留白更多 */
 }
-
 .modal-close {
     color: #ffffff;
     position: absolute;
-    right: 20px;
-    top:12px;
+    right: 24px;
+    top: 16px;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -207,7 +205,7 @@ body {
 .talent-modal-wrap{
     display: flex;
     align-items: flex-start;
-    gap:24px;
+    gap: 28px; /* 【改】左右卡片和文字区拉开距离 */
 }
 .modal-left{
     flex: 0 0 220px;
@@ -229,7 +227,7 @@ body {
     border-radius:6px;
     color:#fff;
     font-size:14px;
-    margin-bottom:8px;
+    margin-bottom: 10px; /* 【改】加大下边距 */
 }
 .rank-tag.copper{
     background:#7b4833;
@@ -242,7 +240,7 @@ body {
 }
 .talent-title{
     font-size:32px;
-    margin:0 0 8px;
+    margin:0 0 10px; /* 【改】加大下边距 */
     color:#ffffff;
 }
 .type-tag{
@@ -251,7 +249,7 @@ body {
     border-radius:6px;
     color:white;
     font-size:14px;
-    margin-bottom:16px;
+    margin-bottom: 20px; /* 【改】标签和描述拉开距离 */
 }
 .type-tag.resource{
     background:#2e7d5b;
@@ -261,18 +259,21 @@ body {
 }
 .effect-desc{
     font-size:16px;
-    line-height:1.6;
-    margin:0 0 8px 0;
+    line-height:1.7; /* 【改】行高放大，文字松一点 */
+    margin:0 0 12px 0;
     color:#e9e2d4;
 }
 .source-line{
     color:#c5c8cf;
-    margin:0 0 14px;
+    margin:0 0 24px; /* 【改】来源行和下面信息区拉开，加分割线 */
     font-size:14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .info-row{
     font-size:15px;
-    line-height:1.9;
+    line-height: 2.0; /* 【改】适配行高，行与行之间空隙更大，和装备弹窗对齐 */
+    margin-bottom: 6px;
 }
 .info-row .label{
     color:#b0b4bd;
@@ -287,7 +288,7 @@ body {
 /* ========= 手机响应式 ========= */
 @media (max-width: 768px) {
     .modal-content {
-        padding: 20px;
+        padding: 24px;
     }
     .talent-modal-wrap{
         flex-direction: column;
@@ -299,5 +300,8 @@ body {
     }
     .modal-right{
         width:100%;
+    }
+    .source-line {
+        margin-bottom: 20px;
     }
 }
