@@ -150,11 +150,14 @@
 </head>
 <body>
 <!-- 主内容【不再隐藏！style删掉display:none】 -->
+<!-- 主内容，直接可见，无display:none -->
 <div id="mainContent">
-    <!-- 你的导航、筛选、阵容列表、所有页面内容全部放这里 -->
+    <div class="filter-area">筛选栏</div>
+    <div id="lineupList"></div>
+    <!-- 详情弹窗detailModal -->
 </div>
 
-<!-- 解锁弹窗 半透明遮罩，拦截点击 -->
+<!-- 解锁遮罩弹窗，浮在最上层 -->
 <div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:9999;display:flex;align-items:center;justify-content:center;">
   <div style="background:rgba(31, 41, 55, 0.92);backdrop-filter: blur(6px);padding:32px;border-radius:16px;text-align:center;color:#fff;max-width:360px;">
     <h3 style="margin:0 0 16px;">🔒 内容解锁</h3>
@@ -168,6 +171,7 @@
 </div>
 
 <script src="./app.js"></script>
+
 
 
 <!-- 所有页面内容全部包进 mainContent 里面！解锁成功才显示 -->
