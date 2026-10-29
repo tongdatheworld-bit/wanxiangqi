@@ -2935,8 +2935,9 @@ function bindCardClick() {
 }
 
 // ✅【在这里粘贴 openHeroModal 函数！】
-function openHeroModal(heroId) {
-    const hero = heroList.find(h => h.id === heroId);
+function openHeroModal(heroKey) {
+    // 按名字匹配，传字符串"嬴政"
+    const hero = heroList.find(h => h.name === heroKey);
     if (!hero) return;
     modalBody.innerHTML = `
         <div class="hero-header-bar">
