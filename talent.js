@@ -116,13 +116,21 @@ function render() {
 }
 
 // 弹窗打开
+// 弹窗打开
 function openModal(item) {
     const fullImgPath = `images/talent/${item.img}`;
     const renderItem = (info) => {
         if (!info || !info.name) return "无";
         if (info.url) {
-            const slug = info.url.replace('#','');
-            return `<a href="${info.url}" class="modal-link" onclick="event.preventDefault();closeModal();openHeroModal('${slug}')">
+            let clickHandler;
+            if (info.url.startsWith('#hero-')) {
+                // 英雄链接：关天赋弹窗 + 唤起英雄弹窗，传中文名字
+                clickHandler = `event.preventDefault();closeModal();openHeroModal('${info.name}')`;
+            } else {
+                // 棋手、阵容链接：目前只关闭天赋弹窗
+                clickHandler = `event.preventDefault();closeModal()`;
+            }
+            return `<a href="${info.url}" class="modal-link" onclick="${clickHandler}">
                 <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
             </a>`;
         } else {
@@ -165,8 +173,6 @@ function openModal(item) {
     `;
     talentModal.classList.add('show');
 }
-
-
 
 function closeModal() {
     talentModal.classList.remove('show');
