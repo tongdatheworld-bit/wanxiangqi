@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="hero-card.css" />
 </head>
 <body>
-
 <!-- 顶部导航 -->
 <div class="top-nav-wrap">
     <a href="./index.html">首页</a>
@@ -20,10 +19,8 @@
     <a href="./effect.html">效果牌</a>
     <a href="./info-gap.html">信息差</a>
 </div>
-
 <div class="container">
     <h2 class="page-title">英雄牌</h2>
-
     <!-- 搜索框 -->
     <div class="search-box">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="#888e9c">
@@ -31,53 +28,58 @@
         </svg>
         <input id="searchInput" type="text" placeholder="搜索名称、描述、阵营或相关关键词..." />
     </div>
-
-    <!-- 筛选区 -->
+    <!-- 筛选区：改成横向标签，和阵容大全UI统一 -->
     <div class="filter-wrap">
+        <!-- 品阶 -->
         <div class="filter-row">
-            <select id="stageFilter" class="filter-select">
-                <option value="all">全部品阶</option>
-                <option value="1">1阶</option>
-                <option value="2">2阶</option>
-                <option value="3">3阶</option>
-                <option value="4">4阶</option>
-                <option value="5">5阶</option>
-            </select>
-
-            <select id="campFilter" class="filter-select">
-                <option value="all">全部阵营</option>
-                <option value="大河流域">大河流域</option>
-                <option value="河洛">河洛</option>
-                <option value="日落海">日落海</option>
-                <option value="三分之地">三分之地</option>
-                <option value="逐鹿">逐鹿</option>
-                <option value="无阵营">无阵营</option>
-            </select>
-
-            <select id="keywordFilter" class="filter-select">
-                <option value="all">全部关键词</option>
-                <option value="牺牲">牺牲</option>
-                <option value="合成">合成</option>
-                <option value="整备">整备</option>
-                <option value="阿科米亚核心">阿科米亚核心</option>
-                <option value="登场">登场</option>
-                <option value="凯旋">凯旋</option>
-                <option value="临时等级">临时等级</option>
-                <option value="退场">退场</option>
-                <option value="败阵">败阵</option>
-                <option value="开团">开团</option>
-                <option value="图腾">图腾</option>
-                <option value="夺取">夺取</option>
-                <option value="闪现">闪现</option>
-                <option value="复生">复生</option>
-            </select>
+            <span class="filter-label">品阶</span>
+            <div class="filter-btn-group" data-filter="stage">
+                <button class="filter-btn active" data-val="all">全部品阶</button>
+                <button class="filter-btn" data-val="1">1阶</button>
+                <button class="filter-btn" data-val="2">2阶</button>
+                <button class="filter-btn" data-val="3">3阶</button>
+                <button class="filter-btn" data-val="4">4阶</button>
+                <button class="filter-btn" data-val="5">5阶</button>
+            </div>
+        </div>
+        <!-- 阵营 -->
+        <div class="filter-row">
+            <span class="filter-label">阵营</span>
+            <div class="filter-btn-group" data-filter="camp">
+                <button class="filter-btn active" data-val="all">全部阵营</button>
+                <button class="filter-btn" data-val="大河流域">大河流域</button>
+                <button class="filter-btn" data-val="河洛">河洛</button>
+                <button class="filter-btn" data-val="日落海">日落海</button>
+                <button class="filter-btn" data-val="三分之地">三分之地</button>
+                <button class="filter-btn" data-val="逐鹿">逐鹿</button>
+                <button class="filter-btn" data-val="无阵营">无阵营</button>
+            </div>
+        </div>
+        <!-- 关键词 -->
+        <div class="filter-row">
+            <span class="filter-label">关键词</span>
+            <div class="filter-btn-group" data-filter="keyword">
+                <button class="filter-btn active" data-val="all">全部关键词</button>
+                <button class="filter-btn" data-val="牺牲">牺牲</button>
+                <button class="filter-btn" data-val="合成">合成</button>
+                <button class="filter-btn" data-val="整备">整备</button>
+                <button class="filter-btn" data-val="阿科米亚核心">阿科米亚核心</button>
+                <button class="filter-btn" data-val="登场">登场</button>
+                <button class="filter-btn" data-val="凯旋">凯旋</button>
+                <button class="filter-btn" data-val="临时等级">临时等级</button>
+                <button class="filter-btn" data-val="退场">退场</button>
+                <button class="filter-btn" data-val="败阵">败阵</button>
+                <button class="filter-btn" data-val="开团">开团</button>
+                <button class="filter-btn" data-val="图腾">图腾</button>
+                <button class="filter-btn" data-val="夺取">夺取</button>
+                <button class="filter-btn" data-val="闪现">闪现</button>
+                <button class="filter-btn" data-val="复生">复生</button>
+            </div>
         </div>
     </div>
-
     <!-- 英雄牌列表 -->
     <div class="hero-card-grid" id="heroCardList"></div>
 </div>
-
 <!-- 详情弹窗 -->
 <div class="modal" id="detailModal">
     <div class="modal-content">
@@ -85,7 +87,6 @@
         <div id="modalBody"></div>
     </div>
 </div>
-
 <script src="hero-card.js"></script>
 </body>
 </html>
