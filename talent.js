@@ -921,42 +921,104 @@ const talentList = [
 const talentCardList = document.getElementById("talentCardList");
 const talentSearch = document.getElementById("talentSearch");
 const rankFilter = document.getElementById("rankFilter");
-const talentTypeFilter = document.getElementById("talentTypeFilter");
+const effectTypeFilter = document.getElementById("effectTypeFilter");
 const campFilter = document.getElementById("campFilter");
 const boostTypeFilter = document.getElementById("boostTypeFilter");
 const talentModal = document.getElementById("talentModal");
 const talentModalBody = document.getElementById("talentModalBody");
 
-// 渲染列表
-function render() {
+function closeModal(){
+    talentModal.style.display = "none";
+}
+
+function renderTalent() {
     const kw = talentSearch.value.trim().toLowerCase();
-    const filterRank = rankFilter.value;
-    const filtertalentType = talentTypeFilter.value;
-    const filterCamp = campFilter.value;
-    const filterBoostType = boostTypeFilter.value;
+    const selRankVal = rankFilter.value;
+    const selEffectVal = effectTypeFilter.value;
+    const selCampVal = campFilter.value;
+    const selBoostVal = boostTypeFilter.value;
+
     talentCardList.innerHTML = "";
+
     talentList.forEach(item => {
-        const matchKw = !kw || item.name.toLowerCase().includes(kw) || item.desc.toLowerCase().includes(kw);
-        const matchRank = filterRank === "all" || item.rank === filterRank;
-        const matchtalentType = filtertalentType === "all" || item.talentType === filtertalentType;
-        const matchCamp = filterCamp === "all" || item.camp === filterCamp;
-        const matchBoostType = filterBoostType === "all" || (item.boostType && item.boostType === filterBoostType);
-        if (!(matchKw && matchRank && matchtalentType && matchCamp && matchBoostType)) return;
-        const div = document.createElement("div");
-        div.className = "talent-card-item";
-        // 拼接完整图片路径
-        const fullImgPath = `images/talent/${item.img}`;
-        div.innerHTML = `
+        const matchSearch = !kw || item.name.toLowerCase().includes(kw) || item.desc.toLowerCase().includes(kw);
+
+        // 品阶筛选
+        let matchRank = true;
+        if (selRankVal !== "all") {
+            if (selRankVal === "copper") matchRank = item.rank === "铜天赋";
+            if (selRankVal === "silver") matchRank = item.rank === "银天赋";
+            if (selRankVal === "gold") matchRank = item.rank === "金天赋";
+        }
+
+        // talentType 筛选：新增 mechanism 匹配机制类天赋
+        let matchEffect = true;
+        if (selEffectVal !== "all") {
+            if (selEffectVal === "resource") {
+                matchEffect = item.talentType === "资源类天赋";
+            }
+            if (selEffectVal === "combat") {
+                matchEffect = item.talentType === "战斗类天赋";
+            }
+            if (selEffectVal === "mechanism") {
+                matchEffect = item.talentType === "机制类天赋";
+            }
+        }
+
+        // 阵营筛选，none 匹配 "通用"
+        let matchCamp = true;
+        if (selCampVal !== "all") {
+            if (selCampVal === "sand") matchCamp = item.camp === "三分之地";
+            if (selCampVal === "river") matchCamp = item.camp === "大河流域";
+            if (selCampVal === "sunset") matchCamp = item.camp === "日落海";
+            if (selCampVal === "heluo") matchCamp = item.camp === "河洛";
+            if (selCampVal === "battle") matchCamp = item.camp === "逐鹿";
+            if (selCampVal === "none") matchCamp = item.camp === "通用";
+        }
+
+        const matchBoost = true;
+
+        if (!(matchSearch && matchRank && matchEffect && matchCamp && matchBoost)) return;
+
+        const cardDom = document.createElement("div");
+        cardDom.className = "talent-card-item";
+        cardDom.innerHTML = `
             <div class="talent-card-cover">
-                <img src="${fullImgPath}" alt="${item.name}" onerror="this.style.display='none'">
+                <img src="${item.img}" alt="${item.name}">
             </div>
         `;
-        div.onclick = () => openModal(item);
-        talentCardList.appendChild(div);
+        cardDom.onclick = () => {
+            talentModalBody.innerHTML = `
+                <div class="talent-modal-wrap">
+                    <div class="talent-modal-left">
+                        <img src="${item.img}" alt="${item.name}">
+                    </div>
+                    <div class="talent-modal-right">
+                        <h2>${item.name}</h2>
+                        <p class="tag">${item.rank} · ${item.talentType} · ${item.camp}</p>
+                        <div class="desc">${item.desc}</div>
+                        <div class="source">来源：${item.source}</div>
+                    </div>
+                </div>
+            `;
+            talentModal.style.display = "flex";
+        };
+        talentCardList.appendChild(cardDom);
     })
 }
 
-// 弹窗打开
+talentSearch.addEventListener("input", renderTalent);
+rankFilter.addEventListener("change", renderTalent);
+effectTypeFilter.addEventListener("change", renderTalent);
+campFilter.addEventListener("change", renderTalent);
+boostTypeFilter.addEventListener("change", renderTalent);
+
+window.onclick = (e) => {
+    if (e.target === talentModal) closeModal();
+}
+
+renderTalent();
+
 // 弹窗打开
 function openModal(item) {
     const fullImgPath = `images/talent/${item.img}`;
