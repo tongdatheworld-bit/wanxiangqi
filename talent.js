@@ -666,12 +666,12 @@ const talentList = [
 }
 ,{
     "id": 25,
-    "name": "存款利息",
+    "name": "五福临门",
     "rank": "铜天赋",
     "effectType": "机制类天赋",
     "camp": "通用",
-    "img": "cunkuanlixi.png",
-    "desc": "获得3能量。回合结束时，你每有7能量，额外获得1能量。",
+    "img": "wufulinmen.png",
+    "desc": "获得1张天赋牌五福临门：随机获得5张英雄牌。",
     "source": "棋手升级时概率选择获取天赋。",
     "relatedProduct": {
         "name": "无",
@@ -692,6 +692,7 @@ const talentList = [
         "url": null
     }
 }
+
 ,{
     "id": 26,
     "name": "节能商店",
@@ -721,13 +722,13 @@ const talentList = [
     }
 }
 ,{
-    "id": 27,
-    "name": "三十而达",
-    "rank": "银天赋",
+    "id": 30,
+    "name": "小电池包",
+    "rank": "铜天赋",
     "effectType": "机制类天赋",
     "camp": "通用",
-    "img": "sanshierda.png",
-    "desc": "备战阶段中，英雄总等级到达30级时，获得9棋手经验。",
+    "img": "xiaodianchibao.png",
+    "desc": "获得5能量。",
     "source": "棋手升级时概率选择获取天赋。",
     "relatedProduct": {
         "name": "无",
@@ -859,7 +860,61 @@ const talentList = [
         "name": "无",
         "url": null
     }
-} 
+},{
+    "id": 32,
+    "name": "微弱优势",
+    "rank": "铜天赋",
+    "effectType": "数值类天赋",
+    "camp": "通用",
+    "img": "weiruyoushi.png",
+    "desc": "打出觉醒英雄牌时，其获得22%暴击率和11%物理及法术吸血（每名英雄仅1次）。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},{
+    "id": 33,
+    "name": "五福临门",
+    "rank": "铜天赋",
+    "effectType": "机制类天赋",
+    "camp": "通用",
+    "img": "wufulinmen.png",
+    "desc": "获得1张天赋牌五福临门：随机获得5张英雄牌。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+}
 ];
 
 const talentCardList = document.getElementById("talentCardList");
