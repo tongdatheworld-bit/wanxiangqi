@@ -3082,4 +3082,4 @@ searchInput.addEventListener('input', renderList);
 
 renderList();
 console.log("✅ 初始化渲染执行完毕");
-})；
+});
