@@ -151,51 +151,46 @@ function openModal(item) {
             <div class="modal-left">
                 <img class="talent-card-img" src="${fullImgPath}" alt="${item.name}" onerror="this.style.display='none'">
             </div>
-
             <div class="modal-right">
                 <div class="rank-tag ${item.rank === '铜天赋' ? 'copper' : item.rank === '银天赋' ? 'silver' : 'gold'}">
                     ${item.rank}
                 </div>
-
                 <h2 class="talent-title">${item.name}</h2>
-
                 <div class="type-tag ${item.effectType.includes('资源') ? 'resource' : 'combat'}">
                     ${item.effectType}
                 </div>
-
                 <p class="effect-desc">${item.desc}</p>
                 <p class="source-line">来源：${item.source || "未知"}</p>
-
                 <div class="info-row">
                     <span class="label">相关产物：</span>
                     <span>${linkNode(item.relatedProduct)}</span>
                 </div>
-
                 <div class="info-row">
                     <span class="label">适配英雄：</span>
                     <span>${linkNode(item.fitHero)}</span>
                 </div>
-
                 <div class="info-row">
                     <span class="label">适配棋手：</span>
                     <span>${linkNode(item.fitPlayer)}</span>
                 </div>
-
                 <div class="info-row">
                     <span class="label">适配阵容：</span>
                     <span>${linkNode(item.fitTeam)}</span>
                 </div>
             </div>
-
-            <button class="modal-close-btn" onclick="closeModal()">×</button>
         </div>
     `;
-
     talentModal.style.display = "block";
 }
 
 function closeModal() {
     talentModal.style.display = "none";
+}
+// 点击遮罩空白关闭
+talentModal.onclick = function(e){
+    if(e.target === talentModal){
+        closeModal();
+    }
 }
 // 绑定事件
 talentSearch.oninput = render;
