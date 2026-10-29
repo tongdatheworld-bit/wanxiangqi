@@ -2,7 +2,7 @@ let allLineupData = [];
 let currentFilterPlayer = 'all';
 let currentFilterRank = 'all';
 let currentFilterCamp = 'all';
-
+let searchKw = ''; // 全局保存搜索词
 const lineupWrap = document.getElementById('lineupList');
 if (lineupWrap) {
     fetch('./lineup.json')
@@ -33,16 +33,23 @@ function renderList() {
     if (currentFilterRank !== 'all') {
         filterArr = filterArr.filter(item => item.rank === currentFilterRank)
     }
-    // BAN阵营筛选，容错判断数组
+    // BAN阵营筛选
     if (currentFilterCamp !== 'all') {
         filterArr = filterArr.filter(item => Array.isArray(item["ban位"]) && item["ban位"].includes(currentFilterCamp))
+    }
+    // ========= 新增搜索筛选 =========
+    if (searchKw) {
+        filterArr = filterArr.filter(item => {
+            const nameMatch = item.name.toLowerCase().includes(searchKw);
+            const heroMatch = Array.isArray(item.heroList) && item.heroList.some(h => h.name.toLowerCase().includes(searchKw));
+            return nameMatch || heroMatch;
+        })
     }
 
     if (!filterArr.length) {
         wrap.innerHTML = `<div style="text-align:center;color:#686e7c;padding:40px">没有匹配的阵容</div>`
         return
     }
-
     wrap.innerHTML = filterArr.map(item => `
     <div class="lineup-card" data-id="${item.id}">
         <div class="lineup-avatar">
@@ -73,46 +80,45 @@ function renderList() {
         </div>
     </div>
     `).join('')
-
     bindCardClick();
 }
 
-// 卡片点击弹窗
+// 卡片点击弹窗（改成事件委托，避免重复绑定！）
 function bindCardClick() {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeModalBtn = document.getElementById('closeModal');
     if (!modal || !modalBody) return;
 
-    document.querySelectorAll('.lineup-card').forEach(card => {
-        card.onclick = () => {
-            const id = Number(card.dataset.id);
-            const find = allLineupData.find(x => x.id === id);
-            if (!find) return;
-
-            modalBody.innerHTML = `
-                <h2>${find.name}</h2>
-                <div class="modal-sub">强度：${find.rank}｜难度：${find.hard}</div>
-                <div class="modal-block">
-                    <h4>BAN阵营</h4>
-                    <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
-                </div>
-                <div class="modal-block">
-                    <h4>英雄</h4>
-                    <p>${Array.isArray(find.heroList) ? find.heroList.map(h => h.isCore ? `【核】${h.name}` : h.name).join('、') : '无'}</p>
-                </div>
-                <div class="modal-block">
-                    <h4>装备</h4>
-                    <p>${Array.isArray(find.equip) && find.equip.length ? find.equip.map(e => e.name).join('、') : '无'}</p>
-                </div>
-                <div class="modal-block">
-                    <h4>阵容码</h4>
-                    <p style="font-family:monospace">${find.lineupCode}</p>
-                </div>
-            `
-            modal.style.display = 'flex';
-        }
-    })
+    // 只绑一次外层，不再循环给每个card绑定
+    lineupWrap.onclick = function(e) {
+        const card = e.target.closest('.lineup-card');
+        if (!card) return;
+        const id = Number(card.dataset.id);
+        const find = allLineupData.find(x => x.id === id);
+        if (!find) return;
+        modalBody.innerHTML = `
+            <h2>${find.name}</h2>
+            <div class="modal-sub">强度：${find.rank}｜难度：${find.hard}</div>
+            <div class="modal-block">
+                <h4>BAN阵营</h4>
+                <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
+            </div>
+            <div class="modal-block">
+                <h4>英雄</h4>
+                <p>${Array.isArray(find.heroList) ? find.heroList.map(h => h.isCore ? `【核】${h.name}` : h.name).join('、') : '无'}</p>
+            </div>
+            <div class="modal-block">
+                <h4>装备</h4>
+                <p>${Array.isArray(find.equip) && find.equip.length ? find.equip.map(e => e.name).join('、') : '无'}</p>
+            </div>
+            <div class="modal-block">
+                <h4>阵容码</h4>
+                <p style="font-family:monospace">${find.lineupCode}</p>
+            </div>
+        `
+        modal.style.display = 'flex';
+    }
 
     if (closeModalBtn) {
         closeModalBtn.onclick = () => modal.style.display = 'none';
@@ -143,7 +149,7 @@ if (filterChips.length > 0) {
 const searchInput = document.getElementById('searchInput');
 if (searchInput) {
     searchInput.addEventListener('input', (e) => {
-        const searchKw = e.target.value.trim().toLowerCase();
+        searchKw = e.target.value.trim().toLowerCase();
         renderList();
     })
 }
@@ -157,36 +163,39 @@ async function copyCode(code) {
         alert("复制失败，请手动复制：" + code)
     }
 }
-// ========== 在这里改你的验证码 ==========
-const RIGHT_CODE = "万象一图诀"; 
 
-const lockModal = document.getElementById('lockModal');
-const mainContent = document.getElementById('mainContent');
-const codeInput = document.getElementById('codeInput');
-const unlockBtn = document.getElementById('unlockBtn');
-const tipText = document.getElementById('tipText');
+// ========== 解锁模块【包在 DOMContentLoaded 里面，防止null报错！】 ==========
+document.addEventListener('DOMContentLoaded', function () {
+    const RIGHT_CODE = "万象一图诀";
+    const lockModal = document.getElementById('lockModal');
+    const mainContent = document.getElementById('mainContent');
+    const codeInput = document.getElementById('codeInput');
+    const unlockBtn = document.getElementById('unlockBtn');
+    const tipText = document.getElementById('tipText');
+    const STORAGE_KEY = "wanxiang_unlock"; // 和html保持一致！
 
-// 点击解锁
-unlockBtn.onclick = function(){
-  const val = codeInput.value.trim();
-  if(val === RIGHT_CODE){
-    lockModal.style.display = 'none';
-    mainContent.style.display = 'block';
-    // 可选：存入浏览器本地缓存，下次打开不用再输
-    localStorage.setItem('wx_unlock','ok');
-  }else{
-    tipText.style.display = 'block';
-  }
-}
+    if (!lockModal || !mainContent || !codeInput || !unlockBtn || !tipText) {
+        console.warn('解锁弹窗元素缺失');
+        return;
+    }
 
-// 回车直接提交
-codeInput.onkeydown = function(e){
-  if(e.key === 'Enter') unlockBtn.click();
-}
+    // 本地缓存放行
+    if(localStorage.getItem(STORAGE_KEY) === 'ok'){
+        lockModal.style.display = 'none';
+        mainContent.style.display = 'block';
+    }
 
-// 本地缓存：已经解锁过，下次进来直接放行，不用重复扫码输码
-if(localStorage.getItem('wx_unlock') === 'ok'){
-  lockModal.style.display = 'none';
-  mainContent.style.display = 'block';
-}
-
+    unlockBtn.onclick = function(){
+      const val = codeInput.value.trim();
+      if(val === RIGHT_CODE){
+        lockModal.style.display = 'none';
+        mainContent.style.display = 'block';
+        localStorage.setItem(STORAGE_KEY,'ok');
+      }else{
+        tipText.style.display = 'block';
+      }
+    }
+    codeInput.onkeydown = function(e){
+      if(e.key === 'Enter') unlockBtn.click();
+    }
+})
