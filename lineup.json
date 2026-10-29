@@ -840,7 +840,7 @@
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
         {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-        {"name":"大司命","img":"images/heroes/dasimin.png","isCore":false},
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"刘邦","img":"images/heroes/liubang.png","isCore":true}
     ]
 },
@@ -1007,7 +1007,7 @@
         {"name":"虞姬","img":"images/heroes/yuji.png","isCore":false},
         {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-        {"name":"大司命","img":"images/heroes/dasimning.png","isCore":false},
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
         {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true}
     ]
@@ -1207,7 +1207,7 @@
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"大司命","img":"images/heroes/dasimning.png","isCore":false},
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ]
@@ -1394,7 +1394,7 @@
         {"name":"虞姬","img":"images/heroes/yuji.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
         {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
-        {"name":"大司命","img":"images/heroes/dasimning.png","isCore":false},
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
         {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false}
     ]
@@ -1524,7 +1524,7 @@
     "heroList": [
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-        {"name":"大司命","img":"images/heroes/dasimning.png","isCore":false},
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
         {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
         {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
