@@ -722,7 +722,7 @@ const talentList = [
     }
 }
 ,{
-    "id": 30,
+    "id": 27,
     "name": "小电池包",
     "rank": "铜天赋",
     "talentType": "资源类天赋",
