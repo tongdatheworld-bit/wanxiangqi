@@ -15,8 +15,8 @@ const talentList = [
         desc: "若回合内没有打出英雄牌，下回合开始时，获得2能量。",
         source: "棋手升级时概率选择获取天赋。",
         relatedProduct: {name:"无", url:null},
-        fitHero: {name:"嬴政", url:"#hero-yingzheng"},
-        fitPlayer: {name:"明先生", url:"#player-ming"},
+        fitHero: {name:"嬴政", url:"#hero-yingzheng", avatar:"images/heroes/yingzheng.png"},
+        fitPlayer: {name:"明先生", url:"#player-ming", avatar:"images/players/mingxiansheng.png"},
         fitTeam: {name:"明先生雷霆战机", url:"#team-mingleiting"}
     },
     {
@@ -119,10 +119,12 @@ function render() {
 // 弹窗打开
 function openModal(item) {
     const fullImgPath = `images/talent/${item.img}`;
-    const linkNode = (info) => {
+    const renderItem = (info) => {
         if (!info || !info.name) return "无";
         if (info.url) {
-            return `<a href="${info.url}" class="modal-link">${info.name}</a>`;
+            return `<a href="${info.url}" class="modal-link">
+                <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
+            </a>`;
         } else {
             return info.name;
         }
@@ -144,25 +146,26 @@ function openModal(item) {
                 <p class="source-line">来源：${item.source || "未知"}</p>
                 <div class="info-row">
                     <span class="label">相关产物：</span>
-                    <span>${linkNode(item.relatedProduct)}</span>
+                    <span>${renderItem(item.relatedProduct)}</span>
                 </div>
                 <div class="info-row">
                     <span class="label">适配英雄：</span>
-                    <span>${linkNode(item.fitHero)}</span>
+                    <span>${renderItem(item.fitHero)}</span>
                 </div>
                 <div class="info-row">
                     <span class="label">适配棋手：</span>
-                    <span>${linkNode(item.fitPlayer)}</span>
+                    <span>${renderItem(item.fitPlayer)}</span>
                 </div>
                 <div class="info-row">
                     <span class="label">适配阵容：</span>
-                    <span>${linkNode(item.fitTeam)}</span>
+                    <span>${renderItem(item.fitTeam)}</span>
                 </div>
             </div>
         </div>
     `;
     talentModal.classList.add('show');
 }
+
 function closeModal() {
     talentModal.classList.remove('show');
 }
