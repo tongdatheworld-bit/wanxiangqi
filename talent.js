@@ -101,24 +101,21 @@ const talentModal = document.getElementById("talentModal");
 const talentModalBody = document.getElementById("talentModalBody");
 
 // 渲染列表
+// 渲染列表
 function render() {
     const kw = talentSearch.value.trim().toLowerCase();
     const filterRank = rankFilter.value;
     const filterEffectType = effectTypeFilter.value;
     const filterCamp = campFilter.value;
     const filterBoostType = boostTypeFilter.value;
-
     talentCardList.innerHTML = "";
-
     talentList.forEach(item => {
         const matchKw = !kw || item.name.toLowerCase().includes(kw) || item.desc.toLowerCase().includes(kw);
         const matchRank = filterRank === "all" || item.rank === filterRank;
         const matchEffectType = filterEffectType === "all" || item.effectType === filterEffectType;
         const matchCamp = filterCamp === "all" || item.camp === filterCamp;
-        const matchBoostType = filterBoostType === "all" || item.boostType === filterBoostType;
-
+        const matchBoostType = filterBoostType === "all" || (item.boostType && item.boostType === filterBoostType);
         if (!(matchKw && matchRank && matchEffectType && matchCamp && matchBoostType)) return;
-
         const div = document.createElement("div");
         div.className = "effect-card-item";
         // 拼接完整图片路径
