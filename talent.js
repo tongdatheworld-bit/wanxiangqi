@@ -110,7 +110,7 @@ const talentList = [
     "rank": "铜天赋",
     "effectType": "资源类天赋",
     "camp": "大河流域",
-    "img": "dhexinyuan.png",
+    "img": "dahexinyuan.png",
     "desc": "获得2能量，以及随机1张2-3阶【大河流域】英雄牌。",
     "source": "棋手升级时概率选择获取天赋。",
     "relatedProduct": {
@@ -306,7 +306,7 @@ const talentList = [
     "rank": "铜天赋",
     "effectType": "战斗类天赋",
     "camp": "通用",
-    "img": "bansudeyiliuwu.png",
+    "img": "banshudeyiliuwu.png",
     "desc": "获得2级电磁弹簧：在指定位置构筑1个2级电磁弹簧（敌方踩中时会被弹至战场后排）。",
     "source": "棋手升级时概率选择获取天赋。",
     "relatedProduct": {
@@ -614,7 +614,7 @@ const talentList = [
     "rank": "铜天赋",
     "effectType": "机制类天赋",
     "camp": "通用",
-    "img": "xiankoutian.png",
+    "img": "xiankuhoutian.png",
     "desc": "选取天赋后，当你输掉2场战斗时，获得6棋手经验。",
     "source": "棋手升级时概率选择获取天赋。",
     "relatedProduct": {
