@@ -844,6 +844,23 @@
         {"name":"刘邦","img":"images/heroes/liubang.png","isCore":true}
     ]
 }
+{
+    "id": 45,
+    "name": "重装凯（兄妹）",
+    "rank": "A",
+    "player": "嫦小娥",
+    "playerImg": "images/players/changxiaoe.png",
+    "hard": "简单",
+    "lineupCode": "15820298524206098（点击复制）",
+    "ban位": ["三分之地", "大河流域", "逐鹿"],
+    "heroList": [
+        {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
+        {"name":"铠","img":"images/heroes/kai.png","isCore":true},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":true}
+    ]
+}
 
 
 
