@@ -3061,23 +3061,23 @@ function openHeroModal(heroKey) {
 
 // 绑定筛选按钮
 document.querySelectorAll('.filter-btn-group').forEach(group => {
-    const type = group.dataset.filter;
-    group.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.onclick = () => {
-            group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            filterState[type] = btn.dataset.val;
-            renderList();
-        }
-    })
-})
+  const type = group.dataset.filter;
+  group.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.onclick = () => {
+      group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterState[type] = btn.dataset.val;
+      renderList();
+    };
+  });
+});
 
 closeModal.onclick = () => {
-    detailModal.style.display = 'none';
-}
+  detailModal.style.display = 'none';
+};
 detailModal.addEventListener('click', (e) => {
-    if (e.target === detailModal) detailModal.style.display = 'none';
-})
+  if (e.target === detailModal) detailModal.style.display = 'none';
+});
 searchInput.addEventListener('input', renderList);
 
 renderList();
