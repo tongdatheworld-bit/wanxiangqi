@@ -2139,39 +2139,8 @@ const heroList = [
     "equipList": ["e1", "e2"],
     "teamList": ["t1"]
 }
-,{
-    "id": 66,
-    "name": "艾琳",
-    "stage": 4,
-    "camp": "日落海",
-    "avatarImg": "images/heroes/ailin.png",
-    "img": "images/herocard/ailin.png",
-    "awakeningImg": "images/herocard/awakening/ailin.png",
-    "skillImg": "images/herocard/skills/yewuzhiyi.png",
-    "desc": "开团：艾琳获得自身等级×1%的攻击速度。",
-    "source": "该卡牌通过商店购买、拍卖等渠道获得",
-    "keywords": ["开团"],
-    "hp": 210,
-    "mp": 30,
-    "mpMax": 85,
-    "physicalAtk": 32,
-    "magicAtk": 20,
-    "physicalDef": 14,
-    "magicDef": 14,
-    "atkSpeed": 1.00,
-    "critRate": "0%",
-    "critDmg": "40%",
-    "atkRange": 5,
-    "skillName": "叶舞·致意",
-    "skillDesc": "被动：艾琳每次普攻为自己累积1层月桂祝福，当达到10/20层时，艾琳的技能会获得进化。主动：艾琳向当前目标敌人发出1束月桂叶，造成100%法术攻击力的法术伤害。10层进化：若周围2格有敌人，则位移至敌人较少处，随后向目标发出1片月桂飞叶，造成100%法术攻击力的法术伤害。20层进化：若周围2格有敌人，则位移至敌人较少处，向目标发出5片月桂飞叶，每片造成100%法术攻击力的法术伤害。",
-    "skillLv10": "技能伤害提升至150%法术攻击力",
-    "skillLv40": "30层时，获得额外一次进化：每次普攻获得2点法术攻击力，并附带10%法术攻击力的法术伤害",
-    "skillLv100": "开战艾琳挥舞翅膀绕场飞行，获得无限攻击距离，并且释放技能时普攻获得穿透效果，持续5秒",
-    "awakeningDesc": "开团：艾琳获得自身等级×2%的攻击速度。",
-    "equipList": ["e1", "e2"],
-    "teamList": ["t1"]
-}
-,{
+,
+{
     "id": 67,
     "name": "李信",
     "stage": 4,
@@ -2840,6 +2809,7 @@ function renderList() {
     bindCardClick();
 }
 
+// ===== 你原来的 bindCardClick 原样保留 =====
 function bindCardClick() {
     document.querySelectorAll('.hero-card-item').forEach(card => {
         card.onclick = () => {
@@ -2964,15 +2934,143 @@ function bindCardClick() {
     })
 }
 
+// ✅【在这里粘贴 openHeroModal 函数！】
+function openHeroModal(heroId) {
+    const hero = heroList.find(h => h.id === heroId);
+    if (!hero) return;
+    modalBody.innerHTML = `
+        <div class="hero-header-bar">
+            <div class="hero-icon-wrap">
+                <img class="hero-main-icon" src="${hero.avatarImg}" alt="${hero.name}">
+                <div class="hero-name-title">
+                    <div class="hero-name-large">${hero.name}</div>
+                    <div class="hero-subtitle">${hero.source}</div>
+                    <div class="hero-tags-top">
+                        <span class="tag-camp">${hero.camp}</span>
+                        <span class="tag-stage ${getStageClass(hero.stage)}">${hero.stage}阶</span>
+                        ${hero.keywords.map(k => `<span class="tag-small">${k}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+            <div class="hero-card-tag">卡牌详情</div>
+        </div>
+        <div class="split-line"></div>
+        <div class="card-compare-row">
+            <div class="card-compare-item">
+                <img class="compare-card-img" src="${hero.img}" alt="普通卡牌">
+                <div class="compare-label">普通形态</div>
+                <div style="padding:0 10px;text-align:center;color:#d9cdb8">${hero.desc}</div>
+            </div>
+            <div class="card-compare-item">
+                <img class="compare-card-img" src="${hero.awakeningImg}" alt="觉醒卡牌">
+                <div class="compare-label">觉醒形态</div>
+                <div style="padding:0 10px;text-align:center;color:#d9cdb8">${hero.awakeningDesc}</div>
+            </div>
+        </div>
+        <div class="split-line"></div>
+        <div class="modal-block">
+            <h4>基础属性</h4>
+            <div class="attr-grid">
+                <div class="attr-item">
+                    <div class="attr-label">生命值</div>
+                    <div class="attr-val">${hero.hp}</div>
+                </div>
+                <div class="attr-item">
+                    <div class="attr-label">法力</div>
+                    <div class="attr-val">${hero.mp}/${hero.mpMax}</div>
+                </div>
+                <div class="attr-item">
+                    <div class="attr-label">物攻</div>
+                    <div class="attr-val">${hero.physicalAtk}</div>
+                </div>
+                <div class="attr-item">
+                    <div class="attr-label">法攻</div>
+                    <div class="attr-val">${hero.magicAtk}</div>
+                </div>
+                <div class="attr-item">
+                    <div class="attr-label">物防</div>
+                    <div class="attr-val">${hero.physicalDef}</div>
+                </div>
+                <div class="attr-item">
+                    <div class="attr-label">法防</div>
+                    <div class="attr-val">${hero.magicDef}</div>
+                </div>
+                <div class="attr-item">
+                    <div class="attr-label">攻速</div>
+                    <div class="attr-val">${hero.atkSpeed}</div>
+                </div>
+                <div class="attr-item">
+                    <div class="attr-label">射程</div>
+                    <div class="attr-val">${hero.atkRange}</div>
+                </div>
+                <div class="attr-item">
+                    <div class="attr-label">暴击率</div>
+                    <div class="attr-val">${hero.critRate}</div>
+                </div>
+                <div class="attr-item">
+                    <div class="attr-label">暴击伤害</div>
+                    <div class="attr-val">${hero.critDmg}</div>
+                </div>
+            </div>
+        </div>
+        <div class="split-line"></div>
+        <div class="modal-block">
+            <h4>技能</h4>
+            <div class="skill-row">
+                <img class="skill-icon" src="${hero.skillImg}" alt="${hero.skillName}">
+                <div>
+                    <div class="skill-name">${hero.skillName}</div>
+                    <div class="skill-text">${hero.skillDesc}</div>
+                    <div class="skill-level"><span class="gold-text">Lv10：</span>${hero.skillLv10}</div>
+                    <div class="skill-level"><span class="gold-text">Lv40：</span>${hero.skillLv40}</div>
+                    <div class="skill-level"><span class="gold-text">Lv100：</span>${hero.skillLv100}</div>
+                </div>
+            </div>
+        </div>
+        <div class="split-line"></div>
+        <div class="recommend-wrap">
+            <div class="recommend-title">推荐装备</div>
+            <div class="item-grid">
+                ${(hero.equipList || []).map(e=>`
+                    <div class="item-card">
+                        <img src="images/equip/${e}.png">
+                        <div class="item-name">${e}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        <div class="recommend-wrap">
+            <div class="recommend-title">适配阵容</div>
+            <div class="item-grid">
+                ${(hero.teamList || []).map(t=>`
+                    <div class="item-card">
+                        <img src="images/team/${t}.png">
+                        <div class="item-name">${t}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+    detailModal.style.display = 'flex';
+}
+
+// 下面这些全部原样不动，保留
 closeModal.onclick = () => {
     detailModal.style.display = 'none';
 }
 detailModal.addEventListener('click', (e) => {
     if (e.target === detailModal) detailModal.style.display = 'none';
 })
-
 searchInput.addEventListener('input', renderList);
-
 renderList();
+
+// ✅【在这里加：你外部触发按钮的绑定代码】
+// 假设你HTML里写了 <div id="btnYingzheng">打开嬴政</div>
+const btnYingzheng = document.getElementById('btnYingzheng');
+if(btnYingzheng){
+    // 把这里数字换成嬴政真实id
+    btnYingzheng.onclick = ()=> openHeroModal(10);
+}
+
 console.log("✅ 初始化渲染执行完毕")
 })
