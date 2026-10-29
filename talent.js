@@ -122,7 +122,7 @@ function openModal(item) {
     const renderItem = (info) => {
         if (!info || !info.name) return "无";
         if (info.url) {
-            return `<a href="${info.url}" class="modal-link">
+            return `<a href="${info.url}" class="modal-link" onclick="event.preventDefault();closeModal()">
                 <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
             </a>`;
         } else {
@@ -165,6 +165,7 @@ function openModal(item) {
     `;
     talentModal.classList.add('show');
 }
+
 
 function closeModal() {
     talentModal.classList.remove('show');
