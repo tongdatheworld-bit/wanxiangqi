@@ -138,57 +138,65 @@ function openModal(item) {
     const fullImgPath = `images/talent/${item.img}`;
 
     const linkNode = (info) => {
-        if(!info || !info.name) return "无";
-        if(info.url){
-            return `<a href="${info.url}" class="modal-link">${info.name}</a>`
-        }else{
+        if (!info || !info.name) return "无";
+        if (info.url) {
+            return `<a href="${info.url}" class="modal-link">${info.name}</a>`;
+        } else {
             return info.name;
         }
-    }
+    };
 
     talentModalBody.innerHTML = `
-    <div class="talent-modal-wrap">
-        <!-- 左侧天赋卡片 -->
-        <div class="modal-left">
-            <img class="talent-card-img" src="${fullImgPath}" alt="${item.name}" onerror="this.style.display='none'">
-        </div>
-        <!-- 右侧文字信息区 -->
-        <div class="modal-right">
-            <div class="rank-tag ${item.rank === '铜天赋' ? 'copper' : item.rank === '银天赋' ? 'silver' : 'gold'}">
-                ${item.rank}
+        <div class="talent-modal-wrap">
+            <div class="modal-left">
+                <img class="talent-card-img" src="${fullImgPath}" alt="${item.name}" onerror="this.style.display='none'">
             </div>
-            <h2 class="talent-title">${item.name}</h2>
-            <div class="type-tag ${item.effectType.includes('资源') ? 'resource' : 'combat'}">${item.effectType}</div>
 
-            <p class="effect-desc">${item.desc}</p>
-            <p class="source-line">来源：${item.source || "未知"}</p>
+            <div class="modal-right">
+                <div class="rank-tag ${item.rank === '铜天赋' ? 'copper' : item.rank === '银天赋' ? 'silver' : 'gold'}">
+                    ${item.rank}
+                </div>
 
-            <div class="info-row">
-                <span class="label">相关产物：</span>
-                <span>${linkNode(item.relatedProduct)}</span>
+                <h2 class="talent-title">${item.name}</h2>
+
+                <div class="type-tag ${item.effectType.includes('资源') ? 'resource' : 'combat'}">
+                    ${item.effectType}
+                </div>
+
+                <p class="effect-desc">${item.desc}</p>
+                <p class="source-line">来源：${item.source || "未知"}</p>
+
+                <div class="info-row">
+                    <span class="label">相关产物：</span>
+                    <span>${linkNode(item.relatedProduct)}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">适配英雄：</span>
+                    <span>${linkNode(item.fitHero)}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">适配棋手：</span>
+                    <span>${linkNode(item.fitPlayer)}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">适配阵容：</span>
+                    <span>${linkNode(item.fitTeam)}</span>
+                </div>
             </div>
-            <div class="info-row">
-                <span class="label">适配英雄：</span>
-                <span>${linkNode(item.fitHero)}</span>
-            </div>
-            <div class="info-row">
-                <span class="label">适配棋手：</span>
-                <span>${linkNode(item.fitPlayer)}</span>
-            </div>
-            <div class="info-row">
-                <span class="label">适配阵容：</span>
-                <span>${linkNode(item.fitTeam)}</span>
-            </div>
+
+            <button class="modal-close-btn" onclick="closeModal()">×</button>
         </div>
-        <button class="modal-close-btn" onclick="closeModal()">×</button>
-    </div>
     `;
-    talentModal.style.display = "flex";
+
+    talentModal.style.display = "block";
 }
-function closeModal(){
+
+function closeModal() {
     talentModal.style.display = "none";
 }
-
 // 绑定事件
 talentSearch.oninput = render;
 rankFilter.onchange = render;
