@@ -843,7 +843,7 @@
         {"name":"大司命","img":"images/heroes/dasimin.png","isCore":false},
         {"name":"刘邦","img":"images/heroes/liubang.png","isCore":true}
     ]
-}
+},
 {
     "id": 45,
     "name": "重装凯（兄妹）",
@@ -859,6 +859,25 @@
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
         {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
         {"name":"露娜","img":"images/heroes/luna.png","isCore":true}
+    ]
+},
+{
+    "id": 46,
+    "name": "白歌三分吕布",
+    "rank": "A",
+    "player": "白歌",
+    "playerImg": "images/players/baige.png",
+    "hard": "中等",
+    "lineupCode": "7887093731684380（点击复制）",
+    "ban位": ["逐鹿", "大河流域"],
+    "heroList": [
+        {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+        {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":false},
+        {"name":"貂蝉","img":"images/heroes/diaochan.png","isCore":true},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+        {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+        {"name":"吕布","img":"images/heroes/lvbu.png","isCore":true}
     ]
 }
 
