@@ -225,5 +225,23 @@
             });
         })
     </script>
+<!-- 解锁弹窗 -->
+<div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;display:flex;align-items:center;justify-content:center;">
+  <div style="background:#1f2937;padding:32px;border-radius:16px;text-align:center;color:#fff;max-width:360px;">
+    <h3 style="margin:0 0 16px;">🔒 内容解锁</h3>
+    <p style="margin:0 0 12px;font-size:14px;">扫码关注公众号，回复【验证码】获取解锁码</p>
+    <!-- 这里替换成你的公众号二维码图片地址 -->
+    <img src="./wx-qrcode.png" alt="公众号二维码" style="width:220px;margin-bottom:16px;border-radius:8px;">
+    <input id="codeInput" type="text" placeholder="请输入解锁验证码" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:12px;font-size:16px;">
+    <br>
+    <button id="unlockBtn" style="padding:10px 24px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;">确认解锁</button>
+    <p id="tipText" style="color:#f87171;margin-top:12px;font-size:14px;display:none;">验证码错误，请重新获取！</p>
+  </div>
+</div>
+
+<!-- 主内容容器，默认隐藏，解锁之后才显示 -->
+<div id="mainContent" style="display:none;">
+  <!-- 这里放你原本全部英雄牌页面的代码！你的搜索、筛选、英雄卡片全部放这里 -->
+</div>
 </body>
 </html>
