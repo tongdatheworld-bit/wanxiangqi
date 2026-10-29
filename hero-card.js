@@ -2761,8 +2761,14 @@ const closeModal = document.getElementById('closeModal');
 console.log("heroCardList DOM：", heroCardList);
 if(!heroCardList){
     console.error("❌ 找不到 #heroCardList！HTML id 不匹配！")
-    return;
 }
+
+// 筛选状态
+let filterState = {
+    stage: "all",
+    camp: "all",
+    keyword: "all"
+};
 
 function getStageClass(stage) {
     const map = {
@@ -2777,18 +2783,22 @@ function getStageClass(stage) {
 
 function getFilteredHero() {
     const kw = searchInput.value.trim().toLowerCase();
-    // 先固定全部筛选，后面我们再改造按钮下拉菜单
-    const stageVal = "all";
-    const campVal = "all";
-    const tagVal = "all";
-
     return heroList.filter(hero => {
+        // 搜索匹配
         const searchMatch = !kw ||
             hero.name.toLowerCase().includes(kw) ||
             hero.desc.toLowerCase().includes(kw) ||
             hero.camp.toLowerCase().includes(kw) ||
             hero.keywords.some(k => k.toLowerCase().includes(kw));
-        return searchMatch;
+
+        // 品阶匹配
+        const matchStage = filterState.stage === "all" || String(hero.stage) === filterState.stage;
+        // 阵营匹配
+        const matchCamp = filterState.camp === "all" || hero.camp === filterState.camp;
+        // 关键词匹配（你的字段是 keywords 数组）
+        const matchKeyword = filterState.keyword === "all" || hero.keywords.includes(filterState.keyword);
+
+        return searchMatch && matchStage && matchCamp && matchKeyword;
     })
 }
 
@@ -2809,7 +2819,6 @@ function renderList() {
     bindCardClick();
 }
 
-// ===== 你原来的 bindCardClick 原样保留 =====
 function bindCardClick() {
     document.querySelectorAll('.hero-card-item').forEach(card => {
         card.onclick = () => {
@@ -2934,9 +2943,7 @@ function bindCardClick() {
     })
 }
 
-// ✅【在这里粘贴 openHeroModal 函数！】
 function openHeroModal(heroKey) {
-    // 按名字匹配，传字符串"嬴政"
     const hero = heroList.find(h => h.name === heroKey);
     if (!hero) return;
     modalBody.innerHTML = `
@@ -3055,7 +3062,20 @@ function openHeroModal(heroKey) {
     detailModal.style.display = 'flex';
 }
 
-// 下面这些全部原样不动，保留
+// 绑定筛选按钮
+document.querySelectorAll('.filter-btn-group').forEach(group => {
+    const type = group.dataset.filter;
+    group.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.onclick = () => {
+            // 同组取消其他active
+            group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterState[type] = btn.dataset.val;
+            renderList();
+        }
+    })
+})
+
 closeModal.onclick = () => {
     detailModal.style.display = 'none';
 }
@@ -3063,15 +3083,6 @@ detailModal.addEventListener('click', (e) => {
     if (e.target === detailModal) detailModal.style.display = 'none';
 })
 searchInput.addEventListener('input', renderList);
+
 renderList();
-
-// ✅【在这里加：你外部触发按钮的绑定代码】
-// 假设你HTML里写了 <div id="btnYingzheng">打开嬴政</div>
-const btnYingzheng = document.getElementById('btnYingzheng');
-if(btnYingzheng){
-    // 把这里数字换成嬴政真实id
-    btnYingzheng.onclick = ()=> openHeroModal(10);
-}
-
 console.log("✅ 初始化渲染执行完毕")
-})
