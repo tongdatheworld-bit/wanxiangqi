@@ -6,7 +6,7 @@ const effectList = [
         pos: "日落海",
         desc: "获得3次免费刷新。",
         source: "",
-        img: "images/effect/jingxibutie.png"
+        img: "images/effectcard/jingxibutie.png"
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const effectList = [
         pos: "日落海",
         desc: "使1名英雄夺取阿科米亚核心至多5级。",
         source: "",
-        img: "images/effect/tiaoji.png"
+        img: "images/effectcard/tiaoji.png"
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const effectList = [
         pos: "河洛",
         desc: "指定1名1-3阶英雄，觉醒进度+1。",
         source: "",
-        img: "images/effect/xianyin.png"
+        img: "images/effectcard/xianyin.png"
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const effectList = [
         pos: "日落海",
         desc: "指定1名英雄立即提升20级，之后每回合提升10级。",
         source: "",
-        img: "images/effect/pojingzhizheng.png"
+        img: "images/effectcard/pojingzhizheng.png"
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ const effectList = [
         pos: "逐鹿",
         desc: "",
         source: "",
-        img: "images/effect/sirentongxing.png"
+        img: "images/effectcard/sirentongxing.png"
     }
 ];
 
