@@ -65,24 +65,28 @@ body {
   margin-bottom: 24px;
 }
 
-.subtitle-tag {
-  color: #ffd369;
-  font-size: 24px;
-  margin: 0;
+/* 英文小字：最上面 */
+.subtitle-en {
+    color: #ffd369;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
 }
 
+/* 中间大标题 */
 .page-title {
-  color: #ffd369;
-  font-size: 64px;
-  font-weight: bold;
-  line-height: 1;
-  margin: 0;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #ffd369;
 }
-
+/* 底部标签/备注 */
 .desc-line {
-  color: #b4b9c6;
-  font-size: 20px;
-  margin: 0;
+    color: #b4b9c6;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 }
