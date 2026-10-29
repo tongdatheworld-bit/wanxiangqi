@@ -329,4 +329,16 @@ body {
     .source-line {
         margin-bottom: 20px;
     }
+    .type-tag.resource {
+    color: #ffdd77;
+}
+.type-tag.combat {
+    color: #ff7777;
+}
+.type-tag.mechanism {
+    color: #77ddff;
+}
+.type-tag.survive {
+    color: #66cc88;
+}
 }
