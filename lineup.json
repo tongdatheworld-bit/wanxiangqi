@@ -792,13 +792,13 @@
         {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true}
     ]
-}
-,{
+},
+{
     "id": 42,
     "name": "嫦小娥艾琳",
     "rank": "A",
     "player": "嫦小娥",
-    "playerImg": "images/players/changxiao'e.png",
+    "playerImg": "images/players/changxiaoe.png",
     "hard": "中等",
     "lineupCode": "9125311442502540（点击复制）",
     "ban位": ["逐鹿", "河洛", "三分之地"],
@@ -917,8 +917,8 @@
         {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":false},
         {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false}
     ]
-}
-,{
+},
+{
     "id": 49,
     "name": "孙小宾逐鹿蒙犽",
     "rank": "A",
@@ -936,8 +936,8 @@
         {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
         {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false}
     ]
-}
-,{
+},
+{
     "id": 50,
     "name": "庄小鱼无限复活木兰",
     "rank": "A",
@@ -955,5 +955,5 @@
         {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
         {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false}
     ]
-},
+}
     
