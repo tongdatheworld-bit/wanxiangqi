@@ -879,7 +879,27 @@
         {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
         {"name":"吕布","img":"images/heroes/lvbu.png","isCore":true}
     ]
+},
+    {
+    "id": 47,
+    "name": "日落海整备流999",
+    "rank": "A",
+    "player": "白歌",
+    "playerImg": "images/players/baige.png",
+    "hard": "中等",
+    "lineupCode": "29317718557211664（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "河洛", "三分之地"],
+    "heroList": [
+        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+        {"name":"安琪拉","img":"images/heroes/anqila.png","isCore":true},
+        {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
+        {"name":"朵莉亚","img":"images/heroes/duoliya.png","isCore":false},
+        {"name":"雅典娜","img":"images/heroes/yadianna.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
+        {"name":"亚连","img":"images/heroes/yalian.png","isCore":false}
+    ]
 }
+
 
 
 
