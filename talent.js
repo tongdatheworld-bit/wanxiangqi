@@ -11,7 +11,7 @@ const talentList = [
         rank: "铜天赋",
         effectType: "资源类",
         camp: "通用",
-        img: "images/talent/lichengbei.png",
+        img: "lichengbei.png",
         desc: "棋手到达5级时，获得6能量、1张装备箱。"
     },
     {
@@ -20,7 +20,7 @@ const talentList = [
         rank: "铜天赋",
         effectType: "资源类",
         camp: "通用",
-        img: "images/talent/zhengzhuangdaifa.png",
+        img: "zhengzhuangdaifa.png",
         desc: "若回合内没有打出英雄牌，下回合开始时，获得2能量。"
     },
     {
@@ -29,7 +29,7 @@ const talentList = [
         rank: "铜天赋",
         effectType: "资源类",
         camp: "通用",
-        img: "images/talent/xiankuhoutian.png",
+        img: "xiankuhoutian.png",
         desc: "选取天赋后，当你输掉2场战斗时，获得6棋手经验。"
     },
     {
@@ -38,7 +38,7 @@ const talentList = [
         rank: "铜天赋",
         effectType: "战力类",
         camp: "通用",
-        img: "images/talent/fangyulingyu.png",
+        img: "fangyulingyu.png",
         desc: "棋手每次受到的伤害减少2点。"
     },
     {
@@ -47,7 +47,7 @@ const talentList = [
         rank: "铜天赋",
         effectType: "资源类",
         camp: "通用",
-        img: "images/talent/sanshierli.png",
+        img: "sanshierli.png",
         desc: "备战阶段中，英雄总等级到达30级时，获得6棋手经验。"
     },
     {
@@ -56,7 +56,7 @@ const talentList = [
         rank: "铜天赋",
         effectType: "资源类",
         camp: "通用",
-        img: "images/talent/shuangrenyou.png",
+        img: "shuangrenyou.png",
         desc: "随机获得2张2~3阶英雄牌。"
     }
 ];
