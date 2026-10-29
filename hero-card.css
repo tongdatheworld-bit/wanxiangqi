@@ -493,3 +493,49 @@ body {
         width: 64px;
     }
 }
+.filter-wrap {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.filter-label {
+    color: #b8bcc8;
+    width: 60px;
+    flex-shrink: 0;
+}
+.filter-btn-group {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+.filter-btn {
+    background-color: #242730;
+    color: #b8bcc8;
+    border: 1px solid #383c48;
+    border-radius: 8px;
+    padding: 6px 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.filter-btn:hover {
+    border-color: #f2c94c;
+    color: #eee;
+}
+.filter-btn.active {
+    background-color: #b8860b;
+    color: #fff;
+    border-color: #f2c94c;
+}
+/* 删掉原来 select 的样式，不需要了 */
+.filter-select {
+    display: none;
+}
+
