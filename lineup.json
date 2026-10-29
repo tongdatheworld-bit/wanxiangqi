@@ -732,7 +732,7 @@
     "heroList": [
         {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
         {"name":"阿轲","img":"images/heroes/ake.png","isCore":true},
-        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":false},
+        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false},
         {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
         {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
         {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
@@ -789,7 +789,7 @@
     "heroList": [
         {"name":"阿轲","img":"images/heroes/ake.png","isCore":false},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true}
     ]
 },
@@ -1112,7 +1112,7 @@
     "lineupCode": "72115915510023186（点击复制）",
     "ban位": ["逐鹿", "河洛", "三分之地", "日落海"],
     "heroList": [
-        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
@@ -1186,7 +1186,7 @@
     "lineupCode": "63108715762614280（点击复制）",
     "ban位": ["无限制"],
     "heroList": [
-        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
         {"name":"阿轲","img":"images/heroes/ake.png","isCore":false},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
@@ -1317,7 +1317,7 @@
     "lineupCode": "5687193820583572（点击复制）",
     "ban位": ["逐鹿", "河洛", "日落海"],
     "heroList": [
-        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
         {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
