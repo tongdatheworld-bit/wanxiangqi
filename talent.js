@@ -6,20 +6,6 @@
 // img：只填文件名，代码自动拼接前缀 images/talent/
 const talentList = [
     {
-        id: 1,
-        name: "里程碑",
-        rank: "铜天赋",
-        effectType: "资源类天赋",
-        camp: "通用",
-        img: "lichengbei.png",
-        desc: "棋手到达5级时，获得6能量、1张装备箱。",
-        source: "棋手升级时概率选择获取天赋。",
-        relatedProduct: {name:"无", url:null},
-        fitHero: {name:"无", url:null},
-        fitPlayer: {name:"无", url:null},
-        fitTeam: {name:"无", url:null}
-    },
-    {
         id: 2,
         name: "整装待发",
         rank: "铜天赋",
