@@ -119,7 +119,6 @@ function render() {
 // 弹窗打开
 function openModal(item) {
     const fullImgPath = `images/talent/${item.img}`;
-
     const linkNode = (info) => {
         if (!info || !info.name) return "无";
         if (info.url) {
@@ -128,9 +127,8 @@ function openModal(item) {
             return info.name;
         }
     };
-
     talentModalBody.innerHTML = `
-        <div class="talent-modal-wrap">
+        <div class="talent-modal-wrap" onclick="event.stopPropagation()">
             <div class="modal-left">
                 <img class="talent-card-img" src="${fullImgPath}" alt="${item.name}" onerror="this.style.display='none'">
             </div>
@@ -164,12 +162,11 @@ function openModal(item) {
         </div>
     `;
     talentModal.classList.add('show');
-;
+}
+function closeModal() {
+    talentModal.classList.remove('show');
 }
 
-function closeModal() {
-    talentModal.classList.add('show');
-}
 // 点击遮罩空白关闭
 talentModal.onclick = function(e){
     if(e.target === talentModal){
