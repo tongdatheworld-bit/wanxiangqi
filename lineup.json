@@ -898,7 +898,65 @@
         {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
         {"name":"亚连","img":"images/heroes/yalian.png","isCore":false}
     ]
+},
+{
+    "id": 48,
+    "name": "孙小宾雷霆战机",
+    "rank": "A",
+    "player": "孙小宾",
+    "playerImg": "images/players/sunxiaobin.png",
+    "hard": "中等",
+    "lineupCode": "113774212063414284（点击复制）",
+    "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+        {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+        {"name":"嬴政","img":"images/heroes/yingzheng.png","isCore":true},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":false},
+        {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false}
+    ]
 }
+,{
+    "id": 49,
+    "name": "孙小宾逐鹿蒙犽",
+    "rank": "A",
+    "player": "孙小宾",
+    "playerImg": "images/players/sunxiaobin.png",
+    "hard": "中等",
+    "lineupCode": "12953870758670410（点击复制）",
+    "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+        {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
+        {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false}
+    ]
+}
+,{
+    "id": 50,
+    "name": "庄小鱼无限复活木兰",
+    "rank": "A",
+    "player": "庄小鱼",
+    "playerImg": "images/players/zhuangxiaoyu.png",
+    "hard": "简单",
+    "lineupCode": "120529611504499876（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "三分"],
+    "heroList": [
+        {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+        {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+        {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+        {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false}
+    ]
+},
+    
 
 
 
