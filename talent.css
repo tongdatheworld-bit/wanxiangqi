@@ -185,13 +185,15 @@ body {
 }
 }
 .modal-content {
-    position: relative; /* 给关闭按钮做定位父容器！ */
-    width: 640px;
-    max-width: 92%;
+    position: relative;
+    width: 720px;              /* 比你现在更宽，参考装备弹窗 */
+    max-width: 94%;
     background: #1f222b;
-    border-radius: 14px;
-    padding: 32px; /* 【改】内边距放大，四周留白更多 */
+    border-radius: 16px;
+    padding: 36px;             /* 四周留白更大 */
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
 }
+
 .modal-close {
     color: #ffffff;
     position: absolute;
