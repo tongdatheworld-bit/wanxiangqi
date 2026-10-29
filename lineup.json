@@ -719,5 +719,47 @@
             {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
             {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
         ]
-    }
+    },
+    {
+    "id": 38,
+    "name": "庄小鱼无阵营",
+    "rank": "A",
+    "player": "庄小鱼",
+    "playerImg": "images/players/zhuangxiaoyu.png",
+    "hard": "简单",
+    "lineupCode": "87314934033672704（点击复制）",
+    "ban位": ["无限制"],
+    "heroList": [
+        {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
+        {"name":"阿轲","img":"images/heroes/ake.png","isCore":true},
+        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":false},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+        {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ]
+},
+    {
+    "id": 39,
+    "name": "明先生山鬼流",
+    "rank": "A",
+    "player": "明先生",
+    "playerImg": "images/players/mingxiansheng.png",
+    "hard": "简单",
+    "lineupCode": "80557682811107548（点击复制）",
+    "ban位": ["三分之地"],
+    "heroList": [
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":true},
+        {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":false},
+        {"name":"项羽","img":"images/heroes/xiangyu.png","isCore":false},
+        {"name":"蒙恬","img":"images/heroes/mengtian.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"鲁班大师","img":"images/heroes/lubanadashi.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ]
+}
+
+
+
+    
 ]
