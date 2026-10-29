@@ -978,7 +978,7 @@ function renderTalent() {
         cardDom.className = "talent-card-item";
         cardDom.innerHTML = `
             <div class="talent-card-cover">
-                <img src="${item.img}" alt="${item.name}">
+                <img src="images/talent/${item.img}" alt="${item.name}">
             </div>
         `;
         cardDom.onclick = () => openModal(item);
