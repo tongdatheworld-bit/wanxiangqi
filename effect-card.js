@@ -114,14 +114,14 @@ function render() {
 
         const div = document.createElement("div");
         div.className = "effect-card-item";
-        // 卡片：图 + 名字 + 描述，和英雄截图布局一致
+
+        // 只保留图片，删除卡片下方文字
         div.innerHTML = `
             <div class="effect-card-cover">
                 <img src="${item.img}" alt="${item.name}">
             </div>
-            <div class="effect-card-name">${item.name}</div>
-            <div class="effect-card-desc">${item.desc}</div>
         `;
+
         div.onclick = () => renderModal(item);
         effectCardList.appendChild(div);
     });
