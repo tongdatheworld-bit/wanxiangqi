@@ -824,7 +824,27 @@
         {"name":"马超","img":"images/heroes/machao.png","isCore":true},
         {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false}
     ]
+},
+    {
+    "id": 44,
+    "name": "安琪拉刘邦炸盾",
+    "rank": "A",
+    "player": "安琪拉",
+    "playerImg": "images/players/anqila.png",
+    "hard": "中等",
+    "lineupCode": "56914315710236676（点击复制）",
+    "ban位": ["河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"大司命","img":"images/heroes/dasimin.png","isCore":false},
+        {"name":"刘邦","img":"images/heroes/liubang.png","isCore":true}
+    ]
 }
+
 
 
     
