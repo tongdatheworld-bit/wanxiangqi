@@ -9,55 +9,85 @@ const talentList = [
         id: 1,
         name: "里程碑",
         rank: "铜天赋",
-        effectType: "资源类",
+        effectType: "资源类天赋",
         camp: "通用",
         img: "lichengbei.png",
-        desc: "棋手到达5级时，获得6能量、1张装备箱。"
+        desc: "棋手到达5级时，获得6能量、1张装备箱。",
+        source: "棋手升级时概率选择获取天赋。",
+        relatedProduct: {name:"无", url:null},
+        fitHero: {name:"无", url:null},
+        fitPlayer: {name:"无", url:null},
+        fitTeam: {name:"无", url:null}
     },
     {
         id: 2,
         name: "整装待发",
         rank: "铜天赋",
-        effectType: "资源类",
+        effectType: "资源类天赋",
         camp: "通用",
         img: "zhengzhuangdaifa.png",
-        desc: "若回合内没有打出英雄牌，下回合开始时，获得2能量。"
+        desc: "若回合内没有打出英雄牌，下回合开始时，获得2能量。",
+        source: "棋手升级时概率选择获取天赋。",
+        relatedProduct: {name:"无", url:null},
+        fitHero: {name:"嬴政", url:"#hero-yingzheng"},
+        fitPlayer: {name:"明先生", url:"#player-ming"},
+        fitTeam: {name:"明先生雷霆战机", url:"#team-mingleiting"}
     },
     {
         id: 3,
         name: "先苦后甜",
         rank: "铜天赋",
-        effectType: "资源类",
+        effectType: "资源类天赋",
         camp: "通用",
         img: "xiankuhoutian.png",
-        desc: "选取天赋后，当你输掉2场战斗时，获得6棋手经验。"
+        desc: "选取天赋后，当你输掉2场战斗时，获得6棋手经验。",
+        source: "棋手升级时概率选择获取天赋。",
+        relatedProduct: {name:"无", url:null},
+        fitHero: {name:"无", url:null},
+        fitPlayer: {name:"无", url:null},
+        fitTeam: {name:"无", url:null}
     },
     {
         id: 4,
         name: "防御领域",
         rank: "铜天赋",
-        effectType: "战力类",
+        effectType: "战力类天赋",
         camp: "通用",
         img: "fangyulingyu.png",
-        desc: "棋手每次受到的伤害减少2点。"
+        desc: "棋手每次受到的伤害减少2点。",
+        source: "棋手升级时概率选择获取天赋。",
+        relatedProduct: {name:"无", url:null},
+        fitHero: {name:"无", url:null},
+        fitPlayer: {name:"无", url:null},
+        fitTeam: {name:"无", url:null}
     },
     {
         id: 5,
         name: "三十而立",
         rank: "铜天赋",
-        effectType: "资源类",
+        effectType: "资源类天赋",
         camp: "通用",
         img: "sanshierli.png",
-        desc: "备战阶段中，英雄总等级到达30级时，获得6棋手经验。"
+        desc: "备战阶段中，英雄总等级到达30级时，获得6棋手经验。",
+        source: "棋手升级时概率选择获取天赋。",
+        relatedProduct: {name:"无", url:null},
+        fitHero: {name:"无", url:null},
+        fitPlayer: {name:"无", url:null},
+        fitTeam: {name:"无", url:null}
     },
     {
         id: 6,
         name: "双人游",
         rank: "铜天赋",
-        effectType: "资源类",
+        effectType: "资源类天赋",
         camp: "通用",
         img: "shuangrenyou.png",
-        desc: "随机获得2张2~3阶英雄牌。"
+        desc: "随机获得2张2~3阶英雄牌。",
+        source: "棋手升级时概率选择获取天赋。",
+        relatedProduct: {name:"无", url:null},
+        fitHero: {name:"无", url:null},
+        fitPlayer: {name:"无", url:null},
+        fitTeam: {name:"无", url:null}
     }
 ];
 
@@ -105,63 +135,72 @@ function render() {
 
 // 弹窗打开
 function openModal(item) {
-    const rankTextMap = {
-        copper: "铜天赋",
-        silver: "银天赋",
-        gold: "金天赋"
-    };
-    const effectTypeTextMap = {
-        resource: "资源类",
-        combat: "战力类"
-    };
-    const campTextMap = {
-        sand: "三分之地",
-        river: "大河流域",
-        sunset: "日落海",
-        heluo: "河洛",
-        battle: "逐鹿",
-        none: "无阵营"
-    };
-    const boostTypeTextMap = {
-        link: "联动强化天赋",
-        single: "单体英雄强化天赋",
-        equip: "天赋装备"
-    };
-
-    const rankText = rankTextMap[item.rank];
-    const effectTypeText = effectTypeTextMap[item.effectType];
-    const campText = campTextMap[item.camp];
-    const boostTypeText = boostTypeTextMap[item.boostType];
     const fullImgPath = `images/talent/${item.img}`;
 
+    // 生成可点击文本工具函数：有url就a标签，无就纯文字
+    const linkNode = (info) => {
+        if(!info || !info.name) return "无";
+        if(info.url){
+            return `<a href="${info.url}" target="_blank" class="modal-link">${info.name}</a>`
+        }else{
+            return info.name;
+        }
+    }
+
     talentModalBody.innerHTML = `
-        <div class="effect-header-bar">
-            <div class="effect-icon-wrap">
-                <img class="effect-main-icon" src="${fullImgPath}" alt="${item.name}" onerror="this.style.display='none'">
-                <div class="effect-name-title">
-                    <div class="effect-name-large">${item.name}</div>
-                    <div class="effect-tags-top">
-                        <span class="tag-rank ${item.rank}">${rankText}</span>
-                        <span class="tag-normal">${effectTypeText}</span>
-                        <span class="tag-normal">${campText}</span>
-                        <span class="tag-normal">${boostTypeText}</span>
-                    </div>
-                </div>
+    <div class="talent-modal-wrap">
+        <!-- 左侧 -->
+        <div class="modal-left">
+            <div class="talent-card-box">
+                <img class="talent-card-img" src="${fullImgPath}" alt="${item.name}" onerror="this.style.display='none'">
+            </div>
+            <div class="rank-tag ${item.rank === '铜天赋' ? 'copper' : item.rank === '银天赋' ? 'silver' : 'gold'}">
+                ${item.rank}
             </div>
         </div>
-        <div class="modal-block">
-            <p>${item.desc}</p>
+        <!-- 右侧信息区 -->
+        <div class="modal-right">
+            <div class="header-row">
+                <h2 class="talent-title">${item.name}</h2>
+                <span class="type-tag ${item.effectType.includes('资源') ? 'resource' : 'combat'}">${item.effectType}</span>
+            </div>
+
+            <div class="text-block">
+                <p class="effect-desc">${item.desc}</p>
+                <p class="source-line">来源：${item.source || "未知"}</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info-row">
+                <span class="label">相关产物：</span>
+                <span>${linkNode(item.relatedProduct)}</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info-row">
+                <span class="label">适配英雄：</span>
+                <span>${linkNode(item.fitHero)}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">适配棋手：</span>
+                <span>${linkNode(item.fitPlayer)}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">适配阵容：</span>
+                <span>${linkNode(item.fitTeam)}</span>
+            </div>
         </div>
-    `
+        <!-- 关闭按钮 -->
+        <button class="modal-close-btn" onclick="closeModal()">×</button>
+    </div>
+    `;
     talentModal.style.display = "flex";
 }
 
-// 关闭弹窗
-function closeModal() {
+function closeModal(){
     talentModal.style.display = "none";
-}
-talentModal.onclick = (e) => {
-    if(e.target === talentModal) closeModal();
 }
 // 绑定事件
 talentSearch.oninput = render;
