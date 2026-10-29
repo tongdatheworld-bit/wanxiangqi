@@ -2748,10 +2748,7 @@ const heroList = [
     "equipList": ["e1", "e2"],
     "teamList": ["t1"]
 }
-
-
 ];
-
 const heroCardList = document.getElementById('heroCardList');
 const searchInput = document.getElementById('searchInput');
 const detailModal = document.getElementById('detailModal');
@@ -2795,7 +2792,7 @@ function getFilteredHero() {
         const matchStage = filterState.stage === "all" || String(hero.stage) === filterState.stage;
         // 阵营匹配
         const matchCamp = filterState.camp === "all" || hero.camp === filterState.camp;
-        // 关键词匹配（你的字段是 keywords 数组）
+        // 关键词匹配
         const matchKeyword = filterState.keyword === "all" || hero.keywords.includes(filterState.keyword);
 
         return searchMatch && matchStage && matchCamp && matchKeyword;
@@ -3067,7 +3064,6 @@ document.querySelectorAll('.filter-btn-group').forEach(group => {
     const type = group.dataset.filter;
     group.querySelectorAll('.filter-btn').forEach(btn => {
         btn.onclick = () => {
-            // 同组取消其他active
             group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             filterState[type] = btn.dataset.val;
@@ -3085,4 +3081,4 @@ detailModal.addEventListener('click', (e) => {
 searchInput.addEventListener('input', renderList);
 
 renderList();
-console.log("✅ 初始化渲染执行完毕")
+console.log("✅ 初始化渲染执行完毕");
