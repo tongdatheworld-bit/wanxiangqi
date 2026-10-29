@@ -175,12 +175,14 @@ body {
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.72);
-    display: flex;
+    display: none; /* 默认隐藏 */
     align-items: center;
     justify-content: center;
     z-index: 999;
 }
-
+.modal.show {
+    display: flex; /* 加show类才启用flex居中 */
+}
 .modal-content {
     position: relative;
     width: 720px;
@@ -190,7 +192,6 @@ body {
     padding: 36px;
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
 }
-
 .modal-close {
     color: #ffffff;
     position: absolute;
@@ -201,35 +202,29 @@ body {
     cursor: pointer;
     z-index: 2;
 }
-
 .modal-close:hover {
     color: #ffd369;
 }
-
 /* 弹窗左右布局 */
 .talent-modal-wrap {
     display: flex;
     align-items: flex-start;
     gap: 32px;                 /* 左图和右侧文字区再拉开 */
 }
-
 .modal-left {
     flex: 0 0 240px;           /* 左边卡牌区域加宽 */
 }
-
 .talent-card-img {
     width: 240px;
     height: auto;
     border-radius: 14px;
     display: block;
 }
-
 .modal-right {
     flex: 1;
     min-width: 0;
     color: #fff;
 }
-
 .rank-tag {
     display: inline-block;
     padding: 5px 14px;
@@ -238,25 +233,20 @@ body {
     font-size: 14px;
     margin-bottom: 12px;
 }
-
 .rank-tag.copper {
     background: #7b4833;
 }
-
 .rank-tag.silver {
     background: #747b88;
 }
-
 .rank-tag.gold {
     background: #a17927;
 }
-
 .talent-title {
     font-size: 24px;
     margin: 0 0 12px;
     color: #ffffff;
 }
-
 .type-tag {
     display: inline-block;
     padding: 5px 14px;
@@ -265,22 +255,18 @@ body {
     font-size: 14px;
     margin-bottom: 22px;
 }
-
 .type-tag.resource {
     background: #2e7d5b;
 }
-
 .type-tag.combat {
     background: #8b3838;
 }
-
 .effect-desc {
     font-size: 15px;
     line-height: 1.75;
     margin: 0 0 14px 0;
     color: #e9e2d4;
 }
-
 .source-line {
     color: #c5c8cf;
     margin: 0 0 28px;
@@ -288,7 +274,6 @@ body {
     padding-bottom: 22px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-
 /* 参考装备弹窗：信息项做成小卡片 */
 .info-card {
     background: rgba(255, 255, 255, 0.04);
@@ -297,39 +282,32 @@ body {
     padding: 18px 20px;
     margin-bottom: 14px;
 }
-
 .info-card h4 {
     font-size: 14px;
     color: #ffd369;
     margin: 0 0 10px 0;
 }
-
 .info-card p {
     font-size: 14px;
     line-height: 1.75;
     color: #cfd3dc;
     margin: 0;
 }
-
 .info-row {
     font-size: 15px;
     line-height: 2;
     margin-bottom: 6px;
 }
-
 .info-row .label {
     color: #b0b4bd;
 }
-
 .modal-link {
     color: #ffd369;
     text-decoration: none;
 }
-
 .modal-link:hover {
     text-decoration: underline;
 }
-
 /* ========= 手机响应式 ========= */
 @media (max-width: 768px) {
     .modal-content {
