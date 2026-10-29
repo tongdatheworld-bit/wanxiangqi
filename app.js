@@ -168,16 +168,34 @@ async function copyCode(code) {
 document.addEventListener('DOMContentLoaded', function () {
     const RIGHT_CODE = "万象一图诀";
     const lockModal = document.getElementById('lockModal');
-    const mainContent = document.getElementById('mainContent');
     const codeInput = document.getElementById('codeInput');
     const unlockBtn = document.getElementById('unlockBtn');
     const tipText = document.getElementById('tipText');
-    const STORAGE_KEY = "wanxiang_unlock"; // 和html保持一致！
+    const STORAGE_KEY = "wanxiang_unlock";
 
-    if (!lockModal || !mainContent || !codeInput || !unlockBtn || !tipText) {
+    if (!lockModal || !codeInput || !unlockBtn || !tipText) {
         console.warn('解锁弹窗元素缺失');
         return;
     }
+
+    // 已经解锁，直接关掉弹窗
+    if(localStorage.getItem(STORAGE_KEY) === 'ok'){
+        lockModal.style.display = 'none';
+    }
+
+    unlockBtn.onclick = function(){
+      const val = codeInput.value.trim();
+      if(val === RIGHT_CODE){
+        lockModal.style.display = 'none';
+        localStorage.setItem(STORAGE_KEY,'ok');
+      }else{
+        tipText.style.display = 'block';
+      }
+    }
+    codeInput.onkeydown = function(e){
+      if(e.key === 'Enter') unlockBtn.click();
+    }
+})
 
     // 本地缓存放行
     if(localStorage.getItem(STORAGE_KEY) === 'ok'){
