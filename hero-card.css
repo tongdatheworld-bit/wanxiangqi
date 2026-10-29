@@ -511,8 +511,9 @@ body {
 }
 .filter-btn-group {
     display: flex;
+    flex-wrap: wrap;  /* 新增：自动换行 */
     gap: 10px;
-    overflow-x: auto;
+    /* overflow-x: auto; 删掉这一行！ */
     padding-bottom: 4px;
 }
 .filter-btn {
