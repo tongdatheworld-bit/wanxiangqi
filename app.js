@@ -158,7 +158,7 @@ async function copyCode(code) {
     }
 }
 // ========== 在这里改你的验证码 ==========
-const RIGHT_CODE = "wanxiangqi"; 
+const RIGHT_CODE = "万象一图诀"; 
 
 const lockModal = document.getElementById('lockModal');
 const mainContent = document.getElementById('mainContent');
