@@ -20,61 +20,794 @@ const talentList = [
         fitTeam: {name:"明先生雷霆战机", url:"#team-mingleiting"}
     },
     {
-        id: 3,
-        name: "先苦后甜",
-        rank: "铜天赋",
-        effectType: "资源类天赋",
-        camp: "通用",
-        img: "xiankuhoutian.png",
-        desc: "选取天赋后，当你输掉2场战斗时，获得6棋手经验。",
-        source: "棋手升级时概率选择获取天赋。",
-        relatedProduct: {name:"无", url:null},
-        fitHero: {name:"无", url:null},
-        fitPlayer: {name:"无", url:null},
-        fitTeam: {name:"无", url:null}
+        {
+    "id": 3,
+    "name": "兵行诡招",
+    "rank": "铜天赋",
+    "effectType": "战斗类天赋",
+    "camp": "通用",
+    "img": "bingxingguizhao.png",
+    "desc": "棋手生命值-10，战斗开始时，己方每名英雄+2临时等级。战斗胜利时，获得1棋手生命值，临时等级额外+1。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
     },
-    {
-        id: 4,
-        name: "防御领域",
-        rank: "铜天赋",
-        effectType: "战力类天赋",
-        camp: "通用",
-        img: "fangyulingyu.png",
-        desc: "棋手每次受到的伤害减少2点。",
-        source: "棋手升级时概率选择获取天赋。",
-        relatedProduct: {name:"无", url:null},
-        fitHero: {name:"无", url:null},
-        fitPlayer: {name:"无", url:null},
-        fitTeam: {name:"无", url:null}
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
     },
-    {
-        id: 5,
-        name: "三十而立",
-        rank: "铜天赋",
-        effectType: "资源类天赋",
-        camp: "通用",
-        img: "sanshierli.png",
-        desc: "备战阶段中，英雄总等级到达30级时，获得6棋手经验。",
-        source: "棋手升级时概率选择获取天赋。",
-        relatedProduct: {name:"无", url:null},
-        fitHero: {name:"无", url:null},
-        fitPlayer: {name:"无", url:null},
-        fitTeam: {name:"无", url:null}
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
     },
-    {
-        id: 6,
-        name: "双人游",
-        rank: "铜天赋",
-        effectType: "资源类天赋",
-        camp: "通用",
-        img: "shuangrenyou.png",
-        desc: "随机获得2张2~3阶英雄牌。",
-        source: "棋手升级时概率选择获取天赋。",
-        relatedProduct: {name:"无", url:null},
-        fitHero: {name:"无", url:null},
-        fitPlayer: {name:"无", url:null},
-        fitTeam: {name:"无", url:null}
+    "fitTeam": {
+        "name": "无",
+        "url": null
     }
+},
+{
+    "id": 4,
+    "name": "存款利息",
+    "rank": "铜天赋",
+    "effectType": "资源类天赋",
+    "camp": "通用",
+    "img": "cunkuanlixi.png",
+    "desc": "获得3能量。回合结束时，你每有7能量，额外获得1能量。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+{
+    "id": 5,
+    "name": "大河新援",
+    "rank": "铜天赋",
+    "effectType": "资源类天赋",
+    "camp": "大河流域",
+    "img": "dhexinyuan.png",
+    "desc": "获得2能量，以及随机1张2-3阶【大河流域】英雄牌。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+{
+    "id": 6,
+    "name": "二象性",
+    "rank": "铜天赋",
+    "effectType": "资源类天赋",
+    "camp": "通用",
+    "img": "erxiangxing.png",
+    "desc": "获得1张天赋牌二象坍缩：随机生效1个获取英雄牌的效果（详情查看关联卡牌）。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+{
+    "id": 7,
+    "name": "防御领域",
+    "rank": "铜天赋",
+    "effectType": "生存类天赋",
+    "camp": "通用",
+    "img": "fangyulingyu.png",
+    "desc": "棋手每次受到的伤害减少2点。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+{
+    "id": 8,
+    "name": "复印机",
+    "rank": "铜天赋",
+    "effectType": "资源类天赋",
+    "camp": "通用",
+    "img": "fuyinji.png",
+    "desc": "获得2张天赋牌复印机：指定1名1-3阶英雄，获得该英雄牌。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+{
+    "id": 9,
+    "name": "干将·强化",
+    "rank": "铜天赋",
+    "effectType": "战斗类天赋",
+    "camp": "通用",
+    "img": "ganjiangqianghua.png",
+    "desc": "战斗开始时，干将莫邪获得1件【法源之杯】。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "干将莫邪",
+        "url": "#hero-ganjiangmoye",
+        "avatar": "images/heroes/ganjiangmoye.png"
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+{
+    "id": 10,
+    "name": "好聚好散",
+    "rank": "铜天赋",
+    "effectType": "资源类天赋",
+    "camp": "通用",
+    "img": "haojuhaosan.png",
+    "desc": "获得1张天赋牌体面离场：指定移除一名英雄，获得能量。此英雄0/1/2/3觉醒进度时，获得3/6/9/12能量。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+{
+    "id": 11,
+    "name": "河洛新援",
+    "rank": "铜天赋",
+    "effectType": "资源类天赋",
+    "camp": "河洛",
+    "img": "heluoxinyuan.png",
+    "desc": "获得2能量，以及随机1张2-3阶【河洛】英雄牌。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+{
+    "id": 12,
+    "name": "班叔的遗留物",
+    "rank": "铜天赋",
+    "effectType": "战斗类天赋",
+    "camp": "通用",
+    "img": "bansudeyiliuwu.png",
+    "desc": "获得2级电磁弹簧：在指定位置构筑1个2级电磁弹簧（敌方踩中时会被弹至战场后排）。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+    {
+        "id": 13,
+        "name": "加速成长",
+        "rank": "铜天赋",
+        "effectType": "资源类天赋",
+        "camp": "通用",
+        "img": "jiasuchengzhang.png",
+        "desc": "获得2张天赋牌加速成长：指定1名英雄等级+5。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": 14,
+        "name": "节能商店",
+        "rank": "铜天赋",
+        "effectType": "机制类天赋",
+        "camp": "通用",
+        "img": "jienengshangdian.png",
+        "desc": "每次手动刷新商店后，总有1张商店卡牌所需能量-1。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": 15,
+        "name": "刻舟减蓝",
+        "rank": "铜天赋",
+        "effectType": "战斗类天赋",
+        "camp": "通用",
+        "img": "kezhoujianlan.png",
+        "desc": "英雄20级后，法力值上限-10。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": 16,
+        "name": "狂铁·强化",
+        "rank": "铜天赋",
+        "effectType": "资源类天赋",
+        "camp": "通用",
+        "img": "kuangtieqianghua.png",
+        "desc": "狂铁触发卡牌效果时，自身+10%攻速。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "狂铁",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": 17,
+        "name": "整装待发",
+        "rank": "铜天赋",
+        "effectType": "机制类天赋",
+        "camp": "通用",
+        "img": "zhengzhuangdaifa.png",
+        "desc": "若回合内没有打出英雄牌，下回合开始时，获得2能量。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": 18,
+        "name": "瓶中人",
+        "rank": "铜天赋",
+        "effectType": "机制类天赋",
+        "camp": "通用",
+        "img": "pingzhongren.png",
+        "desc": "获得1张天赋牌契约瓶：获胜时，累积3张随机英雄牌；失败时，损失所累积的一半英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": 19,
+        "name": "破格",
+        "rank": "铜天赋",
+        "effectType": "机制类天赋",
+        "camp": "通用",
+        "img": "poge.png",
+        "desc": "回合开始商店自动刷新时，会出现1个高1阶英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": 20,
+        "name": "日落海新援",
+        "rank": "铜天赋",
+        "effectType": "资源类天赋",
+        "camp": "日落海",
+        "img": "riluohaixinyuan.png",
+        "desc": "获得2能量，以及随机1张2-3阶【日落海】英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "日落海",
+            "url": null
+        }
+    },
+    {
+        "id": 21,
+        "name": "三分新援",
+        "rank": "铜天赋",
+        "effectType": "资源类天赋",
+        "camp": "三分",
+        "img": "sanfenxinyuan.png",
+        "desc": "获得2能量，以及随机1张2-3阶【三分】英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "三分",
+            "url": null
+        }
+    },
+    {
+        "id": 22,
+        "name": "三十而立",
+        "rank": "铜天赋",
+        "effectType": "机制类天赋",
+        "camp": "通用",
+        "img": "sanshierli.png",
+        "desc": "备战阶段中，英雄总等级到达30级时，获得6棋手经验。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },{
+    "id": 23,
+    "name": "先苦后甜",
+    "rank": "铜天赋",
+    "effectType": "机制类天赋",
+    "camp": "通用",
+    "img": "xiankoutian.png",
+    "desc": "选取天赋后，当你输掉2场战斗时，获得6棋手经验。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+}
+,{
+    "id": 24,
+    "name": "防御领域",
+    "rank": "铜天赋",
+    "effectType": "数值类天赋",
+    "camp": "通用",
+    "img": "fangyulingyu.png",
+    "desc": "棋手每次受到的伤害减少2点。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+}
+,{
+    "id": 25,
+    "name": "存款利息",
+    "rank": "铜天赋",
+    "effectType": "机制类天赋",
+    "camp": "通用",
+    "img": "cunkuanlixi.png",
+    "desc": "获得3能量。回合结束时，你每有7能量，额外获得1能量。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+}
+,{
+    "id": 26,
+    "name": "节能商店",
+    "rank": "铜天赋",
+    "effectType": "机制类天赋",
+    "camp": "通用",
+    "img": "jienengshangdian.png",
+    "desc": "每次手动刷新商店后，总有1张商店卡牌所需能量-1。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+}
+,{
+    "id": 27,
+    "name": "三十而达",
+    "rank": "银天赋",
+    "effectType": "机制类天赋",
+    "camp": "通用",
+    "img": "sanshierda.png",
+    "desc": "备战阶段中，英雄总等级到达30级时，获得9棋手经验。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+}
+,{
+    "id": 28,
+    "name": "专注射击",
+    "rank": "铜天赋",
+    "effectType": "数值类天赋",
+    "camp": "通用",
+    "img": "zhuanzhusheji.png",
+    "desc": "战斗开始时，你后两排英雄每次普攻获得3%攻速和3点物理攻击力，上限10层。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+        {
+    "id": 29,
+    "name": "逐鹿新援",
+    "rank": "铜天赋",
+    "effectType": "机制类天赋",
+    "camp": "逐鹿",
+    "img": "zhuluxinyuan.png",
+    "desc": "获得2能量，以及随机1张2-3阶【逐鹿】英雄牌。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
+        {
+    "id": 30,
+    "name": "猪猪",
+    "rank": "铜天赋",
+    "effectType": "机制类天赋",
+    "camp": "通用",
+    "img": "zhuzhu.png",
+    "desc": "战斗开始时，敌方2名随机英雄变为小猪，持续3秒。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+}
+
+
+
+]
+
 ];
 
 const talentCardList = document.getElementById("talentCardList");
