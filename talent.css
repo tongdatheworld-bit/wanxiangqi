@@ -131,7 +131,7 @@ body {
     border-color: #ffd369;
 }
 /* ========== 天赋卡片样式，5:7，只显示图片 ========== */
-.effect-card-item {
+.talent-card-item {
     background: transparent;
     border: 0;
     border-radius: 16px;
@@ -142,27 +142,27 @@ body {
     max-width: 180px;
     margin: 0 auto;
 }
-.effect-card-item:hover {
+.talent-card-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(255, 211, 105, 0.15);
 }
-.effect-card-cover {
+.talent-card-cover {
     width: 100%;
     aspect-ratio: 5 / 7;
     overflow: hidden;
     border-radius: 16px;
 }
-.effect-card-cover img {
+.talent-card-cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
-.effect-card-name,
-.effect-card-desc {
+.talent-card-name,
+.talent-card-desc {
     display: none;
 }
-.effect-card-grid {
+.talent-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 5px;
