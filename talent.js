@@ -5,6 +5,34 @@
 // boostType: link联动强化天赋 / single单体英雄强化天赋 / equip天赋装备
 // img：只填文件名，代码自动拼接前缀 images/talent/
 const talentList = [
+   {
+    "id": 1,
+    "name": "预言家",
+    "rank": "铜天赋",
+    "effectType": "机制类天赋",
+    "camp": "通用",
+    "img": "yuyanjia.png",
+    "desc": "分别获得1张天赋牌胜利预言与失败预言：预测战斗结果，正确可获得奖励。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+},
     {
         id: 2,
         name: "整装待发",
@@ -412,34 +440,35 @@ const talentList = [
             "url": null
         }
     },
-    {
-        "id": 17,
-        "name": "整装待发",
-        "rank": "铜天赋",
-        "effectType": "机制类天赋",
-        "camp": "通用",
-        "img": "zhengzhuangdaifa.png",
-        "desc": "若回合内没有打出英雄牌，下回合开始时，获得2能量。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {
-            "name": "无",
-            "url": null
-        },
-        "fitHero": {
-            "name": "无",
-            "url": null,
-            "avatar": null
-        },
-        "fitPlayer": {
-            "name": "无",
-            "url": null,
-            "avatar": null
-        },
-        "fitTeam": {
-            "name": "无",
-            "url": null
-        }
+ {
+    "id": 17,
+    "name": "战争头牌",
+    "rank": "铜天赋",
+    "effectType": "机制类天赋",
+    "camp": "通用",
+    "img": "zhanzhengtoupai.png",
+    "desc": "每回合获得1个品阶数字，打出相同品阶的英雄牌时，额外+4等级。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
     },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+}
+,
     {
         "id": 18,
         "name": "瓶中人",
@@ -802,7 +831,35 @@ const talentList = [
         "name": "无",
         "url": null
     }
-}    
+},
+   {
+    "id": 31,
+    "name": "银算盘",
+    "rank": "铜天赋",
+    "effectType": "机制类天赋",
+    "camp": "通用",
+    "img": "yinsuanpan.png",
+    "desc": "出售场上英雄时，随机1名英雄等级+2。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {
+        "name": "无",
+        "url": null
+    },
+    "fitHero": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitPlayer": {
+        "name": "无",
+        "url": null,
+        "avatar": null
+    },
+    "fitTeam": {
+        "name": "无",
+        "url": null
+    }
+} 
 ];
 
 const talentCardList = document.getElementById("talentCardList");
