@@ -309,3 +309,9 @@ body {
     color: #b1b7c7;
     font-size: 13px;
 }
+.effect-card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap:16px;
+    margin-top:24px;
+}
