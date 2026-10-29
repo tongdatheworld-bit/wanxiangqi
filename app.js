@@ -2,8 +2,10 @@ let allLineupData = [];
 let currentFilterPlayer = 'all';
 let currentFilterRank = 'all';
 let currentFilterCamp = 'all';
-let searchKw = ''; // 全局保存搜索词
+let searchKw = '';
 const lineupWrap = document.getElementById('lineupList');
+
+// 页面加载直接读取json渲染内容，不管解锁状态！
 if (lineupWrap) {
     fetch('./lineup.json')
         .then(res => {
@@ -25,19 +27,15 @@ function renderList() {
     if (!wrap) return;
     let filterArr = [...allLineupData];
 
-    // 棋手筛选
     if (currentFilterPlayer !== 'all') {
         filterArr = filterArr.filter(item => item.player === currentFilterPlayer)
     }
-    // 强度筛选
     if (currentFilterRank !== 'all') {
         filterArr = filterArr.filter(item => item.rank === currentFilterRank)
     }
-    // BAN阵营筛选
     if (currentFilterCamp !== 'all') {
         filterArr = filterArr.filter(item => Array.isArray(item["ban位"]) && item["ban位"].includes(currentFilterCamp))
     }
-    // ========= 新增搜索筛选 =========
     if (searchKw) {
         filterArr = filterArr.filter(item => {
             const nameMatch = item.name.toLowerCase().includes(searchKw);
@@ -83,14 +81,12 @@ function renderList() {
     bindCardClick();
 }
 
-// 卡片点击弹窗（改成事件委托，避免重复绑定！）
 function bindCardClick() {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeModalBtn = document.getElementById('closeModal');
     if (!modal || !modalBody) return;
 
-    // 只绑一次外层，不再循环给每个card绑定
     lineupWrap.onclick = function(e) {
         const card = e.target.closest('.lineup-card');
         if (!card) return;
@@ -128,7 +124,6 @@ function bindCardClick() {
     }
 }
 
-// 筛选点击事件
 const filterChips = document.querySelectorAll('.filter-chip');
 if (filterChips.length > 0) {
     filterChips.forEach(el => {
@@ -145,7 +140,6 @@ if (filterChips.length > 0) {
     })
 }
 
-// 搜索框
 const searchInput = document.getElementById('searchInput');
 if (searchInput) {
     searchInput.addEventListener('input', (e) => {
@@ -154,7 +148,6 @@ if (searchInput) {
     })
 }
 
-// 复制阵容码函数
 async function copyCode(code) {
     try {
         await navigator.clipboard.writeText(code)
@@ -164,7 +157,7 @@ async function copyCode(code) {
     }
 }
 
-// ========== 解锁模块【包在 DOMContentLoaded 里面，防止null报错！】 ==========
+// ========== 解锁模块 ==========
 document.addEventListener('DOMContentLoaded', function () {
     const RIGHT_CODE = "万象一图诀";
     const lockModal = document.getElementById('lockModal');
@@ -178,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-    // 已经解锁，直接关掉弹窗
     if(localStorage.getItem(STORAGE_KEY) === 'ok'){
         lockModal.style.display = 'none';
     }
@@ -187,27 +179,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const val = codeInput.value.trim();
       if(val === RIGHT_CODE){
         lockModal.style.display = 'none';
-        localStorage.setItem(STORAGE_KEY,'ok');
-      }else{
-        tipText.style.display = 'block';
-      }
-    }
-    codeInput.onkeydown = function(e){
-      if(e.key === 'Enter') unlockBtn.click();
-    }
-})
-
-    // 本地缓存放行
-    if(localStorage.getItem(STORAGE_KEY) === 'ok'){
-        lockModal.style.display = 'none';
-        mainContent.style.display = 'block';
-    }
-
-    unlockBtn.onclick = function(){
-      const val = codeInput.value.trim();
-      if(val === RIGHT_CODE){
-        lockModal.style.display = 'none';
-        mainContent.style.display = 'block';
         localStorage.setItem(STORAGE_KEY,'ok');
       }else{
         tipText.style.display = 'block';
