@@ -168,102 +168,96 @@ body {
     gap: 5px;
 }
 /* 弹窗 */
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.78);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    padding: 20px;
-    backdrop-filter: blur(4px);
-}
-.modal-content {
-    width: min(860px, 100%);
-    background: linear-gradient(145deg, #0c0906 0%, #17120a 45%, #0b0805 100%);
-    border: 1px solid #7c6538;
-    border-radius: 20px;
-    max-height: 86vh;
-    overflow-y: auto;
-    padding: 32px;
-    box-shadow: 0 0 40px rgba(255, 211, 105, 0.12);
-}
-.modal-close {
-    float: right;
-    color: #888;
-    font-size: 26px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-.modal-close:hover {
-    color: #ffd369;
-}
-.effect-header-bar {
+.talent-modal-wrap{
     display: flex;
     align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 18px;
-    padding: 14px 16px;
-    background: linear-gradient(180deg, rgba(255,211,105,0.08), rgba(255,211,105,0.02));
-    border: 1px solid #4b3e24;
-    border-radius: 16px;
+    gap:24px;
     position: relative;
+    padding:24px;
 }
-.effect-icon-wrap {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
+.modal-left{
+    flex-shrink: 0;
+    width:340px;
 }
-.effect-main-icon {
-    width: 84px;
-    height: 84px;
-    border-radius: 16px;
-    border: 2px solid #c9a258;
-    object-fit: cover;
-    display: block;
+.talent-card-img{
+    width:100%;
+    border-radius:16px;
 }
-.effect-name-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 4px;
+.modal-right{
+    flex:1;
+    color:#fff;
 }
-.effect-name-large {
-    font-size: 34px;
-    font-weight: bold;
-    color: #ffd369;
+.rank-tag{
+    display:inline-block;
+    padding:4px 12px;
+    border-radius:6px;
+    color:#fff;
+    font-size:14px;
+    margin-bottom:8px;
 }
-.effect-subtitle {
-    font-size: 14px;
-    color: #c9b894;
+.rank-tag.copper{
+    background:#7b4833;
 }
-.effect-tags-top {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 6px;
+.rank-tag.silver{
+    background:#747b88;
 }
-.tag-stage {
-    padding: 6px 12px;
-    border-radius: 99px;
-    font-size: 13px;
-    border: 1px solid;
+.rank-tag.gold{
+    background:#a17927;
 }
-.tag-stage-1 { color: #cfd3dc; border-color: #6c7280; background: #2a2d35; }
-.tag-stage-2 { color: #7dff9a; border-color: #2f8f4a; background: #132b1a; }
-.tag-stage-3 { color: #7dc7ff; border-color: #2f6fbf; background: #132235; }
-.modal-block {
-    margin: 16px 0;
-    background: #1c212c;
-    border: 1px solid #282d38;
-    border-radius: 14px;
-    padding: 16px 18px;
+.talent-title{
+    font-size:32px;
+    margin:0 0 8px;
+    color:#ffffff;
 }
-.modal-block p {
-    color: #b4b9c6;
-    line-height: 1.8;
-    font-size: 14px;
+.type-tag{
+    display:inline-block;
+    padding:4px 12px;
+    border-radius:6px;
+    color:white;
+    font-size:14px;
+    margin-bottom:16px;
+}
+.type-tag.resource{
+    background:#2e7d5b;
+}
+.type-tag.combat{
+    background:#8b3838;
+}
+.effect-desc{
+    font-size:16px;
+    line-height:1.6;
+    margin:0 0 8px 0;
+    color:#e9e2d4;
+}
+.source-line{
+    color:#c5c8cf;
+    margin:0 0 14px;
+    font-size:14px;
+}
+.info-row{
+    font-size:15px;
+    line-height:1.9;
+}
+.info-row .label{
+    color:#b0b4bd;
+}
+.modal-link{
+    color:#ffd369;
+    text-decoration:none;
+}
+.modal-link:hover{
+    text-decoration:underline;
+}
+.modal-close-btn{
+    position:absolute;
+    top:12px;
+    right:16px;
+    background:transparent;
+    border:none;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+    padding:4px 8px;
 }
 /* ========= 手机响应式 ========= */
 @media (max-width: 768px) {
