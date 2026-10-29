@@ -66,9 +66,10 @@ body {
 }
 
 /* 英文小字：最上面 */
-.subtitle-en {
-    color: #ffd369;
+.subtitle-tag  {
+    color: #b8a060;
     font-size: 10px;
+    text-align: center;
     font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: 14px;
