@@ -173,12 +173,16 @@ body {
 /* ========== 弹窗基础（匹配你HTML modal结构） ========== */
 .modal {
     position: fixed;
-    inset: 0;
-    background-color: rgba(0,0,0,0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    display:none;  /* 默认隐藏 */
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+}
+.modal.show {
+    display:flex;
+}
 }
 .modal-content {
     position: relative; /* 给关闭按钮做定位父容器！ */
