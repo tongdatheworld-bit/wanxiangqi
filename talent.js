@@ -163,11 +163,12 @@ function openModal(item) {
             </div>
         </div>
     `;
-    talentModal.style.display = "block";
+    talentModal.classList.add('show');
+;
 }
 
 function closeModal() {
-    talentModal.style.display = "none";
+    talentModal.classList.add('show');
 }
 // 点击遮罩空白关闭
 talentModal.onclick = function(e){
