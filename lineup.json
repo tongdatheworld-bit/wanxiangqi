@@ -230,7 +230,7 @@
             {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
             {"name":"铠","img":"images/heroes/kai.png","isCore":false},
             {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
             {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
@@ -389,7 +389,7 @@
         "heroList": [
             {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
             {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
             {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
             {"name":"李白","img":"images/heroes/libai.png","isCore":false},
             {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
@@ -447,7 +447,7 @@
         "heroList": [
             {"name":"狄仁杰","img":"images/heroes/direnzjie.png","isCore":true},
             {"name":"铠","img":"images/heroes/kai.png","isCore":false},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
             {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
             {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
@@ -470,7 +470,7 @@
             {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false}
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false}
         ]
     },
     {
@@ -522,7 +522,7 @@
         "ban位": ["日落海", "三分之地", "大河流域"],
         "heroList": [
             {"name":"镜","img":"images/heroes/jing.png","isCore":true},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
             {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
             {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
@@ -541,7 +541,7 @@
         "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
         "heroList": [
             {"name":"镜","img":"images/heroes/jing.png","isCore":true},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
             {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
             {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
@@ -560,7 +560,7 @@
         "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
         "heroList": [
             {"name":"镜","img":"images/heroes/jing.png","isCore":true},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
             {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
             {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
@@ -617,7 +617,7 @@
         "ban位": ["大河流域", "河洛", "日落海"],
         "heroList": [
             {"name":"镜","img":"images/heroes/jing.png","isCore":true},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
             {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
             {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
@@ -658,7 +658,7 @@
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
             {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
             {"name":"铠","img":"images/heroes/kai.png","isCore":false},
-            {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
             {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
             {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false}
         ]
@@ -947,7 +947,7 @@
     "lineupCode": "120529611504499876（点击复制）",
     "ban位": ["逐鹿", "大河流域", "三分"],
     "heroList": [
-        {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
         {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
         {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
         {"name":"李白","img":"images/heroes/libai.png","isCore":false},
@@ -1132,7 +1132,7 @@
         {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
         {"name":"沈梦溪","img":"images/heroes/shenmengxi.png","isCore":true},
         {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
-        {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
         {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
         {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
