@@ -111,37 +111,41 @@
             font-size:13px;
             margin-bottom:50px;
         }
-        /* 卡片区域 */
-        .card-grid {
-            display:grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-            gap:16px;
+
+        /* ========== 横向滚动卡面容器，只保留图片卡牌 ========== */
+        .quick-card-group {
+            display: flex;
+            gap: 22px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 20px 10px;
+            scroll-behavior: smooth;
+            /* 隐藏滚动条 */
+            scrollbar-width: none;
+            justify-content: center;
         }
-        .preview-card {
-            background:#1c212c;
-            border-radius:10px;
-            padding:14px;
-            display:flex;
-            align-items:center;
-            gap:10px;
-            border:1px solid #282d38;
-            transition:0.2s;
+        .quick-card-group::-webkit-scrollbar {
+            display: none;
         }
-        .preview-card:hover {
-            border-color:rgba(255,211,105,0.35);
+        .quick-card {
+            flex: 0 0 120px;
+            background: #1c212c;
+            border: 1px solid #282d38;
+            border-radius: 12px;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.25s ease;
         }
-        .preview-card img {
-            width:48px;
-            height:48px;
-            border-radius:6px;
-            object-fit:cover;
+        .quick-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            border-color:rgba(255,211,105,0.45);
+            box-shadow: 0 8px 20px rgba(255, 211, 105, 0.12);
         }
-        .card-text p:first-child {
-            color:#ffd369;
-            font-size:13px;
-        }
-        .card-text p:last-child {
-            font-size:15px;
+        .quick-card-cover img {
+            width: 96px;
+            height:96px;
+            border-radius: 8px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -157,7 +161,6 @@
         <a href="./effect.html">效果牌</a>
         <a href="./info-gap.html">信息差</a>
     </div>
-
     <div class="container">
         <div class="subtitle-tag">WANGZHE WANXIANGQI</div>
 <h1>致力于做王者万象棋最全攻略
@@ -165,7 +168,6 @@
 <span class="yellow-text">万象棋启动</span>
 </h1>
 <div class="desc-line">万象一图诀 · 友情打造</div>
-
         <div class="search-box">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#888e9c">
                 <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
@@ -174,48 +176,29 @@
             <span style="color:#777; font-size:13px;">⌘ K</span>
         </div>
         <div class="search-hint">支持拼音与首字母 · 覆盖全部游戏资料 · 数据持续更新</div>
-
-             <!-- 堆叠散开卡牌组 -->
+             <!-- 纯卡牌，无名字、无描述 -->
         <div class="quick-card-group">
             <div class="quick-card" data-type="hero" data-id="1">
                 <div class="quick-card-cover">
                     <img src="images/herocard/sunshangxiang" alt="孙尚香">
-                </div>
-                <div class="quick-card-info">
-                    <div class="quick-card-title">孙尚香</div>
-                    <div class="quick-card-sub">登场：获得1次免费刷新</div>
                 </div>
             </div>
             <div class="quick-card" data-type="hero" data-id="2">
                 <div class="quick-card-cover">
                     <img src="images/herocard/sunbin" alt="孙膑">
                 </div>
-                <div class="quick-card-info">
-                    <div class="quick-card-title">孙膑</div>
-                    <div class="quick-card-sub">你的英雄每释放3次技能，该英雄等级永久+1</div>
-                </div>
             </div>
             <div class="quick-card" data-type="hero" data-id="3">
                 <div class="quick-card-cover">
                     <img src="images/herocard/niumo" alt="牛魔">
-                </div>
-                <div class="quick-card-info">
-                    <div class="quick-card-title">牛魔</div>
-                    <div class="quick-card-sub">凯旋：获得1能量</div>
                 </div>
             </div>
             <div class="quick-card" data-type="hero" data-id="4">
                 <div class="quick-card-cover">
                     <img src="images/herocard/liyuanfang" alt="李元芳">
                 </div>
-                <div class="quick-card-info">
-                    <div class="quick-card-title">李元芳</div>
-                    <div class="quick-card-sub">整备：对距离最近的【河洛】英雄使用1张古币</div>
-                </div>
             </div>
         </div>
-
-
     <script src="./app.js"></script>
     <!-- 导航自动高亮脚本 -->
     <script>
@@ -242,6 +225,5 @@
             });
         })
     </script>
-
 </body>
 </html>
