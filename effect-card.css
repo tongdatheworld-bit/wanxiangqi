@@ -68,7 +68,7 @@ body {
 /* 英文小字：最上面 */
 .subtitle-en {
     color: #ffd369;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: 14px;
@@ -78,13 +78,14 @@ body {
 .page-title {
     font-size: 32px;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     color: #ffd369;
 }
 /* 底部标签/备注 */
 .desc-line {
     color: #b4b9c6;
     font-size: 14px;
+    text-align: center;
     font-weight: 400;
     letter-spacing: 1px;
 }
