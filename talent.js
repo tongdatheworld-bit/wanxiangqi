@@ -103,11 +103,11 @@ function render() {
         const matchBoostType = filterBoostType === "all" || (item.boostType && item.boostType === filterBoostType);
         if (!(matchKw && matchRank && matchEffectType && matchCamp && matchBoostType)) return;
         const div = document.createElement("div");
-        div.className = "effect-card-item";
+        div.className = "talent-card-item";
         // 拼接完整图片路径
         const fullImgPath = `images/talent/${item.img}`;
         div.innerHTML = `
-            <div class="effect-card-cover">
+            <div class="talent-card-cover">
                 <img src="${fullImgPath}" alt="${item.name}" onerror="this.style.display='none'">
             </div>
         `;
