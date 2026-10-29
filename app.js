@@ -157,3 +157,36 @@ async function copyCode(code) {
         alert("复制失败，请手动复制：" + code)
     }
 }
+// ========== 在这里改你的验证码 ==========
+const RIGHT_CODE = "wanxiangqi"; 
+
+const lockModal = document.getElementById('lockModal');
+const mainContent = document.getElementById('mainContent');
+const codeInput = document.getElementById('codeInput');
+const unlockBtn = document.getElementById('unlockBtn');
+const tipText = document.getElementById('tipText');
+
+// 点击解锁
+unlockBtn.onclick = function(){
+  const val = codeInput.value.trim();
+  if(val === RIGHT_CODE){
+    lockModal.style.display = 'none';
+    mainContent.style.display = 'block';
+    // 可选：存入浏览器本地缓存，下次打开不用再输
+    localStorage.setItem('wx_unlock','ok');
+  }else{
+    tipText.style.display = 'block';
+  }
+}
+
+// 回车直接提交
+codeInput.onkeydown = function(e){
+  if(e.key === 'Enter') unlockBtn.click();
+}
+
+// 本地缓存：已经解锁过，下次进来直接放行，不用重复扫码输码
+if(localStorage.getItem('wx_unlock') === 'ok'){
+  lockModal.style.display = 'none';
+  mainContent.style.display = 'block';
+}
+
