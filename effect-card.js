@@ -35,6 +35,19 @@ const effectRaw = {
         "四人同行", "新生力量", "沧海拾遗"
     ]
 };
+const equipList = [
+    {
+        id: 1,
+        name: "吸纳人才",
+        type: "一阶",
+        pos: "通用",
+        desc: " 卡牌4选1（英雄牌）。",
+        source: "该卡通过效果锦囊等渠道获得。",
+        img: "images/effectcard/xiyinrencai.png",
+        },
+    {
+];
+
 
 let allEffectData = [];
 (() => {
