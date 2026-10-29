@@ -167,7 +167,6 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 5px;
 }
-
 /* ========== 弹窗基础（匹配你HTML modal结构） ========== */
 .modal {
     display: none;
@@ -204,7 +203,6 @@ body {
 .modal-close:hover {
     color:#ffd369;
 }
-
 /* 弹窗内部左右布局 */
 .talent-modal-wrap{
     display: flex;
@@ -286,7 +284,6 @@ body {
 .modal-link:hover{
     text-decoration:underline;
 }
-
 /* ========= 手机响应式 ========= */
 @media (max-width: 768px) {
     .modal-content {
