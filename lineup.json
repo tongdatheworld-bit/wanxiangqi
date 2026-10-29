@@ -754,7 +754,7 @@
         {"name":"项羽","img":"images/heroes/xiangyu.png","isCore":false},
         {"name":"蒙恬","img":"images/heroes/mengtian.png","isCore":false},
         {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-        {"name":"鲁班大师","img":"images/heroes/lubanadashi.png","isCore":false},
+        {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ]
 },
@@ -956,4 +956,4 @@
         {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false}
     ]
 }
-    
+]
