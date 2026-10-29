@@ -62,6 +62,19 @@ body {
     text-align: center;
     margin-bottom: 24px;
     color: #ffd369;
+ }
+.subtitle-tag {
+    text-align: center;
+    color: #b4b9c6;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.desc-line {
+    text-align: center;
+    color: #888e9c;
+    font-size: 14px;
+    margin-bottom: 24px;
 }
 /* 搜索框 */
 .search-box {
