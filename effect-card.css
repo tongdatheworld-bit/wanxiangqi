@@ -57,30 +57,33 @@ body {
     margin: 0 auto;
     padding: 30px 20px;
 }
-.page-title {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 24px;
-    color: #ffd369;
+.title-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 全部居中 */
+  gap: 8px;
+  margin-bottom: 24px;
+}
 
-.title-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-}
-.title-left {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* 英文和底部备注之间的行距 */
-}
 .subtitle-tag {
-    color: #cccccc;
-    font-size: 28px;
+  color: #ffd369;
+  font-size: 24px;
+  margin: 0;
 }
+
+.page-title {
+  color: #ffd369;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+}
+
 .desc-line {
-    color: #b4b9c6;
-    font-size: 20px;
+  color: #b4b9c6;
+  font-size: 20px;
+  margin: 0;
+}
 
 }
 /* 搜索框 */
@@ -132,14 +135,14 @@ body {
     border-color: #ffd369;
 }
 
-/* 装备牌网格（完全参照英雄牌网格样式复刻） */
-.equip-card-grid {
+/* 效果牌网格（完全参照英雄牌网格样式复刻） */
+.effect-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 16px;
     margin-top: 20px;
 }
-.equip-card-item {
+.effect-card-item {
     background: transparent;
     border: 0;
     border-radius: 16px;
@@ -150,17 +153,17 @@ body {
     max-width: 180px;
     margin: 0 auto;
 }
-.equip-card-item:hover {
+.effect-card-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(255, 211, 105, 0.15);
 }
-.equip-card-cover {
+.effect-card-cover {
     width: 100%;
     aspect-ratio: 5 / 7;
     overflow: hidden;
     border-radius: 16px;
 }
-.equip-card-cover img {
+.effect-card-cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -204,62 +207,62 @@ body {
     color: #aaa;
     cursor: pointer;
 }
-.equip-modal-wrap {
+.effect-modal-wrap {
     display: flex;
     gap: 32px;
 }
-.equip-modal-left {
+.effect-modal-left {
     flex-shrink: 0;
     width: 240px;
 }
-.equip-modal-card {
+.effect-modal-card {
     background: #202636;
     border-radius: 12px;
     padding: 16px;
     text-align: center;
 }
-.equip-modal-card img {
+.effect-modal-card img {
     width: 100%;
     border-radius: 10px;
 }
-.equip-modal-card-name {
+.effect-modal-card-name {
     margin-top: 8px;
     font-size: 18px;
     color: #fff;
 }
-.equip-modal-right {
+.effect-modal-right {
     flex: 1;
 }
-.equip-modal-title {
+.effect-modal-title {
     display: flex;
     align-items: center;
     gap: 12px;
     color: #fff;
 }
-.equip-modal-tag {
+.effect-modal-tag {
     font-size: 14px;
     color: #ffd369;
     background: rgba(255,211,105,0.12);
     padding: 3px 8px;
     border-radius: 4px;
 }
-.equip-modal-desc {
+.effect-modal-desc {
     margin-top: 16px;
     color: #d4d8e3;
     font-size: 15px;
 }
-.equip-modal-source {
+.effect-modal-source {
     margin-top: 8px;
     color: #999fac;
     font-size: 14px;
 }
-.equip-divider {
+.effect-divider {
     border: none;
     height: 1px;
     background-color: #30384b;
     margin: 20px 0;
 }
-.equip-cast-title {
+.effect-cast-title {
     color: #fff;
     font-size: 17px;
     margin-bottom: 14px;
