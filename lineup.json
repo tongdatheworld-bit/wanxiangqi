@@ -757,7 +757,77 @@
         {"name":"鲁班大师","img":"images/heroes/lubanadashi.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ]
+},
+    {
+    "id": 40,
+    "name": "香香三分登场",
+    "rank": "A",
+    "player": "香香",
+    "playerImg": "images/players/xiangxiang.png",
+    "hard": "简单",
+    "lineupCode": "123907311224235024（点击复制）",
+    "ban位": ["大河流域", "逐鹿", "河洛", "日落海"],
+    "heroList": [
+        {"name":"吕布","img":"images/heroes/lvbu.png","isCore":true},
+        {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":false},
+        {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+        {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+        {"name":"貂蝉","img":"images/heroes/diaochan.png","isCore":false},
+        {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
+        {"name":"孙尚香","img":"images/heroes/sunshangxiang.png","isCore":false}
+    ]
+},
+{
+    "id": 41,
+    "name": "镜999猪虎",
+    "rank": "A",
+    "player": "镜",
+    "playerImg": "images/players/jing.png",
+    "hard": "简单",
+    "lineupCode": "5355386554329126（点击复制）",
+    "ban位": ["无限制"],
+    "heroList": [
+        {"name":"阿轲","img":"images/heroes/ake.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true}
+    ]
 }
+,{
+    "id": 42,
+    "name": "嫦小娥艾琳",
+    "rank": "A",
+    "player": "嫦小娥",
+    "playerImg": "images/players/changxiao'e.png",
+    "hard": "中等",
+    "lineupCode": "9125311442502540（点击复制）",
+    "ban位": ["逐鹿", "河洛", "三分之地"],
+    "heroList": [
+        {"name":"狂铁","img":"images/heroes/kuangtie.png","isCore":false},
+        {"name":"艾琳","img":"images/heroes/ailin.png","isCore":true},
+        {"name":"雅典娜","img":"images/heroes/yadianna.png","isCore":false},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
+    ]
+},
+    {
+    "id": 43,
+    "name": "嫦小娥马瑶",
+    "rank": "A",
+    "player": "嫦小娥",
+    "playerImg": "images/players/changxiaoe.png",
+    "hard": "中等",
+    "lineupCode": "74927562783215920（点击复制）",
+    "ban位": ["逐鹿", "日落海"],
+    "heroList": [
+        {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"马超","img":"images/heroes/machao.png","isCore":true},
+        {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false}
+    ]
+}
+
+
+    
 
 
 
