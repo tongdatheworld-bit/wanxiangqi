@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天赋牌 | 王者万象棋</title>
+    <link rel="stylesheet" href="talent.css">
+</head>
+<body>
+    <div class="top-nav-wrap">
+        <a href="index.html">首页</a>
+        <a href="hero.html">英雄</a>
+        <a href="effect.html">效果牌</a>
+        <a href="talent.html" class="active">天赋牌</a>
+    </div>
+    <div class="container">
+        <div class="subtitle-tag">TALENT CARD DATA</div>
+        <h1 class="page-title">天赋牌</h1>
+        <div class="desc-line">万象一图诀·友情打造 </div>
 
+        <!-- 搜索 -->
+        <div class="search-box">
+            <input type="text" id="talentSearch" placeholder="搜索天赋名称 / 描述">
+        </div>
+
+        <!-- 筛选 -->
+        <div class="filter-wrap">
+            <div class="filter-row">
+                <select class="filter-select" id="talentTierFilter">
+                    <option value="all">全部品阶</option>
+                    <option value="1">铜天赋</option>
+                    <option value="2">银天赋</option>
+                    <option value="3">金天赋</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 卡片容器 -->
+        <div class="effect-card-grid" id="talentCardList"></div>
+    </div>
+
+    <!-- 弹窗 -->
+    <div class="modal" id="talentModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">×</span>
+            <div id="talentModalBody"></div>
+        </div>
+    </div>
+
+    <script src="talent.js"></script>
+</body>
+</html>
