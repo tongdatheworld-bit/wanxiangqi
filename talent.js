@@ -888,13 +888,13 @@ const talentList = [
         "url": null
     }
 },{
-    "id": 33,
-    "name": "五福临门",
+    "id": 27,
+    "name": "随机成长",
     "rank": "铜天赋",
     "effectType": "机制类天赋",
     "camp": "通用",
-    "img": "wufulinmen.png",
-    "desc": "获得1张天赋牌五福临门：随机获得5张英雄牌。",
+    "img": "suijichengzhang.png",
+    "desc": "战斗开始时，你品阶最高的1名英雄等级永久+4。",
     "source": "棋手升级时概率选择获取天赋。",
     "relatedProduct": {
         "name": "无",
@@ -915,6 +915,7 @@ const talentList = [
         "url": null
     }
 }
+
 ];
 
 const talentCardList = document.getElementById("talentCardList");
