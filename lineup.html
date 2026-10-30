@@ -407,6 +407,139 @@
         .modal-content::-webkit-scrollbar-thumb:hover {
             background: #ffd369;
         }
+
+        /* ========= 弹窗详情内英雄行 ========= */
+        .hero-row-modal{
+            display:flex;
+            gap:8px;
+            margin:10px 0;
+            flex-wrap:wrap;
+        }
+        .mini-hero-modal{
+            width:52px;
+            height:52px;
+            border-radius:8px;
+            border:1px solid #333844;
+            position:relative;
+        }
+        .mini-hero-modal img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .mini-hero-modal.core::after{
+            content:"核";
+            position:absolute;
+            top:-4px;
+            right:-4px;
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            background:#7b3fd8;
+            color:#fff;
+            font-size:11px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        /* ========= 装备行 ========= */
+        .equip-row{
+            display:flex;
+            gap:12px;
+            align-items:center;
+            margin:10px 0;
+            flex-wrap:wrap;
+        }
+        .equip-item{
+            text-align:center;
+            width:70px;
+        }
+        .equip-item img{
+            width:54px;
+            height:54px;
+            border-radius:8px;
+            border:1px solid #333844;
+        }
+        .equip-item span{
+            display:block;
+            font-size:12px;
+            color:#b4b9c6;
+            margin-top:4px;
+        }
+        .equip-tag{
+            color:#ffd369;
+            font-weight:bold;
+            width:40px;
+        }
+
+        /* ========= 站位矩阵Grid ========= */
+        .pos-matrix-wrap{
+            margin-top:10px;
+        }
+        .pos-grid{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            background: #1b142b;
+            padding:16px;
+            border-radius:14px;
+            border: 1px solid #7b3fd877;
+        }
+        .pos-cell{
+            aspect-ratio: 1 / 1;
+            border-radius:10px;
+            border: 2px solid #7b3fd855;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            overflow:hidden;
+            background:#241a3b44;
+        }
+        .pos-cell.has-hero{
+            border-color:#7b3fd8;
+        }
+        .pos-cell img{
+            width:80%;
+            height:80%;
+            object-fit:cover;
+            border-radius:8px;
+        }
+
+        /* ========= 弹窗头部信息行 ========= */
+        .modal-top-info{
+            display:flex;
+            align-items:center;
+            gap:14px;
+            margin-bottom:16px;
+        }
+        .modal-top-info img{
+            width:72px;
+            height:72px;
+            border-radius:50%;
+            object-fit:cover;
+        }
+        .top-tags-wrap{
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+        }
+        .top-tag{
+            padding:4px 10px;
+            background:#1c212c;
+            border:1px solid #333844;
+            border-radius:6px;
+            font-size:14px;
+            color:#b4b9c6;
+        }
+
+        /* 阵容码复制hover */
+        .copy-code{
+            cursor: pointer;
+        }
+        .copy-code:hover{
+            color:#ffd369;
+        }
     </style>
 </head>
 <body>
