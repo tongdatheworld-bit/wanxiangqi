@@ -319,7 +319,7 @@
     },
     {
         "id": 17,
-        "name": "低压嬴律大河猪离",
+        "name": "低压赢律大河猪离",
         "rank": "S",
         "player": "赢律",
         "playerImg": "images/players/yinglv.png",
@@ -337,90 +337,90 @@
         ],
         "equip": []
     },
-    {
+       {
         "id": 18,
         "name": "小妲己日落海司空震",
-    "rank": "S",
-    "player": "玉环",
-    "playerImg": "images/players/yuhuan.png",
-    "hard": "中等",
-    "lineupCode": "55226795263681668（点击复制）",
-    "ban位": ["大河流域"],
-    "heroList": [
-        {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
-        {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
-        {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
-        {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
-        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyi.png","isCore":false}
-    ],
-    "funcHeroList": [
-        {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
-        {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
-        {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
-        {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false}
-    ],
-    "backupHeroList": [
-        {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
-        {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
-        {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false}
-    ],
-    "equipFirst": [
-        {"name":"金色圣剑","img":"images/equip/jinse.png"},
-        {"name":"炽热支配者","img":"images/equip/chire.png"},
-        {"name":"名刀·司命","img":"images/equip/mingdao.png"}
-    ],
-    "equipSecond": [
-        {"name":"虚无法杖","img":"images/equip/xuwu.png"},
-        {"name":"铸梦·逐风","img":"images/equip/zhumeng.png"}
-    ],
-    "runStage": [
-        {
-            "title": "1-3回合",
-            "heroList": [
-                {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
-                {"name":"海诺","img":"images/heroes/hainuo.png"},
-                {"name":"莱西奥","img":"images/heroes/laixiao.png"},
-                {"name":"亚瑟","img":"images/heroes/yase.png"}
-            ],
-            "desc": "开局先上狂铁+牛魔，后续再连续打出4张弈星并觉醒上场，随后棋手直接升5级。弈星务必优先觉醒，玉环需要快速升5级去找体系牌。狂铁和牛魔前期能赢2个回合就算立大功。第一轮竞拍优先抢：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
-        },
-        {
-            "title": "4-11回合",
-            "heroList": [
-                {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
-                {"name":"海诺","img":"images/heroes/hainuo.png"},
-                {"name":"莱西奥","img":"images/heroes/laixiao.png"},
-                {"name":"亚瑟","img":"images/heroes/yase.png"}
-            ],
-            "desc": "开局先上狂铁+牛魔，后续再连续打出4张弈星并觉醒上场，随后棋手直接升5级。弈星务必优先觉醒，玉环需要快速升5级去找体系牌。狂铁和牛魔前期能赢2个回合就算立大功。第一轮竞拍优先抢：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
-        },
-        {
-            "title": "12回合以后",
-            "heroList": [
-                {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
-                {"name":"海诺","img":"images/heroes/hainuo.png"},
-                {"name":"莱西奥","img":"images/heroes/laixiao.png"},
-                {"name":"亚瑟","img":"images/heroes/yase.png"}
-            ],
-            "desc": "开局先上狂铁+牛魔，后续再连续打出4张弈星并觉醒上场，随后棋手直接升5级。弈星务必优先觉醒，玉环需要快速升5级去找体系牌。狂铁和牛魔前期能赢2个回合就算立大功。第一轮竞拍优先抢：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
-        }
-    ],
-    "notice": [
-        "优先追司空震三星",
-        "不要乱D牌，卡利息上人口",
-        "留意对手的法系阵容"
-    ],
-    "positionGrid": [
-        [null, null, null, null, null, null, null],
-        [{"name":"姬小满","img":"images/heroes/jixiaoman.png"},{"name":"亚瑟","img":"images/heroes/yase.png"},null,null,null,null,null],
-        [{"name":"海诺","img":"images/heroes/hainuo.png"},{"name":"莱西奥","img":"images/heroes/laixiao.png"},null,null,null,null,null],
-        [{"name":"司空震","img":"images/heroes/sikongzhen.png"},{"name":"姜子牙","img":"images/heroes/jiangziya.png"},null,null,null,null,null]
-    ]
-},
+        "rank": "S",
+        "player": "玉环",
+        "playerImg": "images/players/yuhuan.png",
+        "hard": "中等",
+        "lineupCode": "55226795263681668（点击复制）",
+        "ban位": ["大河流域"],
+        "heroList": [
+            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+            {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+            {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
+            {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
+            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+            {"name":"太乙真人","img":"images/heroes/taiyi.png","isCore":false}
+        ],
+        "funcHeroList": [
+            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+            {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+            {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
+            {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false}
+        ],
+        "backupHeroList": [
+            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+            {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+            {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
+            {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false}
+        ],
+        "equipFirst": [
+            {"name":"金色圣剑","img":"images/equip/jinse.png"},
+            {"name":"炽热支配者","img":"images/equip/chire.png"},
+            {"name":"名刀·司命","img":"images/equip/mingdao.png"}
+        ],
+        "equipSecond": [
+            {"name":"虚无法杖","img":"images/equip/xuwu.png"},
+            {"name":"铸梦·逐风","img":"images/equip/zhumeng.png"}
+        ],
+        "runStage": [
+            {
+                "title": "1-3回合",
+                "heroList": [
+                    {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
+                    {"name":"海诺","img":"images/heroes/hainuo.png"},
+                    {"name":"莱西奥","img":"images/heroes/laixiao.png"},
+                    {"name":"亚瑟","img":"images/heroes/yase.png"}
+                ],
+                "desc": "开局先上狂铁+牛魔，后续再连续打出4张弈星并觉醒上场，随后棋手直接升5级。弈星务必优先觉醒，玉环需要快速升5级去找体系牌。狂铁和牛魔前期能赢2个回合就算立大功。第一轮竞拍优先抢：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
+            },
+            {
+                "title": "4-11回合",
+                "heroList": [
+                    {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
+                    {"name":"海诺","img":"images/heroes/hainuo.png"},
+                    {"name":"莱西奥","img":"images/heroes/laixiao.png"},
+                    {"name":"亚瑟","img":"images/heroes/yase.png"}
+                ],
+                "desc": "开局先上狂铁+牛魔，后续再连续打出4张弈星并觉醒上场，随后棋手直接升5级。弈星务必优先觉醒，玉环需要快速升5级去找体系牌。狂铁和牛魔前期能赢2个回合就算立大功。第一轮竞拍优先抢：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
+            },
+            {
+                "title": "12回合以后",
+                "heroList": [
+                    {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
+                    {"name":"海诺","img":"images/heroes/hainuo.png"},
+                    {"name":"莱西奥","img":"images/heroes/laixiao.png"},
+                    {"name":"亚瑟","img":"images/heroes/yase.png"}
+                ],
+                "desc": "开局先上狂铁+牛魔，后续再连续打出4张弈星并觉醒上场，随后棋手直接升5级。弈星务必优先觉醒，玉环需要快速升5级去找体系牌。狂铁和牛魔前期能赢2个回合就算立大功。第一轮竞拍优先抢：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
+            }
+        ],
+        "notice": [
+            "优先追司空震三星",
+            "不要乱D牌，卡利息上人口",
+            "留意对手的法系阵容"
+        ],
+        "positionGrid": [
+            [null, null, null, null, null, null, null],
+            [{"name":"姬小满","img":"images/heroes/jixiaoman.png"},{"name":"亚瑟","img":"images/heroes/yase.png"},null,null,null,null,null],
+            [{"name":"海诺","img":"images/heroes/hainuo.png"},{"name":"莱西奥","img":"images/heroes/laixiao.png"},null,null,null,null,null],
+            [{"name":"司空震","img":"images/heroes/sikongzhen.png"},{"name":"姜子牙","img":"images/heroes/jiangziya.png"},null,null,null,null,null]
+        ]
+    },
     {
         "id": 19,
         "name": "孙小宾三分换帅",
