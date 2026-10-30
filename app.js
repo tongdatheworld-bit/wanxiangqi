@@ -84,56 +84,177 @@ function renderList() {
 }
 
 function bindCardClick() {
+function bindCardClick() {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeModalBtn = document.getElementById('closeModal');
     if (!modal || !modalBody) return;
 
-    lineupWrap.onclick = function(e) {
-        // ===== 在这里新增这一段！=====
-        const copyBtn = e.target.closest('.copy-code');
-        if(copyBtn){
-            e.stopPropagation();
-            const code = copyBtn.dataset.code;
-            copyCode(code);
-            return;
-        }
-        // ==========================
-
+    lineupWrap.onclick = function (e) {
         const card = e.target.closest('.lineup-card');
         if (!card) return;
         const id = Number(card.dataset.id);
         const find = allLineupData.find(x => x.id === id);
         if (!find) return;
+
+        // 主英雄列表
+        const heroHtml = Array.isArray(find.heroList) && find.heroList.length
+            ? find.heroList.map(h => `
+                <span class="hero-pill ${h.isCore ? 'core' : ''}">
+                    <img src="${h.img}" alt="${h.name}">
+                    ${h.isCore ? '【核】' : ''}${h.name}
+                </span>
+              `).join('')
+            : '<span class="empty-text">无</span>';
+
+        // 功能英雄
+        const funcHeroHtml = Array.isArray(find.funcHeroList) && find.funcHeroList.length
+            ? find.funcHeroList.map(h => `
+                <span class="hero-pill ${h.isCore ? 'core' : ''}">
+                    <img src="${h.img}" alt="${h.name}">
+                    ${h.isCore ? '【核】' : ''}${h.name}
+                </span>
+              `).join('')
+            : '<span class="empty-text">无</span>';
+
+        // 备用英雄
+        const backupHeroHtml = Array.isArray(find.backupHeroList) && find.backupHeroList.length
+            ? find.backupHeroList.map(h => `
+                <span class="hero-pill">
+                    <img src="${h.img}" alt="${h.name}">
+                    ${h.name}
+                </span>
+              `).join('')
+            : '<span class="empty-text">无</span>';
+
+        // 首选装备
+        const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
+            ? find.equipFirst.map(e => `
+                <span class="equip-pill">
+                    <img src="${e.img}" alt="${e.name}">
+                    ${e.name}
+                </span>
+              `).join('')
+            : '<span class="empty-text">无</span>';
+
+        // 次选装备
+        const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
+            ? find.equipSecond.map(e => `
+                <span class="equip-pill">
+                    <img src="${e.img}" alt="${e.name}">
+                    ${e.name}
+                </span>
+              `).join('')
+            : '<span class="empty-text">无</span>';
+
+        // 运营阶段
+        const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
+            ? find.runStage.map(stage => `
+                <div class="stage-block">
+                    <div class="stage-title">${stage.title}</div>
+                    <div class="stage-heroes">
+                        ${Array.isArray(stage.heroList) && stage.heroList.length
+                            ? stage.heroList.map(h => `
+                                <span class="hero-pill small">
+                                    <img src="${h.img}" alt="${h.name}">
+                                    ${h.name}
+                                </span>
+                              `).join('')
+                            : '<span class="empty-text">无</span>'}
+                    </div>
+                    <div class="stage-desc">${stage.desc || ''}</div>
+                </div>
+              `).join('')
+            : '<span class="empty-text">无</span>';
+
+        // 注意事项
+        const noticeHtml = Array.isArray(find.notice) && find.notice.length
+            ? find.notice.map(n => `<li>${n}</li>`).join('')
+            : '<li class="empty-text">无</li>';
+
+        // 站位图
+        let positionHtml = '<span class="empty-text">无</span>';
+        if (Array.isArray(find.positionGrid) && find.positionGrid.length) {
+            positionHtml = `
+                <div class="position-grid">
+                    ${find.positionGrid.map(row => `
+                        <div class="position-row">
+                            ${row.map(cell => {
+                                if (cell && cell.img && cell.name) {
+                                    return `<div class="position-cell"><img src="${cell.img}" alt="${cell.name}" title="${cell.name}"></div>`;
+                                }
+                                return `<div class="position-cell empty"></div>`;
+                            }).join('')}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
         modalBody.innerHTML = `
             <h2>${find.name}</h2>
             <div class="modal-sub">强度：${find.rank}｜难度：${find.hard}</div>
+
             <div class="modal-block">
                 <h4>BAN阵营</h4>
                 <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
             </div>
+
             <div class="modal-block">
                 <h4>英雄</h4>
-                <p>${Array.isArray(find.heroList) ? find.heroList.map(h => h.isCore ? `【核】${h.name}` : h.name).join('、') : '无'}</p>
+                <div class="hero-list">${heroHtml}</div>
             </div>
+
             <div class="modal-block">
-                <h4>装备</h4>
-                <p>${Array.isArray(find.equip) && find.equip.length ? find.equip.map(e => e.name).join('、') : '无'}</p>
+                <h4>功能英雄</h4>
+                <div class="hero-list">${funcHeroHtml}</div>
             </div>
+
+            <div class="modal-block">
+                <h4>备用英雄</h4>
+                <div class="hero-list">${backupHeroHtml}</div>
+            </div>
+
+            <div class="modal-block">
+                <h4>首选装备</h4>
+                <div class="equip-list">${equipFirstHtml}</div>
+            </div>
+
+            <div class="modal-block">
+                <h4>次选装备</h4>
+                <div class="equip-list">${equipSecondHtml}</div>
+            </div>
+
+            <div class="modal-block">
+                <h4>运营节奏</h4>
+                <div class="run-stage-list">${runStageHtml}</div>
+            </div>
+
+            <div class="modal-block">
+                <h4>注意事项</h4>
+                <ul class="notice-list">${noticeHtml}</ul>
+            </div>
+
+            <div class="modal-block">
+                <h4>站位</h4>
+                ${positionHtml}
+            </div>
+
             <div class="modal-block">
                 <h4>阵容码</h4>
-                <p style="font-family:monospace">${find.lineupCode}</p>
+                <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
             </div>
-        `
+        `;
+
         modal.style.display = 'flex';
-    }
+    };
 
     if (closeModalBtn) {
         closeModalBtn.onclick = () => modal.style.display = 'none';
     }
     modal.onclick = (e) => {
         if (e.target === modal) modal.style.display = 'none';
-    }
+    };
 }
 
 
