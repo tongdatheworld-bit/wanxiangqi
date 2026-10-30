@@ -149,11 +149,13 @@ if (searchInput) {
 }
 
 async function copyCode(code) {
+    // 从中文左括号「（」切割，只取前面纯数字编码
+    const realCode = code.split("（")[0];
     try {
-        await navigator.clipboard.writeText(code)
+        await navigator.clipboard.writeText(realCode)
         alert("阵容码已复制！")
     } catch (e) {
-        alert("复制失败，请手动复制：" + code)
+        alert("复制失败，请手动复制：" + realCode)
     }
 }
 
