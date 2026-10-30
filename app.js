@@ -84,7 +84,6 @@ function renderList() {
 }
 
 function bindCardClick() {
-function bindCardClick() {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeModalBtn = document.getElementById('closeModal');
