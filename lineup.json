@@ -352,7 +352,7 @@
             {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
             {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
             {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
-            {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
+            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
         ],
         "equip": []
@@ -576,14 +576,14 @@
         "playerImg": "images/players/xiaodaji.png",
         "hard": "中等",
         "lineupCode": "5184095543161870（点击复制）",
-        "ban位": ["大河流域", "河洛", "日落海"],
+        "ban位": ["大河流域", "河洛", "三分之地"],
         "heroList": [
             {"name":"蒙恬","img":"images/heroes/mengtian.png","isCore":true},
             {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":false},
-            {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
-            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-            {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
-            {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
+            {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+            {"name":"苍","img":"images/heroes/cang.png","isCore":false},
+            {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+            {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false},
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
         ]
     },
@@ -614,13 +614,13 @@
         "lineupCode": "58042166181778446（点击复制）",
         "ban位": ["大河流域", "河洛", "日落海"],
         "heroList": [
-            {"name":"镜","img":"images/heroes/jing.png","isCore":true},
-            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
-            {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
-            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+            {"name":"嬴政","img":"images/heroes/yingzheng.png","isCore":true},
+            {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":false},
+            {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+            {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+            {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-            {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false}
+            {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false}
         ]
     },
     {
