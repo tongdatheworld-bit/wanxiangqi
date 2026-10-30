@@ -62,8 +62,10 @@ function renderList() {
             </div>
             <div class="lineup-meta">
                 <span>成型难度：${item.hard}</span>
-                <span class="copy-code" onclick="event.stopPropagation();copyCode('${item.lineupCode}')">阵容码：${item.lineupCode}</span>
+                <span class="copy-code" data-code="${item.lineupCode}">阵容码：${item.lineupCode}</span>
             </div>
+            
+
             <div class="hero-row">
                 ${
                     item.heroList && Array.isArray(item.heroList) && item.heroList.length
@@ -88,6 +90,16 @@ function bindCardClick() {
     if (!modal || !modalBody) return;
 
     lineupWrap.onclick = function(e) {
+        // ===== 在这里新增这一段！=====
+        const copyBtn = e.target.closest('.copy-code');
+        if(copyBtn){
+            e.stopPropagation();
+            const code = copyBtn.dataset.code;
+            copyCode(code);
+            return;
+        }
+        // ==========================
+
         const card = e.target.closest('.lineup-card');
         if (!card) return;
         const id = Number(card.dataset.id);
@@ -123,6 +135,7 @@ function bindCardClick() {
         if (e.target === modal) modal.style.display = 'none';
     }
 }
+
 
 const filterChips = document.querySelectorAll('.filter-chip');
 if (filterChips.length > 0) {
