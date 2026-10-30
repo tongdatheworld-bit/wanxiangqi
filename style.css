@@ -195,6 +195,7 @@
     height:100%;
     object-fit:cover;
 }
+/* 【核】改成金色，和参考图一致 */
 .mini-hero-modal.core::after{
     content:"核";
     position:absolute;
@@ -203,9 +204,10 @@
     width:20px;
     height:20px;
     border-radius:50%;
-    background:#7b3fd8;
-    color:#fff;
+    background:#ffd369;
+    color:#12161f;
     font-size:11px;
+    font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -273,32 +275,37 @@
     margin-top:10px;
 }
 .pos-grid-title{
-    font-size:20px;
+    font-size:15px;
     color:#ffd369;
     margin-bottom:12px;
     font-weight:bold;
+    /* 加上左侧竖线，和参考图模块标题统一 */
+    padding-left:10px;
+    border-left:4px solid #ffd369;
 }
+/* 去掉紫色背景，换成参考图深色风格 */
 .pos-grid{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
-    background: #1b142b;
+    background: #141821;
     padding:16px;
     border-radius:14px;
-    border: 1px solid #7b3fd877;
+    border: 1px solid #232733;
 }
 .pos-cell{
     aspect-ratio: 1 / 1;
     border-radius:10px;
-    border: 2px solid #7b3fd855;
+    border: 1px dashed #333844;
     display:flex;
     align-items:center;
     justify-content:center;
     overflow:hidden;
-    background:#241a3b44;
+    background:#1b2030;
 }
 .pos-cell.has-hero{
-    border-color:#7b3fd8;
+    border-color:#ffd369;
+    border-style:solid;
 }
 .pos-cell img{
     width:80%;
@@ -310,7 +317,10 @@
 /* ========= 阵容码点击hover ========= */
 .copy-code{
     cursor: pointer;
+    color:#ffd369;
 }
 .copy-code:hover{
+    text-decoration:underline;
+}
     color:#ffd369;
 }
