@@ -594,16 +594,14 @@
         "player": "小妲己",
         "playerImg": "images/players/xiaodaji.png",
         "hard": "中等",
-        "lineupCode": "58042166181778446（点击复制）",
+        "lineupCode": "32710035416721434（点击复制）",
         "ban位": ["逐鹿", "河洛", "三分之地", "日落海", "大河"],
         "heroList": [
-            {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":true},
-            {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-            {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
-            {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+            {"name":"韩信","img":"images/heroes/hanxin.png","isCore":true},
+            {"name":"姜子牙","img":"images/heroes/jiangziya","isCore":false},
+            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-            {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false}
+            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false}
         ]
     },
     {
