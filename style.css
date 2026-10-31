@@ -176,6 +176,7 @@
             box-shadow: 0 16px 40px rgba(255, 211, 105, 0.22);
             border-color: #ffd369 !important;
         }
+
 /* ========= 弹窗通用英雄行 ========= */
 .hero-row-modal{
     display:flex;
@@ -250,16 +251,29 @@
     gap:14px;
     margin-bottom:16px;
 }
-.modal-top-info img{
+/* 棋手头像 */
+.modal-top-info .player-avatar{
     width:72px;
     height:72px;
     border-radius:50%;
     object-fit:cover;
+    flex-shrink:0;
+    border:2px solid #ffd369;
+}
+.modal-top-info .info-text h2{
+    color:#ffd369;
+    font-size:26px;
+    margin-bottom:8px;
+}
+.modal-top-info .info-text .modal-sub{
+    color:#9aa0b0;
+    margin-bottom:0;
 }
 .top-tags-wrap{
     display:flex;
     gap:10px;
     flex-wrap:wrap;
+    margin-top:10px;
 }
 .top-tag{
     padding:4px 10px;
@@ -269,7 +283,6 @@
     font-size:14px;
     color:#b4b9c6;
 }
-
 /* ========= 站位矩阵Grid【核心】 ========= */
 .pos-matrix-wrap{
     margin-top:10px;
