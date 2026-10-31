@@ -1,7 +1,7 @@
 let allLineupData = [];
 let currentFilterPlayer = 'all';
 let currentFilterRank = 'all';
-let currentFilterCamp = 'all';
+let currhttps://github.com/tongdatheworld-bit/wanxiangqi/tree/mainentFilterCamp = 'all';
 let searchKw = '';
 const lineupWrap = document.getElementById('lineupList');
 
@@ -96,36 +96,31 @@ function bindCardClick() {
         const find = allLineupData.find(x => x.id === id);
         if (!find) return;
 
-        // 主英雄列表
+                // 主英雄列表（只头像，无文字）
         const heroHtml = Array.isArray(find.heroList) && find.heroList.length
             ? find.heroList.map(h => `
-                <span class="hero-pill ${h.isCore ? 'core' : ''}">
+                <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
                     <img src="${h.img}" alt="${h.name}">
-                    ${h.isCore ? '【核】' : ''}${h.name}
-                </span>
+                </div>
               `).join('')
             : '<span class="empty-text">无</span>';
-
-        // 功能英雄
+        // 功能英雄（只头像，无文字）
         const funcHeroHtml = Array.isArray(find.funcHeroList) && find.funcHeroList.length
             ? find.funcHeroList.map(h => `
-                <span class="hero-pill ${h.isCore ? 'core' : ''}">
+                <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
                     <img src="${h.img}" alt="${h.name}">
-                    ${h.isCore ? '【核】' : ''}${h.name}
-                </span>
+                </div>
               `).join('')
             : '<span class="empty-text">无</span>';
-
-        // 备用英雄
+        // 备用英雄（只头像，无文字）
         const backupHeroHtml = Array.isArray(find.backupHeroList) && find.backupHeroList.length
             ? find.backupHeroList.map(h => `
-                <span class="hero-pill">
+                <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
                     <img src="${h.img}" alt="${h.name}">
-                    ${h.name}
-                </span>
+                </div>
               `).join('')
             : '<span class="empty-text">无</span>';
-
+       
         // 首选装备
         const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
             ? find.equipFirst.map(e => `
@@ -191,8 +186,14 @@ function bindCardClick() {
         }
 
         modalBody.innerHTML = `
+           modalBody.innerHTML = `
+    <div class="modal-top-info">
+        <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
+        <div class="info-text">
             <h2>${find.name}</h2>
-            <div class="modal-sub">强度：${find.rank}｜难度：${find.hard}</div>
+            <div class="modal-sub">强度：${find.rank}｜成型难度：${find.hard}</div>
+        </div>
+    </div>
 
             <div class="modal-block">
                 <h4>BAN阵营</h4>
@@ -201,17 +202,17 @@ function bindCardClick() {
 
             <div class="modal-block">
                 <h4>英雄</h4>
-                <div class="hero-list">${heroHtml}</div>
+                <div class="hero-row-modal">${heroHtml}</div>
             </div>
 
             <div class="modal-block">
                 <h4>功能英雄</h4>
-                <div class="hero-list">${funcHeroHtml}</div>
+                <div class="hero-row-modal">${funcHeroHtml}</div>
             </div>
 
             <div class="modal-block">
                 <h4>备用英雄</h4>
-                <div class="hero-list">${backupHeroHtml}</div>
+                <div class="hero-row-modal">${backupHeroHtml}</div>
             </div>
 
             <div class="modal-block">
