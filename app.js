@@ -141,25 +141,27 @@ function bindCardClick() {
               `).join('')
             : '<span class="empty-text">无</span>';
 
-        // 运营阶段
-        const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
-            ? find.runStage.map(stage => `
-                <div class="stage-block">
-                    <div class="stage-title">${stage.title}</div>
-                    <div class="stage-heroes">
-                        ${Array.isArray(stage.heroList) && stage.heroList.length
-                            ? stage.heroList.map(h => `
-                                <span class="hero-pill small">
-                                    <img src="${h.img}" alt="${h.name}">
-                                    ${h.name}
-                                </span>
-                              `).join('')
-                            : '<span class="empty-text">无</span>'}
-                    </div>
-                    <div class="stage-desc">${stage.desc || ''}</div>
-                </div>
-              `).join('')
-            : '<span class="empty-text">无</span>';
+     // 运营阶段
+const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
+    ? find.runStage.map(stage => `
+        <div class="stage-block">
+            <div class="stage-title">
+                <span class="run-stage-tag">${stage.title}</span>
+            </div>
+            <div class="stage-heroes">
+                ${Array.isArray(stage.heroList) && stage.heroList.length
+                    ? stage.heroList.map(h => `
+                        <span class="hero-pill small">
+                            <img src="${h.img}" alt="${h.name}">
+                            <!-- 删掉 ${h.name}，不显示名字 -->
+                        </span>
+                      `).join('')
+                    : '<span class="empty-text">无</span>'}
+            </div>
+            <div class="stage-desc">${stage.desc || ''}</div>
+        </div>
+      `).join('')
+    : '<span class="empty-text">无</span>';
 
         // 注意事项
         const noticeHtml = Array.isArray(find.notice) && find.notice.length
