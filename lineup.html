@@ -533,6 +533,66 @@
             font-size:14px;
             color:#b4b9c6;
         }
+        /* ========= 运营节奏模块【新增】 ========= */
+.run-stage-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+.run-stage-item{
+    background:#1c212c;
+    border:1px solid #282d38;
+    border-radius:14px;
+    padding:16px 18px;
+}
+.run-stage-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+    font-size:15px;
+}
+/* 阶段显眼标签：1-3回合 /4-11 /12回合以后 */
+.run-stage-tag{
+    display:inline-block;
+    padding:5px 14px;
+    border-radius:8px;
+    background:linear-gradient(135deg,#ffd369,#ffb020);
+    color:#12161f;
+    font-size:14px;
+    font-weight:800;
+    box-shadow:0 4px 10px rgba(255,176,32,0.35);
+    letter-spacing:1px;
+}
+.run-stage-heros{
+    display:flex;
+    gap:12px;
+    margin-bottom:10px;
+    flex-wrap:wrap;
+}
+/* 运营节奏头像 64×64 */
+.run-stage-hero{
+    width:64px;
+    height:64px;
+    border-radius:10px;
+    border:1px solid #333844;
+    overflow:hidden;
+    position:relative;
+}
+.run-stage-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/* 隐藏英雄名字 */
+.run-stage-hero-name{
+    display:none;
+}
+.run-stage-text{
+    color:#b4b9c6;
+    line-height:1.8;
+    font-size:14px;
+}
 
         /* 阵容码复制hover */
         .copy-code{
