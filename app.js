@@ -186,7 +186,6 @@ function bindCardClick() {
         }
 
         modalBody.innerHTML = `
-           modalBody.innerHTML = `
     <div class="modal-top-info">
         <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
         <div class="info-text">
