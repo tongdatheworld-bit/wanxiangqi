@@ -1,7 +1,7 @@
 let allLineupData = [];
 let currentFilterPlayer = 'all';
 let currentFilterRank = 'all';
-let currhttps://github.com/tongdatheworld-bit/wanxiangqi/tree/mainentFilterCamp = 'all';
+let currentFilterCamp = 'all';
 let searchKw = '';
 const lineupWrap = document.getElementById('lineupList');
 
