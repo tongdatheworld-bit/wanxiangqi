@@ -1,288 +1,306 @@
+// 全局变量
 let allLineupData = [];
 let currentFilterPlayer = 'all';
 let currentFilterRank = 'all';
 let currentFilterCamp = 'all';
 let searchKw = '';
-const lineupWrap = document.getElementById('lineupList');
 
-// 页面加载直接读取json渲染内容，不管解锁状态！
-if (lineupWrap) {
-    fetch('./lineup.json')
-        .then(res => {
-            if (!res.ok) throw new Error('json读取失败');
-            return res.json();
-        })
-        .then(data => {
-            allLineupData = data;
-            renderList();
-        })
-        .catch(err => {
-            console.error('数据加载失败：', err);
-            lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 lineup.json</div>`;
-        })
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const RIGHT_CODE = "万象一图诀";
+    const lockModal = document.getElementById('lockModal');
+    const codeInput = document.getElementById('codeInput');
+    const unlockBtn = document.getElementById('unlockBtn');
+    const tipText = document.getElementById('tipText');
+    const STORAGE_KEY = "wanxiang_unlock";
 
-function renderList() {
-    const wrap = document.getElementById('lineupList');
-    if (!wrap) return;
-    let filterArr = [...allLineupData];
+    const lineupWrap = document.getElementById('lineupList');
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const searchInput = document.getElementById('searchInput');
 
-    if (currentFilterPlayer !== 'all') {
-        filterArr = filterArr.filter(item => item.player === currentFilterPlayer)
-    }
-    if (currentFilterRank !== 'all') {
-        filterArr = filterArr.filter(item => item.rank === currentFilterRank)
-    }
-    if (currentFilterCamp !== 'all') {
-        filterArr = filterArr.filter(item => Array.isArray(item["ban位"]) && item["ban位"].includes(currentFilterCamp))
-    }
-    if (searchKw) {
-        filterArr = filterArr.filter(item => {
-            const nameMatch = item.name.toLowerCase().includes(searchKw);
-            const heroMatch = Array.isArray(item.heroList) && item.heroList.some(h => h.name.toLowerCase().includes(searchKw));
-            return nameMatch || heroMatch;
-        })
+    // 加载JSON
+    if (lineupWrap) {
+        fetch('./lineup.json')
+            .then(res => {
+                if (!res.ok) throw new Error('json读取失败');
+                return res.json();
+            })
+            .then(data => {
+                allLineupData = data;
+                renderList();
+            })
+            .catch(err => {
+                console.error('数据加载失败：', err);
+                lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 lineup.json</div>`;
+            })
     }
 
-    if (!filterArr.length) {
-        wrap.innerHTML = `<div style="text-align:center;color:#686e7c;padding:40px">没有匹配的阵容</div>`
-        return
-    }
-    wrap.innerHTML = filterArr.map(item => `
-    <div class="lineup-card" data-id="${item.id}">
-        <div class="lineup-avatar">
-            <img src="${item.playerImg}" alt="${item.player}">
+    function renderList() {
+        const wrap = document.getElementById('lineupList');
+        if (!wrap) return;
+        let filterArr = [...allLineupData];
+        if (currentFilterPlayer !== 'all') {
+            filterArr = filterArr.filter(item => item.player === currentFilterPlayer)
+        }
+        if (currentFilterRank !== 'all') {
+            filterArr = filterArr.filter(item => item.rank === currentFilterRank)
+        }
+        if (currentFilterCamp !== 'all') {
+            filterArr = filterArr.filter(item => Array.isArray(item["ban位"]) && item["ban位"].includes(currentFilterCamp))
+        }
+        if (searchKw) {
+            filterArr = filterArr.filter(item => {
+                const nameMatch = item.name.toLowerCase().includes(searchKw);
+                const heroMatch = Array.isArray(item.heroList) && item.heroList.some(h => h.name.toLowerCase().includes(searchKw));
+                return nameMatch || heroMatch;
+            })
+        }
+        if (!filterArr.length) {
+            wrap.innerHTML = `<div style="text-align:center;color:#686e7c;padding:40px">没有匹配的阵容</div>`
+            return
+        }
+        wrap.innerHTML = filterArr.map(item => `
+        <div class="lineup-card" data-id="${item.id}">
+            <div class="lineup-avatar">
+                <img src="${item.playerImg}" alt="${item.player}">
+            </div>
+            <div class="lineup-rank">${item.rank}</div>
+            <div class="lineup-main">
+                <div class="lineup-top">
+                    <div class="lineup-name">${item.name}</div>
+                    <span class="ban-first-tag">BAN位</span>
+                    ${Array.isArray(item["ban位"]) ? item["ban位"].map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+                </div>
+                <div class="lineup-meta">
+                    <span>成型难度：${item.hard}</span>
+                    <span class="copy-code" data-code="${item.lineupCode}">阵容码：${item.lineupCode}</span>
+                </div>
+                
+                <div class="hero-row">
+                    ${
+                        item.heroList && Array.isArray(item.heroList) && item.heroList.length
+                        ? item.heroList.map(h => `
+                            <div class="mini-hero ${h.isCore ? 'core' : ''}">
+                                <img src="${h.img}" alt="${h.name}">
+                            </div>
+                        `).join('')
+                        : `<span style=" color:#686e7c; font-size:13px;">暂无英雄</span>`
+                    }
+                </div>
+            </div>
         </div>
-        <div class="lineup-rank">${item.rank}</div>
-        <div class="lineup-main">
-            <div class="lineup-top">
-                <div class="lineup-name">${item.name}</div>
-                <span class="ban-first-tag">BAN位</span>
-                ${Array.isArray(item["ban位"]) ? item["ban位"].map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
-            </div>
-            <div class="lineup-meta">
-                <span>成型难度：${item.hard}</span>
-                <span class="copy-code" data-code="${item.lineupCode}">阵容码：${item.lineupCode}</span>
-            </div>
-            
+        `).join('')
+        bindCardClick();
+    }
 
-            <div class="hero-row">
-                ${
-                    item.heroList && Array.isArray(item.heroList) && item.heroList.length
-                    ? item.heroList.map(h => `
-                        <div class="mini-hero ${h.isCore ? 'core' : ''}">
-                            <img src="${h.img}" alt="${h.name}">
+    function bindCardClick() {
+        const modal = document.getElementById('detailModal');
+        const modalBody = document.getElementById('modalBody');
+        const closeModalBtn = document.getElementById('closeModal');
+        if (!modal || !modalBody) return;
+        lineupWrap.onclick = function (e) {
+            const card = e.target.closest('.lineup-card');
+            if (!card) return;
+            const id = Number(card.dataset.id);
+            const find = allLineupData.find(x => x.id === id);
+            if (!find) return;
+            // 主英雄列表（只头像，无文字）
+            const heroHtml = Array.isArray(find.heroList) && find.heroList.length
+                ? find.heroList.map(h => `
+                    <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                        <img src="${h.img}" alt="${h.name}">
+                    </div>
+                  `).join('')
+                : '<span class="empty-text">无</span>';
+            // 功能英雄（只头像，无文字）
+            const funcHeroHtml = Array.isArray(find.funcHeroList) && find.funcHeroList.length
+                ? find.funcHeroList.map(h => `
+                    <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                        <img src="${h.img}" alt="${h.name}">
+                    </div>
+                  `).join('')
+                : '<span class="empty-text">无</span>';
+            // 备用英雄（只头像，无文字）
+            const backupHeroHtml = Array.isArray(find.backupHeroList) && find.backupHeroList.length
+                ? find.backupHeroList.map(h => `
+                    <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                        <img src="${h.img}" alt="${h.name}">
+                    </div>
+                  `).join('')
+                : '<span class="empty-text">无</span>';
+           
+            // 首选装备
+            const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
+                ? find.equipFirst.map(e => `
+                    <span class="equip-pill">
+                        <img src="${e.img}" alt="${e.name}">
+                        ${e.name}
+                    </span>
+                  `).join('')
+                : '<span class="empty-text">无</span>';
+            // 次选装备
+            const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
+                ? find.equipSecond.map(e => `
+                    <span class="equip-pill">
+                        <img src="${e.img}" alt="${e.name}">
+                        ${e.name}
+                    </span>
+                  `).join('')
+                : '<span class="empty-text">无</span>';
+            // 运营阶段
+            const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
+                ? find.runStage.map(stage => `
+                    <div class="stage-block">
+                        <div class="stage-title">
+                            <span class="run-stage-tag">${stage.title}</span>
                         </div>
-                    `).join('')
-                    : `<span style=" color:#686e7c; font-size:13px;">暂无英雄</span>`
-                }
-            </div>
-        </div>
-    </div>
-    `).join('')
-    bindCardClick();
-}
-
-function bindCardClick() {
-    const modal = document.getElementById('detailModal');
-    const modalBody = document.getElementById('modalBody');
-    const closeModalBtn = document.getElementById('closeModal');
-    if (!modal || !modalBody) return;
-
-    lineupWrap.onclick = function (e) {
-        const card = e.target.closest('.lineup-card');
-        if (!card) return;
-        const id = Number(card.dataset.id);
-        const find = allLineupData.find(x => x.id === id);
-        if (!find) return;
-
-                // 主英雄列表（只头像，无文字）
-        const heroHtml = Array.isArray(find.heroList) && find.heroList.length
-            ? find.heroList.map(h => `
-                <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
-                    <img src="${h.img}" alt="${h.name}">
-                </div>
-              `).join('')
-            : '<span class="empty-text">无</span>';
-        // 功能英雄（只头像，无文字）
-        const funcHeroHtml = Array.isArray(find.funcHeroList) && find.funcHeroList.length
-            ? find.funcHeroList.map(h => `
-                <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
-                    <img src="${h.img}" alt="${h.name}">
-                </div>
-              `).join('')
-            : '<span class="empty-text">无</span>';
-        // 备用英雄（只头像，无文字）
-        const backupHeroHtml = Array.isArray(find.backupHeroList) && find.backupHeroList.length
-            ? find.backupHeroList.map(h => `
-                <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
-                    <img src="${h.img}" alt="${h.name}">
-                </div>
-              `).join('')
-            : '<span class="empty-text">无</span>';
-       
-        // 首选装备
-        const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
-            ? find.equipFirst.map(e => `
-                <span class="equip-pill">
-                    <img src="${e.img}" alt="${e.name}">
-                    ${e.name}
-                </span>
-              `).join('')
-            : '<span class="empty-text">无</span>';
-
-        // 次选装备
-        const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
-            ? find.equipSecond.map(e => `
-                <span class="equip-pill">
-                    <img src="${e.img}" alt="${e.name}">
-                    ${e.name}
-                </span>
-              `).join('')
-            : '<span class="empty-text">无</span>';
-
-     // 运营阶段
-const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
-    ? find.runStage.map(stage => `
-        <div class="stage-block">
-            <div class="stage-title">
-                <span class="run-stage-tag">${stage.title}</span>
-            </div>
-            <div class="stage-heroes">
-                ${Array.isArray(stage.heroList) && stage.heroList.length
-                    ? stage.heroList.map(h => `
-                        <span class="hero-pill small">
-                            <img src="${h.img}" alt="${h.name}">
-                            <!-- 删掉 ${h.name}，不显示名字 -->
-                        </span>
-                      `).join('')
-                    : '<span class="empty-text">无</span>'}
-            </div>
-            <div class="stage-desc">${stage.desc || ''}</div>
-        </div>
-      `).join('')
-    : '<span class="empty-text">无</span>';
-
-        // 注意事项
-        const noticeHtml = Array.isArray(find.notice) && find.notice.length
-            ? find.notice.map(n => `<li>${n}</li>`).join('')
-            : '<li class="empty-text">无</li>';
-
-        // 站位图
-        let positionHtml = '<span class="empty-text">无</span>';
-        if (Array.isArray(find.positionGrid) && find.positionGrid.length) {
-            positionHtml = `
-                <div class="position-grid">
-                    ${find.positionGrid.map(row => `
-                        <div class="position-row">
-                            ${row.map(cell => {
-                                if (cell && cell.img && cell.name) {
-                                    return `<div class="position-cell"><img src="${cell.img}" alt="${cell.name}" title="${cell.name}"></div>`;
-                                }
-                                return `<div class="position-cell empty"></div>`;
-                            }).join('')}
+                        <div class="stage-heroes">
+                            ${Array.isArray(stage.heroList) && stage.heroList.length
+                                ? stage.heroList.map(h => `
+                                    <span class="hero-pill small">
+                                        <img src="${h.img}" alt="${h.name}">
+                                    </span>
+                                  `).join('')
+                                : '<span class="empty-text">无</span>'}
                         </div>
-                    `).join('')}
+                        <div class="stage-desc">${stage.desc || ''}</div>
+                    </div>
+                  `).join('')
+                : '<span class="empty-text">无</span>';
+            // 注意事项
+            const noticeHtml = Array.isArray(find.notice) && find.notice.length
+                ? find.notice.map(n => `<li>${n}</li>`).join('')
+                : '<li class="empty-text">无</li>';
+            // 站位图
+            let positionHtml = '<span class="empty-text">无</span>';
+            if (Array.isArray(find.positionGrid) && find.positionGrid.length) {
+                positionHtml = `
+                    <div class="position-grid">
+                        ${find.positionGrid.map(row => `
+                            <div class="position-row">
+                                ${row.map(cell => {
+                                    if (cell && cell.img && cell.name) {
+                                        return `<div class="position-cell"><img src="${cell.img}" alt="${cell.name}" title="${cell.name}"></div>`;
+                                    }
+                                    return `<div class="position-cell empty"></div>`;
+                                }).join('')}
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+            modalBody.innerHTML = `
+        <div class="modal-top-info">
+            <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
+            <div class="info-text">
+                <h2>${find.name}</h2>
+                <div class="modal-sub">强度：${find.rank}｜成型难度：${find.hard}</div>
+            </div>
+        </div>
+                <div class="modal-block">
+                    <h4>BAN阵营</h4>
+                    <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
+                </div>
+                <div class="modal-block">
+                    <h4>英雄</h4>
+                    <div class="hero-row-modal">${heroHtml}</div>
+                </div>
+                <div class="modal-block">
+                    <h4>功能英雄</h4>
+                    <div class="hero-row-modal">${funcHeroHtml}</div>
+                </div>
+                <div class="modal-block">
+                    <h4>备用英雄</h4>
+                    <div class="hero-row-modal">${backupHeroHtml}</div>
+                </div>
+                <div class="modal-block">
+                    <h4>首选装备</h4>
+                    <div class="equip-list">${equipFirstHtml}</div>
+                </div>
+                <div class="modal-block">
+                    <h4>次选装备</h4>
+                    <div class="equip-list">${equipSecondHtml}</div>
+                </div>
+                <div class="modal-block">
+                    <h4>运营节奏</h4>
+                    <div class="run-stage-list">${runStageHtml}</div>
+                </div>
+                <div class="modal-block">
+                    <h4>注意事项</h4>
+                    <ul class="notice-list">${noticeHtml}</ul>
+                </div>
+                <div class="modal-block">
+                    <h4>站位</h4>
+                    ${positionHtml}
+                </div>
+                <div class="modal-block">
+                    <h4>阵容码</h4>
+                    <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
                 </div>
             `;
+            modal.style.display = 'flex';
+        };
+        if (closeModalBtn) {
+            closeModalBtn.onclick = () => modal.style.display = 'none';
         }
-
-        modalBody.innerHTML = `
-    <div class="modal-top-info">
-        <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
-        <div class="info-text">
-            <h2>${find.name}</h2>
-            <div class="modal-sub">强度：${find.rank}｜成型难度：${find.hard}</div>
-        </div>
-    </div>
-
-            <div class="modal-block">
-                <h4>BAN阵营</h4>
-                <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
-            </div>
-
-            <div class="modal-block">
-                <h4>英雄</h4>
-                <div class="hero-row-modal">${heroHtml}</div>
-            </div>
-
-            <div class="modal-block">
-                <h4>功能英雄</h4>
-                <div class="hero-row-modal">${funcHeroHtml}</div>
-            </div>
-
-            <div class="modal-block">
-                <h4>备用英雄</h4>
-                <div class="hero-row-modal">${backupHeroHtml}</div>
-            </div>
-
-            <div class="modal-block">
-                <h4>首选装备</h4>
-                <div class="equip-list">${equipFirstHtml}</div>
-            </div>
-
-            <div class="modal-block">
-                <h4>次选装备</h4>
-                <div class="equip-list">${equipSecondHtml}</div>
-            </div>
-
-            <div class="modal-block">
-                <h4>运营节奏</h4>
-                <div class="run-stage-list">${runStageHtml}</div>
-            </div>
-
-            <div class="modal-block">
-                <h4>注意事项</h4>
-                <ul class="notice-list">${noticeHtml}</ul>
-            </div>
-
-            <div class="modal-block">
-                <h4>站位</h4>
-                ${positionHtml}
-            </div>
-
-            <div class="modal-block">
-                <h4>阵容码</h4>
-                <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
-            </div>
-        `;
-
-        modal.style.display = 'flex';
-    };
-
-    if (closeModalBtn) {
-        closeModalBtn.onclick = () => modal.style.display = 'none';
+        modal.onclick = (e) => {
+            if (e.target === modal) modal.style.display = 'none';
+        };
     }
-    modal.onclick = (e) => {
-        if (e.target === modal) modal.style.display = 'none';
-    };
-}
 
-
-const filterChips = document.querySelectorAll('.filter-chip');
-if (filterChips.length > 0) {
-    filterChips.forEach(el => {
-        el.addEventListener('click', () => {
-            const type = el.dataset.filter;
-            const val = el.dataset.val;
-            el.parentElement.querySelectorAll('.filter-chip').forEach(i => i.classList.remove('active'))
-            el.classList.add('active')
-            if (type === 'player') currentFilterPlayer = val
-            if (type === 'rank') currentFilterRank = val
-            if (type === 'camp') currentFilterCamp = val
-            renderList()
+    // 筛选标签点击
+    if (filterChips.length > 0) {
+        filterChips.forEach(el => {
+            el.addEventListener('click', () => {
+                const type = el.dataset.filter;
+                const val = el.dataset.val;
+                el.parentElement.querySelectorAll('.filter-chip').forEach(i => i.classList.remove('active'))
+                el.classList.add('active')
+                if (type === 'player') currentFilterPlayer = val
+                if (type === 'rank') currentFilterRank = val
+                if (type === 'camp') currentFilterCamp = val
+                renderList()
+            })
         })
-    })
-}
+    }
 
-const searchInput = document.getElementById('searchInput');
-if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-        searchKw = e.target.value.trim().toLowerCase();
-        renderList();
-    })
-}
+    // 搜索框
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            searchKw = e.target.value.trim().toLowerCase();
+            renderList();
+        })
+    }
 
+    // 解锁逻辑
+    if (!lockModal || !codeInput || !unlockBtn || !tipText) {
+        return;
+    }
+    if(localStorage.getItem(STORAGE_KEY) === 'ok'){
+        lockModal.style.display = 'none';
+        lineupWrap.style.visibility = 'visible';
+    }
+    unlockBtn.onclick = function(){
+        const val = codeInput.value.trim();
+        if(val === RIGHT_CODE){
+            tipText.style.color = "#69ff94";
+            tipText.innerText = "✅ 解锁成功！";
+            tipText.style.display = 'block';
+            localStorage.setItem(STORAGE_KEY,'ok');
+            lineupWrap.style.visibility = 'visible';
+            renderList();
+            setTimeout(()=> lockModal.style.display = 'none',600);
+        }else{
+            tipText.style.color = "#ff7777";
+            tipText.innerText = "❌ 验证码错误，请重新获取！";
+            tipText.style.display = 'block';
+        }
+    }
+    codeInput.onkeydown = function(e){
+        if(e.key === 'Enter') unlockBtn.click();
+    }
+})
+
+// 复制函数放外面，给onclick全局调用
 async function copyCode(code) {
     // 从中文左括号「（」切割，只取前面纯数字编码
     const realCode = code.split("（")[0];
@@ -293,41 +311,3 @@ async function copyCode(code) {
         alert("复制失败，请手动复制：" + realCode)
     }
 }
-
-// 解锁模块 单独一个监听，不影响渲染
-document.addEventListener('DOMContentLoaded', function () {
-    const RIGHT_CODE = "万象一图诀";
-    const lockModal = document.getElementById('lockModal');
-    const codeInput = document.getElementById('codeInput');
-    const unlockBtn = document.getElementById('unlockBtn');
-    const tipText = document.getElementById('tipText');
-    const STORAGE_KEY = "wanxiang_unlock";
-    if (!lockModal || !codeInput || !unlockBtn || !tipText) {
-        return;
-    }
-    if(localStorage.getItem(STORAGE_KEY) === 'ok'){
-    lockModal.style.display = 'none';
-    const wrap = document.getElementById('lineupList');
-    wrap.style.visibility = 'visible';
-}
-    unlockBtn.onclick = function(){
-    const val = codeInput.value.trim();
-    if(val === RIGHT_CODE){
-        tipText.style.color = "#69ff94";
-        tipText.innerText = "✅ 解锁成功！";
-        tipText.style.display = 'block';
-        localStorage.setItem(STORAGE_KEY,'ok');
-        const wrap = document.getElementById('lineupList');
-        wrap.style.visibility = 'visible';
-        renderList();
-        setTimeout(()=> lockModal.style.display = 'none',600);
-    }else{
-        tipText.style.color = "#ff7777";
-        tipText.innerText = "❌ 验证码错误，请重新获取！";
-        tipText.style.display = 'block';
-    }
-}
-    codeInput.onkeydown = function(e){
-        if(e.key === 'Enter') unlockBtn.click();
-    }
-})
