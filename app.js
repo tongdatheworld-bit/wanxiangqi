@@ -302,17 +302,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const unlockBtn = document.getElementById('unlockBtn');
     const tipText = document.getElementById('tipText');
     const STORAGE_KEY = "wanxiang_unlock";
-
     if (!lockModal || !codeInput || !unlockBtn || !tipText) {
-        // 只退出解锁这个小函数，不会影响别的渲染代码
         return;
     }
-
     if(localStorage.getItem(STORAGE_KEY) === 'ok'){
         lockModal.style.display = 'none';
+        // 已解锁，直接展示阵容列表
         document.getElementById('lineupList').style.visibility = 'visible';
     }
-
     unlockBtn.onclick = function(){
         const val = codeInput.value.trim();
         if(val === RIGHT_CODE){
@@ -320,6 +317,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tipText.innerText = "✅ 解锁成功！";
             tipText.style.display = 'block';
             localStorage.setItem(STORAGE_KEY,'ok');
+            // 解锁成功，显示列表
             document.getElementById('lineupList').style.visibility = 'visible';
             setTimeout(()=> lockModal.style.display = 'none',600);
         }else{
