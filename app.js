@@ -294,7 +294,7 @@ async function copyCode(code) {
     }
 }
 
-// ========== 解锁模块 ==========
+// 解锁模块 单独一个监听，不影响渲染
 document.addEventListener('DOMContentLoaded', function () {
     const RIGHT_CODE = "万象一图诀";
     const lockModal = document.getElementById('lockModal');
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const STORAGE_KEY = "wanxiang_unlock";
 
     if (!lockModal || !codeInput || !unlockBtn || !tipText) {
-        console.warn('解锁弹窗元素缺失');
+        // 只退出解锁这个小函数，不会影响别的渲染代码
         return;
     }
 
@@ -313,15 +313,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     unlockBtn.onclick = function(){
-      const val = codeInput.value.trim();
-      if(val === RIGHT_CODE){
-        lockModal.style.display = 'none';
-        localStorage.setItem(STORAGE_KEY,'ok');
-      }else{
-        tipText.style.display = 'block';
-      }
+        const val = codeInput.value.trim();
+        if(val === RIGHT_CODE){
+            tipText.style.color = "#69ff94";
+            tipText.innerText = "✅ 解锁成功！";
+            tipText.style.display = 'block';
+            localStorage.setItem(STORAGE_KEY,'ok');
+            setTimeout(()=> lockModal.style.display = 'none',600);
+        }else{
+            tipText.style.color = "#ff7777";
+            tipText.innerText = "❌ 验证码错误，请重新获取！";
+            tipText.style.display = 'block';
+        }
     }
     codeInput.onkeydown = function(e){
-      if(e.key === 'Enter') unlockBtn.click();
+        if(e.key === 'Enter') unlockBtn.click();
     }
 })
