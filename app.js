@@ -306,26 +306,27 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
     if(localStorage.getItem(STORAGE_KEY) === 'ok'){
-        lockModal.style.display = 'none';
-        // 已解锁，直接展示阵容列表
-        document.getElementById('lineupList').style.visibility = 'visible';
-    }
+    lockModal.style.display = 'none';
+    const wrap = document.getElementById('lineupList');
+    wrap.style.visibility = 'visible';
+}
     unlockBtn.onclick = function(){
-        const val = codeInput.value.trim();
-        if(val === RIGHT_CODE){
-            tipText.style.color = "#69ff94";
-            tipText.innerText = "✅ 解锁成功！";
-            tipText.style.display = 'block';
-            localStorage.setItem(STORAGE_KEY,'ok');
-            // 解锁成功，显示列表
-            document.getElementById('lineupList').style.visibility = 'visible';
-            setTimeout(()=> lockModal.style.display = 'none',600);
-        }else{
-            tipText.style.color = "#ff7777";
-            tipText.innerText = "❌ 验证码错误，请重新获取！";
-            tipText.style.display = 'block';
-        }
+    const val = codeInput.value.trim();
+    if(val === RIGHT_CODE){
+        tipText.style.color = "#69ff94";
+        tipText.innerText = "✅ 解锁成功！";
+        tipText.style.display = 'block';
+        localStorage.setItem(STORAGE_KEY,'ok');
+        const wrap = document.getElementById('lineupList');
+        wrap.style.visibility = 'visible';
+        renderList();
+        setTimeout(()=> lockModal.style.display = 'none',600);
+    }else{
+        tipText.style.color = "#ff7777";
+        tipText.innerText = "❌ 验证码错误，请重新获取！";
+        tipText.style.display = 'block';
     }
+}
     codeInput.onkeydown = function(e){
         if(e.key === 'Enter') unlockBtn.click();
     }
