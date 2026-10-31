@@ -319,6 +319,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tipText.innerText = "✅ 解锁成功！";
             tipText.style.display = 'block';
             localStorage.setItem(STORAGE_KEY,'ok');
+            document.getElementById('lineupList').style.visibility = 'visible';
             setTimeout(()=> lockModal.style.display = 'none',600);
         }else{
             tipText.style.color = "#ff7777";
