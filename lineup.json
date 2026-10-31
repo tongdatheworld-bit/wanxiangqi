@@ -369,13 +369,14 @@
             {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false}
         ],
         "equipFirst": [
-            {"name":"金色圣剑","img":"images/equip/jinse.png"},
-            {"name":"炽热支配者","img":"images/equip/chire.png"},
-            {"name":"名刀·司命","img":"images/equip/mingdao.png"}
+            {"name":"金色圣剑","img":"images/equip/equipsmall/jinseshengjian.png"},
+            {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"},
+            {"name":"名刀·司命","img":"images/equip/equipsmall/mingdao.png"}
         ],
         "equipSecond": [
-            {"name":"虚无法杖","img":"images/equip/xuwu.png"},
-            {"name":"铸梦·逐风","img":"images/equip/zhumeng.png"}
+            {"name":"虚无法杖","img":"images/equip/xuwufazhang.png"},
+            {"name":"铸梦·逐风","img":"images/equip/zhumengzhufeng.png"},
+            {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
         ],
         "runStage": [
             {
