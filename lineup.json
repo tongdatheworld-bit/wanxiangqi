@@ -353,7 +353,7 @@
             {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
             {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
             {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyi.png","isCore":false}
+            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
         ],
         "funcHeroList": [
             {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
