@@ -310,6 +310,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if(localStorage.getItem(STORAGE_KEY) === 'ok'){
         lockModal.style.display = 'none';
+        document.getElementById('lineupList').style.visibility = 'visible';
     }
 
     unlockBtn.onclick = function(){
