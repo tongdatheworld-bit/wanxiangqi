@@ -415,12 +415,7 @@
             "不要乱D牌，卡利息上人口",
             "留意对手的法系阵容"
         ],
-        "positionGrid": [
-            [null, null, null, null, null, null, null],
-            [{"name":"姬小满","img":"images/heroes/jixiaoman.png"},{"name":"亚瑟","img":"images/heroes/yase.png"},null,null,null,null,null],
-            [{"name":"海诺","img":"images/heroes/hainuo.png"},{"name":"莱西奥","img":"images/heroes/laixiao.png"},null,null,null,null,null],
-            [{"name":"司空震","img":"images/heroes/sikongzhen.png"},{"name":"姜子牙","img":"images/heroes/jiangziya.png"},null,null,null,null,null]
-        ]
+        "positionImage": "images/position/90.ailimiyue.png"
     },
     {
         "id": 19,
