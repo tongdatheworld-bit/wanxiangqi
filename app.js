@@ -224,8 +224,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
                 <div class="modal-block">
                     <h4>站位</h4>
-                    ${positionHtml}
-                </div>
+                    <div class="position-image-box">
+                    ${find.positionImage ?
+                   `<img src="${find.positionImage}" alt="站位图" onerror="this.style.display='none'">`
+                   : `<div class="position-image-placeholder">暂无站位图</div>`
+        }
+    </div>
+</div>
                 <div class="modal-block">
                     <h4>阵容码</h4>
                     <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
