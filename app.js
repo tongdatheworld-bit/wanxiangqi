@@ -129,23 +129,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 : '<span class="empty-text">无</span>';
            
             // 首选装备
-            const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
-                ? find.equipFirst.map(e => `
-                    <span class="equip-pill">
-                        <img src="${e.img}" alt="${e.name}">
-                        ${e.name}
-                    </span>
-                  `).join('')
-                : '<span class="empty-text">无</span>';
+           const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
+    ? find.equipFirst.map(e => `
+        <span class="equip-pill">
+            <img src="${e.img}" alt="${e.name}">
+        </span>
+      `).join('')
+    : '<span class="empty-text">无</span>';
             // 次选装备
-            const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
-                ? find.equipSecond.map(e => `
-                    <span class="equip-pill">
-                        <img src="${e.img}" alt="${e.name}">
-                        ${e.name}
-                    </span>
-                  `).join('')
-                : '<span class="empty-text">无</span>';
+           const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
+    ? find.equipSecond.map(e => `
+        <span class="equip-pill">
+            <img src="${e.img}" alt="${e.name}">
+        </span>
+      `).join('')
+    : '<span class="empty-text">无</span>';
             // 运营阶段
             const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
                 ? find.runStage.map(stage => `
