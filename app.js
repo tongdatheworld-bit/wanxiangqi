@@ -201,15 +201,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
                 </div>
                 <div class="modal-block">
-                    <h4>英雄</h4>
+                    <h4>阵容组成</h4>
                     <div class="hero-row-modal">${heroHtml}</div>
                 </div>
                 <div class="modal-block">
-                    <h4>功能英雄</h4>
+                    <h4>功能性英雄</h4>
                     <div class="hero-row-modal">${funcHeroHtml}</div>
                 </div>
                 <div class="modal-block">
-                    <h4>备用英雄</h4>
+                    <h4>打出位/备选</h4>
                     <div class="hero-row-modal">${backupHeroHtml}</div>
                 </div>
                 <div class="modal-block">
