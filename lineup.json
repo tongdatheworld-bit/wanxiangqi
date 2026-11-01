@@ -516,90 +516,88 @@
     },
    {
     "id": 24,
-    "name": "阿离不死芈月",
-    "rank": "S",
-    "player": "阿离",
-    "playerImg": "images/players/ali.png",
-    "hard": "简单",
-    "lineupCode": "39464817719035922（点击复制）",
-    "ban位": ["大河流域", "河洛", "日落海"],
-    "heroList": [
-        {"name":"芈月","img":"images/heroes/miyue.png","isCore":true},
-        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-        {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
-        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-        {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false}
-    ],
-    "funcHeroList": [
-        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-        {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
-        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-    ],
-    "backupHeroList": [
-        {"name":"庄周","img":"images/heroes/kai.png","isCore":false},
-        {"name":"蒙犽","img":"images/heroes/dunshan.png","isCore":false},
-        {"name":"梦奇","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"老夫子","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ],
-    "equipFirst": [
-        {"name":"贤者之书","img":"images/equip/equipsmall/xianzhezhishu.png"},
-        {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"},
-        {"name":"霸者重铠","img":"images/equip/equipsmall/bazhezhongkai.png"}
-    ],
-    "equipSecond": [
-        {"name":"机械头","img":"images/equip/equipsmall/jixietou.png"},
-        {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"},
-        {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"}
-    ],
-    "runStage": [
-        {
-            "title": "1-3回合",
-            "heroList": [
-                {"name":"芈月","img":"images/heroes/miyue.png"},
-                {"name":"弈星","img":"images/heroes/yixing.png"},
-                {"name":"孙膑","img":"images/heroes/sunbin.png"},
-            ],
-            "desc": "1级单挂弈星，先不买孙膑，2回合升2本开始找芈月，把枫叶舞绑定芈月，前三回合输赢无所谓。第一轮拍卖：芈月>刘禅>西施>明世隐。"
-        },
-        {
-            "title": "4-11回合",
-            "heroList": [
-               {"name":"芈月","img":"images/heroes/miyue.png","isCore":true},
-               {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-               {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-               {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
-               {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-               {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-      
-            ],
-            "desc": "4回合开始，如果芈月就位，拉3本，找西施，刘禅，明世隐三张核心功能卡，同时利用打出位打梦奇，老夫子，梦奇给的1阶卡拿孙膑（上场），孙尚香（给刷新），牛头（回合能打过吃牛肉），曜（可以打合成时，先上），记得有可合成的牌时先打老夫子再合成。芈月觉醒后，拉四本，此时打出位增加庄周、蒙犽和甄姬，利用庄周蒙犽的效果牌继续给芈月提升等级。第二轮拍卖：太乙真人>庄周>蒙犽>甄姬。"
-        },
-        {
-            "title": "12回合以后",
-            "heroList": [
-                {"name":"芈月","img":"images/heroes/miyue.png"},
-                {"name":"钟馗","img":"images/heroes/zhongkui.png"},
-                {"name":"铠","img":"images/heroes/kai.png"},
-                {"name":"盾山","img":"images/heroes/dunshan.png"},
-                {"name":"明世隐","img":"images/heroes/mingshiyin.png"},
-                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"},
-                {"name":"程咬金","img":"images/heroes/chengyaojin.png"}
-            ],
-            "desc": 
-                "12回合后，阵容基本大成，后面再找鲁班大师提高阵容上限。第三轮拍卖：扶摇直上>能量超新星>4张效果牌>其他根据场上情况定。"，
-        },
-    ],
-    "notice": [
-        "1、2回合拉2本就开始找芈月，2回合用免费刷新找，3回合最多用3能量找，不行就输，等拍卖。拍卖还没有，就4回合梭哈找；",
-        "2、升3本后，打出位利用好，最大程度去找效果卡，梦奇和老夫子是核心打出卡，梦奇给1阶卡，老夫子给逐鹿卡。",
-        "3、梦奇给的1阶卡，优先拿孙尚香（多刷新找体系卡），其次孙膑直接上场（不要在商店买孙膑），再就是需要升本的时候拿弈星，可以赢下比赛时挂牛头，手里可以合成芈月时，上曜，每个细节都要拉满。",
-        "4、老夫子给的逐鹿卡，给白起可以上了后用效果牌，多给一张战术援助，给老夫子可以打合成给招募战术，每一个老夫子都会给一个招募战术，如果场上有旧的老夫子，可以卖了上新的老夫子，就还可以拿招募战术。"
-    ],
-    "positionImage": "images/position/90.alimiyue.png"
+"name": "阿离不死芈月",
+"rank": "S",
+"player": "阿离",
+"playerImg": "images/players/ali.png",
+"hard": "简单",
+"lineupCode": "39464817719035922（点击复制）",
+"ban位": ["大河流域", "河洛", "日落海"],
+"heroList": [
+    {"name":"芈月","img":"images/heroes/miyue.png","isCore":true},
+    {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+    {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+    {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
+    {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+    {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+    {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false}
+],
+"funcHeroList": [
+    {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+    {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+    {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
+    {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+    {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+],
+"backupHeroList": [
+    {"name":"庄周","img":"images/heroes/kai.png","isCore":false},
+    {"name":"蒙犽","img":"images/heroes/dunshan.png","isCore":false},
+    {"name":"梦奇","img":"images/heroes/mingshiyin.png","isCore":false},
+    {"name":"老夫子","img":"images/heroes/taiyizhenren.png","isCore":false}
+],
+"equipFirst": [
+    {"name":"贤者之书","img":"images/equip/equipsmall/xianzhezhishu.png"},
+    {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"},
+    {"name":"霸者重铠","img":"images/equip/equipsmall/bazhezhongkai.png"}
+],
+"equipSecond": [
+    {"name":"机械头","img":"images/equip/equipsmall/jixietou.png"},
+    {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"},
+    {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"}
+],
+"runStage": [
+    {
+        "title": "1-3回合",
+        "heroList": [
+            {"name":"芈月","img":"images/heroes/miyue.png"},
+            {"name":"弈星","img":"images/heroes/yixing.png"},
+            {"name":"孙膑","img":"images/heroes/sunbin.png"}
+        ],
+        "desc": "1级单挂弈星，先不买孙膑，2回合升2本开始找芈月，把枫叶舞绑定芈月，前三回合输赢无所谓。第一轮拍卖：芈月>刘禅>西施>明世隐。"
+    },
+    {
+        "title": "4-11回合",
+        "heroList": [
+           {"name":"芈月","img":"images/heroes/miyue.png","isCore":true},
+           {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+           {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+           {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
+           {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+           {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+        ],
+        "desc": "4回合开始，如果芈月就位，拉3本，找西施，刘禅，明世隐三张核心功能卡，同时利用打出位打梦奇，老夫子，梦奇给的1阶卡拿孙膑（上场），孙尚香（给刷新），牛头（回合能打过吃牛肉），曜（可以打合成时，先上），记得有可合成的牌时先打老夫子再合成。芈月觉醒后，拉四本，此时打出位增加庄周、蒙犽和甄姬，利用庄周蒙犽的效果牌继续给芈月提升等级。第二轮拍卖：太乙真人>庄周>蒙犽>甄姬。"
+    },
+    {
+        "title": "12回合以后",
+        "heroList": [
+            {"name":"芈月","img":"images/heroes/miyue.png"},
+            {"name":"钟馗","img":"images/heroes/zhongkui.png"},
+            {"name":"铠","img":"images/heroes/kai.png"},
+            {"name":"盾山","img":"images/heroes/dunshan.png"},
+            {"name":"明世隐","img":"images/heroes/mingshiyin.png"},
+            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"},
+            {"name":"程咬金","img":"images/heroes/chengyaojin.png"}
+        ],
+        "desc": "12回合后，阵容基本大成，后面再找鲁班大师提高阵容上限。第三轮拍卖：扶摇直上>能量超新星>4张效果牌>其他根据场上情况定。"
+    }
+],
+"notice": [
+    "1、2回合拉2本就开始找芈月，2回合用免费刷新找，3回合最多用3能量找，不行就输，等拍卖。拍卖还没有，就4回合梭哈找；",
+    "2、升3本后，打出位利用好，最大程度去找效果卡，梦奇和老夫子是核心打出卡，梦奇给1阶卡，老夫子给逐鹿卡。",
+    "3、梦奇给的1阶卡，优先拿孙尚香（多刷新找体系卡），其次孙膑直接上场（不要在商店买孙膑），再就是需要升本的时候拿弈星，可以赢下比赛时挂牛头，手里可以合成芈月时，上曜，每个细节都要拉满。",
+    "4、老夫子给的逐鹿卡，给白起可以上了后用效果牌，多给一张战术援助，给老夫子可以打合成给招募战术，每一个老夫子都会给一个招募战术，如果场上有旧的老夫子，可以卖了上新的老夫子，就还可以拿招募战术。"
+],
+"positionImage": "images/position/90.alimiyue.png"
 },
     {
         "id": 25,
