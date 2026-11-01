@@ -325,50 +325,6 @@
     height:100%;
     object-fit:cover;
 }
-/* ========= 站位矩阵Grid【核心】 ========= */
-.pos-matrix-wrap{
-    margin-top:10px;
-}
-.pos-grid-title{
-    font-size:15px;
-    color:#ffd369;
-    margin-bottom:12px;
-    font-weight:bold;
-    /* 加上左侧竖线，和参考图模块标题统一 */
-    padding-left:10px;
-    border-left:4px solid #ffd369;
-}
-/* 去掉紫色背景，换成参考图深色风格 */
-.pos-grid{
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    background: #141821;
-    padding:16px;
-    border-radius:14px;
-    border: 1px solid #232733;
-}
-.pos-cell{
-    aspect-ratio: 1 / 1;
-    border-radius:10px;
-    border: 1px dashed #333844;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    background:#1b2030;
-}
-.pos-cell.has-hero{
-    border-color:#ffd369;
-    border-style:solid;
-}
-.pos-cell img{
-    width:80%;
-    height:80%;
-    object-fit:cover;
-    border-radius:8px;
-}
-
 /* ========= 阵容码点击hover ========= */
 .copy-code{
     cursor: pointer;
