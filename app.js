@@ -4,7 +4,6 @@ let currentFilterPlayer = 'all';
 let currentFilterRank = 'all';
 let currentFilterCamp = 'all';
 let searchKw = '';
-
 document.addEventListener('DOMContentLoaded', function () {
     const RIGHT_CODE = "万象一图诀";
     const lockModal = document.getElementById('lockModal');
@@ -12,11 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const unlockBtn = document.getElementById('unlockBtn');
     const tipText = document.getElementById('tipText');
     const STORAGE_KEY = "wanxiang_unlock";
-
     const lineupWrap = document.getElementById('lineupList');
     const filterChips = document.querySelectorAll('.filter-chip');
     const searchInput = document.getElementById('searchInput');
-
     // 加载JSON
     if (lineupWrap) {
         fetch('./lineup.json')
@@ -33,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 lineup.json</div>`;
             })
     }
-
     function renderList() {
         const wrap = document.getElementById('lineupList');
         if (!wrap) return;
@@ -67,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="lineup-main">
                 <div class="lineup-top">
                     <div class="lineup-name">${item.name}</div>
-                    <span class="ban-first-tag">BAN位</span>
                     ${Array.isArray(item["ban位"]) ? item["ban位"].map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
                 </div>
                 <div class="lineup-meta">
@@ -91,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
         `).join('')
         bindCardClick();
     }
-
     function bindCardClick() {
         const modal = document.getElementById('detailModal');
         const modalBody = document.getElementById('modalBody');
@@ -168,18 +162,18 @@ document.addEventListener('DOMContentLoaded', function () {
             const noticeHtml = Array.isArray(find.notice) && find.notice.length
                 ? find.notice.map(n => `<li>${n}</li>`).join('')
                 : '<li class="empty-text">无</li>';
-            // 站位图
+            // 站位图（统一class：pos-grid / pos-row / pos-cell，和CSS匹配）
             let positionHtml = '<span class="empty-text">无</span>';
             if (Array.isArray(find.positionGrid) && find.positionGrid.length) {
                 positionHtml = `
-                    <div class="position-grid">
+                    <div class="pos-grid">
                         ${find.positionGrid.map(row => `
-                            <div class="position-row">
+                            <div class="pos-row">
                                 ${row.map(cell => {
                                     if (cell && cell.img && cell.name) {
-                                        return `<div class="position-cell"><img src="${cell.img}" alt="${cell.name}" title="${cell.name}"></div>`;
+                                        return `<div class="pos-cell"><img src="${cell.img}" alt="${cell.name}" title="${cell.name}"></div>`;
                                     }
-                                    return `<div class="position-cell empty"></div>`;
+                                    return `<div class="pos-cell empty"></div>`;
                                 }).join('')}
                             </div>
                         `).join('')}
@@ -244,7 +238,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.target === modal) modal.style.display = 'none';
         };
     }
-
     // 筛选标签点击
     if (filterChips.length > 0) {
         filterChips.forEach(el => {
@@ -260,7 +253,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         })
     }
-
     // 搜索框
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
@@ -268,7 +260,6 @@ document.addEventListener('DOMContentLoaded', function () {
             renderList();
         })
     }
-
     // 解锁逻辑
     if (!lockModal || !codeInput || !unlockBtn || !tipText) {
         return;
@@ -297,7 +288,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if(e.key === 'Enter') unlockBtn.click();
     }
 })
-
 // 复制函数放外面，给onclick全局调用
 async function copyCode(code) {
     // 从中文左括号「（」切割，只取前面纯数字编码
