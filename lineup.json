@@ -371,7 +371,7 @@
         "equipFirst": [
             {"name":"金色圣剑","img":"images/equip/equipsmall/jinseshengjian.png"},
             {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"},
-            {"name":"名刀·司命","img":"images/equip/equipsmall/mingdao.png"}
+            {"name":"名刀·司命","img":"images/equip/equipsmall/mingdaosiming.png"}
         ],
         "equipSecond": [
             {"name":"虚无法杖","img":"images/equip/equipsmall/xuwufazhang.png"},
