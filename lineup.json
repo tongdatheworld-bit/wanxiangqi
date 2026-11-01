@@ -374,8 +374,8 @@
             {"name":"名刀·司命","img":"images/equip/equipsmall/mingdao.png"}
         ],
         "equipSecond": [
-            {"name":"虚无法杖","img":"images/equip/xuwufazhang.png"},
-            {"name":"铸梦·逐风","img":"images/equip/zhumengzhufeng.png"},
+            {"name":"虚无法杖","img":"images/equip/equipsmall/xuwufazhang.png"},
+            {"name":"铸梦·逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
             {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
         ],
         "runStage": [
