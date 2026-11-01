@@ -444,36 +444,38 @@
             justify-content:center;
         }
 
-        /* ========= 装备行 ========= */
-        .equip-row{
-            display:flex;
-            gap:12px;
-            align-items:center;
-            margin:10px 0;
-            flex-wrap:wrap;
-        }
-        .equip-item{
-            text-align:center;
-            width:70px;
-        }
-        .equip-item img{
-            width:26px;
-            height:26px;
-            border-radius:8px;
-            border:1px solid #333844;
-        }
-        .equip-item span{
-            display:block;
-            font-size:12px;
-            color:#b4b9c6;
-            margin-top:4px;
-        }
-        .equip-tag{
-            color:#ffd369;
-            font-weight:bold;
-            width:40px;
-        }
-
+       /* ========= 装备行 ========= */
+.equip-row{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin:10px 0;
+    flex-wrap:wrap;
+}
+.equip-item{
+    text-align:center;
+    width:70px;
+}
+.equip-item img{
+    width:26px !important;
+    height:26px !important;
+    border-radius:8px;
+    border:1px solid #333844;
+    object-fit: contain;
+    display: block;
+    margin:0 auto;
+}
+.equip-item span{
+    display:block;
+    font-size:12px;
+    color:#b4b9c6;
+    margin-top:4px;
+}
+.equip-tag{
+    color:#ffd369;
+    font-weight:bold;
+    width:40px;
+}
         /* ========= 站位矩阵Grid ========= */
         .pos-matrix-wrap{
             margin-top:10px;
