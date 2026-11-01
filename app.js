@@ -16,23 +16,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
     // 加载JSON
     if (lineupWrap) {
-        fetch('./lineup.json')
-            .then(res => {
-                if (!res.ok) throw new Error('json读取失败');
-                return res.json();
-            })
-            .then(data => {
-    allLineupData = data;
-    renderList();
-    lineupWrap.style.opacity = "1"; // 渲染完再显示
-})
-            })
-            .catch(err => {
-                console.error('数据加载失败：', err);
-                lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 lineup.json</div>`;
-            lineupWrap.style.opacity = "1";
-            })
-    }
+    // 一开始先放加载文字，避免空白、乱码闪烁
+    lineupWrap.innerHTML = `<div style="text-align:center;color:#b4b9c6;padding:40px">正在加载阵容...</div>`;
+    fetch('./lineup.json')
+        .then(res => {
+            if (!res.ok) throw new Error('json读取失败');
+            return res.json();
+        })
+        .then(data => {
+            allLineupData = data;
+            renderList(); // renderList 会覆盖掉加载提示
+        })
+        .catch(err => {
+            console.error('数据加载失败：', err);
+            lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 lineup.json</div>`;
+        })
+}
     function renderList() {
         const wrap = document.getElementById('lineupList');
         if (!wrap) return;
