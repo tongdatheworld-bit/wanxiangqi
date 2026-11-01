@@ -22,12 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 return res.json();
             })
             .then(data => {
-                allLineupData = data;
-                renderList();
+    allLineupData = data;
+    renderList();
+    lineupWrap.style.opacity = "1"; // 渲染完再显示
+})
             })
             .catch(err => {
                 console.error('数据加载失败：', err);
                 lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 lineup.json</div>`;
+            lineupWrap.style.opacity = "1";
             })
     }
     function renderList() {
