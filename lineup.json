@@ -540,10 +540,10 @@
     {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
 ],
 "backupHeroList": [
-    {"name":"庄周","img":"images/heroes/kai.png","isCore":false},
-    {"name":"蒙犽","img":"images/heroes/dunshan.png","isCore":false},
-    {"name":"梦奇","img":"images/heroes/mingshiyin.png","isCore":false},
-    {"name":"老夫子","img":"images/heroes/taiyizhenren.png","isCore":false}
+    {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+    {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":false},
+    {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
+    {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
 ],
 "equipFirst": [
     {"name":"贤者之书","img":"images/equip/equipsmall/xianzhezhishu.png"},
@@ -551,7 +551,7 @@
     {"name":"霸者重铠","img":"images/equip/equipsmall/bazhezhongkai.png"}
 ],
 "equipSecond": [
-    {"name":"机械头","img":"images/equip/equipsmall/jixietou.png"},
+    {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
     {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"},
     {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"}
 ],
