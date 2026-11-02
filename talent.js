@@ -1,5 +1,4 @@
 const talentList = [
-   [
     {
         "id": "T001",
         "name": "预言家",
@@ -4020,7 +4019,8 @@ const talentList = [
     "fitHero": {"name": "貂蝉、上官婉儿", "url": null, "avatar": "images/heroes/diaochan.png"},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "貂蝉婉儿起舞体系", "url": null}
-}         
+  }         
+   
 ]
 const talentCardList = document.getElementById("talentCardList");
 const talentSearch = document.getElementById("talentSearch");
@@ -4102,7 +4102,7 @@ cardDom.innerHTML = `
 // 弹窗
 function openModal(item) {
     // 修复：补上反引号
-    const fullImgPath = `images/talent/${item.img || ''}`;
+    const fullImgPath = `images/talent/${item.img || ''};
     const renderItem = (info) => {
         if (!info || !info.name) return "无";
         if (info.url) {
