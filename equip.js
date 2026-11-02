@@ -765,7 +765,7 @@ const equipList = [
         "pos": "天赋",
         "desc": "唯一。法术攻击力+35%，造成法术伤害时添加梦魇印记，持续5秒。带有印记的单位阵亡时，对周围1格敌方单位造成穿戴者法术攻击力×2的法术伤害。",
         "source": "天赋装备",
-        "img": "images/equip/mengyanyazhi.png",
+        "img": "images/equip/mengyanzhiya.png",
         "adaptHero": [
             {
                 "heroName": "",
@@ -795,7 +795,7 @@ const equipList = [
         "pos": "天赋",
         "desc": "唯一。造成伤害的15%转化为真实伤害。对目标每普通攻击4次，会眩晕目标1秒。",
         "source": "天赋装备",
-        "img": "images/equip/qiangdakexing.png",
+        "img": "images/equip/qiangdikexing.png",
         "adaptHero": [
             {
                 "heroName": "",
