@@ -83,12 +83,12 @@ const equipList = [
         {
             "name": "红糜",
             "effect": "唯一。周围1格没有友军时，获得25%伤害加成。每承受3%最大生命值的伤害，获得1%伤害加成，上限100%。",
-            "icon": "images/equip/equipsmall/hongmi.png"
+            "icon": "images/equip/equipsmall/hongmo.png"
         },
         {
             "name": "魔律之刃",
             "effect": "唯一。释放技能时，35%概率重复释放一次。每有7级，额外提升1%概率。近战英雄总上限70%。",
-            "icon": "images/equip/equipsmall/molüzhiren.png"
+            "icon": "images/equip/equipsmall/molvzhiren.png"
         }
     ]
 },
@@ -145,7 +145,7 @@ const equipList = [
         {
             "name": "魔女斗篷",
             "effect": "法术防御力+30。战斗开始时，获得等级×5点法术护盾。",
-            "icon": "images/equip/equipsmall/monüdoupeng.png"
+            "icon": "images/equip/equipsmall/monvdoupeng.png"
         },
         {
             "name": "红莲炎甲",
@@ -233,7 +233,7 @@ const equipList = [
         {
             "name": "寒霜侵袭",
             "effect": "唯一。普通攻击减少目标15%移速，持续5秒，最多叠加5层。叠满后目标受到的伤害提高20%，持续5秒，冷却时间10秒。",
-            "icon": "images/equip/equipsmall/hanbingqinxi.png"
+            "icon": "images/equip/equipsmall/hanshuangqinxi.png"
         },
         {
             "name": "自然法杖",
