@@ -727,7 +727,281 @@ const equipList = [
             "icon": "images/equip/equipsmall/dabang.png"
         }
     ]
-}
+},
+    {
+        "id": 41,
+        "name": "法潮灵杖",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。法术攻击力+25%。战斗开始，会获得左右1格的英雄的100%法术攻击力。",
+        "source": "天赋装备",
+        "img": "images/equip/fachaolingzhang.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "name": "鼓舞之戒",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。战斗开始时，与穿戴者同阵营的英雄，提升30%最大生命值。",
+        "source": "天赋装备",
+        "img": "images/equip/guwuzhijie.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "name": "梦魇之牙",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。法术攻击力+35%，造成法术伤害时添加梦魇印记，持续5秒。带有印记的单位阵亡时，对周围1格敌方单位造成穿戴者法术攻击力×2的法术伤害。",
+        "source": "天赋装备",
+        "img": "images/equip/mengyanyazhi.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "name": "三分旗帜",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "仅三分英雄穿戴。将造成伤害的30%转化为治疗量，平均给所有三分英雄。",
+        "source": "天赋装备",
+        "img": "images/equip/sanfenqizhi.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "name": "强敌克星",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。造成伤害的15%转化为真实伤害。对目标每普通攻击4次，会眩晕目标1秒。",
+        "source": "天赋装备",
+        "img": "images/equip/qiangdakexing.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "name": "怒神项链",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。暴击率+50%，法术伤害可以暴击。",
+        "source": "天赋装备",
+        "img": "images/equip/nushenxianglian.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "name": "魂灭灵冠",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。阵亡时，对周围1格敌人造成目标35%最大生命值的真实伤害。",
+        "source": "天赋装备",
+        "img": "images/equip/hunmielingguan.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "name": "灵泉项链",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。战斗开始时，周围1格的单位每秒回复4点法力值。穿戴者法力值上限-10。",
+        "source": "天赋装备",
+        "img": "images/equip/lingquanxianglian.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "name": "护命灵珠",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。每4秒获得基础生命值25%的护盾。拥有护盾时伤害提升25%，护盾被击破则移除。",
+        "source": "天赋装备",
+        "img": "images/equip/huminglingzhu.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "name": "断念",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。造成伤害时，本场战斗降低敌方单位20%最大生命值上限（不可叠加）。",
+        "source": "天赋装备",
+        "img": "images/equip/duannian.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "name": "末世",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。普通攻击会减少目标2%最大生命值并恢复等量生命值。穿戴者为近战英雄时，效果翻倍。",
+        "source": "天赋装备",
+        "img": "images/equip/moshi.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "name": "根源之力",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。每4秒对生命值最低的敌方单位造成600%法术攻击力的法术伤害。",
+        "source": "天赋装备",
+        "img": "images/equip/genyuanzhili.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "name": "魂祭绝刃",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。攻击速度+50%，物理和法术吸血+30%。战斗开始时，扣除50%最大生命值。",
+        "source": "天赋装备",
+        "img": "images/equip/hunjijueren.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "name": "不屈意志",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。战斗开始及之后每3秒获得场上友军不屈意志数量×2的临时等级。阵亡时，将自身等级的30%平均分配给穿戴不屈意志的友军。",
+        "source": "天赋装备",
+        "img": "images/equip/buquyizhi.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "name": "灵泉法杖",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。获得【闪现】，每次闪现后普攻附带一次重击：造成300%伤害并且眩晕敌方1秒，每次击败敌方单位再次触发闪现。",
+        "source": "天赋装备",
+        "img": "images/equip/lingquanfazhang.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "name": "破妄之刃",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。移动速度提升60%，造成伤害的50%会转化为真实伤害。免疫减速效果。",
+        "source": "天赋装备",
+        "img": "images/equip/powangzhiren.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 57,
+        "name": "破阵战芒",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。仅1-3阶英雄可穿戴。战斗开始时，获得等级×1%的伤害加成和攻速，上限50%。",
+        "source": "天赋装备",
+        "img": "images/equip/pozhenzhanmang.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "name": "光辉圣铠",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。每秒恢复50+4%最大生命值。",
+        "source": "天赋装备",
+        "img": "images/equip/guanghuishengkai.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+    }
+]
+
+
+    
 ];
 const equipCardList = document.getElementById("equipCardList");
 const searchInput = document.getElementById("searchInput");
@@ -748,33 +1022,55 @@ function openEquipByName(name){
 function renderModal(item){
     let partTitle = "";
     let partHtml = "";
+    let adaptHeroTitle = "";
+    let adaptHeroHtml = "";
 
-    // 基础装备：可铸造成装
-    if (Array.isArray(item.castList) && item.castList.length > 0) {
-        partTitle = "可铸造成装";
-        item.castList.forEach(c => {
-            partHtml += `<div class="cast-item">
-                <img class="cast-icon" src="${c.icon}" alt="" onclick="openEquipByName('${c.name}')">
-                <div class="cast-text">
-                    <span class="cast-name">${c.name}</span>
-                    <span class="cast-effect">${c.effect}</span>
+    // 判断是不是天赋装备，单独渲染适配英雄
+    if(item.type === "天赋装备"){
+        partTitle = "天赋装备";
+        partHtml = `<div style="color:#888;">无合成散件</div>`;
+
+        // 适配英雄区域
+        if (Array.isArray(item.adaptHero) && item.adaptHero.length) {
+            adaptHeroTitle = "适配英雄";
+            adaptHeroHtml = item.adaptHero.map(h => `
+                <div class="adapt-hero-item">
+                    <img src="${h.heroImg}" alt="${h.heroName}">
+                    <span>${h.heroName}</span>
                 </div>
-            </div>`;
-        });
-    } else {
-        // 普通装备：合成散件
-        partTitle = "合成散件";
-        if (Array.isArray(item.combineParts) && item.combineParts.length) {
-            item.combineParts.forEach(p => {
+            `).join('');
+        } else {
+            adaptHeroTitle = "适配英雄";
+            adaptHeroHtml = `<div style="color:#888;">暂无适配英雄</div>`;
+        }
+    }else{
+        // 基础装备：可铸造成装
+        if (Array.isArray(item.castList) && item.castList.length > 0) {
+            partTitle = "可铸造成装";
+            item.castList.forEach(c => {
                 partHtml += `<div class="cast-item">
-                    <img class="cast-icon" src="${p.icon}" alt="" onclick="openEquipByName('${p.name}')">
+                    <img class="cast-icon" src="${c.icon}" alt="" onclick="openEquipByName('${c.name}')">
                     <div class="cast-text">
-                        <span class="cast-name">${p.name}</span>
+                        <span class="cast-name">${c.name}</span>
+                        <span class="cast-effect">${c.effect}</span>
                     </div>
                 </div>`;
             });
         } else {
-            partHtml = `<div style="color:#888;">无合成散件</div>`;
+            // 普通装备：合成散件
+            partTitle = "合成散件";
+            if (Array.isArray(item.combineParts) && item.combineParts.length) {
+                item.combineParts.forEach(p => {
+                    partHtml += `<div class="cast-item">
+                        <img class="cast-icon" src="${p.icon}" alt="" onclick="openEquipByName('${p.name}')">
+                        <div class="cast-text">
+                            <span class="cast-name">${p.name}</span>
+                        </div>
+                    </div>`;
+                });
+            } else {
+                partHtml = `<div style="color:#888;">无合成散件</div>`;
+            }
         }
     }
 
@@ -796,6 +1092,11 @@ function renderModal(item){
             <hr class="equip-divider">
             <h3 class="equip-cast-title">${partTitle}</h3>
             <div class="cast-list">${partHtml}</div>
+            ${item.type === "天赋装备" ? `
+                <hr class="equip-divider">
+                <h3 class="equip-cast-title">${adaptHeroTitle}</h3>
+                <div class="adapt-hero-wrap">${adaptHeroHtml}</div>
+            ` : ''}
         </div>
     </div>`;
     detailModal.style.display = "flex";
@@ -825,6 +1126,4 @@ window.onclick = (e) => {
 searchInput.addEventListener("input", render);
 equipTypeFilter.addEventListener("change", render);
 equipPosFilter.addEventListener("change", render);
-render();
-
 render();
