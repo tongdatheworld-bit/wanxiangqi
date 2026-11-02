@@ -631,32 +631,18 @@ const talentList = [
     }
 }
 ,{
-    "id": 24,
-    "name": "防御领域",
+    "id": 34,
+    "name": "里程碑",
     "rank": "铜天赋",
-    "talentType": "生存类天赋",
+    "talentType": "资源类天赋",
     "camp": "通用",
-    "img": "fangyulingyu.png",
-    "desc": "棋手每次受到的伤害减少2点。",
+    "img": "lichengbei.png",
+    "desc": "棋手到达5级时，获得5能量、1张装备箱。",
     "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
+    "relatedProduct": {"name": "无", "url": null},
+    "fitHero": {"name": "无", "url": null, "avatar": null},
+    "fitPlayer": {"name": "无", "url": null, "avatar": null},
+    "fitTeam": {"name": "无", "url": null}
 }
 ,{
     "id": 25,
@@ -667,10 +653,7 @@ const talentList = [
     "img": "wufulinmen.png",
     "desc": "获得1张天赋牌五福临门：随机获得5张英雄牌。",
     "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
+    "relatedProduct": {"name": "无","url": null},
     "fitHero": {
         "name": "无",
         "url": null,
@@ -688,34 +671,20 @@ const talentList = [
 }
 ,{
     "id": 26,
-    "name": "节能商店",
+    "name": "双人游",
     "rank": "铜天赋",
-    "talentType": "机制类天赋",
+    "talentType": "资源类天赋",
     "camp": "通用",
-    "img": "jienengshangdian.png",
-    "desc": "每次手动刷新商店后，总有1张商店卡牌所需能量-1。",
+    "img": "shuangrenyou.png",
+    "desc": "随机获得2张2-3阶英雄牌。",
     "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
+    "relatedProduct": {"name": "无", "url": null},
+    "fitHero": {"name": "无", "url": null, "avatar": null},
+    "fitPlayer": {"name": "无", "url": null, "avatar": null},
+    "fitTeam": {"name": "无", "url": null}
 }
 ,{
-    "id": 30,
+    "id": 27,
     "name": "小电池包",
     "rank": "铜天赋",
     "talentType": "资源类天赋",
@@ -881,7 +850,7 @@ const talentList = [
         "url": null
     }
 },{
-    "id": 27,
+    "id": 33,
     "name": "随机成长",
     "rank": "铜天赋",
     "talentType": "战力类天赋",
@@ -907,7 +876,22 @@ const talentList = [
         "name": "无",
         "url": null
     }
+},
+{
+    "id": 34,
+    "name": "孙尚香强化",
+    "rank": "铜天赋",
+    "talentType": "机制类天赋",
+    "camp": "通用",
+    "img": "sunshangxiangqianghua.png",
+    "desc": "每回合开始时，触发1次孙尚香卡牌效果。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {"name": "无", "url": null},
+    "fitHero": {"name": "孙尚香", "url": "#hero-sunshangxiang", "avatar": "images/heroes/sunshangxiang.png"},
+    "fitPlayer": {"name": "无", "url": null, "avatar": null},
+    "fitTeam": {"name": "无", "url": null}
 }
+
 ];
 
 const talentCardList = document.getElementById("talentCardList");
