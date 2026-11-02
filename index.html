@@ -304,7 +304,7 @@
         }
         /* 解锁弹窗 */
         #lockModal{
-            position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;
+            position:fixed;inset:0;background:rgba(0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;
         }
     </style>
 </head>
@@ -385,6 +385,11 @@
                     ${coreBadge}
                 </div>`
             })
+            // 羁绊标签渲染
+            let tagHtml = '';
+            if(item.tags && item.tags.length>0){
+                tagHtml = item.tags.map(t=>`<span class="tag-item">${t}</span>`).join('');
+            }
             div.innerHTML = `
                 <div class="player-avatar">
                     <img src="${item.playerImg}" alt="${item.player}">
@@ -393,6 +398,7 @@
                 <div class="card-right">
                     <div class="name-row">
                         <div class="lineup-name">${item.name}</div>
+                        ${tagHtml}
                     </div>
                     <div class="meta-row">成型难度：${item.hard}　阵容码：<span class="copy-text">${item.lineupCode}</span></div>
                     <div class="hero-row">
@@ -400,9 +406,21 @@
                     </div>
                 </div>
             `;
-            // 点击卡片打开弹窗
+            // 卡片点击打开弹窗
             div.onclick = ()=>{
                 openLineupModal(item);
+            }
+            // 单独给复制文本绑定事件，阻止冒泡（重点修复！）
+            const copySpan = div.querySelector('.copy-text');
+            copySpan.onclick = async (e)=>{
+                e.stopPropagation(); // 阻止冒泡，不会触发卡片弹窗
+                try{
+                    let codeStr = item.lineupCode.replace("（点击复制）","");
+                    await navigator.clipboard.writeText(codeStr.trim());
+                    alert("✅ 阵容码复制成功");
+                }catch(err){
+                    alert("复制失败："+codeStr)
+                }
             }
             return div;
         }
@@ -414,6 +432,8 @@
             let banHtml = '';
             if(item.ban位 && item.ban位.length>0){
                 banHtml = item.ban位.map(b=>`<span class="ban-tag">${b}</span>`).join('');
+            }else{
+                banHtml = "无";
             }
             // 主英雄
             let heroMainHtml = item.heroList.map(h=>`
@@ -475,7 +495,7 @@
                     <div style="font-size:32px;color:#ffd369;font-weight:bold;margin-bottom:8px;">${item.name}【${item.rank}】</div>
                     <div style="margin-bottom:8px;">棋手：${item.player}｜成型难度：${item.hard}</div>
                     <div style="margin-bottom:8px;">阵容码：<span class="copy-text">${item.lineupCode}</span></div>
-                    <div style="margin-bottom:8px;">禁用羁绊：${banHtml||"无"}</div>
+                    <div style="margin-bottom:8px;">禁用羁绊：${banHtml}</div>
                     
                     <div class="section-title">成型主阵容</div>
                     <div class="hero-grid">${heroMainHtml}</div>
@@ -506,19 +526,18 @@
             modalInner.querySelector('.modal-close').onclick = ()=>{
                 modalDom.style.display = 'none';
             }
-            // 复制阵容码
-            modalInner.querySelectorAll('.copy-text').forEach(el=>{
-                el.onclick = async (e)=>{
-                    e.stopPropagation();
-                    try{
-                        let codeStr = item.lineupCode.replace("（点击复制）","");
-                        await navigator.clipboard.writeText(codeStr.trim());
-                        alert("✅ 阵容码复制成功");
-                    }catch(err){
-                        alert("复制失败："+item.lineupCode)
-                    }
+            // 弹窗内复制按钮
+            const modalCopy = modalInner.querySelector('.copy-text');
+            modalCopy.onclick = async (e)=>{
+                e.stopPropagation();
+                try{
+                    let codeStr = item.lineupCode.replace("（点击复制）","");
+                    await navigator.clipboard.writeText(codeStr.trim());
+                    alert("✅ 阵容码复制成功");
+                }catch(err){
+                    alert("复制失败："+codeStr)
                 }
-            })
+            }
         }
 
         function renderHomeTopRank() {
