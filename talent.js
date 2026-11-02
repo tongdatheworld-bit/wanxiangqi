@@ -4102,7 +4102,7 @@ cardDom.innerHTML = `
 // 弹窗
 function openModal(item) {
     // 修复：补上反引号
-    const fullImgPath = `images/talent/${item.img || ''};
+    const fullImgPath = `images/talent/${item.img || ''}`;
     const renderItem = (info) => {
         if (!info || !info.name) return "无";
         if (info.url) {
