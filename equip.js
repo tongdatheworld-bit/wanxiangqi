@@ -390,7 +390,7 @@ const equipList = [
     "pos": "通用装备",
     "desc": "唯一。穿戴者首次受到致命伤害时会进入无敌和不可选中状态，持续1.5秒。",
     "source": "由雷鸣刃铸造而成",
-    "img": "images/equip/mingdao_simeng.png",
+    "img": "images/equip/mingdaosimeng.png",
     "combineParts": [
         {
             "name": "雷鸣刃",
@@ -525,7 +525,7 @@ const equipList = [
     "pos": "防御装备",
     "desc": "法术防御力+30。战斗开始时，获得等级×5点法术护盾。",
     "source": "由力量腰带铸造而成",
-    "img": "images/equip/modudoupeng.png",
+    "img": "images/equip/monvdoupeng.png",
     "combineParts": [
         {
             "name": "力量腰带",
@@ -540,7 +540,7 @@ const equipList = [
     "pos": "防御装备",
     "desc": "唯一。每2秒对周围1格敌人造成20（+5%穿戴者最大生命值）点法术伤害，并降低目标50%生命恢复和护盾效果，持续3秒。",
     "source": "由力量腰带铸造而成",
-    "img": "images/equip/honglianyanji.png",
+    "img": "images/equip/honglianyanjia.png",
     "combineParts": [
         {
             "name": "力量腰带",
@@ -690,7 +690,7 @@ const equipList = [
     "pos": "法术装备",
     "desc": "唯一。普通攻击减少目标15%移速，持续5秒，最多叠加5层。叠满后目标受到的伤害提高20%，持续5秒，冷却时间10秒。",
     "source": "由大棒铸造而成",
-    "img": "images/equip/hanshanginqin.png",
+    "img": "images/equip/hanshuangqinxi.png",
     "combineParts": [
         {
             "name": "大棒",
@@ -720,7 +720,7 @@ const equipList = [
     "pos": "法术装备",
     "desc": "唯一。获得30%（+15%法术攻击力）攻击速度，每次普通攻击附带20（+30%法术攻击力）点法术伤害。",
     "source": "由大棒铸造而成",
-    "img": "images/equip/jinse-shengjian.png",
+    "img": "images/equip/jinseshengjian.png",
     "combineParts": [
         {
             "name": "大棒",
