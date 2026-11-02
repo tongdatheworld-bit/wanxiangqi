@@ -389,7 +389,8 @@
             }
         }
 
-      // 生成卡片
+// 生成卡片
+// 生成卡片
 function buildCard(item){
     const div = document.createElement('div');
     div.className = "lineup-card";
@@ -401,13 +402,13 @@ function buildCard(item){
             <img src="${h.img}" alt="${h.name}">
             ${coreBadge}
         </div>`
-    })
+    });
     // 羁绊标签渲染
     let tagHtml = '';
     if(item.tags && item.tags.length>0){
         tagHtml = item.tags.map(t=>`<span class="tag">${t}</span>`).join('');
     }
-    // Ban区域
+    // Ban区域渲染
     let banHtml = '';
     if(Array.isArray(item["ban位"]) && item["ban位"].length > 0){
         banHtml = `<span class="ban-sep">|</span><span class="ban-title-tag">Ban阵营：</span>`
@@ -431,6 +432,8 @@ function buildCard(item){
         </div>
     `;
     return div;
+
+} // ✅ 重点！这个 } 是 buildCard 的结束，必须存在，和最开头 function 的 { 配对
 } // ← 这个是 buildCard 函数收尾的 }，非常关键，你之前大概率丢了这个
             // 卡片点击打开弹窗
             div.onclick = ()=>{
