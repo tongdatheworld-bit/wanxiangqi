@@ -429,3 +429,8 @@
 .copy-code:hover{
     text-decoration:underline;
 }
+.lineup-card .name-row .lineup-name {
+    color: #ffd878 !important;
+    font-size: 34px !important;
+    font-weight: 900 !important;
+}
