@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const modalBody = document.getElementById('modalBody');
         const closeModalBtn = document.getElementById('closeModal');
         if (!modal || !modalBody) return;
+        if(!lineupWrap) return;
         lineupWrap.onclick = function (e) {
             const card = e.target.closest('.lineup-card');
             if (!card) return;
@@ -273,7 +274,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if(localStorage.getItem(STORAGE_KEY) === 'ok'){
         lockModal.style.display = 'none';
-        lineupWrap.style.visibility = 'visible';
+        // ✅ 这里加判断！！只有 lineupWrap 存在才执行
+        if(lineupWrap){
+            lineupWrap.style.visibility = 'visible';
+        }
     }
     unlockBtn.onclick = function(){
         const val = codeInput.value.trim();
@@ -282,7 +286,9 @@ document.addEventListener('DOMContentLoaded', function () {
             tipText.innerText = "✅ 解锁成功！";
             tipText.style.display = 'block';
             localStorage.setItem(STORAGE_KEY,'ok');
-            lineupWrap.style.visibility = 'visible';
+            if(lineupWrap){
+                lineupWrap.style.visibility = 'visible';
+            }
             renderList();
             setTimeout(()=> lockModal.style.display = 'none',600);
         }else{
