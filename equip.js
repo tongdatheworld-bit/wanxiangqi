@@ -37,7 +37,7 @@ const equipList = [
     "pos": "法术装备",
     "desc": "穿戴给英雄，可以铸造成1件法术型普通装备。",
     "source": "该卡通过商店购买、效果锦裹、拍卖等渠道获得。",
-    "img": "images/equip/shengzhedianzhang.png",
+    "img": "images/equip/shengzhefadian.png",
     "castList": [
         {
             "name": "贤者之书",
@@ -52,7 +52,7 @@ const equipList = [
         {
             "name": "生命庭典",
             "effect": "唯一。受到伤害时会为自身和周围1格的己方单位恢复5%最大生命值，冷却2秒。",
-            "icon": "images/equip/equipsmall/shengmingtingdian.png"
+            "icon": "images/equip/equipsmall/shengmingmodian.png"
         },
         {
             "name": "御灵之纱",
@@ -250,16 +250,23 @@ const equipList = [
 
 
     {
-        id: 9,
-        name: "纯净苍穹",
-        type: "普通装备",
-        pos: "法术装备",
-        desc: "每2秒获得10点法术攻击力，同时清除自身负面状态。",
-        source: "由风暴巨剑铸造而成",
-        sourceImg: "images/equip/equipsmall/fengbaojujian.png",
-        img: "images/equip/chunjingcangqiong.png",
-        castList: []
-    },
+        {
+    "id": 9,
+    "name": "纯净苍穹",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "每2秒获得10点法术攻击力，同时清除自身负面状态。",
+    "source": "由风暴巨剑铸造而成",
+    "sourceImg": "images/equip/equipsmall/fengbaojujian.png",
+    "img": "images/equip/chunjingcangqiong.png",
+    "combineParts": [
+        {
+            "name": "风暴巨剑",
+            "icon": "images/equip/equipsmall/fengbaojujian.png"
+        }
+    ]
+}
+,
     {
         id: 10,
         name: "铸梦·逐风",
