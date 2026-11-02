@@ -580,13 +580,13 @@
     {
         "title": "12回合以后",
         "heroList": [
-            {"name":"芈月","img":"images/heroes/miyue.png"},
-            {"name":"钟馗","img":"images/heroes/zhongkui.png"},
-            {"name":"铠","img":"images/heroes/kai.png"},
-            {"name":"盾山","img":"images/heroes/dunshan.png"},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png"},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"},
-            {"name":"程咬金","img":"images/heroes/chengyaojin.png"}
+            {"name":"芈月","img":"images/heroes/miyue.png","isCore":true},
+           {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+           {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+           {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
+           {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+           {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+           {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false}
         ],
         "desc": "12回合后，阵容基本大成，后面再找鲁班大师提高阵容上限。第三轮拍卖：扶摇直上>能量超新星>4张效果牌>其他根据场上情况定。"
     }
