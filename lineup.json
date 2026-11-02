@@ -585,7 +585,7 @@
            {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
            {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-           {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+           {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
            {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false}
         ],
         "desc": "12回合后，阵容基本大成，后面再找鲁班大师提高阵容上限。第三轮拍卖：扶摇直上>能量超新星>4张效果牌>其他根据场上情况定。"
