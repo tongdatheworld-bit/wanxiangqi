@@ -88,7 +88,7 @@
             display:flex;
             align-items:center;
             width: min(900px, 100%);
-            margin:0 auto 40px;
+            margin:0 auto 20px;
             background: #1c212c;
             border: 1px solid #333844;
             border-radius:12px;
@@ -109,42 +109,13 @@
         .search-hint {
             color:#686e7c;
             font-size:13px;
-            margin-bottom:50px;
+            margin-bottom:24px;
         }
-        /* ========== 横向滚动卡面容器，只保留图片卡牌 ========== */
-        .quick-card-group {
+        /* 复用阵容卡片样式，和lineup页面统一 */
+        .lineup-list {
             display: flex;
-            gap: 22px;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 20px 10px;
-            scroll-behavior: smooth;
-            /* 隐藏滚动条 */
-            scrollbar-width: none;
-            justify-content: center;
-        }
-        .quick-card-group::-webkit-scrollbar {
-            display: none;
-        }
-        .quick-card {
-            flex: 0 0 120px;
-            background: #1c212c;
-            border: 1px solid #282d38;
-            border-radius: 12px;
-            padding: 12px;
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-        .quick-card:hover {
-            transform: translateY(-8px) scale(1.04);
-            border-color:rgba(255,211,105,0.45);
-            box-shadow: 0 8px 20px rgba(255, 211, 105, 0.12);
-        }
-        .quick-card-cover img {
-            width: 96px;
-            height:96px;
-            border-radius: 8px;
-            object-fit: cover;
+            flex-direction: column;
+            gap:16px;
         }
     </style>
 </head>
@@ -153,7 +124,7 @@
 <div id="mainContent">
     <!-- 顶部导航 -->
     <div class="top-nav-wrap">
-        <a href="./index.html">首页</a>
+        <a href="./index.html" class="active">首页</a>
         <a href="./lineup.html">阵容大全</a>
         <a href="./player.html">棋手</a>
         <a href="./hero-card.html">英雄牌</a>
@@ -177,29 +148,14 @@
             <span style="color:#777; font-size:13px;">⌘ K</span>
         </div>
         <div class="search-hint">支持拼音与首字母 · 覆盖全部游戏资料 · 数据持续更新</div>
-             <!-- 纯卡牌，无名字、无描述 -->
-        <div class="quick-card-group">
-            <div class="quick-card" data-type="hero" data-id="1">
-                <div class="quick-card-cover">
-                    <img src="images/herocard/sunshangxiang.png" alt="孙尚香">
-                </div>
-            </div>
-            <div class="quick-card" data-type="hero" data-id="2">
-                <div class="quick-card-cover">
-                    <img src="images/herocard/sunbin.png" alt="孙膑">
-                </div>
-            </div>
-            <div class="quick-card" data-type="hero" data-id="3">
-                <div class="quick-card-cover">
-                    <img src="images/herocard/niumo.png" alt="牛魔">
-                </div>
-            </div>
-            <div class="quick-card" data-type="hero" data-id="4">
-                <div class="quick-card-cover">
-                    <img src="images/herocard/liyuanfang.png" alt="李元芳">
-                </div>
-            </div>
+
+        <!-- ====== 【在这里放排行榜】====== -->
+        <div style="margin: 0 0 10px;">
+            <h3 style="font-size:22px;color:#ffd369;margin-bottom:18px;text-align:center;">最新阵容强度排行榜</h3>
         </div>
+        <div class="lineup-list" id="homeTopList"></div>
+        <!-- ================================= -->
+
     </div>
     <script src="./app.js"></script>
     <!-- 导航自动高亮脚本 -->
@@ -216,19 +172,34 @@
       })
     })();
     </script>
-            <script>
-        const cards = document.querySelectorAll('.quick-card');
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const type = card.dataset.type;
-                const id = card.dataset.id;
-                console.log('点击卡片', type, id);
-                // 以后在这里写跳转逻辑
-            });
-        })
+    <!-- 首页榜单渲染脚本 -->
+    <script>
+        function renderHomeTopRank() {
+          const homeWrap = document.getElementById('homeTopList');
+          if (!homeWrap || typeof lineupList === 'undefined' || !renderLineupCard) return;
+
+          // ========= 你在这里手动填写阵容名称，顺序就是展示顺序 =========
+          const showNameList = [
+            "无限复活花木兰",
+            "日落海司空震",
+            "孙小宾三分倒转",
+            "昭君大河5+2",
+            "昭君75",
+            "大河龙蛇图腾",
+          ];
+          // ====================================================
+
+          homeWrap.innerHTML = '';
+          showNameList.forEach(name => {
+            const findItem = lineupList.find(item => item.name === name);
+            if(findItem){
+              homeWrap.appendChild(renderLineupCard(findItem));
+            }
+          })
+        }
+        window.addEventListener('load', renderHomeTopRank);
     </script>
 </div>
-
 <!-- 解锁弹窗 -->
 <div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;">
   <div style="background:#1c212c;border:1px solid #282d38;border-radius:16px;padding:32px;text-align:center;color:#e6e8ef;max-width:360px;">
@@ -241,19 +212,16 @@
     <p id="tipText" style="margin-top:12px;font-size:14px;display:none;"></p>
   </div>
 </div>
-
 <script>
 const RIGHT_CODE = "万象一图诀";
 const lockModal = document.getElementById('lockModal');
 const codeInput = document.getElementById('codeInput');
 const unlockBtn = document.getElementById('unlockBtn');
 const tipText = document.getElementById('tipText');
-
 // 读取本地缓存，已经解锁直接隐藏弹窗
 if(localStorage.getItem('wanxiang_unlock') === 'ok'){
   lockModal.style.display = 'none';
 }
-
 unlockBtn.onclick = function(){
   const val = codeInput.value.trim();
   if(val === RIGHT_CODE){
@@ -261,6 +229,7 @@ unlockBtn.onclick = function(){
     localStorage.setItem('wanxiang_unlock','ok');
   }else{
     tipText.style.display = 'block';
+    tipText.textContent = "验证码错误";
   }
 }
 // 回车也可以提交
