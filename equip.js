@@ -997,7 +997,293 @@ const equipList = [
                 "heroImg": "images/heroes/.png"
             }
         ]
-    }
+    },
+    {
+        "id": 59,
+        "name": "学识宝石",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。每回合开始时等级+8%（至少+3级）并减少2点法力值上限。",
+        "source": "天赋装备",
+        "img": "images/equip/xueshibaoshi.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 60,
+        "name": "驱雷",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。每2秒召唤2道雷电轰击敌我双方任意2名单位（穿戴者除外）。造成目标30%最大生命值的法术伤害（命中友军不触发吸血）。若命中中空位置则改为使其快速攻击4次。",
+        "source": "天赋装备",
+        "img": "images/equip/qulei.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 61,
+        "name": "聚灵法杖",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一，无法拆卸。法术攻击力+30，普攻附带自身70%法术攻击力。每击败1名英雄，永久获得5点法术攻击力，战斗胜利翻倍（已击败：0）。",
+        "source": "天赋装备",
+        "img": "images/equip/julingfazhang.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 62,
+        "name": "噬神之书",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "法术攻击力+100，法术吸血+60%。",
+        "source": "天赋装备",
+        "img": "images/equip/shishenzhishu.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 63,
+        "name": "征服之剑",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "物理吸血+30%。生命值低于50%时，此吸血效果翻倍。",
+        "source": "天赋装备",
+        "img": "images/equip/zhengfuzhijian.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 64,
+        "name": "静谧之铃",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。敌方等级最高的两名英雄释放技能后5秒内无法恢复法力值，在此期间每0.5秒受到穿戴者20%法术攻击力的法术伤害。",
+        "source": "天赋装备",
+        "img": "images/equip/jingmizhiling.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 65,
+        "name": "热血拳套",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。攻击速度+30%。攻速上限改为5.0。战斗期间，每获得2点法力值，提升1%攻击速度。",
+        "source": "天赋装备",
+        "img": "images/equip/rexuequantao.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 66,
+        "name": "捕能手套",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。每击败1名英雄，获得1能量。单回合击败不少于5名英雄时，获得能量转换。能量转换：消耗3能量，获得与棋手等级相对应的效果锦囊牌（不超过5阶）。",
+        "source": "天赋装备",
+        "img": "images/equip/bunengshoutao.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 67,
+        "name": "分身镜",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。战斗开始时，召唤1个承受350%伤害的复制体（无卡牌效果）。",
+        "source": "天赋装备",
+        "img": "images/equip/fenshenjing.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 68,
+        "name": "盛华",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一，无法拆卸。每次战斗结束后永久增加200点生命值，战斗胜利翻倍。增加生命值超过2000时，额外增加15%生命值上限。",
+        "source": "天赋装备",
+        "img": "images/equip/shenghua.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 69,
+        "name": "怒莲之刺",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。提升100%攻速，受到的全部伤害转移给穿戴银莲庇佑的单位。",
+        "source": "天赋装备",
+        "img": "images/equip/nulianzhici.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 70,
+        "name": "银莲庇佑",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。提升10点物理及法术防御力，替穿戴怒莲之刺的英雄承担伤害。",
+        "source": "天赋装备",
+        "img": "images/equip/yinlianbiyou.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 71,
+        "name": "机器头",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。战斗开始，英雄固定0.4的攻击速度，获得60%伤害加成。免疫负面效果。",
+        "source": "天赋装备",
+        "img": "images/equip/jiqitou.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 72,
+        "name": "阿科米亚之子",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。参与阿科米亚核心的等级分配。穿戴者及周围1格单位每秒恢复4法力值与2%最大生命值。友军经过时获得同等效果，持续8秒。",
+        "source": "天赋装备",
+        "img": "images/equip/akemiayazhizi.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 73,
+        "name": "套娃枪",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。每次普攻30%概率产生1个无法释放技能的分身，持续2秒。造成50%伤害，承受500%的伤害（分身继承此效果）。",
+        "source": "天赋装备",
+        "img": "images/equip/taowaqiang.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 74,
+        "name": "磐石之心",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。每次受到伤害不会超过15%最大生命值。",
+        "source": "天赋装备",
+        "img": "images/equip/panshizhixin.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 75,
+        "name": "小鹿的庇护",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一。穿戴者所受伤害的30%将转移到小鹿身上。",
+        "source": "天赋装备",
+        "img": "images/equip/xiaoludebihu.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 76,
+        "name": "青莲剑谱",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一，限定近战英雄。暴击率+40%。穿戴者释放的技能替换为青莲剑歌。",
+        "source": "天赋装备",
+        "img": "images/equip/qinglianjianpu.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+},
+{
+        "id": 77,
+        "name": "百锻刀",
+        "type": "天赋装备",
+        "pos": "天赋",
+        "desc": "唯一，无法拆卸。物理攻击力+30。每击败1名英雄，永久获得5点物理攻击力，战斗胜利翻倍（已击败：0）。",
+        "source": "天赋装备",
+        "img": "images/equip/baiduandao.png",
+        "adaptHero": [
+            {
+                "heroName": "",
+                "heroImg": "images/heroes/.png"
+            }
+        ]
+}
+
 ];
 const equipCardList = document.getElementById("equipCardList");
 const searchInput = document.getElementById("searchInput");
