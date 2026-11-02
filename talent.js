@@ -2088,7 +2088,7 @@ const talentList = [
         "fitHero": {"name": "无", "url": null, "avatar": null},
         "fitPlayer": {"name": "无", "url": null, "avatar": null},
         "fitTeam": {"name": "能量兑换运营阵容", "url": null}
-    }
+    },
 {
     "id": "Y090",
     "name": "小身体大能量",
