@@ -390,7 +390,7 @@ const equipList = [
     "pos": "通用装备",
     "desc": "唯一。穿戴者首次受到致命伤害时会进入无敌和不可选中状态，持续1.5秒。",
     "source": "由雷鸣刃铸造而成",
-    "img": "images/equip/mingdaosimeng.png",
+    "img": "images/equip/mingdaosiming.png",
     "combineParts": [
         {
             "name": "雷鸣刃",
