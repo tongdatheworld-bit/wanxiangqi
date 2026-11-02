@@ -117,6 +117,63 @@
             flex-direction: column;
             gap:16px;
         }
+        .lineup-card{
+            background:#1c212c;
+            border:1px solid #282d38;
+            border-radius:12px;
+            padding:16px;
+            display:flex;
+            gap:14px;
+            align-items:center;
+            cursor:pointer;
+            transition:all .2s;
+        }
+        .lineup-card:hover{
+            border-color:rgba(255,211,105,.45);
+        }
+        .lineup-avatar{
+            width:56px;
+            height:56px;
+            border-radius:50%;
+            overflow:hidden;
+            border:2px solid #ffd369;
+            flex-shrink:0;
+            background:#0f1218;
+        }
+        .lineup-avatar img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .lineup-main{
+            flex:1;
+            text-align:left;
+            min-width:0;
+        }
+        .lineup-top{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            margin-bottom:8px;
+        }
+        .lineup-rank{
+            background:linear-gradient(135deg,#ffd369,#ffb020);
+            color:#12161f;
+            font-weight:bold;
+            padding:4px 10px;
+            border-radius:6px;
+            font-size:13px;
+            flex-shrink:0;
+        }
+        .lineup-name{
+            color:#e6e8ef;
+            font-size:16px;
+            font-weight:600;
+        }
+        .lineup-meta{
+            color:#9298a6;
+            font-size:13px;
+        }
     </style>
 </head>
 <body>
@@ -153,7 +210,6 @@
         </div>
         <div class="lineup-list" id="homeTopList"></div>
     </div>
-
     <script src="./app.js"></script>
     <!-- 导航高亮 -->
     <script>
@@ -169,11 +225,9 @@
       })
     })();
     </script>
-
-    <!-- 【重点：读取 lineup.json 加载榜单】 -->
+    <!-- 【榜单脚本：独立渲染，不依赖app.js内部函数】 -->
     <script>
         let lineupList = [];
-        // 加载本地 lineup.json
         async function loadLineupJson() {
             try {
                 const res = await fetch("./lineup.json");
@@ -181,14 +235,44 @@
                 renderHomeTopRank();
             } catch (err) {
                 console.error("加载 lineup.json 失败：", err);
+                const wrap = document.getElementById('homeTopList');
+                if(wrap) wrap.innerHTML = `<p style="color:#ff8888">❌ 阵容数据加载失败，请检查 lineup.json</p>`;
             }
         }
-
+        function buildCard(item){
+            const div = document.createElement('div');
+            div.className = "lineup-card";
+            div.innerHTML = `
+                <div class="lineup-avatar">
+                    <img src="${item.playerImg}" alt="${item.player}">
+                </div>
+                <div class="lineup-main">
+                    <div class="lineup-top">
+                        <div class="lineup-rank">${item.rank}</div>
+                        <div class="lineup-name">${item.name}</div>
+                    </div>
+                    <div class="lineup-meta">成型难度：${item.hard}｜阵容码：${item.lineupCode}</div>
+                </div>
+            `;
+            // 点击复制阵容码
+            div.onclick = async ()=>{
+                const code = (item.lineupCode || "").split("（")[0];
+                if(!code){
+                    alert("暂无阵容码");
+                    return;
+                }
+                try{
+                    await navigator.clipboard.writeText(code);
+                    alert("✅ 阵容码已复制："+code);
+                }catch(e){
+                    alert("复制失败，请手动复制："+code);
+                }
+            }
+            return div;
+        }
         function renderHomeTopRank() {
             const homeWrap = document.getElementById('homeTopList');
-            if (!homeWrap || !window.renderLineupCard) return;
-
-            // ========= 在这里修改首页榜单展示的阵容名称、排序 =========
+            if (!homeWrap) return;
             const showNameList = [
                 "无限复活花木兰",
                 "日落海司空震",
@@ -197,21 +281,22 @@
                 "昭君75",
                 "大河龙蛇图腾",
             ];
-            // =========================================================
-
             homeWrap.innerHTML = '';
             showNameList.forEach(name => {
                 const target = lineupList.find(item => item.name === name);
                 if (target) {
-                    homeWrap.appendChild(renderLineupCard(target));
+                    homeWrap.appendChild(buildCard(target));
+                }else{
+                    console.warn("找不到阵容：", name);
                 }
             });
+            if(!homeWrap.children.length){
+                homeWrap.innerHTML = `<p style="color:#888">暂无匹配阵容，请核对阵容名称</p>`;
+            }
         }
-
         window.addEventListener('load', loadLineupJson);
     </script>
 </div>
-
 <!-- 解锁弹窗 -->
 <div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;">
   <div style="background:#1c212c;border:1px solid #282d38;border-radius:16px;padding:32px;text-align:center;color:#e6e8ef;max-width:360px;">
@@ -230,7 +315,6 @@ const lockModal = document.getElementById('lockModal');
 const codeInput = document.getElementById('codeInput');
 const unlockBtn = document.getElementById('unlockBtn');
 const tipText = document.getElementById('tipText');
-
 if(localStorage.getItem('wanxiang_unlock') === 'ok'){
   lockModal.style.display = 'none';
 }
