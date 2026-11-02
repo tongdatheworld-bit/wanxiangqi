@@ -1200,7 +1200,7 @@ const equipList = [
         "pos": "天赋",
         "desc": "唯一。参与阿科米亚核心的等级分配。穿戴者及周围1格单位每秒恢复4法力值与2%最大生命值。友军经过时获得同等效果，持续8秒。",
         "source": "天赋装备",
-        "img": "images/equip/akemiayazhizi.png",
+        "img": "images/equip/akemiyazhizi.png",
         "adaptHero": [
             {
                 "heroName": "",
