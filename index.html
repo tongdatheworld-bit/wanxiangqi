@@ -120,7 +120,6 @@
     </style>
 </head>
 <body>
-<!-- ========= 重点：mainContent 不再 display:none，默认直接显示 ========= -->
 <div id="mainContent">
     <!-- 顶部导航 -->
     <div class="top-nav-wrap">
@@ -148,17 +147,15 @@
             <span style="color:#777; font-size:13px;">⌘ K</span>
         </div>
         <div class="search-hint">支持拼音与首字母 · 覆盖全部游戏资料 · 数据持续更新</div>
-
-        <!-- ====== 【在这里放排行榜】====== -->
+        <!-- ====== 排行榜区域 ====== -->
         <div style="margin: 0 0 10px;">
             <h3 style="font-size:22px;color:#ffd369;margin-bottom:18px;text-align:center;">最新阵容强度排行榜</h3>
         </div>
         <div class="lineup-list" id="homeTopList"></div>
-        <!-- ================================= -->
-
     </div>
+
     <script src="./app.js"></script>
-    <!-- 导航自动高亮脚本 -->
+    <!-- 导航高亮 -->
     <script>
     (function(){
       const navLinks = document.querySelectorAll('.top-nav-wrap a');
@@ -172,34 +169,49 @@
       })
     })();
     </script>
-    <!-- 首页榜单渲染脚本 -->
+
+    <!-- 【重点：读取 lineup.json 加载榜单】 -->
     <script>
-        function renderHomeTopRank() {
-          const homeWrap = document.getElementById('homeTopList');
-          if (!homeWrap || typeof lineupList === 'undefined' || !renderLineupCard) return;
-
-          // ========= 你在这里手动填写阵容名称，顺序就是展示顺序 =========
-          const showNameList = [
-            "无限复活花木兰",
-            "日落海司空震",
-            "孙小宾三分倒转",
-            "昭君大河5+2",
-            "昭君75",
-            "大河龙蛇图腾",
-          ];
-          // ====================================================
-
-          homeWrap.innerHTML = '';
-          showNameList.forEach(name => {
-            const findItem = lineupList.find(item => item.name === name);
-            if(findItem){
-              homeWrap.appendChild(renderLineupCard(findItem));
+        let lineupList = [];
+        // 加载本地 lineup.json
+        async function loadLineupJson() {
+            try {
+                const res = await fetch("./lineup.json");
+                lineupList = await res.json();
+                renderHomeTopRank();
+            } catch (err) {
+                console.error("加载 lineup.json 失败：", err);
             }
-          })
         }
-        window.addEventListener('load', renderHomeTopRank);
+
+        function renderHomeTopRank() {
+            const homeWrap = document.getElementById('homeTopList');
+            if (!homeWrap || !window.renderLineupCard) return;
+
+            // ========= 在这里修改首页榜单展示的阵容名称、排序 =========
+            const showNameList = [
+                "无限复活花木兰",
+                "日落海司空震",
+                "孙小宾三分倒转",
+                "昭君大河5+2",
+                "昭君75",
+                "大河龙蛇图腾",
+            ];
+            // =========================================================
+
+            homeWrap.innerHTML = '';
+            showNameList.forEach(name => {
+                const target = lineupList.find(item => item.name === name);
+                if (target) {
+                    homeWrap.appendChild(renderLineupCard(target));
+                }
+            });
+        }
+
+        window.addEventListener('load', loadLineupJson);
     </script>
 </div>
+
 <!-- 解锁弹窗 -->
 <div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;">
   <div style="background:#1c212c;border:1px solid #282d38;border-radius:16px;padding:32px;text-align:center;color:#e6e8ef;max-width:360px;">
@@ -218,7 +230,7 @@ const lockModal = document.getElementById('lockModal');
 const codeInput = document.getElementById('codeInput');
 const unlockBtn = document.getElementById('unlockBtn');
 const tipText = document.getElementById('tipText');
-// 读取本地缓存，已经解锁直接隐藏弹窗
+
 if(localStorage.getItem('wanxiang_unlock') === 'ok'){
   lockModal.style.display = 'none';
 }
@@ -232,7 +244,6 @@ unlockBtn.onclick = function(){
     tipText.textContent = "验证码错误";
   }
 }
-// 回车也可以提交
 codeInput.addEventListener('keydown',function(e){
   if(e.key === 'Enter') unlockBtn.click();
 })
