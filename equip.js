@@ -439,7 +439,7 @@ const equipList = [
     "combineParts": [
         {
             "name": "守护者之铠",
-            "icon": "images/equip/equipsmall/shouhuzhekai.png"
+            "icon": "images/equip/equipsmall/shouhuzhezhikai.png"
         }
     ]
 },
@@ -454,7 +454,7 @@ const equipList = [
     "combineParts": [
         {
             "name": "守护者之铠",
-            "icon": "images/equip/equipsmall/shouhuzhekai.png"
+            "icon": "images/equip/equipsmall/shouhuzhezhikai.png"
         }
     ]
 },
@@ -469,7 +469,7 @@ const equipList = [
     "combineParts": [
         {
             "name": "守护者之铠",
-            "icon": "images/equip/equipsmall/shouhuzhekai.png"
+            "icon": "images/equip/equipsmall/shouhuzhezhikai.png"
         }
     ]
 },
@@ -484,7 +484,7 @@ const equipList = [
     "combineParts": [
         {
             "name": "守护者之铠",
-            "icon": "images/equip/equipsmall/shouhuzhekai.png"
+            "icon": "images/equip/equipsmall/shouhuzhezhikai.png"
         }
     ]
 },
