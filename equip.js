@@ -270,10 +270,14 @@ const equipList = [
         pos: "物理装备",
         desc: "战斗开始及之后每过8秒，快速进行4次普通攻击。",
         source: "由风暴巨剑铸造而成",
-        sourceImg: "images/equip/equipsmall/fengbaojujian.png",
         img: "images/equip/zhumengzhufeng.png",
-        castList: []
-    },
+       "combineParts": [
+        {
+            "name": "风暴巨剑",
+            "icon": "images/equip/equipsmall/fengbaojujian.png"
+        }
+    ]
+},
     {
         id: 11,
         name: "无尽巨剑",
@@ -281,10 +285,14 @@ const equipList = [
         pos: "物理装备",
         desc: "暴击率+30%，暴击效果+60%。暴击效果不可叠加。",
         source: "由风暴巨剑铸造而成",
-        sourceImg: "images/equip/equipsmall/fengbaojujian.png",
         img: "images/equip/wujinjujian.png",
-        castList: []
-    },
+        "combineParts": [
+        {
+            "name": "风暴巨剑",
+            "icon": "images/equip/equipsmall/fengbaojujian.png"
+        }
+    ]
+},
     {
         id: 12,
         name: "制裁之剑",
@@ -292,10 +300,14 @@ const equipList = [
         pos: "物理装备",
         desc: "造成伤害时降低目标30%生命恢复及护盾效果，持续10秒，不可叠加。若为普通攻击，效果提升至70%。",
         source: "由风暴巨剑铸造而成",
-        sourceImg: "images/equip/equipsmall/fengbaojujian.png",
         img: "images/equip/zhicaizhiren.png",
-        castList: []
-    }
+        "combineParts": [
+        {
+            "name": "风暴巨剑",
+            "icon": "images/equip/equipsmall/fengbaojujian.png"
+        }
+    ]
+}
 ];
 const equipCardList = document.getElementById("equipCardList");
 const searchInput = document.getElementById("searchInput");
