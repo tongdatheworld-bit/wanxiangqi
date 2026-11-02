@@ -4022,7 +4022,7 @@ const talentList = [
     "fitTeam": {"name": "貂蝉婉儿起舞体系", "url": null}
 }         
 ]
-
+]
 const talentCardList = document.getElementById("talentCardList");
 const talentSearch = document.getElementById("talentSearch");
 const rankFilter = document.getElementById("rankFilter");
@@ -4039,7 +4039,7 @@ function closeModal() {
 function renderTalent() {
     const kw = talentSearch.value.trim().toLowerCase();
     const selRankVal = rankFilter.value;
-    const seltalentVal = talentTypeFilter.value;
+    const selTalentVal = talentTypeFilter.value;
     const selCampVal = campFilter.value;
     const selBoostVal = boostTypeFilter.value;
 
@@ -4056,19 +4056,19 @@ function renderTalent() {
         }
 
         // 四类天赋筛选：资源 / 战力 / 机制 / 生存
-        let matchtalent = true;
-        if (seltalentVal !== "all") {
-            if (seltalentVal === "resource") {
-                matchtalent = item.talentType === "资源类天赋";
+        let matchTalent = true;
+        if (selTalentVal !== "all") {
+            if (selTalentVal === "resource") {
+                matchTalent = item.talentType === "资源类天赋";
             }
-            if (seltalentVal === "combat") {
-                matchtalent = item.talentType === "战力类天赋";
+            if (selTalentVal === "combat") {
+                matchTalent = item.talentType === "战力类天赋";
             }
-            if (seltalentVal === "mechanism") {
-                matchtalent = item.talentType === "机制类天赋";
+            if (selTalentVal === "mechanism") {
+                matchTalent = item.talentType === "机制类天赋";
             }
-            if (seltalentVal === "survive") {
-                matchtalent = item.talentType === "生存类天赋";
+            if (selTalentVal === "survive") {
+                matchTalent = item.talentType === "生存类天赋";
             }
         }
 
@@ -4085,17 +4085,18 @@ function renderTalent() {
         }
 
         const matchBoost = true;
-        if (!(matchSearch && matchRank && matchtalent && matchCamp && matchBoost)) return;
-
-        const cardDom = document.createElement("div");
-        cardDom.className = "talent-card-item";
-        cardDom.innerHTML = `
-            <div class="talent-card-cover">
-                <img src="images/talent/${item.img}" alt="${item.name}">
-            </div>
-        `;
-        cardDom.onclick = () => openModal(item);
-        talentCardList.appendChild(cardDom);
+        // 全部条件满足才渲染卡片
+        if (matchSearch && matchRank && matchTalent && matchCamp && matchBoost) {
+            const cardDom = document.createElement("div");
+            cardDom.className = "talent-card-item";
+            cardDom.innerHTML = `
+                <div class="talent-card-cover">
+                    <img src="images/talent/${item.img}" alt="${item.name}">
+                </div>
+            `;
+            cardDom.onclick = () => openModal(item);
+            talentCardList.appendChild(cardDom);
+        }
     })
 }
 
@@ -4105,19 +4106,19 @@ function openModal(item) {
     const renderItem = (info) => {
         if (!info || !info.name) return "无";
         if (info.url) {
-            let clickHandler;
-            if (info.url.startsWith('#hero-')) {
-                clickHandler = `event.preventDefault();closeModal();openHeroModal('${info.name}')`;
-            } else {
-                clickHandler = `event.preventDefault();closeModal()`;
+            if(info.url.startsWith('#hero-')){
+                return `<a href="${info.url}" class="modal-link" onclick="event.preventDefault();closeModal();openHeroModal('${info.name}')">
+                    <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
+                </a>`
+            }else{
+                return `<a href="${info.url}" class="modal-link" onclick="event.preventDefault();closeModal();">
+                    <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
+                </a>`
             }
-            return `<a href="${info.url}" class="modal-link" onclick="${clickHandler}">
-                <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
-            </a>`;
         } else {
             return info.name;
         }
-    };
+    }
     talentModalBody.innerHTML = `
         <div class="talent-modal-wrap" onclick="event.stopPropagation()">
             <div class="modal-left">
@@ -4174,3 +4175,4 @@ campFilter.addEventListener("change", renderTalent);
 boostTypeFilter.addEventListener("change", renderTalent);
 
 renderTalent();
+   
