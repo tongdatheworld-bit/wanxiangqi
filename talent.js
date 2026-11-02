@@ -4104,21 +4104,22 @@ function openModal(item) {
     // 修复：补上反引号
     const fullImgPath = `images/talent/${item.img || ''}`;
     const renderItem = (info) => {
-        if (!info || !info.name) return "无";
-        if (info.url) {
-            let clickHandler;
-            if (info.url.startsWith('#hero-')) {
-                clickHandler = `event.preventDefault();closeModal();openHeroModal('${info.name}')`;
-            } else {
-                clickHandler = `event.preventDefault();closeModal();`;
-            }
-            return `<a href="${info.url}" class="modal-link" onclick="${clickHandler}">
-                    <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
-                </a>`
+    if (!info || !info.name) return "无";
+    if (info.url) {
+        if (info.url.startsWith('#hero-')) {
+            return `<a href="${info.url}" class="modal-link hero-link" data-hero="${info.name}">
+                <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
+            </a>`
         } else {
-            return info.name;
+            return `<a href="${info.url}" class="modal-link normal-link">
+                <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
+            </a>`
         }
+    } else {
+        return info.name;
     }
+}
+
     talentModalBody.innerHTML = `
         <div class="talent-modal-wrap" onclick="event.stopPropagation()">
             <div class="modal-left">
