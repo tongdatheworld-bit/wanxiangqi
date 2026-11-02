@@ -3783,7 +3783,7 @@ const talentList = [
     "fitHero": {"name": "无", "url": null, "avatar": null},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "法爆范围收割阵容", "url": null}
-}
+},
 {
     "id": 246,
     "name": "末世",
