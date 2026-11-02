@@ -54,8 +54,14 @@
     background: #333844;
     border-radius: 2px;
 }
-/* BAN位：红底白字 */
-.ban-first-tag {
+/* 浅灰色分隔竖线 */
+.ban-sep {
+    color:#9aa0b0;
+    margin:0 4px;
+    font-size:12px;
+}
+/* 【Ban阵营：】红底白字标签 */
+.ban-title-tag {
     background:#d92424;
     color:#ffffff;
     padding:2px 8px;
