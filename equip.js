@@ -247,9 +247,6 @@ const equipList = [
         }
     ]
 },
-
-
-    {
         {
     "id": 9,
     "name": "纯净苍穹",
@@ -257,7 +254,6 @@ const equipList = [
     "pos": "法术装备",
     "desc": "每2秒获得10点法术攻击力，同时清除自身负面状态。",
     "source": "由风暴巨剑铸造而成",
-    "sourceImg": "images/equip/equipsmall/fengbaojujian.png",
     "img": "images/equip/chunjingcangqiong.png",
     "combineParts": [
         {
@@ -315,22 +311,61 @@ function openEquipByName(name){
     if(!target) return;
     renderModal(target);
 }
+
 // 单独抽离弹窗渲染函数，复用
 function renderModal(item){
-    let castHtml = "";
-    if (item.castList.length > 0) {
+    let partTitle = "";
+    let partHtml = "";
+
+    // 基础装备：可铸造成装
+    if (Array.isArray(item.castList) && item.castList.length > 0) {
+        partTitle = "可铸造成装";
         item.castList.forEach(c => {
-            castHtml += `<div class="cast-item"><img class="cast-icon" src="${c.icon}" alt=""><div class="cast-text"><span class="cast-name">${c.name}</span><span class="cast-effect">${c.effect}</span></div></div>`;
+            partHtml += `<div class="cast-item">
+                <img class="cast-icon" src="${c.icon}" alt="" onclick="openEquipByName('${c.name}')">
+                <div class="cast-text">
+                    <span class="cast-name">${c.name}</span>
+                    <span class="cast-effect">${c.effect}</span>
+                </div>
+            </div>`;
         });
     } else {
-        castHtml = `<div style="color:#888;">该装备无法继续铸造</div>`;
+        // 普通装备：合成散件
+        partTitle = "合成散件";
+        if (Array.isArray(item.combineParts) && item.combineParts.length) {
+            item.combineParts.forEach(p => {
+                partHtml += `<div class="cast-item">
+                    <img class="cast-icon" src="${p.icon}" alt="" onclick="openEquipByName('${p.name}')">
+                    <div class="cast-text">
+                        <span class="cast-name">${p.name}</span>
+                    </div>
+                </div>`;
+            });
+        } else {
+            partHtml = `<div style="color:#888;">无合成散件</div>`;
+        }
     }
-    let sourceHtml = `<p class="equip-modal-source">来源：${item.source}`;
-    if(item.sourceImg){
-        sourceHtml += `<img style="width:24px;height:24px;margin-left:8px;border-radius:4px;vertical-align:middle;cursor:pointer;" onclick="openEquipByName('${item.source.split('由')[1].split('铸造而成')[0].trim()}')" src="${item.sourceImg}" alt="">`;
-    }
-    sourceHtml += `</p>`;
-    modalBody.innerHTML = `<div class="equip-modal-wrap"><div class="equip-modal-left"><div class="equip-modal-card"><img src="${item.img}" alt="${item.name}"><div class="equip-modal-card-name">${item.name}</div></div></div><div class="equip-modal-right"><h2 class="equip-modal-title">${item.name}<span class="equip-modal-tag">${item.type} · ${item.pos}</span></h2><p class="equip-modal-desc">${item.desc}</p>${sourceHtml}<hr class="equip-divider"><h3 class="equip-cast-title">可铸造成装</h3><div class="cast-list">${castHtml}</div></div></div>`;
+
+    // 来源文字，去掉sourceImg
+    let sourceHtml = `<p class="equip-modal-source">来源：${item.source}</p>`;
+
+    modalBody.innerHTML = `
+    <div class="equip-modal-wrap">
+        <div class="equip-modal-left">
+            <div class="equip-modal-card">
+                <img src="${item.img}" alt="${item.name}">
+                <div class="equip-modal-card-name">${item.name}</div>
+            </div>
+        </div>
+        <div class="equip-modal-right">
+            <h2 class="equip-modal-title">${item.name}<span class="equip-modal-tag">${item.type} · ${item.pos}</span></h2>
+            <p class="equip-modal-desc">${item.desc}</p>
+            ${sourceHtml}
+            <hr class="equip-divider">
+            <h3 class="equip-cast-title">${partTitle}</h3>
+            <div class="cast-list">${partHtml}</div>
+        </div>
+    </div>`;
     detailModal.style.display = "flex";
 }
 
@@ -358,4 +393,6 @@ window.onclick = (e) => {
 searchInput.addEventListener("input", render);
 equipTypeFilter.addEventListener("change", render);
 equipPosFilter.addEventListener("change", render);
+render();
+
 render();
