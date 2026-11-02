@@ -1,329 +1,329 @@
 const talentList = [
-   {
-    "id": 1,
-    "name": "预言家",
-    "rank": "铜天赋",
-    "talentType": "机制类天赋",
-    "camp": "通用",
-    "img": "yuyanjia.png",
-    "desc": "分别获得1张天赋牌胜利预言与失败预言：预测战斗结果，正确可获得奖励。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
+   [
     {
-        id: 2,
-        name: "整装待发",
-        rank: "铜天赋",
-        talentType: "资源类天赋",
-        camp: "通用",
-        img: "zhengzhuangdaifa.png",
-        desc: "若回合内没有打出英雄牌，下回合开始时，获得2能量。",
-        source: "棋手升级时概率选择获取天赋。",
-        relatedProduct: {name:"无", url:null},
-        fitHero: {name:"嬴政", url:"#hero-yingzheng", avatar:"images/heroes/yingzheng.png"},
-        fitPlayer: {name:"明先生", url:"#player-ming", avatar:"images/players/mingxiansheng.png"},
-        fitTeam: {name:"明先生雷霆战机", url:"#team-mingleiting"}
-    
- },
- {
-    "id": 3,
-    "name": "兵行诡招",
-    "rank": "铜天赋",
-    "talentType": "战力类天赋",
-    "camp": "通用",
-    "img": "bingxingguizhao.png",
-    "desc": "棋手生命值-10，战斗开始时，己方每名英雄+2临时等级。战斗胜利时，获得1棋手生命值，临时等级额外+1。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
+        "id": "T001",
+        "name": "预言家",
+        "rank": "铜天赋",
+        "talentType": "机制类天赋",
+        "camp": "通用",
+        "img": "yuyanjia.png",
+        "desc": "分别获得1张天赋牌胜利预言与失败预言：预测战斗结果，正确可获得奖励。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
     },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-{
-    "id": 4,
-    "name": "存款利息",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "cunkuanlixi.png",
-    "desc": "获得3能量。回合结束时，你每有7能量，额外获得1能量。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-{
-    "id": 5,
-    "name": "大河新援",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "大河流域",
-    "img": "dahexinyuan.png",
-    "desc": "获得2能量，以及随机1张2-3阶【大河流域】英雄牌。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-{
-    "id": 6,
-    "name": "二象性",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "erxiangxing.png",
-    "desc": "获得1张天赋牌二象坍缩：随机生效1个获取英雄牌的效果（详情查看关联卡牌）。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-{
-    "id": 7,
-    "name": "防御领域",
-    "rank": "铜天赋",
-    "talentType": "生存类天赋",
-    "camp": "通用",
-    "img": "fangyulingyu.png",
-    "desc": "棋手每次受到的伤害减少2点。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-{
-    "id": 8,
-    "name": "复印机",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "fuyinji.png",
-    "desc": "获得2张天赋牌复印机：指定1名1-3阶英雄，获得该英雄牌。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-{
-    "id": 9,
-    "name": "干将·强化",
-    "rank": "铜天赋",
-    "talentType": "战力类天赋",
-    "camp": "通用",
-    "img": "ganjiangqianghua.png",
-    "desc": "战斗开始时，干将莫邪获得1件【法源之杯】。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "干将莫邪",
-        "url": "#hero-ganjiangmoye",
-        "avatar": "images/heroes/ganjiangmoye.png"
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-{
-    "id": 10,
-    "name": "好聚好散",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "haojuhaosan.png",
-    "desc": "获得1张天赋牌体面离场：指定移除一名英雄，获得能量。此英雄0/1/2/3觉醒进度时，获得3/6/9/12能量。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-{
-    "id": 11,
-    "name": "河洛新援",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "河洛",
-    "img": "heluoxinyuan.png",
-    "desc": "获得2能量，以及随机1张2-3阶【河洛】英雄牌。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-{
-    "id": 12,
-    "name": "班叔的遗留物",
-    "rank": "铜天赋",
-    "talentType": "战力类天赋",
-    "camp": "通用",
-    "img": "banshudeyiliuwu.png",
-    "desc": "获得2级电磁弹簧：在指定位置构筑1个2级电磁弹簧（敌方踩中时会被弹至战场后排）。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
     {
-        "id": 13,
+        "id": "T002",
+        "name": "整装待发",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "zhengzhuangdaifa.png",
+        "desc": "若回合内没有打出英雄牌，下回合开始时，获得2能量。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name":"无", "url":null},
+        "fitHero": {"name": "嬴政", "url":"#hero-yingzheng", "avatar":"images/heroes/yingzheng.png"},
+        "fitPlayer": {"name": "明先生", "url":"#player-ming", "avatar":"images/players/mingxiansheng.png"},
+        "fitTeam": {"name":"明先生雷霆战机", "url":"#team-mingleiting"}
+    },
+    {
+        "id": "T003",
+        "name": "兵行诡招",
+        "rank": "铜天赋",
+        "talentType": "战力类天赋",
+        "camp": "通用",
+        "img": "bingxingguizhao.png",
+        "desc": "棋手生命值-10，战斗开始时，己方每名英雄+2临时等级。战斗胜利时，获得1棋手生命值，临时等级额外+1。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T004",
+        "name": "存款利息",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "cunkuanlixi.png",
+        "desc": "获得3能量。回合结束时，你每有7能量，额外获得1能量。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T005",
+        "name": "大河新援",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "大河流域",
+        "img": "dahexinyuan.png",
+        "desc": "获得2能量，以及随机1张2-3阶【大河流域】英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T006",
+        "name": "二象性",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "erxiangxing.png",
+        "desc": "获得1张天赋牌二象坍缩：随机生效1个获取英雄牌的效果（详情查看关联卡牌）。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T007",
+        "name": "防御领域",
+        "rank": "铜天赋",
+        "talentType": "生存类天赋",
+        "camp": "通用",
+        "img": "fangyulingyu.png",
+        "desc": "棋手每次受到的伤害减少2点。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T008",
+        "name": "复印机",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "fuyinji.png",
+        "desc": "获得2张天赋牌复印机：指定1名1-3阶英雄，获得该英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T009",
+        "name": "干将·强化",
+        "rank": "铜天赋",
+        "talentType": "战力类天赋",
+        "camp": "通用",
+        "img": "ganjiangqianghua.png",
+        "desc": "战斗开始时，干将莫邪获得1件【法源之杯】。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "干将莫邪",
+            "url": "#hero-ganjiangmoye",
+            "avatar": "images/heroes/ganjiangmoye.png"
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T010",
+        "name": "好聚好散",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "haojuhaosan.png",
+        "desc": "获得1张天赋牌体面离场：指定移除一名英雄，获得能量。此英雄0/1/2/3觉醒进度时，获得3/6/9/12能量。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T011",
+        "name": "河洛新援",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "河洛",
+        "img": "heluoxinyuan.png",
+        "desc": "获得2能量，以及随机1张2-3阶【河洛】英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T012",
+        "name": "班叔的遗留物",
+        "rank": "铜天赋",
+        "talentType": "战力类天赋",
+        "camp": "通用",
+        "img": "banshudeyiliuwu.png",
+        "desc": "获得2级电磁弹簧：在指定位置构筑1个2级电磁弹簧（敌方踩中时会被弹至战场后排）。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T013",
         "name": "加速成长",
         "rank": "铜天赋",
         "talentType": "战力类天赋",
@@ -351,7 +351,7 @@ const talentList = [
         }
     },
     {
-        "id": 14,
+        "id": "T014",
         "name": "节能商店",
         "rank": "铜天赋",
         "talentType": "机制类天赋",
@@ -379,7 +379,7 @@ const talentList = [
         }
     },
     {
-        "id": 15,
+        "id": "T015",
         "name": "刻舟减蓝",
         "rank": "铜天赋",
         "talentType": "战力类天赋",
@@ -407,7 +407,7 @@ const talentList = [
         }
     },
     {
-        "id": 16,
+        "id": "T016",
         "name": "狂铁·强化",
         "rank": "铜天赋",
         "talentType": "资源类天赋",
@@ -434,37 +434,36 @@ const talentList = [
             "url": null
         }
     },
- {
-    "id": 17,
-    "name": "战争头牌",
-    "rank": "铜天赋",
-    "talentType": "机制类天赋",
-    "camp": "通用",
-    "img": "zhanzhengtoupai.png",
-    "desc": "每回合获得1个品阶数字，打出相同品阶的英雄牌时，额外+4等级。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-}
-,
     {
-        "id": 18,
+        "id": "T017",
+        "name": "战争头牌",
+        "rank": "铜天赋",
+        "talentType": "机制类天赋",
+        "camp": "通用",
+        "img": "zhanzhengtoupai.png",
+        "desc": "每回合获得1个品阶数字，打出相同品阶的英雄牌时，额外+4等级。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T018",
         "name": "瓶中人",
         "rank": "铜天赋",
         "talentType": "机制类天赋",
@@ -492,7 +491,7 @@ const talentList = [
         }
     },
     {
-        "id": 19,
+        "id": "T019",
         "name": "破格",
         "rank": "铜天赋",
         "talentType": "机制类天赋",
@@ -520,7 +519,7 @@ const talentList = [
         }
     },
     {
-        "id": 20,
+        "id": "T020",
         "name": "日落海新援",
         "rank": "铜天赋",
         "talentType": "资源类天赋",
@@ -548,7 +547,7 @@ const talentList = [
         }
     },
     {
-        "id": 21,
+        "id": "T021",
         "name": "三分新援",
         "rank": "铜天赋",
         "talentType": "资源类天赋",
@@ -576,7 +575,7 @@ const talentList = [
         }
     },
     {
-        "id": 22,
+        "id": "T022",
         "name": "三十而立",
         "rank": "铜天赋",
         "talentType": "资源类天赋",
@@ -602,311 +601,301 @@ const talentList = [
             "name": "无",
             "url": null
         }
-    },{
-    "id": 23,
-    "name": "先苦后甜",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "xiankuhoutian.png",
-    "desc": "选取天赋后，当你输掉2场战斗时，获得6棋手经验。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
     },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
+    {
+        "id": "T023",
+        "name": "先苦后甜",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "xiankuhoutian.png",
+        "desc": "选取天赋后，当你输掉2场战斗时，获得6棋手经验。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
     },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
+    {
+        "id": "T024",
+        "name": "里程碑",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "lichengbei.png",
+        "desc": "棋手到达5级时，获得5能量、1张装备箱。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name": "无", "url": null},
+        "fitHero": {"name": "无", "url": null, "avatar": null},
+        "fitPlayer": {"name": "无", "url": null, "avatar": null},
+        "fitTeam": {"name": "无", "url": null}
     },
-    "fitTeam": {
-        "name": "无",
-        "url": null
+    {
+        "id": "T025",
+        "name": "五福临门",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "wufulinmen.png",
+        "desc": "获得1张天赋牌五福临门：随机获得5张英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name": "无","url": null},
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T026",
+        "name": "双人游",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "shuangrenyou.png",
+        "desc": "随机获得2张2-3阶英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name": "无", "url": null},
+        "fitHero": {"name": "无", "url": null, "avatar": null},
+        "fitPlayer": {"name": "无", "url": null, "avatar": null},
+        "fitTeam": {"name": "无", "url": null}
+    },
+    {
+        "id": "T027",
+        "name": "小电池包",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "通用",
+        "img": "xiaodianchibao.png",
+        "desc": "获得5能量。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T028",
+        "name": "专注射击",
+        "rank": "铜天赋",
+        "talentType": "战力类天赋",
+        "camp": "通用",
+        "img": "zhuanzhusheji.png",
+        "desc": "战斗开始时，你后两排英雄每次普攻获得3%攻速和3点物理攻击力，上限10层。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T029",
+        "name": "逐鹿新援",
+        "rank": "铜天赋",
+        "talentType": "资源类天赋",
+        "camp": "逐鹿",
+        "img": "zhuluxinyuan.png",
+        "desc": "获得2能量，以及随机1张2-3阶【逐鹿】英雄牌。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T030",
+        "name": "猪猪",
+        "rank": "铜天赋",
+        "talentType": "战力类天赋",
+        "camp": "通用",
+        "img": "zhuzhu.png",
+        "desc": "战斗开始时，敌方2名随机英雄变为小猪，持续3秒。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T031",
+        "name": "银算盘",
+        "rank": "铜天赋",
+        "talentType": "机制类天赋",
+        "camp": "通用",
+        "img": "yinsuanpan.png",
+        "desc": "出售场上英雄时，随机1名英雄等级+2。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T032",
+        "name": "微弱优势",
+        "rank": "铜天赋",
+        "talentType": "战力类天赋",
+        "camp": "通用",
+        "img": "weiruoyoushi.png",
+        "desc": "打出觉醒英雄牌时，其获得22%暴击率和11%物理及法术吸血（每名英雄仅1次）。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T033",
+        "name": "随机成长",
+        "rank": "铜天赋",
+        "talentType": "战力类天赋",
+        "camp": "通用",
+        "img": "suijichengzhang.png",
+        "desc": "战斗开始时，你品阶最高的1名英雄等级永久+4。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {
+            "name": "无",
+            "url": null
+        },
+        "fitHero": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitPlayer": {
+            "name": "无",
+            "url": null,
+            "avatar": null
+        },
+        "fitTeam": {
+            "name": "无",
+            "url": null
+        }
+    },
+    {
+        "id": "T034",
+        "name": "孙尚香强化",
+        "rank": "铜天赋",
+        "talentType": "机制类天赋",
+        "camp": "通用",
+        "img": "sunshangxiangqianghua.png",
+        "desc": "每回合开始时，触发1次孙尚香卡牌效果。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name": "无", "url": null},
+        "fitHero": {"name": "孙尚香", "url": "#hero-sunshangxiang", "avatar": "images/heroes/sunshangxiang.png"},
+        "fitPlayer": {"name": "无", "url": null, "avatar": null},
+        "fitTeam": {"name": "无", "url": null}
     }
-}
-,{
-    "id": 34,
-    "name": "里程碑",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "lichengbei.png",
-    "desc": "棋手到达5级时，获得5能量、1张装备箱。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {"name": "无", "url": null},
-    "fitHero": {"name": "无", "url": null, "avatar": null},
-    "fitPlayer": {"name": "无", "url": null, "avatar": null},
-    "fitTeam": {"name": "无", "url": null}
-}
-,{
-    "id": 25,
-    "name": "五福临门",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "wufulinmen.png",
-    "desc": "获得1张天赋牌五福临门：随机获得5张英雄牌。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {"name": "无","url": null},
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-}
-,{
-    "id": 26,
-    "name": "双人游",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "shuangrenyou.png",
-    "desc": "随机获得2张2-3阶英雄牌。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {"name": "无", "url": null},
-    "fitHero": {"name": "无", "url": null, "avatar": null},
-    "fitPlayer": {"name": "无", "url": null, "avatar": null},
-    "fitTeam": {"name": "无", "url": null}
-}
-,{
-    "id": 27,
-    "name": "小电池包",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "xiaodianchibao.png",
-    "desc": "获得5能量。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-}
-,{
-    "id": 28,
-    "name": "专注射击",
-    "rank": "铜天赋",
-    "talentType": "战力类天赋",
-    "camp": "通用",
-    "img": "zhuanzhusheji.png",
-    "desc": "战斗开始时，你后两排英雄每次普攻获得3%攻速和3点物理攻击力，上限10层。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-        {
-    "id": 29,
-    "name": "逐鹿新援",
-    "rank": "铜天赋",
-    "talentType": "资源类天赋",
-    "camp": "逐鹿",
-    "img": "zhuluxinyuan.png",
-    "desc": "获得2能量，以及随机1张2-3阶【逐鹿】英雄牌。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-        {
-    "id": 30,
-    "name": "猪猪",
-    "rank": "铜天赋",
-    "talentType": "战力类天赋",
-    "camp": "通用",
-    "img": "zhuzhu.png",
-    "desc": "战斗开始时，敌方2名随机英雄变为小猪，持续3秒。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
-   {
-    "id": 31,
-    "name": "银算盘",
-    "rank": "铜天赋",
-    "talentType": "机制类天赋",
-    "camp": "通用",
-    "img": "yinsuanpan.png",
-    "desc": "出售场上英雄时，随机1名英雄等级+2。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},{
-    "id": 32,
-    "name": "微弱优势",
-    "rank": "铜天赋",
-    "talentType": "战力类天赋",
-    "camp": "通用",
-    "img": "weiruoyoushi.png",
-    "desc": "打出觉醒英雄牌时，其获得22%暴击率和11%物理及法术吸血（每名英雄仅1次）。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},{
-    "id": 33,
-    "name": "随机成长",
-    "rank": "铜天赋",
-    "talentType": "战力类天赋",
-    "camp": "通用",
-    "img": "suijichengzhang.png",
-    "desc": "战斗开始时，你品阶最高的1名英雄等级永久+4。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {
-        "name": "无",
-        "url": null
-    },
-    "fitHero": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitPlayer": {
-        "name": "无",
-        "url": null,
-        "avatar": null
-    },
-    "fitTeam": {
-        "name": "无",
-        "url": null
-    }
-},
+,
 {
-    "id": 34,
-    "name": "孙尚香强化",
-    "rank": "铜天赋",
-    "talentType": "机制类天赋",
-    "camp": "通用",
-    "img": "sunshangxiangqianghua.png",
-    "desc": "每回合开始时，触发1次孙尚香卡牌效果。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {"name": "无", "url": null},
-    "fitHero": {"name": "孙尚香", "url": "#hero-sunshangxiang", "avatar": "images/heroes/sunshangxiang.png"},
-    "fitPlayer": {"name": "无", "url": null, "avatar": null},
-    "fitTeam": {"name": "无", "url": null}
-},
-   {
-    "id": 35,
-    "name": "保持进步",
-    "rank": "银天赋",
-    "talentType": "资源类天赋",
-    "camp": "通用",
-    "img": "baochijinbu.png",
-    "desc": "获得1张3阶兑换券。回合开始时，获得1棋手经验。满级后，改为获得1能量。",
-    "source": "棋手升级时概率选择获取天赋。",
-    "relatedProduct": {"name": "无", "url": null},
-    "fitHero": {"name": "无", "url": null, "avatar": null},
-    "fitPlayer": {"name": "无", "url": null, "avatar": null},
-    "fitTeam": {"name": "无", "url": null}
-},
-{
-    "id": 36,
+    "id": "Y001",
     "name": "人才济济",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -920,7 +909,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 37,
+    "id": "Y002",
     "name": "重大里程碑",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -934,7 +923,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 38,
+    "id": "Y003",
     "name": "卧薪尝胆",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -948,7 +937,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 39,
+    "id": "Y004",
     "name": "绝对领域",
     "rank": "银天赋",
     "talentType": "防御类天赋",
@@ -962,7 +951,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 40,
+    "id": "Y005",
     "name": "紧急行动",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -976,7 +965,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 41,
+    "id": "Y006",
     "name": "临时增幅",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -990,7 +979,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 42,
+    "id": "Y007",
     "name": "王牌认证",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1004,7 +993,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 43,
+    "id": "Y008",
     "name": "三十而达",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1012,13 +1001,13 @@ const talentList = [
     "img": "sanshierda.png",
     "desc": "备战阶段中，英雄总等级到达30级时，获得9棋手经验。",
     "source": "棋手升级时概率选择获取天赋。",
-    relatedProduct: {"name": "无", "url": null},
+    "relatedProduct": {"name": "无", "url": null},
     "fitHero": {"name": "无", "url": null, "avatar": null},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 44,
+    "id": "Y009",
     "name": "极限操作",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1032,7 +1021,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 45,
+    "id": "Y010",
     "name": "人才市场",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1046,7 +1035,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 46,
+    "id": "Y011",
     "name": "凯旋征召",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1060,7 +1049,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 47,
+    "id": "Y012",
     "name": "中坚力量",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -1074,7 +1063,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 48,
+    "id": "Y013",
     "name": "常胜将军",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1088,7 +1077,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 49,
+    "id": "Y014",
     "name": "伤害转化器",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1102,7 +1091,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 50,
+    "id": "Y015",
     "name": "终极复印机",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1116,7 +1105,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 51,
+    "id": "Y016",
     "name": "如法炮制",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1130,7 +1119,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 52,
+    "id": "Y017",
     "name": "消费返利",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1144,7 +1133,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 53,
+    "id": "Y018",
     "name": "金算盘",
     "rank": "银天赋",
     "talentType": "机制类天赋",
@@ -1153,12 +1142,12 @@ const talentList = [
     "desc": "出售场上英雄时，随机1名英雄等级+3。",
     "source": "棋手升级时概率选择获取天赋。",
     "relatedProduct": {"name": "无", "url": null},
-    "fitHero": {"妲己": "无", "url": null, "avatar": null},
+    "fitHero": {"name": "无", "url": null, "avatar": null},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 54,
+    "id": "Y019",
     "name": "超专注射击",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -1172,7 +1161,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 55,
+    "id": "Y020",
     "name": "电池包",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1186,7 +1175,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 56,
+    "id": "Y021",
     "name": "结伴",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1200,7 +1189,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 57,
+    "id": "Y022",
     "name": "同路人",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1214,7 +1203,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 58,
+    "id": "Y023",
     "name": "重装上阵",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -1228,7 +1217,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 59,
+    "id": "Y024",
     "name": "成年礼",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1242,7 +1231,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 60,
+    "id": "Y025",
     "name": "大电池包",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1256,7 +1245,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 61,
+    "id": "Y026",
     "name": "限制性进化",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -1269,9 +1258,8 @@ const talentList = [
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "无", "url": null}
 },
-   
 {
-    "id": 62,
+    "id": "Y027",
     "name": "援军",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1285,7 +1273,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 63,
+    "id": "Y028",
     "name": "自适应武装",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -1299,7 +1287,7 @@ const talentList = [
     "fitTeam": {"name": "无", "url": null}
 },
 {
-    "id": 64,
+    "id": "Y029",
     "name": "虚构装备",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -1312,86 +1300,86 @@ const talentList = [
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "无", "url": null}
 },
+{
+    "id": "Y030",
+    "name": "战术模组",
+    "rank": "银天赋",
+    "talentType": "通用",
+    "img": "zhanshumozu.png",
+    "desc": "可上阵人数+1。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {"name": "无", "url": null},
+    "fitHero": {"name": "无", "url": null, "avatar": null},
+    "fitPlayer": {"name": "无", "url": null, "avatar": null},
+    "fitTeam": {"name": "多人口阵容", "url": null}
+},
+{
+    "id": "Y031",
+    "name": "控能达人",
+    "rank": "银天赋",
+    "talentType": "通用",
+    "img": "kongnengdaren.png",
+    "desc": "战斗开始时，若当前能量≤3，随机获得1张3-4阶英雄牌。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {"name": "无", "url": null},
+    "fitHero": {"name": "无", "url": null, "avatar": null},
+    "fitPlayer": {"name": "无", "url": null, "avatar": null},
+    "fitTeam": {"name": "低能量运营阵容", "url": null}
+},
+{
+    "id": "Y032",
+    "name": "强者自强",
+    "rank": "银天赋",
+    "talentType": "通用",
+    "img": "qiangzheziqiang.png",
+    "desc": "战斗开始时，已觉醒英雄获得40点物理攻击力和40点法术攻击力。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {"name": "无", "url": null},
+    "fitHero": {"name": "觉醒英雄", "url": null, "avatar": null},
+    "fitPlayer": {"name": "无", "url": null, "avatar": null},
+    "fitTeam": {"name": "觉醒输出阵容", "url": null}
+},
+{
+    "id": "Y033",
+    "name": "破败之力",
+    "rank": "银天赋",
+    "talentType": "通用",
+    "img": "pobaizhili.png",
+    "desc": "战斗开始时，你的英雄普攻附带敌人最大生命值2%的法术伤害。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {"name": "无", "url": null},
+    "fitHero": {"name": "无", "url": null, "avatar": null},
+    "fitPlayer": {"name": "无", "url": null, "avatar": null},
+    "fitTeam": {"name": "普攻持续伤害阵容", "url": null}
+},
+{
+    "id": "Y034",
+    "name": "随机进化",
+    "rank": "银天赋",
+    "talentType": "通用",
+    "img": "suijijinhua.png",
+    "desc": "战斗开始时，你品阶最高的1名英雄等级永久+6。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {"name": "无", "url": null},
+    "fitHero": {"name": "高品阶核心", "url": null, "avatar": null},
+    "fitPlayer": {"name": "无", "url": null, "avatar": null},
+    "fitTeam": {"name": "单核心主C阵容", "url": null}
+},
+{
+    "id": "Y035",
+    "name": "超速成长",
+    "rank": "银天赋",
+    "talentType": "通用",
+    "img": "chaosuchengzhang.png",
+    "desc": "获得1张天赋牌超速成长：指定1名英雄等级+15。",
+    "source": "棋手升级时概率选择获取天赋。",
+    "relatedProduct": {"name": "无", "url": null},
+    "fitHero": {"name": "主C英雄", "url": null, "avatar": null},
+    "fitPlayer": {"name": "无", "url": null, "avatar": null},
+    "fitTeam": {"name": "单核心爆发阵容", "url": null}
+},
     {
-        "id": 65,
-        "name": "战术模组",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "zhanshumozu.png",
-        "desc": "可上阵人数+1。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "无", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "多人口阵容", "url": null}
-    },
-    {
-        "id": 66,
-        "name": "控能达人",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "kongnengdaren.png",
-        "desc": "战斗开始时，若当前能量≤3，随机获得1张3-4阶英雄牌。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "无", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "低能量运营阵容", "url": null}
-    },
-    {
-        "id": 67,
-        "name": "强者自强",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "qiangzheziqiang.png",
-        "desc": "战斗开始时，已觉醒英雄获得40点物理攻击力和40点法术攻击力。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "觉醒英雄", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "觉醒输出阵容", "url": null}
-    },
-    {
-        "id": 68,
-        "name": "破败之力",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "pobaizhili.png",
-        "desc": "战斗开始时，你的英雄普攻附带敌人最大生命值2%的法术伤害。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "无", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "普攻持续伤害阵容", "url": null}
-    },
-    {
-        "id": 69,
-        "name": "随机进化",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "suijijinhua.png",
-        "desc": "战斗开始时，你品阶最高的1名英雄等级永久+6。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "高品阶核心", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "单核心主C阵容", "url": null}
-    },
-    {
-        "id": 70,
-        "name": "超速成长",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "chaosuchengzhang.png",
-        "desc": "获得1张天赋牌超速成长：指定1名英雄等级+15。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "主C英雄", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "单核心爆发阵容", "url": null}
-    },
-    {
-        "id": 71,
+        "id": "Y036",
         "name": "河洛来客",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1404,7 +1392,7 @@ const talentList = [
         "fitTeam": {"name": "河洛体系阵容", "url": null}
     },
     {
-        "id": 72,
+        "id": "Y037",
         "name": "河洛精兵",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1417,7 +1405,7 @@ const talentList = [
         "fitTeam": {"name": "河洛大成阵容", "url": null}
     },
     {
-        "id": 73,
+        "id": "Y038",
         "name": "前浪的荣光",
         "rank": "银天赋",
         "talentType": "通用",
@@ -1430,7 +1418,7 @@ const talentList = [
         "fitTeam": {"name": "升阶搜卡阵容", "url": null}
     },
     {
-        "id": 74,
+        "id": "Y039",
         "name": "全军列阵",
         "rank": "银天赋",
         "talentType": "通用",
@@ -1443,7 +1431,7 @@ const talentList = [
         "fitTeam": {"name": "同阵营召唤阵容", "url": null}
     },
     {
-        "id": 75,
+        "id": "Y040",
         "name": "逐鹿来客",
         "rank": "银天赋",
         "talentType": "逐鹿",
@@ -1456,7 +1444,7 @@ const talentList = [
         "fitTeam": {"name": "逐鹿体系阵容", "url": null}
     },
     {
-        "id": 76,
+        "id": "Y041",
         "name": "逐鹿精兵",
         "rank": "银天赋",
         "talentType": "逐鹿",
@@ -1470,7 +1458,7 @@ const talentList = [
     }
 ,
     {
-        "id": 77,
+        "id": "Y042",
         "name": "大河来客",
         "rank": "银天赋",
         "talentType": "大河",
@@ -1483,7 +1471,7 @@ const talentList = [
         "fitTeam": {"name": "大河体系阵容", "url": null}
     },
     {
-        "id": 78,
+        "id": "Y043",
         "name": "大河精兵",
         "rank": "银天赋",
         "talentType": "大河",
@@ -1496,7 +1484,7 @@ const talentList = [
         "fitTeam": {"name": "大河大成阵容", "url": null}
     },
     {
-        "id": 79,
+        "id": "Y044",
         "name": "日落海来客",
         "rank": "银天赋",
         "talentType": "日落海",
@@ -1509,7 +1497,7 @@ const talentList = [
         "fitTeam": {"name": "日落海体系阵容", "url": null}
     },
     {
-        "id": 80,
+        "id": "Y045",
         "name": "日落海精兵",
         "rank": "银天赋",
         "talentType": "日落海",
@@ -1522,7 +1510,7 @@ const talentList = [
         "fitTeam": {"name": "日落海大成阵容", "url": null}
     },
     {
-        "id": 81,
+        "id": "Y046",
         "name": "三分来客",
         "rank": "银天赋",
         "talentType": "三分之地",
@@ -1535,7 +1523,7 @@ const talentList = [
         "fitTeam": {"name": "三分之地体系阵容", "url": null}
     },
     {
-        "id": 82,
+        "id": "Y047",
         "name": "三分精兵",
         "rank": "银天赋",
         "talentType": "三分之地",
@@ -1548,7 +1536,7 @@ const talentList = [
         "fitTeam": {"name": "三分大成阵容", "url": null}
     },
     {
-        "id": 83,
+        "id": "Y048",
         "name": "能量改造",
         "rank": "银天赋",
         "talentType": "阿科米亚",
@@ -1561,7 +1549,7 @@ const talentList = [
         "fitTeam": {"name": "阿科米亚触发阵容", "url": null}
     },
     {
-        "id": 84,
+        "id": "Y049",
         "name": "光棱塔",
         "rank": "银天赋",
         "talentType": "阿科米亚",
@@ -1574,7 +1562,7 @@ const talentList = [
         "fitTeam": {"name": "阿科米亚持续输出阵容", "url": null}
     },
     {
-        "id": 85,
+        "id": "Y050",
         "name": "场外供能",
         "rank": "银天赋",
         "talentType": "阿科米亚",
@@ -1587,7 +1575,7 @@ const talentList = [
         "fitTeam": {"name": "阿科米亚等级成长阵容", "url": null}
     },
     {
-        "id": 86,
+        "id": "Y051",
         "name": "积极整备",
         "rank": "银天赋",
         "talentType": "日落海",
@@ -1600,7 +1588,7 @@ const talentList = [
         "fitTeam": {"name": "日落海整备阵容", "url": null}
     },
     {
-        "id": 87,
+        "id": "Y052",
         "name": "动能灌注",
         "rank": "银天赋",
         "talentType": "阿科米亚",
@@ -1613,7 +1601,7 @@ const talentList = [
         "fitTeam": {"name": "阿科米亚普攻叠加阵容", "url": null}
     },
     {
-        "id": 88,
+        "id": "Y053",
         "name": "智能装甲",
         "rank": "银天赋",
         "talentType": "日落海",
@@ -1626,7 +1614,7 @@ const talentList = [
         "fitTeam": {"name": "日落海多装备整备阵容", "url": null}
     },
     {
-        "id": 89,
+        "id": "Y054",
         "name": "多彩古币",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1639,7 +1627,7 @@ const talentList = [
         "fitTeam": {"name": "河洛古币体系阵容", "url": null}
     },
     {
-        "id": 90,
+        "id": "Y055",
         "name": "传家宝",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1652,7 +1640,7 @@ const talentList = [
         "fitTeam": {"name": "河洛古币囤牌阵容", "url": null}
     },
     {
-        "id": 91,
+        "id": "Y056",
         "name": "古币翻新",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1665,7 +1653,7 @@ const talentList = [
         "fitTeam": {"name": "河洛古币升级阵容", "url": null}
     },
     {
-        "id": 92,
+        "id": "Y057",
         "name": "献祭之赐",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1678,7 +1666,7 @@ const talentList = [
         "fitTeam": {"name": "河洛李信献祭阵容", "url": null}
     },
     {
-        "id": 93,
+        "id": "Y058",
         "name": "零钱兑换",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1691,7 +1679,7 @@ const talentList = [
         "fitTeam": {"name": "河洛古币兑换阵容", "url": null}
     },
     {
-        "id": 94,
+        "id": "Y059",
         "name": "最终守卫",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1704,7 +1692,7 @@ const talentList = [
         "fitTeam": {"name": "河洛牺牲守卫阵容", "url": null}
     },
     {
-        "id": 95,
+        "id": "Y060",
         "name": "古币契约",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1717,7 +1705,7 @@ const talentList = [
         "fitTeam": {"name": "河洛牺牲古币阵容", "url": null}
     },
     {
-        "id": 96,
+        "id": "Y061",
         "name": "幸运硬币",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1730,7 +1718,7 @@ const talentList = [
         "fitTeam": {"name": "河洛古币赌运阵容", "url": null}
     },
     {
-        "id": 97,
+        "id": "Y062",
         "name": "红豆之托",
         "rank": "银天赋",
         "talentType": "河洛",
@@ -1743,7 +1731,7 @@ const talentList = [
         "fitTeam": {"name": "河洛王维成长阵容", "url": null}
     },
     {
-        "id": 98,
+        "id": "Y063",
         "name": "乐善好施",
         "rank": "银天赋",
         "talentType": "三分之地",
@@ -1756,7 +1744,7 @@ const talentList = [
         "fitTeam": {"name": "三分登场成长阵容", "url": null}
     },
     {
-        "id": 99,
+        "id": "Y064",
         "name": "一身是胆",
         "rank": "银天赋",
         "talentType": "三分之地",
@@ -1769,7 +1757,7 @@ const talentList = [
         "fitTeam": {"name": "三分赵云阵容", "url": null}
     },
     {
-        "id": 100,
+        "id": "Y065",
         "name": "卧龙威势",
         "rank": "银天赋",
         "talentType": "三分之地",
@@ -1783,7 +1771,7 @@ const talentList = [
     }
 ,
     {
-        "id": 101,
+        "id": "Y066",
         "name": "勇冠三军",
         "rank": "银天赋",
         "talentType": "三分之地",
@@ -1796,7 +1784,7 @@ const talentList = [
         "fitTeam": {"name": "逐鹿马超暴击阵容", "url": null}
     },
     {
-        "id": 102,
+        "id": "Y067",
         "name": "擂台猛虎",
         "rank": "银天赋",
         "talentType": "三分之地",
@@ -1809,7 +1797,7 @@ const talentList = [
         "fitTeam": {"name": "三分擂台成长阵容", "url": null}
     },
     {
-        "id": 103,
+        "id": "Y068",
         "name": "锦囊妙计",
         "rank": "银天赋",
         "talentType": "三分之地",
@@ -1822,7 +1810,7 @@ const talentList = [
         "fitTeam": {"name": "三分登场爆发阵容", "url": null}
     },
     {
-        "id": 104,
+        "id": "Y069",
         "name": "膨化生命",
         "rank": "银天赋",
         "talentType": "三分之地",
@@ -1835,7 +1823,7 @@ const talentList = [
         "fitTeam": {"name": "三分肉盾续航阵容", "url": null}
     },
     {
-        "id": 105,
+        "id": "Y070",
         "name": "技高一筹",
         "rank": "银天赋",
         "talentType": "逐鹿",
@@ -1848,7 +1836,7 @@ const talentList = [
         "fitTeam": {"name": "逐鹿高频技能阵容", "url": null}
     },
     {
-        "id": 106,
+        "id": "Y071",
         "name": "强力小弟",
         "rank": "银天赋",
         "talentType": "通用",
@@ -1861,7 +1849,7 @@ const talentList = [
         "fitTeam": {"name": "召唤物体系阵容", "url": null}
     },
     {
-        "id": 107,
+        "id": "Y072",
         "name": "鲸吞",
         "rank": "银天赋",
         "talentType": "逐鹿",
@@ -1874,7 +1862,7 @@ const talentList = [
         "fitTeam": {"name": "逐鹿庄周吞噬阵容", "url": null}
     },
     {
-        "id": 108,
+        "id": "Y073",
         "name": "乘胜追击",
         "rank": "银天赋",
         "talentType": "通用",
@@ -1887,7 +1875,7 @@ const talentList = [
         "fitTeam": {"name": "连胜运营阵容", "url": null}
     },
     {
-        "id": 109,
+        "id": "Y074",
         "name": "贤士登门",
         "rank": "银天赋",
         "talentType": "逐鹿",
@@ -1900,7 +1888,7 @@ const talentList = [
         "fitTeam": {"name": "逐鹿搜卡阵容", "url": null}
     },
     {
-        "id": 110,
+        "id": "Y075",
         "name": "生命绽放",
         "rank": "银天赋",
         "talentType": "逐鹿",
@@ -1913,7 +1901,7 @@ const talentList = [
         "fitTeam": {"name": "逐鹿鬼谷子续航阵容", "url": null}
     },
     {
-        "id": 111,
+        "id": "Y076",
         "name": "化为熊灵",
         "rank": "银天赋",
         "talentType": "大河",
@@ -1926,7 +1914,7 @@ const talentList = [
         "fitTeam": {"name": "大河熊灵献祭阵容", "url": null}
     },
     {
-        "id": 112,
+        "id": "Y077",
         "name": "图腾启灵",
         "rank": "银天赋",
         "talentType": "大河",
@@ -1939,7 +1927,7 @@ const talentList = [
         "fitTeam": {"name": "大河图腾召唤阵容", "url": null}
     },
 {
-    "id": 113,
+    "id": "Y078",
     "name": "坚不可摧",
     "rank": "银天赋",
     "talentType": "生存类天赋",
@@ -1953,7 +1941,7 @@ const talentList = [
     "fitTeam": {"name": "图腾阵容", "url": null}
 },
 {
-    "id": 114,
+    "id": "Y079",
     "name": "因缘际会",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1967,7 +1955,7 @@ const talentList = [
     "fitTeam": {"name": "图腾体系", "url": null}
 },
 {
-    "id": 115,
+    "id": "Y080",
     "name": "荆棘牢笼",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -1981,7 +1969,7 @@ const talentList = [
     "fitTeam": {"name": "先知图腾阵容", "url": null}
 },
 {
-    "id": 116,
+    "id": "Y081",
     "name": "协同一致",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -1995,7 +1983,7 @@ const talentList = [
     "fitTeam": {"name": "无阵营单卡阵容", "url": null}
 },
 {
-    "id": 117,
+    "id": "Y082",
     "name": "胜之不武",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2009,7 +1997,7 @@ const talentList = [
     "fitTeam": {"name": "赌狗爆发阵容", "url": null}
 },
 {
-    "id": 118,
+    "id": "Y083",
     "name": "瞬影连斩",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2023,7 +2011,7 @@ const talentList = [
     "fitTeam": {"name": "刺客闪现阵容", "url": null}
 },
 {
-    "id": 119,
+    "id": "Y084",
     "name": "破妄之刃",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2036,8 +2024,73 @@ const talentList = [
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "物理输出阵容", "url": null}
 },
+         {
+        "id": "Y085",
+        "name": "破阵战芒",
+        "rank": "银天赋",
+        "talentType": "通用",
+        "img": "pozhenzhanmang.png",
+        "desc": "获得破阵战芒：增加攻速及伤害提升（1-3阶英雄限定）。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name": "无", "url": null},
+        "fitHero": {"name": "低阶输出英雄", "url": null, "avatar": null},
+        "fitPlayer": {"name": "无", "url": null, "avatar": null},
+        "fitTeam": {"name": "低阶攻速输出阵容", "url": null}
+    },
+    {
+        "id": "Y086",
+        "name": "断念",
+        "rank": "银天赋",
+        "talentType": "通用",
+        "img": "duannian.png",
+        "desc": "获得断念：造成伤害时降低敌方最大生命值。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name": "无", "url": null},
+        "fitHero": {"name": "持续输出英雄", "url": null, "avatar": null},
+        "fitPlayer": {"name": "无", "url": null, "avatar": null},
+        "fitTeam": {"name": "血量压制输出阵容", "url": null}
+    },
+    {
+        "id": "Y087",
+        "name": "法潮灵杖",
+        "rank": "银天赋",
+        "talentType": "通用",
+        "img": "fachao_lingzhang.png",
+        "desc": "获得法潮灵杖：获取左右1格英雄法术攻击力。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name": "无", "url": null},
+        "fitHero": {"name": "法师英雄", "url": null, "avatar": null},
+        "fitPlayer": {"name": "无", "url": null, "avatar": null},
+        "fitTeam": {"name": "法师增益阵容", "url": null}
+    },
+    {
+        "id": "Y088",
+        "name": "怒神项链",
+        "rank": "银天赋",
+        "talentType": "通用",
+        "img": "nushenxianglian.png",
+        "desc": "获得怒神项链：增加暴击率以及法术伤害可以暴击。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name": "无", "url": null},
+        "fitHero": {"name": "法术英雄", "url": null, "avatar": null},
+        "fitPlayer": {"name": "无", "url": null, "avatar": null},
+        "fitTeam": {"name": "法爆阵容", "url": null}
+    },
+    {
+        "id": "Y089",
+        "name": "一分钱一分货",
+        "rank": "银天赋",
+        "talentType": "通用",
+        "img": "yifenqianyifenhuo.png",
+        "desc": "获得1张天赋牌等价交换：扣除当前所有能量。根据扣除数量获得不同资源奖励。",
+        "source": "棋手升级时概率选择获取天赋。",
+        "relatedProduct": {"name": "无", "url": null},
+        "fitHero": {"name": "无", "url": null, "avatar": null},
+        "fitPlayer": {"name": "无", "url": null, "avatar": null},
+        "fitTeam": {"name": "能量兑换运营阵容", "url": null}
+    }
 {
-    "id": 120,
+    "id": "Y090",
     "name": "小身体大能量",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2051,7 +2104,7 @@ const talentList = [
     "fitTeam": {"name": "快攻刺客/射手阵容", "url": null}
 },
 {
-    "id": 121,
+    "id": "Y091",
     "name": "小小的助力",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2065,7 +2118,7 @@ const talentList = [
     "fitTeam": {"name": "高低搭配混编阵容", "url": null}
 },
 {
-    "id": 122,
+    "id": "Y092",
     "name": "逆袭之路",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2079,7 +2132,7 @@ const talentList = [
     "fitTeam": {"name": "容错追分阵容", "url": null}
 },
 {
-    "id": 123,
+    "id": "Y093",
     "name": "富贵险中求",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2093,7 +2146,7 @@ const talentList = [
     "fitTeam": {"name": "赌狗运营阵容", "url": null}
 },
 {
-    "id": 124,
+    "id": "Y094",
     "name": "祝你好运",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2107,7 +2160,7 @@ const talentList = [
     "fitTeam": {"name": "主C单核阵容", "url": null}
 },
 {
-    "id": 125,
+    "id": "Y095",
     "name": "透支",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2121,7 +2174,7 @@ const talentList = [
     "fitTeam": {"name": "高费爆发阵容", "url": null}
 },
 {
-    "id": 126,
+    "id": "Y096",
     "name": "拍卖专家",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2135,7 +2188,7 @@ const talentList = [
     "fitTeam": {"name": "拍卖流阵容", "url": null}
 },
 {
-    "id": 127,
+    "id": "Y097",
     "name": "一个响指",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2149,7 +2202,7 @@ const talentList = [
     "fitTeam": {"name": "精简阵容", "url": null}
 },
 {
-    "id": 128,
+    "id": "Y098",
     "name": "厉兵秣马",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2163,7 +2216,7 @@ const talentList = [
     "fitTeam": {"name": "停D装备流", "url": null}
 },
 {
-    "id": 129,
+    "id": "Y099",
     "name": "神秘英雄",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2177,7 +2230,7 @@ const talentList = [
     "fitTeam": {"name": "赌高费阵容", "url": null}
 },
 {
-    "id": 130,
+    "id": "Y100",
     "name": "抢攻",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2191,7 +2244,7 @@ const talentList = [
     "fitTeam": {"name": "快攻血线压制阵容", "url": null}
 },
 {
-    "id": 131,
+    "id": "Y101",
     "name": "群英荟萃",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2205,7 +2258,7 @@ const talentList = [
     "fitTeam": {"name": "多品阶混打阵容", "url": null}
 },
 {
-    "id": 132,
+    "id": "Y102",
     "name": "前线堡垒",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2219,7 +2272,7 @@ const talentList = [
     "fitTeam": {"name": "前排肉盾阵容", "url": null}
 },
 {
-    "id": 133,
+    "id": "Y103",
     "name": "战前叫阵",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2233,7 +2286,7 @@ const talentList = [
     "fitTeam": {"name": "单C高等级阵容", "url": null}
 },
 {
-    "id": 134,
+    "id": "Y104",
     "name": "扩编名额",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2247,7 +2300,7 @@ const talentList = [
     "fitTeam": {"name": "多人口大成阵容", "url": null}
 },
 {
-    "id": 135,
+    "id": "Y105",
     "name": "补给线：开团",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2261,7 +2314,7 @@ const talentList = [
     "fitTeam": {"name": "开团控制阵容", "url": null}
 },
 {
-    "id": 136,
+    "id": "Y106",
     "name": "大买卖",
     "rank": "银天赋",
     "talentType": "资源类天赋",
@@ -2275,7 +2328,7 @@ const talentList = [
     "fitTeam": {"name": "反复买卖D牌阵容", "url": null}
 },
 {
-    "id": 137,
+    "id": "Y107",
     "name": "丢盔弃甲",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2289,7 +2342,7 @@ const talentList = [
     "fitTeam": {"name": "无装备单核阵容", "url": null}
 },
 {
-    "id": 138,
+    "id": "Y108",
     "name": "崛起",
     "rank": "银天赋",
     "talentType": "战斗类天赋",
@@ -2302,8 +2355,8 @@ const talentList = [
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "射手体系", "url": null}
 },
-   {
-    "id": 139,
+ {
+    "id": "J001",
     "name": "无限进步",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2317,7 +2370,7 @@ const talentList = [
     "fitTeam": {"name": "升级运营阵容", "url": null}
 },
 {
-    "id": 140,
+    "id": "J002",
     "name": "资深猎头",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2331,7 +2384,7 @@ const talentList = [
     "fitTeam": {"name": "4费核心阵容", "url": null}
 },
 {
-    "id": 141,
+    "id": "J003",
     "name": "有舍有得",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2345,7 +2398,7 @@ const talentList = [
     "fitTeam": {"name": "觉醒流阵容", "url": null}
 },
 {
-    "id": 142,
+    "id": "J004",
     "name": "王牌部队",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2359,7 +2412,7 @@ const talentList = [
     "fitTeam": {"name": "高费大成阵容", "url": null}
 },
 {
-    "id": 143,
+    "id": "J005",
     "name": "大明星",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2373,7 +2426,7 @@ const talentList = [
     "fitTeam": {"name": "单核高费阵容", "url": null}
 },
 {
-    "id": 144,
+    "id": "J006",
     "name": "紧急救援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2387,7 +2440,7 @@ const talentList = [
     "fitTeam": {"name": "容错续航阵容", "url": null}
 },
 {
-    "id": 145,
+    "id": "J007",
     "name": "搏命",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2401,7 +2454,7 @@ const talentList = [
     "fitTeam": {"name": "赌狗冲刺阵容", "url": null}
 },
 {
-    "id": 146,
+    "id": "J008",
     "name": "永不独行",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2415,7 +2468,7 @@ const talentList = [
     "fitTeam": {"name": "低费运营阵容", "url": null}
 },
 {
-    "id": 147,
+    "id": "J009",
     "name": "小咖秀",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2429,7 +2482,7 @@ const talentList = [
     "fitTeam": {"name": "低费赌狗阵容", "url": null}
 },
 {
-    "id": 148,
+    "id": "J010",
     "name": "中流砥柱",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2443,7 +2496,7 @@ const talentList = [
     "fitTeam": {"name": "3费核心阵容", "url": null}
 },
 {
-    "id": 149,
+    "id": "J011",
     "name": "三人游",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2457,7 +2510,7 @@ const talentList = [
     "fitTeam": {"name": "高费启动阵容", "url": null}
 },
 {
-    "id": 150,
+    "id": "J012",
     "name": "泉水",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2471,7 +2524,7 @@ const talentList = [
     "fitTeam": {"name": "稳血升级阵容", "url": null}
 },
 {
-    "id": 151,
+    "id": "J013",
     "name": "同心协力",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2485,7 +2538,7 @@ const talentList = [
     "fitTeam": {"name": "纯阵营大成阵容", "url": null}
 },
 {
-    "id": 152,
+    "id": "J014",
     "name": "全副武装",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2499,7 +2552,7 @@ const talentList = [
     "fitTeam": {"name": "装备流阵容", "url": null}
 },
 {
-    "id": 153,
+    "id": "J015",
     "name": "延迟满足",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2513,7 +2566,7 @@ const talentList = [
     "fitTeam": {"name": "慢热单核阵容", "url": null}
 },
 {
-    "id": 154,
+    "id": "J016",
     "name": "虚构武装",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2527,7 +2580,7 @@ const talentList = [
     "fitTeam": {"name": "爆发快攻阵容", "url": null}
 },
 {
-    "id": 155,
+    "id": "J017",
     "name": "战略中枢",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2540,8 +2593,8 @@ const talentList = [
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "多人口大成阵容", "url": null}
 },
-   {
-    "id": 156,
+{
+    "id": "J018",
     "name": "破败神威",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2555,7 +2608,7 @@ const talentList = [
     "fitTeam": {"name": "普攻输出阵容", "url": null}
 },
 {
-    "id": 157,
+    "id": "J019",
     "name": "随机强化",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2569,7 +2622,7 @@ const talentList = [
     "fitTeam": {"name": "单核主C阵容", "url": null}
 },
 {
-    "id": 158,
+    "id": "J020",
     "name": "强者恒强",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2583,7 +2636,7 @@ const talentList = [
     "fitTeam": {"name": "全觉醒阵容", "url": null}
 },
 {
-    "id": 159,
+    "id": "J021",
     "name": "特大电池包",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2597,7 +2650,7 @@ const talentList = [
     "fitTeam": {"name": "急缺能量的运营阵容", "url": null}
 },
 {
-    "id": 160,
+    "id": "J022",
     "name": "守护灵",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2611,7 +2664,7 @@ const talentList = [
     "fitTeam": {"name": "单保主C阵容", "url": null}
 },
 {
-    "id": 161,
+    "id": "J023",
     "name": "天兵",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2625,7 +2678,7 @@ const talentList = [
     "fitTeam": {"name": "高费大成阵容", "url": null}
 },
 {
-    "id": 162,
+    "id": "J024",
     "name": "河洛增援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2639,7 +2692,7 @@ const talentList = [
     "fitTeam": {"name": "河洛阵营阵容", "url": null}
 },
 {
-    "id": 163,
+    "id": "J025",
     "name": "河洛强援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2653,7 +2706,7 @@ const talentList = [
     "fitTeam": {"name": "河洛高费阵容", "url": null}
 },
 {
-    "id": 164,
+    "id": "J026",
     "name": "逐鹿增援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2667,7 +2720,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿阵营阵容", "url": null}
 },
 {
-    "id": 165,
+    "id": "J027",
     "name": "逐鹿强援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2681,7 +2734,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿高费阵容", "url": null}
 },
 {
-    "id": 166,
+    "id": "J028",
     "name": "大河增援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2695,7 +2748,7 @@ const talentList = [
     "fitTeam": {"name": "大河流域阵营阵容", "url": null}
 },
 {
-    "id": 167,
+    "id": "J029",
     "name": "大河强援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2709,7 +2762,7 @@ const talentList = [
     "fitTeam": {"name": "大河流域高费阵容", "url": null}
 },
 {
-    "id": 168,
+    "id": "J030",
     "name": "日落海增援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2723,7 +2776,7 @@ const talentList = [
     "fitTeam": {"name": "日落海阵营阵容", "url": null}
 },
 {
-    "id": 169,
+    "id": "J031",
     "name": "日落海强援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2737,7 +2790,7 @@ const talentList = [
     "fitTeam": {"name": "日落海高费阵容", "url": null}
 },
 {
-    "id": 170,
+    "id": "J032",
     "name": "三分增援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2750,8 +2803,8 @@ const talentList = [
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "三分之地阵营阵容", "url": null}
 },
-{
-    "id": 171,
+   {
+    "id": "J033",
     "name": "三分强援",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2765,7 +2818,7 @@ const talentList = [
     "fitTeam": {"name": "三分之地高费阵容", "url": null}
 },
 {
-    "id": 172,
+    "id": "J034",
     "name": "点兵点将",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2779,7 +2832,7 @@ const talentList = [
     "fitTeam": {"name": "复制场上阵容", "url": null}
 },
 {
-    "id": 173,
+    "id": "J035",
     "name": "定向传输",
     "rank": "金天赋",
     "talentType": "战力类天赋",
@@ -2792,8 +2845,8 @@ const talentList = [
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "日落海阿科米体系", "url": null}
 },
-   {
-    "id": 174,
+{
+    "id": "J036",
     "name": "能量汲取",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2807,7 +2860,7 @@ const talentList = [
     "fitTeam": {"name": "日落海阿科米体系", "url": null}
 },
 {
-    "id": 175,
+    "id": "J037",
     "name": "积少成多",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2821,7 +2874,7 @@ const talentList = [
     "fitTeam": {"name": "日落海阿科米体系", "url": null}
 },
 {
-    "id": 176,
+    "id": "J038",
     "name": "双重分配",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2835,7 +2888,7 @@ const talentList = [
     "fitTeam": {"name": "日落海阿科米体系", "url": null}
 },
 {
-    "id": 177,
+    "id": "J039",
     "name": "全域共鸣",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2849,7 +2902,7 @@ const talentList = [
     "fitTeam": {"name": "日落海装备体系", "url": null}
 },
 {
-    "id": 178,
+    "id": "J040",
     "name": "能源置换",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2863,7 +2916,7 @@ const talentList = [
     "fitTeam": {"name": "日落海阿科米体系", "url": null}
 },
 {
-    "id": 179,
+    "id": "J041",
     "name": "核心裂痕",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2877,7 +2930,7 @@ const talentList = [
     "fitTeam": {"name": "日落海阿科米体系", "url": null}
 },
 {
-    "id": 180,
+    "id": "J042",
     "name": "技能突破：亚瑟",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2891,7 +2944,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿亚瑟体系", "url": null}
 },
 {
-    "id": 181,
+    "id": "J043",
     "name": "升值",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2905,7 +2958,7 @@ const talentList = [
     "fitTeam": {"name": "古币运营阵容", "url": null}
 },
 {
-    "id": 182,
+    "id": "J044",
     "name": "古币机",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2919,7 +2972,7 @@ const talentList = [
     "fitTeam": {"name": "古币运营阵容", "url": null}
 },
 {
-    "id": 183,
+    "id": "J045",
     "name": "一起发财",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2933,7 +2986,7 @@ const talentList = [
     "fitTeam": {"name": "古币运营阵容", "url": null}
 },
 {
-    "id": 184,
+    "id": "J046",
     "name": "自我奉献",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2947,7 +3000,7 @@ const talentList = [
     "fitTeam": {"name": "河洛牺牲体系", "url": null}
 },
 {
-    "id": 185,
+    "id": "J047",
     "name": "丝绸之路",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -2961,7 +3014,7 @@ const talentList = [
     "fitTeam": {"name": "河洛古币体系", "url": null}
 },
 {
-    "id": 186,
+    "id": "J048",
     "name": "千金换酒",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2975,7 +3028,7 @@ const talentList = [
     "fitTeam": {"name": "河洛李白古币体系", "url": null}
 },
 {
-    "id": 187,
+    "id": "J049",
     "name": "钱生战力",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -2989,7 +3042,7 @@ const talentList = [
     "fitTeam": {"name": "河洛古币体系", "url": null}
 },
 {
-    "id": 188,
+    "id": "J050",
     "name": "暴君归来",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3003,7 +3056,7 @@ const talentList = [
     "fitTeam": {"name": "大河复生体系", "url": null}
 },
 {
-    "id": 189,
+    "id": "J051",
     "name": "鬼神降临",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3017,7 +3070,7 @@ const talentList = [
     "fitTeam": {"name": "三分献祭吕布体系", "url": null}
 },
 {
-    "id": 190,
+    "id": "J052",
     "name": "四重奏",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3029,9 +3082,9 @@ const talentList = [
     "fitHero": {"name": "无", "url": null, "avatar": null},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "多阵营混搭阵容", "url": null}
-},
+},            
 {
-    "id": 191,
+    "id": "J053",
     "name": "搏战",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3044,8 +3097,8 @@ const talentList = [
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "三分前排血战体系", "url": null}
 },
-   {
-    "id": 192,
+{
+    "id": "J054",
     "name": "怒涛",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3059,7 +3112,7 @@ const talentList = [
     "fitTeam": {"name": "三分大乔牺牲体系", "url": null}
 },
 {
-    "id": 193,
+    "id": "J055",
     "name": "控制感应",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3073,7 +3126,7 @@ const talentList = [
     "fitTeam": {"name": "三分控制流阵容", "url": null}
 },
 {
-    "id": 194,
+    "id": "J056",
     "name": "三三得三",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3087,7 +3140,7 @@ const talentList = [
     "fitTeam": {"name": "三分3/6人体系", "url": null}
 },
 {
-    "id": 195,
+    "id": "J057",
     "name": "挂帅上阵",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -3101,7 +3154,7 @@ const talentList = [
     "fitTeam": {"name": "三分主C复制等级", "url": null}
 },
 {
-    "id": 196,
+    "id": "J058",
     "name": "三分领袖",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3115,7 +3168,7 @@ const talentList = [
     "fitTeam": {"name": "三分续航体系", "url": null}
 },
 {
-    "id": 197,
+    "id": "J059",
     "name": "意外之财",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -3129,7 +3182,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿合成运营阵容", "url": null}
 },
 {
-    "id": 198,
+    "id": "J060",
     "name": "令行如流",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -3143,7 +3196,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿战术流", "url": null}
 },
 {
-    "id": 199,
+    "id": "J061",
     "name": "穷兵黩武",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3157,7 +3210,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿召唤体系", "url": null}
 },
 {
-    "id": 200,
+    "id": "J062",
     "name": "复现",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3171,7 +3224,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿效果牌循环阵容", "url": null}
 },
 {
-    "id": 201,
+    "id": "J063",
     "name": "演武",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -3185,7 +3238,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿高阶战术流", "url": null}
 },
 {
-    "id": 202,
+    "id": "J064",
     "name": "罡气护体",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3199,7 +3252,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿技能坦度阵容", "url": null}
 },
 {
-    "id": 203,
+    "id": "J065",
     "name": "春风化雨",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -3213,7 +3266,7 @@ const talentList = [
     "fitTeam": {"name": "逐鹿连胜搜牌阵容", "url": null}
 },
 {
-    "id": 204,
+    "id": "J066",
     "name": "水晶穹顶",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3227,7 +3280,7 @@ const talentList = [
     "fitTeam": {"name": "大河护盾保护体系", "url": null}
 },
 {
-    "id": 205,
+    "id": "J067",
     "name": "望梅止渴",
     "rank": "金天赋",
     "talentType": "资源类天赋",
@@ -3241,7 +3294,7 @@ const talentList = [
     "fitTeam": {"name": "大河运营体系", "url": null}
 },
 {
-    "id": 206,
+    "id": "J068",
     "name": "四海来援",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3255,7 +3308,7 @@ const talentList = [
     "fitTeam": {"name": "大河无阵营牺牲体系", "url": null}
 },
 {
-    "id": 207,
+    "id": "J069",
     "name": "命运图腾",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3269,7 +3322,7 @@ const talentList = [
     "fitTeam": {"name": "大河图腾体系", "url": null}
 },
 {
-    "id": 208,
+    "id": "J070",
     "name": "神明庇佑",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3283,7 +3336,7 @@ const talentList = [
     "fitTeam": {"name": "大河图腾增益体系", "url": null}
 },
 {
-    "id": 209,
+    "id": "J071",
     "name": "始祖熊灵",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3295,10 +3348,9 @@ const talentList = [
     "fitHero": {"name": "始祖熊灵", "url": null, "avatar": "images/heroes/shizuxiongling.png"},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "大河熊灵体系", "url": null}
-}
-,
-  {
-    "id": 210,
+},
+{
+    "id": "J072",
     "name": "熊魂附甲",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3310,9 +3362,10 @@ const talentList = [
     "fitHero": {"name": "无", "url": null, "avatar": null},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "大河熊灵牺牲体系", "url": null}
-},
+}
+,
 {
-    "id": 211,
+    "id": "J073",
     "name": "虚妄转生",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3326,7 +3379,7 @@ const talentList = [
     "fitTeam": {"name": "大河图腾转生体系", "url": null}
 },
 {
-    "id": 212,
+    "id": "J074",
     "name": "灵祭升华",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3340,7 +3393,7 @@ const talentList = [
     "fitTeam": {"name": "大河图腾升华体系", "url": null}
 },
 {
-    "id": 213,
+    "id": "J075",
     "name": "神鹰锻匠",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3354,7 +3407,7 @@ const talentList = [
     "fitTeam": {"name": "大河云中君神兵体系", "url": null}
 },
 {
-    "id": 214,
+    "id": "J076",
     "name": "升格",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3368,7 +3421,7 @@ const talentList = [
     "fitTeam": {"name": "大河召唤升格体系", "url": null}
 },
 {
-    "id": 215,
+    "id": "J077",
     "name": "千里相聚",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3382,7 +3435,7 @@ const talentList = [
     "fitTeam": {"name": "无阵营运营阵容", "url": null}
 },
 {
-    "id": 216,
+    "id": "J078",
     "name": "身外身",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3396,7 +3449,7 @@ const talentList = [
     "fitTeam": {"name": "孙悟空猴毛化身体系", "url": null}
 },
 {
-    "id": 217,
+    "id": "J079",
     "name": "兄妹",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3410,7 +3463,7 @@ const talentList = [
     "fitTeam": {"name": "铠露娜兄妹体系", "url": null}
 },
 {
-    "id": 218,
+    "id": "J080",
     "name": "兽觉",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3424,7 +3477,7 @@ const talentList = [
     "fitTeam": {"name": "虎君兽觉体系", "url": null}
 },
 {
-    "id": 219,
+    "id": "J081",
     "name": "巨像",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3438,7 +3491,7 @@ const talentList = [
     "fitTeam": {"name": "巨像神兽体系", "url": null}
 },
 {
-    "id": 220,
+    "id": "J082",
     "name": "舞力全开",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3452,7 +3505,7 @@ const talentList = [
     "fitTeam": {"name": "貂蝉婉儿融合体系", "url": null}
 },
 {
-    "id": 221,
+    "id": "J083",
     "name": "箭雨",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3466,7 +3519,7 @@ const talentList = [
     "fitTeam": {"name": "双弓箭雨体系", "url": null}
 },
 {
-    "id": 222,
+    "id": "J084",
     "name": "双生突袭",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3480,7 +3533,7 @@ const talentList = [
     "fitTeam": {"name": "双射手分身突袭体系", "url": null}
 },
 {
-    "id": 223,
+    "id": "J085",
     "name": "毒奶",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3494,7 +3547,7 @@ const talentList = [
     "fitTeam": {"name": "毒奶游走体系", "url": null}
 },
 {
-    "id": 224,
+    "id": "J086",
     "name": "逐星",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3508,7 +3561,7 @@ const talentList = [
     "fitTeam": {"name": "李曜逐星体系", "url": null}
 },
 {
-    "id": 225,
+    "id": "J087",
     "name": "宝盒",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3522,7 +3575,7 @@ const talentList = [
     "fitTeam": {"name": "澜猴宝盒体系", "url": null}
 },
 {
-    "id": 226,
+    "id": "J088",
     "name": "旋刃",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3536,7 +3589,7 @@ const talentList = [
     "fitTeam": {"name": "元芳阿离旋刃体系", "url": null}
 },
 {
-    "id": 227,
+    "id": "J089",
     "name": "帝临",
     "rank": "金天赋",
     "talentType": "战斗类天赋",
@@ -3551,7 +3604,7 @@ const talentList = [
 }
 ,
    {
-    "id": 228,
+    "id": "J090",
     "name": "慕名而来",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3562,9 +3615,10 @@ const talentList = [
     "fitHero": {"name": "无", "url": null, "avatar": null},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "登场流阵容", "url": null}
-},
+}
+,
 {
-    "id": 229,
+    "id": "J091",
     "name": "狂野帷幕",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3577,7 +3631,7 @@ const talentList = [
     "fitTeam": {"name": "隐身偷袭阵容", "url": null}
 },
 {
-    "id": 230,
+    "id": "J092",
     "name": "超级蓄能",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3590,7 +3644,7 @@ const talentList = [
     "fitTeam": {"name": "多装备英雄阵容", "url": null}
 },
 {
-    "id": 231,
+    "id": "J093",
     "name": "镜像迷离",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3603,7 +3657,7 @@ const talentList = [
     "fitTeam": {"name": "镜像偷等级阵容", "url": null}
 },
 {
-    "id": 232,
+    "id": "J094",
     "name": "摄人心魄",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3616,7 +3670,7 @@ const talentList = [
     "fitTeam": {"name": "夺取成长阵容", "url": null}
 },
 {
-    "id": 233,
+    "id": "J095",
     "name": "控魂",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3629,7 +3683,7 @@ const talentList = [
     "fitTeam": {"name": "控魂复活阵容", "url": null}
 },
 {
-    "id": 234,
+    "id": "J096",
     "name": "双生相",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3642,7 +3696,7 @@ const talentList = [
     "fitTeam": {"name": "闪现英雄分流阵容", "url": null}
 },
 {
-    "id": 235,
+    "id": "J097",
     "name": "生生不息",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3655,7 +3709,7 @@ const talentList = [
     "fitTeam": {"name": "高阶召唤物阵容", "url": null}
 },
 {
-    "id": 236,
+    "id": "J098",
     "name": "护命灵珠",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3668,7 +3722,7 @@ const talentList = [
     "fitTeam": {"name": "护盾增伤阵容", "url": null}
 },
 {
-    "id": 237,
+    "id": "J099",
     "name": "光辉圣铠",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3681,7 +3735,7 @@ const talentList = [
     "fitTeam": {"name": "持续回血坦度阵容", "url": null}
 },
 {
-    "id": 238,
+    "id": "J100",
     "name": "魂祭绝刃",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3692,9 +3746,10 @@ const talentList = [
     "fitHero": {"name": "无", "url": null, "avatar": null},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "自残吸血爆发阵容", "url": null}
-},
+}
+,
 {
-    "id": 239,
+    "id": "J101",
     "name": "根源之力",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3707,7 +3762,7 @@ const talentList = [
     "fitTeam": {"name": "集火残血阵容", "url": null}
 },
 {
-    "id": 240,
+    "id": "J102",
     "name": "灵泉项链",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3720,7 +3775,7 @@ const talentList = [
     "fitTeam": {"name": "回蓝辅助阵容", "url": null}
 },
 {
-    "id": 241,
+    "id": "J103",
     "name": "魂灭灵冠",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3733,7 +3788,7 @@ const talentList = [
     "fitTeam": {"name": "自爆献祭阵容", "url": null}
 },
 {
-    "id": 242,
+    "id": "J104",
     "name": "强敌克星",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3746,7 +3801,7 @@ const talentList = [
     "fitTeam": {"name": "真伤控制阵容", "url": null}
 },
 {
-    "id": 243,
+    "id": "J105",
     "name": "灵泉法杖",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3759,7 +3814,7 @@ const talentList = [
     "fitTeam": {"name": "闪现突进阵容", "url": null}
 },
 {
-    "id": 244,
+    "id": "J106",
     "name": "鼓舞之戒",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3772,7 +3827,7 @@ const talentList = [
     "fitTeam": {"name": "同阵营增益阵容", "url": null}
 },
 {
-    "id": 245,
+    "id": "J107",
     "name": "梦魇之牙",
     "rank": "金天赋",
     "talentType": "装备天赋",
@@ -3785,7 +3840,7 @@ const talentList = [
     "fitTeam": {"name": "法爆范围收割阵容", "url": null}
 },
 {
-    "id": 246,
+    "id": "J108",
     "name": "末世",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3798,7 +3853,7 @@ const talentList = [
     "fitTeam": {"name": "普攻吸血阵容", "url": null}
 },
 {
-    "id": 247,
+    "id": "J109",
     "name": "拾荒者",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3811,7 +3866,7 @@ const talentList = [
     "fitTeam": {"name": "后期高费阵容", "url": null}
 },
 {
-    "id": 248,
+    "id": "J110",
     "name": "群星璀璨",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3824,7 +3879,7 @@ const talentList = [
     "fitTeam": {"name": "全高费阵容", "url": null}
 },
 {
-    "id": 249,
+    "id": "J111",
     "name": "无影手",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3837,7 +3892,7 @@ const talentList = [
     "fitTeam": {"name": "D牌赌狗阵容", "url": null}
 },
 {
-    "id": 250,
+    "id": "J112",
     "name": "学霸",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3850,7 +3905,7 @@ const talentList = [
     "fitTeam": {"name": "速冲等级阵容", "url": null}
 },
 {
-    "id": 251,
+    "id": "J113",
     "name": "绝境逆袭",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3863,7 +3918,7 @@ const talentList = [
     "fitTeam": {"name": "逆风翻盘阵容", "url": null}
 },
 {
-    "id": 252,
+    "id": "J114",
     "name": "买橘子去",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3876,7 +3931,7 @@ const talentList = [
     "fitTeam": {"name": "追三星核心阵容", "url": null}
 },
 {
-    "id": 253,
+    "id": "J115",
     "name": "扩编高峰",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3889,7 +3944,7 @@ const talentList = [
     "fitTeam": {"name": "多人口大成阵容", "url": null}
 },
 {
-    "id": 254,
+    "id": "J116",
     "name": "补给线：整备",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3902,7 +3957,7 @@ const talentList = [
     "fitTeam": {"name": "整备体系阵容", "url": null}
 },
 {
-    "id": 255,
+    "id": "J117",
     "name": "补给线：牺牲",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3915,7 +3970,7 @@ const talentList = [
     "fitTeam": {"name": "牺牲献祭阵容", "url": null}
 },
 {
-    "id": 256,
+    "id": "J118",
     "name": "补给线：登场",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3928,7 +3983,7 @@ const talentList = [
     "fitTeam": {"name": "登场流阵容", "url": null}
 },
 {
-    "id": 257,
+    "id": "J119",
     "name": "混沌次元",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3941,7 +3996,7 @@ const talentList = [
     "fitTeam": {"name": "吞噬成长阵容", "url": null}
 },
 {
-    "id": 258,
+    "id": "J120",
     "name": "危险数字",
     "rank": "金天赋",
     "talentType": "通用",
@@ -3954,7 +4009,7 @@ const talentList = [
     "fitTeam": {"name": "低费高费搭配D牌阵容", "url": null}
 },
 {
-    "id": 259,
+    "id": "J121",
     "name": "起舞",
     "rank": "金天赋",
     "talentType": "无阵营",
@@ -3965,72 +4020,7 @@ const talentList = [
     "fitHero": {"name": "貂蝉、上官婉儿", "url": null, "avatar": "images/heroes/diaochan.png"},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "貂蝉婉儿起舞体系", "url": null}
-},              [
-    {
-        "id": 260,
-        "name": "破阵战芒",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "pozhenzhanmang.png",
-        "desc": "获得破阵战芒：增加攻速及伤害提升（1-3阶英雄限定）。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "低阶输出英雄", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "低阶攻速输出阵容", "url": null}
-    },
-    {
-        "id": 261,
-        "name": "断念",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "duannian.png",
-        "desc": "获得断念：造成伤害时降低敌方最大生命值。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "持续输出英雄", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "血量压制输出阵容", "url": null}
-    },
-    {
-        "id": 262,
-        "name": "法潮灵杖",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "fachao_lingzhang.png",
-        "desc": "获得法潮灵杖：获取左右1格英雄法术攻击力。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "法师英雄", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "法师增益阵容", "url": null}
-    },
-    {
-        "id": 263,
-        "name": "怒神项链",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "nushenxianglian.png",
-        "desc": "获得怒神项链：增加暴击率以及法术伤害可以暴击。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "法术英雄", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "法爆阵容", "url": null}
-    },
-    {
-        "id": 264,
-        "name": "一分钱一分货",
-        "rank": "银天赋",
-        "talentType": "通用",
-        "img": "yifenqianyifenhuo.png",
-        "desc": "获得1张天赋牌等价交换：扣除当前所有能量。根据扣除数量获得不同资源奖励。",
-        "source": "棋手升级时概率选择获取天赋。",
-        "relatedProduct": {"name": "无", "url": null},
-        "fitHero": {"name": "无", "url": null, "avatar": null},
-        "fitPlayer": {"name": "无", "url": null, "avatar": null},
-        "fitTeam": {"name": "能量兑换运营阵容", "url": null}
-    }
+},              
 ]
 
 const talentCardList = document.getElementById("talentCardList");
