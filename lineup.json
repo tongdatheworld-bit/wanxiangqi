@@ -1486,25 +1486,6 @@
     ]
 },
     {
-    "id": 72,
-    "name": "闹闹日落海整备  999",
-    "rank": "A",
-    "player": "闹闹",
-    "playerImg": "images/players/naonao.png",
-    "hard": "简单",
-    "lineupCode": "5466384310749730（点击复制）",
-    "ban位": ["逐鹿", "三分之地", "日落海"],
-    "heroList": [
-        {"name":"亚连","img":"images/heroes/yalian.png","isCore":true},
-        {"name":"安琪拉","img":"images/heroes/anqila.png","isCore":false},
-        {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
-        {"name":"朵莉亚","img":"images/heroes/duoliya.png","isCore":false},
-        {"name":"雅典娜","img":"images/heroes/yadianna.png","isCore":false},
-        {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
-        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false}
-    ]
-},
-    {
     "id": 73,
     "name": "闹闹大河龙蛇",
     "rank": "A",
