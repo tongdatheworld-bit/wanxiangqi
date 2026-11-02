@@ -4020,7 +4020,7 @@ const talentList = [
     "fitHero": {"name": "貂蝉、上官婉儿", "url": null, "avatar": "images/heroes/diaochan.png"},
     "fitPlayer": {"name": "无", "url": null, "avatar": null},
     "fitTeam": {"name": "貂蝉婉儿起舞体系", "url": null}
-},              
+}         
 ]
 
 const talentCardList = document.getElementById("talentCardList");
