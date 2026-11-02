@@ -233,7 +233,7 @@
     margin-bottom:6px;
 }
 .lineup-name {
-    font-size:26px;
+    font-size:32px;
     font-weight:bold;
     color:#ffd878;
     flex:0 0 auto;
@@ -428,6 +428,4 @@
 }
 .copy-code:hover{
     text-decoration:underline;
-}
-    color:#ffd369;
 }
