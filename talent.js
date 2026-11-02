@@ -4022,7 +4022,6 @@ const talentList = [
     "fitTeam": {"name": "貂蝉婉儿起舞体系", "url": null}
 }         
 ]
-]
 const talentCardList = document.getElementById("talentCardList");
 const talentSearch = document.getElementById("talentSearch");
 const rankFilter = document.getElementById("rankFilter");
@@ -4033,88 +4032,89 @@ const talentModal = document.getElementById("talentModal");
 const talentModalBody = document.getElementById("talentModalBody");
 
 function closeModal() {
-    talentModal.classList.remove('show');
+talentModal.classList.remove('show');
 }
 
 function renderTalent() {
-    const kw = talentSearch.value.trim().toLowerCase();
-    const selRankVal = rankFilter.value;
-    const selTalentVal = talentTypeFilter.value;
-    const selCampVal = campFilter.value;
-    const selBoostVal = boostTypeFilter.value;
+const kw = talentSearch.value.trim().toLowerCase();
+const selRankVal = rankFilter.value;
+const seltalentVal = talentTypeFilter.value;
+const selCampVal = campFilter.value;
+const selBoostVal = boostTypeFilter.value;
 
-    talentCardList.innerHTML = "";
-    talentList.forEach(item => {
-        const matchSearch = !kw || item.name.toLowerCase().includes(kw) || item.desc.toLowerCase().includes(kw);
+talentCardList.innerHTML = "";
+talentList.forEach(item => {
+const matchSearch = !kw || item.name.toLowerCase().includes(kw) || item.desc.toLowerCase().includes(kw);
 
-        // 品阶筛选
-        let matchRank = true;
-        if (selRankVal !== "all") {
-            if (selRankVal === "copper") matchRank = item.rank === "铜天赋";
-            if (selRankVal === "silver") matchRank = item.rank === "银天赋";
-            if (selRankVal === "gold") matchRank = item.rank === "金天赋";
-        }
+// 品阶筛选
+let matchRank = true;
+if (selRankVal !== "all") {
+if (selRankVal === "copper") matchRank = item.rank === "铜天赋";
+if (selRankVal === "silver") matchRank = item.rank === "银天赋";
+if (selRankVal === "gold") matchRank = item.rank === "金天赋";
+}
 
-        // 四类天赋筛选：资源 / 战力 / 机制 / 生存
-        let matchTalent = true;
-        if (selTalentVal !== "all") {
-            if (selTalentVal === "resource") {
-                matchTalent = item.talentType === "资源类天赋";
-            }
-            if (selTalentVal === "combat") {
-                matchTalent = item.talentType === "战力类天赋";
-            }
-            if (selTalentVal === "mechanism") {
-                matchTalent = item.talentType === "机制类天赋";
-            }
-            if (selTalentVal === "survive") {
-                matchTalent = item.talentType === "生存类天赋";
-            }
-        }
+// 四类天赋筛选：资源 / 战力 / 机制 / 生存
+let matchtalent = true;
+if (seltalentVal !== "all") {
+if (seltalentVal === "resource") {
+matchtalent = item.talentType === "资源类天赋";
+}
+if (seltalentVal === "combat") {
+matchtalent = item.talentType === "战力类天赋";
+}
+if (seltalentVal === "mechanism") {
+matchtalent = item.talentType === "机制类天赋";
+}
+if (seltalentVal === "survive") {
+matchtalent = item.talentType === "生存类天赋";
+}
+}
 
-        // 阵营筛选
-        let matchCamp = true;
-        if (selCampVal !== "all") {
-            if (selCampVal === "sand") matchCamp = item.camp === "三分之地";
-            if (selCampVal === "river") matchCamp = item.camp === "大河流域";
-            if (selCampVal === "sunset") matchCamp = item.camp === "日落海";
-            if (selCampVal === "heluo") matchCamp = item.camp === "河洛";
-            if (selCampVal === "battle") matchCamp = item.camp === "逐鹿";
-            if (selCampVal === "nocamp") matchCamp = item.camp === "无阵营";
-            if (selCampVal === "none") matchCamp = item.camp === "通用";
-        }
+// 阵营筛选
+let matchCamp = true;
+if (selCampVal !== "all") {
+if (selCampVal === "sand") matchCamp = item.camp === "三分之地";
+if (selCampVal === "river") matchCamp = item.camp === "大河流域";
+if (selCampVal === "sunset") matchCamp = item.camp === "日落海";
+if (selCampVal === "heluo") matchCamp = item.camp === "河洛";
+if (selCampVal === "battle") matchCamp = item.camp === "逐鹿";
+if (selCampVal === "nocamp") matchCamp = item.camp === "无阵营";
+if (selCampVal === "none") matchCamp = item.camp === "通用";
+}
 
-        const matchBoost = true;
-        // 全部条件满足才渲染卡片
-        if (matchSearch && matchRank && matchTalent && matchCamp && matchBoost) {
-            const cardDom = document.createElement("div");
-            cardDom.className = "talent-card-item";
-            cardDom.innerHTML = `
-                <div class="talent-card-cover">
-                    <img src="images/talent/${item.img}" alt="${item.name}">
-                </div>
-            `;
-            cardDom.onclick = () => openModal(item);
-            talentCardList.appendChild(cardDom);
-        }
+const matchBoost = true;
+if (!(matchSearch && matchRank && matchtalent && matchCamp && matchBoost)) return;
+
+const cardDom = document.createElement("div");
+cardDom.className = "talent-card-item";
+// 图片兜底：item.img为空时不输出undefined图片
+cardDom.innerHTML = `
+            <div class="talent-card-cover">
+                <img src="images/talent/${item.img || ''}" alt="${item.name}" onerror="this.style.display='none'">
+            </div>
+        `;
+        cardDom.onclick = () => openModal(item);
+        talentCardList.appendChild(cardDom);
     })
 }
 
 // 弹窗
 function openModal(item) {
-    const fullImgPath = `images/talent/${item.img}`;
+    // 修复：补上反引号
+    const fullImgPath = `images/talent/${item.img || ''}`;
     const renderItem = (info) => {
         if (!info || !info.name) return "无";
         if (info.url) {
-            if(info.url.startsWith('#hero-')){
-                return `<a href="${info.url}" class="modal-link" onclick="event.preventDefault();closeModal();openHeroModal('${info.name}')">
-                    <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
-                </a>`
-            }else{
-                return `<a href="${info.url}" class="modal-link" onclick="event.preventDefault();closeModal();">
-                    <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
-                </a>`
+            let clickHandler;
+            if (info.url.startsWith('#hero-')) {
+                clickHandler = `event.preventDefault();closeModal();openHeroModal('${info.name}')`;
+            } else {
+                clickHandler = `event.preventDefault();closeModal();`;
             }
+            return `<a href="${info.url}" class="modal-link" onclick="${clickHandler}">
+                    <img src="${info.avatar}" style="width:32px;height:32px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:6px;" onerror="this.style.display='none'">${info.name}
+                </a>`
         } else {
             return info.name;
         }
@@ -4129,14 +4129,16 @@ function openModal(item) {
                     ${item.rank}
                 </div>
                 <h2 class="talent-title">${item.name}</h2>
+                <!-- 重点修复：先判断 talentType 是否存在，再调用includes -->
                 <div class="type-tag ${
+                    !item.talentType ? 'survive' :
                     item.talentType.includes('资源') ? 'resource' :
                     item.talentType.includes('战力') ? 'combat' :
                     item.talentType.includes('机制') ? 'mechanism' : 'survive'
                 }">
-                    ${item.talentType}
+                    ${item.talentType || "未知类型"}
                 </div>
-                <p class="talent-desc">${item.desc}</p>
+                <p class="talent-desc">${item.desc || "无描述"}</p>
                 <p class="source-line">来源：${item.source || "未知"}</p>
                 <div class="info-row">
                     <span class="label">相关产物：</span>
@@ -4162,9 +4164,9 @@ function openModal(item) {
 
 // 遮罩关闭
 talentModal.onclick = function(e){
-    if(e.target === talentModal){
-        closeModal();
-    }
+if(e.target === talentModal){
+closeModal();
+}
 }
 
 // 事件绑定
@@ -4175,4 +4177,3 @@ campFilter.addEventListener("change", renderTalent);
 boostTypeFilter.addEventListener("change", renderTalent);
 
 renderTalent();
-   
