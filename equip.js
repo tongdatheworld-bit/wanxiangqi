@@ -998,10 +998,6 @@ const equipList = [
             }
         ]
     }
-]
-
-
-    
 ];
 const equipCardList = document.getElementById("equipCardList");
 const searchInput = document.getElementById("searchInput");
