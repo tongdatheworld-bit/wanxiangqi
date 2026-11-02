@@ -307,6 +307,426 @@ const equipList = [
             "icon": "images/equip/equipsmall/fengbaojujian.png"
         }
     ]
+},
+    {
+    "id": 13,
+    "name": "贤者之书",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。法力值上限-10。释放技能后获得20%基础法术攻击力，最多叠加6层。",
+    "source": "由圣者法典铸造而成",
+    "img": "images/equip/xianzhezhishu.png",
+    "combineParts": [
+        {
+            "name": "圣者法典",
+            "icon": "images/equip/equipsmall/shengzhefadian.png"
+        }
+    ]
+},
+{
+    "id": 14,
+    "name": "炽热支配者",
+    "type": "普通装备",
+    "pos": "通用装备",
+    "desc": "唯一。首次受到控制效果时，获得300点护盾并在接下来的15秒内免疫控制效果（压制除外）。",
+    "source": "由圣者法典铸造而成",
+    "img": "images/equip/chirezhipeizhe.png",
+    "combineParts": [
+        {
+            "name": "圣者法典",
+            "icon": "images/equip/equipsmall/shengzhefadian.png"
+        }
+    ]
+},
+{
+    "id": 15,
+    "name": "生命魔典",
+    "type": "普通装备",
+    "pos": "通用装备",
+    "desc": "唯一。受到伤害时会为自身和周围1格的己方单位恢复5%最大生命值，冷却2秒。",
+    "source": "由圣者法典铸造而成",
+    "img": "images/equip/shengmingmodian.png",
+    "combineParts": [
+        {
+            "name": "圣者法典",
+            "icon": "images/equip/equipsmall/shengzhefadian.png"
+        }
+    ]
+},
+{
+    "id": 16,
+    "name": "御灵之纱",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。战斗开始时，获得等级×15点护盾。护盾被击破时对周围1格敌人造成1秒眩晕，击破者翻倍。",
+    "source": "由圣者法典铸造而成",
+    "img": "images/equip/yulingzhisha.png",
+    "combineParts": [
+        {
+            "name": "圣者法典",
+            "icon": "images/equip/equipsmall/shengzhefadian.png"
+        }
+    ]
+},
+{
+    "id": 17,
+    "name": "冥王",
+    "type": "普通装备",
+    "pos": "物理装备",
+    "desc": "唯一。穿戴者周围1格每有1个敌方单位，获得10点物理防御和15%基础物理攻击力。",
+    "source": "由雷鸣刃铸造而成",
+    "img": "images/equip/mingwang.png",
+    "combineParts": [
+        {
+            "name": "雷鸣刃",
+            "icon": "images/equip/equipsmall/leimingren.png"
+        }
+    ]
+},
+{
+    "id": 18,
+    "name": "名刀·司命",
+    "type": "普通装备",
+    "pos": "通用装备",
+    "desc": "唯一。穿戴者首次受到致命伤害时会进入无敌和不可选中状态，持续1.5秒。",
+    "source": "由雷鸣刃铸造而成",
+    "img": "images/equip/mingdao_simeng.png",
+    "combineParts": [
+        {
+            "name": "雷鸣刃",
+            "icon": "images/equip/equipsmall/leimingren.png"
+        }
+    ]
+},
+{
+    "id": 19,
+    "name": "红魔",
+    "type": "普通装备",
+    "pos": "通用装备",
+    "desc": "唯一。周围1格没有友军时，获得25%伤害加成。每承受3%最大生命值的伤害，获得1%伤害加成，上限100%。",
+    "source": "由雷鸣刃铸造而成",
+    "img": "images/equip/hongmo.png",
+    "combineParts": [
+        {
+            "name": "雷鸣刃",
+            "icon": "images/equip/equipsmall/leimingren.png"
+        }
+    ]
+},
+{
+    "id": 20,
+    "name": "魔律之刃",
+    "type": "普通装备",
+    "pos": "通用装备",
+    "desc": "唯一。释放技能时，35%概率重复释放一次。每有7级，额外提升1%概率。近战英雄总上限70%。",
+    "source": "由雷鸣刃铸造而成",
+    "img": "images/equip/molvzhiren.png",
+    "combineParts": [
+        {
+            "name": "雷鸣刃",
+            "icon": "images/equip/equipsmall/leimingren.png"
+        }
+    ]
+},
+    {
+    "id": 21,
+    "name": "不祥征兆",
+    "type": "普通装备",
+    "pos": "防御装备",
+    "desc": "唯一。战斗前15秒，格挡50%普通攻击伤害，若攻击者攻速不低于1.5，则格挡70%普通攻击伤害。",
+    "source": "由守护者之铠铸造而成",
+    "img": "images/equip/buxiangzhengzhao.png",
+    "combineParts": [
+        {
+            "name": "守护者之铠",
+            "icon": "images/equip/equipsmall/shouhuzhekai.png"
+        }
+    ]
+},
+{
+    "id": 22,
+    "name": "极寒风暴",
+    "type": "普通装备",
+    "pos": "防御装备",
+    "desc": "唯一。受到普攻时，降低目标20%攻击速度，持续2秒。被单一目标普攻5次后，远程目标将被冻结1秒，近战目标减半。",
+    "source": "由守护者之铠铸造而成",
+    "img": "images/equip/jihanfengbao.png",
+    "combineParts": [
+        {
+            "name": "守护者之铠",
+            "icon": "images/equip/equipsmall/shouhuzhekai.png"
+        }
+    ]
+},
+{
+    "id": 23,
+    "name": "近卫荣耀",
+    "type": "普通装备",
+    "pos": "防御装备",
+    "desc": "唯一。战斗开始时，周围1格己方单位获得10点物理和法术防御，穿戴者获得双倍效果，不可叠加。",
+    "source": "由守护者之铠铸造而成",
+    "img": "images/equip/jinweirongyao.png",
+    "combineParts": [
+        {
+            "name": "守护者之铠",
+            "icon": "images/equip/equipsmall/shouhuzhekai.png"
+        }
+    ]
+},
+{
+    "id": 24,
+    "name": "反伤重甲",
+    "type": "普通装备",
+    "pos": "防御装备",
+    "desc": "唯一。将受到伤害的30%以真实伤害回敬给目标。",
+    "source": "由守护者之铠铸造而成",
+    "img": "images/equip/fanshangzhongjia.png",
+    "combineParts": [
+        {
+            "name": "守护者之铠",
+            "icon": "images/equip/equipsmall/shouhuzhekai.png"
+        }
+    ]
+},
+    {
+    "id": 25,
+    "name": "霸者重铠",
+    "type": "普通装备",
+    "pos": "防御装备",
+    "desc": "唯一。生命值高于70%时获得40%伤害减免。",
+    "source": "由力量腰带铸造而成",
+    "img": "images/equip/bazhezhongkai.png",
+    "combineParts": [
+        {
+            "name": "力量腰带",
+            "icon": "images/equip/equipsmall/liliangyaodai.png"
+        }
+    ]
+},
+{
+    "id": 26,
+    "name": "不死鸟之眼",
+    "type": "普通装备",
+    "pos": "防御装备",
+    "desc": "唯一。增加15%基础生命值，生命恢复和护盾效果提升30%。",
+    "source": "由力量腰带铸造而成",
+    "img": "images/equip/businiaozhiyan.png",
+    "combineParts": [
+        {
+            "name": "力量腰带",
+            "icon": "images/equip/equipsmall/liliangyaodai.png"
+        }
+    ]
+},
+{
+    "id": 27,
+    "name": "魔女斗篷",
+    "type": "普通装备",
+    "pos": "防御装备",
+    "desc": "法术防御力+30。战斗开始时，获得等级×5点法术护盾。",
+    "source": "由力量腰带铸造而成",
+    "img": "images/equip/modudoupeng.png",
+    "combineParts": [
+        {
+            "name": "力量腰带",
+            "icon": "images/equip/equipsmall/liliangyaodai.png"
+        }
+    ]
+},
+{
+    "id": 28,
+    "name": "红莲炎甲",
+    "type": "普通装备",
+    "pos": "防御装备",
+    "desc": "唯一。每2秒对周围1格敌人造成20（+5%穿戴者最大生命值）点法术伤害，并降低目标50%生命恢复和护盾效果，持续3秒。",
+    "source": "由力量腰带铸造而成",
+    "img": "images/equip/honglianyanji.png",
+    "combineParts": [
+        {
+            "name": "力量腰带",
+            "icon": "images/equip/equipsmall/liliangyaodai.png"
+        }
+    ]
+},
+    {
+    "id": 29,
+    "name": "痛苦面具",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。单次魔法伤害超过目标最大生命值的8%时会使目标点燃：每秒造成75%法术攻击力的真实伤害，持续3秒。",
+    "source": "由破碎圣杯铸造而成",
+    "img": "images/equip/tongkumianju.png",
+    "combineParts": [
+        {
+            "name": "破碎圣杯",
+            "icon": "images/equip/equipsmall/posuishengbei.png"
+        }
+    ]
+},
+{
+    "id": 30,
+    "name": "法源之杯",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。每秒回复5点法力值。",
+    "source": "由破碎圣杯铸造而成",
+    "img": "images/equip/fayuanzhibei.png",
+    "combineParts": [
+        {
+            "name": "破碎圣杯",
+            "icon": "images/equip/equipsmall/posuishengbei.png"
+        }
+    ]
+},
+{
+    "id": 31,
+    "name": "破茧之衣",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。战斗开始时，法力值+15，同时眩晕敌方等级最高3名英雄中的随机1名，持续1秒。目标每有10级，眩晕时间增加0.5秒，上限5秒。",
+    "source": "由破碎圣杯铸造而成",
+    "img": "images/equip/pojianzhiyi.png",
+    "combineParts": [
+        {
+            "name": "破碎圣杯",
+            "icon": "images/equip/equipsmall/posuishengbei.png"
+        }
+    ]
+},
+{
+    "id": 32,
+    "name": "聚灵水晶",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。受击时额外获得10点法力值，最多100点。达到上限后恢复20%最大生命值。",
+    "source": "由破碎圣杯铸造而成",
+    "img": "images/equip/julingshuijing.png",
+    "combineParts": [
+        {
+            "name": "破碎圣杯",
+            "icon": "images/equip/equipsmall/posuishengbei.png"
+        }
+    ]
+},
+    {
+    "id": 33,
+    "name": "凝渊",
+    "type": "普通装备",
+    "pos": "物理装备",
+    "desc": "唯一。暴击率+20%。每次受击提升1%暴击率，暴击率达到100%时提升100%移动速度。",
+    "source": "由速击之枪铸造而成",
+    "img": "images/equip/ningyuan.png",
+    "combineParts": [
+        {
+            "name": "速击之枪",
+            "icon": "images/equip/equipsmall/sujizhiqiang.png"
+        }
+    ]
+},
+{
+    "id": 34,
+    "name": "影牙",
+    "type": "普通装备",
+    "pos": "物理装备",
+    "desc": "攻击速度+50%。",
+    "source": "由速击之枪铸造而成",
+    "img": "images/equip/yingya.png",
+    "combineParts": [
+        {
+            "name": "速击之枪",
+            "icon": "images/equip/equipsmall/sujizhiqiang.png"
+        }
+    ]
+},
+{
+    "id": 35,
+    "name": "破晓",
+    "type": "普通装备",
+    "pos": "物理装备",
+    "desc": "每次普通攻击降低目标3点物防，持续5秒。目标物防首次降为0时，附加1次目标15%最大生命值的物理伤害。",
+    "source": "由速击之枪铸造而成",
+    "img": "images/equip/poxiao.png",
+    "combineParts": [
+        {
+            "name": "速击之枪",
+            "icon": "images/equip/equipsmall/sujizhiqiang.png"
+        }
+    ]
+},
+{
+    "id": 36,
+    "name": "日渊",
+    "type": "普通装备",
+    "pos": "物理装备",
+    "desc": "唯一，限定远程英雄。普通攻击会释放飞箭，对生命值最低的2名敌人造成55%物理攻击力的物理伤害。",
+    "source": "由速击之枪铸造而成",
+    "img": "images/equip/riyuan.png",
+    "combineParts": [
+        {
+            "name": "速击之枪",
+            "icon": "images/equip/equipsmall/sujizhiqiang.png"
+        }
+    ]
+},
+{
+    "id": 37,
+    "name": "虚无法杖",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。获得15点法术防御穿透。",
+    "source": "由大棒铸造而成",
+    "img": "images/equip/xuwufazhang.png",
+    "combineParts": [
+        {
+            "name": "大棒",
+            "icon": "images/equip/equipsmall/dabang.png"
+        }
+    ]
+},
+{
+    "id": 38,
+    "name": "寒霜侵袭",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。普通攻击减少目标15%移速，持续5秒，最多叠加5层。叠满后目标受到的伤害提高20%，持续5秒，冷却时间10秒。",
+    "source": "由大棒铸造而成",
+    "img": "images/equip/hanshanginqin.png",
+    "combineParts": [
+        {
+            "name": "大棒",
+            "icon": "images/equip/equipsmall/dabang.png"
+        }
+    ]
+},
+{
+    "id": 39,
+    "name": "自然法杖",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。法术攻击力+20%，远程穿戴者每消耗40点法力值（近战80点法力值）会将随机1名敌人变成小猪，持续2秒。",
+    "source": "由大棒铸造而成",
+    "img": "images/equip/ziranfazhang.png",
+    "combineParts": [
+        {
+            "name": "大棒",
+            "icon": "images/equip/equipsmall/dabang.png"
+        }
+    ]
+},
+{
+    "id": 40,
+    "name": "金色圣剑",
+    "type": "普通装备",
+    "pos": "法术装备",
+    "desc": "唯一。获得30%（+15%法术攻击力）攻击速度，每次普通攻击附带20（+30%法术攻击力）点法术伤害。",
+    "source": "由大棒铸造而成",
+    "img": "images/equip/jinse-shengjian.png",
+    "combineParts": [
+        {
+            "name": "大棒",
+            "icon": "images/equip/equipsmall/dabang.png"
+        }
+    ]
 }
 ];
 const equipCardList = document.getElementById("equipCardList");
