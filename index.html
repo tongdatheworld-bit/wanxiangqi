@@ -407,7 +407,7 @@ function buildCard(item){
     if(item.tags && item.tags.length>0){
         tagHtml = item.tags.map(t=>`<span class="tag">${t}</span>`).join('');
     }
-    // Ban区域渲染，复用你现成的 .ban-sep / .ban-title-tag / .tag
+    // Ban区域
     let banHtml = '';
     if(Array.isArray(item["ban位"]) && item["ban位"].length > 0){
         banHtml = `<span class="ban-sep">|</span><span class="ban-title-tag">Ban阵营：</span>`
@@ -431,7 +431,7 @@ function buildCard(item){
         </div>
     `;
     return div;
-}
+} // ← 这个是 buildCard 函数收尾的 }，非常关键，你之前大概率丢了这个
             // 卡片点击打开弹窗
             div.onclick = ()=>{
                 openLineupModal(item);
