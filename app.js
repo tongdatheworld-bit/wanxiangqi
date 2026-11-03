@@ -118,12 +118,22 @@ document.addEventListener('DOMContentLoaded', function () {
         const closeModalBtn = document.getElementById('closeModal');
         if (!modal || !modalBody) return;
         if(!lineupWrap) return;
-        lineupWrap.onclick = function (e) {
-            const card = e.target.closest('.lineup-card');
-            if (!card) return;
-            const id = Number(card.dataset.id);
-            const find = allLineupData.find(x => x.id === id);
-            if (!find) return;
+      lineupWrap.onclick = function (e) {
+    // 点击复制码优先处理，阻止弹窗
+    const copyDom = e.target.closest('.copy-code');
+    if(copyDom){
+        e.stopPropagation();
+        const code = copyDom.dataset.code;
+        copyCode(code);
+        return;
+    }
+
+    const card = e.target.closest('.lineup-card');
+    if (!card) return;
+    const id = Number(card.dataset.id);
+    const find = allLineupData.find(x => x.id === id);
+    if (!find) return;
+
             // 主英雄列表（只头像，无文字）
             const heroHtml = Array.isArray(find.heroList) && find.heroList.length
                 ? find.heroList.map(h => `
