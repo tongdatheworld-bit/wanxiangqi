@@ -56,8 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             wrap.innerHTML = `<div style="text-align:center;color:#686e7c;padding:40px">没有匹配的阵容</div>`
             return
         }
-     
-wrap.innerHTML = filterArr.map(item => `
+     wrap.innerHTML = filterArr.map(item => `
 <div class="lineup-card" data-id="${item.id}">
     <!-- 上部分：文字信息 -->
     <div class="lineup-info-top">
@@ -93,6 +92,8 @@ wrap.innerHTML = filterArr.map(item => `
                 : ""
             }
         </div>
+        <!-- 新增分割线 -->
+        <div class="hero-divider"></div>
         <!-- 英雄，占满剩余横向空间 -->
         <div class="hero-row">
             ${
@@ -106,6 +107,7 @@ wrap.innerHTML = filterArr.map(item => `
     </div>
 </div>
 `).join("");
+
 
 
         bindCardClick();
