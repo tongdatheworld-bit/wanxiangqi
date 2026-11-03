@@ -439,16 +439,18 @@
 .empty-text{
     color:#777;
 }
-        .position-wrap {
+       .position-wrap {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    background: #0f1218;
+    background: #1c2230;
+    padding: 12px;
 }
 .position-wrap img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 8px;
 }
 
         /* 解锁弹窗 */
@@ -766,15 +768,19 @@ function openLineupModal(item){
                 ${noticeHtml}
             </ul>
         </div>
-        <div class="modal-block">
-            <h4>｜ 站位参考</h4>
-            ${item.positionImage ? `<img src="${item.positionImage}" style="width:100%;max-width:600px;border-radius:8px;">` : '<p class="empty-text">暂无站位图</p>'}
+       <div class="modal-block">
+    <h4>｜ 站位参考</h4>
+    ${item.positionImage ? `
+        <div class="position-wrap">
+            <img src="${item.positionImage}">
         </div>
-        <div class="modal-block">
-            <div style="margin-top:16px;color:#ffd369;">
-                阵容码：<span class="copy-code" onclick="copyCode('${item.lineupCode || ''}');">${item.lineupCode || ''}</span>（点击复制）
-            </div>
+        <div style="margin-top:12px;color:#ffd369;display:flex;align-items:center;gap:14px;">
+            <span>阵容码：${item.lineupCode || ''}</span>
+            <span class="copy-code" onclick="copyCode('${item.lineupCode || ''}');">点击复制</span>
         </div>
+    ` : '<p class="empty-text">暂无站位图</p>'}
+</div>
+
     `;
     modalDom.style.display = 'flex';
 }
