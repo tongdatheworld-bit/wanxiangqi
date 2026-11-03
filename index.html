@@ -605,16 +605,17 @@ function buildCard(item){
     }
     // 点击卡片打开弹窗
     div.onclick = ()=>{
-    // 跳转到阵容大全页面，url携带id参数
-    location.href = `./lineup.html?id=${item.id}`;
+    openLineupModal(item);
 }
     return div;
 }
 
 
-// 打开详情弹窗
+// 打开详情弹窗（完全匹配你给的数据字段：heroList、funcHeroList、backupHeroList、equipFirst、equipSecond、runStage、notice、positionImage）
 function openLineupModal(item){
     currentLineup = item;
+
+    // 完整阵容英雄
     let heroHtml = '';
     if(Array.isArray(item.heroList)){
         heroHtml = item.heroList.map(h=>`
@@ -624,10 +625,75 @@ function openLineupModal(item){
         ).join('');
     }
 
+    // 功能替换卡
+    let funcHeroHtml = '';
+    if(Array.isArray(item.funcHeroList)){
+        funcHeroHtml = item.funcHeroList.map(h=>`
+            <div class="mini-hero-modal">
+                <img src="${h.img}" alt="${h.name}">
+            </div>`
+        ).join('');
+    }
+
+    // 备选英雄
+    let backupHeroHtml = '';
+    if(Array.isArray(item.backupHeroList)){
+        backupHeroHtml = item.backupHeroList.map(h=>`
+            <div class="mini-hero-modal">
+                <img src="${h.img}" alt="${h.name}">
+            </div>`
+        ).join('');
+    }
+
+    // 首选装备
+    let equipFirstHtml = '';
+    if(Array.isArray(item.equipFirst)){
+        equipFirstHtml = item.equipFirst.map(e=>`
+            <div class="hero-small">
+                <img src="${e.img}" alt="${e.name}">
+                <span>${e.name}</span>
+            </div>`
+        ).join('');
+    }
+
+    // 备选装备
+    let equipSecondHtml = '';
+    if(Array.isArray(item.equipSecond)){
+        equipSecondHtml = item.equipSecond.map(e=>`
+            <div class="hero-small">
+                <img src="${e.img}" alt="${e.name}">
+                <span>${e.name}</span>
+            </div>`
+        ).join('');
+    }
+
+    // 运营阶段
+    let runStageHtml = '';
+    if(Array.isArray(item.runStage)){
+        runStageHtml = item.runStage.map(stage=>{
+            let stageHeroHtml = '';
+            if(Array.isArray(stage.heroList)){
+                stageHeroHtml = stage.heroList.map(h=>`
+                    <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                        <img src="${h.img}" alt="${h.name}">
+                    </div>`
+                ).join('');
+            }
+            return `
+            <div class="run-block">
+                <h4>${stage.title}</h4>
+                <div class="hero-row-modal">${stageHeroHtml || '<p class="empty-text">无</p>'}</div>
+                <p>${stage.desc}</p>
+            </div>
+            `;
+        }).join('');
+    }
+
     // Ban阵营
     let banModalHtml = '';
     if(Array.isArray(item["ban位"]) && item["ban位"].length>0){
-        banModalHtml = `<div class="modal-block">
+        banModalHtml = `
+        <div class="modal-block">
             <h4>｜ BAN阵营</h4>
             <p class="modal-sub">${item["ban位"].join("、")}</p>
         </div>`
@@ -658,24 +724,24 @@ function openLineupModal(item){
             <div class="hero-row-modal">${heroHtml || '<p class="empty-text">暂无</p>'}</div>
         </div>
         <div class="modal-block">
-            <h4>｜ 功能性英雄</h4>
-            <p class="modal-sub">${item.funcHero || "无"}</p>
+            <h4>｜ 功能替换卡</h4>
+            <div class="hero-row-modal">${funcHeroHtml || '<p class="empty-text">暂无</p>'}</div>
         </div>
         <div class="modal-block">
-            <h4>｜ 打出位/备选</h4>
-            <p class="modal-sub">${item.carryHero || "无"}</p>
+            <h4>｜ 备选英雄</h4>
+            <div class="hero-row-modal">${backupHeroHtml || '<p class="empty-text">暂无</p>'}</div>
         </div>
         <div class="modal-block">
             <h4>｜ 首选装备</h4>
-            <p class="modal-sub">${item.equipFirst || "无"}</p>
+            <div class="hero-grid">${equipFirstHtml || '<p class="empty-text">暂无</p>'}</div>
         </div>
         <div class="modal-block">
-            <h4>｜ 次选装备</h4>
-            <p class="modal-sub">${item.equipSecond || "无"}</p>
+            <h4>｜ 备选装备</h4>
+            <div class="hero-grid">${equipSecondHtml || '<p class="empty-text">暂无</p>'}</div>
         </div>
         <div class="modal-block">
-            <h4>｜ 运营节奏</h4>
-            <p class="modal-sub">${item.operateTip || "无"}</p>
+            <h4>｜ 运营阶段</h4>
+            ${runStageHtml || '<p class="empty-text">暂无运营攻略</p>'}
         </div>
         <div class="modal-block">
             <h4>｜ 注意事项</h4>
@@ -683,19 +749,19 @@ function openLineupModal(item){
                 ${noticeHtml}
             </ul>
         </div>
-        <!-- ========== 新增站位图 ========== -->
         <div class="modal-block">
             <h4>｜ 站位参考</h4>
-            ${item.posImg ? `<img src="${item.posImg}" style="width:100%;max-width:600px;border-radius:8px;">` : '<p class="empty-text">暂无站位图</p>'}
+            ${item.positionImage ? `<img src="${item.positionImage}" style="width:100%;max-width:600px;border-radius:8px;">` : '<p class="empty-text">暂无站位图</p>'}
         </div>
-        <!-- ================================= -->
         <div class="modal-block">
-        <div style="margin-top:16px;color:#ffd369;">
-            阵容码：<span class="copy-code" onclick="copyCode('${item.lineupCode || ''}');">${item.lineupCode || ''}</span>（点击复制）
+            <div style="margin-top:16px;color:#ffd369;">
+                阵容码：<span class="copy-code" onclick="copyCode('${item.lineupCode || ''}');">${item.lineupCode || ''}</span>（点击复制）
+            </div>
         </div>
     `;
     modalDom.style.display = 'flex';
 }
+
 
 
 function renderHomeTopRank(){
