@@ -522,6 +522,8 @@
 "rank": "S",
 "player": "阿离",
 "playerImg": "images/players/ali.png",
+ "alternatePlayer": ["安琪拉","姜导"],
+       "alternatePlayerImg": ["images/players/anqila.png","images/players/jiangdao.png"],
 "hard": "简单",
 "lineupCode": "43406084531758154（点击复制）",
 "ban位": ["大河流域", "河洛", "日落海"],
