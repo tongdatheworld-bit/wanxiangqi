@@ -130,112 +130,175 @@
             font-weight:bold;
             margin-right:6px;
         }
-        /* 阵容卡片 和截图样式对齐 */
-        .lineup-card{
-            background:#1e222d;
-            border:1px solid #333;
-            border-radius:16px;
-            padding:20px;
-            display:flex;
-            align-items:center;
-            gap:20px;
-            cursor:pointer;
-            transition:0.2s;
-            position:relative;
-        }
-        .lineup-card:hover{
-            border-color:#ffd369;
-        }
-        .player-avatar{
-            width:80px;
-            height:80px;
-            border-radius:12px;
-            overflow:hidden;
-            flex-shrink:0;
-        }
-        .player-avatar img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
-        .rank-tag{
-            background:#7b2cbf;
-            color:#fff;
-            font-size:32px;
-            font-weight:bold;
-            width:80px;
-            height:80px;
-            border-radius:16px;
-            display:grid;
-            place-items:center;
-            flex-shrink:0;
-        }
-        .card-right{
-            flex:1;
-            text-align:left;
-        }
-        .name-row{
-            display:flex;
-            align-items:center;
-            gap:12px;
-            margin-bottom:8px;
-            flex-wrap: nowrap;
-            white-space: nowrap;
-        }
-        .lineup-name{
-            font-size:26px;
-            font-weight:bold;
-            color:#ffd878;
-        }
-        .tag{
-            background:#303036;
-            color:#ffd878;
-            padding:4px 10px;
-            border-radius:6px;
-            font-size:14px;
-        }
-        .tag-item{
-            background:#38363a;
-            color:#ffd369;
-            padding:6px 14px;
-            border-radius:8px;
-            font-size:16px;
-        }
-        .meta-row{
-            font-size:16px;
-            color:#c9cdd8;
-            margin-bottom:12px;
-        }
-        .copy-text{
-            color:#ffd369;
-            cursor:pointer;
-        }
-        .hero-row{
-            display:flex;
-            gap:10px;
-        }
-        .hero-item{
-            width:72px;
-            height:72px;
-            border-radius:10px;
-            overflow:hidden;
-            position:relative;
-        }
-        .hero-item img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
-        .core-badge{
-            position:absolute;
-            top:0;
-            right:0;
-            background:#7b2cbf;
-            color:#fff;
-            font-size:12px;
-            padding:2px 5px;
-            border-bottom-left-radius:8px;
-        }
+/* 阵容卡片 */
+.lineup-card {
+    background: #171c29;
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+.lineup-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 211, 105, 0.15);
+}
+
+/* 【上层：文字信息行】 */
+.lineup-info-top {
+    display: flex;
+    align-items: center;
+    gap:12px;
+    flex-wrap: nowrap;
+    margin-bottom:16px;
+}
+.lineup-name {
+    font-size:28px;
+    font-weight:bold;
+    color:#ffd369;
+    white-space: nowrap;
+}
+.ban-title-tag {
+    background-color:#d62222;
+    color:#fff;
+    padding:4px 8px;
+    border-radius:6px;
+    font-weight:bold;
+}
+.ban-item {
+    padding:4px 10px;
+    background:#282e3b;
+    border-radius:6px;
+    color:#ffd369;
+    font-weight: 700;
+}
+.lineup-meta {
+    color:#b1b6c2;
+    font-size:15px;
+    margin-left:auto;
+    white-space: nowrap;
+}
+.copy-code {
+    color:#ffd369;
+    cursor:pointer;
+}
+.copy-code:hover {
+    text-decoration: underline;
+}
+
+/* 【下层：横向一行：强度 + 棋手组 + 英雄组】 */
+.lineup-bottom-row {
+    display: flex;
+    align-items: center;
+    gap:16px;
+}
+/* S+强度方块 */
+.lineup-rank {
+    width:90px;
+    height:90px;
+    flex-shrink:0;
+    background:#7b3fd8;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    font-weight:900;
+    color:#fff;
+}
+/* 棋手区域：主棋手 + 备选棋手 */
+.player-group {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-shrink:0;
+}
+.main-player {
+    width:90px;
+    height:90px;
+    border-radius:16px;
+    overflow:hidden;
+}
+.main-player img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.alternate-col {
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+.alternate-player-label {
+    background:rgba(255,211,105,0.12);
+    color:#ffd369;
+    font-size:12px;
+    padding:2px 6px;
+    border-radius:4px;
+    text-align:center;
+    width:fit-content;
+}
+.alternate-wrap {
+    display:flex;
+    gap:6px;
+}
+.alt-player {
+    width:56px;
+    height:56px;
+    border-radius:12px;
+    overflow:hidden;
+}
+.alt-player img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/* 分割线样式 */
+.hero-divider {
+    width: 2px;
+    height: 52px;
+    background: #2f3542;
+    border-radius: 1px;
+    flex-shrink: 0;
+    margin:0 6px;
+}
+/* 英雄区域，自动占满剩余宽度 */
+.hero-row {
+    display:flex;
+    gap:10px;
+    flex:1;
+    justify-content:flex-start;
+    align-items:center;
+}
+.mini-hero {
+    width:90px;
+    height:90px;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    flex-shrink:0;
+}
+.mini-hero img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.mini-hero.core::after {
+    content:"核";
+    position:absolute;
+    top:-4px;
+    right:-4px;
+    width:22px;
+    height:22px;
+    background:#7b3fd8;
+    color:#fff;
+    font-size:12px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
         /* 弹窗样式 */
         .lineup-modal{
             position:fixed;
@@ -488,36 +551,42 @@ function buildCard(item){
 
 // 打开详情弹窗
 function openLineupModal(item){
-currentLineup = item;
-let heroHtml = '';
-item.heroList.forEach(h=>{
-heroHtml += `
-                    <div class="hero-small">
-                        <img src="${h.img}" alt="${h.name}">
-                        <span>${h.name}</span>
-                    </div>`
-            })
-            modalInner.innerHTML = `
-                <span class="modal-close" onclick="closeModal();">×</span>
-                <div>
-                    <h2>${item.name}</h2>
-                    <p>棋手：${item.playerName}</p>
-                    <p>成型难度：${item.difficulty}</p>
-                    <p>阵容码：<span class="copy-text" onclick="copyCode('${item.code}');">${item.code}</span></p>
-                    <div class="section-title">组成英雄</div>
-                    <div class="hero-grid">${heroHtml}</div>
-                    <div class="section-title">玩法思路</div>
-                    <div class="run-block">
-                        <p>${item.idea}</p>
-                    </div>
-                    <div class="section-title">站位说明</div>
-                    <div class="run-block">
-                        <p>${item.posTip}</p>
-                    </div>
-                </div>
-            `;
-            modalDom.style.display = 'flex';
-        }
+    currentLineup = item;
+    let heroHtml = '';
+    if(Array.isArray(item.heroList)){
+        heroHtml = item.heroList.map(h=>`
+            <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                <img src="${h.img}" alt="${h.name}">
+            </div>`
+        ).join('');
+    }
+    modalInner.innerHTML = `
+        <span class="modal-close" onclick="closeModal();">×</span>
+        <div>
+            <h2>${item.name}</h2>
+            <div class="modal-sub">
+                棋手：${item.player || ''} &nbsp;｜&nbsp;
+                强度：${item.rank || ''} &nbsp;｜&nbsp;
+                成型难度：${item.hard || ''}
+            </div>
+            <p>阵容码：<span class="copy-code" onclick="copyCode('${item.lineupCode}');">${item.lineupCode || ''}</span></p>
+            <div class="modal-block">
+                <h4>组成英雄</h4>
+                <div class="hero-row-modal">${heroHtml || '<p class="empty-text">暂无</p>'}</div>
+            </div>
+            <div class="modal-block">
+                <h4>玩法思路</h4>
+                <p>${item.idea || '暂无'}</p>
+            </div>
+            <div class="modal-block">
+                <h4>站位说明</h4>
+                <p>${item.posTip || '暂无'}</p>
+            </div>
+        </div>
+    `;
+    modalDom.style.display = 'flex';
+}
+
 
 function renderHomeTopRank(){
     const wrap = document.getElementById('homeTopList');
