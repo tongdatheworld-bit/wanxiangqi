@@ -384,6 +384,57 @@
             margin:3px;
             font-size:14px;
         }
+        .modal-sub{
+    color:#b1b6c2;
+    margin:8px 0;
+}
+.modal-block{
+    margin-top:16px;
+}
+.modal-block h4{
+    color:#ffd369;
+    margin-bottom:8px;
+}
+.modal-block p{
+    color:#d1d5e0;
+    line-height:1.6;
+}
+.hero-row-modal{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.mini-hero-modal{
+    width:72px;
+    height:72px;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+}
+.mini-hero-modal img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.mini-hero-modal.core::after{
+    content:"核";
+    position:absolute;
+    top:-4px;
+    right:-4px;
+    width:20px;
+    height:20px;
+    background:#7b3fd8;
+    color:#fff;
+    font-size:11px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.empty-text{
+    color:#777;
+}
+
         /* 解锁弹窗 */
         #lockModal{
             position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;
@@ -560,32 +611,42 @@ function openLineupModal(item){
             </div>`
         ).join('');
     }
+
+    // Ban阵营标签
+    let banModalHtml = '';
+    if(Array.isArray(item["ban位"]) && item["ban位"].length>0){
+        banModalHtml = `<div style="margin:8px 0;"><span style="color:#ff8888">Ban阵营：</span>${item["ban位"].map(b=>`<span class="ban-tag">${b}</span>`).join('')}</div>`
+    }
+
     modalInner.innerHTML = `
         <span class="modal-close" onclick="closeModal();">×</span>
         <div>
-            <h2>${item.name}</h2>
+            <h2 style="color:#ffd369;margin-bottom:8px;">${item.name}</h2>
             <div class="modal-sub">
-                棋手：${item.player || ''} &nbsp;｜&nbsp;
+                棋手：${item.player || '暂无'} &nbsp;｜&nbsp;
                 强度：${item.rank || ''} &nbsp;｜&nbsp;
                 成型难度：${item.hard || ''}
             </div>
+            ${banModalHtml}
             <p>阵容码：<span class="copy-code" onclick="copyCode('${item.lineupCode}');">${item.lineupCode || ''}</span></p>
+
             <div class="modal-block">
                 <h4>组成英雄</h4>
                 <div class="hero-row-modal">${heroHtml || '<p class="empty-text">暂无</p>'}</div>
             </div>
             <div class="modal-block">
                 <h4>玩法思路</h4>
-                <p>${item.idea || '暂无'}</p>
+                <p>${item.idea || '暂无玩法思路'}</p>
             </div>
             <div class="modal-block">
                 <h4>站位说明</h4>
-                <p>${item.posTip || '暂无'}</p>
+                <p>${item.posTip || '暂无站位说明'}</p>
             </div>
         </div>
     `;
     modalDom.style.display = 'flex';
 }
+
 
 
 function renderHomeTopRank(){
