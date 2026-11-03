@@ -682,6 +682,13 @@ function openLineupModal(item){
                 ${noticeHtml}
             </ul>
         </div>
+        <!-- ========== 新增站位图 ========== -->
+        <div class="modal-block">
+            <h4>｜ 站位参考</h4>
+            ${item.posImg ? `<img src="${item.posImg}" style="width:100%;max-width:600px;border-radius:8px;">` : '<p class="empty-text">暂无站位图</p>'}
+        </div>
+        <!-- ================================= -->
+        <div class="modal-block">
         <div style="margin-top:16px;color:#ffd369;">
             阵容码：<span class="copy-code" onclick="copyCode('${item.lineupCode || ''}');">${item.lineupCode || ''}</span>（点击复制）
         </div>
