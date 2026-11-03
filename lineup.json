@@ -5,6 +5,8 @@
         "rank": "S+",
         "player": "嬴律",
         "playerImg": "images/players/yinglv.png",
+       "alternatePlayer": ["庄小鱼","明先生"],
+       "alternatePlayerImg": ["images/players/zhuangxiaoyu.png","images/players/mingxiansheng.png"],
         "hard": "中等",
         "lineupCode": "38337677766581410（点击复制）",
         "ban位": ["逐鹿", "大河流", "三分"],
