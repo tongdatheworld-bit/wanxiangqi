@@ -15,7 +15,8 @@
         body {
             background-color: #12161f;
             color: #e6e8ef;
-            background-image: radial-gradient(circle at 40% 20%, rgba(204, 164, 79, 0.08), transparent 45%);
+            background-image:
+                radial-gradient(circle at 40% 20%, rgba(204, 164, 0, 0.08), transparent 45%);
             min-height: 100vh;
         }
         /* 顶部导航栏 */
@@ -116,19 +117,19 @@
             gap:20px;
         }
         .ban-sep {
-    color:#9aa0b0;
-    margin:0 4px;
-    font-size:16px;
-}
-.ban-title-tag {
-    background:#d92424;
-    color:#ffffff;
-    padding:4px 10px;
-    border-radius:8px;
-    font-size:16px;
-    font-weight:bold;
-    margin-right:6px;
-}
+            color:#9aa0b0;
+            margin:0 4px;
+            font-size:16px;
+        }
+        .ban-title-tag {
+            background:#d92424;
+            color:#ffffff;
+            padding:4px 10px;
+            border-radius:8px;
+            font-size:16px;
+            font-weight:bold;
+            margin-right:6px;
+        }
         /* 阵容卡片 和截图样式对齐 */
         .lineup-card{
             background:#1e222d;
@@ -173,13 +174,13 @@
             flex:1;
             text-align:left;
         }
-       .name-row{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:8px;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+        .name-row{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            margin-bottom:8px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
         }
         .lineup-name{
             font-size:26px;
@@ -187,12 +188,12 @@
             color:#ffd878;
         }
         .tag{
-    background:#303036;
-    color:#ffd878;
-    padding:4px 10px;
-    border-radius:6px;
-    font-size:14px;
-}
+            background:#303036;
+            color:#ffd878;
+            padding:4px 10px;
+            border-radius:6px;
+            font-size:14px;
+        }
         .tag-item{
             background:#38363a;
             color:#ffd369;
@@ -320,14 +321,9 @@
             margin:3px;
             font-size:14px;
         }
-        .pos-img{
-            max-width:100%;
-            border-radius:12px;
-            margin-top:10px;
-        }
         /* 解锁弹窗 */
         #lockModal{
-            position:fixed;inset:0;background:rgba(0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;
+            position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;
         }
     </style>
 </head>
@@ -383,6 +379,10 @@
         const modalDom = document.querySelector('.lineup-modal');
         const modalInner = document.querySelector('.modal-inner');
 
+        function closeModal(){
+            modalDom.style.display = 'none';
+        }
+
         async function loadLineupJson() {
             try {
                 const res = await fetch("./lineup.json");
@@ -395,211 +395,111 @@
             }
         }
 
-// 生成卡片
-function buildCard(item){
-    const div = document.createElement('div');
-    div.className = "lineup-card";
-    let heroHtml = '';
-    item.heroList.forEach(h=>{
-        let coreBadge = h.isCore ? `<div class="core-badge">核</div>` : '';
-        heroHtml += `
-        <div class="hero-item">
-            <img src="${h.img}" alt="${h.name}">
-            ${coreBadge}
-        </div>`
-    });
-    // 羁绊标签渲染
-    let tagHtml = '';
-    if(item.tags && item.tags.length>0){
-        tagHtml = item.tags.map(t=>`<span class="tag">${t}</span>`).join('');
-    }
-    // Ban区域渲染
-    let banHtml = '';
-    if(Array.isArray(item["ban位"]) && item["ban位"].length > 0){
-        banHtml = `<span class="ban-sep">|</span><span class="ban-title-tag">Ban阵营：</span>`
-        + item["ban位"].map(b=>`<span class="tag">${b}</span>`).join('');
-    }
-    div.innerHTML = `
-        <div class="player-avatar">
-            <img src="${item.playerImg}" alt="${item.player}">
-        </div>
-        <div class="rank-tag">${item.rank}</div>
-        <div class="card-right">
-            <div class="name-row">
-                <div class="lineup-name">${item.name}</div>
-                ${banHtml}
-                ${tagHtml}
-            </div>
-            <div class="meta-row">成型难度：${item.hard}　阵容码：<span class="copy-code">${item.lineupCode}</span></div>
-            <div class="hero-row">
-                ${heroHtml}
-            </div>
-        </div>
-    `;
-
-    // ========= 事件必须写在 return 前面！ =========
-    // 卡片点击打开弹窗
-    div.onclick = ()=>{
-        openLineupModal(item);
-    }
-    // 单独给复制文本绑定事件，阻止冒泡
-    const copySpan = div.querySelector('.copy-code');
-    copySpan.onclick = async (e)=>{
-        e.stopPropagation(); // 阻止冒泡，不会触发卡片弹窗
-        try{
-            let codeStr = item.lineupCode.replace("（点击复制）","");
-            await navigator.clipboard.writeText(codeStr.trim());
-            alert("✅ 阵容码复制成功");
-        }catch(err){
-            alert("复制失败："+codeStr)
+        // 复制阵容码
+        async function copyCode(rawCode) {
+            const realCode = rawCode.split("（")[0];
+            try {
+                await navigator.clipboard.writeText(realCode)
+                alert("✅ 阵容码已复制！")
+            } catch (e) {
+                alert("复制失败，请手动复制：" + realCode)
+            }
         }
-    }
 
-    return div;
-}
+        // 生成卡片
+        function buildCard(item){
+            const div = document.createElement('div');
+            div.className = "lineup-card";
+            let heroHtml = '';
+            item.heroList.forEach(h=>{
+                let coreBadge = h.isCore ? `<div class="core-badge">核</div>` : '';
+                heroHtml += `
+                    <div class="hero-item">
+                        <img src="${h.img}" alt="${h.name}">
+                        ${coreBadge}
+                    </div>`
+            });
+            let tagHtml = '';
+            if(item.tags && item.tags.length>0){
+                tagHtml = item.tags.map(t=>`<span class="tag">${t}</span>`).join('');
+            }
+            let banHtml = '';
+            if(Array.isArray(item["ban位"]) && item["ban位"].length > 0){
+                banHtml = `<span class="ban-title-tag">Ban阵营：</span>`
+                + item["ban位"].map(b=>`<span class="tag-item">${b}</span>`).join('');
+            }
+            div.innerHTML = `
+                <div class="player-avatar">
+                    <img src="${item.playerImg}" alt="${item.playerName}">
+                </div>
+                <div class="rank-tag">${item.rank}</div>
+                <div class="card-right">
+                    <div class="name-row">
+                        <div class="lineup-name">${item.name}</div>
+                        ${tagHtml}
+                    </div>
+                    <div class="meta-row">成型难度：${item.difficulty}　｜　阵容码：<span class="copy-text">${item.code}</span></div>
+                    <div class="hero-row">
+                        ${heroHtml}
+                    </div>
+                </div>
+            `;
+            // 复制事件
+            const copySpan = div.querySelector('.copy-text');
+            copySpan.onclick = (e)=>{
+                e.stopPropagation();
+                copyCode(item.code);
+            }
+            // 点击卡片打开弹窗
+            div.onclick = ()=>{
+                openLineupModal(item);
+            }
+            return div;
+        }
 
-        // 打开弹窗，渲染全套信息
+        // 打开详情弹窗
         function openLineupModal(item){
             currentLineup = item;
-            // 组装ban位
-            let banHtml = '';
-            if(item.ban位 && item.ban位.length>0){
-                banHtml = item.ban位.map(b=>`<span class="ban-tag">${b}</span>`).join('');
-            }else{
-                banHtml = "无";
-            }
-            // 主英雄
-            let heroMainHtml = item.heroList.map(h=>`
-                <div class="hero-small">
-                    <img src="${h.img}" alt="${h.name}">
-                    <span>${h.name}${h.isCore?"【核】":""}</span>
-                </div>
-            `).join('');
-            // 功能英雄
-            let heroFuncHtml = item.funcHeroList.map(h=>`
+            let heroHtml = '';
+            item.heroList.forEach(h=>{
+                heroHtml += `
                 <div class="hero-small">
                     <img src="${h.img}" alt="${h.name}">
                     <span>${h.name}</span>
-                </div>
-            `).join('');
-            // 备选英雄
-            let heroBackupHtml = item.backupHeroList.map(h=>`
-                <div class="hero-small">
-                    <img src="${h.img}" alt="${h.name}">
-                    <span>${h.name}</span>
-                </div>
-            `).join('');
-            // 装备1
-            let equip1Html = item.equipFirst.map(e=>`
-                <div class="equip-small">
-                    <img src="${e.img}" alt="${e.name}">
-                    <span>${e.name}</span>
-                </div>
-            `).join('');
-            // 装备2
-            let equip2Html = item.equipSecond.map(e=>`
-                <div class="equip-small">
-                    <img src="${e.img}" alt="${e.name}">
-                    <span>${e.name}</span>
-                </div>
-            `).join('');
-            // 运营阶段
-            let runHtml = '';
-            item.runStage.forEach(r=>{
-                let runHeroHtml = r.heroList.map(h=>`<span style="color:#ffd369;margin-right:6px;">${h.name}</span>`).join('');
-                runHtml += `
-                <div class="run-block">
-                    <h4>${r.title}｜上场：${runHeroHtml}</h4>
-                    <p>${r.desc}</p>
-                </div>
-                `
+                </div>`
             })
-            // 注意事项
-            let noticeHtml = item.notice.map(n=>`<li>${n}</li>`).join('');
-            // 站位图
-            let posImgHtml = '';
-            if(item.positionImage){
-                posImgHtml = `<div class="section-title">站位参考</div><img class="pos-img" src="${item.positionImage}" alt="站位图">`;
-            }
-
             modalInner.innerHTML = `
-                <span class="modal-close">×</span>
-                <div style="margin-top:10px;">
-                    <div style="font-size:32px;color:#ffd369;font-weight:bold;margin-bottom:8px;">${item.name}【${item.rank}】</div>
-                    <div style="margin-bottom:8px;">棋手：${item.player}｜成型难度：${item.hard}</div>
-                    <div style="margin-bottom:8px;">阵容码：<span class="copy-text">${item.lineupCode}</span></div>
-                    <div style="margin-bottom:8px;">禁用羁绊：${banHtml}</div>
-                    
-                    <div class="section-title">成型主阵容</div>
-                    <div class="hero-grid">${heroMainHtml}</div>
-
-                    <div class="section-title">功能英雄</div>
-                    <div class="hero-grid">${heroFuncHtml}</div>
-
-                    <div class="section-title">备选替换</div>
-                    <div class="hero-grid">${heroBackupHtml}</div>
-
-                    <div class="section-title">首选装备</div>
-                    <div class="equip-grid">${equip1Html}</div>
-
-                    <div class="section-title">备选装备</div>
-                    <div class="equip-grid">${equip2Html}</div>
-
-                    <div class="section-title">运营思路</div>
-                    ${runHtml}
-
-                    <div class="section-title">重点注意事项</div>
-                    <ul class="notice-list">${noticeHtml}</ul>
-                    
-                    ${posImgHtml}
+                <span class="modal-close" onclick="closeModal()">×</span>
+                <div>
+                    <h2>${item.name}</h2>
+                    <p>棋手：${item.playerName}</p>
+                    <p>成型难度：${item.difficulty}</p>
+                    <p>阵容码：<span class="copy-text" onclick="copyCode('${item.code}')">${item.code}</span></p>
+                    <div class="section-title">组成英雄</div>
+                    <div class="hero-grid">${heroHtml}</div>
+                    <div class="section-title">玩法思路</div>
+                    <div class="run-block">
+                        <p>${item.idea}</p>
+                    </div>
+                    <div class="section-title">站位说明</div>
+                    <div class="run-block">
+                        <p>${item.posTip}</p>
+                    </div>
                 </div>
             `;
             modalDom.style.display = 'flex';
-            // 关闭弹窗
-            modalInner.querySelector('.modal-close').onclick = ()=>{
-                modalDom.style.display = 'none';
-            }
-            // 弹窗内复制按钮
-            const modalCopy = modalInner.querySelector('.copy-text');
-            modalCopy.onclick = async (e)=>{
-                e.stopPropagation();
-                try{
-                    let codeStr = item.lineupCode.replace("（点击复制）","");
-                    await navigator.clipboard.writeText(codeStr.trim());
-                    alert("✅ 阵容码复制成功");
-                }catch(err){
-                    alert("复制失败："+codeStr)
-                }
-            }
         }
 
-        function renderHomeTopRank() {
-            const homeWrap = document.getElementById('homeTopList');
-            if (!homeWrap) return;
-            const showNameList = [
-                "阿离不死芈月",
-                "无限复活花木兰",
-                "日落海司空震",
-                "孙小宾三分倒转",
-                "昭君大河5+2",
-                "昭君75",
-                "大河龙蛇图腾",
-            ];
-            homeWrap.innerHTML = '';
-            let findAny = false;
-            showNameList.forEach(name => {
-                const target = lineupList.find(item => item.name === name);
-                if (target) {
-                    homeWrap.appendChild(buildCard(target));
-                    findAny = true;
-                }else{
-                    console.warn("JSON中找不到阵容：", name);
-                }
-            });
-            if(!findAny){
-                homeWrap.innerHTML = `<p style="color:#888">⚠️ 没有匹配到任何阵容，请核对 lineup.json 里面的阵容名称！</p>`;
-            }
+        function renderHomeTopRank(){
+            const wrap = document.getElementById('homeTopList');
+            wrap.innerHTML = '';
+            // 取前7条展示在首页排行榜
+            const showList = lineupList.slice(0,7);
+            showList.forEach(item=>{
+                wrap.appendChild(buildCard(item));
+            })
         }
+
         window.addEventListener('load', loadLineupJson);
     </script>
     <!-- 阵容弹窗 -->
@@ -609,15 +509,15 @@ function buildCard(item){
     </div>
 </div>
 <!-- 解锁弹窗 -->
-<div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;">
+<div id="lockModal" style="position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;">
   <div style="background:#1c212c;border:1px solid #282d38;border-radius:16px;padding:32px;text-align:center;color:#e6e8ef;max-width:360px;">
     <h3 style="margin:0 0 16px;color:#ffd369;">🔒 内容解锁</h3>
     <p style="margin:0 0 12px;font-size:14px;color:#9aa0b0;">扫码关注公众号，回复【验证码】获取解锁码</p>
     <img src="./images/wanxiangyitujue.jpg" alt="公众号二维码" style="width:220px;margin-bottom:16px;border-radius:8px;">
-    <input id="codeInput" type="text" placeholder="请输入解锁验证码" style="width:100%;padding:12px 14px;background:#12161f;border:1px solid #333844;border-radius:8px;color:#e6e8ef;margin-bottom:12px;font-size:16px;outline:none;">
+    <input id="codeInput" type="text" placeholder="输入解锁码" style="width:100%;padding:12px 14px;background:#12161f;border:1px solid #333844;border-radius:8px;color:#e6e8ef;margin-bottom:12px;font-size:16px;outline:none;">
     <br>
-    <button id="unlockBtn" style="width:100%;padding:12px;border:none;border-radius:8px;background:linear-gradient(135deg,#ffd369,#ffb020);color:#12161f;font-weight:bold;cursor:pointer;font-size:16px;">确认解锁</button>
-    <p id="tipText" style="margin-top:12px;font-size:14px;display:none;"></p>
+    <button id="unlockBtn" style="width:100%;padding:12px;border:none;border-radius:8px;background:linear-gradient(135deg,#ffd369,#ffb020);color:#12161f;font-weight:bold;cursor:pointer;">确认解锁</button>
+    <p id="tipText" style="margin-top:12px;font-size:14px;display:none;color:#ff7777;"></p>
   </div>
 </div>
 <script>
