@@ -357,6 +357,8 @@
         <div style="margin: 0 0 10px;">
             <h3 style="font-size:22px;color:#ffd369;margin-bottom:18px;text-align:center;">最新阵容强度排行榜</h3>
         </div>
+        <!-- 修改这里的数字，逗号分隔，就是首页要展示的阵容ID -->
+        <div id="homeShowIdList" style="display:none">1,3,4,6</div>
         <div class="lineup-list" id="homeTopList"></div>
     </div>
     <script src="./app.js"></script>
@@ -379,41 +381,41 @@
         const modalDom = document.querySelector('.lineup-modal');
         const modalInner = document.querySelector('.modal-inner');
 
-        function closeModal(){
-            modalDom.style.display = 'none';
-        }
+function closeModal(){
+modalDom.style.display = 'none';
+}
 
-        async function loadLineupJson() {
-            try {
-                const res = await fetch("./lineup.json");
-                lineupList = await res.json();
-                renderHomeTopRank();
-            } catch (err) {
-                console.error("加载 lineup.json 失败：", err);
-                const wrap = document.getElementById('homeTopList');
-                if(wrap) wrap.innerHTML = `<p style="color:#ff8888">❌ 阵容数据加载失败，请检查 lineup.json 文件路径</p>`;
-            }
-        }
+async function loadLineupJson() {
+try {
+const res = await fetch("./lineup.json");
+lineupList = await res.json();
+renderHomeTopRank();
+} catch (err) {
+console.error("加载 lineup.json 失败：", err);
+const wrap = document.getElementById('homeTopList');
+if(wrap) wrap.innerHTML = `<p style="color:#ff8888">❌ 阵容数据加载失败，请检查 lineup.json 文件路径</p>`;
+}
+}
 
-        // 复制阵容码
-        async function copyCode(rawCode) {
-            const realCode = rawCode.split("（")[0];
-            try {
-                await navigator.clipboard.writeText(realCode)
-                alert("✅ 阵容码已复制！")
-            } catch (e) {
-                alert("复制失败，请手动复制：" + realCode)
-            }
-        }
+// 复制阵容码
+async function copyCode(rawCode) {
+const realCode = rawCode.split("（")[0];
+try {
+await navigator.clipboard.writeText(realCode)
+alert("✅ 阵容码已复制！")
+} catch (e) {
+alert("复制失败，请手动复制：" + realCode)
+}
+}
 
-        // 生成卡片
-        function buildCard(item){
-            const div = document.createElement('div');
-            div.className = "lineup-card";
-            let heroHtml = '';
-            item.heroList.forEach(h=>{
-                let coreBadge = h.isCore ? `<div class="core-badge">核</div>` : '';
-                heroHtml += `
+// 生成卡片
+function buildCard(item){
+const div = document.createElement('div');
+div.className = "lineup-card";
+let heroHtml = '';
+item.heroList.forEach(h=>{
+let coreBadge = h.isCore ? `<div class="core-badge">核</div>` : '';
+heroHtml += `
                     <div class="hero-item">
                         <img src="${h.img}" alt="${h.name}">
                         ${coreBadge}
@@ -457,24 +459,24 @@
             return div;
         }
 
-        // 打开详情弹窗
-        function openLineupModal(item){
-            currentLineup = item;
-            let heroHtml = '';
-            item.heroList.forEach(h=>{
-                heroHtml += `
-                <div class="hero-small">
-                    <img src="${h.img}" alt="${h.name}">
-                    <span>${h.name}</span>
-                </div>`
+// 打开详情弹窗
+function openLineupModal(item){
+currentLineup = item;
+let heroHtml = '';
+item.heroList.forEach(h=>{
+heroHtml += `
+                    <div class="hero-small">
+                        <img src="${h.img}" alt="${h.name}">
+                        <span>${h.name}</span>
+                    </div>`
             })
             modalInner.innerHTML = `
-                <span class="modal-close" onclick="closeModal()">×</span>
+                <span class="modal-close" onclick="closeModal();">×</span>
                 <div>
                     <h2>${item.name}</h2>
                     <p>棋手：${item.playerName}</p>
                     <p>成型难度：${item.difficulty}</p>
-                    <p>阵容码：<span class="copy-text" onclick="copyCode('${item.code}')">${item.code}</span></p>
+                    <p>阵容码：<span class="copy-text" onclick="copyCode('${item.code}');">${item.code}</span></p>
                     <div class="section-title">组成英雄</div>
                     <div class="hero-grid">${heroHtml}</div>
                     <div class="section-title">玩法思路</div>
@@ -490,17 +492,24 @@
             modalDom.style.display = 'flex';
         }
 
-        function renderHomeTopRank(){
-            const wrap = document.getElementById('homeTopList');
-            wrap.innerHTML = '';
-            // 取前7条展示在首页排行榜
-            const showList = lineupList.slice(0,7);
-            showList.forEach(item=>{
-                wrap.appendChild(buildCard(item));
-            })
-        }
+function renderHomeTopRank(){
+    const wrap = document.getElementById('homeTopList');
+    const idBox = document.getElementById('homeShowIdList');
+    wrap.innerHTML = '';
+    if(!idBox) return;
 
-        window.addEventListener('load', loadLineupJson);
+    const targetIds = idBox.innerText.split(',')
+        .map(s=>Number(s.trim()))
+        .filter(n=>!isNaN(n));
+
+    targetIds.forEach(id=>{
+        const item = lineupList.find(x=>x.id === id);
+        if(!item) return;
+        wrap.appendChild(buildCard(item));
+    })
+}
+
+window.addEventListener('load', loadLineupJson);
     </script>
     <!-- 阵容弹窗 -->
     <div class="lineup-modal">
@@ -521,27 +530,27 @@
   </div>
 </div>
 <script>
-const RIGHT_CODE = "万象一图诀";
-const lockModal = document.getElementById('lockModal');
-const codeInput = document.getElementById('codeInput');
-const unlockBtn = document.getElementById('unlockBtn');
-const tipText = document.getElementById('tipText');
-if(localStorage.getItem('wanxiang_unlock') === 'ok'){
-  lockModal.style.display = 'none';
-}
-unlockBtn.onclick = function(){
-  const val = codeInput.value.trim();
-  if(val === RIGHT_CODE){
-    lockModal.style.display = 'none';
-    localStorage.setItem('wanxiang_unlock','ok');
-  }else{
-    tipText.style.display = 'block';
-    tipText.textContent = "验证码错误";
-  }
-}
-codeInput.addEventListener('keydown',function(e){
-  if(e.key === 'Enter') unlockBtn.click();
-})
+ const RIGHT_CODE = "万象一图诀";
+ const lockModal = document.getElementById('lockModal');
+ const codeInput = document.getElementById('codeInput');
+ const unlockBtn = document.getElementById('unlockBtn');
+ const tipText = document.getElementById('tipText');
+ if(localStorage.getItem('wanxiang_unlock') === 'ok'){
+   lockModal.style.display = 'none';
+ }
+ unlockBtn.onclick = function(){
+   const val = codeInput.value.trim();
+   if(val === RIGHT_CODE){
+     lockModal.style.display = 'none';
+     localStorage.setItem('wanxiang_unlock','ok');
+   }else{
+     tipText.style.display = 'block';
+     tipText.textContent = "验证码错误";
+   }
+ }
+ codeInput.addEventListener('keydown',function(e){
+   if(e.key === 'Enter') unlockBtn.click();
+ })
 </script>
 </body>
 </html>
