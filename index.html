@@ -605,8 +605,9 @@ function buildCard(item){
     }
     // 点击卡片打开弹窗
     div.onclick = ()=>{
-        openLineupModal(item);
-    }
+    // 跳转到阵容大全页面，url携带id参数
+    location.href = `./lineup.html?id=${item.id}`;
+}
     return div;
 }
 
