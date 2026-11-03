@@ -64,6 +64,17 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="main-player">
                 <img src="${item.playerImg}" alt="${item.player}">
             </div>
+            ${
+                Array.isArray(item.alternatePlayer) && item.alternatePlayer.length > 0
+                ? `<div class="alternate-player-label">备选棋手</div>
+                   <div class="alternate-player-wrap">
+                        ${item.alternatePlayer.map((name,idx)=>{
+                            const imgSrc = item.alternatePlayerImg?.[idx] ?? '';
+                            return `<div class="alt-player"><img src="${imgSrc}" alt="${name}"></div>`
+                        }).join('')}
+                   </div>`
+                : ''
+            }
         </div>
     </div>
     <div class="lineup-main">
@@ -95,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 `).join('');
+
 
         bindCardClick();
     }
