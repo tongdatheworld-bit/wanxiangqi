@@ -57,39 +57,45 @@ document.addEventListener('DOMContentLoaded', function () {
             return
         }
         wrap.innerHTML = filterArr.map(item => `
-        <div class="lineup-card" data-id="${item.id}">
-            <div class="lineup-avatar">
+<div class="lineup-card" data-id="${item.id}">
+    <div class="lineup-left-col">
+        <div class="lineup-rank">${item.rank}</div>
+        <div class="player-group">
+            <div class="main-player">
                 <img src="${item.playerImg}" alt="${item.player}">
             </div>
-            <div class="lineup-rank">${item.rank}</div>
-            <div class="lineup-main">
-              <div class="lineup-top">
-    <div class="lineup-name">${item.name}</div>
-    ${
-        Array.isArray(item["ban位"]) && item["ban位"].length > 0
-        ? `<span class="ban-sep">|</span><span class="ban-title-tag">Ban阵营：</span>` + item["ban位"].map(tag => `<span class="tag">${tag}</span>`).join('')
-        : ''
-    }
-</div>
-                <div class="lineup-meta">
-                    <span>成型难度：${item.hard}</span>
-                    <span class="copy-code" data-code="${item.lineupCode}">阵容码：${item.lineupCode}</span>
-                </div>
-                
-                <div class="hero-row">
-                    ${
-                        item.heroList && Array.isArray(item.heroList) && item.heroList.length
-                        ? item.heroList.map(h => `
-                            <div class="mini-hero ${h.isCore ? 'core' : ''}">
-                                <img src="${h.img}" alt="${h.name}">
-                            </div>
-                        `).join('')
-                        : `<span style=" color:#686e7c; font-size:13px;">暂无英雄</span>`
-                    }
-                </div>
+        </div>
+    </div>
+    <div class="lineup-main">
+        <div class="lineup-header-bar">
+            <div class="lineup-top">
+                <div class="lineup-name">${item.name}</div>
+                ${
+                    Array.isArray(item["ban位"]) && item["ban位"].length > 0
+                    ? `<span class="ban-sep">|</span><span class="ban-title-tag">Ban阵营：</span>` + item["ban位"].map(tag => `${tag}`).join('、')
+                    : ''
+                }
+            </div>
+            <div class="lineup-meta">
+                <span>成型难度：${item.hard}</span>
+                <span class="copy-code" data-code="${item.lineupCode}">阵容码：${item.lineupCode}</span>
             </div>
         </div>
-        `).join('')
+        <div class="hero-row">
+            ${
+                item.heroList && Array.isArray(item.heroList) && item.heroList.length
+                ? item.heroList.map(h => `
+                    <div class="mini-hero ${h.isCore ? 'core' : ''}">
+                        <img src="${h.img}" alt="${h.name}">
+                    </div>
+                `).join('')
+                : `<span style="color:#686e7c; font-size:13px;">暂无英雄</span>`
+            }
+        </div>
+    </div>
+</div>
+`).join('');
+
         bindCardClick();
     }
     function bindCardClick() {
