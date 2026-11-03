@@ -9,7 +9,7 @@
        "alternatePlayerImg": ["images/players/zhuangxiaoyu.png","images/players/mingxiansheng.png"],
         "hard": "中等",
         "lineupCode": "38337677766581410（点击复制）",
-        "ban位": ["逐鹿", "大河流", "三分"],
+        "ban位": ["逐鹿", "大河", "三分"],
         "heroList": [
             {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
             {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
@@ -29,7 +29,7 @@
         "rank": "S+",
         "player": "玉环",
         "playerImg": "images/players/yuhuan.png",
-        "hard": "困难",
+        "hard": "大河",
         "lineupCode": "76616412643475690（点击复制）",
         "ban位": ["日落海"],
         "heroList": [
@@ -91,7 +91,7 @@
         "playerImg": "images/players/zhaojun.png",
         "hard": "中等",
         "lineupCode": "94633913646845962（点击复制）",
-        "ban位": ["逐鹿", "河洛", "三分", "日落海"],
+        "ban位": ["逐鹿", "河洛", "日落海"],
         "heroList": [
             {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
             {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
