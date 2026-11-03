@@ -56,57 +56,56 @@ document.addEventListener('DOMContentLoaded', function () {
             wrap.innerHTML = `<div style="text-align:center;color:#686e7c;padding:40px">没有匹配的阵容</div>`
             return
         }
-        wrap.innerHTML = filterArr.map(item => `
+     
+wrap.innerHTML = filterArr.map(item => `
 <div class="lineup-card" data-id="${item.id}">
-    <div class="lineup-left-purple">
-        <div class="lineup-rank">${item.rank}</div>
-        <div class="main-player">
-            <img src="${item.playerImg}" alt="${item.player}">
-        </div>
-        ${
-            Array.isArray(item.alternatePlayer) && item.alternatePlayer.length > 0
-            ? `<div class="alternate-player-label">备选棋手</div>
-               <div class="alternate-player-wrap">
-                    ${item.alternatePlayer.map((name, idx) => {
-                        const imgSrc = item.alternatePlayerImg?.[idx] ?? '';
-                        return `<div class="alt-player"><img src="${imgSrc}" alt="${name}"></div>`;
-                    }).join('')}
-               </div>`
-            : ''
-        }
-    </div>
-
-    <div class="lineup-center-black">
-        <div class="lineup-top">
-            <span class="lineup-name">${item.name}</span>
-            ${
-                Array.isArray(item["ban位"]) && item["ban位"].length > 0
-                ? `<span class="ban-title-tag">Ban阵营：</span>` + item["ban位"].map(tag => `<span>${tag}</span>`).join('<span class="ban-sep">|</span>')
-                : ''
-            }
-        </div>
+    <!-- 上部分：文字信息 -->
+    <div class="lineup-info-top">
+        <div class="lineup-name">${item.name}</div>
+        <span class="ban-title-tag">Ban阵营：</span>
+        ${(item["ban位"] || []).map(b=>`<span class="ban-item">${b}</span>`).join('')}
         <div class="lineup-meta">
-            <span>成型难度：${item.hard}</span>
+            成型难度：${item.hard} &nbsp;
             <span class="copy-code" data-code="${item.lineupCode}">阵容码：${item.lineupCode}</span>
         </div>
     </div>
 
-    <div class="lineup-right-heroes">
+    <!-- 下部分：横向一整行 -->
+    <div class="lineup-bottom-row">
+        <!-- S+强度 -->
+        <div class="lineup-rank">${item.rank}</div>
+        <!-- 棋手组 -->
+        <div class="player-group">
+            <div class="main-player">
+                <img src="${item.playerImg}" alt="">
+            </div>
+            ${
+                Array.isArray(item.alternatePlayer) && item.alternatePlayer.length>0
+                ? `<div class="alternate-col">
+                    <div class="alternate-player-label">备选棋手</div>
+                    <div class="alternate-wrap">
+                        ${item.alternatePlayer.map((_,idx)=>{
+                            const src = item.alternatePlayerImg?.[idx] || "";
+                            return `<div class="alt-player"><img src="${src}"></div>`
+                        }).join('')}
+                    </div>
+                   </div>`
+                : ""
+            }
+        </div>
+        <!-- 英雄，占满剩余横向空间 -->
         <div class="hero-row">
             ${
-                item.heroList && Array.isArray(item.heroList) && item.heroList.length
-                ? item.heroList.map(h => `
+                (item.heroList || []).map(h=>`
                     <div class="mini-hero ${h.isCore ? 'core' : ''}">
-                        <img src="${h.img}" alt="${h.name}">
+                        <img src="${h.img}" alt="">
                     </div>
                 `).join('')
-                : `<span style="color:#686e7c;font-size:13px;">暂无英雄</span>`
             }
         </div>
     </div>
 </div>
-`).join('');
-
+`).join("");
 
 
         bindCardClick();
