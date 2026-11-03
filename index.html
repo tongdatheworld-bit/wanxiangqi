@@ -410,54 +410,81 @@ alert("复制失败，请手动复制：" + realCode)
 
 // 生成卡片
 function buildCard(item){
-const div = document.createElement('div');
-div.className = "lineup-card";
-let heroHtml = '';
-item.heroList.forEach(h=>{
-let coreBadge = h.isCore ? `<div class="core-badge">核</div>` : '';
-heroHtml += `
-                    <div class="hero-item">
-                        <img src="${h.img}" alt="${h.name}">
-                        ${coreBadge}
-                    </div>`
-            });
-            let tagHtml = '';
-            if(item.tags && item.tags.length>0){
-                tagHtml = item.tags.map(t=>`<span class="tag">${t}</span>`).join('');
-            }
-            let banHtml = '';
-            if(Array.isArray(item["ban位"]) && item["ban位"].length > 0){
-                banHtml = `<span class="ban-title-tag">Ban阵营：</span>`
-                + item["ban位"].map(b=>`<span class="tag-item">${b}</span>`).join('');
-            }
-            div.innerHTML = `
-                <div class="player-avatar">
-                    <img src="${item.playerImg}" alt="${item.playerName}">
+    const div = document.createElement('div');
+    div.className = "lineup-card";
+    div.dataset.id = item.id;
+
+    // Ban位标签
+    let banHtml = '';
+    if(Array.isArray(item["ban位"]) && item["ban位"].length > 0){
+        banHtml = `<span class="ban-title-tag">Ban阵营：</span>`
+        + item["ban位"].map(b=>`<span class="ban-item">${b}</span>`).join('');
+    }
+
+    // 英雄列表 + 核标记
+    let heroHtml = '';
+    if(Array.isArray(item.heroList)){
+        heroHtml = item.heroList.map(h=>`
+            <div class="mini-hero ${h.isCore ? 'core' : ''}">
+                <img src="${h.img}" alt="${h.name}">
+            </div>
+        `).join('');
+    }
+
+    // 备选棋手
+    let alternatePlayerHtml = '';
+    if(Array.isArray(item.alternatePlayer) && item.alternatePlayer.length > 0){
+        alternatePlayerHtml = `
+            <div class="alternate-col">
+                <div class="alternate-player-label">备选棋手</div>
+                <div class="alternate-wrap">
+                    ${item.alternatePlayer.map((_, idx)=>{
+                        const src = item.alternatePlayerImg?.[idx] || "";
+                        return `<div class="alt-player"><img src="${src}"></div>`;
+                    }).join('')}
+            </div>
+        </div>
+        `;
+    }
+
+    // 和 lineup.html 完全一致的DOM结构
+    div.innerHTML = `
+        <div class="lineup-info-top">
+            <div class="lineup-name">${item.name}</div>
+            ${banHtml}
+            <div class="lineup-meta">
+                成型难度：${item.hard} &nbsp;
+                <span class="copy-code" data-code="${item.lineupCode}">阵容码：${item.lineupCode}</span>
+            </div>
+        </div>
+        <div class="lineup-bottom-row">
+            <div class="lineup-rank">${item.rank}</div>
+            <div class="player-group">
+                <div class="main-player">
+                    <img src="${item.playerImg}" alt="">
                 </div>
-                <div class="rank-tag">${item.rank}</div>
-                <div class="card-right">
-                    <div class="name-row">
-                        <div class="lineup-name">${item.name}</div>
-                        ${tagHtml}
-                    </div>
-                    <div class="meta-row">成型难度：${item.difficulty}　｜　阵容码：<span class="copy-text">${item.code}</span></div>
-                    <div class="hero-row">
-                        ${heroHtml}
-                    </div>
-                </div>
-            `;
-            // 复制事件
-            const copySpan = div.querySelector('.copy-text');
-            copySpan.onclick = (e)=>{
-                e.stopPropagation();
-                copyCode(item.code);
-            }
-            // 点击卡片打开弹窗
-            div.onclick = ()=>{
-                openLineupModal(item);
-            }
-            return div;
-        }
+                ${alternatePlayerHtml}
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-row">
+                ${heroHtml}
+            </div>
+        </div>
+    `;
+
+    // 复制阵容码事件
+    const copySpan = div.querySelector('.copy-code');
+    copySpan.onclick = (e)=>{
+        e.stopPropagation();
+        copyCode(item.lineupCode);
+    }
+    // 点击卡片打开弹窗
+    div.onclick = ()=>{
+        openLineupModal(item);
+    }
+    return div;
+}
+
 
 // 打开详情弹窗
 function openLineupModal(item){
