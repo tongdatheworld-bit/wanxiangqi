@@ -490,17 +490,27 @@
     })();
     </script>
     <script>
-        let lineupList = [];
+               let lineupList = [];
         let currentLineup = null;
-        const modalDom = document.querySelector('.lineup-modal');
-        const modalInner = document.querySelector('.modal-inner');
+        let modalDom = null;
+        let modalInner = null;
 
 function closeModal(){
-modalDom.style.display = 'none';
+    if(!modalDom) return;
+    modalDom.style.display = 'none';
 }
 
 async function loadLineupJson() {
 try {
+    // ✅ 等到这里才去拿DOM元素，此时页面全部HTML加载完毕，弹窗div已经存在
+    modalDom = document.querySelector('.lineup-modal');
+    modalInner = document.querySelector('.modal-inner');
+    // 遮罩点击关闭逻辑（补上你之前缺失的）
+    modalDom.addEventListener('click', function(e){
+        if(e.target === modalDom){
+            closeModal();
+        }
+    })
 const res = await fetch("./lineup.json");
 lineupList = await res.json();
 renderHomeTopRank();
@@ -510,6 +520,7 @@ const wrap = document.getElementById('homeTopList');
 if(wrap) wrap.innerHTML = `<p style="color:#ff8888">❌ 阵容数据加载失败，请检查 lineup.json 文件路径</p>`;
 }
 }
+
 
 // 复制阵容码
 async function copyCode(rawCode) {
