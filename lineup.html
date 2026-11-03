@@ -191,177 +191,217 @@
         }
 
         /* 阵容卡片 - 新版 匹配截图布局 */
+/* 阵容卡片 - 对标第一张截图 */
 .lineup-card {
     background: linear-gradient(135deg, #1c212c 0%, #272d3b 100%);
     border: 1px solid #333844;
     border-radius: 16px;
     transition: 0.3s;
     cursor: pointer;
-    padding:16px;
-    display:flex;
-    align-items:flex-start;
-    gap:16px;
+    padding: 16px;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
 }
+
 .lineup-card:hover {
     border-color: rgba(255, 211, 105, 0.5);
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(255, 211, 105, 0.15);
 }
 
-/* 左侧区域：强度方块 + 棋手（含备选棋手） */
-.lineup-left-col{
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    flex-shrink:0;
+/* 左侧紫色强度区 */
+.lineup-left-purple {
+    width: 84px;
+    background: #5b2bb2;
+    border-radius: 12px 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 10px;
+    flex-shrink: 0;
 }
-.lineup-rank{
-    width:64px;
-    height:64px;
-    flex-shrink:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+
+.lineup-rank {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #7b3fd8;
-    border-radius:12px;
-    font-weight:bold;
-    font-size:24px;
-    color:#fff;
-}
-.player-group{
-    display:flex;
-    flex-direction:column;
-    gap:6px;
-}
-.main-player{
-    width:64px;
-    height:64px;
-    border-radius:12px;
-    border:2px solid #333844;
-    overflow:hidden;
-}
-.main-player img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-.alternate-player-wrap{
-    display:flex;
-    gap:6px;
-}
-.alternate-player-label{
-    font-size:11px;
-    color:#ffd369;
-    background:rgba(255,211,105,0.12);
-    padding:2px 6px;
-    border-radius:4px;
-    width:fit-content;
-    margin-bottom:2px;
-}
-.alt-player{
-    width:44px;
-    height:44px;
-    border-radius:10px;
-    border:2px solid #333844;
-    overflow:hidden;
-}
-.alt-player img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 26px;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
 }
 
-/* 右侧主体 */
-.lineup-main{
-    flex:1;
-    min-width:0;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+/* 主棋手 */
+.main-player {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid #333844;
+    overflow: hidden;
+    background: #1c212c;
 }
-/* 顶部黑色信息条 */
-.lineup-header-bar{
-    background:#12161f;
-    border-radius:10px;
-    padding:10px 14px;
+
+.main-player img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
-.lineup-top{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:4px;
+
+/* 备选棋手 */
+.alternate-player-label {
+    font-size: 11px;
+    color: #ffd369;
+    background: rgba(255,211,105,0.12);
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
 }
-.lineup-name{
-    font-size:20px;
-    font-weight:700;
-    color:#ffd369;
+
+.alternate-player-wrap {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
 }
+
+.alt-player {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #333844;
+    overflow: hidden;
+    background: #1c212c;
+}
+
+.alt-player img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 中间黑标题区 */
+.lineup-center-black {
+    background: #12161f;
+    border-radius: 0;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    min-width: 0;
+    flex: 0 0 260px;
+}
+
+.lineup-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.lineup-name {
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    white-space: nowrap;
+}
+
 .ban-title-tag {
-    background:#d92424;
-    color:#ffffff;
-    padding:2px 8px;
-    border-radius:5px;
-    font-size:12px;
-    font-weight:bold;
-    margin-right:4px;
-}
-.ban-sep {
-    color:#9aa0b0;
-    margin:0 4px;
-    font-size:12px;
-}
-.lineup-meta{
-    font-size:12px;
-    color:#9aa0b0;
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-}
-.copy-code{
-    cursor: pointer;
-}
-.copy-code:hover{
-    color:#ffd369;
+    background: #d92424;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-/* 底部英雄行 */
-.hero-row{
-    display:flex;
-    gap:6px;
-    align-items:center;
+.ban-sep {
+    color: #9aa0b0;
+    margin: 0 2px;
+    font-size: 12px;
 }
-.mini-hero{
-    width:64px;
-    height:64px;
-    border-radius:8px;
-    border:1px solid #333844;
-    position:relative;
+
+.lineup-meta {
+    font-size: 12px;
+    color: #9aa0b0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
-.mini-hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+
+.copy-code {
+    cursor: pointer;
+    color: #ffd369;
 }
-.mini-hero.core::after{
-    content:"核";
-    position:absolute;
-    top:-4px;
-    right:-4px;
-    width:18px;
-    height:18px;
-    border-radius:50%;
-    background:#7b3fd8;
-    color:#fff;
-    font-size:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+
+.copy-code:hover {
+    text-decoration: underline;
 }
-.arrow{
-    color:#9aa0b0;
-    font-size:22px;
-    padding:0 8px;
+
+/* 右侧英雄区 */
+.lineup-right-heroes {
+    background: #1c212c;
+    border-radius: 0 12px 12px 0;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.mini-hero {
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    border: 1px solid #333844;
+    position: relative;
+    overflow: hidden;
+    background: #12161f;
+    flex-shrink: 0;
+}
+
+.mini-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mini-hero.core::after {
+    content: "核";
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #7b3fd8;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
         /* 弹窗 */
