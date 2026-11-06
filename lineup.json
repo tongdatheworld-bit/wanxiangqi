@@ -137,7 +137,7 @@
             {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
             {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
         ],
         "equip": []
@@ -275,7 +275,7 @@
             {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
             {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
             {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-            {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false}
         ],
         "equip": []
     },
@@ -295,7 +295,7 @@
             {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
             {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
             {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-            {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false}
         ],
         "equip": []
     },
@@ -335,7 +335,7 @@
             {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
             {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
             {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-            {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false}
         ],
         "equip": []
     },
@@ -769,7 +769,7 @@
             {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false},
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false}
         ]
     },
     {
@@ -948,7 +948,7 @@
     "ban位": ["逐鹿", "日落海"],
     "heroList": [
         {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"马超","img":"images/heroes/machao.png","isCore":true},
         {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false}
     ]
@@ -1189,7 +1189,7 @@
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
         {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
         {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false}
     ]
@@ -1205,7 +1205,7 @@
     "heroList": [
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
         {"name":"貂蝉","img":"images/heroes/diaochan.png","isCore":true},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
@@ -1244,7 +1244,7 @@
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false}
     ]
 },
     {
@@ -1295,7 +1295,7 @@
     "lineupCode": "3435399493396666（点击复制）",
     "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
     "heroList": [
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
         {"name":"芈月","img":"images/heroes/miyue.png","isCore":true},
         {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
@@ -1352,7 +1352,7 @@
     "heroList": [
         {"name":"狂铁","img":"images/heroes/kuangtie.png","isCore":false},
         {"name":"亚连","img":"images/heroes/yalian.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
         {"name":"韩信","img":"images/heroes/hanxin.png","isCore":true},
         {"name":"雅典娜","img":"images/heroes/yadianna.png","isCore":false},
@@ -1427,7 +1427,7 @@
     "ban位": ["河洛", "三分之地", "日落海"],
     "heroList": [
         {"name":"芈月","img":"images/heroes/miyue.png","isCore":true},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
@@ -1448,7 +1448,7 @@
         {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false}
     ]
 },
@@ -1466,7 +1466,7 @@
         {"name":"曜","img":"images/heroes/yao.png","isCore":false},
         {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":false},
         {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false}
     ]
 },
@@ -1689,7 +1689,7 @@
     "ban位": ["大河流域", "河洛"],
     "heroList": [
         {"name":"孙尚香","img":"images/heroes/sunshangxiang.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
         {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":true}
@@ -1744,7 +1744,7 @@
         {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
         {"name":"虞姬","img":"images/heroes/yuji.png","isCore":false},
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
         {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false}
