@@ -964,7 +964,7 @@
     "ban位": ["河洛", "三分之地", "日落海"],
     "heroList": [
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
         {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
