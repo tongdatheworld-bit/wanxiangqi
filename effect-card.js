@@ -61,7 +61,7 @@ const effectList = [
     "desc": "转瞬，全体【逐鹿】英雄本回合获得50（+25×战术牌打出次数，当前：75）点护盾。",
     "source": "该卡通过词条效果等渠道获得。",
     "img": "images/effectcard/yanhuzhanshu.png"
-}
+},
 {
     "id": 2-1,
     "name": "简易协作",
