@@ -24,7 +24,7 @@ const effectList = [
     "pos": "通用",
     "desc": "卡牌4选1（英雄牌）。",
     "source": "该卡通过效果锦囊等渠道获得。",
-    "img": "images/effectcard/xinarencai.png"
+    "img": "images/effectcard/xiyinrencai.png"
 },
     {
     "id": 1-4,
@@ -33,7 +33,7 @@ const effectList = [
     "pos": "通用",
     "desc": "卡牌3选1（1阶英雄牌）。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/1jieyingxionghuanquan.png"
+    "img": "images/effectcard/yijieyingxiongduihuanquan.png"
 },
 {
     "id": 1-5,
@@ -60,7 +60,7 @@ const effectList = [
     "pos": "逐鹿",
     "desc": "转瞬，全体【逐鹿】英雄本回合获得50（+25×战术牌打出次数，当前：75）点护盾。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/yanhuzhanshu.png"
+    "img": "images/effectcard/yuanhuzhanshu.png"
 },
 {
     "id": 2-1,
@@ -78,7 +78,7 @@ const effectList = [
     "pos": "通用",
     "desc": "卡牌3选1（2阶英雄牌）。",
     "source": "该卡通过商店购买、效果锦囊等渠道获得。",
-    "img": "images/effectcard/2jieyingxionghuanquan.png"
+    "img": "images/effectcard/erjieyingxiongduihuanquan.png"
 },
 {
     "id": 2-3,
@@ -213,7 +213,7 @@ const effectList = [
     "pos": "通用",
     "desc": "卡牌3选1（3阶英雄牌）。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/3jieyingxionghuanquan.png"
+    "img": "images/effectcard/sanjieyingxiongduihuanquan.png"
 },
 {
     "id": 3-5,
@@ -258,7 +258,7 @@ const effectList = [
     "pos": "日落海",
     "desc": "阿科米亚核心等级+2，场上每有1名【日落海】英雄重复1次。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/zhulixinhe.png"
+    "img": "images/effectcard/zhulihexin.png"
 },
 {
     "id": 3-10,
@@ -321,7 +321,7 @@ const effectList = [
     "pos": "无阵营",
     "desc": "获得2张无阵营英雄牌。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/wuzhengyingzhengzhaoling.png"
+    "img": "images/effectcard/wuzhenyingzhengzhaoling.png"
 },
     {
     "id": 3-17,
@@ -375,7 +375,7 @@ const effectList = [
     "pos": "通用",
     "desc": "卡牌3选1（4阶英雄牌）。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/4jieyingxionghuanquan.png"
+    "img": "images/effectcard/sijieyingxiongduihuanquan.png"
 },
 {
     "id": 4-2,
@@ -384,7 +384,7 @@ const effectList = [
     "pos": "通用",
     "desc": "使场上等级最低（临时等级除外）的英雄提升9级。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/fuqingjiro.png"
+    "img": "images/effectcard/fuqingjiruo.png"
 },
 {
     "id": 4-3,
@@ -447,7 +447,7 @@ const effectList = [
     "pos": "通用",
     "desc": "获得2张4阶英雄牌。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/4jieyingxiong.png"
+    "img": "images/effectcard/sijieyingxiong.png"
 },
 {
     "id": 4-10,
@@ -546,7 +546,7 @@ const effectList = [
     "pos": "通用",
     "desc": "卡牌3选1（5阶英雄牌）。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/5jieyingxionghuanquan.png"
+    "img": "images/effectcard/wujieyingxiongduihuanquan.png"
 },
 {
     "id": 5-2,
@@ -591,7 +591,7 @@ const effectList = [
     "pos": "通用",
     "desc": "立即触发所有英雄的整备效果。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/quanjuandongyuan.png"
+    "img": "images/effectcard/quanjundongyuan.png"
 },
 {
     "id": 5-7,
@@ -646,7 +646,7 @@ const effectList = [
     "pos": "通用",
     "desc": "获得2张5阶英雄牌。",
     "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/5jieyingxiong.png"
+    "img": "images/effectcard/wujieyingxiong.png"
 },
 {
     "id": 5-13,
@@ -711,53 +711,8 @@ const effectList = [
     "source": "该卡通过词条效果等渠道获得。",
     "img": "images/effectcard/zhenpinbaoxiang.png"
 },
-{
-    "id": 5-20,
-    "name": "5阶英雄",
-    "type": "五阶",
-    "pos": "通用",
-    "desc": "获得2张5阶英雄牌。",
-    "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/5jieyingxiong.png"
-},
-{
-    "id": 5-21,
-    "name": "度命之护",
-    "type": "五阶",
-    "pos": "河洛",
-    "desc": "获得1张特殊装备贤者的庇护。可穿戴给【河洛】英雄，穿戴者会在首次被击败的2秒后复生，仅恢复30%生命值。",
-    "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/dumingzhihu.png"
-},
-{
-    "id": 5-22,
-    "name": "久经沙场",
-    "type": "五阶",
-    "pos": "逐鹿",
-    "desc": "指定1名已觉醒的【逐鹿】英雄，获得1张该英雄牌。",
-    "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/jiujingshachang.png"
-},
-{
-    "id": 5-23,
-    "name": "机关秘典",
-    "type": "五阶",
-    "pos": "逐鹿",
-    "desc": "获得1件特殊装备机关匣：可穿戴给【逐鹿】英雄，使其获得效果：战斗开始时，召唤2个“故障机器人”。",
-    "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/jiguanmidian.png"
-},
-{
-    "id": 5-24,
-    "name": "图腾祝福",
-    "type": "五阶",
-    "pos": "大河流域",
-    "desc": "随机1名【大河流域】英雄等级+5。场上每有1个图腾，额外触发1次此效果。",
-    "source": "该卡通过词条效果等渠道获得。",
-    "img": "images/effectcard/tutengzhufu.png"
-},
     {
-    "id": 5-25,
+    "id": 5-20,
     "name": "因材施教",
     "type": "五阶",
     "pos": "通用",
@@ -766,7 +721,7 @@ const effectList = [
     "img": "images/effectcard/yincaishijiao.png"
 },
 {
-    "id": 5-26,
+    "id": 5-21,
     "name": "奇谋",
     "type": "五阶",
     "pos": "三分之地",
@@ -775,7 +730,7 @@ const effectList = [
     "img": "images/effectcard/qimou.png"
 },
 {
-    "id": 5-27,
+    "id": 5-22,
     "name": "开局狂飙",
     "type": "五阶",
     "pos": "通用",
@@ -784,7 +739,7 @@ const effectList = [
     "img": "images/effectcard/kaijukuangbiao.png"
 },
 {
-    "id": 5-28,
+    "id": 5-23,
     "name": "高阶推演战术",
     "type": "五阶",
     "pos": "逐鹿",
