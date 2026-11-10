@@ -30,7 +30,7 @@
         {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
     ],
     "equipFirst": [
-        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjian.png"},
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"},
         {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
     ],
