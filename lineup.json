@@ -74,7 +74,7 @@
                 {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
                 {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
             ],
-            "desc": "第三轮拍卖：众星拱月（拉高花木兰等级）/破镜之证（拉高花木兰等级）/天籁琴音（婉儿没觉醒）/能量超新星（资源）/一线升级（抢嫦娥必拿的，顶到9块让他难受）。12回合后的任务很简单，就是搜子弹，打子弹（给足花木兰复活次数够打赢对面），提升花木兰等级，优化装备，调站位。"
+            "desc": "第三轮拍卖：众星拱月（拉高花木兰等级）/破镜之证（拉高花木兰等级）/天籁琴音（婉儿没觉醒）/能量超新星（资源）/一线生机。12回合后的任务很简单，就是搜子弹，打子弹（给足花木兰复活次数够打赢对面），提升花木兰等级，优化装备，调站位。"
         }
     ],
     "notice": [
@@ -87,25 +87,94 @@
 }
 ,
     {
-        "id": 2,
-        "name": "日落海司空震",
-        "rank": "S+",
-        "player": "玉环",
-        "playerImg": "images/players/yuhuan.png",
-        "hard": "大河",
-        "lineupCode": "76616412643475690（点击复制）",
-        "ban位": ["日落海"],
-        "heroList": [
-            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
-            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-            {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
-            {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
-            {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
-            {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-        ],
-        "equip": []
-    },
+    "id": 2,
+    "name": "玉环日落海司空震",
+    "rank": "S+",
+    "player": "玉环",
+    "playerImg": "images/players/yuhuan.png",
+    "alternatePlayer": ["小妲己"],
+    "alternatePlayerImg": ["images/players/xiaodaji.png"],
+    "hard": "困难",
+    "lineupCode": "76616412643475690",
+    "ban位": ["大河流域"],
+    "heroList": [
+        {"name": "司空震", "img": "images/heroes/sikongzhen.png", "isCore": true},
+        {"name": "姜子牙", "img": "images/heroes/jiangziya.png", "isCore": false},
+        {"name": "海诺", "img": "images/heroes/hainuo.png", "isCore": false},
+        {"name": "莱西奥", "img": "images/heroes/laixiao.png", "isCore": false},
+        {"name": "亚瑟", "img": "images/heroes/yase.png", "isCore": false},
+        {"name": "姬小满", "img": "images/heroes/jixiaoman.png", "isCore": false}
+    ],
+    "funcHeroList": [
+        {"name": "姜子牙", "img": "images/heroes/jiangziya.png", "isCore": false},
+        {"name": "姬小满", "img": "images/heroes/jixiaoman.png", "isCore": false},
+        {"name": "亚瑟", "img": "images/heroes/yase.png", "isCore": false},
+        {"name": "海诺", "img": "images/heroes/hainuo.png", "isCore": false},
+        {"name": "莱西奥", "img": "images/heroes/laixiao.png", "isCore": false}
+    ],
+    "backupHeroList": [
+        {"name": "甄姬", "img": "images/heroes/zhenji.png", "isCore": false},
+        {"name": "庄周", "img": "images/heroes/zhuangzhou.png", "isCore": false}
+    ],
+    "equipFirst": [
+        {"name": "金色圣剑", "img": "images/equip/equipsmall/jinseshengjian.png"},
+        {"name": "痛苦面具", "img": "images/equip/equipsmall/tongkumianju.png"},
+        {"name": "炽热支配者", "img": "images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name": "聚灵法杖", "img": "images/equip/equipsmall/julingfazhang.png"},
+        {"name": "名刀司命", "img": "images/equip/equipsmall/mingdaosiming.png"},
+        {"name": "虚无法杖", "img": "images/equip/equipsmall/xuwufazhang.png"}
+    ],
+    "talentTong": [{"name": "银算盘"},{"name": "防御领域"}],
+    "talentYin": [{"name": "金算盘"},{"name": "人才济济"}],
+    "talentJin": [{"name": "能量汲取"},{"name": "能量置换"}],
+    "effectCard": [{"name": "武装重构"},{"name": "精选武装"},{"name": "军械库"}],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name": "狂铁", "img": "images/heroes/kuangtie.png"},
+                {"name": "牛魔", "img": "images/heroes/niumo.png"},
+                {"name": "弈星", "img": "images/heroes/yixing.png"}
+            ],
+            "desc": "开局先上狂铁+牛魔，二回合再上弈星触发扫拂，后续连续打出3张弈星并觉醒上场，随后棋手直接升5级。第一轮拍卖：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name": "司空震", "img": "images/heroes/sikongzhen.png", "isCore": true},
+                {"name": "姜子牙", "img": "images/heroes/jiangziya.png", "isCore": false},
+                {"name": "海诺", "img": "images/heroes/hainuo.png", "isCore": false},
+                {"name": "莱西奥", "img": "images/heroes/laixiao.png", "isCore": false},
+                {"name": "亚瑟", "img": "images/heroes/yase.png", "isCore": false},
+                {"name": "姬小满", "img": "images/heroes/jixiaoman.png", "isCore": false}
+            ],
+            "desc": "第一轮拍卖务必拿到一张日落海棋子，确保第三轮琴音弹出三张不同阶日落海的吟揉指法。正常情况下没有其他经济和经验天赋，是第二轮拍卖结束后棋手可以升5级，5级后，开始弹琴并找核心体系牌，姜子牙优先级大于司空震。经济或者质量不好，就留在5级刷牌，直到两轮大招刷完后，没大招了才升6级再拿3个大招。第二轮拍卖：姜子牙>司空震>海诺>莱西奥"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name": "司空震", "img": "images/heroes/sikongzhen.png", "isCore": true},
+                {"name": "姜子牙", "img": "images/heroes/jiangziya.png", "isCore": false},
+                {"name": "海诺", "img": "images/heroes/hainuo.png", "isCore": false},
+                {"name": "莱西奥", "img": "images/heroes/laixiao.png", "isCore": false},
+                {"name": "亚瑟", "img": "images/heroes/yase.png", "isCore": false},
+                {"name": "姬小满", "img": "images/heroes/jixiaoman.png", "isCore": false}
+            ],
+            "desc": "第三轮拍卖：能量超新星>扶摇直上>天籁琴音>超级复印机。12回合后就是反复刷牌的节奏，另外就是决赛需要注意上钟馗太乙，调整装备。"
+        }
+    ],
+    "notice": [
+        "1、司空震金色圣剑必备，聚灵法杖是神装，看到必拿。",
+        "2、司空震基础等级和是否觉醒非常重要，直接决定了偷取核心等级的上限，在司空震觉醒后，本体333级，核心666级即可达成999级司空震。",
+        "3、本阵容最怕就是体系不全，如姜子牙一直不来打牌卖牌该刷的等级没刷到，要么就是司空震来得晚，等级起的晚，这个时候就先用海诺打工，能多苟会就多苟会。",
+        "4、刷哈牌优先逐鹿组：庄周为首，三分组：甄姬为首。还有4能量2张牌的效果牌。",
+        "5、效果牌的选择优先重铸司空震装备，其次全拿牌，有移花接木也拿留着。"
+    ],
+    "positionImage": "images/position/2.yuhuanriluohaisikongzhen.png"
+}
+,
     {
         "id": 3,
         "name": "孙小宾三分倒转",
