@@ -1,7 +1,7 @@
 [
     {
     "id": 1,
-    "name": "嬴律无限复活花木兰",
+    "name": "嬴律河洛花木兰",
     "rank": "S+",
     "player": "嬴律",
     "playerImg": "images/players/yinglv.png",
@@ -83,7 +83,7 @@
         "3、根据对手质量，判断要用多少资源就用多少资源，不要浪费。",
         "4、花木兰没来前，先用李白打工，尽量少掉血。"
     ],
-    "positionImage": "images/position/1.yinglvheluohuamulan.png.png"
+    "positionImage": "images/position/1.yinglvheluohuamulan.png"
 }
 ,
     {
