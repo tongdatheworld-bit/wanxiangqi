@@ -457,102 +457,98 @@
             border-radius: 8px;
         }
 
-        /* ========== 新增：天赋Tab + 天赋卡片样式（和截图第二张对齐） ========== */
-        .talent-tab-header{
-            display:flex;
-            gap:8px;
-            margin-bottom:14px;
-        }
-        .talent-tab-item{
-            padding:5px 16px;
-            border-radius:6px 6px 0 0;
-            cursor:pointer;
-            background:#343a48;
-            color:#ccc;
-            font-size:14px;
-            transition:0.2s;
-        }
-        .talent-tab-item.active{
-            background:#ffd369;
-            color:#12161f;
-            font-weight:bold;
-        }
-        .talent-tab-panel{
-            display:none;
-        }
-        .talent-tab-panel.show{
-            display:flex;
-            gap:12px;
-            flex-wrap:wrap;
-        }
-        .talent-card-full{
-            width:150px;
-            background:#1e232f;
-            border-radius:10px;
-            overflow:hidden;
-            border:1px solid #383e4c;
-        }
-        .talent-card-imgbox{
-            height:100px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            background:#252b38;
-        }
-        .talent-card-imgbox img{
-            width:68px;
-            height:68px;
-            object-fit:cover;
-        }
-        .talent-card-desc{
-            padding:7px;
-            font-size:11px;
-            color:#bbbbbb;
-            line-height:1.4;
-            min-height:68px;
-        }
-        .talent-card-name{
-            text-align:center;
-            padding:5px 0;
-            color:#ffd369;
-            font-weight:bold;
-            font-size:14px;
-            background:#222733;
-        }
-        /* 效果牌完整卡片 */
-        .effect-card-full{
-            width:165px;
-            background:#1e232f;
-            border-radius:10px;
-            overflow:hidden;
-            border:1px solid #383e4c;
-        }
-        .effect-card-imgbox{
-            height:115px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            background:#252b38;
-        }
-        .effect-card-imgbox img{
-            width:130px;
-            object-fit:cover;
-        }
-        .effect-card-desc{
-            padding:7px;
-            font-size:11px;
-            color:#bbbbbb;
-            line-height:1.4;
-            min-height:52px;
-        }
-        .effect-card-name{
-            text-align:center;
-            padding:5px 0;
-            color:#ffd369;
-            font-weight:bold;
-            font-size:14px;
-            background:#222733;
-        }
+      /* 天赋推荐：三列平铺，不再使用 Tab 切换 */
+.talent-three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+}
+
+.talent-col-block {
+    background: #1e232f;
+    border: 1px solid #383e4c;
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.talent-col-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffd369;
+    margin-bottom: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.talent-col-tong .talent-col-title {
+    background: #70543c;
+    color: #ffddb0;
+}
+
+.talent-col-yin .talent-col-title {
+    background: #787c84;
+    color: #e8ebf0;
+}
+
+.talent-col-jin .talent-col-title {
+    background: #b88600;
+    color: #fff8e0;
+}
+
+.talent-col-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+      /* 效果牌三列容器 */
+.effect-three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+}
+.effect-card-full{
+    background:#1e232f;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid #383e4c;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.effect-card-imgbox{
+    width:100%;
+    height:130px;
+    border-radius:10px;
+    overflow:hidden;
+    background:#252b38;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.effect-card-imgbox img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.effect-card-desc{
+    padding:7px 0;
+    font-size:12px;
+    color:#bbbbbb;
+    line-height:1.5;
+    min-height:54px;
+    text-align:center;
+}
+.effect-card-name{
+    text-align:center;
+    padding:5px 0 0;
+    color:#ffd369;
+    font-weight:bold;
+    font-size:15px;
+}
+
 
         /* 解锁弹窗 */
         #lockModal{
@@ -915,23 +911,29 @@
   <!-- ========== 天赋推荐 Tab切换模块（和截图第二张一模一样） ========== -->
  <h4 class="section-title">天赋推荐</h4>
  <div class="run-block">
-    <div class="talent-tab-header">
-        <div class="talent-tab-item active" data-tab="tong">铜天赋</div>
-        <div class="talent-tab-item" data-tab="yin">银天赋</div>
-        <div class="talent-tab-item" data-tab="jin">金天赋</div>
+  <div class="talent-three-col">
+    <div class="talent-col-block talent-col-tong">
+        <div class="talent-col-title">铜天赋</div>
+        <div class="talent-col-cards">${talentTongCardHtml}</div>
     </div>
-    <div class="talent-tab-panel show" data-panel="tong">${talentTongCardHtml}</div>
-    <div class="talent-tab-panel" data-panel="yin">${talentYinCardHtml}</div>
-    <div class="talent-tab-panel" data-panel="jin">${talentJinCardHtml}</div>
- </div>
+    <div class="talent-col-block talent-col-yin">
+        <div class="talent-col-title">银天赋</div>
+        <div class="talent-col-cards">${talentYinCardHtml}</div>
+    </div>
+    <div class="talent-col-block talent-col-jin">
+        <div class="talent-col-title">金天赋</div>
+        <div class="talent-col-cards">${talentJinCardHtml}</div>
+    </div>
+</div>
 
   <!-- ========== 效果牌推荐 完整卡牌 ========== -->
  <h4 class="section-title">效果牌推荐</h4>
  <div class="run-block">
-    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <div class="effect-three-col">
         ${effectCardFullHtml}
     </div>
  </div>
+
 
   <h4 class="section-title">运营阶段</h4>
  ${runStageHtml || `
@@ -960,23 +962,6 @@
  </div>
        `;
             modalDom.style.display = 'flex';
-
-            // 绑定天赋Tab点击事件（每次打开弹窗后重新绑定）
-            setTimeout(()=>{
-                const tabItems = modalInner.querySelectorAll('.talent-tab-item');
-                tabItems.forEach(tab=>{
-                    tab.onclick = ()=>{
-                        // 清除激活
-                        tabItems.forEach(t=>t.classList.remove('active'));
-                        tab.classList.add('active');
-                        const targetKey = tab.dataset.tab;
-                        // 隐藏所有面板
-                        modalInner.querySelectorAll('.talent-tab-panel').forEach(p=>p.classList.remove('show'));
-                        // 显示对应面板
-                        modalInner.querySelector(`.talent-tab-panel[data-panel="${targetKey}"]`).classList.add('show');
-                    }
-                })
-            },0);
         }
 
         function renderHomeTopRank(){
