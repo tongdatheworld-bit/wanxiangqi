@@ -14,24 +14,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const lineupWrap = document.getElementById('lineupList');
     const filterChips = document.querySelectorAll('.filter-chip');
     const searchInput = document.getElementById('searchInput');
+
     // 加载JSON
     if (lineupWrap) {
-    // 一开始先放加载文字，避免空白、乱码闪烁
-    lineupWrap.innerHTML = `<div style="text-align:center;color:#b4b9c6;padding:40px">正在加载阵容...</div>`;
-    fetch('./lineup.json')
-        .then(res => {
-            if (!res.ok) throw new Error('json读取失败');
-            return res.json();
-        })
-        .then(data => {
-            allLineupData = data;
-            renderList(); // renderList 会覆盖掉加载提示
-        })
-        .catch(err => {
-            console.error('数据加载失败：', err);
-            lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 lineup.json</div>`;
-        })
-}
+        // 一开始先放加载文字，避免空白、乱码闪烁
+        lineupWrap.innerHTML = `<div style="text-align:center;color:#b4b9c6;padding:40px">正在加载阵容...</div>`;
+        fetch('./lineup.json')
+            .then(res => {
+                if (!res.ok) throw new Error('json读取失败');
+                return res.json();
+            })
+            .then(data => {
+                allLineupData = data;
+                renderList(); // renderList 会覆盖掉加载提示
+            })
+            .catch(err => {
+                console.error('数据加载失败：', err);
+                lineupWrap.innerHTML = `<div style="text-align:center;color:red;padding:40px">数据加载失败，请检查 lineup.json</div>`;
+            })
+    }
+
     function renderList() {
         const wrap = document.getElementById('lineupList');
         if (!wrap) return;
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
             wrap.innerHTML = `<div style="text-align:center;color:#686e7c;padding:40px">没有匹配的阵容</div>`
             return
         }
-     wrap.innerHTML = filterArr.map(item => `
+        wrap.innerHTML = filterArr.map(item => `
 <div class="lineup-card" data-id="${item.id}">
     <!-- 上部分：文字信息 -->
     <div class="lineup-info-top">
@@ -107,32 +109,31 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 `).join("");
-
-
-
         bindCardClick();
     }
+
     function bindCardClick() {
         const modal = document.getElementById('detailModal');
         const modalBody = document.getElementById('modalBody');
         const closeModalBtn = document.getElementById('closeModal');
         if (!modal || !modalBody) return;
         if(!lineupWrap) return;
-      lineupWrap.onclick = function (e) {
-    // 点击复制码优先处理，阻止弹窗
-    const copyDom = e.target.closest('.copy-code');
-    if(copyDom){
-        e.stopPropagation();
-        const code = copyDom.dataset.code;
-        copyCode(code);
-        return;
-    }
 
-    const card = e.target.closest('.lineup-card');
-    if (!card) return;
-    const id = Number(card.dataset.id);
-    const find = allLineupData.find(x => x.id === id);
-    if (!find) return;
+        lineupWrap.onclick = function (e) {
+            // 点击复制码优先处理，阻止弹窗
+            const copyDom = e.target.closest('.copy-code');
+            if(copyDom){
+                e.stopPropagation();
+                const code = copyDom.dataset.code;
+                copyCode(code);
+                return;
+            }
+
+            const card = e.target.closest('.lineup-card');
+            if (!card) return;
+            const id = Number(card.dataset.id);
+            const find = allLineupData.find(x => x.id === id);
+            if (!find) return;
 
             // 主英雄列表（只头像，无文字）
             const heroHtml = Array.isArray(find.heroList) && find.heroList.length
@@ -158,23 +159,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                   `).join('')
                 : '<span class="empty-text">无</span>';
-           
+
             // 首选装备
-           const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
-    ? find.equipFirst.map(e => `
-        <span class="equip-pill">
-            <img src="${e.img}" alt="${e.name}">
-        </span>
-      `).join('')
-    : '<span class="empty-text">无</span>';
+            const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
+                ? find.equipFirst.map(e => `
+                    <span class="equip-pill">
+                        <img src="${e.img}" alt="${e.name}">
+                    </span>
+                  `).join('')
+                : '<span class="empty-text">无</span>';
             // 次选装备
-           const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
-    ? find.equipSecond.map(e => `
-        <span class="equip-pill">
-            <img src="${e.img}" alt="${e.name}">
-        </span>
-      `).join('')
-    : '<span class="empty-text">无</span>';
+            const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
+                ? find.equipSecond.map(e => `
+                    <span class="equip-pill">
+                        <img src="${e.img}" alt="${e.name}">
+                    </span>
+                  `).join('')
+                : '<span class="empty-text">无</span>';
             // 运营阶段
             const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
                 ? find.runStage.map(stage => `
@@ -199,58 +200,39 @@ document.addEventListener('DOMContentLoaded', function () {
             const noticeHtml = Array.isArray(find.notice) && find.notice.length
                 ? find.notice.map(n => `<li>${n}</li>`).join('')
                 : '<li class="empty-text">无</li>';
-            // 站位图（统一class：pos-grid / pos-row / pos-cell，和CSS匹配）
-            let positionHtml = '<span class="empty-text">无</span>';
-            if (Array.isArray(find.positionGrid) && find.positionGrid.length) {
-                positionHtml = `
-                    <div class="pos-grid">
-                        ${find.positionGrid.map(row => `
-                            <div class="pos-row">
-                                ${row.map(cell => {
-                                    if (cell && cell.img && cell.name) {
-                                        return `<div class="pos-cell"><img src="${cell.img}" alt="${cell.name}" title="${cell.name}"></div>`;
-                                    }
-                                    return `<div class="pos-cell empty"></div>`;
-                                }).join('')}
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-            }
+
             modalBody.innerHTML = `
-        <div class="modal-top-info">
-            <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
-            <div class="info-text">
-                <h2>${find.name}</h2>
-                <div class="modal-sub">强度：${find.rank}｜成型难度：${find.hard}</div>
-            </div>
-        </div>
-                <div class="modal-block">
-                    <h4>BAN阵营</h4>
-                    <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
-                </div>
-                <div class="modal-block">
-                    <h4>阵容组成</h4>
-                    <div class="hero-row-modal">${heroHtml}</div>
-                </div>
-                <div class="modal-block">
-                    <h4>功能性英雄</h4>
-                    <div class="hero-row-modal">${funcHeroHtml}</div>
-                </div>
-                <div class="modal-block">
-                    <h4>打出位/备选</h4>
-                    <div class="hero-row-modal">${backupHeroHtml}</div>
-                </div>
-                <div class="modal-block">
-                    <h4>首选装备</h4>
-                    <div class="equip-list">${equipFirstHtml}</div>
-                </div>
-                <div class="modal-block">
-                    <h4>次选装备</h4>
-                    <div class="equip-list">${equipSecondHtml}</div>
-                </div>
-                <div class="modal-block">
-                <!-- 天赋推荐模块 -->
+<div class="modal-top-info">
+    <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
+    <div class="info-text">
+        <h2>${find.name}</h2>
+        <div class="modal-sub">强度：${find.rank}｜成型难度：${find.hard}</div>
+    </div>
+</div>
+<div class="modal-block">
+    <h4>BAN阵营</h4>
+    <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
+</div>
+<div class="modal-block">
+    <h4>阵容组成</h4>
+    <div class="hero-row-modal">${heroHtml}</div>
+</div>
+<div class="modal-block">
+    <h4>功能性英雄</h4>
+    <div class="hero-row-modal">${funcHeroHtml}</div>
+</div>
+<div class="modal-block">
+    <h4>打出位/备选</h4>
+    <div class="hero-row-modal">${backupHeroHtml}</div>
+</div>
+<div class="modal-block">
+    <h4>首选装备</h4>
+    <div class="equip-list">${equipFirstHtml}</div>
+</div>
+<div class="modal-block">
+    <h4>次选装备</h4>
+    <div class="equip-list">${equipSecondHtml}</div>
+</div>
 <div class="modal-block">
     <h4>天赋推荐</h4>
     <div class="talent-group-row">
@@ -268,36 +250,50 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 </div>
-
-<!-- 效果牌推荐模块 -->
 <div class="modal-block">
     <h4>效果牌推荐</h4>
     <div class="effect-card-list" id="effectCardBox"></div>
 </div>
-
-                    <h4>运营节奏</h4>
-                    <div class="run-stage-list">${runStageHtml}</div>
-                </div>
-                <div class="modal-block">
-                    <h4>注意事项</h4>
-                    <ul class="notice-list">${noticeHtml}</ul>
-                </div>
-                <div class="modal-block">
-                    <h4>站位</h4>
-                    <div class="position-image-box">
-                    ${find.positionImage ?
-                   `<img src="${find.positionImage}" alt="站位图" onerror="this.style.display='none'">`
-                   : `<div class="position-image-placeholder">暂无站位图</div>`
+<div class="modal-block">
+    <h4>运营节奏</h4>
+    <div class="run-stage-list">${runStageHtml}</div>
+</div>
+<div class="modal-block">
+    <h4>注意事项</h4>
+    <ul class="notice-list">${noticeHtml}</ul>
+</div>
+<div class="modal-block">
+    <h4>站位</h4>
+    <div class="position-image-box">
+        ${find.positionImage
+            ? `<img src="${find.positionImage}" alt="站位图" onerror="this.style.display='none'">`
+            : `<div class="position-image-placeholder">暂无站位图</div>`
         }
     </div>
 </div>
-                <div class="modal-block">
-                    <h4>阵容码</h4>
-                    <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
-                </div>
+<div class="modal-block">
+    <h4>阵容码</h4>
+    <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
+</div>
             `;
+
+            // ========== 渲染天赋和效果卡 ==========
+            let tongHtml = find.talentTong?.map(t=>`<span class="talent-tag">${t.name}</span>`).join('');
+            document.getElementById('talentTongBox').innerHTML = tongHtml || '<span class="empty-text">无</span>';
+
+            let yinHtml = find.talentYin?.map(t=>`<span class="talent-tag">${t.name}</span>`).join('');
+            document.getElementById('talentYinBox').innerHTML = yinHtml || '<span class="empty-text">无</span>';
+
+            let jinHtml = find.talentJin?.map(t=>`<span class="talent-tag">${t.name}</span>`).join('');
+            document.getElementById('talentJinBox').innerHTML = jinHtml || '<span class="empty-text">无</span>';
+
+            let effectHtml = find.effectCard?.map(e=>`<span class="effect-tag">${e.name}</span>`).join('');
+            document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class="empty-text">无</span>';
+            // ======================================
+
             modal.style.display = 'flex';
         };
+
         if (closeModalBtn) {
             closeModalBtn.onclick = () => modal.style.display = 'none';
         }
@@ -305,6 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.target === modal) modal.style.display = 'none';
         };
     }
+
     // 筛选标签点击
     if (filterChips.length > 0) {
         filterChips.forEach(el => {
@@ -333,7 +330,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if(localStorage.getItem(STORAGE_KEY) === 'ok'){
         lockModal.style.display = 'none';
-        // ✅ 这里加判断！！只有 lineupWrap 存在才执行
         if(lineupWrap){
             lineupWrap.style.visibility = 'visible';
         }
@@ -360,6 +356,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if(e.key === 'Enter') unlockBtn.click();
     }
 })
+
 // 复制函数放外面，给onclick全局调用
 async function copyCode(code) {
     // 从中文左括号「（」切割，只取前面纯数字编码
