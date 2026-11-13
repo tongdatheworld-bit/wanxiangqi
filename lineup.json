@@ -228,7 +228,7 @@
 ],
 "effectCard": [
     {"name": "集体唤醒", "img": "images/effectcard/jitihuanxing.png"},
-    {"name": "整装待发", "img": "images/effectcard/zhengzhuangdaifa.png"},
+    {"name": "临阵磨枪", "img": "images/effectcard/linzhenmoqiang.png"},
     {"name": "唤醒",     "img": "images/effectcard/huanxing.png"}
 ]
 ,
