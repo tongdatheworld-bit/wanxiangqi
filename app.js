@@ -250,6 +250,31 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="equip-list">${equipSecondHtml}</div>
                 </div>
                 <div class="modal-block">
+                <!-- 天赋推荐模块 -->
+<div class="modal-block">
+    <h4>天赋推荐</h4>
+    <div class="talent-group-row">
+        <div class="talent-col">
+            <span class="talent-col-title talent-tong">铜天赋</span>
+            <div class="talent-item-list" id="talentTongBox"></div>
+        </div>
+        <div class="talent-col">
+            <span class="talent-col-title talent-yin">银天赋</span>
+            <div class="talent-item-list" id="talentYinBox"></div>
+        </div>
+        <div class="talent-col">
+            <span class="talent-col-title talent-jin">金天赋</span>
+            <div class="talent-item-list" id="talentJinBox"></div>
+        </div>
+    </div>
+</div>
+
+<!-- 效果牌推荐模块 -->
+<div class="modal-block">
+    <h4>效果牌推荐</h4>
+    <div class="effect-card-list" id="effectCardBox"></div>
+</div>
+
                     <h4>运营节奏</h4>
                     <div class="run-stage-list">${runStageHtml}</div>
                 </div>
