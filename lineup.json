@@ -53,7 +53,7 @@
 ],
 "effectCard": [
     {"name": "集体唤醒", "img": "images/effectcard/jitihuanxing.png"},
-    {"name": "全军整备", "img": "images/effectcard/quanjunzhengbei.png"},
+    {"name": "全军动员", "img": "images/effectcard/quanjundongyuan.png"},
     {"name": "唤醒", "img": "images/effectcard/huanxing.png"}
 ],
     "runStage": [
@@ -143,10 +143,23 @@
         {"name": "名刀司命", "img": "images/equip/equipsmall/mingdaosiming.png"},
         {"name": "虚无法杖", "img": "images/equip/equipsmall/xuwufazhang.png"}
     ],
-    "talentTong": [{"name": "银算盘"},{"name": "防御领域"}],
-    "talentYin": [{"name": "金算盘"},{"name": "人才济济"}],
-    "talentJin": [{"name": "能量汲取"},{"name": "能量置换"}],
-    "effectCard": [{"name": "武装重构"},{"name": "精选武装"},{"name": "军械库"}],
+   "talentTong": [
+    {"name": "银算盘", "img": "images/talent/yinsuanpan.png"},
+    {"name": "防御领域", "img": "images/talent/fangyulingyu.png"}
+],
+"talentYin": [
+    {"name": "金算盘", "img": "images/talent/jinsuanpan.png"},
+    {"name": "人才济济", "img": "images/talent/rencaijiji.png"}
+],
+"talentJin": [
+    {"name": "能量汲取", "img": "images/talent/nengliangjiqu.png"},
+    {"name": "能量置换", "img": "images/talent/nengliangzhihuan.png"}
+],
+"effectCard": [
+    {"name": "武装重构", "img": "images/effectcard/wuzhonggou.png"},
+    {"name": "精选武装", "img": "images/effectcard/jingxuanwuzhuang.png"},
+    {"name": "军械库", "img": "images/effectcard/junxieku.png"}
+],
     "runStage": [
         {
             "title": "1-3回合",
