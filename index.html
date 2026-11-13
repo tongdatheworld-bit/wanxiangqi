@@ -312,7 +312,7 @@
             backdrop-filter: blur(4px);
         }
         .lineup-modal-content {
-            width: min(820px, 100%);
+    width: min(960px, 92vw);
             background: #181c26;
             border: 1px solid #333844;
             border-radius: 20px;
@@ -521,17 +521,18 @@
 
 .talent-card-imgbox {
     width: 100%;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #252b38;
-    padding: 12px;
+    overflow: hidden;
 }
 
 .talent-card-imgbox img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
 }
 
 .talent-card-desc {
@@ -543,6 +544,45 @@
 }
 
 .talent-card-name {
+    text-align: center;
+    padding: 6px 0;
+    color: #ffd369;
+    font-weight: bold;
+    font-size: 15px;
+    background: #222733;
+}
+        /* 效果牌卡片样式 */
+.effect-three-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+    gap:14px;
+}
+.effect-card-full {
+    background: #1e232f;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #383e4c;
+    display: flex;
+    flex-direction: column;
+}
+.effect-card-imgbox {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+.effect-card-imgbox img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.effect-card-desc {
+    padding: 8px 10px;
+    font-size: 12px;
+    color: #bbbbbb;
+    line-height: 1.45;
+    min-height: 56px;
+}
+.effect-card-name {
     text-align: center;
     padding: 6px 0;
     color: #ffd369;
@@ -783,14 +823,15 @@
             // ========== 天赋卡片HTML（带描述） ==========
             let talentTongCardHtml = '';
             if(Array.isArray(item.talentTong) && item.talentTong.length>0){
-                talentTongCardHtml = item.talentTong.map(t=>`
-                <div class="talent-card-full">
-                    <div class="talent-card-imgbox">
-                        <img src="${t.img}" alt="${t.name}">
-                    </div>
-                    <div class="talent-card-desc">${t.desc}</div>
-                    <div class="talent-card-name">${t.name}</div>
-                </div>`).join('');
+               talentTongCardHtml = item.talentTong.map(t=>`
+<div class="talent-card-full">
+    <div class="talent-card-imgbox">
+        <img src="${t.img}" alt="${t.name}">
+    </div>
+    <div class="talent-card-desc">${t.desc || ''}</div>
+    <div class="talent-card-name">${t.name}</div>
+</div>`).join('');
+
             }else{
                 talentTongCardHtml = `<p class="empty-text">暂无</p>`;
             }
@@ -825,13 +866,14 @@
             let effectCardFullHtml = '';
             if(Array.isArray(item.effectCard) && item.effectCard.length>0){
                 effectCardFullHtml = item.effectCard.map(e=>`
-                <div class="effect-card-full">
-                    <div class="effect-card-imgbox">
-                        <img src="${e.img}" alt="${e.name}">
-                    </div>
-                    <div class="effect-card-desc">${e.desc}</div>
-                    <div class="effect-card-name">${e.name}</div>
-                </div>`).join('');
+<div class="effect-card-full">
+    <div class="effect-card-imgbox">
+        <img src="${e.img}" alt="${e.name}">
+    </div>
+    <div class="effect-card-desc">${e.desc || ''}</div>
+    <div class="effect-card-name">${e.name}</div>
+</div>`).join('');
+
             }else{
                 effectCardFullHtml = `<p class="empty-text">暂无</p>`;
             }
