@@ -202,9 +202,11 @@
         {"name": "阿轲", "img": "images/heroes/ake.png", "isCore": false},
         {"name": "露娜", "img": "images/heroes/luna.png", "isCore": false}
     ],
-    "backupHeroList": [],
+    "backupHeroList": [
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
     "equipFirst": [
-        {"name": "无尽巨剑", "img": "images/equip/equipsmall/wujinjian.png"},
+        {"name": "无尽巨剑", "img": "images/equip/equipsmall/wujinjujian.png"},
         {"name": "聚灵水晶", "img": "images/equip/equipsmall/julingshuijing.png"},
         {"name": "炽热支配者", "img": "images/equip/equipsmall/chirezhipeizhe.png"}
     ],
