@@ -457,7 +457,14 @@
             border-radius: 8px;
         }
 
-     /* 天赋推荐：三列平铺 */
+    /* 天赋推荐：一个统一底框包裹，内部三列 */
+.talent-board {
+    background: #1e232f;
+    border: 1px solid #383e4c;
+    border-radius: 14px;
+    padding: 16px;
+}
+
 .talent-three-col {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -466,10 +473,6 @@
 }
 
 .talent-col-block {
-    background: #1e232f;
-    border: 1px solid #383e4c;
-    border-radius: 14px;
-    padding: 14px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -479,8 +482,8 @@
     font-size: 14px;
     font-weight: bold;
     color: #ffd369;
-    padding: 4px 10px;
-    border-radius: 6px;
+    padding: 5px 12px;
+    border-radius: 8px;
     display: inline-block;
     width: fit-content;
 }
@@ -504,14 +507,12 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 100%;
 }
 
-/* 天赋卡片固定宽度，不再被弹窗横向撑开 */
+/* 天赋卡牌：显示完整卡面 */
 .talent-card-full {
-    width: 100%;
     background: #1e232f;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
     border: 1px solid #383e4c;
     display: flex;
@@ -520,25 +521,25 @@
 
 .talent-card-imgbox {
     width: 100%;
-    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #252b38;
+    padding: 12px;
 }
 
 .talent-card-imgbox img {
-    width: 72px;
-    height: 72px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .talent-card-desc {
-    padding: 8px;
+    padding: 8px 10px;
     font-size: 12px;
     color: #bbbbbb;
     line-height: 1.45;
-    min-height: 64px;
+    min-height: 56px;
 }
 
 .talent-card-name {
@@ -549,8 +550,6 @@
     font-size: 15px;
     background: #222733;
 }
-
-
 
         /* 解锁弹窗 */
         #lockModal{
@@ -912,21 +911,25 @@
 
   <!-- ========== 天赋推荐 Tab切换模块（和截图第二张一模一样） ========== -->
  <h4 class="section-title">天赋推荐</h4>
- <div class="run-block">
-  <div class="talent-three-col">
-    <div class="talent-col-block talent-col-tong">
-        <div class="talent-col-title">铜天赋</div>
-        <div class="talent-col-cards">${talentTongCardHtml}</div>
-    </div>
-    <div class="talent-col-block talent-col-yin">
-        <div class="talent-col-title">银天赋</div>
-        <div class="talent-col-cards">${talentYinCardHtml}</div>
-    </div>
-    <div class="talent-col-block talent-col-jin">
-        <div class="talent-col-title">金天赋</div>
-        <div class="talent-col-cards">${talentJinCardHtml}</div>
+<div class="run-block">
+    <div class="talent-board">
+        <div class="talent-three-col">
+            <div class="talent-col-block talent-col-tong">
+                <div class="talent-col-title">铜天赋</div>
+                <div class="talent-col-cards">${talentTongCardHtml}</div>
+            </div>
+            <div class="talent-col-block talent-col-yin">
+                <div class="talent-col-title">银天赋</div>
+                <div class="talent-col-cards">${talentYinCardHtml}</div>
+            </div>
+            <div class="talent-col-block talent-col-jin">
+                <div class="talent-col-title">金天赋</div>
+                <div class="talent-col-cards">${talentJinCardHtml}</div>
+            </div>
+        </div>
     </div>
 </div>
+
 
   <!-- ========== 效果牌推荐 完整卡牌 ========== -->
  <h4 class="section-title">效果牌推荐</h4>
