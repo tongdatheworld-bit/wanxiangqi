@@ -712,12 +712,12 @@ function openLineupModal(item){
         }).join('');
     }
 
-    // Ban阵营
+    // Ban阵营【修复】
     let banModalHtml = '';
     if(Array.isArray(item["ban位"]) && item["ban位"].length>0){
         banModalHtml = `
-        <div class="modal-block">
-            <h4>｜ BAN阵营</h4>
+        <h4 class="section-title">BAN阵营</h4>
+        <div class="run-block">
             <p class="modal-sub">${item["ban位"].join("、")}</p>
         </div>`
     }
@@ -744,45 +744,45 @@ function openLineupModal(item){
 
 ${banModalHtml}
 
-<h4 class="section-title">｜ 阵容组成</h4>
+<h4 class="section-title">阵容组成</h4>
 <div class="run-block">
     <div class="hero-row-modal">${heroHtml || '<p class="empty-text">暂无</p>'}</div>
 </div>
 
-<h4 class="section-title">｜ 功能替换卡</h4>
+<h4 class="section-title">功能替换卡</h4>
 <div class="run-block">
     <div class="hero-row-modal">${funcHeroHtml || '<p class="empty-text">暂无</p>'}</div>
 </div>
 
-<h4 class="section-title">｜ 备选英雄</h4>
+<h4 class="section-title">备选英雄</h4>
 <div class="run-block">
     <div class="hero-row-modal">${backupHeroHtml || '<p class="empty-text">暂无</p>'}</div>
 </div>
 
-<h4 class="section-title">｜ 首选装备</h4>
+<h4 class="section-title">首选装备</h4>
 <div class="run-block">
     <div class="hero-grid">${equipFirstHtml || '<p class="empty-text">暂无</p>'}</div>
 </div>
 
-<h4 class="section-title">｜ 备选装备</h4>
+<h4 class="section-title">备选装备</h4>
 <div class="run-block">
     <div class="hero-grid">${equipSecondHtml || '<p class="empty-text">暂无</p>'}</div>
 </div>
 
-<h4 class="section-title">｜ 运营阶段</h4>
+<h4 class="section-title">运营阶段</h4>
 ${runStageHtml || `
 <div class="run-block">
     <p class="empty-text">暂无运营攻略</p>
 </div>`}
 
-<h4 class="section-title">｜ 注意事项</h4>
+<h4 class="section-title">注意事项</h4>
 <div class="run-block">
     <ul class="notice-list">
         ${noticeHtml}
     </ul>
 </div>
 
-<h4 class="section-title">｜ 站位参考</h4>
+<h4 class="section-title">站位参考</h4>
 <div class="run-block">
     ${item.positionImage ? `
         <div class="position-wrap">
