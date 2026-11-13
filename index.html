@@ -473,6 +473,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
     align-items: flex-start;
+    justify-items: start;  /* 新增这一行！网格内元素靠左 */
 }
 
 
@@ -481,7 +482,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    width: fit-content; /* 关键！让这个列容器宽度包裹内容，不再撑满格子 */
 }
+
 
 .talent-col-title {
     font-size: 14px;
@@ -523,7 +526,7 @@
     border: 1px solid #383e4c;
     display: flex;
     flex-direction: column;
-    max-width: 180px;
+    max-width: 160px;
     margin: 0;
 }
 
