@@ -647,15 +647,14 @@
     line-height:1.8;
     font-size:14px;
 }
- /* ====== 天赋推荐：整行铺满 6 张 ====== */
+/* ====== 天赋推荐：保持原图长宽比，横向铺满 ====== */
 .talent-group-row {
     display: flex;
-    gap: 12px;
+    gap: 14px;
     flex-wrap: nowrap;
-    margin: 12px 0 18px;
+    margin: 14px 0 22px;
     align-items: flex-start;
 }
-
 
 .talent-col {
     flex: 1;
@@ -664,8 +663,8 @@
 
 .talent-col-title {
     font-size: 13px;
-    margin-bottom: 8px;
-    padding: 3px 8px;
+    margin-bottom: 10px;
+    padding: 4px 10px;
     border-radius: 6px;
     display: inline-block;
 }
@@ -687,11 +686,11 @@
 
 .talent-item-list {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: nowrap;
 }
 
-/* 天赋卡片：每组 2 张，撑满各自列宽 */
+/* 天赋卡片：不再固定正方形，按图片原始比例显示 */
 .talent-card {
     display: flex;
     flex-direction: column;
@@ -699,35 +698,32 @@
     gap: 8px;
     flex: 1;
     min-width: 0;
-    height: auto;
 }
 
 .talent-card img {
     width: 100%;
-    height: 98px;
+    height: auto;
+    aspect-ratio: auto;
     border-radius: 14px;
-    object-fit: cover;
+    object-fit: contain;
     border: 1px solid #3a404f;
     background: #282e3b;
 }
 
 .talent-card span {
-    font-size: 13px;
+    font-size: 14px;
     color: #b4b9c6;
     text-align: center;
-    line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.3;
     width: 100%;
 }
 
-/* ====== 效果牌：和天赋同一尺寸体系 ====== */
+/* ====== 效果牌：同样保持原始长宽比 ====== */
 .effect-card-list {
     display: flex;
-    gap: 12px;
+    gap: 14px;
     flex-wrap: wrap;
-    margin: 12px 0;
+    margin: 14px 0;
 }
 
 .effect-card {
@@ -735,30 +731,28 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    width: 110px;
-    height: auto;
+    flex: 1;
+    min-width: 180px;
+    max-width: 260px;
 }
 
 .effect-card img {
     width: 100%;
-    height: 98px;
+    height: auto;
+    aspect-ratio: auto;
     border-radius: 14px;
-    object-fit: cover;
+    object-fit: contain;
     border: 1px solid #3a404f;
     background: #282e3b;
 }
 
 .effect-card span {
-    font-size: 13px;
+    font-size: 14px;
     color: #ffd369;
     text-align: center;
-    line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.3;
     width: 100%;
 }
-
 
         /* ========= 运营节奏样式（匹配你当前class） ========= */
 .stage-block {
