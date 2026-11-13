@@ -212,10 +212,24 @@
         {"name": "筑梦逐风", "img": "images/equip/equipsmall/zhumengzhufeng.png"},
         {"name": "凝渊", "img": "images/equip/equipsmall/ningyuan.png"}
     ],
-    "talentTong": [{"name": "复印机"},{"name": "防御领域"}],
-    "talentYin": [{"name": "锦囊妙计"},{"name": "人才济济"}],
-    "talentJin": [{"name": "紧急救援"},{"name": "点兵点将"}],
-    "effectCard": [{"name": "集体唤醒"},{"name": "整装待发"},{"name": "唤醒"}],
+   "talentTong": [
+    {"name": "复印机",   "img": "images/talent/fuyinji.png"},
+    {"name": "防御领域", "img": "images/talent/fangyulingyu.png"}
+],
+"talentYin": [
+    {"name": "锦囊妙计", "img": "images/talent/jinnangmiaoji.png"},
+    {"name": "人才济济", "img": "images/talent/rencaijiji.png"}
+],
+"talentJin": [
+    {"name": "紧急救援", "img": "images/talent/jinjijiuyuan.png"},
+    {"name": "点兵点将", "img": "images/talent/dianbingdianjiang.png"}
+],
+"effectCard": [
+    {"name": "集体唤醒", "img": "images/effectcard/jitihuanxing.png"},
+    {"name": "整装待发", "img": "images/effectcard/zhengzhuangdaifa.png"},
+    {"name": "唤醒",     "img": "images/effectcard/huanxing.png"}
+]
+,
     "runStage": [
         {
             "title": "1-3回合",
