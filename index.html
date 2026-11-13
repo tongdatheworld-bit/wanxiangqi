@@ -534,15 +534,6 @@
     object-fit: contain;
 }
 
-
-.talent-card-desc {
-    padding: 8px 10px;
-    font-size: 12px;
-    color: #bbbbbb;
-    line-height: 1.45;
-    min-height: 56px;
-}
-
 .talent-card-name {
     text-align: center;
     padding: 6px 0;
@@ -580,13 +571,6 @@
     object-fit: contain;
 }
 
-.effect-card-desc {
-    padding: 8px 10px;
-    font-size: 12px;
-    color: #bbbbbb;
-    line-height: 1.45;
-    min-height: 56px;
-}
 .effect-card-name {
     text-align: center;
     padding: 6px 0;
@@ -825,7 +809,7 @@
                 ).join('');
             }
 
-// ========== 天赋卡片HTML（带描述） ==========
+// ========== 天赋卡片HTML（不带描述） ==========
 let talentTongCardHtml = '';
 if(Array.isArray(item.talentTong) && item.talentTong.length>0){
    talentTongCardHtml = item.talentTong.map(t=>`
@@ -833,7 +817,6 @@ if(Array.isArray(item.talentTong) && item.talentTong.length>0){
     <div class="talent-card-imgbox">
         <img src="${t.img}" alt="${t.name}">
     </div>
-    <div class="talent-card-desc">${t.desc || ''}</div>
 </div>`).join('');
 
 }else{
@@ -846,7 +829,6 @@ if(Array.isArray(item.talentYin) && item.talentYin.length>0){
         <div class="talent-card-imgbox">
             <img src="${t.img}" alt="${t.name}">
         </div>
-        <div class="talent-card-desc">${t.desc || ''}</div>
     </div>`).join('');
 }else{
     talentYinCardHtml = `<p class="empty-text">暂无</p>`;
@@ -858,14 +840,12 @@ if(Array.isArray(item.talentJin) && item.talentJin.length>0){
         <div class="talent-card-imgbox">
             <img src="${t.img}" alt="${t.name}">
         </div>
-        <div class="talent-card-desc">${t.desc || ''}</div>
     </div>`).join('');
 }else{
     talentJinCardHtml = `<p class="empty-text">暂无</p>`;
 }
 
-
-          // ========== 效果牌完整卡片（带描述） ==========
+// ========== 效果牌完整卡片（不带描述） ==========
 let effectCardFullHtml = '';
 if(Array.isArray(item.effectCard) && item.effectCard.length>0){
     effectCardFullHtml = item.effectCard.map(e=>`
@@ -873,12 +853,12 @@ if(Array.isArray(item.effectCard) && item.effectCard.length>0){
     <div class="effect-card-imgbox">
         <img src="${e.img}" alt="${e.name}">
     </div>
-    <div class="effect-card-desc">${e.desc || ''}</div>
 </div>`).join('');
 
 }else{
     effectCardFullHtml = `<p class="empty-text">暂无</p>`;
 }
+
             // 运营阶段
             let runStageHtml = '';
             if(Array.isArray(item.runStage)){
