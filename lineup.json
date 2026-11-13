@@ -39,6 +39,23 @@
         {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
         {"name":"红魔","img":"images/equip/equipsmall/hongmo.png"}
     ],
+        "talentTong": [
+    {"name": "里程碑", "img": "images/talent/lichengbei.png"},
+    {"name": "三十而立", "img": "images/talent/sanshierli.png"}
+],
+"talentYin": [
+    {"name": "人才济济", "img": "images/talent/rencaijiji.png"},
+    {"name": "终极复印机", "img": "images/talent/zhongjifuyinji.png"}
+],
+"talentJin": [
+    {"name": "暴君归来", "img": "images/talent/baojunguilai.png"},
+    {"name": "魂灭灵冠", "img": "images/talent/hunmielingguan.png"}
+],
+"effectCard": [
+    {"name": "集体唤醒", "img": "images/effectcard/jitihuanxing.png"},
+    {"name": "全军整备", "img": "images/effectcard/quanjunzhengbei.png"},
+    {"name": "唤醒", "img": "images/effectcard/huanxing.png"}
+],
     "runStage": [
         {
             "title": "1-3回合",
