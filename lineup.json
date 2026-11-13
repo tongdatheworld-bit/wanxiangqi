@@ -95,7 +95,7 @@
     "alternatePlayer": ["小妲己"],
     "alternatePlayerImg": ["images/players/xiaodaji.png"],
     "hard": "困难",
-    "lineupCode": "68176505168433252",
+    "lineupCode": "68176505168433252（点击复制）",
     "ban位": ["大河流域"],
     "heroList": [
         {"name": "司空震", "img": "images/heroes/sikongzhen.png", "isCore": true},
@@ -262,7 +262,7 @@
         "player": "马可",
         "playerImg": "images/players/make.png",
         "hard": "中等",
-        "lineupCode": "万象一图诀【马可奔猪】129533708748664088（点击复制）",
+        "lineupCode": "129533708748664088（点击复制）",
         "ban位": ["逐鹿", "河洛"],
         "heroList": [
             {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true},
