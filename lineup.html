@@ -646,91 +646,114 @@
     line-height:1.8;
     font-size:14px;
 }
-        /* ====== 天赋、效果牌模块新增样式 ====== */
-.talent-group-row{
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-    margin:10px 0;
-}
-.talent-col{
-    flex:1;
-    min-width:140px;
-}
-.talent-col-title{
-    font-size:13px;
-    margin-bottom:6px;
-    padding:3px 8px;
-    border-radius:6px;
-    display:inline-block;
-}
-.talent-tong{
-    background:#70543c;
-    color:#ffddb0;
-}
-.talent-yin{
-    background:#787c84;
-    color:#e8ebf0;
-}
-.talent-jin{
-    background:#b88600;
-    color:#fff8e0;
-}
-/* 卡片容器：图片在上、文字在下 */
-.talent-item-list{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-.talent-card{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:6px;
-    width:76px;
-}
-.talent-card img{
-    width:60px;
-    height:60px;
-    border-radius:12px;
-    object-fit:cover;
-    border:1px solid #3a404f;
-    background:#282e3b;
-}
-.talent-card span{
-    font-size:12px;
-    color:#b4b9c6;
-    text-align:center;
-    line-height:1.2;
+ /* ====== 天赋推荐：整行铺满 6 张 ====== */
+.talent-group-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: nowrap;
+    margin: 12px 0;
 }
 
-.effect-card-list{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    margin:10px 0;
+.talent-col {
+    flex: 1;
+    min-width: 0;
 }
-.effect-card{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:6px;
-    width:76px;
+
+.talent-col-title {
+    font-size: 13px;
+    margin-bottom: 8px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    display: inline-block;
 }
-.effect-card img{
-    width:60px;
-    height:60px;
-    border-radius:12px;
-    object-fit:cover;
-    border:1px solid #3a404f;
-    background:#282e3b;
+
+.talent-tong {
+    background: #70543c;
+    color: #ffddb0;
 }
-.effect-card span{
-    font-size:12px;
-    color:#ffd369;
-    text-align:center;
-    line-height:1.2;
+
+.talent-yin {
+    background: #787c84;
+    color: #e8ebf0;
 }
+
+.talent-jin {
+    background: #b88600;
+    color: #fff8e0;
+}
+
+.talent-item-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+/* 天赋卡片：每组 2 张，撑满各自列宽 */
+.talent-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+}
+
+.talent-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 1px solid #3a404f;
+    background: #282e3b;
+}
+
+.talent-card span {
+    font-size: 13px;
+    color: #b4b9c6;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+/* ====== 效果牌：和天赋同一尺寸体系 ====== */
+.effect-card-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 12px 0;
+}
+
+.effect-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 96px;
+}
+
+.effect-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 1px solid #3a404f;
+    background: #282e3b;
+}
+
+.effect-card span {
+    font-size: 13px;
+    color: #ffd369;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
 
         /* ========= 运营节奏样式（匹配你当前class） ========= */
 .stage-block {
