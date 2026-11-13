@@ -825,64 +825,60 @@
                 ).join('');
             }
 
-            // ========== 天赋卡片HTML（带描述） ==========
-            let talentTongCardHtml = '';
-            if(Array.isArray(item.talentTong) && item.talentTong.length>0){
-               talentTongCardHtml = item.talentTong.map(t=>`
+// ========== 天赋卡片HTML（带描述） ==========
+let talentTongCardHtml = '';
+if(Array.isArray(item.talentTong) && item.talentTong.length>0){
+   talentTongCardHtml = item.talentTong.map(t=>`
 <div class="talent-card-full">
     <div class="talent-card-imgbox">
         <img src="${t.img}" alt="${t.name}">
     </div>
     <div class="talent-card-desc">${t.desc || ''}</div>
-    <div class="talent-card-name">${t.name}</div>
 </div>`).join('');
 
-            }else{
-                talentTongCardHtml = `<p class="empty-text">暂无</p>`;
-            }
-            let talentYinCardHtml = '';
-            if(Array.isArray(item.talentYin) && item.talentYin.length>0){
-                talentYinCardHtml = item.talentYin.map(t=>`
-                <div class="talent-card-full">
-                    <div class="talent-card-imgbox">
-                        <img src="${t.img}" alt="${t.name}">
-                    </div>
-                    <div class="talent-card-desc">${t.desc}</div>
-                    <div class="talent-card-name">${t.name}</div>
-                </div>`).join('');
-            }else{
-                talentYinCardHtml = `<p class="empty-text">暂无</p>`;
-            }
-            let talentJinCardHtml = '';
-            if(Array.isArray(item.talentJin) && item.talentJin.length>0){
-                talentJinCardHtml = item.talentJin.map(t=>`
-                <div class="talent-card-full">
-                    <div class="talent-card-imgbox">
-                        <img src="${t.img}" alt="${t.name}">
-                    </div>
-                    <div class="talent-card-desc">${t.desc}</div>
-                    <div class="talent-card-name">${t.name}</div>
-                </div>`).join('');
-            }else{
-                talentJinCardHtml = `<p class="empty-text">暂无</p>`;
-            }
+}else{
+    talentTongCardHtml = `<p class="empty-text">暂无</p>`;
+}
+let talentYinCardHtml = '';
+if(Array.isArray(item.talentYin) && item.talentYin.length>0){
+    talentYinCardHtml = item.talentYin.map(t=>`
+    <div class="talent-card-full">
+        <div class="talent-card-imgbox">
+            <img src="${t.img}" alt="${t.name}">
+        </div>
+        <div class="talent-card-desc">${t.desc || ''}</div>
+    </div>`).join('');
+}else{
+    talentYinCardHtml = `<p class="empty-text">暂无</p>`;
+}
+let talentJinCardHtml = '';
+if(Array.isArray(item.talentJin) && item.talentJin.length>0){
+    talentJinCardHtml = item.talentJin.map(t=>`
+    <div class="talent-card-full">
+        <div class="talent-card-imgbox">
+            <img src="${t.img}" alt="${t.name}">
+        </div>
+        <div class="talent-card-desc">${t.desc || ''}</div>
+    </div>`).join('');
+}else{
+    talentJinCardHtml = `<p class="empty-text">暂无</p>`;
+}
 
-            // ========== 效果牌完整卡片（带描述） ==========
-            let effectCardFullHtml = '';
-            if(Array.isArray(item.effectCard) && item.effectCard.length>0){
-                effectCardFullHtml = item.effectCard.map(e=>`
+
+          // ========== 效果牌完整卡片（带描述） ==========
+let effectCardFullHtml = '';
+if(Array.isArray(item.effectCard) && item.effectCard.length>0){
+    effectCardFullHtml = item.effectCard.map(e=>`
 <div class="effect-card-full">
     <div class="effect-card-imgbox">
         <img src="${e.img}" alt="${e.name}">
     </div>
     <div class="effect-card-desc">${e.desc || ''}</div>
-    <div class="effect-card-name">${e.name}</div>
 </div>`).join('');
 
-            }else{
-                effectCardFullHtml = `<p class="empty-text">暂无</p>`;
-            }
-
+}else{
+    effectCardFullHtml = `<p class="empty-text">暂无</p>`;
+}
             // 运营阶段
             let runStageHtml = '';
             if(Array.isArray(item.runStage)){
