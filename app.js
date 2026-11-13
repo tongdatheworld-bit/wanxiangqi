@@ -278,17 +278,36 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
 
             // ========== 渲染天赋和效果卡 ==========
-            let tongHtml = find.talentTong?.map(t=>`<span class="talent-tag">${t.name}</span>`).join('');
-            document.getElementById('talentTongBox').innerHTML = tongHtml || '<span class="empty-text">无</span>';
+           // 天赋图片渲染
+let tongHtml = find.talentTong?.map(t => `
+    <span class="talent-tag" title="${t.name}">
+        <img src="${t.img}" alt="${t.name}" style="width:40px;height:40px;border-radius:8px;object-fit:cover;border:1px solid #3a404f;">
+    </span>
+`).join('');
+document.getElementById('talentTongBox').innerHTML = tongHtml || '<span class="empty-text">无</span>';
 
-            let yinHtml = find.talentYin?.map(t=>`<span class="talent-tag">${t.name}</span>`).join('');
-            document.getElementById('talentYinBox').innerHTML = yinHtml || '<span class="empty-text">无</span>';
+let yinHtml = find.talentYin?.map(t => `
+    <span class="talent-tag" title="${t.name}">
+        <img src="${t.img}" alt="${t.name}" style="width:40px;height:40px;border-radius:8px;object-fit:cover;border:1px solid #3a404f;">
+    </span>
+`).join('');
+document.getElementById('talentYinBox').innerHTML = yinHtml || '<span class="empty-text">无</span>';
 
-            let jinHtml = find.talentJin?.map(t=>`<span class="talent-tag">${t.name}</span>`).join('');
-            document.getElementById('talentJinBox').innerHTML = jinHtml || '<span class="empty-text">无</span>';
+let jinHtml = find.talentJin?.map(t => `
+    <span class="talent-tag" title="${t.name}">
+        <img src="${t.img}" alt="${t.name}" style="width:40px;height:40px;border-radius:8px;object-fit:cover;border:1px solid #3a404f;">
+    </span>
+`).join('');
+document.getElementById('talentJinBox').innerHTML = jinHtml || '<span class="empty-text">无</span>';
 
-            let effectHtml = find.effectCard?.map(e=>`<span class="effect-tag">${e.name}</span>`).join('');
-            document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class="empty-text">无</span>';
+// 效果牌图片渲染
+let effectHtml = find.effectCard?.map(e => `
+    <span class="effect-tag" title="${e.name}">
+        <img src="${e.img}" alt="${e.name}" style="width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid #3a404f;">
+    </span>
+`).join('');
+document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class="empty-text">无</span>';
+
             // ======================================
 
             modal.style.display = 'flex';
