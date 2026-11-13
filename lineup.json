@@ -175,26 +175,89 @@
     "positionImage": "images/position/2.yuhuanriluohaisikongzhen.png"
 }
 ,
-    {
-        "id": 3,
-        "name": "孙小宾三分倒转",
-        "rank": "S+",
-        "player": "孙小宾",
-        "playerImg": "images/players/sunxiaobin.png",
-        "hard": "中等",
-        "lineupCode": "77743464511520968（点击复制）",
-        "ban位": ["逐鹿", "大河流", "河洛"],
-        "heroList": [
-            {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
-            {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
-            {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
-            {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
-            {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
-            {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
-            {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
-        ],
-        "equip": []
-    },
+   {
+    "id": 3,
+    "name": "孙小膑三分倒转",
+    "rank": "S+",
+    "player": "孙小宾",
+    "playerImg": "images/players/sunxiaobin.png",
+    "alternatePlayer": ["镜", "白歌"],
+    "alternatePlayerImg": ["images/players/jing.png", "images/players/baige.png"],
+    "hard": "困难",
+    "lineupCode": "77743464511520968（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "河洛"],
+    "heroList": [
+        {"name": "孙悟空", "img": "images/heroes/sunwukong.png", "isCore": true},
+        {"name": "曹操", "img": "images/heroes/caocao.png", "isCore": false},
+        {"name": "甄姬", "img": "images/heroes/zhenji.png", "isCore": false},
+        {"name": "小乔", "img": "images/heroes/xiaoqiao.png", "isCore": false},
+        {"name": "周瑜", "img": "images/heroes/zhouyu.png", "isCore": false},
+        {"name": "阿轲", "img": "images/heroes/ake.png", "isCore": false},
+        {"name": "露娜", "img": "images/heroes/luna.png", "isCore": false}
+    ],
+    "funcHeroList": [
+        {"name": "曹操", "img": "images/heroes/caocao.png", "isCore": false},
+        {"name": "甄姬", "img": "images/heroes/zhenji.png", "isCore": false},
+        {"name": "小乔", "img": "images/heroes/xiaoqiao.png", "isCore": false},
+        {"name": "阿轲", "img": "images/heroes/ake.png", "isCore": false},
+        {"name": "露娜", "img": "images/heroes/luna.png", "isCore": false}
+    ],
+    "backupHeroList": [],
+    "equipFirst": [
+        {"name": "无尽巨剑", "img": "images/equip/equipsmall/wujinjian.png"},
+        {"name": "聚灵水晶", "img": "images/equip/equipsmall/julingshuijing.png"},
+        {"name": "炽热支配者", "img": "images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name": "筑梦逐风", "img": "images/equip/equipsmall/zhumengzhufeng.png"},
+        {"name": "凝渊", "img": "images/equip/equipsmall/ningyuan.png"}
+    ],
+    "talentTong": [{"name": "复印机"},{"name": "防御领域"}],
+    "talentYin": [{"name": "锦囊妙计"},{"name": "人才济济"}],
+    "talentJin": [{"name": "紧急救援"},{"name": "点兵点将"}],
+    "effectCard": [{"name": "集体唤醒"},{"name": "整装待发"},{"name": "唤醒"}],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name": "弈星", "img": "images/heroes/yixing.png"}
+            ],
+            "desc": "1回合打一张奕星，2回合回溯一张打1张，3回合先升级后回溯，打出升级给的效果牌（天赋牌打完再打效果牌），英雄牌留手里。第一轮拍卖：曹操>阿轲>梦奇"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name": "曹操", "img": "images/heroes/caocao.png", "isCore": false},
+                {"name": "甄姬", "img": "images/heroes/zhenji.png", "isCore": false},
+                {"name": "小乔", "img": "images/heroes/xiaoqiao.png", "isCore": false},
+                {"name": "周瑜", "img": "images/heroes/zhouyu.png", "isCore": false},
+                {"name": "孙悟空", "img": "images/heroes/sunwukong.png", "isCore": true},
+                {"name": "阿轲", "img": "images/heroes/ake.png", "isCore": false}
+            ],
+            "desc": "（3级启动，搜寻体系卡）4回合一次性打出8英雄牌或效果牌，时之回环拿手里，可用免费刷新找1-2次曹操，不强求，用天赋牌和拍卖拿的英雄过度到4-5本，4本开始找甄姬、小乔、曹操、阿轲不打出，血量不足或者体系卡足够开回环打出，期间上5本。第二轮拍卖：露娜>小乔>甄姬"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name": "曹操", "img": "images/heroes/caocao.png", "isCore": false},
+                {"name": "甄姬", "img": "images/heroes/zhenji.png", "isCore": false},
+                {"name": "小乔", "img": "images/heroes/xiaoqiao.png", "isCore": false},
+                {"name": "周瑜", "img": "images/heroes/zhouyu.png", "isCore": false},
+                {"name": "孙悟空", "img": "images/heroes/sunwukong.png", "isCore": true},
+                {"name": "阿轲", "img": "images/heroes/ake.png", "isCore": false},
+                {"name": "露娜", "img": "images/heroes/luna.png", "isCore": false}
+            ],
+            "desc": "第三轮拍卖：能量超新星/免费刷牌/4张5阶效果卡。6本大启动，存够体系卡后开大回环，优先级（全员唤醒>全员整备/露娜>整备曹操>阿轲（血量低于20）>周瑜>甄姬>其他三分登场>其他登场。打出位选择（露娜>周瑜>阿轲）。"
+        }
+    ],
+    "notice": [
+        "1、4回合力争打出8张英雄牌或效果牌，把第一个时之回环拿在手里。5本启动，先存体系卡(曹操、甄姬、小乔等)，用回环，打体系卡。5-6本凑齐体系卡，曹操/小乔觉醒。",
+        "2、主C孙悟空，副C阿珂，主T曹操/周瑜，等级来源：倒转体系（核心露娜）。等级加速：体系卡全觉醒（重点曹操/小乔），打出全员唤醒>全员整备/露娜>整备曹操>阿轲（血量低于20）>周瑜>甄姬>其他三分登场>其他登场。阵容战力来源：全员高等级压制，后期可传承（2次）/换帅/遗志999吕布",
+        "3、开场前，打出位可上太乙复活保容错，装备不好用免费的重铸打造合适装备。如有2传承1遗志1换帅，手里拿一张吕布，看场上最高等级的4名英雄合计超过999级(越高越好)，卖1-2名最低等级英雄，传承-卖，上吕布，换帅最高等级三分英雄，遗志剩余一个，打造999吕布。后上太乙保容错。"
+    ],
+    "positionImage": "images/position/3.sunxiaobinsanfendaozhuan.png"
+}
+,
     {
         "id": 4,
         "name": "昭君大河5+2",
