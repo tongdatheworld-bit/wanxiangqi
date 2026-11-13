@@ -271,14 +271,14 @@
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
         {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ],
     "funcHeroList": [
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
         {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ],
     "backupHeroList": [
@@ -325,7 +325,7 @@
                 {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
                 {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
                 {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
-                {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+                {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
                 {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
             ],
             "desc": "第三轮竞拍优先抢：破境之证>扶摇直上>能量超新星>众星拱月。12回合开始慢拉等级到6本，大招选择重点照顾。"
