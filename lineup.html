@@ -676,32 +676,60 @@
     background:#b88600;
     color:#fff8e0;
 }
+/* 卡片容器：图片在上、文字在下 */
 .talent-item-list{
     display:flex;
-    gap:8px;
+    gap:12px;
     flex-wrap:wrap;
 }
-.talent-tag{
-    padding:5px 10px;
-    background:#282e3b;
-    border:1px solid #3a404f;
-    border-radius:7px;
-    color:#b4b9c6;
-    font-size:14px;
+.talent-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    width:76px;
 }
+.talent-card img{
+    width:60px;
+    height:60px;
+    border-radius:12px;
+    object-fit:cover;
+    border:1px solid #3a404f;
+    background:#282e3b;
+}
+.talent-card span{
+    font-size:12px;
+    color:#b4b9c6;
+    text-align:center;
+    line-height:1.2;
+}
+
 .effect-card-list{
     display:flex;
-    gap:10px;
+    gap:12px;
     flex-wrap:wrap;
     margin:10px 0;
 }
-.effect-tag{
-    padding:6px 12px;
-    background:#282e3b;
+.effect-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    width:76px;
+}
+.effect-card img{
+    width:60px;
+    height:60px;
+    border-radius:12px;
+    object-fit:cover;
     border:1px solid #3a404f;
-    border-radius:8px;
+    background:#282e3b;
+}
+.effect-card span{
+    font-size:12px;
     color:#ffd369;
-    font-size:14px;
+    text-align:center;
+    line-height:1.2;
 }
 
         /* ========= 运营节奏样式（匹配你当前class） ========= */
