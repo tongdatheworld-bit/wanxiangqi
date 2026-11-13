@@ -407,6 +407,23 @@
         {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
         {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"}
     ],
+        "talentTong": [
+    {"name": "银算盘", "img": "images/talent/yinsuanpan.png"},
+    {"name": "复印机", "img": "images/talent/fuyinji.png"}
+],
+"talentYin": [
+    {"name": "群英荟萃", "img": "images/talent/qunyinghuicui.png"},
+    {"name": "同路人", "img": "images/talent/tongluren.png"}
+],
+"talentJin": [
+    {"name": "慕名而来", "img": "images/talent/mumingerlai.png"},
+    {"name": "危险数字", "img": "images/talent/weixianshuzi.png"}
+],
+"effectCard": [
+    {"name": "吸引人才", "img": "images/effectcard/xiyinrencai.png"},
+    {"name": "二阶英雄兑换券", "img": "images/effectcard/erjieyingxionghuanquan.png"},
+    {"name": "无阵营征召令", "img": "images/effectcard/wuzhengyingzhengzhaoling.png"}
+],
     "runStage": [
         {
             "title": "1-3回合",
