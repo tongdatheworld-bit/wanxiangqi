@@ -256,24 +256,89 @@
         "equip": []
     },
     {
-        "id": 7,
-        "name": "马可单核养猪",
-        "rank": "S",
-        "player": "马可",
-        "playerImg": "images/players/make.png",
-        "hard": "中等",
-        "lineupCode": "129533708748664088（点击复制）",
-        "ban位": ["逐鹿", "河洛"],
-        "heroList": [
-            {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true},
-            {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
-            {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-        ],
-        "equip": []
-    },
+    "id": 7,
+    "name": "马可单核养猪",
+    "rank": "S+",
+    "player": "马可",
+    "playerImg": "images/players/make.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "困难",
+    "lineupCode": "129533708748664088（点击复制）",
+    "ban位": ["河洛"],
+    "heroList": [
+        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+        {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+        {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "backupHeroList": [
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false},
+        {"name":"孙尚香","img":"images/heroes/sunshangxiang.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"生命魔典","img":"images/equip/equipsmall/shengmingmodian.png"},
+        {"name":"反伤重甲","img":"images/equip/equipsmall/fanshangzhongjia.png"},
+        {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"}
+    ],
+    "equipSecond": [
+        {"name":"驱雷","img":"images/equip/equipsmall/qulei.png"},
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
+        {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png"}
+            ],
+            "desc": "开局上阵弈星搭配孙尚香，先完成孙尚香觉醒，再拉到3本。马可给的效果牌刷出等级加成、复制镜类宝藏牌优先给猪八戒，拉3本后再启动搜牌。首轮竞拍取舍优先级：猪八戒>姬小满>刘禅>明世隐>瑶"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+                {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
+                {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+            ],
+            "desc": "棋手到3级后，利用孙尚香的免费刷新持续搜猪八戒，体系内英雄全部收下；商店刷到梦奇，老夫子打出位可拿。第一张秘技终极宝藏选择：场上英雄尚未觉醒时，优先选取三张场上登场牌；同行少、觉醒压力小，则选【强化宝藏牌】或【提供2张宝藏牌】。猪八戒负责承伤、稳定释放技能；刘禅给到临时等级，明世隐可将猪八戒获得的临时等级转为永久等级。第二轮竞拍优先级：太乙真人>甄姬>庄周>杨玉环"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+                {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
+                {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "第三轮竞拍优先抢：破境之证>扶摇直上>能量超新星>众星拱月。12回合开始慢拉等级到6本，大招选择重点照顾。"
+        }
+    ],
+    "notice": [
+        "1. 打出位梦奇、甄姬、老夫子、庄周。场上全员觉醒后，复制镜优先给到猪八戒，用来夺取队友等级；若刷出强化复制镜，手牌留存2张猪八戒或梦奇备用。",
+        "2. 前排站位：姬小满、猪八戒、刘禅；明世隐、瑶链接猪八戒。注意防范班叔三级弹簧，避免猪八戒被直接弹飞。",
+        "3. 猪八戒装备：常规搭配不死鸟之眼 + 生命魔典 + 反甲 / 红莲斗篷；神装优选机械头 + 吸血书 + 光辉圣铠 / 盛华。",
+        "4. 马可思路：3级刷牌，保证锦囊产出均为低阶英雄牌，等到临近14回合再拉5、6级；专属秘技选择【重点照顾】，3阶同阶单位基数大，收益更高。"
+    ],
+    "positionImage": "images/position/7.makedanheyangzhu.png"
+},
     {
         "id": 8,
         "name": "班叔李信陷阱流",
