@@ -337,22 +337,22 @@
             border-left:4px solid #ffd369;
             padding-left:10px;
         }
-        .hero-grid,.equip-grid{
+        .hero-grid,.equip-grid,.talent-grid,.effect-grid{
             display:flex;
             gap:10px;
             flex-wrap:wrap;
         }
-        .hero-small,.equip-small{
+        .hero-small,.equip-small,.talent-small,.effect-small{
             width:64px;
             text-align:center;
         }
-        .hero-small img,.equip-small img{
+        .hero-small img,.equip-small img,.talent-small img,.effect-small img{
             width:56px;
             height:56px;
             border-radius:8px;
             object-fit:cover;
         }
-        .hero-small span,.equip-small span{
+        .hero-small span,.equip-small span,.talent-small span,.effect-small span{
             font-size:12px;
             color:#ccc;
             display:block;
@@ -634,7 +634,7 @@ function buildCard(item){
 }
 
 
-// 打开详情弹窗（完全匹配你给的数据字段：heroList、funcHeroList、backupHeroList、equipFirst、equipSecond、runStage、notice、positionImage）
+// 打开详情弹窗（【新增：天赋推荐、效果牌推荐】，和lineup.html保持一致）
 function openLineupModal(item){
     currentLineup = item;
 
@@ -684,6 +684,46 @@ function openLineupModal(item){
     if(Array.isArray(item.equipSecond)){
         equipSecondHtml = item.equipSecond.map(e=>`
             <div class="hero-small">
+                <img src="${e.img}" alt="${e.name}">
+                <span>${e.name}</span>
+            </div>`
+        ).join('');
+    }
+
+    // ========== 天赋推荐 铜/银/金 ==========
+    let talentTongHtml = '';
+    if(Array.isArray(item.talentTong)){
+        talentTongHtml = item.talentTong.map(t=>`
+            <div class="talent-small">
+                <img src="${t.img}" alt="${t.name}">
+                <span>${t.name}</span>
+            </div>`
+        ).join('');
+    }
+    let talentYinHtml = '';
+    if(Array.isArray(item.talentYin)){
+        talentYinHtml = item.talentYin.map(t=>`
+            <div class="talent-small">
+                <img src="${t.img}" alt="${t.name}">
+                <span>${t.name}</span>
+            </div>`
+        ).join('');
+    }
+    let talentJinHtml = '';
+    if(Array.isArray(item.talentJin)){
+        talentJinHtml = item.talentJin.map(t=>`
+            <div class="talent-small">
+                <img src="${t.img}" alt="${t.name}">
+                <span>${t.name}</span>
+            </div>`
+        ).join('');
+    }
+
+    // ========== 效果牌推荐 ==========
+    let effectCardHtml = '';
+    if(Array.isArray(item.effectCard)){
+        effectCardHtml = item.effectCard.map(e=>`
+            <div class="effect-small">
                 <img src="${e.img}" alt="${e.name}">
                 <span>${e.name}</span>
             </div>`
@@ -761,12 +801,29 @@ ${banModalHtml}
 
 <h4 class="section-title">首选装备</h4>
 <div class="run-block">
-    <div class="hero-grid">${equipFirstHtml || '<p class="empty-text">暂无</p>'}</div>
+    <div class="equip-grid">${equipFirstHtml || '<p class="empty-text">暂无</p>'}</div>
 </div>
 
 <h4 class="section-title">备选装备</h4>
 <div class="run-block">
-    <div class="hero-grid">${equipSecondHtml || '<p class="empty-text">暂无</p>'}</div>
+    <div class="equip-grid">${equipSecondHtml || '<p class="empty-text">暂无</p>'}</div>
+</div>
+
+<!-- ========== 新增：天赋推荐 ========== -->
+<h4 class="section-title">天赋推荐</h4>
+<div class="run-block">
+    <div style="margin-bottom:8px;color:#b1b6c2;">铜天赋</div>
+    <div class="talent-grid" style="margin-bottom:12px;">${talentTongHtml || '<p class="empty-text">暂无</p>'}</div>
+    <div style="margin-bottom:8px;color:#b1b6c2;">银天赋</div>
+    <div class="talent-grid" style="margin-bottom:12px;">${talentYinHtml || '<p class="empty-text">暂无</p>'}</div>
+    <div style="margin-bottom:8px;color:#b1b6c2;">金天赋</div>
+    <div class="talent-grid">${talentJinHtml || '<p class="empty-text">暂无</p>'}</div>
+</div>
+
+<!-- ========== 新增：效果牌推荐 ========== -->
+<h4 class="section-title">效果牌推荐</h4>
+<div class="run-block">
+    <div class="effect-grid">${effectCardHtml || '<p class="empty-text">暂无</p>'}</div>
 </div>
 
 <h4 class="section-title">运营阶段</h4>
