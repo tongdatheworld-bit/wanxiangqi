@@ -259,9 +259,10 @@
 }
 
 /* ====== 天赋推荐：取消滑动，一排展示6个 ====== */
+/* ====== 天赋推荐：标签自适应文字宽度，胶囊圆角，卡片自动换行 ====== */
 .talent-group-row {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     overflow-x: visible;
     overflow-y: visible;
     padding-bottom: 10px;
@@ -270,61 +271,58 @@
 }
 
 .talent-col {
-    flex: 1 1 auto;
+    flex: 1;
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    text-align: left; /* 标题靠左 */
 }
 
-
 .talent-col-title {
-    font-size: 14px;
-    margin-bottom: 0;
-    padding: 3px 10px;
-    border-radius: 8px;
-    display: inline-block;
+    font-size: 18px;
+    padding: 8px 24px; /* 左右内边距！不再是上下0，给文字两侧留白 */
+    border-radius: 999px;
+    display: inline-block; /* 核心：宽度跟着文字走，不再撑满 */
     font-weight: bold;
-    white-space: nowrap;
+    text-align: center;
 }
 
 .talent-tong {
     background: #70543c;
     color: #ffddb0;
 }
-
 .talent-yin {
     background: #868b94;
     color: #f0f2f6;
 }
-
 .talent-jin {
     background: #c89400;
     color: #fff9e2;
 }
 
-/* 关键：取消换行，一排展示 */
 .talent-item-list {
     display: flex;
-    gap: 10px;
-    flex-wrap: nowrap;
-    overflow: hidden;
+    gap: 12px;
+    flex-wrap: wrap;
+    overflow: visible;
 }
 
-/* 天赋牌整体缩小 */
 .talent-full-card {
-    flex: 0 0 110px;
+    flex: 0 0 170px;
     min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
     position: relative;
+    background:#171a23;
+    border-radius:12px;
+    padding:10px;
 }
 
-/* 图标缩小 */
 .talent-full-card img {
-    width: 100%;
+    width: 100px;
     height: auto;
     border-radius: 10px;
     object-fit: contain;
@@ -335,7 +333,7 @@
     display: none;
 }
 
-/* 悬浮预览图也同步缩小 */
+/* 悬浮预览保留 */
 .talent-full-card .preview-img {
     position: fixed;
     z-index: 9999;
@@ -346,7 +344,6 @@
     opacity: 0;
     transition: opacity 0.15s ease;
 }
-
 .talent-full-card:hover .preview-img {
     opacity: 1;
 }
