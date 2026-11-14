@@ -756,6 +756,54 @@
         .modal-content::-webkit-scrollbar-thumb:hover {
             background: #ffd369;
         }
+        .name-code-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.name-code-row h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffd369;
+}
+.name-code-row .code-text {
+    display: inline-flex;
+    align-items: center;
+    gap:6px;
+    font-size: 14px;
+    color: #ffd369;
+    background: rgba(255, 211, 105, 0.08);
+    border: 1px solid rgba(255, 211, 105, 0.25);
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+.name-code-row .code-text:hover {
+    background: rgba(255, 211, 105, 0.16);
+}
+.name-code-row .code-text.copied {
+    border-color: #39d977;
+    background: rgba(57, 217, 119, 0.12);
+    color: #69ff94;
+}
+.code-normal, .code-success {
+    display: inline-flex;
+    align-items: center;
+    gap:4px;
+}
+.code-success {
+    display: none;
+}
+.code-text.copied .code-normal {
+    display: none;
+}
+.code-text.copied .code-success {
+    display: inline-flex;
+}
+
     </style>
 </head>
 <body>
