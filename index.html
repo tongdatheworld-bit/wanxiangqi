@@ -775,10 +775,11 @@
             background: #b88600;
             color: #fff8e0;
         }
+        /* 重点修改：卡片横向自动换行 */
         .talent-col-cards {
             display: flex;
-            flex-direction: column;
-            align-items: stretch;
+            flex-direction: row;
+            flex-wrap: wrap;
             gap: 12px;
         }
         .talent-card-full {
@@ -850,7 +851,60 @@
         }
         /* 解锁弹窗 */
         #lockModal{
-            position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;
+            position:fixed;
+            inset:0;
+            background:rgba(0,0,0,0.75);
+            z-index:9999;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            display: none;
+        }
+        #lockModal.show{
+            display:flex;
+        }
+        #lockModal .lock-inner{
+            background:#171a23;
+            border:1px solid #2a2f3d;
+            border-radius:18px;
+            padding:28px;
+            width:min(420px,90%);
+        }
+        #lockModal h3{
+            color:#ffd369;
+            margin-bottom:16px;
+            text-align:center;
+        }
+        #lockModal p{
+            color:#b4b9c6;
+            margin-bottom:14px;
+            text-align:center;
+        }
+        #lockModal #codeInput{
+            width:100%;
+            padding:12px 14px;
+            background:#1c212c;
+            border:1px solid #333844;
+            border-radius:10px;
+            color:#fff;
+            outline:none;
+            margin-bottom:14px;
+        }
+        #lockModal #tipText{
+            color:#ff7777;
+            font-size:14px;
+            margin-bottom:14px;
+            text-align:center;
+        }
+        #lockModal #unlockBtn{
+            width:100%;
+            padding:12px;
+            background:#ffd369;
+            color:#12161f;
+            border:none;
+            border-radius:10px;
+            font-weight:bold;
+            cursor:pointer;
         }
     </style>
 </head>
@@ -914,10 +968,8 @@
 
         async function loadLineupJson() {
             try {
-                // ✅ 修改选择器：现在是 .modal 和 #modalBody
                 modalDom = document.querySelector('.modal');
                 modalInner = document.querySelector('#modalBody');
-                // 遮罩点击关闭逻辑
                 modalDom.addEventListener('click', function(e){
                     if(e.target === modalDom){
                         closeModal();
@@ -933,7 +985,6 @@
             }
         }
 
-        // 复制阵容码（带copied反馈）
         async function copyCode(ele, rawCode) {
             const realCode = rawCode.split("（")[0];
             try {
@@ -945,20 +996,17 @@
             }
         }
 
-        // 生成卡片
         function buildCard(item){
             const div = document.createElement('div');
             div.className = "lineup-card";
             div.dataset.id = item.id;
 
-            // Ban位标签
             let banHtml = '';
             if(Array.isArray(item["ban位"]) && item["ban位"].length > 0){
                 banHtml = `<span class="ban-title-tag">Ban阵营：</span>`
                     + item["ban位"].map(b=>`<span class="ban-item">${b}</span>`).join('');
             }
 
-            // 英雄列表 + 核标记
             let heroHtml = '';
             if(Array.isArray(item.heroList)){
                 heroHtml = item.heroList.map(h=>`
@@ -968,7 +1016,6 @@
          `).join('');
             }
 
-            // 备选棋手
             let alternatePlayerHtml = '';
             if(Array.isArray(item.alternatePlayer) && item.alternatePlayer.length > 0){
                 alternatePlayerHtml = `
@@ -1011,23 +1058,19 @@
          </div>
      `;
 
-            // 复制阵容码事件
             const copySpan = div.querySelector('.copy-code');
             copySpan.onclick = (e)=>{
                 e.stopPropagation();
                 copyCode(copySpan, item.lineupCode);
             }
-            // 点击卡片打开弹窗
             div.onclick = ()=>{
                 openLineupModal(item);
             }
             return div;
         }
-// 打开详情弹窗【删掉功能替换卡 + 备选英雄改名为打出位/备选，放到功能性英雄后面】
 function openLineupModal(item){
     currentLineup = item;
 
-    // 完整阵容英雄
     let heroHtml = '';
     if(Array.isArray(item.heroList)){
         heroHtml = item.heroList.map(h=>`
@@ -1037,7 +1080,6 @@ function openLineupModal(item){
         ).join('');
     }
 
-    // 打出位/备选（原备选英雄）
     let backupHeroHtml = '';
     if(Array.isArray(item.backupHeroList)){
         backupHeroHtml = item.backupHeroList.map(h=>`
@@ -1047,7 +1089,6 @@ function openLineupModal(item){
         ).join('');
     }
 
-    // 功能性英雄
     let functionalHeroHtml = '';
     if(Array.isArray(item.funcHeroList) && item.funcHeroList.length>0){
         functionalHeroHtml = item.funcHeroList.map(h=>`
@@ -1064,7 +1105,6 @@ function openLineupModal(item){
     }
 
 
-    // 首选装备
     let equipFirstHtml = '';
     if(Array.isArray(item.equipFirst)){
         equipFirstHtml = item.equipFirst.map(e=>`
@@ -1073,7 +1113,6 @@ function openLineupModal(item){
      </div>`
         ).join('');
     }
-    // 备选装备
     let equipSecondHtml = '';
     if(Array.isArray(item.equipSecond)){
         equipSecondHtml = item.equipSecond.map(e=>`
@@ -1083,7 +1122,6 @@ function openLineupModal(item){
         ).join('');
     }
 
-    // ========== 天赋卡片HTML ==========
     let talentTongCardHtml = '';
     if(Array.isArray(item.talentTong) && item.talentTong.length>0){
        talentTongCardHtml = item.talentTong.map(t=>`
@@ -1121,7 +1159,6 @@ function openLineupModal(item){
         talentJinCardHtml = `<p class="empty-text">暂无</p>`;
     }
 
-    // ========== 效果牌完整卡片 ==========
     let effectCardFullHtml = '';
     if(Array.isArray(item.effectCard) && item.effectCard.length>0){
         effectCardFullHtml = item.effectCard.map(e=>`
@@ -1135,7 +1172,6 @@ function openLineupModal(item){
         effectCardFullHtml = `<p class="empty-text">暂无</p>`;
     }
 
-    // 运营阶段
     let runStageHtml = '';
     if(Array.isArray(item.runStage)){
         runStageHtml = item.runStage.map(stage=>{
@@ -1157,7 +1193,6 @@ function openLineupModal(item){
         }).join('');
     }
 
-    // Ban阵营
     let banModalHtml = '';
     if(Array.isArray(item["ban位"]) && item["ban位"].length>0){
         banModalHtml = `
@@ -1167,7 +1202,6 @@ function openLineupModal(item){
  </div>`
     }
 
-    // 注意事项列表渲染
     let noticeHtml = "";
     if(Array.isArray(item.notice) && item.notice.length > 0){
         noticeHtml = item.notice.map(n=>`<li>${n}</li>`).join("");
@@ -1175,7 +1209,6 @@ function openLineupModal(item){
         noticeHtml = `<li>无</li>`;
     }
 
-    // 核心英雄信息
     const coreHero = item.heroList?.find(h=>h.isCore);
 
     modalInner.innerHTML = `
@@ -1186,7 +1219,7 @@ function openLineupModal(item){
         <div class="name-code-row">
             <h2>${item.name}</h2>
             <span class="code-text" onclick="copyCode(this, '${item.lineupCode || ''}')">
-                <span class="copy-normal">阵容码：${item.lineupCode || ''}</span>
+                <span class="code-normal">阵容码：${item.lineupCode || ''}</span>
                 <span class="code-success">✅已复制</span>
             </span>
         </div>
@@ -1309,7 +1342,7 @@ ${banModalHtml}
 
         window.addEventListener('load', loadLineupJson);
     </script>
-    <!-- 阵容弹窗【改成和lineup.html一致结构】 -->
+    <!-- 阵容弹窗 -->
 <div class="modal" id="detailModal">
     <div class="modal-content">
         <div id="modalBody"></div>
@@ -1318,4 +1351,15 @@ ${banModalHtml}
 
 </div>
 <!-- 解锁弹窗 -->
-<div id="lockModal" style="position
+<div id="lockModal">
+    <div class="lock-inner">
+        <h3>访问验证</h3>
+        <p>请输入解锁口令</p>
+        <input id="codeInput" type="text" placeholder="输入口令">
+        <div id="tipText"></div>
+        <button id="unlockBtn">确认解锁</button>
+    </div>
+</div>
+
+</body>
+</html>
