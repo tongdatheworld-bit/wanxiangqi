@@ -254,8 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <h4>打出位/备选</h4>
     <div class="hero-row-modal">${backupHeroHtml}</div>
 </div>
-<div class="modal-block">
-   <div class="equip-area">
+<div class="equip-area">
     <div class="equip-area-title">装备选择</div>
     <div class="equip-main-row">
         <!-- 左侧主英雄头像 -->
@@ -263,13 +262,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="mini-hero-modal core">
                 <img src="${find.heroList?.find(h => h.isCore)?.img || ''}" alt="主C">
             </div>
-            <div class="hero-name-text">主C</div>
+            <div class="hero-name-text">${find.heroList?.find(h => h.isCore)?.name || ''}</div>
         </div>
-
         <!-- 右侧首选 / 备选 -->
         <div class="equip-side">
             <div class="equip-group">
-                <span class="equip-group-label">首选</span>
+                <span class="equip-group-label">·首选</span>
                 <div class="equip-list-row">
                     ${
                         Array.isArray(find.equipFirst) && find.equipFirst.length
@@ -282,9 +280,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 </div>
             </div>
-
             <div class="equip-group">
-                <span class="equip-group-label">备选</span>
+                <span class="equip-group-label">·备选</span>
                 <div class="equip-list-row">
                     ${
                         Array.isArray(find.equipSecond) && find.equipSecond.length
@@ -300,6 +297,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 </div>
+
 
 <div class="modal-block">
     <h4>天赋推荐</h4>
