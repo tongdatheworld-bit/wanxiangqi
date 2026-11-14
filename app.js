@@ -443,6 +443,14 @@ document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class=
     }
 })
 
+// 天赋预览图跟随鼠标
+document.addEventListener('mousemove', function(e){
+    document.querySelectorAll('.preview-img').forEach(img=>{
+        img.style.left = (e.pageX + 16) + 'px';
+        img.style.top = (e.pageY + 16) + 'px';
+    })
+})
+
 // 复制函数放外面，给onclick全局调用
 async function copyCode(code) {
     // 从中文左括号「（」切割，只取前面纯数字编码
