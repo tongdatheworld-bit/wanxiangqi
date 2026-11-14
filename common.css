@@ -72,7 +72,6 @@
     line-height: 1.8;
     font-size: 16px;
 }
-/* 专门给ul列表，解决圆点贴左边框！ */
 .modal-block ul {
     padding-left: 22px;
     margin: 8px 0;
@@ -85,29 +84,40 @@
     word-break: break-word;
 }
 
-/* ========= 弹窗首选/次选圆形装备 ========= */
-.equip-list{
+/* ========= 装备行【图+下方文字，你要的卡片样式】 ========= */
+.equip-row{
     display:flex;
     gap:12px;
-    flex-wrap:wrap;
+    align-items:center;
     margin:10px 0;
+    flex-wrap:wrap;
 }
-.equip-pill{
-    width: 54px;
-    height: 54px;
-    display:block;
-    border-radius:50%;
-    overflow:hidden;
+.equip-item{
+    text-align:center;
+    width:70px;
+}
+.equip-item img{
+    width:48px;
+    height:48px;
+    border-radius:8px;
     border:1px solid #333844;
-    flex:0 0 auto;
+    object-fit: contain;
+    display: block;
+    margin:0 auto;
 }
-.equip-pill img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.equip-item span{
     display:block;
+    font-size:12px;
+    color:#b4b9c6;
+    margin-top:4px;
 }
-/* 滚动条美化（弹窗内滚动） */
+.equip-tag{
+    color:#ffd369;
+    font-weight:bold;
+    width:40px;
+}
+
+/* 弹窗滚动条美化 */
 .modal-content::-webkit-scrollbar {
     width: 8px;
 }
@@ -155,39 +165,6 @@
     justify-content:center;
 }
 
-/* ========= 装备行 ========= */
-.equip-row{
-    display:flex;
-    gap:12px;
-    align-items:center;
-    margin:10px 0;
-    flex-wrap:wrap;
-}
-.equip-item{
-    text-align:center;
-    width:70px;
-}
-.equip-item img{
-    width:26px !important;
-    height:26px !important;
-    border-radius:8px;
-    border:1px solid #333844;
-    object-fit: contain;
-    display: block;
-    margin:0 auto;
-}
-.equip-item span{
-    display:block;
-    font-size:12px;
-    color:#b4b9c6;
-    margin-top:4px;
-}
-.equip-tag{
-    color:#ffd369;
-    font-weight:bold;
-    width:40px;
-}
-
 /* ========= 弹窗头部信息行 ========= */
 .modal-top-info{
     display:flex;
@@ -215,7 +192,7 @@
     color:#b4b9c6;
 }
 
-/* ========= 运营节奏模块 ========= */
+/* ========= 运营节奏模块（标题高亮醒目） ========= */
 .run-stage-list{
     display:flex;
     flex-direction:column;
@@ -264,16 +241,13 @@
     height:100%;
     object-fit:cover;
 }
-.run-stage-hero-name{
-    display:none;
-}
 .run-stage-text{
     color:#d6dae7;
     line-height:1.8;
     font-size:16px;
 }
 
-/* ====== 天赋推荐 ====== */
+/* ====== 天赋推荐 横向滚动 ====== */
 .talent-group-row {
     display: flex;
     gap: 20px;
@@ -356,7 +330,7 @@
     width: 100%;
 }
 
-/* ====== 效果牌 ====== */
+/* ====== 效果牌 固定卡片宽，不会拉伸变形 ====== */
 .effect-card-list {
     display: flex;
     gap: 12px;
@@ -369,9 +343,7 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    flex: 1;
-    min-width: 0;
-    max-width: 150px;
+    flex: 0 0 140px;
 }
 
 .effect-card img {
@@ -392,41 +364,6 @@
     width: 100%;
 }
 
-/* ========= 运营节奏样式（匹配你当前class） ========= */
-.stage-block {
-    background:#1c212c;
-    border:1px solid #282d38;
-    border-radius:14px;
-    padding:16px 18px;
-    margin-bottom:14px;
-}
-.stage-title {
-    margin-bottom:10px;
-}
-.stage-heroes{
-    display:flex;
-    gap:12px;
-    margin-bottom:10px;
-    flex-wrap:wrap;
-}
-.hero-pill.small{
-    width:64px;
-    height:64px;
-    border-radius:10px;
-    border:1px solid #333844;
-    overflow:hidden;
-    display:block;
-}
-.hero-pill.small img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-.stage-desc{
-    color:#e6e8ef;
-    line-height:1.7;
-    font-size:16px;
-}
 .empty-text{
     color:#777;
     font-size:13px;
