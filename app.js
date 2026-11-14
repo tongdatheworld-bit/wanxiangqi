@@ -204,10 +204,16 @@ modalBody.innerHTML = `
 <div class="modal-top-info">
     <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
     <div class="info-text">
-        <h2>${find.name}</h2>
+        <div class="name-code-row">
+            <h2>${find.name}</h2>
+            <span class="code-text" onclick="copyCode('${find.lineupCode}')">
+                ${find.lineupCode}
+            </span>
+        </div>
         <div class="modal-sub">强度：${find.rank}｜成型难度：${find.hard}</div>
     </div>
 </div>
+
 <div class="modal-block">
     <h4>BAN阵营</h4>
     <p>${Array.isArray(find["ban位"]) ? find["ban位"].join('、') : '无'}</p>
@@ -335,10 +341,6 @@ modalBody.innerHTML = `
             : `<div class="position-image-placeholder">暂无站位图</div>`
         }
     </div>
-</div>
-<div class="modal-block">
-    <h4>阵容码</h4>
-    <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
 </div>
 `;
 // 天赋渲染
