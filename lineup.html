@@ -363,18 +363,24 @@
             align-items:center;
         }
         .mini-hero {
-            width:90px;
-            height:90px;
-            border-radius:16px;
-            overflow:hidden;
-            position:relative;
-            flex-shrink:0;
-        }
-        .mini-hero img {
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
+    width:90px;
+    height:90px;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    flex-shrink:0;
+    /* 新增这两行底色边框，和弹窗卡片风格对齐 */
+    background: #1c212c;
+    border: 1px solid #282d38;
+    padding: 6px;
+}
+.mini-hero img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:10px;
+}
+
         /* ========== 列表卡片 mini-hero 的核标签【新增】 ========== */
         .mini-hero.core::after {
             content: "核";
