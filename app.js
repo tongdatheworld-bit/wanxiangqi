@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const noticeHtml = Array.isArray(find.notice) && find.notice.length
                 ? find.notice.map(n => `<li>${n}</li>`).join('')
                 : '<li class="empty-text">无</li>';
+
 modalBody.innerHTML = `
 <div class="modal-top-info">
     <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
@@ -254,11 +255,9 @@ modalBody.innerHTML = `
     <div class="hero-row-modal">${backupHeroHtml}</div>
 </div>
 
-<!-- ========== 装备模块【正确闭合版本】 ========== -->
-<div class="equip-area">
-    <div class="equip-area-title">装备选择</div>
+<div class="modal-block">
+    <h4>装备选择</h4>
     <div class="equip-main-row">
-        <!-- 左侧英雄头像 -->
         <div class="equip-main-hero">
             <div class="mini-hero-modal core">
                 <img src="${find.heroList?.find(h => h.isCore)?.img || ''}" alt="主C">
@@ -295,12 +294,14 @@ modalBody.innerHTML = `
                 </div>
             </div>
         </div>
-    </div> <!-- ✅ 补上这个闭合！关闭 equip-main-row -->
-</div> <!-- ✅ 关闭 equip-area -->
-<!-- ========================================= -->
+    </div>
+</div>
+
+<div class="modal-block">
     <h4>运营节奏</h4>
     <div class="run-stage-list">${runStageHtml}</div>
 </div>
+
 <div class="modal-block">
     <h4>注意事项</h4>
     <ul class="notice-list">${noticeHtml}</ul>
@@ -327,7 +328,6 @@ modalBody.innerHTML = `
     <div class="effect-card-list" id="effectCardBox"></div>
 </div>
 <div class="modal-block">
-<div class="modal-block">
     <h4>站位</h4>
     <div class="position-image-box">
         ${find.positionImage
@@ -343,7 +343,7 @@ modalBody.innerHTML = `
 `;
 
             // ========== 渲染天赋和效果卡 ==========
-        let tongHtml = find.talentTong?.map(t => `
+            let tongHtml = find.talentTong?.map(t => `
     <div class="talent-card" title="${t.name}">
         <img src="${t.img}" alt="${t.name}">
         <span>${t.name}</span>
@@ -374,9 +374,6 @@ let effectHtml = find.effectCard?.map(e => `
     </div>
 `).join('');
 document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class="empty-text">无</span>';
-
-
-            // ======================================
 
             modal.style.display = 'flex';
         };
