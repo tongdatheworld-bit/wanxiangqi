@@ -691,17 +691,19 @@
 }
 
 .hero-pill.small {
-    flex: 0 0 82px;
     width: 82px;
+    height: 82px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 .hero-pill.small img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
-    border-radius: 10px;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
+
 
 
 /* 运营节奏正文：跟注意事项保持一致 */
@@ -727,7 +729,6 @@
     word-break: break-word;
 }
 
-        }
         .position-image-box img {
             max-width:100%;
             border-radius:12px;
