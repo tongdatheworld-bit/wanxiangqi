@@ -84,13 +84,28 @@
     word-break: break-word;
 }
 
-/* ========= 装备行【图+下方文字，你要的卡片样式】 ========= */
-.equip-row{
+/* ========= 装备行：装备标题在上，图标行在下 ========= */
+.equip-row {
     display:flex;
-    gap:12px;
-    align-items:center;
+    gap:24px;
+    align-items: flex-start;
     margin:10px 0;
     flex-wrap:wrap;
+}
+.equip-group-old {
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+.equip-tag {
+    color:#ffd369;
+    font-weight:bold;
+    white-space: nowrap;
+    width:auto;
+}
+.equip-items-wrap {
+    display:flex;
+    gap:12px;
 }
 .equip-item{
     text-align:center;
@@ -111,11 +126,7 @@
     color:#b4b9c6;
     margin-top:4px;
 }
-.equip-tag{
-    color:#ffd369;
-    font-weight:bold;
-    width:40px;
-}
+
 
 /* 弹窗滚动条美化 */
 .modal-content::-webkit-scrollbar {
