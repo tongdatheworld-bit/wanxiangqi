@@ -542,7 +542,8 @@
             color:#b4b9c6;
             line-height:1.6;
         }
-  /* ===== 装备选择：严格按第2张参考图横向布局 ===== */
+/* ===== 装备选择：首选、备选左右并排，不再上下分行 ===== */
+
 .equip-area {
   background: #1c212c;
   border: 1px solid #282d38;
@@ -601,13 +602,12 @@
   color: #cfd3de;
 }
 
-/* 右侧首选 / 备选：改成第2张图那种左右拉开 */
+/* 右侧：首选和备选左右并排 */
 .equip-side {
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+  gap: 28px;
   min-width: 0;
 }
 
@@ -632,9 +632,9 @@
 }
 
 .equip-pill {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   border: 1px solid #333844;
   background: #282e3b;
   overflow: hidden;
