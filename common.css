@@ -284,15 +284,17 @@
 }
 
 .talent-col-title {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 0;
-    padding: 7px 0;
-    width: 130px;
-    text-align: center;
-    border-radius: 12px;
+    padding: 4px 14px;
+    border-radius: 10px;
     display: inline-block;
     font-weight: bold;
+    white-space: nowrap;
+    min-width: 76px;
+    text-align: center;
 }
+
 
 .talent-tong {
     background: #70543c;
