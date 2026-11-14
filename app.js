@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ? find.notice.map(n => `<li>${n}</li>`).join('')
                 : '<li class="empty-text">无</li>';
 
-            modalBody.innerHTML = `
+          modalBody.innerHTML = `
 <div class="modal-top-info">
     <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
     <div class="info-text">
@@ -215,23 +215,64 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 <div class="modal-block">
     <h4>阵容组成</h4>
-    <div class="hero-row-modal">${heroHtml}</div>
+    <div class="hero-row-modal lineup-hero-row">
+        ${
+            Array.isArray(find.heroList) && find.heroList.length
+            ? find.heroList.map(h => `
+                <div class="lineup-hero-item">
+                    <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                        <img src="${h.img}" alt="${h.name}">
+                    </div>
+                    <div class="hero-name-text">${h.name}</div>
+                </div>
+              `).join('')
+            : '<span class="empty-text">无</span>'
+        }
+    </div>
 </div>
 <div class="modal-block">
     <h4>功能性英雄</h4>
-    <div class="hero-row-modal">${funcHeroHtml}</div>
+    <div class="func-hero-list">
+        ${
+            Array.isArray(find.funcHeroList) && find.funcHeroList.length
+            ? find.funcHeroList.map(h => `
+                <div class="func-hero-item">
+                    <div class="mini-hero-modal">
+                        <img src="${h.img}" alt="${h.name}">
+                    </div>
+                    <div class="func-info">
+                        <div class="func-name">${h.name}</div>
+                        <div class="func-desc">${h.desc || ''}</div>
+                    </div>
+                </div>
+              `).join('')
+            : '<span class="empty-text">无</span>'
+        }
+    </div>
 </div>
 <div class="modal-block">
     <h4>打出位/备选</h4>
     <div class="hero-row-modal">${backupHeroHtml}</div>
 </div>
 <div class="modal-block">
-    <h4>首选装备</h4>
-    <div class="equip-list">${equipFirstHtml}</div>
-</div>
-<div class="modal-block">
-    <h4>次选装备</h4>
-    <div class="equip-list">${equipSecondHtml}</div>
+    <h4>装备选择</h4>
+    <div class="equip-wrap-new">
+        <div class="equip-main-c">
+            <div class="mini-hero-modal core">
+                <img src="${find.heroList?.find(h=>h.isCore)?.img || ''}" alt="主C">
+            </div>
+        </div>
+        <div class="equip-group-col">
+            <div class="equip-line">
+                <span class="equip-label">首选</span>
+                <div class="equip-list">${equipFirstHtml}</div>
+            </div>
+            <div class="equip-line">
+                <span class="equip-label">备选</span>
+                <div class="equip-list">${equipSecondHtml}</div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="modal-block">
     <h4>天赋推荐</h4>
@@ -275,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <h4>阵容码</h4>
     <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
 </div>
-            `;
+`;
 
             // ========== 渲染天赋和效果卡 ==========
         let tongHtml = find.talentTong?.map(t => `
