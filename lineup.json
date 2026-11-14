@@ -2000,6 +2000,8 @@
     "rank": "S",
     "player": "镜",
     "playerImg": "images/players/jing.png",
+         "alternatePlayer": ["白歌","孙小宾"],
+    "alternatePlayerImg": ["images/players/baige.png","images/players/sunxiaobin.png"],
     "hard": "简单",
     "lineupCode": "8900441412901138（点击复制）",
     "ban位": ["河洛", "逐鹿", "大河"],
