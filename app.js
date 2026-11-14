@@ -200,8 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const noticeHtml = Array.isArray(find.notice) && find.notice.length
                 ? find.notice.map(n => `<li>${n}</li>`).join('')
                 : '<li class="empty-text">无</li>';
-
-          modalBody.innerHTML = `
+modalBody.innerHTML = `
 <div class="modal-top-info">
     <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
     <div class="info-text">
@@ -254,6 +253,8 @@ document.addEventListener('DOMContentLoaded', function () {
     <h4>打出位/备选</h4>
     <div class="hero-row-modal">${backupHeroHtml}</div>
 </div>
+
+<!-- ========== 装备模块【正确闭合版本】 ========== -->
 <div class="equip-area">
     <div class="equip-area-title">装备选择</div>
     <div class="equip-main-row">
@@ -264,40 +265,46 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="hero-name-text">${find.heroList?.find(h => h.isCore)?.name || ''}</div>
         </div>
-
-       <div class="equip-side">
-    <div class="equip-group">
-        <span class="equip-group-label">·首选</span>
-        <div class="equip-list-row">
-            ${
-                Array.isArray(find.equipFirst) && find.equipFirst.length
-                    ? find.equipFirst.map(e => `
-                        <span class="equip-pill">
-                            <img src="${e.img}" alt="${e.name}">
-                        </span>
-                      `).join('')
-                    : '<span class="empty-text">无</span>'
-            }
+        <div class="equip-side">
+            <div class="equip-group">
+                <span class="equip-group-label">·首选</span>
+                <div class="equip-list-row">
+                    ${
+                        Array.isArray(find.equipFirst) && find.equipFirst.length
+                            ? find.equipFirst.map(e => `
+                                <span class="equip-pill">
+                                    <img src="${e.img}" alt="${e.name}">
+                                </span>
+                              `).join('')
+                            : '<span class="empty-text">无</span>'
+                    }
+                </div>
+            </div>
+            <div class="equip-group">
+                <span class="equip-group-label">·备选</span>
+                <div class="equip-list-row">
+                    ${
+                        Array.isArray(find.equipSecond) && find.equipSecond.length
+                            ? find.equipSecond.map(e => `
+                                <span class="equip-pill">
+                                    <img src="${e.img}" alt="${e.name}">
+                                </span>
+                              `).join('')
+                            : '<span class="empty-text">无</span>'
+                    }
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="equip-group">
-        <span class="equip-group-label">·备选</span>
-        <div class="equip-list-row">
-            ${
-                Array.isArray(find.equipSecond) && find.equipSecond.length
-                    ? find.equipSecond.map(e => `
-                        <span class="equip-pill">
-                            <img src="${e.img}" alt="${e.name}">
-                        </span>
-                      `).join('')
-                    : '<span class="empty-text">无</span>'
-            }
-        </div>
-    </div>
+    </div> <!-- ✅ 补上这个闭合！关闭 equip-main-row -->
+</div> <!-- ✅ 关闭 equip-area -->
+<!-- ========================================= -->
+    <h4>运营节奏</h4>
+    <div class="run-stage-list">${runStageHtml}</div>
 </div>
-
-
+<div class="modal-block">
+    <h4>注意事项</h4>
+    <ul class="notice-list">${noticeHtml}</ul>
+</div>
 <div class="modal-block">
     <h4>天赋推荐</h4>
     <div class="talent-group-row">
@@ -320,13 +327,6 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="effect-card-list" id="effectCardBox"></div>
 </div>
 <div class="modal-block">
-    <h4>运营节奏</h4>
-    <div class="run-stage-list">${runStageHtml}</div>
-</div>
-<div class="modal-block">
-    <h4>注意事项</h4>
-    <ul class="notice-list">${noticeHtml}</ul>
-</div>
 <div class="modal-block">
     <h4>站位</h4>
     <div class="position-image-box">
