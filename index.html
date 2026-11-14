@@ -1023,8 +1023,7 @@
             }
             return div;
         }
-
-       // 打开详情弹窗【删掉功能替换卡版本】
+// 打开详情弹窗【删掉功能替换卡 + 备选英雄改名为打出位/备选，放到功能性英雄后面】
 function openLineupModal(item){
     currentLineup = item;
 
@@ -1038,7 +1037,7 @@ function openLineupModal(item){
         ).join('');
     }
 
-    // 备选英雄
+    // 打出位/备选（原备选英雄）
     let backupHeroHtml = '';
     if(Array.isArray(item.backupHeroList)){
         backupHeroHtml = item.backupHeroList.map(h=>`
@@ -1048,7 +1047,7 @@ function openLineupModal(item){
         ).join('');
     }
 
-    // 功能性英雄（新模块）
+    // 功能性英雄
     let functionalHeroHtml = '';
     if(Array.isArray(item.funcHeroList) && item.funcHeroList.length>0){
         functionalHeroHtml = item.funcHeroList.map(h=>`
@@ -1203,15 +1202,15 @@ ${banModalHtml}
             </div>
 
             <div class="modal-block">
-                <h4>备选英雄</h4>
-                <div class="hero-row-modal">${backupHeroHtml || '<p class="empty-text">暂无</p>'}</div>
-            </div>
-
-            <div class="modal-block">
                 <h4>功能性英雄</h4>
                 <div class="func-hero-list">
                     ${functionalHeroHtml}
                 </div>
+            </div>
+
+            <div class="modal-block">
+                <h4>打出位/备选</h4>
+                <div class="hero-row-modal">${backupHeroHtml || '<p class="empty-text">暂无</p>'}</div>
             </div>
 
             <div class="equip-area">
@@ -1288,6 +1287,7 @@ ${banModalHtml}
             `;
     modalDom.style.display = 'flex';
 }
+
 
 
         function renderHomeTopRank(){
