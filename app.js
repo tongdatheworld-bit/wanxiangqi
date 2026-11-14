@@ -187,19 +187,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="stage-title">
                             <span class="run-stage-tag">${stage.title}</span>
                         </div>
-                        <div class="stage-heroes">
-                            ${Array.isArray(stage.heroList) && stage.heroList.length
-                                ? stage.heroList.map(h => `
-                                    <span class="hero-pill small">
-                                        <img src="${h.img}" alt="${h.name}">
-                                    </span>
-                                  `).join('')
-                                : '<span class="empty-text">无</span>'}
-                        </div>
-                        <div class="stage-desc">${stage.desc || ''}</div>
-                    </div>
-                  `).join('')
-                : '<span class="empty-text">无</span>';
+                       <div class="stage-heroes">
+    ${Array.isArray(stage.heroList) && stage.heroList.length
+        ? stage.heroList.map(h => `
+            <div class="lineup-hero-item">
+                <span class="hero-pill small">
+                    <img src="${h.img}" alt="${h.name}">
+                </span>
+                <div class="hero-name-text">${h.name}</div>
+            </div>
+          `).join('')
+        : '<span class="empty-text">无</span>'}
+</div>
+
             // 注意事项
             const noticeHtml = Array.isArray(find.notice) && find.notice.length
                 ? find.notice.map(n => `<li>${n}</li>`).join('')
