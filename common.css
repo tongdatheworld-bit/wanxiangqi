@@ -258,35 +258,25 @@
     font-size:16px;
 }
 
-/* ====== 天赋推荐：改成横向一排，参考第二张截图 ====== */
+/* ====== 天赋推荐：取消滑动，一排展示6个 ====== */
 .talent-group-row {
     display: flex;
-    gap: 18px;
-    overflow-x: auto;
-    overflow-y: hidden;
+    gap: 12px;
+    overflow-x: visible;
+    overflow-y: visible;
     padding-bottom: 10px;
     margin: 14px 0 22px;
     align-items: flex-start;
-    flex-wrap: nowrap;
 }
 
-/* 隐藏横向滚动条，但保留滚动功能 */
-.talent-group-row::-webkit-scrollbar {
-    height: 6px;
+/* 隐藏滚动条 */
+.talent-group-row::-webkit-scrollbar,
+.talent-item-list::-webkit-scrollbar {
+    display: none;
 }
 
-.talent-group-row::-webkit-scrollbar-thumb {
-    background: #333844;
-    border-radius: 3px;
-}
-
-.talent-group-row::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-/* 取消原来的铜/银/金三列，改成横向分组 */
 .talent-col {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
     min-width: 0;
     display: flex;
     flex-direction: column;
@@ -294,9 +284,9 @@
 }
 
 .talent-col-title {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 0;
-    padding: 8px 22px;
+    padding: 7px 18px;
     border-radius: 12px;
     display: inline-block;
     font-weight: bold;
@@ -317,26 +307,30 @@
     color: #fff9e2;
 }
 
-/* 同一类天赋横向排列，不再换行 */
+/* 关键：取消换行，一排展示 */
 .talent-item-list {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: nowrap;
+    overflow: hidden;
 }
 
-/* 天赋卡片：固定宽度，保证一排显示 */
+/* 天赋牌整体缩小 */
 .talent-full-card {
+    flex: 0 0 110px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
-    flex: 0 0 160px;
+    gap: 4px;
     position: relative;
 }
 
+/* 图标缩小 */
 .talent-full-card img {
     width: 100%;
-    border-radius: 12px;
+    height: auto;
+    border-radius: 10px;
     object-fit: contain;
     cursor: zoom-in;
 }
@@ -345,12 +339,12 @@
     display: none;
 }
 
-/* 悬浮预览大图保持不变 */
+/* 悬浮预览图也同步缩小 */
 .talent-full-card .preview-img {
     position: fixed;
     z-index: 9999;
     pointer-events: none;
-    width: 260px;
+    width: 240px;
     border-radius: 14px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
     opacity: 0;
@@ -360,6 +354,7 @@
 .talent-full-card:hover .preview-img {
     opacity: 1;
 }
+
 
 
 /* ====== 效果牌 固定卡片宽，不会拉伸变形 ====== */
