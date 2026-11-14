@@ -347,6 +347,7 @@ document.getElementById('talentTongBox').innerHTML = find.talentTong?.length
         <div class="talent-full-card">
             <img src="${t.img}" alt="${t.name}">
             <img class="preview-img" src="${t.img}" alt="${t.name}">
+            <div class="talent-card-name">${t.name}</div>
         </div>
       `).join('')
     : '<span class="empty-text">无</span>';
@@ -356,6 +357,7 @@ document.getElementById('talentYinBox').innerHTML = find.talentYin?.length
         <div class="talent-full-card">
             <img src="${t.img}" alt="${t.name}">
             <img class="preview-img" src="${t.img}" alt="${t.name}">
+            <div class="talent-card-name">${t.name}</div>
         </div>
       `).join('')
     : '<span class="empty-text">无</span>';
@@ -365,9 +367,11 @@ document.getElementById('talentJinBox').innerHTML = find.talentJin?.length
         <div class="talent-full-card">
             <img src="${t.img}" alt="${t.name}">
             <img class="preview-img" src="${t.img}" alt="${t.name}">
+            <div class="talent-card-name">${t.name}</div>
         </div>
       `).join('')
     : '<span class="empty-text">无</span>';
+
 
 let effectHtml = find.effectCard?.map(e => `
     <div class="effect-card" title="${e.name}">
