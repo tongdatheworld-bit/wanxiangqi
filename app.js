@@ -99,13 +99,14 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="hero-row">
             ${
                (item.heroList || []).map(h=>`
-    <div class="mini-hero-wrap">
-        <div class="mini-hero">
-            <img src="${h.img}" alt="">
-        </div>
-        ${h.isCore ? '<span class="core-tag">核</span>' : ''}
+  (item.heroList || []).map(h=>`
+<div class="mini-hero-wrap">
+    <div class="mini-hero ${h.isCore ? 'core' : ''}">
+        <img src="${h.img}" alt="">
     </div>
+</div>
 `).join('')
+
 
             }
         </div>
