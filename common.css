@@ -258,7 +258,7 @@
     font-size:16px;
 }
 
-/* ====== 天赋推荐：目标样式，小胶囊标签紧贴文字 ====== */
+/* ====== 天赋推荐：6个一排，小胶囊标题，悬浮预览不撑开 ====== */
 
 .talent-group-row {
     display: flex;
@@ -276,7 +276,7 @@
     gap: 8px;
 }
 
-/* 小胶囊标签：只包文字 */
+/* 小胶囊标题，只包文字 */
 .talent-col-title {
     display: inline-block !important;
     width: fit-content !important;
@@ -307,7 +307,7 @@
     color: #fff9e2;
 }
 
-/* 天赋卡片横向排列 */
+/* 6个一排：不换行，统一卡片宽度 */
 .talent-item-list {
     display: flex;
     gap: 10px;
@@ -318,15 +318,15 @@
 .talent-full-card {
     flex: 0 0 auto;
     min-width: 0;
+    width: 110px;
     display: block;
     position: relative;
 }
 
 .talent-full-card > img {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: 100%;
     border-radius: 10px;
     object-fit: contain;
 }
@@ -359,7 +359,6 @@
 .talent-full-card:hover .preview-img {
     opacity: 1;
 }
-
 
 
 /* ====== 效果牌 固定卡片宽，不会拉伸变形 ====== */
