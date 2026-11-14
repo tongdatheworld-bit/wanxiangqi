@@ -649,58 +649,110 @@
 }
 
 
-        /* 天赋、效果牌原有样式保留 */
-        .talent-group-row {
-            display:flex;
-            gap:12px;
-            flex-wrap:wrap;
-        }
-        .talent-col {
-            flex:1;
-            min-width:140px;
-        }
-        .talent-col-title {
-            display:inline-block;
-            padding:3px 8px;
-            border-radius:4px;
-            font-size:13px;
-            margin-bottom:8px;
-        }
-        .talent-tong {
-            background:#8b693b;
-            color:#fff;
-        }
-        .talent-yin {
-            background:#888888;
-            color:#fff;
-        }
-        .talent-jin {
-            background:#c99b29;
-            color:#fff;
-        }
-        .talent-item-list, .effect-card-list {
-            display:flex;
-            flex-wrap:wrap;
-            gap:8px;
-        }
-        .talent-card,.effect-card {
-            width:72px;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            gap:4px;
-        }
-        .talent-card img,.effect-card img {
-            width:50px;
-            height:50px;
-            border-radius:8px;
-            object-fit:cover;
-        }
-        .talent-card span,.effect-card span {
-            font-size:11px;
-            color:#c7cad4;
-            text-align:center;
-        }
+   /* =========================================================
+   天赋推荐：铜/银/金 横向分组，每组2个，6个刚好一排
+   ========================================================= */
+
+.talent-group-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+
+.talent-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.talent-col-title {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.talent-tong {
+    background: linear-gradient(135deg, #b58947, #8b693b);
+}
+
+.talent-yin {
+    background: linear-gradient(135deg, #a6aab2, #787c84);
+}
+
+.talent-jin {
+    background: linear-gradient(135deg, #e7c15a, #b88600);
+}
+
+.talent-item-list {
+    display: flex;
+    gap: 12px;
+}
+
+.talent-card {
+    width: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.talent-card img {
+    width: 96px;
+    height: 96px;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 1px solid #333844;
+    background: #282e3b;
+}
+
+.talent-card span {
+    font-size: 12px;
+    color: #cfd3de;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* =========================================================
+   效果牌推荐：和天赋牌图片尺寸保持一致
+   ========================================================= */
+
+.effect-card-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.effect-card {
+    width: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.effect-card img {
+    width: 96px;
+    height: 96px;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 1px solid #333844;
+    background: #282e3b;
+}
+
+.effect-card span {
+    font-size: 12px;
+    color: #cfd3de;
+    text-align: center;
+    line-height: 1.3;
+}
+
         .run-stage-list {
             display:flex;
             flex-direction:column;
