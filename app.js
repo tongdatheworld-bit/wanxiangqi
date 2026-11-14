@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="hero-divider"></div>
         <div class="hero-row">
             ${
-               (item.heroList || []).map(h=>`
+
   (item.heroList || []).map(h=>`
 <div class="mini-hero-wrap">
     <div class="mini-hero ${h.isCore ? 'core' : ''}">
