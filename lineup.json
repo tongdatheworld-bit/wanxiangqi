@@ -148,13 +148,34 @@
         {"name": "亚瑟", "img": "images/heroes/yase.png", "isCore": false},
         {"name": "姬小满", "img": "images/heroes/jixiaoman.png", "isCore": false}
     ],
-    "funcHeroList": [
-        {"name": "姜子牙", "img": "images/heroes/jiangziya.png", "isCore": false},
-        {"name": "姬小满", "img": "images/heroes/jixiaoman.png", "isCore": false},
-        {"name": "亚瑟", "img": "images/heroes/yase.png", "isCore": false},
-        {"name": "海诺", "img": "images/heroes/hainuo.png", "isCore": false},
-        {"name": "莱西奥", "img": "images/heroes/laixiao.png", "isCore": false}
-    ],
+   "funcHeroList": [
+    {
+        "name": "姜子牙",
+        "img": "images/heroes/jiangziya.png",
+        "desc": "姜子牙驻场，打出无阵营或非场上阵营棋子，提高全队等级"
+    },
+    {
+        "name": "姬小满",
+        "img": "images/heroes/jixiaoman.png",
+        "desc": "卖出场上棋子获得临时刷新"
+    },
+    {
+        "name": "亚瑟",
+        "img": "images/heroes/yase.png",
+        "desc": "亚瑟驻场，登场日落海棋子增加阿科米亚核心等级"
+    },
+    {
+        "name": "海诺",
+        "img": "images/heroes/hainuo.png",
+        "desc": "海诺驻场，阿科米亚核心等级增加时额外增加"
+    },
+    {
+        "name": "莱西奥",
+        "img": "images/heroes/laixiao.png",
+        "desc": "卖出场上棋子增加阿科米亚核心等级"
+    }
+]
+,
     "backupHeroList": [
         {"name": "甄姬", "img": "images/heroes/zhenji.png", "isCore": false},
         {"name": "庄周", "img": "images/heroes/zhuangzhou.png", "isCore": false}
