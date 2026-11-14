@@ -395,7 +395,7 @@
     {
         "id": 5,
         "name": "昭君75",
-        "rank": "S+",
+        "rank": "S",
         "player": "昭君",
         "playerImg": "images/players/zhaojun.png",
         "hard": "中等",
@@ -1957,7 +1957,7 @@
 },{
     "id": 77,
     "name": "镜三分登场",
-    "rank": "B",
+    "rank": "S",
     "player": "镜",
     "playerImg": "images/players/jing.png",
     "hard": "简单",
