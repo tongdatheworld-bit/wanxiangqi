@@ -258,36 +258,48 @@
     font-size:16px;
 }
 
-/* ====== 天赋推荐（取消横向滚动） ====== */
+/* ====== 天赋推荐：改成横向一排，参考第二张截图 ====== */
 .talent-group-row {
     display: flex;
-    gap: 20px;
-    overflow-x: visible;  /* 取消横向滚动！ */
-    overflow-y: visible;
-    padding-bottom: 8px;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 10px;
     margin: 14px 0 22px;
     align-items: flex-start;
-    flex-wrap: wrap; /* 空间不够自动换行 */
-}
-.talent-group-row::-webkit-scrollbar{
-    display: none; /* 隐藏滚动条 */
+    flex-wrap: nowrap;
 }
 
+/* 隐藏横向滚动条，但保留滚动功能 */
+.talent-group-row::-webkit-scrollbar {
+    height: 6px;
+}
+
+.talent-group-row::-webkit-scrollbar-thumb {
+    background: #333844;
+    border-radius: 3px;
+}
+
+.talent-group-row::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 取消原来的铜/银/金三列，改成横向分组 */
 .talent-col {
-    flex: 1 1 280px; /* 铜、银、金三栏自适应，屏幕窄自动换行 */
+    flex: 0 0 auto;
     min-width: 0;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .talent-col-title {
     font-size: 18px;
-    margin-bottom:0;
+    margin-bottom: 0;
     padding: 8px 22px;
     border-radius: 12px;
     display: inline-block;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .talent-tong {
@@ -305,45 +317,50 @@
     color: #fff9e2;
 }
 
+/* 同一类天赋横向排列，不再换行 */
 .talent-item-list {
     display: flex;
     gap: 12px;
-    flex-wrap: wrap; /* 天赋卡片自动换行，不再横向一排 */
+    flex-wrap: nowrap;
 }
 
-/* 天赋卡片基础 */
+/* 天赋卡片：固定宽度，保证一排显示 */
 .talent-full-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    flex: 0 0 160px; /* 缩略图大小 */
+    flex: 0 0 160px;
     position: relative;
 }
+
 .talent-full-card img {
     width: 100%;
     border-radius: 12px;
     object-fit: contain;
     cursor: zoom-in;
 }
+
 .talent-full-card span {
     display: none;
 }
 
-/* ===== 悬浮预览放大浮窗 核心样式 ===== */
+/* 悬浮预览大图保持不变 */
 .talent-full-card .preview-img {
     position: fixed;
     z-index: 9999;
     pointer-events: none;
-    width: 420px; /* 悬浮弹出大图尺寸，可改 */
+    width: 260px;
     border-radius: 14px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: opacity 0.15s ease;
 }
+
 .talent-full-card:hover .preview-img {
     opacity: 1;
 }
+
 
 /* ====== 效果牌 固定卡片宽，不会拉伸变形 ====== */
 .effect-card-list {
