@@ -255,25 +255,52 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="hero-row-modal">${backupHeroHtml}</div>
 </div>
 <div class="modal-block">
-    <h4>装备选择</h4>
-    <div class="equip-wrap-new">
-        <div class="equip-main-c">
+   <div class="equip-area">
+    <div class="equip-area-title">装备选择</div>
+    <div class="equip-main-row">
+        <!-- 左侧主英雄头像 -->
+        <div class="equip-main-hero">
             <div class="mini-hero-modal core">
-                <img src="${find.heroList?.find(h=>h.isCore)?.img || ''}" alt="主C">
+                <img src="${find.heroList?.find(h => h.isCore)?.img || ''}" alt="主C">
             </div>
+            <div class="hero-name-text">主C</div>
         </div>
-        <div class="equip-group-col">
-            <div class="equip-line">
-                <span class="equip-label">首选</span>
-                <div class="equip-list">${equipFirstHtml}</div>
+
+        <!-- 右侧首选 / 备选 -->
+        <div class="equip-side">
+            <div class="equip-group">
+                <span class="equip-group-label">首选</span>
+                <div class="equip-list-row">
+                    ${
+                        Array.isArray(find.equipFirst) && find.equipFirst.length
+                            ? find.equipFirst.map(e => `
+                                <span class="equip-pill">
+                                    <img src="${e.img}" alt="${e.name}">
+                                </span>
+                              `).join('')
+                            : '<span class="empty-text">无</span>'
+                    }
+                </div>
             </div>
-            <div class="equip-line">
-                <span class="equip-label">备选</span>
-                <div class="equip-list">${equipSecondHtml}</div>
+
+            <div class="equip-group">
+                <span class="equip-group-label">备选</span>
+                <div class="equip-list-row">
+                    ${
+                        Array.isArray(find.equipSecond) && find.equipSecond.length
+                            ? find.equipSecond.map(e => `
+                                <span class="equip-pill">
+                                    <img src="${e.img}" alt="${e.name}">
+                                </span>
+                              `).join('')
+                            : '<span class="empty-text">无</span>'
+                    }
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="modal-block">
     <h4>天赋推荐</h4>
     <div class="talent-group-row">
