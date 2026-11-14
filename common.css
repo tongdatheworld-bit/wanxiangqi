@@ -258,16 +258,14 @@
     font-size:16px;
 }
 
-/* ====== 天赋推荐：取消滑动，一排展示6个 ====== */
-/* ====== 天赋推荐：标签自适应文字宽度，胶囊圆角，卡片自动换行 ====== */
+/* ====== 天赋推荐：按参考图样式，标题只包住文字 ====== */
+
 .talent-group-row {
     display: flex;
-    gap: 16px;
-    overflow-x: visible;
-    overflow-y: visible;
-    padding-bottom: 10px;
-    margin: 14px 0 22px;
+    gap: 14px;
     align-items: flex-start;
+    margin: 14px 0 22px;
+    overflow: visible;
 }
 
 .talent-col {
@@ -276,54 +274,56 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    text-align: left; /* 标题靠左 */
 }
 
+/* 标题：只包文字，不撑满 */
 .talent-col-title {
-    font-size: 18px;
-    padding: 8px 24px; /* 左右内边距！不再是上下0，给文字两侧留白 */
-    border-radius: 999px;
-    display: inline-block; /* 核心：宽度跟着文字走，不再撑满 */
+    display: inline-block !important;
+    width: fit-content !important;
+    min-width: 0;
+    padding: 3px 10px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
     font-weight: bold;
-    text-align: center;
+    white-space: nowrap;
 }
 
 .talent-tong {
     background: #70543c;
     color: #ffddb0;
 }
+
 .talent-yin {
     background: #868b94;
     color: #f0f2f6;
 }
+
 .talent-jin {
     background: #c89400;
     color: #fff9e2;
 }
 
+/* 天赋卡片横向排列，不要挤爆 */
 .talent-item-list {
     display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 10px;
+    flex-wrap: nowrap;
     overflow: visible;
 }
 
+/* 卡片按图片大小自适应，不加巨型背景 */
 .talent-full-card {
-    flex: 0 0 170px;
+    flex: 0 0 auto;
     min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
+    display: block;
     position: relative;
-    background:#171a23;
-    border-radius:12px;
-    padding:10px;
 }
 
 .talent-full-card img {
-    width: 100px;
+    display: block;
+    width: auto;
     height: auto;
+    max-width: 100%;
     border-radius: 10px;
     object-fit: contain;
     cursor: zoom-in;
@@ -344,10 +344,10 @@
     opacity: 0;
     transition: opacity 0.15s ease;
 }
+
 .talent-full-card:hover .preview-img {
     opacity: 1;
 }
-
 
 
 /* ====== 效果牌 固定卡片宽，不会拉伸变形 ====== */
