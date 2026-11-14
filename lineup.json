@@ -273,12 +273,33 @@
         {"name": "露娜", "img": "images/heroes/luna.png", "isCore": false}
     ],
     "funcHeroList": [
-        {"name": "曹操", "img": "images/heroes/caocao.png", "isCore": false},
-        {"name": "甄姬", "img": "images/heroes/zhenji.png", "isCore": false},
-        {"name": "小乔", "img": "images/heroes/xiaoqiao.png", "isCore": false},
-        {"name": "阿轲", "img": "images/heroes/ake.png", "isCore": false},
-        {"name": "露娜", "img": "images/heroes/luna.png", "isCore": false}
-    ],
+    {
+        "name": "曹操",
+        "img": "images/heroes/caocao.png",
+        "desc": "整备触发甄姬登场获得登场卡、触发周瑜增加全队等级"
+    },
+    {
+        "name": "甄姬",
+        "img": "images/heroes/zhenji.png",
+        "desc": "倒转核心，登场继续获取登场卡"
+    },
+    {
+        "name": "小乔",
+        "img": "images/heroes/xiaoqiao.png",
+        "desc": "小乔常驻，登场卡登场增加全队等级"
+    },
+    {
+        "name": "阿轲",
+        "img": "images/heroes/ake.png",
+        "desc": "登场增加场上棋子等级"
+    },
+    {
+        "name": "露娜",
+        "img": "images/heroes/luna.png",
+        "desc": "登场触发曹操整备，核心打出位，倒转触发器"
+    }
+]
+,
     "backupHeroList": [
         {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
     ],
