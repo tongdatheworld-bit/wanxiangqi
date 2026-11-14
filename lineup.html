@@ -601,11 +601,13 @@
   color: #cfd3de;
 }
 
+/* 右侧首选 / 备选：改成第2张图那种左右拉开 */
 .equip-side {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
   min-width: 0;
 }
 
@@ -616,18 +618,17 @@
 }
 
 .equip-group-label {
-  width: 44px;
-  flex-shrink: 0;
+  color: #ffd369;
   font-size: 14px;
   font-weight: 800;
-  color: #ffd369;
+  white-space: nowrap;
 }
 
 .equip-list-row {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .equip-pill {
