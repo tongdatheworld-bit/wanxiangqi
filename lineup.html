@@ -371,6 +371,314 @@
         .link-official:hover{
             opacity:0.9;
         }
+
+        /* ====================== 弹窗新增样式（和app.js弹窗模板配套） ====================== */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.78);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+        .modal-content {
+            width: min(860px, 100%);
+            background: #171a23;
+            border: 1px solid #2a2f3d;
+            border-radius: 18px;
+            max-height: 92vh;
+            overflow-y: auto;
+            padding: 24px 28px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        .modal-close {
+            float: right;
+            color: #7c8292;
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.2s;
+            line-height: 1;
+        }
+        .modal-close:hover {
+            color: #ffd369;
+        }
+        .modal-top-info {
+            display:flex;
+            align-items:center;
+            gap:14px;
+            margin-bottom:18px;
+        }
+        .player-avatar {
+            width:70px;
+            height:70px;
+            border-radius:14px;
+            object-fit:cover;
+        }
+        .info-text h2 {
+            color:#ffd369;
+            font-size:24px;
+            margin-bottom:4px;
+        }
+        .modal-sub {
+            color:#9aa0b0;
+            font-size:14px;
+        }
+        .modal-block {
+            background: #1c212c;
+            border: 1px solid #282d38;
+            border-radius: 14px;
+            padding: 16px 18px;
+            margin-bottom: 16px;
+        }
+        .modal-block h4 {
+            color: #ffd369;
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .empty-text {
+            color:#686e7c;
+        }
+        .mini-hero-modal {
+            width:64px;
+            height:64px;
+            border-radius:14px;
+            overflow:hidden;
+            position:relative;
+            flex-shrink:0;
+        }
+        .mini-hero-modal img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .mini-hero-modal.core::after {
+            content:"核";
+            position:absolute;
+            top:-4px;
+            right:-4px;
+            width:20px;
+            height:20px;
+            background:#7b3fd8;
+            color:#fff;
+            font-size:11px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .hero-row-modal {
+            display:flex;
+            gap:12px;
+            flex-wrap:wrap;
+        }
+        .equip-pill {
+            width:44px;
+            height:44px;
+            border-radius:12px;
+            overflow:hidden;
+            border:1px solid #333844;
+            background:#282e3b;
+            flex-shrink:0;
+        }
+        .equip-pill img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .equip-list {
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+        }
+        .code-text {
+            color:#ffd369;
+            cursor:pointer;
+        }
+        .code-text:hover {
+            text-decoration:underline;
+        }
+        /* 阵容组成：头像+下方名字 */
+        .lineup-hero-row {
+            display: flex;
+            gap:12px;
+            flex-wrap: wrap;
+        }
+        .lineup-hero-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:4px;
+        }
+        .hero-name-text {
+            font-size:12px;
+            color:#c7cad4;
+        }
+        /* 功能性英雄：左头像，右名称+描述 */
+        .func-hero-list {
+            display:flex;
+            flex-direction: column;
+            gap:14px;
+        }
+        .func-hero-item {
+            display:flex;
+            align-items: flex-start;
+            gap:12px;
+        }
+        .func-info {
+            flex:1;
+        }
+        .func-name {
+            color:#ffd369;
+            font-size:14px;
+            font-weight:bold;
+            margin-bottom:3px;
+        }
+        .func-desc {
+            font-size:13px;
+            color:#b4b9c6;
+            line-height:1.6;
+        }
+        /* 新版装备模块 */
+        .equip-wrap-new {
+            display:flex;
+            align-items: center;
+            gap:16px;
+        }
+        .equip-group-col {
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+        }
+        .equip-line {
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+        .equip-label {
+            color:#ffd369;
+            width:36px;
+            font-size:14px;
+        }
+        /* 天赋、效果牌原有样式保留 */
+        .talent-group-row {
+            display:flex;
+            gap:12px;
+            flex-wrap:wrap;
+        }
+        .talent-col {
+            flex:1;
+            min-width:140px;
+        }
+        .talent-col-title {
+            display:inline-block;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:13px;
+            margin-bottom:8px;
+        }
+        .talent-tong {
+            background:#8b693b;
+            color:#fff;
+        }
+        .talent-yin {
+            background:#888888;
+            color:#fff;
+        }
+        .talent-jin {
+            background:#c99b29;
+            color:#fff;
+        }
+        .talent-item-list, .effect-card-list {
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+        }
+        .talent-card,.effect-card {
+            width:72px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:4px;
+        }
+        .talent-card img,.effect-card img {
+            width:50px;
+            height:50px;
+            border-radius:8px;
+            object-fit:cover;
+        }
+        .talent-card span,.effect-card span {
+            font-size:11px;
+            color:#c7cad4;
+            text-align:center;
+        }
+        .run-stage-list {
+            display:flex;
+            flex-direction:column;
+            gap:12px;
+        }
+        .stage-block {
+            background:#171a23;
+            padding:12px;
+            border-radius:10px;
+        }
+        .stage-title {
+            margin-bottom:6px;
+        }
+        .run-stage-tag {
+            color:#ffd369;
+            font-weight:bold;
+        }
+        .stage-heroes {
+            display:flex;
+            gap:6px;
+            margin:8px 0;
+        }
+        .hero-pill.small {
+            width:42px;
+            height:42px;
+            border-radius:8px;
+            overflow:hidden;
+        }
+        .hero-pill.small img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .stage-desc {
+            font-size:13px;
+            color:#b4b9c6;
+            line-height:1.6;
+        }
+        .notice-list {
+            padding-left:18px;
+            color:#b4b9c6;
+            line-height:1.7;
+            font-size:14px;
+        }
+        .position-image-box img {
+            max-width:100%;
+            border-radius:12px;
+        }
+        .position-image-placeholder {
+            text-align:center;
+            color:#686e7c;
+            padding:20px;
+        }
+        /* 弹窗滚动条 */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #333844;
+            border-radius: 4px;
+        }
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: #ffd369;
+        }
     </style>
 </head>
 <body>
