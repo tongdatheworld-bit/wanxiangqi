@@ -542,27 +542,111 @@
             color:#b4b9c6;
             line-height:1.6;
         }
-        /* 新版装备模块 */
-        .equip-wrap-new {
-            display:flex;
-            align-items: center;
-            gap:16px;
-        }
-        .equip-group-col {
-            display:flex;
-            flex-direction: column;
-            gap:10px;
-        }
-        .equip-line {
-            display:flex;
-            align-items:center;
-            gap:10px;
-        }
-        .equip-label {
-            color:#ffd369;
-            width:36px;
-            font-size:14px;
-        }
+       /* ===== 装备选择：左英雄头像 + 右首选/备选横向 ===== */
+.equip-area {
+  background: #1c212c;
+  border: 1px solid #282d38;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+
+.equip-area-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffd369;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.equip-area-title::before {
+  content: "I";
+  color: #ffd369;
+  font-weight: 900;
+}
+
+.equip-main-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.equip-main-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.equip-main-hero .mini-hero-modal {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  border: 1px solid #333844;
+  overflow: hidden;
+  background: #282e3b;
+}
+
+.equip-main-hero .mini-hero-modal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.equip-main-hero .hero-name-text {
+  font-size: 12px;
+  color: #cfd3de;
+}
+
+.equip-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.equip-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.equip-group-label {
+  width: 44px;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffd369;
+}
+
+.equip-list-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.equip-pill {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid #333844;
+  background: #282e3b;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.equip-pill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
         /* 天赋、效果牌原有样式保留 */
         .talent-group-row {
             display:flex;
