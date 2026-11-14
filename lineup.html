@@ -648,49 +648,67 @@
   display: block;
 }
 
-        .run-stage-list {
-            display:flex;
-            flex-direction:column;
-            gap:12px;
-        }
-        .stage-block {
-            background:#171a23;
-            padding:12px;
-            border-radius:10px;
-        }
-        .stage-title {
-            margin-bottom:6px;
-        }
-        .run-stage-tag {
-            color:#ffd369;
-            font-weight:bold;
-        }
-        .stage-heroes {
-            display:flex;
-            gap:6px;
-            margin:8px 0;
-        }
-        .hero-pill.small {
-            width:42px;
-            height:42px;
-            border-radius:8px;
-            overflow:hidden;
-        }
-        .hero-pill.small img {
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
-        .stage-desc {
-            font-size:13px;
-            color:#b4b9c6;
-            line-height:1.6;
-        }
-        .notice-list {
-            padding-left:18px;
-            color:#b4b9c6;
-            line-height:1.7;
-            font-size:14px;
+      /* ====== 运营节奏文字统一为注意事项样式 ====== */
+
+.run-stage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.stage-block {
+    background: #1c212c;
+    border: 1px solid #282d38;
+    border-radius: 14px;
+    padding: 16px 18px;
+}
+
+.stage-title {
+    margin-bottom: 10px;
+}
+
+.run-stage-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ffd369, #ffb020);
+    color: #12161f;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(255, 176, 32, 0.35);
+    letter-spacing: 1px;
+}
+
+.stage-heroes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+/* 运营节奏正文：跟注意事项保持一致 */
+.stage-desc {
+    color: #f2f4fa;
+    line-height: 1.7;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 注意事项原有样式保持，只做对齐 */
+.notice-list {
+    padding-left: 22px;
+    margin: 8px 0;
+}
+
+.notice-list li {
+    color: #f2f4fa;
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
         }
         .position-image-box img {
             max-width:100%;
