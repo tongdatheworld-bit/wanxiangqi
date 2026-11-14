@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const lineupWrap = document.getElementById('lineupList');
     const filterChips = document.querySelectorAll('.filter-chip');
     const searchInput = document.getElementById('searchInput');
+    const resetBtn = document.getElementById('resetFilter');
 
     // 加载JSON
     if (lineupWrap) {
-        // 一开始先放加载文字，避免空白、乱码闪烁
         lineupWrap.innerHTML = `<div style="text-align:center;color:#b4b9c6;padding:40px">正在加载阵容...</div>`;
         fetch('./lineup.json')
             .then(res => {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(data => {
                 allLineupData = data;
-                renderList(); // renderList 会覆盖掉加载提示
+                renderList();
             })
             .catch(err => {
                 console.error('数据加载失败：', err);
@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         wrap.innerHTML = filterArr.map(item => `
 <div class="lineup-card" data-id="${item.id}">
-    <!-- 上部分：文字信息 -->
     <div class="lineup-info-top">
         <div class="lineup-name">${item.name}</div>
         <span class="ban-title-tag">Ban阵营：</span>
@@ -71,11 +70,8 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 
-    <!-- 下部分：横向一整行 -->
     <div class="lineup-bottom-row">
-        <!-- S+强度 -->
         <div class="lineup-rank">${item.rank}</div>
-        <!-- 棋手组 -->
         <div class="player-group">
             <div class="main-player">
                 <img src="${item.playerImg}" alt="">
@@ -94,9 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 : ""
             }
         </div>
-        <!-- 新增分割线 -->
         <div class="hero-divider"></div>
-        <!-- 英雄，占满剩余横向空间 -->
         <div class="hero-row">
             ${
                 (item.heroList || []).map(h=>`
@@ -120,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if(!lineupWrap) return;
 
         lineupWrap.onclick = function (e) {
-            // 点击复制码优先处理，阻止弹窗
             const copyDom = e.target.closest('.copy-code');
             if(copyDom){
                 e.stopPropagation();
@@ -131,11 +124,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const card = e.target.closest('.lineup-card');
             if (!card) return;
-            const id = Number(card.dataset.id);
-            const find = allLineupData.find(x => x.id === id);
+            const id = card.dataset.id;
+            const find = allLineupData.find(x => x.id == id);
             if (!find) return;
 
-            // 主英雄列表（只头像，无文字）
             const heroHtml = Array.isArray(find.heroList) && find.heroList.length
                 ? find.heroList.map(h => `
                     <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
@@ -143,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                   `).join('')
                 : '<span class="empty-text">无</span>';
-            // 功能英雄（只头像，无文字）
+
             const funcHeroHtml = Array.isArray(find.funcHeroList) && find.funcHeroList.length
                 ? find.funcHeroList.map(h => `
                     <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
@@ -151,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                   `).join('')
                 : '<span class="empty-text">无</span>';
-            // 备用英雄（只头像，无文字）
+
            const backupHeroHtml = Array.isArray(find.backupHeroList) && find.backupHeroList.length
     ? find.backupHeroList.map(h => `
         <div class="lineup-hero-item">
@@ -164,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function () {
     : '<span class="empty-text">无</span>';
 
 
-            // 首选装备
             const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
                 ? find.equipFirst.map(e => `
                     <span class="equip-pill">
@@ -172,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </span>
                   `).join('')
                 : '<span class="empty-text">无</span>';
-            // 次选装备
+
             const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
                 ? find.equipSecond.map(e => `
                     <span class="equip-pill">
@@ -180,27 +171,31 @@ document.addEventListener('DOMContentLoaded', function () {
                     </span>
                   `).join('')
                 : '<span class="empty-text">无</span>';
-            // 运营阶段
+
+            // ========== 修复运营阶段 ==========
             const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
                 ? find.runStage.map(stage => `
                     <div class="stage-block">
                         <div class="stage-title">
                             <span class="run-stage-tag">${stage.title}</span>
                         </div>
-                       <div class="stage-heroes">
-    ${Array.isArray(stage.heroList) && stage.heroList.length
-        ? stage.heroList.map(h => `
-            <div class="lineup-hero-item">
-                <span class="hero-pill small">
-                    <img src="${h.img}" alt="${h.name}">
-                </span>
-                <div class="hero-name-text">${h.name}</div>
-            </div>
-          `).join('')
-        : '<span class="empty-text">无</span>'}
-</div>
+                        <div class="stage-heroes">
+                            ${Array.isArray(stage.heroList) && stage.heroList.length
+                                ? stage.heroList.map(h => `
+                                    <div class="lineup-hero-item">
+                                        <span class="hero-pill small">
+                                            <img src="${h.img}" alt="${h.name}">
+                                        </span>
+                                        <div class="hero-name-text">${h.name}</div>
+                                    </div>
+                                  `).join('')
+                                : '<span class="empty-text">无</span>'}
+                        </div>
+                        <p class="stage-desc">${stage.desc || ""}</p>
+                    </div>
+                  `).join('')
+                : '<span class="empty-text">暂无运营节奏</span>';
 
-            // 注意事项
             const noticeHtml = Array.isArray(find.notice) && find.notice.length
                 ? find.notice.map(n => `<li>${n}</li>`).join('')
                 : '<li class="empty-text">无</li>';
@@ -346,12 +341,11 @@ modalBody.innerHTML = `
     <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
 </div>
 `;
-// ========== 渲染天赋和效果卡 ==========
+// 天赋渲染
 document.getElementById('talentTongBox').innerHTML = find.talentTong?.length
     ? find.talentTong.map(t => `
         <div class="talent-full-card">
             <img src="${t.img}" alt="${t.name}">
-            <img class="preview-img" src="${t.img}" alt="${t.name}">
             <div class="talent-card-name">${t.name}</div>
         </div>
       `).join('')
@@ -361,7 +355,6 @@ document.getElementById('talentYinBox').innerHTML = find.talentYin?.length
     ? find.talentYin.map(t => `
         <div class="talent-full-card">
             <img src="${t.img}" alt="${t.name}">
-            <img class="preview-img" src="${t.img}" alt="${t.name}">
             <div class="talent-card-name">${t.name}</div>
         </div>
       `).join('')
@@ -371,7 +364,6 @@ document.getElementById('talentJinBox').innerHTML = find.talentJin?.length
     ? find.talentJin.map(t => `
         <div class="talent-full-card">
             <img src="${t.img}" alt="${t.name}">
-            <img class="preview-img" src="${t.img}" alt="${t.name}">
             <div class="talent-card-name">${t.name}</div>
         </div>
       `).join('')
@@ -379,7 +371,7 @@ document.getElementById('talentJinBox').innerHTML = find.talentJin?.length
 
 
 let effectHtml = find.effectCard?.map(e => `
-    <div class="effect-card" title="${e.name}">
+    <div class="effect-card">
         <img src="${e.img}" alt="${e.name}">
         <span>${e.name}</span>
     </div>
@@ -419,50 +411,56 @@ document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class=
             renderList();
         })
     }
-    // 解锁逻辑
-    if (!lockModal || !codeInput || !unlockBtn || !tipText) {
-        return;
-    }
-    if(localStorage.getItem(STORAGE_KEY) === 'ok'){
-        lockModal.style.display = 'none';
-        if(lineupWrap){
-            lineupWrap.style.visibility = 'visible';
+    // 重置筛选按钮
+    if(resetBtn){
+        resetBtn.onclick = function(){
+            currentFilterPlayer = 'all';
+            currentFilterRank = 'all';
+            currentFilterCamp = 'all';
+            searchKw = '';
+            searchInput.value = '';
+            document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
+            document.querySelector('[data-val="all"][data-filter="player"]')?.classList.add('active');
+            document.querySelector('[data-val="all"][data-filter="rank"]')?.classList.add('active');
+            document.querySelector('[data-val="all"][data-filter="camp"]')?.classList.add('active');
+            renderList();
         }
     }
-    unlockBtn.onclick = function(){
-        const val = codeInput.value.trim();
-        if(val === RIGHT_CODE){
-            tipText.style.color = "#69ff94";
-            tipText.innerText = "✅ 解锁成功！";
-            tipText.style.display = 'block';
-            localStorage.setItem(STORAGE_KEY,'ok');
+
+    // 解锁逻辑（html没有lockModal时自动跳过不报错）
+    if (lockModal && codeInput && unlockBtn && tipText) {
+        if(localStorage.getItem(STORAGE_KEY) === 'ok'){
+            lockModal.style.display = 'none';
             if(lineupWrap){
                 lineupWrap.style.visibility = 'visible';
             }
-            renderList();
-            setTimeout(()=> lockModal.style.display = 'none',600);
-        }else{
-            tipText.style.color = "#ff7777";
-            tipText.innerText = "❌ 验证码错误，请重新获取！";
-            tipText.style.display = 'block';
+        }
+        unlockBtn.onclick = function(){
+            const val = codeInput.value.trim();
+            if(val === RIGHT_CODE){
+                tipText.style.color = "#69ff94";
+                tipText.innerText = "✅ 解锁成功！";
+                tipText.style.display = 'block';
+                localStorage.setItem(STORAGE_KEY,'ok');
+                if(lineupWrap){
+                    lineupWrap.style.visibility = 'visible';
+                }
+                renderList();
+                setTimeout(()=> lockModal.style.display = 'none',600);
+            }else{
+                tipText.style.color = "#ff7777";
+                tipText.innerText = "❌ 验证码错误，请重新获取！";
+                tipText.style.display = 'block';
+            }
+        }
+        codeInput.onkeydown = function(e){
+            if(e.key === 'Enter') unlockBtn.click();
         }
     }
-    codeInput.onkeydown = function(e){
-        if(e.key === 'Enter') unlockBtn.click();
-    }
 })
 
-// 天赋预览图跟随鼠标
-document.addEventListener('mousemove', function(e){
-    document.querySelectorAll('.preview-img').forEach(img=>{
-        img.style.left = (e.pageX + 16) + 'px';
-        img.style.top = (e.pageY + 16) + 'px';
-    })
-})
-
-// 复制函数放外面，给onclick全局调用
+// 复制函数
 async function copyCode(code) {
-    // 从中文左括号「（」切割，只取前面纯数字编码
     const realCode = code.split("（")[0];
     try {
         await navigator.clipboard.writeText(realCode)
