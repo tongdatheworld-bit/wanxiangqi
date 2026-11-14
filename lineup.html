@@ -679,7 +679,7 @@
     letter-spacing: 1px;
 }
 
-/* 运营节奏英雄图标：一排最多7个 */
+/* 运营节奏英雄图标：一排最多7个，左对齐，固定尺寸 */
 .stage-heroes {
     display: flex;
     flex-wrap: wrap;
@@ -689,8 +689,8 @@
     margin-bottom: 10px;
 }
 .hero-pill.small {
-    flex: 0 1 calc((100% - 6 * 8px) / 7);
-    max-width: 90px;
+    flex: 0 0 82px;
+    width: 82px;
 }
 .hero-pill.small img {
     width: 100%;
@@ -700,6 +700,7 @@
     object-fit: cover;
     display: block;
 }
+
 
 /* 运营节奏正文：跟注意事项保持一致 */
 .stage-desc {
