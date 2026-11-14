@@ -683,25 +683,23 @@
 .stage-heroes {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    justify-content: space-between;
+    gap: 8px;
     align-items: flex-start;
     margin-bottom: 10px;
 }
-
 .hero-pill.small {
-    flex: 0 0 78px;
-    width: 78x;
+    flex: 0 1 calc((100% - 6 * 8px) / 7);
+    max-width: 90px;
 }
-
 .hero-pill.small img {
-    width: 62px;
-    height: 62px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
     border-radius: 10px;
     object-fit: cover;
     display: block;
-    margin: 0 auto;
 }
-
 
 /* 运营节奏正文：跟注意事项保持一致 */
 .stage-desc {
