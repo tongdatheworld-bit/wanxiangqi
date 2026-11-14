@@ -679,12 +679,29 @@
     letter-spacing: 1px;
 }
 
+/* 运营节奏英雄图标：一排最多7个 */
 .stage-heroes {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    align-items: flex-start;
     margin-bottom: 10px;
 }
+
+.hero-pill.small {
+    flex: 0 0 72px;
+    width: 72px;
+}
+
+.hero-pill.small img {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
 
 /* 运营节奏正文：跟注意事项保持一致 */
 .stage-desc {
