@@ -344,41 +344,30 @@ modalBody.innerHTML = `
 // ========== 渲染天赋和效果卡 ==========
 document.getElementById('talentTongBox').innerHTML = find.talentTong?.length
     ? find.talentTong.map(t => `
-        <div class="talent-card">
+        <div class="talent-full-card">
             <img src="${t.img}" alt="${t.name}">
-            <span>${t.name}</span>
+            <img class="preview-img" src="${t.img}" alt="${t.name}">
         </div>
       `).join('')
     : '<span class="empty-text">无</span>';
 
 document.getElementById('talentYinBox').innerHTML = find.talentYin?.length
     ? find.talentYin.map(t => `
-        <div class="talent-card">
+        <div class="talent-full-card">
             <img src="${t.img}" alt="${t.name}">
-            <span>${t.name}</span>
+            <img class="preview-img" src="${t.img}" alt="${t.name}">
         </div>
       `).join('')
     : '<span class="empty-text">无</span>';
 
 document.getElementById('talentJinBox').innerHTML = find.talentJin?.length
     ? find.talentJin.map(t => `
-        <div class="talent-card">
+        <div class="talent-full-card">
             <img src="${t.img}" alt="${t.name}">
-            <span>${t.name}</span>
+            <img class="preview-img" src="${t.img}" alt="${t.name}">
         </div>
       `).join('')
     : '<span class="empty-text">无</span>';
-
-document.getElementById('effectCardBox').innerHTML = find.effectCard?.length
-    ? find.effectCard.map(e => `
-        <div class="effect-card">
-            <img src="${e.img}" alt="${e.name}">
-            <span>${e.name}</span>
-        </div>
-      `).join('')
-    : '<span class="empty-text">无</span>';
-
-        
 
 let effectHtml = find.effectCard?.map(e => `
     <div class="effect-card" title="${e.name}">
