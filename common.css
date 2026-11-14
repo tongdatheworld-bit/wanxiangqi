@@ -258,34 +258,38 @@
     font-size:16px;
 }
 
-/* ====== 天赋推荐：按参考图样式，标题只包住文字 ====== */
+/* ====== 天赋推荐：目标样式，小胶囊标签紧贴文字 ====== */
 
 .talent-group-row {
     display: flex;
-    gap: 14px;
+    gap: 12px;
     align-items: flex-start;
     margin: 14px 0 22px;
     overflow: visible;
 }
 
 .talent-col {
-    flex: 1;
+    flex: 1 1 auto;
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
-/* 标题：只包文字，不撑满 */
+/* 小胶囊标签：只包文字 */
 .talent-col-title {
     display: inline-block !important;
     width: fit-content !important;
     min-width: 0;
+    height: auto !important;
+    min-height: 0 !important;
+    line-height: 1 !important;
     padding: 3px 10px !important;
     border-radius: 8px !important;
     font-size: 14px !important;
     font-weight: bold;
     white-space: nowrap;
+    margin: 0;
 }
 
 .talent-tong {
@@ -303,15 +307,14 @@
     color: #fff9e2;
 }
 
-/* 天赋卡片横向排列，不要挤爆 */
+/* 天赋卡片横向排列 */
 .talent-item-list {
     display: flex;
     gap: 10px;
     flex-wrap: nowrap;
-    overflow: visible;
+    align-items: flex-start;
 }
 
-/* 卡片按图片大小自适应，不加巨型背景 */
 .talent-full-card {
     flex: 0 0 auto;
     min-width: 0;
@@ -319,35 +322,44 @@
     position: relative;
 }
 
-.talent-full-card img {
+.talent-full-card > img {
     display: block;
     width: auto;
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     object-fit: contain;
-    cursor: zoom-in;
 }
 
 .talent-full-card span {
     display: none;
 }
 
-/* 悬浮预览保留 */
+/* 悬浮预览图：只浮层，不占布局 */
 .talent-full-card .preview-img {
-    position: fixed;
-    z-index: 9999;
-    pointer-events: none;
-    width: 240px;
-    border-radius: 14px;
+    position: fixed !important;
+    z-index: 99999 !important;
+    pointer-events: none !important;
+    width: 240px !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    border-radius: 14px;
     opacity: 0;
     transition: opacity 0.15s ease;
+    transform: none;
+    left: auto;
+    top: auto;
 }
 
 .talent-full-card:hover .preview-img {
     opacity: 1;
 }
+
 
 
 /* ====== 效果牌 固定卡片宽，不会拉伸变形 ====== */
