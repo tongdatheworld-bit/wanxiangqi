@@ -239,13 +239,44 @@
             margin-left:auto;
             white-space: nowrap;
         }
-        .copy-code {
-            color:#ffd369;
-            cursor:pointer;
+               .copy-code {
+            display: inline-flex;
+            align-items: center;
+            gap:6px;
+            font-size: 14px;
+            color: #ffd369;
+            background: rgba(255, 211, 105, 0.08);
+            border: 1px solid rgba(255, 211, 105, 0.25);
+            padding: 4px 10px;
+            border-radius: 999px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
         }
         .copy-code:hover {
-            text-decoration: underline;
+            background: rgba(255, 211, 105, 0.16);
+            text-decoration: none;
         }
+        .copy-code.copied {
+            border-color: #39d977;
+            background: rgba(57, 217, 119, 0.12);
+            color: #69ff94;
+        }
+        .copy-normal, .copy-success {
+            display: inline-flex;
+            align-items: center;
+            gap:4px;
+        }
+        .copy-success {
+            display: none;
+        }
+        .copy-code.copied .copy-normal {
+            display: none;
+        }
+        .copy-code.copied .copy-success {
+            display: inline-flex;
+        }
+
 
         /* 【下层：横向一行：强度 + 棋手组 + 英雄组】 */
         .lineup-bottom-row {
