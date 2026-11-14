@@ -267,34 +267,32 @@ document.addEventListener('DOMContentLoaded', function () {
         <!-- 右侧首选 / 备选 -->
         <div class="equip-side">
             <div class="equip-group">
-                <span class="equip-group-label">·首选</span>
-                <div class="equip-list-row">
-                    ${
-                        Array.isArray(find.equipFirst) && find.equipFirst.length
-                            ? find.equipFirst.map(e => `
-                                <span class="equip-pill">
-                                    <img src="${e.img}" alt="${e.name}">
-                                </span>
-                              `).join('')
-                            : '<span class="empty-text">无</span>'
-                    }
-                </div>
-            </div>
-            <div class="equip-group">
-                <span class="equip-group-label">·备选</span>
-                <div class="equip-list-row">
-                    ${
-                        Array.isArray(find.equipSecond) && find.equipSecond.length
-                            ? find.equipSecond.map(e => `
-                                <span class="equip-pill">
-                                    <img src="${e.img}" alt="${e.name}">
-                                </span>
-                              `).join('')
-                            : '<span class="empty-text">无</span>'
-                    }
-                </div>
-            </div>
-        </div>
+    <span class="equip-group-label">·首选</span>
+    <div class="equip-list-row">
+        ${
+            Array.isArray(find.equipFirst) && find.equipFirst.length
+                ? find.equipFirst.map(e => `
+                    <span class="equip-pill">
+                        <img src="${e.img}" alt="${e.name}">
+                    </span>
+                  `).join('')
+                : '<span class="empty-text">无</span>'
+        }
+    </div>
+</div>
+
+<div class="equip-group">
+    <span class="equip-group-label">·备选</span>
+    <div class="equip-list-row">
+        ${
+            Array.isArray(find.equipSecond) && find.equipSecond.length
+                ? find.equipSecond.map(e => `
+                    <span class="equip-pill">
+                        <img src="${e.img}" alt="${e.name}">
+                    </span>
+                  `).join('')
+                : '<span class="empty-text">无</span>'
+        }
     </div>
 </div>
 
