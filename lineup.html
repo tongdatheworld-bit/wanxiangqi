@@ -647,26 +647,41 @@
     line-height:1.8;
     font-size:16px;
 }
-/* ====== 天赋推荐：保持原图长宽比，横向铺满 ====== */
+
+/* ====== 天赋推荐【改成截图样式：分组横向滚动】 ====== */
 .talent-group-row {
     display: flex;
-    gap: 14px;
-    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
     margin: 14px 0 22px;
     align-items: flex-start;
+    flex-wrap: nowrap;
+}
+.talent-group-row::-webkit-scrollbar{
+    height:4px;
+}
+.talent-group-row::-webkit-scrollbar-thumb{
+    background:#333844;
+    border-radius:2px;
 }
 
 .talent-col {
-    flex: 1;
+    flex: 0 0 auto;
     min-width: 0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 
 .talent-col-title {
-    font-size: 13px;
-    margin-bottom: 10px;
-    padding: 4px 10px;
-    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom:0;
+    padding: 5px 12px;
+    border-radius: 8px;
     display: inline-block;
+    font-weight:bold;
 }
 
 .talent-tong {
@@ -696,8 +711,7 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    flex: 1;
-    min-width: 0;
+    flex: 0 0 140px;
 }
 
 .talent-card img {
@@ -847,7 +861,7 @@
     <!-- 导航 -->
     <div class="top-nav-wrap">
         <a href="./index.html">首页</a>
-        <a href="./lineup.html">阵容大全</a>
+        <a href="./lineup.html" class="active">阵容大全</a>
         <a href="./player.html">棋手</a>
         <a href="./hero-card.html">英雄牌</a>
         <a href="./talent.html">天赋牌</a>
@@ -952,7 +966,7 @@
                     <div class="filter-chip active" data-filter="camp" data-val="all">全部</div>
                     <div class="filter-chip" data-filter="camp" data-val="河洛">河洛</div>
                     <div class="filter-chip" data-filter="camp" data-val="三分">三分</div>
-                    <div class="filter-chip" data-filter="camp" data-val="无阵营">无阵营</div>
+                    <div class="filter-chip" data-val="无阵营">无阵营</div>
                     <div class="filter-chip" data-filter="camp" data-val="逐鹿">逐鹿</div>
                     <div class="filter-chip" data-filter="camp" data-val="大河流">大河流</div>
                     <div class="filter-chip" data-filter="camp" data-val="日落海">日落海</div>
