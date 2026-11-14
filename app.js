@@ -205,11 +205,12 @@ modalBody.innerHTML = `
     <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
     <div class="info-text">
         <div class="name-code-row">
-            <h2>${find.name}</h2>
-            <span class="code-text" onclick="copyCode('${find.lineupCode}')">
-                ${find.lineupCode}
-            </span>
-        </div>
+    <h2>${find.name}</h2>
+    <div class="code-text" data-code="${find.lineupCode}" onclick="copyCode(this)">
+        <span class="code-normal">📋 ${find.lineupCode}</span>
+        <span class="code-success">✅ 已复制</span>
+    </div>
+</div>
         <div class="modal-sub">强度：${find.rank}｜成型难度：${find.hard}</div>
     </div>
 </div>
@@ -461,12 +462,24 @@ document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class=
     }
 })
 
-// 复制函数
-async function copyCode(code) {
+async function copyCode(el) {
+    let code;
+    let domEl = null;
+    if(typeof el === "string"){
+        code = el;
+    }else{
+        domEl = el;
+        code = el.dataset.code;
+    }
     const realCode = code.split("（")[0];
     try {
         await navigator.clipboard.writeText(realCode)
-        alert("阵容码已复制！")
+        if(domEl){
+            domEl.classList.add('copied');
+            setTimeout(()=>{
+                domEl.classList.remove('copied');
+            }, 2000)
+        }
     } catch (e) {
         alert("复制失败，请手动复制：" + realCode)
     }
