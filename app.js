@@ -66,8 +66,11 @@ document.addEventListener('DOMContentLoaded', function () {
         ${(item["ban位"] || []).map(b=>`<span class="ban-item">${b}</span>`).join('')}
         <div class="lineup-meta">
             成型难度：${item.hard} &nbsp;
-            <span class="copy-code" data-code="${item.lineupCode}">阵容码：${item.lineupCode}</span>
-        </div>
+           <div class="copy-code" data-code="${item.lineupCode}">
+    <span class="copy-normal">📋 ${item.lineupCode}</span>
+    <span class="copy-success">✅ 已复制</span>
+</div>
+
     </div>
 
     <div class="lineup-bottom-row">
