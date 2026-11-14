@@ -660,23 +660,34 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 6px;
+    width: 100%;
+}
+
+.talent-group-row > .talent-col {
+    flex: 0 0 auto;
 }
 
 .talent-col {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
+    width: auto;
+    max-width: none;
 }
 
 .talent-col-title {
     display: inline-block;
-    padding: 5px 14px;
+    width: auto;
+    max-width: none;
+    padding: 5px 12px;
     border-radius: 8px;
     font-size: 13px;
     font-weight: 800;
     color: #fff;
     white-space: nowrap;
 }
+
 
 .talent-tong {
     background: linear-gradient(135deg, #b58947, #8b693b);
