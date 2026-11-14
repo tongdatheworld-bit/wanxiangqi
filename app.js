@@ -152,13 +152,17 @@ document.addEventListener('DOMContentLoaded', function () {
                   `).join('')
                 : '<span class="empty-text">无</span>';
             // 备用英雄（只头像，无文字）
-            const backupHeroHtml = Array.isArray(find.backupHeroList) && find.backupHeroList.length
-                ? find.backupHeroList.map(h => `
-                    <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
-                        <img src="${h.img}" alt="${h.name}">
-                    </div>
-                  `).join('')
-                : '<span class="empty-text">无</span>';
+           const backupHeroHtml = Array.isArray(find.backupHeroList) && find.backupHeroList.length
+    ? find.backupHeroList.map(h => `
+        <div class="lineup-hero-item">
+            <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                <img src="${h.img}" alt="${h.name}">
+            </div>
+            <div class="hero-name-text">${h.name}</div>
+        </div>
+      `).join('')
+    : '<span class="empty-text">无</span>';
+
 
             // 首选装备
             const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
@@ -252,8 +256,9 @@ modalBody.innerHTML = `
 </div>
 <div class="modal-block">
     <h4>打出位/备选</h4>
-    <div class="hero-row-modal">${backupHeroHtml}</div>
+    <div class="lineup-hero-row">${backupHeroHtml}</div>
 </div>
+
 
 <div class="modal-block">
     <h4>装备选择</h4>
