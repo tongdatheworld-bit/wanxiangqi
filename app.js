@@ -63,14 +63,16 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="lineup-info-top">
         <div class="lineup-name">${item.name}</div>
         <span class="ban-title-tag">Ban阵营：</span>
-        ${(item["ban位"] || []).map(b=>`<span class="ban-item">${b}</span>`).join('')}
+        <div class="ban-tags-wrap">
+            ${(item["ban位"] || []).map(b=>`<span class="ban-item">${b}</span>`).join('')}
+        </div>
         <div class="lineup-meta">
             成型难度：${item.hard} &nbsp;
-           <div class="copy-code" data-code="${item.lineupCode}">
-    <span class="copy-normal">📋 ${item.lineupCode}</span>
-    <span class="copy-success">✅ 已复制</span>
-</div>
-
+            <div class="copy-code" data-code="${item.lineupCode}">
+                <span class="copy-normal">📋 ${item.lineupCode}</span>
+                <span class="copy-success">✅ 已复制</span>
+            </div>
+        </div>
     </div>
 
     <div class="lineup-bottom-row">
@@ -117,11 +119,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if(!lineupWrap) return;
 
         lineupWrap.onclick = function (e) {
-            const copyDom = e.target.closest('.copy-code');
+            const copyDom = e.target.closest('.copy-code, .code-text');
             if(copyDom){
                 e.stopPropagation();
-                const code = copyDom.dataset.code;
-                copyCode(code);
+                copyCode(copyDom);
                 return;
             }
 
@@ -209,7 +210,7 @@ modalBody.innerHTML = `
     <div class="info-text">
         <div class="name-code-row">
     <h2>${find.name}</h2>
-    <div class="code-text" data-code="${find.lineupCode}" onclick="copyCode(this)">
+    <div class="code-text" data-code="${find.lineupCode}">
         <span class="code-normal">📋 ${find.lineupCode}</span>
         <span class="code-success">✅ 已复制</span>
     </div>
