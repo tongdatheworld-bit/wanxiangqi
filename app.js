@@ -341,31 +341,44 @@ modalBody.innerHTML = `
     <p class="code-text" onclick="copyCode('${find.lineupCode}')">${find.lineupCode}</p>
 </div>
 `;
+// ========== 渲染天赋和效果卡 ==========
+document.getElementById('talentTongBox').innerHTML = find.talentTong?.length
+    ? find.talentTong.map(t => `
+        <div class="talent-card">
+            <img src="${t.img}" alt="${t.name}">
+            <span>${t.name}</span>
+        </div>
+      `).join('')
+    : '<span class="empty-text">无</span>';
 
-            // ========== 渲染天赋和效果卡 ==========
-            let tongHtml = find.talentTong?.map(t => `
-    <div class="talent-card" title="${t.name}">
-        <img src="${t.img}" alt="${t.name}">
-        <span>${t.name}</span>
-    </div>
-`).join('');
-document.getElementById('talentTongBox').innerHTML = tongHtml || '<span class="empty-text">无</span>';
+document.getElementById('talentYinBox').innerHTML = find.talentYin?.length
+    ? find.talentYin.map(t => `
+        <div class="talent-card">
+            <img src="${t.img}" alt="${t.name}">
+            <span>${t.name}</span>
+        </div>
+      `).join('')
+    : '<span class="empty-text">无</span>';
 
-let yinHtml = find.talentYin?.map(t => `
-    <div class="talent-card" title="${t.name}">
-        <img src="${t.img}" alt="${t.name}">
-        <span>${t.name}</span>
-    </div>
-`).join('');
-document.getElementById('talentYinBox').innerHTML = yinHtml || '<span class="empty-text">无</span>';
+document.getElementById('talentJinBox').innerHTML = find.talentJin?.length
+    ? find.talentJin.map(t => `
+        <div class="talent-card">
+            <img src="${t.img}" alt="${t.name}">
+            <span>${t.name}</span>
+        </div>
+      `).join('')
+    : '<span class="empty-text">无</span>';
 
-let jinHtml = find.talentJin?.map(t => `
-    <div class="talent-card" title="${t.name}">
-        <img src="${t.img}" alt="${t.name}">
-        <span>${t.name}</span>
-    </div>
-`).join('');
-document.getElementById('talentJinBox').innerHTML = jinHtml || '<span class="empty-text">无</span>';
+document.getElementById('effectCardBox').innerHTML = find.effectCard?.length
+    ? find.effectCard.map(e => `
+        <div class="effect-card">
+            <img src="${e.img}" alt="${e.name}">
+            <span>${e.name}</span>
+        </div>
+      `).join('')
+    : '<span class="empty-text">无</span>';
+
+        
 
 let effectHtml = find.effectCard?.map(e => `
     <div class="effect-card" title="${e.name}">
