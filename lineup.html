@@ -648,121 +648,109 @@
   display: block;
 }
 
-
-   /* =========================================================
-   天赋推荐：铜/银/金 横向分组，每组2个，6个刚好一排
-   ========================================================= */
+/* ========== 天赋推荐：铜/银/金 每组一行 ========== */
 
 .talent-group-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 6px;
-    width: 100%;
-}
-
-.talent-group-row > .talent-col {
-    flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 6px;
 }
 
 .talent-col {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: auto;
-    max-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 0 0 auto;
 }
 
 .talent-col-title {
-    display: inline-block;
-    width: auto;
-    max-width: none;
-    padding: 5px 12px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 800;
-    color: #fff;
-    white-space: nowrap;
+  display: inline-block;
+  width: auto;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
 }
 
-
 .talent-tong {
-    background: linear-gradient(135deg, #b58947, #8b693b);
+  background: #8b693b;
 }
 
 .talent-yin {
-    background: linear-gradient(135deg, #a6aab2, #787c84);
+  background: #787c84;
 }
 
 .talent-jin {
-    background: linear-gradient(135deg, #e7c15a, #b88600);
+  background: #b88600;
 }
 
 .talent-item-list {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .talent-card {
-    width: 96px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
+  width: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
 .talent-card img {
-    width: 96px;
-    height: 96px;
-    border-radius: 14px;
-    object-fit: cover;
-    border: 1px solid #333844;
-    background: #282e3b;
+  width: 84px;
+  height: 84px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid #333844;
+  background: #282e3b;
 }
 
 .talent-card span {
-    font-size: 12px;
-    color: #cfd3de;
-    text-align: center;
-    line-height: 1.3;
+  font-size: 12px;
+  color: #cfd3de;
+  text-align: center;
+  line-height: 1.3;
 }
 
-/* =========================================================
-   效果牌推荐：和天赋牌图片尺寸保持一致
-   ========================================================= */
+/* ========== 效果牌推荐：和天赋牌同尺寸 ========== */
 
 .effect-card-list {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .effect-card {
-    width: 96px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
+  width: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
 .effect-card img {
-    width: 96px;
-    height: 96px;
-    border-radius: 14px;
-    object-fit: cover;
-    border: 1px solid #333844;
-    background: #282e3b;
+  width: 84px;
+  height: 84px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid #333844;
+  background: #282e3b;
 }
 
 .effect-card span {
-    font-size: 12px;
-    color: #cfd3de;
-    text-align: center;
-    line-height: 1.3;
+  font-size: 12px;
+  color: #cfd3de;
+  text-align: center;
+  line-height: 1.3;
 }
+
 
         .run-stage-list {
             display:flex;
