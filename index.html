@@ -1058,21 +1058,22 @@
                 ).join('');
             }
 
-            // 功能性英雄（新模块）
-            let functionalHeroHtml = '';
-            if(Array.isArray(item.functionalHeroList) && item.functionalHeroList.length>0){
-                functionalHeroHtml = item.functionalHeroList.map(h=>`
-                    <div class="func-hero-item">
-                        <img class="mini-hero-modal" src="${h.img}" alt="${h.name}">
-                        <div class="func-info">
-                            <div class="func-name">${h.name}</div>
-                            <div class="func-desc">${h.desc}</div>
-                        </div>
-                    </div>
-                `).join('');
-            }else{
-                functionalHeroHtml = `<p class="empty-text">暂无</p>`;
-            }
+           // 功能性英雄（新模块）
+let functionalHeroHtml = '';
+if(Array.isArray(item.funcHeroList) && item.funcHeroList.length>0){
+    functionalHeroHtml = item.funcHeroList.map(h=>`
+        <div class="func-hero-item">
+            <img class="mini-hero-modal" src="${h.img}" alt="${h.name}">
+            <div class="func-info">
+                <div class="func-name">${h.name}</div>
+                <div class="func-desc">${h.desc}</div>
+            </div>
+        </div>
+    `).join('');
+}else{
+    functionalHeroHtml = `<p class="empty-text">暂无</p>`;
+}
+
 
             // 首选装备
             let equipFirstHtml = '';
