@@ -364,11 +364,13 @@
             border-radius:10px;
             margin:12px 0;
         }
-        .run-block h4 {
-    color: #ffd369;
+      .run-block h4 {
+    color: #ffe278;
     margin-bottom: 12px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 19px;
+    font-weight: 900;
+    text-shadow: 0 0 6px rgba(255,211,105,0.35);
+    letter-spacing: 0.5px;
 }
 
         /* 英雄图片容器 和下面p文字拉开距离，重点！ */
@@ -976,14 +978,28 @@ if(Array.isArray(item.effectCard) && item.effectCard.length>0){
  <div class="run-block">
      <div class="hero-row-modal">${backupHeroHtml || '<p class="empty-text">暂无</p>'}</div>
  </div>
-  <h4 class="section-title">首选装备</h4>
- <div class="run-block">
-     <div class="equip-grid">${equipFirstHtml || '<p class="empty-text">暂无</p>'}</div>
- </div>
-  <h4 class="section-title">备选装备</h4>
- <div class="run-block">
-     <div class="equip-grid">${equipSecondHtml || '<p class="empty-text">暂无</p>'}</div>
- </div>
+  <h4 class="section-title">装备选择</h4>
+<div class="run-block">
+    <div style="display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div class="mini-hero-modal core">
+                <img src="${item.heroList?.find(h=>h.isCore)?.img || ''}">
+            </div>
+            <span style="color:#ffd369;font-weight:bold">${item.heroList?.find(h=>h.isCore)?.name || ''}</span>
+        </div>
+        <div style="display:flex;gap:32px;align-items:flex-start;">
+            <div>
+                <div style="color:#ffd369;font-weight:bold;font-size:17px;margin-bottom:8px;">·首选</div>
+                <div class="equip-grid">${equipFirstHtml || '<p class="empty-text">暂无</p>'}</div>
+            </div>
+            <div>
+                <div style="color:#ffd369;font-weight:bold;font-size:17px;margin-bottom:8px;">·备选</div>
+                <div class="equip-grid">${equipSecondHtml || '<p class="empty-text">暂无</p>'}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
   <!-- ========== 天赋推荐 Tab切换模块（和截图第二张一模一样） ========== -->
  <h4 class="section-title">天赋推荐</h4>
