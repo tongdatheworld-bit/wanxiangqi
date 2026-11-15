@@ -540,7 +540,7 @@
         "player": "班叔",
         "playerImg": "images/players/banshu.png",
         "hard": "中等",
-        "lineupCode": "7155296555481190（点击复制）",
+        "lineupCode": "71552965556481190（点击复制）",
         "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
         "heroList": [
             {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
