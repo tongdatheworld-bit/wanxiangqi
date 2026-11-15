@@ -1795,9 +1795,11 @@
     "rank": "A",
     "player": "明先生",
     "playerImg": "images/players/mingxiansheng.png",
+        "alternatePlayer": ["赢律"],
+    "alternatePlayerImg": ["images/players/yinglv.png"],
     "hard": "简单",
     "lineupCode": "130659608555636434（点击复制）",
-    "ban位": ["大河流域", "逐鹿", "日落海"],
+    "ban位": ["大河流域", "河洛", "三分之地"],
     "heroList": [
         {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":true},
         {"name":"亚连","img":"images/heroes/yalian.png","isCore":false},
