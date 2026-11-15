@@ -415,7 +415,7 @@
     {
         "id": 6,
         "name": "昭君低阶龙蛇",
-        "rank": "S",
+        "rank": "A",
         "player": "昭君",
         "playerImg": "images/players/zhaojun.png",
         "hard": "中等",
@@ -615,7 +615,7 @@
     {
         "id": 12,
         "name": "阿离伞守约",
-        "rank": "S",
+        "rank": "A",
         "player": "阿离",
         "playerImg": "images/players/ali.png",
         "hard": "简单",
