@@ -600,16 +600,16 @@
     "heroList": [
         {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
         {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-        {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false}
     ],
     "funcHeroList": [
         {
             "name": "大司命",
-            "img": "images/heroes/dasimins.png",
+            "img": "images/heroes/dasiming.png",
             "desc": "在场时，召唤往生图腾，给敖隐提供攻速，给敖隐、东皇提供临时等级"
         },
         {
@@ -624,7 +624,7 @@
         },
         {
             "name": "瑶",
-            "img": "images/heroes/yao.png",
+            "img": "images/heroes/yaomei.png",
             "desc": "给场上棋子分装装备，保护核心棋子，给对方施加控制"
         },
         {
@@ -657,8 +657,8 @@
         {"name": "扩编高峰", "img": "images/talent/kuobiangaofeng.png"}
     ],
     "effectCard": [
-        {"name": "新生力量", "img": "images/effectcard/xinshengliangliang.png"},
-        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "新生力量", "img": "images/effectcard/xinshengliliang.png"},
+        {"name": "武装重构", "img": "images/effectcard/wuzhuangchonggou.png"},
         {"name": "传承", "img": "images/effectcard/chuancheng.png"}
     ],
     "runStage": [
@@ -667,8 +667,6 @@
             "heroList": [
                 {"name":"干将","img":"images/heroes/ganjiang.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
-                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"},
-                {"name":"张良","img":"images/heroes/zhangliang.png"},
                 {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
                 {"name":"虞姬","img":"images/heroes/yuji.png"}
             ],
@@ -679,9 +677,11 @@
             "heroList": [
                 {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
                 {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
-                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
                 {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false}
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+                  {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
+                {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false}
             ],
             "desc": "核心敖隐是5阶,棋手升5级搜牌。优先觉醒敖隐+东皇太一(体系核心)，找齐图腾体系卡，敖隐联动图腾滚攻速+临时等级。\n5回合选第三个天赋。\n第二轮竞拍优先抢：敖隐>大司命>东皇太一"
         },
@@ -690,10 +690,10 @@
             "heroList": [
                 {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
                 {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
-                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
                 {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
                 {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-                {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+                {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
                 {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false}
             ],
             "desc": "第三轮竞拍优先抢：新生力量>破境之证>一线生机\n6级大招保守选第二个，激进选解冻英雄+20级"
@@ -727,11 +727,31 @@
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ],
     "funcHeroList": [
-        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-        {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+        {
+            "name": "明世隐",
+            "img": "images/heroes/mingshiyin.png",
+            "desc": "把猪八戒临时等级转化为真实等级"
+        },
+        {
+            "name": "刘禅",
+            "img": "images/heroes/liushan.png",
+            "desc": "猪八戒使用技能增加临时等级"
+        },
+        {
+            "name": "姬小满",
+            "img": "images/heroes/jixiaoman.png",
+            "desc": "卖出场上棋子，获取临时刷新"
+        },
+        {
+            "name": "瑶",
+            "img": "images/heroes/yaomei.png",
+            "desc": "给场上棋子分装装备，保护核心棋子，给对方施加控制"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给猪八戒提供复活"
+        }
     ],
     "backupHeroList": [
         {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
