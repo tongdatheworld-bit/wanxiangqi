@@ -726,7 +726,7 @@
         "alternatePlayer": ["明先生", "香香"],
     "alternatePlayerImg": ["images/players/mingxiansheng.png", "images/players/xiangxiang.png"],
         "hard": "简单",
-        "lineupCode": "128157058792132776（点击复制）",
+        "lineupCode": "45658506585371688（点击复制）",
         "ban位": ["逐鹿", "三分之地", "日落海", "河洛"],
         "heroList": [
             {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
