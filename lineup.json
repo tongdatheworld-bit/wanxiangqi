@@ -483,7 +483,7 @@
     "positionImage": "images/position/4.zhaojundahe52.png"
 }
 ,
-    {
+   {
     "id": 5,
     "name": "昭君75",
     "rank": "S",
@@ -491,17 +491,17 @@
     "playerImg": "images/players/zhaojun.png",
     "alternatePlayer": [],
     "alternatePlayerImg": [],
-    "hard": "简单",
+    "hard": "中等",
     "lineupCode": "622509980921948（点击复制）",
     "ban位": ["逐鹿", "日落海", "三分之地", "河洛", "大河流域"],
     "heroList": [
-        {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
-        {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
-        {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-        {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
         {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
-        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false}
+        {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
+        {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false},
+        {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
+        {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false},
+        {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false}
     ],
     "funcHeroList": [
         {
@@ -542,49 +542,51 @@
         {
             "title": "1-3回合",
             "heroList": [
-                {"name":"干将","img":"images/heroes/ganjiang.png"},
                 {"name":"牛魔","img":"images/heroes/niumo.png"},
-                {"name":"孙尚香","img":"images/heroes/shangxiang.png"},
-                {"name":"狂铁","img":"images/heroes/kuangtie.png"},
+                {"name":"干将","img":"images/heroes/ganjiang.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
-                {"name":"苏烈","img":"images/heroes/sulie.png"}
+                {"name":"孙尚香","img":"images/heroes/shangxiang.png"},
+                {"name":"苏烈","img":"images/heroes/sulie.png"},
+                {"name":"狂铁","img":"images/heroes/kuangtie.png"}
             ],
-            "desc": "一回合上干将牛魔，没有干将就上香香或者狂铁，二回合上弈星和冻位，冻位选择香香或者苏烈，前两回合可用免费刷新但不要花钱刷新，三回合升二本，拍卖拿3阶卡\n第一轮拍卖：任意三阶卡"
+            "desc": "上阵棋子：牛头、干将、弈星、孙尚香/苏烈（冻位）\n一回合上干将牛魔，没有干将就上香香或者狂铁，二回合上弈星和冻位，冻位选择香香或者苏烈，前两回合可用免费刷新但不要花钱刷新，三回合升二本，拍卖拿3阶卡\n第一轮拍卖：任意三阶卡"
         },
         {
             "title": "4-11回合",
             "heroList": [
-                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
-                {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
-                {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false}
+                {"name":"海月","img":"images/heroes/haiyue.png"},
+                {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
+                {"name":"杨玉环","img":"images/heroes/yangyuhuan.png"},
+                {"name":"吕布","img":"images/heroes/lvbu.png"},
+                {"name":"周瑜","img":"images/heroes/zhouyu.png"},
+                {"name":"鲁班大师","img":"images/heroes/lubandashi.png"},
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png"}
             ],
-            "desc": "利用昭君秘技给的兑换券和冰冻找齐阵容，注意5回合后只冻3阶及以上的卡牌。\n第二轮拍卖：海月>杨玉环>姜子牙>吕布>周瑜>鲁班大师"
+            "desc": "上阵棋子：海月、姜子牙、杨玉环、吕布、周瑜、鲁班大师、东皇太一\n利用昭君秘技给的兑换券和冰冻找齐阵容，注意5回合后只冻3阶及以上的卡牌。\n第二轮拍卖：海月>杨玉环>姜子牙>吕布>周瑜>鲁班大师"
         },
         {
             "title": "12回合以后",
             "heroList": [
-                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
-                {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
-                {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-                {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
-                {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
-                {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false}
+                {"name":"海月","img":"images/heroes/haiyue.png"},
+                {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
+                {"name":"杨玉环","img":"images/yangyuhuan.png"},
+                {"name":"吕布","img":"images/heroes/lvbu.png"},
+                {"name":"周瑜","img":"images/heroes/zhouyu.png"},
+                {"name":"鲁班大师","img":"images/heroes/lubandashi.png"},
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png"}
             ],
-            "desc": "后期多打合成拿锦囊找传承和遗志，以及利用姜子牙提高阵容等级。有压力的时候上太乙，最好是把战力最弱的英雄传承或者遗志之后上太乙。\n每回合都冰冻一个战力最弱的五阶卡，最好是觉醒的，这样下回合有打出位。\n第三轮拍卖：新生力量/装备库/五阶效果卡"
+            "desc": "上阵棋子：海月、姜子牙、杨玉环、吕布、周瑜、鲁班大师、东皇太一\n后期多打合成拿锦囊找传承和遗志，以及利用姜子牙提高阵容等级。有压力的时候上太乙，最好是把战力最弱的英雄传承或者遗志之后上太乙。\n每回合都冰冻一个战力最弱的五阶卡，最好是觉醒的，这样下回合有打出位。\n第三轮拍卖：新生力量/装备库/五阶效果卡"
         }
     ],
     "notice": [
-        "1、第一轮拍卖有诸葛，可以拿诸葛打工，如果有变猪杖，诸葛可以一直争当C。",
+        "1、第二轮拍卖有诸葛，可以拿诸葛打工，如果有变猪杖，诸葛可以一直争当C。",
         "2、场上棋子随时调整站位，避免核心棋子被刺客切掉。",
         "3、加人口天赋 群星璀璨必拿，人口越多后期战力越高。",
         "4、5回合秘技拿第二个或者第三个，有五阶兑换券必拿，没有兑换券选第二个，两个棋子+2阶。6级大招选第二个加整体属性。"
     ],
     "positionImage": "images/position/5.zhaojun75.png"
 }
+
 ,
     {
     "id": 6,
