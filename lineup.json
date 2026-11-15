@@ -433,8 +433,8 @@
         {"name": "扩编高峰", "img": "images/talent/kuobiangaofeng.png"}
     ],
     "effectCard": [
-        {"name": "新生力量", "img": "images/effectcard/xinshengliangliang.png"},
-        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "新生力量", "img": "images/effectcard/xinshengliliang.png"},
+        {"name": "武装重构", "img": "images/effectcard/wuzhuangchonggou.png"},
         {"name": "传承", "img": "images/effectcard/chuancheng.png"}
     ],
     "runStage": [
@@ -465,11 +465,11 @@
             "heroList": [
                 {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
                 {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
                 {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
                 {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
                 {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
-                {"name":"王昭君","img":"images/heroes/wangzhaojun.png","isCore":false}
+                {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false}
             ],
             "desc": "上阵棋子：东皇太一、敖隐、大司命、少司缘、鬼谷子、海月、王昭君\n6级大招选择中间的，增加全体生命值和攻击力，提高全队坦度，增加敖隐的输出时间。\n第三轮拍卖：加人口/装备/效果卡，没觉醒可以拿妙音"
         }
@@ -480,7 +480,7 @@
         "3、5阶卡留在手里，冻出来什么可以先打合成提升等级。",
         "4、决赛如果其中一个五阶等级不高可以直接传承，掉上太乙挂东皇。"
     ],
-    "positionImage": "images/position/4.zhaojundahe52.png"
+    "positionImage": "images/position/4.zhaojunlongshe5+2.png"
 }
 ,
    {
@@ -497,7 +497,7 @@
     "heroList": [
         {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
         {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
+        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":true},
         {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false},
         {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
         {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false},
@@ -543,9 +543,9 @@
             "title": "1-3回合",
             "heroList": [
                 {"name":"牛魔","img":"images/heroes/niumo.png"},
-                {"name":"干将","img":"images/heroes/ganjiang.png"},
+                {"name":"干将","img":"images/heroes/ganjiangmoye.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
-                {"name":"孙尚香","img":"images/heroes/shangxiang.png"},
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png"},
                 {"name":"苏烈","img":"images/heroes/sulie.png"},
                 {"name":"狂铁","img":"images/heroes/kuangtie.png"}
             ],
@@ -569,7 +569,7 @@
             "heroList": [
                 {"name":"海月","img":"images/heroes/haiyue.png"},
                 {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
-                {"name":"杨玉环","img":"images/yangyuhuan.png"},
+                {"name":"杨玉环","img":"images/heroes/yangyuhuan.png"},
                 {"name":"吕布","img":"images/heroes/lvbu.png"},
                 {"name":"周瑜","img":"images/heroes/zhouyu.png"},
                 {"name":"鲁班大师","img":"images/heroes/lubandashi.png"},
