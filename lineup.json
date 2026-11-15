@@ -372,66 +372,341 @@
     "positionImage": "images/position/3.sunxiaobinsanfendaozhuan.png"
 }
 ,
+   {
+    "id": 4,
+    "name": "昭君大河5+2",
+    "rank": "S",
+    "player": "昭君",
+    "playerImg": "images/players/zhaojun.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "简单",
+    "lineupCode": "122219700696883316（点击复制）",
+    "ban位": ["逐鹿", "日落海", "三分之地", "河洛"],
+    "heroList": [
+        {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
+        {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+        {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+        {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+        {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "大司命",
+            "img": "images/heroes/dasimins.png",
+            "desc": "在场时，召唤往生图腾，给敖隐提供攻速，给敖隐、东皇提供临时等级"
+        },
+        {
+            "name": "少司缘",
+            "img": "images/heroes/shaosiyuan.png",
+            "desc": "在场时，召唤因缘图腾，给敖隐提供攻速，给敖隐、东皇提供临时等级"
+        },
+        {
+            "name": "鬼谷子",
+            "img": "images/heroes/guiguzi.png",
+            "desc": "在场时，召唤先知图腾，给敖隐提供攻速，给敖隐、东皇提供临时等级"
+        }
+    ],
+    "backupHeroList": [],
+    "equipFirst": [
+        {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"破晓","img":"images/equip/equipsmall/poxiao.png"}
+    ],
+    "equipSecond": [
+        {"name":"日渊","img":"images/equip/equipsmall/riyuan.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"}
+    ],
+    "talentTong": [
+        {"name": "大河新援", "img": "images/talent/dahexinyuan.png"},
+        {"name": "三十而立", "img": "images/talent/sanshierli.png"}
+    ],
+    "talentYin": [
+        {"name": "终极复印机", "img": "images/talent/zhongjifuyinji.png"},
+        {"name": "荆棘牢笼", "img": "images/talent/jingjilaolong.png"}
+    ],
+    "talentJin": [
+        {"name": "始祖熊灵", "img": "images/talent/shizuxiongling.png"},
+        {"name": "扩编高峰", "img": "images/talent/kuobiangaofeng.png"}
+    ],
+    "effectCard": [
+        {"name": "新生力量", "img": "images/effectcard/xinshengliangliang.png"},
+        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "传承", "img": "images/effectcard/chuancheng.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
+                {"name":"干将","img":"images/heroes/ganjiang.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"孙尚香","img":"images/heroes/shangxiang.png"},
+                {"name":"苏烈","img":"images/heroes/sulie.png"}
+            ],
+            "desc": "上阵棋子：牛头、干将、弈星、孙尚香/苏烈（冻位）\n1-3回合：1回合最优牛头干将，2回合上弈星和冻位，冻出体系就留下来。\n目的是胜下来，少掉血，能赢下来就不要冻棋子，冻了也能赢才冻。\n第一轮拍卖：鬼谷子>少司缘>云中君>其他三阶卡"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
+                {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false}
+            ],
+            "desc": "上阵棋子：东皇太一、敖隐、大司命、少司缘、鬼谷子\n利用昭君的技能冻出敖隐东皇是目的，五回合秘籍选择第三个，如果技能选5阶兑换券，优先东皇敖隐，如不是用优质五阶先打工。如果技能选的是高一阶同阵营英雄，利用韩信冻东皇或者敖隐。\n由于是高阶大河5+2，2的位置可以选择海月>玉环>姜子牙>吕布>鲁班大师。\n第二轮拍卖：敖隐>东皇太一>太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
+                {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+                {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+                {"name":"王昭君","img":"images/heroes/wangzhaojun.png","isCore":false}
+            ],
+            "desc": "上阵棋子：东皇太一、敖隐、大司命、少司缘、鬼谷子、海月、王昭君\n6级大招选择中间的，增加全体生命值和攻击力，提高全队坦度，增加敖隐的输出时间。\n第三轮拍卖：加人口/装备/效果卡，没觉醒可以拿妙音"
+        }
+    ],
+    "notice": [
+        "1、开局不要无脑冻，目的是胜下来，少掉血，能赢下来就不要冻棋子，冻了也能赢才冻。",
+        "2、中期冻出来刘禅可以先上稳血。",
+        "3、5阶卡留在手里，冻出来什么可以先打合成提升等级。",
+        "4、决赛如果其中一个五阶等级不高可以直接传承，掉上太乙挂东皇。"
+    ],
+    "positionImage": "images/position/4.zhaojundahe52.png"
+}
+,
     {
-        "id": 4,
-        "name": "昭君大河5+2",
-        "rank": "A",
-        "player": "昭君",
-        "playerImg": "images/players/zhaojun.png",
-        "hard": "中等",
-        "lineupCode": "30456997313626170（点击复制）",
-        "ban位": ["逐鹿", "河洛", "三分", "日落海"],
-        "heroList": [
-            {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
-            {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-            {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
-            {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-            {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-            {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
-            {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
-        ],
-        "equip": []
-    },
+    "id": 5,
+    "name": "昭君75",
+    "rank": "S",
+    "player": "昭君",
+    "playerImg": "images/players/zhaojun.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "简单",
+    "lineupCode": "622509980921948（点击复制）",
+    "ban位": ["逐鹿", "日落海", "三分之地", "河洛", "大河流域"],
+    "heroList": [
+        {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
+        {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+        {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+        {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+        {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "姜子牙",
+            "img": "images/heroes/jiangziya.png",
+            "desc": "姜子牙在场，打出五阵营和非场上阵营卡加场上棋子等级。"
+        }
+    ],
+    "backupHeroList": [],
+    "equipFirst": [
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
+        {"name":"贤者之书","img":"images/equip/equipsmall/xianzhezhishu.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"}
+    ],
+    "equipSecond": [
+        {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"金色圣剑","img":"images/equip/equipsmall/jinsheshengjian.png"}
+    ],
+    "talentTong": [
+        {"name": "随即成长", "img": "images/talent/suijichengzhang.png"},
+        {"name": "小电池包", "img": "images/talent/xiaodianchibao.png"}
+    ],
+    "talentYin": [
+        {"name": "扩编名额", "img": "images/talent/kuobianminge.png"},
+        {"name": "战术模组", "img": "images/talent/zhanshumozu.png"}
+    ],
+    "talentJin": [
+        {"name": "群星璀璨", "img": "images/talent/qunxingcuican.png"},
+        {"name": "扩编高峰", "img": "images/talent/kuobiangaofeng.png"}
+    ],
+    "effectCard": [
+        {"name": "传承", "img": "images/effectcard/chuancheng.png"},
+        {"name": "遗志", "img": "images/effectcard/yizhi.png"},
+        {"name": "夺取之术", "img": "images/effectcard/duoquzhishu.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"干将","img":"images/heroes/ganjiang.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
+                {"name":"孙尚香","img":"images/heroes/shangxiang.png"},
+                {"name":"狂铁","img":"images/heroes/kuangtie.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"苏烈","img":"images/heroes/sulie.png"}
+            ],
+            "desc": "一回合上干将牛魔，没有干将就上香香或者狂铁，二回合上弈星和冻位，冻位选择香香或者苏烈，前两回合可用免费刷新但不要花钱刷新，三回合升二本，拍卖拿3阶卡\n第一轮拍卖：任意三阶卡"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
+                {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false}
+            ],
+            "desc": "利用昭君秘技给的兑换券和冰冻找齐阵容，注意5回合后只冻3阶及以上的卡牌。\n第二轮拍卖：海月>杨玉环>姜子牙>吕布>周瑜>鲁班大师"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
+                {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+                {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+                {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
+                {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false}
+            ],
+            "desc": "后期多打合成拿锦囊找传承和遗志，以及利用姜子牙提高阵容等级。有压力的时候上太乙，最好是把战力最弱的英雄传承或者遗志之后上太乙。\n每回合都冰冻一个战力最弱的五阶卡，最好是觉醒的，这样下回合有打出位。\n第三轮拍卖：新生力量/装备库/五阶效果卡"
+        }
+    ],
+    "notice": [
+        "1、第一轮拍卖有诸葛，可以拿诸葛打工，如果有变猪杖，诸葛可以一直争当C。",
+        "2、场上棋子随时调整站位，避免核心棋子被刺客切掉。",
+        "3、加人口天赋 群星璀璨必拿，人口越多后期战力越高。",
+        "4、5回合秘技拿第二个或者第三个，有五阶兑换券必拿，没有兑换券选第二个，两个棋子+2阶。6级大招选第二个加整体属性。"
+    ],
+    "positionImage": "images/position/5.zhaojun75.png"
+}
+,
     {
-        "id": 5,
-        "name": "昭君75",
-        "rank": "S",
-        "player": "昭君",
-        "playerImg": "images/players/zhaojun.png",
-        "hard": "中等",
-        "lineupCode": "94633913646845962（点击复制）",
-        "ban位": ["逐鹿", "河洛", "日落海"],
-        "heroList": [
-            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-            {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
-            {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
-            {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false},
-            {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
-            {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false},
-            {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false}
-        ],
-        "equip": []
-    },
-    {
-        "id": 6,
-        "name": "昭君低阶龙蛇",
-        "rank": "A",
-        "player": "昭君",
-        "playerImg": "images/players/zhaojun.png",
-        "hard": "中等",
-        "lineupCode": "119403711597433866（点击复制）",
-        "ban位": ["逐鹿", "河洛", "三分", "日落海"],
-        "heroList": [
-            {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
-            {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-            {"name":"虞姬","img":"images/heroes/yuji.png","isCore":false},
-            {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
-            {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-            {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false}
-        ],
-        "equip": []
-    },
+    "id": 6,
+    "name": "昭君低阶龙蛇",
+    "rank": "S",
+    "player": "昭君",
+    "playerImg": "images/players/zhaojun.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "中等",
+    "lineupCode": "119403711597433866（点击复制）",
+    "ban位": ["逐鹿", "河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
+        {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+        {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+        {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+        {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "大司命",
+            "img": "images/heroes/dasimins.png",
+            "desc": "在场时，召唤往生图腾，给敖隐提供攻速，给敖隐、东皇提供临时等级"
+        },
+        {
+            "name": "少司缘",
+            "img": "images/heroes/shaosiyuan.png",
+            "desc": "在场时，召唤因缘图腾，给敖隐提供攻速，给敖隐、东皇提供临时等级"
+        },
+        {
+            "name": "鬼谷子",
+            "img": "images/heroes/guiguzi.png",
+            "desc": "在场时，召唤先知图腾，给敖隐提供攻速，给敖隐、东皇提供临时等级"
+        },
+        {
+            "name": "瑶",
+            "img": "images/heroes/yao.png",
+            "desc": "给场上棋子分装装备，保护核心棋子，给对方施加控制"
+        },
+        {
+            "name": "张良",
+            "img": "images/heroes/zhangliang.png",
+            "desc": "场上棋子开团时，提升场上棋子等级"
+        }
+    ],
+    "backupHeroList": [],
+    "equipFirst": [
+        {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"破晓","img":"images/equip/equipsmall/poxiao.png"}
+    ],
+    "equipSecond": [
+        {"name":"日渊","img":"images/equip/equipsmall/riyuan.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"}
+    ],
+    "talentTong": [
+        {"name": "大河新援", "img": "images/talent/dahexinyuan.png"},
+        {"name": "三十而立", "img": "images/talent/sanshierli.png"}
+    ],
+    "talentYin": [
+        {"name": "终极复印机", "img": "images/talent/zhongjifuyinji.png"},
+        {"name": "荆棘牢笼", "img": "images/talent/jingjilaolong.png"}
+    ],
+    "talentJin": [
+        {"name": "始祖熊灵", "img": "images/talent/shizuxiongling.png"},
+        {"name": "扩编高峰", "img": "images/talent/kuobiangaofeng.png"}
+    ],
+    "effectCard": [
+        {"name": "新生力量", "img": "images/effectcard/xinshengliangliang.png"},
+        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "传承", "img": "images/effectcard/chuancheng.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"干将","img":"images/heroes/ganjiang.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"},
+                {"name":"张良","img":"images/heroes/zhangliang.png"},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
+                {"name":"虞姬","img":"images/heroes/yuji.png"}
+            ],
+            "desc": "开局干将+弈星过渡:干将输出,弈星棋手升级白嫖经验。敖隐是5阶核心,靠图腾滚攻速+临时等级。\n第一轮竞拍优先抢：少司缘>张良>鬼谷子>虞姬"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
+                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false}
+            ],
+            "desc": "核心敖隐是5阶,棋手升5级搜牌。优先觉醒敖隐+东皇太一(体系核心)，找齐图腾体系卡，敖隐联动图腾滚攻速+临时等级。\n5回合选第三个天赋。\n第二轮竞拍优先抢：敖隐>大司命>东皇太一"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
+                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+                {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+                {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false}
+            ],
+            "desc": "第三轮竞拍优先抢：新生力量>破境之证>一线生机\n6级大招保守选第二个，激进选解冻英雄+20级"
+        }
+    ],
+    "notice": [
+        "1、前期可以用觉醒干将过渡，也可以用虞姬带敖隐装备过渡。",
+        "2、敖隐猪杖必备，尽量在后期多拿装备重铸。",
+        "3、对面有回血和护盾多的，瑶妹做一个制裁。"
+    ],
+    "positionImage": "images/position/6.zhaojunlongshe.png"
+}
+,
     {
     "id": 7,
     "name": "马可单核养猪",
