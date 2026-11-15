@@ -582,7 +582,7 @@
           "alternatePlayer": ["镜", "孙小宾"],
     "alternatePlayerImg": ["images/players/jing.png", "images/players/sunxiaobin.png"],
         "hard": "困难",
-        "lineupCode": "450904641592400206（点击复制）",
+        "lineupCode": "19199858774539422（点击复制）",
         "ban位": ["逐鹿", "大河流域", "河洛"],
         "heroList": [
             {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
