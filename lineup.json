@@ -619,7 +619,7 @@
         "player": "阿离",
         "playerImg": "images/players/ali.png",
         "hard": "简单",
-        "lineupCode": "310180869349015196（点击复制）",
+        "lineupCode": "31018086349015196（点击复制）",
         "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
         "heroList": [
             {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
@@ -1119,7 +1119,7 @@
         "player": "小妲己",
         "playerImg": "images/players/xiaodaji.png",
         "hard": "中等",
-        "lineupCode": "5184095543161870（点击复制）",
+        "lineupCode": "46221456538793072（点击复制）",
         "ban位": ["大河流域", "河洛", "三分之地"],
         "heroList": [
             {"name":"蒙恬","img":"images/heroes/mengtian.png","isCore":true},
