@@ -661,7 +661,7 @@
         "alternatePlayer": ["嬴律", "明先生"],
     "alternatePlayerImg": ["images/players/yinglv.png", "images/players/mingxiansheng.png"],
         "hard": "简单",
-        "lineupCode": "100825741915725774（点击复制）",
+        "lineupCode": "5126109938991208（点击复制）",
         "ban位": ["逐鹿", "三分之地", "日落海", "河洛"],
         "heroList": [
             {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
@@ -1798,7 +1798,7 @@
         "alternatePlayer": ["赢律"],
     "alternatePlayerImg": ["images/players/yinglv.png"],
     "hard": "简单",
-    "lineupCode": "130659608555636434（点击复制）",
+    "lineupCode": "130659608655536434（点击复制）",
     "ban位": ["大河流域", "河洛", "三分之地"],
     "heroList": [
         {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":true},
