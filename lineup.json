@@ -386,7 +386,7 @@
     "heroList": [
         {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
         {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-        {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
         {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
@@ -395,7 +395,7 @@
     "funcHeroList": [
         {
             "name": "大司命",
-            "img": "images/heroes/dasimins.png",
+            "img": "images/heroes/dasiming.png",
             "desc": "在场时，召唤往生图腾，给敖隐提供攻速，给敖隐、东皇提供临时等级"
         },
         {
@@ -497,7 +497,7 @@
     "heroList": [
         {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
         {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-        {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
         {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
