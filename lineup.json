@@ -203,7 +203,7 @@
     {"name": "能量置换", "img": "images/talent/nengliangzhihuan.png"}
 ],
 "effectCard": [
-    {"name": "武装重构", "img": "images/effectcard/wuzhonggou.png"},
+    {"name": "武装重构", "img": "images/effectcard/wuzhuangchonggou.png"},
     {"name": "精选武装", "img": "images/effectcard/jingxuanwuzhuang.png"},
     {"name": "军械库", "img": "images/effectcard/junxieku.png"}
 ],
