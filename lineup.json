@@ -648,7 +648,7 @@
             {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
             {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false}
         ],
         "equip": []
     },
