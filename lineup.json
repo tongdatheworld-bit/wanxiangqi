@@ -667,7 +667,7 @@
         {
             "title": "1-3回合",
             "heroList": [
-                {"name":"干将","img":"images/heroes/ganjiang.png"},
+                {"name":"干将","img":"images/heroes/ganjiangmoye.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
                 {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
                 {"name":"虞姬","img":"images/heroes/yuji.png"}
