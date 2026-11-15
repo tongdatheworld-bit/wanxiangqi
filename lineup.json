@@ -384,8 +384,8 @@
     "lineupCode": "122219700696883316（点击复制）",
     "ban位": ["逐鹿", "日落海", "三分之地", "河洛"],
     "heroList": [
-        {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
         {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
+        {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
         {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
@@ -442,9 +442,9 @@
             "title": "1-3回合",
             "heroList": [
                 {"name":"牛魔","img":"images/heroes/niumo.png"},
-                {"name":"干将","img":"images/heroes/ganjiang.png"},
+                {"name":"干将","img":"images/heroes/ganjiangmoye.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
-                {"name":"孙尚香","img":"images/heroes/shangxiang.png"},
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png"},
                 {"name":"苏烈","img":"images/heroes/sulie.png"}
             ],
             "desc": "上阵棋子：牛头、干将、弈星、孙尚香/苏烈（冻位）\n1-3回合：1回合最优牛头干将，2回合上弈星和冻位，冻出体系就留下来。\n目的是胜下来，少掉血，能赢下来就不要冻棋子，冻了也能赢才冻。\n第一轮拍卖：鬼谷子>少司缘>云中君>其他三阶卡"
@@ -454,7 +454,7 @@
             "heroList": [
                 {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
                 {"name":"敖隐","img":"images/heroes/aoyin.png","isCore":true},
-                {"name":"大司命","img":"images/heroes/dasimins.png","isCore":false},
+                {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
                 {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
                 {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false}
             ],
