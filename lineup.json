@@ -568,7 +568,7 @@
             {"name":"铠","img":"images/heroes/kai.png","isCore":false},
             {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-            {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+            {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
             {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false}
         ],
         "equip": []
