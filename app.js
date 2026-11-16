@@ -220,15 +220,7 @@ modalBody.innerHTML = `
                     <span class="code-normal">📋 ${find.lineupCode}</span>
                     <span class="code-success">✅ 已复制</span>
                 </div>
-                <button id="exportImgBtn" style="
-                    padding:4px 10px;
-                    border:none;
-                    border-radius:8px;
-                    background:#c49a38;
-                    color:#000;
-                    font-size:13px;
-                    cursor:pointer;
-                ">📥 导出图片</button>
+
             </div>
         </div>
 ${(()=>{
@@ -383,6 +375,19 @@ ${(()=>{
         }
     </div>
 </div>
+<div style="margin-top:24px;text-align:center;">
+    <button id="exportImgBtn" style="
+        padding:8px 18px;
+        border:none;
+        border-radius:10px;
+        background:#c49a38;
+        color:#000;
+        font-size:14px;
+        font-weight:bold;
+        cursor:pointer;
+    ">📥 导出图片</button>
+</div>
+
 `;
 // 天赋渲染
 document.getElementById('talentTongBox').innerHTML = find.talentTong?.length
