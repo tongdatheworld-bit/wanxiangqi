@@ -852,6 +852,26 @@
             font-size: 14px;
             background: #222733;
         }
+        /* 二维码框样式 */
+        .qr-bottom-block{
+            background:#1c212c;
+            border:1px solid #282d38;
+            border-radius:14px;
+            padding:18px;
+            margin-top:16px;
+            text-align:center;
+        }
+        .qr-bottom-block img{
+            width:130px;
+            height:130px;
+            border-radius:10px;
+        }
+        .qr-bottom-desc{
+            margin-top:10px;
+            color:#ffd369;
+            font-weight:bold;
+            font-size:14px;
+        }
         /* 解锁弹窗 */
         #lockModal{
             position:fixed;
@@ -1320,6 +1340,11 @@ ${banModalHtml}
                     </div>
                 ` : '<p class="empty-text">暂无站位图</p>'}
             </div>
+            <!-- ========== 新增二维码框，在弹窗最底部 ========== -->
+            <div class="qr-bottom-block">
+                <img src="./images/erweima.png" alt="万象一图诀二维码">
+                <div class="qr-bottom-desc">万象一图诀</div>
+            </div>
             `;
     modalDom.style.display = 'flex';
 }
@@ -1327,42 +1352,4 @@ ${banModalHtml}
 
 
         function renderHomeTopRank(){
-            const wrap = document.getElementById('homeTopList');
-            const idBox = document.getElementById('homeShowIdList');
-            wrap.innerHTML = '';
-            if(!idBox) return;
-
-            const targetIds = idBox.innerText.split(',')
-                .map(s=>Number(s.trim()))
-                .filter(n=>!isNaN(n));
-
-            targetIds.forEach(id=>{
-                const item = lineupList.find(x=>x.id === id);
-                if(!item) return;
-                wrap.appendChild(buildCard(item));
-            })
-        }
-
-        window.addEventListener('load', loadLineupJson);
-    </script>
-    <!-- 阵容弹窗 -->
-<div class="modal" id="detailModal">
-    <div class="modal-content">
-        <div id="modalBody"></div>
-    </div>
-</div>
-
-</div>
-<!-- 解锁弹窗 -->
-<div id="lockModal">
-    <div class="lock-inner">
-        <h3>访问验证</h3>
-        <p>请输入解锁口令</p>
-        <input id="codeInput" type="text" placeholder="输入口令">
-        <div id="tipText"></div>
-        <button id="unlockBtn">确认解锁</button>
-    </div>
-</div>
-
-</body>
-</html>
+            const wrap = document.getElementById('homeTopList
