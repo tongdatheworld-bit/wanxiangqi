@@ -472,9 +472,8 @@ if(exportBtn){
         exportBtn.style.overflow = "";
         exportBtn.style.background = "";
     }
+        }
 }
-
-
 
         modal.style.display = 'flex';
     };
