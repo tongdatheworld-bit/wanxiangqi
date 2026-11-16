@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="hero-divider"></div>
         <div class="hero-row">
             ${
-
   (item.heroList || []).map(h=>`
 <div class="mini-hero-wrap">
     <div class="mini-hero ${h.isCore ? 'core' : ''}">
@@ -106,8 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 `).join('')
-
-
             }
         </div>
     </div>
@@ -115,99 +112,93 @@ document.addEventListener('DOMContentLoaded', function () {
 `).join("");
         bindCardClick();
     }
+function bindCardClick() {
+    const modal = document.getElementById('detailModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeModalBtn = document.getElementById('closeModal');
+    if (!modal || !modalBody) return;
+    if(!lineupWrap) return;
 
-    function bindCardClick() {
-        const modal = document.getElementById('detailModal');
-        const modalBody = document.getElementById('modalBody');
-        const closeModalBtn = document.getElementById('closeModal');
-        if (!modal || !modalBody) return;
-        if(!lineupWrap) return;
+    // 卡片点击打开弹窗逻辑，单独给 lineupWrap 绑定
+    lineupWrap.onclick = function (e) {
+        const card = e.target.closest('.lineup-card');
+        if (!card) return;
 
-        lineupWrap.onclick = function (e) {
-            const copyDom = e.target.closest('.copy-code, .code-text');
-            if(copyDom){
-                e.stopPropagation();
-                copyCode(copyDom);
-                return;
-            }
+        const id = card.dataset.id;
+        const find = allLineupData.find(x => x.id == id);
+        if (!find) return;
 
-            const card = e.target.closest('.lineup-card');
-            if (!card) return;
-            const id = card.dataset.id;
-            const find = allLineupData.find(x => x.id == id);
-            if (!find) return;
+        const heroHtml = Array.isArray(find.heroList) && find.heroList.length
+            ? find.heroList.map(h => `
+                <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                    <img src="${h.img}" alt="${h.name}">
+                </div>
+              `).join('')
+            : '<span class="empty-text">无</span>';
 
-            const heroHtml = Array.isArray(find.heroList) && find.heroList.length
-                ? find.heroList.map(h => `
-                    <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
-                        <img src="${h.img}" alt="${h.name}">
-                    </div>
-                  `).join('')
-                : '<span class="empty-text">无</span>';
+        const funcHeroHtml = Array.isArray(find.funcHeroList) && find.funcHeroList.length
+            ? find.funcHeroList.map(h => `
+                <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                    <img src="${h.img}" alt="${h.name}">
+                </div>
+              `).join('')
+            : '<span class="empty-text">无</span>';
 
-            const funcHeroHtml = Array.isArray(find.funcHeroList) && find.funcHeroList.length
-                ? find.funcHeroList.map(h => `
-                    <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
-                        <img src="${h.img}" alt="${h.name}">
-                    </div>
-                  `).join('')
-                : '<span class="empty-text">无</span>';
-
-           const backupHeroHtml = Array.isArray(find.backupHeroList) && find.backupHeroList.length
-    ? find.backupHeroList.map(h => `
-        <div class="lineup-hero-item">
-            <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
-                <img src="${h.img}" alt="${h.name}">
-            </div>
-            <div class="hero-name-text">${h.name}</div>
+       const backupHeroHtml = Array.isArray(find.backupHeroList) && find.backupHeroList.length
+? find.backupHeroList.map(h => `
+    <div class="lineup-hero-item">
+        <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+            <img src="${h.img}" alt="${h.name}">
         </div>
-      `).join('')
-    : '<span class="empty-text">无</span>';
+        <div class="hero-name-text">${h.name}</div>
+    </div>
+  `).join('')
+: '<span class="empty-text">无</span>';
 
 
-            const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
-                ? find.equipFirst.map(e => `
-                    <span class="equip-pill">
-                        <img src="${e.img}" alt="${e.name}">
-                    </span>
-                  `).join('')
-                : '<span class="empty-text">无</span>';
+        const equipFirstHtml = Array.isArray(find.equipFirst) && find.equipFirst.length
+            ? find.equipFirst.map(e => `
+                <span class="equip-pill">
+                    <img src="${e.img}" alt="${e.name}">
+                </span>
+              `).join('')
+            : '<span class="empty-text">无</span>';
 
-            const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
-                ? find.equipSecond.map(e => `
-                    <span class="equip-pill">
-                        <img src="${e.img}" alt="${e.name}">
-                    </span>
-                  `).join('')
-                : '<span class="empty-text">无</span>';
+        const equipSecondHtml = Array.isArray(find.equipSecond) && find.equipSecond.length
+            ? find.equipSecond.map(e => `
+                <span class="equip-pill">
+                    <img src="${e.img}" alt="${e.name}">
+                </span>
+              `).join('')
+            : '<span class="empty-text">无</span>';
 
-            // ========== 修复运营阶段 ==========
-            const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
-                ? find.runStage.map(stage => `
-                    <div class="stage-block">
-                        <div class="stage-title">
-                            <span class="run-stage-tag">${stage.title}</span>
-                        </div>
-                        <div class="stage-heroes">
-                            ${Array.isArray(stage.heroList) && stage.heroList.length
-                                ? stage.heroList.map(h => `
-                                    <div class="lineup-hero-item">
-                                        <span class="hero-pill small">
-                                            <img src="${h.img}" alt="${h.name}">
-                                        </span>
-                                        <div class="hero-name-text">${h.name}</div>
-                                    </div>
-                                  `).join('')
-                                : '<span class="empty-text">无</span>'}
-                        </div>
-                        <p class="stage-desc">${stage.desc || ""}</p>
+        // ========== 修复运营阶段 ==========
+        const runStageHtml = Array.isArray(find.runStage) && find.runStage.length
+            ? find.runStage.map(stage => `
+                <div class="stage-block">
+                    <div class="stage-title">
+                        <span class="run-stage-tag">${stage.title}</span>
                     </div>
-                  `).join('')
-                : '<span class="empty-text">暂无运营节奏</span>';
+                    <div class="stage-heroes">
+                        ${Array.isArray(stage.heroList) && stage.heroList.length
+                            ? stage.heroList.map(h => `
+                                <div class="lineup-hero-item">
+                                    <span class="hero-pill small">
+                                        <img src="${h.img}" alt="${h.name}">
+                                    </span>
+                                    <div class="hero-name-text">${h.name}</div>
+                                </div>
+                              `).join('')
+                            : '<span class="empty-text">无</span>'}
+                    </div>
+                    <p class="stage-desc">${stage.desc || ""}</p>
+                </div>
+              `).join('')
+            : '<span class="empty-text">暂无运营节奏</span>';
 
-            const noticeHtml = Array.isArray(find.notice) && find.notice.length
-                ? find.notice.map(n => `<li>${n}</li>`).join('')
-                : '<li class="empty-text">无</li>';
+        const noticeHtml = Array.isArray(find.notice) && find.notice.length
+            ? find.notice.map(n => `<li>${n}</li>`).join('')
+            : '<li class="empty-text">无</li>';
 
 modalBody.innerHTML = `
 <div class="modal-top-info">
@@ -462,16 +453,26 @@ if(exportBtn){
 }
 
 
-            modal.style.display = 'flex';
-        };
+        modal.style.display = 'flex';
+    };
 
-        if (closeModalBtn) {
-            closeModalBtn.onclick = () => modal.style.display = 'none';
-        }
-        modal.onclick = (e) => {
-            if (e.target === modal) modal.style.display = 'none';
-        };
+    if (closeModalBtn) {
+        closeModalBtn.onclick = () => modal.style.display = 'none';
     }
+    modal.onclick = (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    };
+}
+
+// 全局复制监听：列表.copy-code + 弹窗.code-text
+document.addEventListener('click', function (e) {
+    const copyDom = e.target.closest('.copy-code, .code-text');
+    if (copyDom) {
+        e.stopPropagation();
+        copyCode(copyDom);
+    }
+});
+
 
     // 筛选标签点击
     if (filterChips.length > 0) {
