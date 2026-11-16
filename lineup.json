@@ -1049,7 +1049,7 @@
         {
             "name": "张良",
             "img": "images/heroes/zhangliang.png",
-            "desc": "阵容开团给场上棋子提高等级"
+            "desc": "阵容开团给场上棋子提高等级，后期带名刀，关键时候控对方主C"
         },
         {
             "name": "瑶",
@@ -1069,7 +1069,7 @@
     ],
     "backupHeroList": [
         {"name":"虞姬","img":"images/heroes/yuji.png","isCore":false},
-        {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false}
     ],
     "equipFirst": [
