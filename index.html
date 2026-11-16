@@ -991,278 +991,296 @@
             <div id="modalBody"></div>
         </div>
     </div>
-    <script>
-        let lineupList = [];
-        let currentLineup = null;
-        let modalDom = null;
-        let modalInner = null;
-        function closeModal(){
-            if(!modalDom) return;
-            modalDom.style.display = 'none';
-        }
+   <script>
+    let lineupList = [];
+    let currentLineup = null;
+    let modalDom = null;
+    let modalInner = null;
 
-        async function loadLineupJson() {
-            try {
-                modalDom = document.querySelector('.modal');
-                modalInner = document.querySelector('#modalBody');
-                modalDom.addEventListener('click', function(e){
-                    if(e.target === modalDom){
+    function closeModal() {
+        if (!modalDom) return;
+        modalDom.style.display = 'none';
+    }
+
+    async function loadLineupJson() {
+        try {
+            modalDom = document.querySelector('.modal');
+            modalInner = document.querySelector('#modalBody');
+
+            if (modalDom) {
+                modalDom.addEventListener('click', function (e) {
+                    if (e.target === modalDom) {
                         closeModal();
                     }
-                })
-                const res = await fetch("./lineup.json");
-                lineupList = await res.json();
-                renderHomeTopRank();
-            } catch (err) {
-                console.error("加载 lineup.json 失败：", err);
-                const wrap = document.getElementById('homeTopList');
-                if(wrap) wrap.innerHTML = `<p style="color:#ff8888">❌ 阵容数据加载失败，请检查 lineup.json 文件路径</p>`;
+                });
+            }
+
+            const res = await fetch("./lineup.json");
+            lineupList = await res.json();
+            renderHomeTopRank();
+        } catch (err) {
+            console.error("加载 lineup.json 失败：", err);
+            const wrap = document.getElementById('homeTopList');
+            if (wrap) {
+                wrap.innerHTML = `<p style="color:#ff8888;text-align:center;margin-top:20px;">❌ 阵容数据加载失败，请检查 lineup.json 文件路径</p>`;
             }
         }
-
-        async function copyCode(ele, rawCode) {
-            const realCode = rawCode.split("（")[0];
-            try {
-                await navigator.clipboard.writeText(realCode)
-                ele.classList.add('copied');
-                setTimeout(()=>{ele.classList.remove('copied');}, 1800);
-            } catch (e) {
-                alert("复制失败，请手动复制：" + realCode)
-            }
-        }
-
-        function buildCard(item){
-            const div = document.createElement('div');
-            div.className = "lineup-card";
-            div.dataset.id = item.id;
-
-            let banHtml = '';
-            if(Array.isArray(item["ban位"]) && item["ban位"].length > 0){
-                banHtml = `<span class="ban-title-tag">Ban阵营：</span>`
-                    + item["ban位"].map(b=>`<span class="ban-item">${b}</span>`).join('');
-            }
-
-            let heroHtml = '';
-            if(Array.isArray(item.heroList)){
-                heroHtml = item.heroList.map(h=>`
-             <div class="mini-hero ${h.isCore ? 'core' : ''}">
-                 <img src="${h.img}" alt="${h.name}">
-             </div>
-         `).join('');
-            }
-
-            let alternatePlayerHtml = '';
-            if(Array.isArray(item.alternatePlayer) && item.alternatePlayer.length > 0){
-                alternatePlayerHtml = `
-             <div class="alternate-col">
-                 <div class="alternate-player-label">备选棋手</div>
-                 <div class="alternate-wrap">
-                     ${item.alternatePlayer.map((_, idx)=>{
-                         const src = item.alternatePlayerImg?.[idx] || "";
-                         return `<div class="alt-player"><img src="${src}"></div>`;
-                     }).join('')}
-             </div>
-         </div>
-         `;
-            }
-
-            div.innerHTML = `
-         <div class="lineup-info-top">
-             <div class="lineup-name">${item.name}</div>
-             ${banHtml}
-             <div class="lineup-meta">
-                 成型难度：${item.hard} &nbsp;
-                 <span class="copy-code" data-code="${item.lineupCode}">
-                    <span class="copy-normal">阵容码：${item.lineupCode}</span>
-                    <span class="copy-success">✅已复制</span>
-                 </span>
-             </div>
-         </div>
-         <div class="lineup-bottom-row">
-             <div class="lineup-rank">${item.rank}</div>
-             <div class="player-group">
-                 <div class="main-player">
-                     <img src="${item.playerImg}" alt="">
-                 </div>
-                 ${alternatePlayerHtml}
-             </div>
-             <div class="hero-divider"></div>
-             <div class="hero-row">
-                 ${heroHtml}
-             </div>
-         </div>
-     `;
-
-            const copySpan = div.querySelector('.copy-code');
-            copySpan.onclick = (e)=>{
-                e.stopPropagation();
-                copyCode(copySpan, item.lineupCode);
-            }
-            div.onclick = ()=>{
-                openLineupModal(item);
-            }
-            return div;
-        }
-function openLineupModal(item){
-    currentLineup = item;
-
-    let heroHtml = '';
-    if(Array.isArray(item.heroList)){
-        heroHtml = item.heroList.map(h=>`
-     <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
-         <img src="${h.img}" alt="${h.name}">
-     </div>`
-        ).join('');
     }
 
-    let backupHeroHtml = '';
-    if(Array.isArray(item.backupHeroList)){
-        backupHeroHtml = item.backupHeroList.map(h=>`
-     <div class="mini-hero-modal">
-         <img src="${h.img}" alt="${h.name}">
-     </div>`
-        ).join('');
+    async function copyCode(ele, rawCode) {
+        const realCode = rawCode.split("（")[0];
+        try {
+            await navigator.clipboard.writeText(realCode);
+            ele.classList.add('copied');
+            setTimeout(() => {
+                ele.classList.remove('copied');
+            }, 1800);
+        } catch (e) {
+            alert("复制失败，请手动复制：" + realCode);
+        }
     }
 
-    let functionalHeroHtml = '';
-    if(Array.isArray(item.funcHeroList) && item.funcHeroList.length>0){
-        functionalHeroHtml = item.funcHeroList.map(h=>`
-            <div class="func-hero-item">
-                <img class="mini-hero-modal" src="${h.img}" alt="${h.name}">
-                <div class="func-info">
-                    <div class="func-name">${h.name}</div>
-                    <div class="func-desc">${h.desc}</div>
+    function buildCard(item) {
+        const div = document.createElement('div');
+        div.className = "lineup-card";
+        div.dataset.id = item.id;
+
+        let banHtml = '';
+        if (Array.isArray(item["ban位"]) && item["ban位"].length > 0) {
+            banHtml = `<span class="ban-title-tag">Ban阵营：</span>`
+                + item["ban位"].map(b => `<span class="ban-item">${b}</span>`).join('');
+        }
+
+        let heroHtml = '';
+        if (Array.isArray(item.heroList)) {
+            heroHtml = item.heroList.map(h => `
+                <div class="mini-hero ${h.isCore ? 'core' : ''}">
+                    <img src="${h.img}" alt="${h.name}">
+                </div>
+            `).join('');
+        }
+
+        let alternatePlayerHtml = '';
+        if (Array.isArray(item.alternatePlayer) && item.alternatePlayer.length > 0) {
+            alternatePlayerHtml = `
+                <div class="alternate-col">
+                    <div class="alternate-player-label">备选棋手</div>
+                    <div class="alternate-wrap">
+                        ${item.alternatePlayer.map((_, idx) => {
+                            const src = item.alternatePlayerImg?.[idx] || "";
+                            return `<div class="alt-player"><img src="${src}"></div>`;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        div.innerHTML = `
+            <div class="lineup-info-top">
+                <div class="lineup-name">${item.name}</div>
+                ${banHtml}
+                <div class="lineup-meta">
+                    成型难度：${item.hard} &nbsp;
+                    <span class="copy-code" data-code="${item.lineupCode}">
+                        <span class="copy-normal">阵容码：${item.lineupCode}</span>
+                        <span class="copy-success">✅已复制</span>
+                    </span>
                 </div>
             </div>
-        `).join('');
-    }else{
-        functionalHeroHtml = `<p class="empty-text">暂无</p>`;
-    }
-
-
-    let equipFirstHtml = '';
-    if(Array.isArray(item.equipFirst)){
-        equipFirstHtml = item.equipFirst.map(e=>`
-     <div class="equip-pill">
-         <img src="${e.img}" alt="${e.name}">
-     </div>`
-        ).join('');
-    }
-    let equipSecondHtml = '';
-    if(Array.isArray(item.equipSecond)){
-        equipSecondHtml = item.equipSecond.map(e=>`
-     <div class="equip-pill">
-         <img src="${e.img}" alt="${e.name}">
-     </div>`
-        ).join('');
-    }
-
-    let talentTongCardHtml = '';
-    if(Array.isArray(item.talentTong) && item.talentTong.length>0){
-       talentTongCardHtml = item.talentTong.map(t=>`
-    <div class="talent-card-full">
-        <div class="talent-card-imgbox">
-            <img src="${t.img}" alt="${t.name}">
-        </div>
-        <div class="talent-card-name">${t.name}</div>
-    </div>`).join('');
-    }else{
-        talentTongCardHtml = `<p class="empty-text">暂无</p>`;
-    }
-    let talentYinCardHtml = '';
-    if(Array.isArray(item.talentYin) && item.talentYin.length>0){
-        talentYinCardHtml = item.talentYin.map(t=>`
-        <div class="talent-card-full">
-            <div class="talent-card-imgbox">
-                <img src="${t.img}" alt="${t.name}">
+            <div class="lineup-bottom-row">
+                <div class="lineup-rank">${item.rank}</div>
+                <div class="player-group">
+                    <div class="main-player">
+                        <img src="${item.playerImg}" alt="">
+                    </div>
+                    ${alternatePlayerHtml}
+                </div>
+                <div class="hero-divider"></div>
+                <div class="hero-row">
+                    ${heroHtml}
+                </div>
             </div>
-            <div class="talent-card-name">${t.name}</div>
-        </div>`).join('');
-    }else{
-        talentYinCardHtml = `<p class="empty-text">暂无</p>`;
+        `;
+
+        const copySpan = div.querySelector('.copy-code');
+        copySpan.onclick = (e) => {
+            e.stopPropagation();
+            copyCode(copySpan, item.lineupCode);
+        };
+
+        div.onclick = () => {
+            openLineupModal(item);
+        };
+
+        return div;
     }
-    let talentJinCardHtml = '';
-    if(Array.isArray(item.talentJin) && item.talentJin.length>0){
-        talentJinCardHtml = item.talentJin.map(t=>`
-        <div class="talent-card-full">
-            <div class="talent-card-imgbox">
-                <img src="${t.img}" alt="${t.name}">
+
+    function openLineupModal(item) {
+        currentLineup = item;
+
+        let heroHtml = '';
+        if (Array.isArray(item.heroList)) {
+            heroHtml = item.heroList.map(h => `
+                <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                    <img src="${h.img}" alt="${h.name}">
+                </div>
+            `).join('');
+        }
+
+        let backupHeroHtml = '';
+        if (Array.isArray(item.backupHeroList)) {
+            backupHeroHtml = item.backupHeroList.map(h => `
+                <div class="mini-hero-modal">
+                    <img src="${h.img}" alt="${h.name}">
+                </div>
+            `).join('');
+        }
+
+        let functionalHeroHtml = '';
+        if (Array.isArray(item.funcHeroList) && item.funcHeroList.length > 0) {
+            functionalHeroHtml = item.funcHeroList.map(h => `
+                <div class="func-hero-item">
+                    <img class="mini-hero-modal" src="${h.img}" alt="${h.name}">
+                    <div class="func-info">
+                        <div class="func-name">${h.name}</div>
+                        <div class="func-desc">${h.desc}</div>
+                    </div>
+                </div>
+            `).join('');
+        } else {
+            functionalHeroHtml = `<p class="empty-text">暂无</p>`;
+        }
+
+        let equipFirstHtml = '';
+        if (Array.isArray(item.equipFirst)) {
+            equipFirstHtml = item.equipFirst.map(e => `
+                <div class="equip-pill">
+                    <img src="${e.img}" alt="${e.name}">
+                </div>
+            `).join('');
+        }
+
+        let equipSecondHtml = '';
+        if (Array.isArray(item.equipSecond)) {
+            equipSecondHtml = item.equipSecond.map(e => `
+                <div class="equip-pill">
+                    <img src="${e.img}" alt="${e.name}">
+                </div>
+            `).join('');
+        }
+
+        let talentTongCardHtml = '';
+        if (Array.isArray(item.talentTong) && item.talentTong.length > 0) {
+            talentTongCardHtml = item.talentTong.map(t => `
+                <div class="talent-card-full">
+                    <div class="talent-card-imgbox">
+                        <img src="${t.img}" alt="${t.name}">
+                    </div>
+                    <div class="talent-card-name">${t.name}</div>
+                </div>
+            `).join('');
+        } else {
+            talentTongCardHtml = `<p class="empty-text">暂无</p>`;
+        }
+
+        let talentYinCardHtml = '';
+        if (Array.isArray(item.talentYin) && item.talentYin.length > 0) {
+            talentYinCardHtml = item.talentYin.map(t => `
+                <div class="talent-card-full">
+                    <div class="talent-card-imgbox">
+                        <img src="${t.img}" alt="${t.name}">
+                    </div>
+                    <div class="talent-card-name">${t.name}</div>
+                </div>
+            `).join('');
+        } else {
+            talentYinCardHtml = `<p class="empty-text">暂无</p>`;
+        }
+
+        let talentJinCardHtml = '';
+        if (Array.isArray(item.talentJin) && item.talentJin.length > 0) {
+            talentJinCardHtml = item.talentJin.map(t => `
+                <div class="talent-card-full">
+                    <div class="talent-card-imgbox">
+                        <img src="${t.img}" alt="${t.name}">
+                    </div>
+                    <div class="talent-card-name">${t.name}</div>
+                </div>
+            `).join('');
+        } else {
+            talentJinCardHtml = `<p class="empty-text">暂无</p>`;
+        }
+
+        let effectCardFullHtml = '';
+        if (Array.isArray(item.effectCard) && item.effectCard.length > 0) {
+            effectCardFullHtml = item.effectCard.map(e => `
+                <div class="effect-card-full">
+                    <div class="effect-card-imgbox">
+                        <img src="${e.img}" alt="${e.name}">
+                    </div>
+                    <div class="effect-card-name">${e.name}</div>
+                </div>
+            `).join('');
+        } else {
+            effectCardFullHtml = `<p class="empty-text">暂无</p>`;
+        }
+
+        let runStageHtml = '';
+        if (Array.isArray(item.runStage)) {
+            runStageHtml = item.runStage.map(stage => {
+                let stageHeroHtml = '';
+                if (Array.isArray(stage.heroList)) {
+                    stageHeroHtml = stage.heroList.map(h => `
+                        <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
+                            <img src="${h.img}" alt="${h.name}">
+                        </div>
+                    `).join('');
+                }
+                return `
+                    <div class="stage-block">
+                        <div class="stage-title"><span class="run-stage-tag">${stage.title}</span></div>
+                        <div class="stage-heroes">${stageHeroHtml || '<p class="empty-text">无</p>'}</div>
+                        <p class="stage-desc">${stage.desc}</p>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        let banModalHtml = '';
+        if (Array.isArray(item["ban位"]) && item["ban位"].length > 0) {
+            banModalHtml = `
+                <div class="modal-block">
+                    <h4>BAN阵营</h4>
+                    <div class="modal-sub">${item["ban位"].join("、")}</div>
+                </div>
+            `;
+        }
+
+        let noticeHtml = "";
+        if (Array.isArray(item.notice) && item.notice.length > 0) {
+            noticeHtml = item.notice.map(n => `<li>${n}</li>`).join("");
+        } else {
+            noticeHtml = `<li>无</li>`;
+        }
+
+        const coreHero = item.heroList?.find(h => h.isCore);
+
+        modalInner.innerHTML = `
+            <span class="modal-close" onclick="closeModal();">×</span>
+            <div class="modal-top-info">
+                <img class="player-avatar" src="${item.playerImg || ''}" alt="${item.player}">
+                <div class="info-text">
+                    <div class="name-code-row">
+                        <h2>${item.name}</h2>
+                        <span class="code-text" onclick="copyCode(this, '${item.lineupCode || ''}')">
+                            <span class="code-normal">阵容码：${item.lineupCode || ''}</span>
+                            <span class="code-success">✅已复制</span>
+                        </span>
+                    </div>
+                    <div class="modal-sub">强度：${item.rank || ''} ｜ 成型难度：${item.hard || ''}</div>
+                </div>
             </div>
-            <div class="talent-card-name">${t.name}</div>
-        </div>`).join('');
-    }else{
-        talentJinCardHtml = `<p class="empty-text">暂无</p>`;
-    }
-
-    let effectCardFullHtml = '';
-    if(Array.isArray(item.effectCard) && item.effectCard.length>0){
-        effectCardFullHtml = item.effectCard.map(e=>`
-    <div class="effect-card-full">
-        <div class="effect-card-imgbox">
-            <img src="${e.img}" alt="${e.name}">
-        </div>
-        <div class="effect-card-name">${e.name}</div>
-    </div>`).join('');
-    }else{
-        effectCardFullHtml = `<p class="empty-text">暂无</p>`;
-    }
-
-    let runStageHtml = '';
-    if(Array.isArray(item.runStage)){
-        runStageHtml = item.runStage.map(stage=>{
-            let stageHeroHtml = '';
-            if(Array.isArray(stage.heroList)){
-                stageHeroHtml = stage.heroList.map(h=>`
-             <div class="mini-hero-modal ${h.isCore ? 'core' : ''}">
-                 <img src="${h.img}" alt="${h.name}">
-             </div>`
-                ).join('');
-            }
-            return `
-     <div class="stage-block">
-         <div class="stage-title"><span class="run-stage-tag">${stage.title}</span></div>
-         <div class="stage-heroes">${stageHeroHtml || '<p class="empty-text">无</p>'}</div>
-         <p class="stage-desc">${stage.desc}</p>
-     </div>
-     `;
-        }).join('');
-    }
-
-    let banModalHtml = '';
-    if(Array.isArray(item["ban位"]) && item["ban位"].length>0){
-        banModalHtml = `
- <div class="modal-block">
-     <h4>BAN阵营</h4>
-     <div class="modal-sub">${item["ban位"].join("、")}</div>
- </div>`
-    }
-
-    let noticeHtml = "";
-    if(Array.isArray(item.notice) && item.notice.length > 0){
-        noticeHtml = item.notice.map(n=>`<li>${n}</li>`).join("");
-    }else{
-        noticeHtml = `<li>无</li>`;
-    }
-
-    const coreHero = item.heroList?.find(h=>h.isCore);
-
-    modalInner.innerHTML = `
-<span class="modal-close" onclick="closeModal();">×</span>
-<div class="modal-top-info">
-    <img class="player-avatar" src="${item.playerImg || ''}" alt="${item.player}">
-    <div class="info-text">
-        <div class="name-code-row">
-            <h2>${item.name}</h2>
-            <span class="code-text" onclick="copyCode(this, '${item.lineupCode || ''}')">
-                <span class="code-normal">阵容码：${item.lineupCode || ''}</span>
-                <span class="code-success">✅已复制</span>
-            </span>
-        </div>
-        <div class="modal-sub">强度：${item.rank || ''} ｜ 成型难度：${item.hard || ''}</div>
-    </div>
-</div>
-${banModalHtml}
-
+            ${banModalHtml}
 
             <div class="modal-block">
                 <h4>阵容组成</h4>
@@ -1352,17 +1370,33 @@ ${banModalHtml}
                     </div>
                 ` : '<p class="empty-text">暂无站位图</p>'}
             </div>
-            <!-- ========== 新增二维码框，在弹窗最底部 ========== -->
+
             <div class="qr-bottom-block">
                 <img src="./images/wanxiangyitujue.png" alt="万象一图诀二维码">
                 <div class="qr-bottom-desc">万象一图诀</div>
             </div>
-            `;
-    modalDom.style.display = 'flex';
-}
+        `;
 
-function renderHomeTopRank(){
-    const wrap = document.getElementById('homeTopList');
-    if(!wrap) return;
-    const idStr = document.getElementById('homeShowIdList').innerText.trim();
-    const showIds =
+        modalDom.style.display = 'flex';
+    }
+
+    function renderHomeTopRank() {
+        const wrap = document.getElementById('homeTopList');
+        if (!wrap) return;
+
+        const idStr = document.getElementById('homeShowIdList').innerText.trim();
+        const showIds = idStr.split(',').map(Number);
+        const filterData = lineupList.filter(d => showIds.includes(d.id));
+
+        filterData.sort((a, b) => showIds.indexOf(a.id) - showIds.indexOf(b.id));
+        wrap.innerHTML = '';
+
+        filterData.forEach(item => {
+            const cardDom = buildCard(item);
+            wrap.appendChild(cardDom);
+        });
+    }
+
+    loadLineupJson();
+</script>
+
