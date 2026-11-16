@@ -1088,15 +1088,15 @@
     ],
     "talentYin": [
         {"name": "化为熊灵", "img": "images/talent/huaweixiongling.png"},
-        {"name": "荆棘牢笼", "img": "images/talent/jijinglaolong.png"}
+        {"name": "荆棘牢笼", "img": "images/talent/jingjilaolong.png"}
     ],
     "talentJin": [
         {"name": "命运图腾", "img": "images/talent/mingyuntuteng.png"},
-        {"name": "强敌克星", "img": "images/talent/qiangdakexing.png"}
+        {"name": "强敌克星", "img": "images/talent/qiangdikexing.png"}
     ],
     "effectCard": [
-        {"name": "2阶英雄兑换券", "img": "images/effectcard/erjieyingxionghuanquan.png"},
-        {"name": "无阵营英雄兑换券", "img": "images/effectcard/wuzhengyingxionghuanquan.png"},
+        {"name": "2阶英雄兑换券", "img": "images/effectcard/erjieyingxiongduihuanquan.png"},
+        {"name": "无阵营英雄兑换券", "img": "images/effectcard/wuzhengyingxiongduihuanquan.png"},
         {"name": "武装重构", "img": "images/effectcard/wuzhuangchonggou.png"}
     ],
     "runStage": [
@@ -1142,7 +1142,7 @@
         "4、瑶分装备优选破茧之衣、名刀，后期带一个制裁之刃，有铃铛给瑶带上。",
         "5、后期下云中君上钟馗，多留移花接木打决赛。"
     ],
-    "positionImage": "images/position/18.diyayinglvzhuli.png"
+    "positionImage": "images/position/18.yinglvdiyazhuli.png"
 }
 ,
        {
