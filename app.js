@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 allLineupData = data;
                 renderList();
+                renderHomeTop();
             })
             .catch(err => {
                 console.error('数据加载失败：', err);
@@ -112,15 +113,78 @@ document.addEventListener('DOMContentLoaded', function () {
 `).join("");
         bindCardClick();
     }
+
+    function renderHomeTop(){
+        const idWrap = document.getElementById('homeShowIdList');
+        const homeWrap = document.getElementById('homeTopList');
+        if(!idWrap || !homeWrap) return;
+        const idStr = idWrap.textContent.trim();
+        const idArr = idStr.split(',').map(s=>Number(s.trim()));
+        const showList = idArr.map(id=> allLineupData.find(x=>x.id === id)).filter(Boolean);
+
+        homeWrap.innerHTML = showList.map(item => `
+<div class="lineup-card" data-id="${item.id}">
+    <div class="lineup-info-top">
+        <div class="lineup-name">${item.name}</div>
+        <span class="ban-title-tag">Ban阵营：</span>
+        <div class="ban-tags-wrap">
+            ${(item["ban位"] || []).map(b=>`<span class="ban-item">${b}</span>`).join('')}
+        </div>
+        <div class="lineup-meta">
+            成型难度：${item.hard} &nbsp;
+            <div class="copy-code" data-code="${item.lineupCode}">
+                <span class="copy-normal">📋 ${item.lineupCode}</span>
+                <span class="copy-success">✅ 已复制</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="lineup-bottom-row">
+        <div class="lineup-rank">${item.rank}</div>
+        <div class="player-group">
+            <div class="main-player">
+                <img src="${item.playerImg}" alt="">
+            </div>
+            ${
+                Array.isArray(item.alternatePlayer) && item.alternatePlayer.length>0
+                ? `<div class="alternate-col">
+                    <div class="alternate-player-label">备选棋手</div>
+                    <div class="alternate-wrap">
+                        ${item.alternatePlayer.map((_,idx)=>{
+                            const src = item.alternatePlayerImg?.[idx] || "";
+                            return `<div class="alt-player"><img src="${src}"></div>`
+                        }).join('')}
+                   </div>
+                   </div>`
+                : ""
+            }
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-row">
+            ${
+  (item.heroList || []).map(h=>`
+<div class="mini-hero-wrap">
+    <div class="mini-hero ${h.isCore ? 'core' : ''}">
+        <img src="${h.img}" alt="">
+    </div>
+</div>
+`).join('')
+            }
+        </div>
+    </div>
+</div>
+`).join("");
+        bindCardClick();
+    }
+
 function bindCardClick() {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeModalBtn = document.getElementById('closeModal');
     if (!modal || !modalBody) return;
-    if(!lineupWrap) return;
 
-    // 卡片点击打开弹窗逻辑，单独给 lineupWrap 绑定
-    lineupWrap.onclick = function (e) {
+    // 委托到外层容器，首页榜单 + 筛选列表卡片都可以点击弹窗
+    document.querySelector('.container')?.addEventListener('click', function (e) {
         // 重点：点复制就直接返回，不打开弹窗
         const copyTarget = e.target.closest('.copy-code, .code-text');
         if (copyTarget) return;
@@ -467,7 +531,7 @@ if (exportBtn) {
         }
     }
 }
-    };
+    });
 
     if (closeModalBtn) {
         closeModalBtn.onclick = () => modal.style.display = 'none';
