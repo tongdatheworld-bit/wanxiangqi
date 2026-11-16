@@ -1092,27 +1092,124 @@
 }
 ,
     {
-        "id": 10,
-        "name": "白歌三分倒转",
-        "rank": "S",
-        "player": "白歌",
-        "playerImg": "images/players/baige.png",
-          "alternatePlayer": ["镜", "孙小宾"],
+    "id": 10,
+    "name": "白歌三分倒转",
+    "rank": "S",
+    "player": "白歌",
+    "playerImg": "images/players/baige.png",
+    "alternatePlayer": ["镜", "孙小宾"],
     "alternatePlayerImg": ["images/players/jing.png", "images/players/sunxiaobin.png"],
-        "hard": "困难",
-        "lineupCode": "19199858774539422（点击复制）",
-        "ban位": ["逐鹿", "大河流域", "河洛"],
-        "heroList": [
-            {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
-            {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
-            {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
-            {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
-            {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
-            {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
-            {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
-        ],
-        "equip": []
-    },
+    "hard": "困难",
+    "lineupCode": "19199858774539422（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "河洛"],
+    "heroList": [
+        {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+        {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
+        {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
+        {"name":"阿轲","img":"images/heroes/ake.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "曹操",
+            "img": "images/heroes/caocao.png",
+            "desc": "整备触发甄姬登场获得登场卡、触发周瑜增加全队等级"
+        },
+        {
+            "name": "甄姬",
+            "img": "images/heroes/zhenji.png",
+            "desc": "倒转核心，登场继续获取登场卡"
+        },
+        {
+            "name": "小乔",
+            "img": "images/heroes/xiaoqiao.png",
+            "desc": "小乔常驻，登场卡登场增加全队等级"
+        },
+        {
+            "name": "阿轲",
+            "img": "images/heroes/ake.png",
+            "desc": "登场增加场上棋子等级"
+        },
+        {
+            "name": "露娜",
+            "img": "images/heroes/luna.png",
+            "desc": "登场触发曹操整备，核心打出位，倒转触发器"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"},
+        {"name":"聚灵水晶","img":"images/equip/equipsmall/julingshuijing.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
+        {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "防御领域", "img": "images/talent/fangyulingyu.png"}
+    ],
+    "talentYin": [
+        {"name": "锦囊妙计", "img": "images/talent/jinnangmiaoji.png"},
+        {"name": "人才济济", "img": "images/talent/rencaijiji.png"}
+    ],
+    "talentJin": [
+        {"name": "紧急救援", "img": "images/talent/jinjijiuyuan.png"},
+        {"name": "点兵点将", "img": "images/talent/dianbingdianjiang.png"}
+    ],
+    "effectCard": [
+        {"name": "集体唤醒", "img": "images/effectcard/jitihuanxing.png"},
+        {"name": "整装待发", "img": "images/effectcard/zhengzhuangdaifa.png"},
+        {"name": "唤醒", "img": "images/effectcard/huanxing.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "开局单挂弈星，天赋推荐保血量+能量+经验的，白歌需要速拉5级启动。第一轮竞拍优先抢：曹操>阿轲"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+                {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+                {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+                {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
+                {"name":"阿轲","img":"images/heroes/ake.png","isCore":false},
+                {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+            ],
+            "desc": "棋手5级开始搜搜，用曹操+甄姬+小乔+孙悟空+阿轲即可启动，白歌技能复制最好在场上只有曹操、甄姬、小乔时使用，露娜最好留着等甄姬和小乔都觉醒之后再打。优先觉醒曹操+小乔+甄姬，优先抢：小乔>甄姬>露娜"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+                {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+                {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+                {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
+                {"name":"孙悟空","img":"images/heroes/sunwukong.png","isCore":true},
+                {"name":"阿轲","img":"images/heroes/ake.png","isCore":false},
+                {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+            ],
+            "desc": "第三轮竞拍优先抢：扶摇直上/一线生机/能量超新星/超级复印机。白歌六级后，大招复制给露娜，灵感爆发切露娜。无限倒转靠等级碾压全场。"
+        }
+    ],
+    "notice": [
+        "1、打出位留给周瑜、太乙真人和其他登场牌。露娜可以一直留着直到升6奇才来切牌，如果有其他对手在拿露娜就要看情况把露娜出售来搜倒转。",
+        "2、孙悟空夺取优先考虑小乔和甄姬的等级，刺客们最好站在后排的中间去跳，如果跳错角落猴子逛街很容易暴毙。",
+        "3、孙悟空装备推荐无尽巨剑+聚灵水晶+名刀，备用炽热支配者，魔律之刃。",
+        "4、白歌稳住血量能胜利后，停1回合不搜牌买牌基本上可以到6级，然后奇才和秘技都交给露娜。"
+    ],
+    "positionImage": "images/position/10.baigesanfendaozhuan.png"
+}
+,
     {
         "id": 11,
         "name": "嫦小娥海陆空",
