@@ -829,27 +829,137 @@
         "4. 马可思路：3级刷牌，保证锦囊产出均为低阶英雄牌，等到临近14回合再拉5、6级；专属秘技选择【重点照顾】，3阶同阶单位基数大，收益更高。"
     ],
     "positionImage": "images/position/7.makedanheyangzhu.png"
-},
-    {
-        "id": 8,
-        "name": "班叔李信陷阱流",
-        "rank": "S",
-        "player": "班叔",
-        "playerImg": "images/players/banshu.png",
-        "hard": "中等",
-        "lineupCode": "71552965556481190（点击复制）",
-        "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
-        "heroList": [
-            {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
-            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-            {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-            {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false},
-            {"name":"铠","img":"images/heroes/kai.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false}
-        ],
-        "equip": []
-    },
+},{
+    "id": 8,
+    "name": "班叔李信陷阱流",
+    "rank": "S",
+    "player": "班叔",
+    "playerImg": "images/players/banshu.png",
+    "alternatePlayer": ["瑶妹"],
+    "alternatePlayerImg": ["images/players/yaomei.png"],
+    "hard": "困难",
+    "lineupCode": "71552965556481190（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"凯","img":"images/heroes/kai.png","isCore":false},
+        {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+        {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "明世隐",
+            "img": "images/heroes/mingshiyin.png",
+            "desc": "距离最近的英雄，临时等级中的2级可转化为永久等级。登场：可转化的等级+2。给李信加真实等级。"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "自身及左右1格的英雄获得牺牲：击败者等级临时降低10%（20%）（每场战斗限1次）。"
+        },
+        {
+            "name": "凯",
+            "img": "images/heroes/kai.png",
+            "desc": "牺牲：你的【河洛】英雄获得5（10）临时等级。前期战力，后期牺牲给李信加等级。"
+        },
+        {
+            "name": "上官婉儿",
+            "img": "images/heroes/shangguanwaner.png",
+            "desc": "整备：随机对3（6）名不同【河洛】英雄使用1张古币。放钟馗旁边变牺牲送掉。"
+        },
+        {
+            "name": "花木兰",
+            "img": "images/heroes/huamulan.png",
+            "desc": "本回合每使用5张古币牌，获得1次复生（总复生次数：1）。牺牲：临时等级+10（20）。牺牲给李信加等级（后期副C）。"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "提供复活。放钟馗旁边变牺牲送掉。"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+        {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"},
+        {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
+        {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"}
+    ],
+    "equipSecond": [
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"}
+    ],
+    "talentTong": [
+        {"name": "微弱优势", "img": "images/talent/weiruoyoushi.png"},
+        {"name": "复印机", "img": "images/talent/fuyinji.png"}
+    ],
+    "talentYin": [
+        {"name": "献祭之赐", "img": "images/talent/xianjizhici.png"},
+        {"name": "透支", "img": "images/talent/touzhi.png"}
+    ],
+    "talentJin": [
+        {"name": "暴君归来", "img": "images/talent/baojunguilai.png"},
+        {"name": "泉水", "img": "images/talent/quanshui.png"}
+    ],
+    "effectCard": [
+        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "狂飙三倍速", "img": "images/effectcard/kuangbiaosanbeisu.png"},
+        {"name": "移花接木", "img": "images/effectcard/yihuajiemu.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
+                {"name":"元芳","img":"images/heroes/yuanfang.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "上阵棋子：牛魔、元芳、弈星。选热能陷阱，最优选择牛魔，元芳。让对方触发热能陷阱。二回合凑齐牛魔，元芳，弈星利用陷阱尽量打连胜，更多触发陷阱。第二个机关如果是屏障：把近战放到机关外，如果是弹簧，放到远程棋子上方，如果是热能放第一个热能陷阱下方，和远程棋子对角。第一轮拍卖：凯>明世隐>钟馗>程咬金>盾山"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"凯","img":"images/heroes/kai.png","isCore":false},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "上阵棋子：李信、明世隐、钟馗、凯、上官婉儿、花木兰、太乙真人。牛魔，元芳，弈星和拍卖卡打工，升3本拿第三个机关，尽量多的触发陷阱，优先升级2级热能陷阱，天赋优先选战力天赋和搜牌天赋，5-6回合大搜李信和体系卡，利用牺牲效果给李信提供临时等级，速拉战力，李信开始很弱，建议给鸡爪、无尽、水晶能战力高的装备过渡，后期换最终体系装备。牌运好直接上体系套，稳步提升李信等级，牌运不好先上李白和能提供古币的棋子，李白+古币拉高李信等级。这个阶段如果碰到过多远程质量高的远程阵容容易暴毙。第二轮拍卖：李信>太乙真人>花木兰>杨玉环"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"凯","img":"images/heroes/kai.png","isCore":false},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "升6本，优化装备，调整站位。血量健康，体系健全，坐等吃分吃鸡；不健康拿狂飙，名刀撑后期，继续提升李信质量打决胜局。第三轮拍卖：军械库/名刀狂飙/三倍速"
+        }
+    ],
+    "notice": [
+        "1、热能陷阱强化，陷阱会延时2秒爆炸且爆炸范围增加1格，3级陷阱的冷却时间缩短至4秒。核心：2级热能陷阱降低敌方20%临时等级，3级热能陷阱可以重复触发。",
+        "2、阵容成型后吊打一切后期近战阵容，无论多少级，前期锁血至关重要。",
+        "3、至少要保证2个三级火焰陷进，放到李信上面，对面触发陷进999级都能炸到100级以下。",
+        "4、后期可以不需要屏障，如果有艾琳需要补充一个三级弹簧。",
+        "5、李信猪杖必备，可以适当做一个提高坦度的装备，花木兰拿重剑打控制。"
+    ],
+    "positionImage": "images/position/8.banshulixinxianjingliu.png"
+}
+,
     {
         "id": 9,
         "name": "瑶妹李信牺牲流",
