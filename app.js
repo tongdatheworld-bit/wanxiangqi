@@ -416,66 +416,65 @@ let effectHtml = find.effectCard?.map(e => `
     </div>
 `).join('');
 document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class="empty-text">无</span>';
-// 导出弹窗图片
+
 const exportBtn = document.getElementById('exportImgBtn');
 if(exportBtn){
     exportBtn.onclick = async function(){
-    // 保存按钮原来的文字
-    const originalText = exportBtn.innerText;
+        // 保存按钮原来的文字
+        const originalText = exportBtn.innerText;
 
-    // 👇 换成你的二维码 base64 或图片路径
-    const qrImg = "images/erweima.png";
+        // 二维码路径
+        const qrImg = "./images/erweima.png";
+        exportBtn.style.padding = "0";
+        exportBtn.style.width = "160px";
+        exportBtn.style.height = "160px";
+        exportBtn.style.borderRadius = "12px";
+        exportBtn.style.overflow = "hidden";
+        exportBtn.style.background = "#fff";
+        exportBtn.innerHTML = `<img src="${qrImg}" crossorigin="anonymous" style="width:100%;height:100%;object-fit:cover;display:block;" alt="公众号二维码">`;
 
-    // 把按钮变成二维码显示
-    exportBtn.style.padding = "0";
-    exportBtn.style.width = "160px";
-    exportBtn.style.height = "160px";
-    exportBtn.style.borderRadius = "12px";
-    exportBtn.style.overflow = "hidden";
-    exportBtn.style.background = "#fff";
-    exportBtn.innerHTML = `<img src="${qrImg}" style="width:100%;height:100%;object-fit:cover;display:block;" alt="公众号二维码">`;
+        exportBtn.disabled = true;
 
-    exportBtn.disabled = true;
+        const modalContent = document.querySelector('.modal-content');
+        const oldMaxHeight = modalContent.style.maxHeight;
+        const oldOverflowY = modalContent.style.overflowY;
 
-    const modalContent = document.querySelector('.modal-content');
-    const oldMaxHeight = modalContent.style.maxHeight;
-    const oldOverflowY = modalContent.style.overflowY;
+        try{
+            modalContent.style.maxHeight = 'unset';
+            modalContent.style.overflowY = 'visible';
 
-    try{
-        modalContent.style.maxHeight = 'unset';
-        modalContent.style.overflowY = 'visible';
+            const canvas = await html2canvas(modalContent,{
+                backgroundColor: '#181c26',
+                scale: 2,
+                useCORS:true
+            });
 
-        const canvas = await html2canvas(modalContent,{
-            backgroundColor: '#181c26',
-            scale: 2,
-            useCORS:true
-        });
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png');
+            link.download = `${find.name}_万象一图诀.png`;
+            link.click();
+        }catch(e){
+            alert("导出失败："+e.message)
+        }finally{
+            modalContent.style.maxHeight = oldMaxHeight;
+            modalContent.style.overflowY = oldOverflowY;
 
-        const link = document.createElement('a');
-        link.href = canvas.toDataURL('image/png');
-        link.download = `${find.name}_万象一图诀.png`;
-        link.click();
-    }catch(e){
-        alert("导出失败："+e.message)
-    }finally{
-        modalContent.style.maxHeight = oldMaxHeight;
-        modalContent.style.overflowY = oldOverflowY;
-
-        // 恢复按钮样式
-        exportBtn.disabled = false;
-        exportBtn.innerHTML = "";
-        exportBtn.innerText = originalText;
-        exportBtn.style.padding = "";
-        exportBtn.style.width = "";
-        exportBtn.style.height = "";
-        exportBtn.style.borderRadius = "";
-        exportBtn.style.overflow = "";
-        exportBtn.style.background = "";
-    }
+            // 恢复按钮样式
+            exportBtn.disabled = false;
+            exportBtn.innerHTML = "";
+            exportBtn.innerText = originalText;
+            exportBtn.style.padding = "";
+            exportBtn.style.width = "";
+            exportBtn.style.height = "";
+            exportBtn.style.borderRadius = "";
+            exportBtn.style.overflow = "";
+            exportBtn.style.background = "";
         }
-}
+    } // 闭合 async function
+} // 闭合 if(exportBtn)
 
-        modal.style.display = 'flex';
+// ！！这一行一定要在 if(exportBtn) 外面！！
+modal.style.display = 'flex';
     };
 
     if (closeModalBtn) {
