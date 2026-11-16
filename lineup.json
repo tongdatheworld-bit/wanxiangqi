@@ -1080,7 +1080,7 @@
     "equipSecond": [
         {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
         {"name":"破晓","img":"images/equip/equipsmall/poxiao.png"},
-        {"name":"强敌克星","img":"images/equip/equipsmall/qiangdakexing.png"}
+        {"name":"强敌克星","img":"images/equip/equipsmall/qiangdikexing.png"}
     ],
     "talentTong": [
         {"name": "复印机", "img": "images/talent/fuyinji.png"},
@@ -1096,7 +1096,7 @@
     ],
     "effectCard": [
         {"name": "2阶英雄兑换券", "img": "images/effectcard/erjieyingxiongduihuanquan.png"},
-        {"name": "无阵营英雄兑换券", "img": "images/effectcard/wuzhengyingxiongduihuanquan.png"},
+        {"name": "无阵营英雄兑换券", "img": "images/effectcard/wuzhenyingyingxiongduihuanquan.png"},
         {"name": "武装重构", "img": "images/effectcard/wuzhuangchonggou.png"}
     ],
     "runStage": [
