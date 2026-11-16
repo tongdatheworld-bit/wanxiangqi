@@ -131,12 +131,6 @@ function bindCardClick() {
         const id = card.dataset.id;
         const find = allLineupData.find(x => x.id == id);
         if (!find) return;
-        // 后面一大段 html 渲染全部保留不变
-
-
-        const id = card.dataset.id;
-        const find = allLineupData.find(x => x.id == id);
-        if (!find) return;
 
         const heroHtml = Array.isArray(find.heroList) && find.heroList.length
             ? find.heroList.map(h => `
