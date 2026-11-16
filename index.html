@@ -979,6 +979,11 @@
             })
         })();
     </script>
+    <div class="modal">
+        <div class="modal-content">
+            <div id="modalBody"></div>
+        </div>
+    </div>
     <script>
         let lineupList = [];
         let currentLineup = null;
@@ -1342,14 +1347,25 @@ ${banModalHtml}
             </div>
             <!-- ========== 新增二维码框，在弹窗最底部 ========== -->
             <div class="qr-bottom-block">
-                <img src="./images/erweima.png" alt="万象一图诀二维码">
+                <img src="./images/wanxiangyitujue.png" alt="万象一图诀二维码">
                 <div class="qr-bottom-desc">万象一图诀</div>
             </div>
             `;
     modalDom.style.display = 'flex';
 }
 
+function renderHomeTopRank(){
+    const wrap = document.getElementById('homeTopList');
+    if(!wrap) return;
+    const idStr = document.getElementById('homeShowIdList').innerText.trim();
+    const showIds = idStr.split(',').map(Number);
+    const filterData = lineupList.filter(d => showIds.includes(d.id));
+    // 按照homeShowIdList里面的顺序排序
+    filterData.sort((a,b)=> showIds.indexOf(a.id) - showIds.indexOf(b.id));
+    wrap.innerHTML = '';
+    filterData.forEach(item=>{
+        const cardDom = buildCard(item);
+        wrap.appendChild(cardDom);
+    })
+}
 
-
-        function renderHomeTopRank(){
-            const wrap = document.getElementById('homeTopList
