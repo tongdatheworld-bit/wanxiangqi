@@ -2052,7 +2052,7 @@
     ],
     "effectCard": [
         {"name": "众星拱月", "img": "images/effectcard/zhongxinggongyue.png"},
-        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "武装重构", "img": "images/effectcard/wuzhuangchonggou.png"},
         {"name": "精选武装", "img": "images/effectcard/jingxuanwuzhuang.png"}
     ],
     "runStage": [
