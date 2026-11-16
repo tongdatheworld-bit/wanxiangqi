@@ -370,8 +370,14 @@ ${(()=>{
         }
     </div>
 </div>
-<!-- 你在这里自己加固定二维码html，放在导出按钮上方，固定写死，JS不会动它 -->
-<div style="margin-top:24px;text-align:center;">
+
+<!-- ========== 这里就是二维码！放在站位之后、导出按钮之前 ========== -->
+<div style="margin-top:20px;text-align:center;">
+    <img src="./images/wanxiangyitujue.jpg" alt="万象一图诀二维码" style="width:120px;">
+    <div style="margin-top:6px;color:#b4b9c6;font-size:13px;">万象一图诀</div>
+</div>
+
+<div style="margin-top:12px;text-align:center;">
     <button id="exportImgBtn" style="
         padding:8px 18px;
         border:none;
@@ -383,8 +389,8 @@ ${(()=>{
         cursor:pointer;
     ">📥 导出图片</button>
 </div>
-
 `;
+
 // 天赋渲染
 document.getElementById('talentTongBox').innerHTML = find.talentTong?.length
     ? find.talentTong.map(t => `
