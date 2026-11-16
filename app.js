@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             const src = item.alternatePlayerImg?.[idx] || "";
                             return `<div class="alt-player"><img src="${src}"></div>`
                         }).join('')}
-                    </div>
+                   </div>
                    </div>`
                 : ""
             }
@@ -370,6 +370,7 @@ ${(()=>{
         }
     </div>
 </div>
+<!-- 你在这里自己加固定二维码html，放在导出按钮上方，固定写死，JS不会动它 -->
 <div style="margin-top:24px;text-align:center;">
     <button id="exportImgBtn" style="
         padding:8px 18px;
@@ -421,64 +422,45 @@ let effectHtml = find.effectCard?.map(e => `
 `).join('');
 document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class="empty-text">无</span>';
 
+
+modal.style.display = 'flex';
+
+// ===== 导出图片逻辑（纯净版，不自动插入二维码）=====
 const exportBtn = document.getElementById('exportImgBtn');
-if(exportBtn){
-    exportBtn.onclick = async function(){
-        // 保存按钮原来的文字
-        const originalText = exportBtn.innerText;
-
-        // 二维码路径
-        const qrImg = "./images/erweima.png";
-        exportBtn.style.padding = "0";
-        exportBtn.style.width = "160px";
-        exportBtn.style.height = "160px";
-        exportBtn.style.borderRadius = "12px";
-        exportBtn.style.overflow = "hidden";
-        exportBtn.style.background = "#fff";
-        exportBtn.innerHTML = `<img src="${qrImg}" crossorigin="anonymous" style="width:100%;height:100%;object-fit:cover;display:block;" alt="公众号二维码">`;
-
-        exportBtn.disabled = true;
-
+if (exportBtn) {
+    exportBtn.onclick = async function () {
         const modalContent = document.querySelector('.modal-content');
-        const oldMaxHeight = modalContent.style.maxHeight;
-        const oldOverflowY = modalContent.style.overflowY;
+        if (!modalContent) {
+            alert('未找到弹窗容器');
+            return;
+        }
+        // 导出前隐藏导出按钮（按钮不进截图）
+        exportBtn.style.display = 'none';
 
-        try{
+        const oldMaxH = modalContent.style.maxHeight;
+        const oldOverflow = modalContent.style.overflowY;
+        try {
             modalContent.style.maxHeight = 'unset';
             modalContent.style.overflowY = 'visible';
-
-            const canvas = await html2canvas(modalContent,{
+            const canvas = await html2canvas(modalContent, {
                 backgroundColor: '#181c26',
                 scale: 2,
-                useCORS:true
+                useCORS: true
             });
-
-            const link = document.createElement('a');
-            link.href = canvas.toDataURL('image/png');
-            link.download = `${find.name}_万象一图诀.png`;
-            link.click();
-        }catch(e){
-            alert("导出失败："+e.message)
-        }finally{
-            modalContent.style.maxHeight = oldMaxHeight;
-            modalContent.style.overflowY = oldOverflowY;
-
-            // 恢复按钮样式
-            exportBtn.disabled = false;
-            exportBtn.innerHTML = "";
-            exportBtn.innerText = originalText;
-            exportBtn.style.padding = "";
-            exportBtn.style.width = "";
-            exportBtn.style.height = "";
-            exportBtn.style.borderRadius = "";
-            exportBtn.style.overflow = "";
-            exportBtn.style.background = "";
+            const a = document.createElement('a');
+            a.href = canvas.toDataURL('image/png');
+            a.download = `${find.name}_万象一图诀.png`;
+            a.click();
+        } catch (err) {
+            alert('导出失败：' + err.message);
+        } finally {
+            // 恢复样式+恢复按钮
+            modalContent.style.maxHeight = oldMaxH;
+            modalContent.style.overflowY = oldOverflow;
+            exportBtn.style.display = 'block';
         }
-    } // 闭合 async function
-} // 闭合 if(exportBtn)
-
-// ！！这一行一定要在 if(exportBtn) 外面！！
-modal.style.display = 'flex';
+    }
+}
     };
 
     if (closeModalBtn) {
