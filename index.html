@@ -130,6 +130,13 @@
             font-weight:bold;
             margin-right:6px;
         }
+        .ban-item {
+            padding:4px 10px;
+            background:#282e3b;
+            border-radius:6px;
+            color:#ffd369;
+            font-weight: 700;
+        }
         /* 阵容卡片 */
         .lineup-card {
             background: #171c29;
@@ -1358,14 +1365,4 @@ function renderHomeTopRank(){
     const wrap = document.getElementById('homeTopList');
     if(!wrap) return;
     const idStr = document.getElementById('homeShowIdList').innerText.trim();
-    const showIds = idStr.split(',').map(Number);
-    const filterData = lineupList.filter(d => showIds.includes(d.id));
-    // 按照homeShowIdList里面的顺序排序
-    filterData.sort((a,b)=> showIds.indexOf(a.id) - showIds.indexOf(b.id));
-    wrap.innerHTML = '';
-    filterData.forEach(item=>{
-        const cardDom = buildCard(item);
-        wrap.appendChild(cardDom);
-    })
-}
-
+    const showIds =
