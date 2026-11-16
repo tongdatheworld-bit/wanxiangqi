@@ -420,6 +420,31 @@ let effectHtml = find.effectCard?.map(e => `
     </div>
 `).join('');
 document.getElementById('effectCardBox').innerHTML = effectHtml || '<span class="empty-text">无</span>';
+// 导出弹窗图片
+const exportBtn = document.getElementById('exportImgBtn');
+if(exportBtn){
+    exportBtn.onclick = async function(){
+        exportBtn.innerText = "生成中...";
+        exportBtn.disabled = true;
+        try{
+            // 只截取 .modal-content 这个弹窗主体
+            const targetDom = document.querySelector('.modal-content');
+            const canvas = await html2canvas(targetDom,{
+                backgroundColor: '#181c26',
+                scale: 2, // 2倍清晰度
+                useCORS:true // 跨域图片（头像）
+            })
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png');
+            link.download = `${find.name}_万象一图诀.png`;
+            link.click();
+        }catch(e){
+            alert("导出失败："+e.message)
+        }
+        exportBtn.innerText = "📥 导出图片";
+        exportBtn.disabled = false;
+    }
+}
 
             modal.style.display = 'flex';
         };
