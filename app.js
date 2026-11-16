@@ -121,8 +121,18 @@ function bindCardClick() {
 
     // 卡片点击打开弹窗逻辑，单独给 lineupWrap 绑定
     lineupWrap.onclick = function (e) {
+        // 重点：点复制就直接返回，不打开弹窗
+        const copyTarget = e.target.closest('.copy-code, .code-text');
+        if (copyTarget) return;
+
         const card = e.target.closest('.lineup-card');
         if (!card) return;
+        // -------- 下面你原来的代码不动 --------
+        const id = card.dataset.id;
+        const find = allLineupData.find(x => x.id == id);
+        if (!find) return;
+        // 后面一大段 html 渲染全部保留不变
+
 
         const id = card.dataset.id;
         const find = allLineupData.find(x => x.id == id);
@@ -486,12 +496,10 @@ modal.style.display = 'flex';
 }
 
 // 全局复制监听：列表.copy-code + 弹窗.code-text
-// 全局复制监听：列表.copy-code + 弹窗.code-text
 document.addEventListener('click', function (e) {
     const copyDom = e.target.closest('.copy-code, .code-text');
     if (copyDom) {
-        // 阻止冒泡，阻止传给外层卡片点击
-        e.stopImmediatePropagation();
+        e.stopPropagation();
         e.preventDefault();
         copyCode(copyDom);
     }
