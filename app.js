@@ -220,7 +220,27 @@ modalBody.innerHTML = `
         <span class="code-success">✅ 已复制</span>
     </div>
 </div>
-        <div class="modal-sub">强度：${find.rank}｜成型难度：${find.hard}</div>
+        ${(()=>{
+    let rankClass = '';
+    if(find.rank === 'S+') rankClass = 'pill-s-plus';
+    else if(find.rank === 'S') rankClass = 'pill-s';
+    else if(find.rank === 'A+') rankClass = 'pill-a-plus';
+    else if(find.rank === 'A') rankClass = 'pill-a';
+    else if(find.rank === 'B') rankClass = 'pill-b';
+
+    let hardClass = '';
+    if(find.hard === '困难') hardClass = 'pill-hard';
+    else if(find.hard === '中等') hardClass = 'pill-medium';
+    else if(find.hard === '简单') hardClass = 'pill-easy';
+
+    return `
+    <div class="modal-tags">
+        <span class="pill ${rankClass}">${find.rank}</span>
+        <span class="pill ${hardClass}">${find.hard}</span>
+    </div>
+    `
+})()}
+
     </div>
 </div>
 
