@@ -909,7 +909,7 @@
         {"name": "泉水", "img": "images/talent/quanshui.png"}
     ],
     "effectCard": [
-        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "武装重构", "img": "images/effectcard/wuzhuangchonggou.png"},
         {"name": "狂飙三倍速", "img": "images/effectcard/kuangbiaosanbeisu.png"},
         {"name": "移花接木", "img": "images/effectcard/yihuajiemu.png"}
     ],
@@ -918,7 +918,7 @@
             "title": "1-3回合",
             "heroList": [
                 {"name":"牛魔","img":"images/heroes/niumo.png"},
-                {"name":"元芳","img":"images/heroes/yuanfang.png"},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"}
             ],
             "desc": "上阵棋子：牛魔、元芳、弈星。选热能陷阱，最优选择牛魔，元芳。让对方触发热能陷阱。二回合凑齐牛魔，元芳，弈星利用陷阱尽量打连胜，更多触发陷阱。第二个机关如果是屏障：把近战放到机关外，如果是弹簧，放到远程棋子上方，如果是热能放第一个热能陷阱下方，和远程棋子对角。第一轮拍卖：凯>明世隐>钟馗>程咬金>盾山"
