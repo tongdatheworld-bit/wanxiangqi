@@ -488,13 +488,17 @@ if(exportBtn){
 }
 
 // 全局复制监听：列表.copy-code + 弹窗.code-text
+// 全局复制监听：列表.copy-code + 弹窗.code-text
 document.addEventListener('click', function (e) {
     const copyDom = e.target.closest('.copy-code, .code-text');
     if (copyDom) {
-        e.stopPropagation();
+        // 阻止冒泡，阻止传给外层卡片点击
+        e.stopImmediatePropagation();
+        e.preventDefault();
         copyCode(copyDom);
     }
 });
+
 
 
     // 筛选标签点击
