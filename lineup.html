@@ -414,6 +414,58 @@
         }
 
         /* ====================== 弹窗新增样式（和app.js弹窗模板配套） ====================== */
+        /* 弹窗强度、成型难度胶囊标签 */
+.modal-tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+.pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 24px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #12161f;
+}
+/* 强度颜色 */
+.pill-s-plus {
+    background: linear-gradient(135deg, #ffd369, #ffb020);
+    box-shadow: 0 0 10px rgba(255, 211, 105, 0.45);
+}
+.pill-s {
+    background: linear-gradient(135deg, #ff9a3c, #ff6a00);
+    box-shadow: 0 0 10px rgba(255, 122, 40, 0.35);
+}
+.pill-a {
+    background: linear-gradient(135deg, #5ab7ff, #2f86ff);
+    box-shadow: 0 0 10px rgba(80, 160, 255, 0.35);
+}
+.pill-b {
+    background: linear-gradient(135deg, #7ee87a, #34c759);
+    box-shadow: 0 0 10px rgba(70, 200, 90, 0.35);
+}
+/* 成型难度颜色 */
+.pill-hard {
+    background: linear-gradient(135deg, #ff7a7a, #ef4444);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.35);
+}
+.pill-medium {
+    background: linear-gradient(135deg, #ffd369, #f5a623);
+    box-shadow: 0 0 10px rgba(245, 166, 35, 0.35);
+}
+.pill-easy {
+    background: linear-gradient(135deg, #7ee87a, #34c759);
+    box-shadow: 0 0 10px rgba(70, 200, 90, 0.35);
+}
+
         .modal {
             position: fixed;
             inset: 0;
