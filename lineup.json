@@ -1096,7 +1096,7 @@
     ],
     "effectCard": [
         {"name": "2阶英雄兑换券", "img": "images/effectcard/erjieyingxiongduihuanquan.png"},
-        {"name": "无阵营英雄兑换券", "img": "images/effectcard/wuzhenyingyingxiongduihuanquan.png"},
+        {"name": "无阵营征召令", "img": "images/effectcard/wuzhenyingzhengzhaoling.png"},
         {"name": "武装重构", "img": "images/effectcard/wuzhuangchonggou.png"}
     ],
     "runStage": [
@@ -1142,7 +1142,7 @@
         "4、瑶分装备优选破茧之衣、名刀，后期带一个制裁之刃，有铃铛给瑶带上。",
         "5、后期下云中君上钟馗，多留移花接木打决赛。"
     ],
-    "positionImage": "images/position/18.yinglvdiyazhuli.png"
+    "positionImage": "images/position/17.yinglvdiyazhuli.png"
 }
 ,
        {
