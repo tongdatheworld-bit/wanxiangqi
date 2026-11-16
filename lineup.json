@@ -1975,24 +1975,134 @@
     {
     "id": 60,
     "name": "阿离炸弹猫",
-    "rank": "A",
+    "rank": "S",
     "player": "阿离",
     "playerImg": "images/players/ali.png",
-         "alternatePlayer": ["姜导"],
+    "alternatePlayer": ["姜导"],
     "alternatePlayerImg": ["images/players/jiangdao.png"],
     "hard": "简单",
-    "lineupCode": "95761052886076544（点击复制）",
+    "lineupCode": "74368954656071812（点击复制）",
     "ban位": ["逐鹿", "大河流域", "日落海"],
     "heroList": [
-        {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
         {"name":"沈梦溪","img":"images/heroes/shenmengxi.png","isCore":true},
-        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
         {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
         {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ]
-},
+    ],
+    "funcHeroList": [
+        {
+            "name": "李元芳",
+            "img": "images/heroes/liyuanfang.png",
+            "desc": "回合开始整备，稳定给沈梦溪提供古币"
+        },
+        {
+            "name": "程咬金",
+            "img": "images/heroes/chengyaojin.png",
+            "desc": "前排抗伤，回合开始整备，稳定给沈梦溪提供古币"
+        },
+        {
+            "name": "刘禅",
+            "img": "images/heroes/liushan.png",
+            "desc": "核心功能卡，沈梦溪使用技能，给其提供临时等级"
+        },
+        {
+            "name": "明世隐",
+            "img": "images/heroes/mingshiyin.png",
+            "desc": "明世隐将临时等级转换为真实等级，不断打出和唤醒明世隐是沈梦溪等级的重要来源"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "放在太乙和明世隐中间，主要降低对方主C等级"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "为沈梦溪提供复活"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
+        {"name":"贤者之书","img":"images/equip/equipsmall/xianzhezhishu.png"},
+        {"name":"虚无法杖","img":"images/equip/equipsmall/xuwufazhang.png"}
+    ],
+    "equipSecond": [
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
+        {"name":"弑神之书","img":"images/equip/equipsmall/shishenzhishu.png"},
+        {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"}
+    ],
+    "talentTong": [
+        {"name": "同心协力", "img": "images/talent/tongxinxieli.png"},
+        {"name": "复印机", "img": "images/talent/fuyinji.png"}
+    ],
+    "talentYin": [
+        {"name": "自适应武装", "img": "images/talent/zishiyingwuzhuang.png"},
+        {"name": "古币翻新", "img": "images/talent/gubifanxin.png"}
+    ],
+    "talentJin": [
+        {"name": "买橘子去", "img": "images/talent/maijuziqu.png"},
+        {"name": "全副武装", "img": "images/talent/quanfuwuzhuang.png"}
+    ],
+    "effectCard": [
+        {"name": "众星拱月", "img": "images/effectcard/zhongxinggongyue.png"},
+        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "精选武装", "img": "images/effectcard/jingxuanwuzhuang.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
+                {"name":"沈梦溪","img":"images/heroes/shenmengxi.png"},
+                {"name":"盾山","img":"images/heroes/dunshan.png"}
+            ],
+            "desc": "上李元芳、弈星、看场外局势是否上牛头，能赢下两场就可以吃牛肉，不然2级直接升本找沈梦溪和一张盾山。\n第一轮拍卖：沈梦溪>刘禅>明世隐>程咬金"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"沈梦溪","img":"images/heroes/shenmengxi.png","isCore":true},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "沈梦溪不刚需觉醒，不用一直在2-3本硬D沈梦溪，核心是要尽快找到刘禅+明世隐组合快速提升沈梦溪等级，所以可以加快拉5本找到核心功能卡，并提高刘禅和明世隐提升沈梦溪的升级效率\n第二轮拍卖：太乙真人>武则天"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"沈梦溪","img":"images/heroes/shenmengxi.png","isCore":true},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "第三轮拍卖：破镜之证/众星拱月/天籁琴音/军械库\n阵容成型后找觉醒钟馗和太乙提高决赛强度和容错，调整站位，不刚需升6本，可以在5本反复打合成找神器进一步提高沈梦溪的强度。"
+        }
+    ],
+    "notice": [
+        "1、前三回合，是否觉醒李元芳，是否上牛头，需要看外面局势和来牌而定。不能一概而论",
+        "2、沈梦溪不刚需觉醒，千万别在2-3级为了觉醒沈梦溪花太多经济，觉醒明世隐、刘禅更重要。",
+        "3、沈梦溪对装备的要求非常严格，圣杯大书最适配，神器要机器头和吸血书。",
+        "4、后期等级上来后，可以根据对面情况带猪杖增加控制或者带霸者增加坦度。"
+    ],
+    "positionImage": "images/position/60.ali_zhadanmao.png"
+}
+,
     {
     "id": 61,
     "name": "香香双狙",
