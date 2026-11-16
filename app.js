@@ -214,13 +214,24 @@ modalBody.innerHTML = `
     <img class="player-avatar" src="${find.playerImg}" alt="${find.player}">
     <div class="info-text">
         <div class="name-code-row">
-    <h2>${find.name}</h2>
-    <div class="code-text" data-code="${find.lineupCode}">
-        <span class="code-normal">📋 ${find.lineupCode}</span>
-        <span class="code-success">✅ 已复制</span>
-    </div>
-</div>
-        ${(()=>{
+            <h2>${find.name}</h2>
+            <div style="display:flex;gap:10px;align-items:center;">
+                <div class="code-text" data-code="${find.lineupCode}">
+                    <span class="code-normal">📋 ${find.lineupCode}</span>
+                    <span class="code-success">✅ 已复制</span>
+                </div>
+                <button id="exportImgBtn" style="
+                    padding:4px 10px;
+                    border:none;
+                    border-radius:8px;
+                    background:#c49a38;
+                    color:#000;
+                    font-size:13px;
+                    cursor:pointer;
+                ">📥 导出图片</button>
+            </div>
+        </div>
+${(()=>{
     let rankClass = '';
     if(find.rank === 'S+') rankClass = 'pill-s-plus';
     else if(find.rank === 'S') rankClass = 'pill-s';
@@ -240,9 +251,9 @@ modalBody.innerHTML = `
     </div>
     `
 })()}
-
     </div>
 </div>
+
 
 <div class="modal-block">
     <h4>BAN阵营</h4>
