@@ -426,13 +426,19 @@ if(exportBtn){
     exportBtn.onclick = async function(){
         exportBtn.innerText = "生成中...";
         exportBtn.disabled = true;
+        const modalContent = document.querySelector('.modal-content');
+        // 保存原有样式
+        const oldMaxHeight = modalContent.style.maxHeight;
+        const oldOverflowY = modalContent.style.overflowY;
         try{
-            // 只截取 .modal-content 这个弹窗主体
-            const targetDom = document.querySelector('.modal-content');
-            const canvas = await html2canvas(targetDom,{
+            // 取消滚动限制，展开全部内容
+            modalContent.style.maxHeight = 'unset';
+            modalContent.style.overflowY = 'visible';
+
+            const canvas = await html2canvas(modalContent,{
                 backgroundColor: '#181c26',
-                scale: 2, // 2倍清晰度
-                useCORS:true // 跨域图片（头像）
+                scale: 2,
+                useCORS:true
             })
             const link = document.createElement('a');
             link.href = canvas.toDataURL('image/png');
@@ -440,11 +446,16 @@ if(exportBtn){
             link.click();
         }catch(e){
             alert("导出失败："+e.message)
+        }finally{
+            // 恢复原来滚动样式，一定要放finally，报错也复原
+            modalContent.style.maxHeight = oldMaxHeight;
+            modalContent.style.overflowY = oldOverflowY;
+            exportBtn.innerText = "📥 导出图片";
+            exportBtn.disabled = false;
         }
-        exportBtn.innerText = "📥 导出图片";
-        exportBtn.disabled = false;
     }
 }
+
 
             modal.style.display = 'flex';
         };
