@@ -2101,17 +2101,17 @@
     "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
     "heroList": [
         {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
-        {"name":"马可波罗","img":"images/heroes/makepolo.png","isCore":false},
+        {"name":"马可波罗","img":"images/heroes/makebolo.png","isCore":false},
         {"name":"铠","img":"images/heroes/kai.png","isCore":false},
         {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-        {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ],
     "funcHeroList": [
         {
             "name": "马可波罗",
-            "img": "images/heroes/makepolo.png",
+            "img": "images/heroes/makebolo.png",
             "desc": "和百里守约联动"
         },
         {
@@ -2126,7 +2126,7 @@
         },
         {
             "name": "程咬金",
-            "img": "images/heroes/chenyaojin.png",
+            "img": "images/heroes/chengyaojin.png",
             "desc": "整备提供古币给百里守约提供等级"
         },
         {
@@ -2177,6 +2177,7 @@
             "title": "1-3回合",
             "heroList": [
                 {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
                 {"name":"苏烈","img":"images/heroes/sulie.png"}
             ],
             "desc": "开局先上李元芳和苏烈，伞先不着急给，上弈星后升棋手等级到3级搜牌。第一轮拍卖：百里守约>铠>明世隐>钟馗>程咬金"
@@ -2185,8 +2186,12 @@
             "title": "4-11回合",
             "heroList": [
                 {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
+                {"name":"马可波罗","img":"images/heroes/makebolo.png","isCore":false},
                 {"name":"铠","img":"images/heroes/kai.png","isCore":false},
-                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false}
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
             ],
             "desc": "拿到崛起后，在3级搜牌找到明世隐和铠，优先觉醒守约和明世隐。守约能确保连胜或者达到100级以上，棋手升到5级找到太乙真人挂复活。第二轮拍卖：太乙真人"
         },
@@ -2194,10 +2199,10 @@
             "title": "12回合以后",
             "heroList": [
                 {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
-                {"name":"马可波罗","img":"images/heroes/makepolo.png","isCore":false},
+                {"name":"马可波罗","img":"images/heroes/makebolo.png","isCore":false},
                 {"name":"铠","img":"images/heroes/kai.png","isCore":false},
                 {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-                {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
                 {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
                 {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
             ],
