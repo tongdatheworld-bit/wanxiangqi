@@ -2089,24 +2089,130 @@
 }
 ,
     {
-        "id": 25,
-        "name": "崛起双生（联动天赋）",
-        "rank": "S",
-        "player": "阿离",
-        "playerImg": "images/players/ali.png",
-        "hard": "简单",
-        "lineupCode": "8787789286907668（点击复制）",
-        "ban位": ["逐鹿", "大河流域", "三分之地"],
-        "heroList": [
-            {"name":"马可波罗","img":"images/heroes/makeboluo.png","isCore":true},
-            {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
-            {"name":"铠","img":"images/heroes/kai.png","isCore":false},
-            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-            {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-        ]
-    },
+    "id": 25,
+    "name": "崛起双生（联动天赋）",
+    "rank": "A",
+    "player": "阿离",
+    "playerImg": "images/players/ali.png",
+    "alternatePlayer": ["嬴律"],
+    "alternatePlayerImg": ["images/players/yinglv.png"],
+    "hard": "简单",
+    "lineupCode": "73806004702645358（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
+        {"name":"马可波罗","img":"images/heroes/makepolo.png","isCore":false},
+        {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "马可波罗",
+            "img": "images/heroes/makepolo.png",
+            "desc": "和百里守约联动"
+        },
+        {
+            "name": "铠",
+            "img": "images/heroes/kai.png",
+            "desc": "提供牺牲效果给守约减少蓝条"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "降低对方主C临时等级"
+        },
+        {
+            "name": "程咬金",
+            "img": "images/heroes/chenyaojin.png",
+            "desc": "整备提供古币给百里守约提供等级"
+        },
+        {
+            "name": "明世隐",
+            "img": "images/heroes/mingshiyin.png",
+            "desc": "将铠提供的临时等级转换为真实等级"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给百里守约挂复活，提高容错"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false},
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+        {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"}
+    ],
+    "equipSecond": [
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "猪猪", "img": "images/talent/zhuzhu.png"}
+    ],
+    "talentYin": [
+        {"name": "幸运硬币", "img": "images/talent/xingyunyingbi.png"},
+        {"name": "崛起", "img": "images/talent/jueqi.png"}
+    ],
+    "talentJin": [
+        {"name": "升值", "img": "images/talent/shengzhi.png"},
+        {"name": "双生突袭", "img": "images/talent/shuangshengtuxi.png"}
+    ],
+    "effectCard": [
+        {"name": "破镜之证", "img":"images/effectcard/pojingzhizheng.png"},
+        {"name": "精选武装", "img":"images/effectcard/jingxuanwuzhuang.png"},
+        {"name": "武装重构", "img":"images/effectcard/wuzhuangchonggou.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
+                {"name":"苏烈","img":"images/heroes/sulie.png"}
+            ],
+            "desc": "开局先上李元芳和苏烈，伞先不着急给，上弈星后升棋手等级到3级搜牌。第一轮拍卖：百里守约>铠>明世隐>钟馗>程咬金"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
+                {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false}
+            ],
+            "desc": "拿到崛起后，在3级搜牌找到明世隐和铠，优先觉醒守约和明世隐。守约能确保连胜或者达到100级以上，棋手升到5级找到太乙真人挂复活。第二轮拍卖：太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
+                {"name":"马可波罗","img":"images/heroes/makepolo.png","isCore":false},
+                {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chenyaojin.png","isCore":false},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "12回合后不断打合成，拿到效果牌，多余装备拿到打神器效果牌砸掉，优先机器头、泣血之剑。再就是注意不断观察场外局势调整站位。第三轮拍卖：众星闪耀>一线生机>能量超新星"
+        }
+    ],
+    "notice": [
+        "1、拿到崛起后，5级金色天赋必得双生突袭，所以在守约觉醒后速拉5级。",
+        "2、牺牲牌在前排尽快送掉，守约和对手的C位站对角，站在后排要小心刺客阵容和钟馗钩子。",
+        "3、守约虽然自身蓝条短而且超高爆发，但是容易被名刀克制，并且不好打召唤流。守约神装推荐机器头、百锻刀、泣血之剑或破阵战芒。",
+        "4、阿离6级专属选【枫之洪流】，秘技强化优先：增伤+临时等级+分身+吸血+转移次数+回蓝。"
+    ],
+    "positionImage": "images/position/25.jueqishuangsheng.png"
+}
+,
     {
     "id": 26,
     "name": "逐鹿毒奶",
