@@ -1534,14 +1534,14 @@
     "effectCard": [
         {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"},
         {"name": "精选武装","img":"images/effectcard/jingxuanwuzhuang.png"},
-        {"name": "5阶英雄兑换券","img":"images/effectcard/wujieyingxionghuanquan.png"}
+        {"name": "5阶英雄兑换券","img":"images/effectcard/wujieyingxiongduihuanquan.png"}
     ],
     "runStage": [
         {
             "title": "1-3回合",
             "heroList": [
                 {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"},
-                {"name":"牛魔","img":"images/heroes/niumao.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"孙膑","img":"images/heroes/sunbin.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"}
             ],
