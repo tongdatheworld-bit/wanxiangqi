@@ -1334,7 +1334,7 @@
     "alternatePlayer": [],
     "alternatePlayerImg": [],
     "hard": "简单",
-    "lineupCode": "'32147707703253120（点击复制）",
+    "lineupCode": "32147707703253120（点击复制）",
     "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
     "heroList": [
         {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
