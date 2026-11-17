@@ -1748,7 +1748,7 @@ const heroList = [
     "skillLv10": "旋风伤害提升至15%法术攻击力",
     "skillLv40": "再额外吹起1名附近敌人",
     "skillLv100": "额外吹起1名最远的敌人",
-    "awakeningDesc": "每当你的英雄触发登场效果时，所有英雄等级+1。",
+    "awakeningDesc": "每当你的英雄触发登场效果时，所有英雄等级+2。",
     "equipList": ["e1", "e2"],
     "teamList": ["t1"]
 }
