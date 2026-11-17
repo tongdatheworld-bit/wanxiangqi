@@ -1402,7 +1402,7 @@
     ],
     "talentJin": [
         {"name": "升值", "img": "images/talent/shengzhi.png"},
-        {"name": "双生突袭", "img": "images/talent/shuangshentuxi.png"}
+        {"name": "双生突袭", "img": "images/talent/shuangshengtuxi.png"}
     ],
     "effectCard": [
         {"name": "破镜之证", "img": "images/effectcard/pojingzhizheng.png"},
