@@ -1455,25 +1455,134 @@
 }
 ,
     {
-        "id": 13,
-        "name": "班叔奶屏流",
-        "rank": "S",
-        "player": "班叔",
-        "playerImg": "images/players/banshu.png",
-        "hard": "中等",
-        "lineupCode": "100264652513462372（点击复制）",
-        "ban位": ["河洛", "日落海"],
-        "heroList": [
-            {"name":"诸葛亮","img":"images/heroes/zhugeliang.png","isCore":true},
-            {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":true},
-            {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png","isCore":false},
-            {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
-            {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false}
-        ],
-        "equip": []
-    },
+    "id": 13,
+    "name": "班叔奶瓶流",
+    "rank": "S",
+    "player": "班叔",
+    "playerImg": "images/players/banshu.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "中等",
+    "lineupCode": "（点击复制）",
+    "ban位": ["河洛", "日落海"],
+    "heroList": [
+        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
+        {"name":"诸葛亮","img":"images/heroes/zhugeliang.png","isCore":true},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+        {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png","isCore":false},
+        {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
+        {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "杨玉环",
+            "img": "images/heroes/yangyuhuan.png",
+            "desc": "奶屏核心辅助+输出，给全队和屏障回血"
+        },
+        {
+            "name": "明世隐",
+            "img": "images/heroes/mingshiyin.png",
+            "desc": "将临时等级转化为真实等级，前期干将，中期诸葛亮，后期杨玉环"
+        },
+        {
+            "name": "刘禅",
+            "img": "images/heroes/liushan.png",
+            "desc": "全队使用技能时提供临时等级"
+        },
+        {
+            "name": "干将莫邪",
+            "img": "images/heroes/ganjiangmoye.png",
+            "desc": "前期主要输出，后期快速施法给诸葛亮增加魔法值"
+        },
+        {
+            "name": "孙膑",
+            "img": "images/heroes/sunbin.png",
+            "desc": "在场时，全队释放技能提升等级，后期快速施法给诸葛亮增加魔法值"
+        },
+        {
+            "name": "吕布",
+            "img": "images/heroes/lvbu.png",
+            "desc": "前排吸引对方火力，给队友提供法术吸血"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"},
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
+        {"name":"贤者之书","img":"images/equip/equipsmall/xianzhezhishu.png"}
+    ],
+    "equipSecond": [
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "talentTong": [
+        {"name": "小电池包", "img": "images/talent/xiaodianchibao.png"},
+        {"name": "复印机", "img": "images/talent/fuyinji.png"}
+    ],
+    "talentYin": [
+        {"name": "人才济济", "img": "images/talent/rencaijiji.png"},
+        {"name": "重大里程碑", "img": "images/talent/zhongdalichengbei.png"}
+    ],
+    "talentJin": [
+        {"name": "全副武装", "img": "images/talent/quanfuwuzhuang.png"},
+        {"name": "点兵点将", "img": "images/talent/dianbingdianjiang.png"}
+    ],
+    "effectCard": [
+        {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"},
+        {"name": "精选武装","img":"images/effectcard/jingxuanwuzhuang.png"},
+        {"name": "5阶英雄兑换券","img":"images/effectcard/wujieyingxionghuanquan.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"},
+                {"name":"牛魔","img":"images/heroes/niumao.png"},
+                {"name":"孙膑","img":"images/heroes/sunbin.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "上阵棋子：干将莫邪、牛魔、孙膑、弈星\n核心觉醒干将，孙膑拿一张，升本前拿到弈星，第一个机关选屏障放第二排。第一轮拍卖：刘禅>明世隐>高战打工卡"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"},
+                {"name":"孙膑","img":"images/heroes/sunbin.png"},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png"},
+                {"name":"刘禅","img":"images/heroes/liushan.png"},
+                {"name":"诸葛亮","img":"images/heroes/zhugeliang.png","isCore":true},
+                {"name":"杨玉环","img":"images/heroes/yangyuhuan.png"}
+            ],
+            "desc": "上阵棋子：干将莫邪、孙膑、明世隐、刘禅、诸葛亮、杨玉环\n4-11回合（3级启动，搜导体系卡）刘禅、明世隐拿一张，速5找诸葛亮、玉环，重点留加等级效果卡：如八方来援、夺取、八方来援、协作；\n第二轮拍卖：玉环>诸葛亮"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"},
+                {"name":"孙膑","img":"images/heroes/sunbin.png"},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png"},
+                {"name":"刘禅","img":"images/heroes/liushan.png"},
+                {"name":"诸葛亮","img":"images/heroes/zhugeliang.png","isCore":true},
+                {"name":"杨玉环","img":"images/heroes/yangyuhuan.png"},
+                {"name":"吕布","img":"images/heroes/lvbu.png"}
+            ],
+            "desc": "上阵棋子：干将莫邪、孙膑、明世隐、刘禅、诸葛亮、杨玉环、吕布\n12回合以后（拉高强度，补容错）玉环100级质变；装备不好，找重构，吕布给诸葛提供吸血，太乙复活备选；\n第三轮拍卖：众星拱月>能量超新星。装备不足拿装备。"
+        }
+    ],
+    "notice": [
+        "1、靠干将前期的战力和屏障稳血直接拉5本找核心卡，明世隐可以用甄姬登场来找，玉环来了后期才能稳血。",
+        "2、中期有了刘禅/明世隐组合后，靠临时等级转真实等级提升C位等级；明世隐来得早牵干将，后诸葛亮。玉环来了，直接牵玉环。其余等级一靠孙膑被动，释放技能提升等级，二是干将杀敌自身提高等级，其余全靠效果牌，如八方来援、夺取、八方来援、协作；",
+        "3、三级屏障放后排中间或中间靠边一格，诸葛亮，玉环一边一个，玉环那边放明世隐。热能屏障、弹簧给对面血量高和大C的吃，这里全靠对棋子走位的理解。",
+        "4、前期场上有大河的对手，屏障不要放到倒数第二排全封住，一是虞姬手比你长，她打得到你，你打不到她。二是对后方排放一个图腾，你出不去，就算你能杀光对面，最后平局收场。",
+        "5、诸葛亮/玉环核心装备：圣杯/贤者之书，备选纯净苍穹/变猪杖/双倍刀"
+    ],
+    "positionImage": "images/position/13.banshunaipingliu.png"
+}
+,
     {
         "id": 14,
         "name": "香香大河开团射",
