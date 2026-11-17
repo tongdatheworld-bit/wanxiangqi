@@ -1212,22 +1212,119 @@
 }
 ,
     {
-        "id": 11,
-        "name": "嫦小娥海陆空",
-        "rank": "S",
-        "player": "嫦小娥",
-        "playerImg": "images/players/changxiaoe.png",
-        "hard": "简单",
-        "lineupCode": "101953502373687426（点击复制）",
-        "ban位": ["逐鹿", "三分之地", "日落海", "大河流域"],
-        "heroList": [
-            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
-            {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false},
-            {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
-            {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
-        ],
-        "equip": []
-    },
+    "id": 11,
+    "name": "嫦小娥海陆空",
+    "rank": "S",
+    "player": "嫦小娥",
+    "playerImg": "images/players/changxiao'e.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "困难",
+    "lineupCode": "20888708634820728（点击复制）",
+    "ban位": ["逐鹿", "三分之地", "日落海", "大河流域"],
+    "heroList": [
+        {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+        {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
+        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "苏烈",
+            "img": "images/heroes/sulie.png",
+            "desc": "前期单挂苏烈上6的前期核心棋子，后期有5阶大哥和传承可以传掉"
+        },
+        {
+            "name": "裴擒虎",
+            "img": "images/heroes/peiqinhu.png",
+            "desc": "随机获得1名其他英雄等级数的临时等级，不可叠加。给司空震临时等级。"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "降低对方主C临时等级"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给司空震或海月挂复活，提高容错"
+        },
+        {
+            "name": "瑶",
+            "img": "images/heroes/yao.png",
+            "desc": "给场上棋子分装备，保护核心棋子，给对方施加控制"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"金色圣剑","img":"images/equip/equipsmall/jinse shengjian.png"},
+        {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"聚灵法杖","img":"images/equip/equipsmall/julingfazhang.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"虚无法杖","img":"images/equip/equipsmall/xuwufazhang.png"}
+    ],
+    "talentTong": [
+        {"name": "存款利息", "img": "images/talent/cunkuanlixi.png"},
+        {"name": "随机成长", "img": "images/talent/suijichengzhang.png"}
+    ],
+    "talentYin": [
+        {"name": "人才济济", "img": "images/talent/rencaijiji.png"},
+        {"name": "防御领域", "img": "images/talent/fangyulingyu.png"}
+    ],
+    "talentJin": [
+        {"name": "随机强化", "img": "images/talent/suijiqianghua.png"},
+        {"name": "泉水", "img": "images/talent/quanshui.png"}
+    ],
+    "effectCard": [
+        {"name": "传承", "img": "images/effectcard/chuancheng.png"},
+        {"name": "一线生机", "img": "images/effectcard/yixianshengji.png"},
+        {"name": "军械库", "img": "images/effectcard/junxieku.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"苏烈","img":"images/heroes/sulie.png"}
+            ],
+            "desc": "上场棋子：苏烈。上阵觉醒苏烈后不再购买苏烈，每回合记得丢小菟。商店有弈星先锁住，如果商店有梦奇可以用梦奇开，如果有弈星就先不要商店里面了。第一轮拍卖：裴擒虎>梦奇>其他高战力牌"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
+                {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false},
+                {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+                {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true}
+            ],
+            "desc": "上场棋子：苏烈、裴擒虎、海月、司空震。等到5回合还有1点经验升二本时，上场弈星直升4本，记得5回合先丢小菟，再上弈星，如果6回合没有升级到4本，就等6回合先升级4本再卖弈星再打小菟。棋手一路直接升到六级，不使用能量刷新，升至六级后先丢金色小菟，再丢小菟。第二轮拍卖：海月>司空震>其他强力五阶卡>其他强力四阶卡"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
+                {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false},
+                {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+                {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true}
+            ],
+            "desc": "上场棋子：苏烈、裴擒虎、海月、司空震。六本后，通过合成和天赋技能不断提高场上棋子等级，整备效果卡多留，如果老虎等级吸得不高，关键回合可以用整备卡或者露娜重新吸等级。第三轮拍卖：一线生机>众星闪耀>军械库>神兵天降"
+        }
+    ],
+    "notice": [
+        "1、打出位留瑶/钟馗/太乙真人，关键场次上场提供战力。",
+        "2、前排苏烈或海月扛，后排司空震和姜子牙负责输出，裴擒虎负责给对面后排压力，由于场上英雄比较少所以要特别小心刺客。",
+        "3、司空震装备推荐金色圣剑+炽热支配者+痛苦面具。不是碾压局面，司空震换名刀",
+        "4、嫦小娥6级专属是最关键的，所以棋手优先升6，越早升能叠加的额外属性越多。"
+    ],
+    "positionImage": "images/position/11.changxiaoehailukong.png"
+}
+,
     {
         "id": 12,
         "name": "阿离伞守约",
