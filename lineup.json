@@ -1440,7 +1440,7 @@
                 {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
                 {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
                 {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-                 {"name":"武则天","img":"images/heroes/wuzetian","isCore":false}
+                 {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false}
             ],
             "desc": "12回合后不断打合成，拿到效果牌，多余装备拿到打神器效果牌砸掉，优先机器头、泣血之剑。再就是注意不断观察场外局势调整站位。第三轮竞拍优先抢：众星闪耀>一线生机>能量超新星"
         }
