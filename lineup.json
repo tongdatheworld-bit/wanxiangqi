@@ -1758,24 +1758,129 @@
         ]
     },
     {
-        "id": 26,
-        "name": "逐鹿毒奶",
-        "rank": "A",
-        "player": "小妲己",
-        "playerImg": "images/players/xiaodaji.png",
-        "hard": "简单",
-        "lineupCode": "25390447732756502（点击复制）",
-        "ban位": ["逐鹿", "大河流域", "河洛", "日落海"],
-        "heroList": [
-            {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":true},
-            {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":true},
-            {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
-            {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
-            {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-        ]
-    },
+    "id": 26,
+    "name": "逐鹿毒奶",
+    "rank": "S+",
+    "player": "小妲己",
+    "playerImg": "images/players/xiaodaji.png",
+    "alternatePlayer": ["赢律", "嫦小娥"],
+    "alternatePlayerImg": ["images/players/yinglv.png", "images/players/changxiao'e.png"],
+    "hard": "简单",
+    "lineupCode": "103078162947891208（点击复制）",
+    "ban位": ["河洛", "大河流域", "日落海"],
+    "heroList": [
+        {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":true},
+        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+        {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "扁鹊",
+            "img": "images/heroes/bianque.png",
+            "desc": "友方单位护盾被击破时，对周围敌人造成该英雄最大生命值10%的法术伤害（冷却1秒）。扁鹊蔡文姬共战触发羁绊效果"
+        },
+        {
+            "name": "芈月",
+            "img": "images/heroes/miyue.png",
+            "desc": "每当你使用效果牌时，己方穿戴装备最多的1名【逐鹿】英雄等级+1（2）。给扁鹊提高等级"
+        },
+        {
+            "name": "西施",
+            "img": "images/heroes/xishi.png",
+            "desc": "整备：获得1张高阶推演战术。给扁鹊减少蓝条，更快释放技能"
+        },
+        {
+            "name": "小乔",
+            "img": "images/heroes/xiaoqiao.png",
+            "desc": "每当你的英雄触发登场效果时，所有英雄等级+1（2）。"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给蔡文姬套复活，提高后期容错"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":false},
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"霸者重铠","img":"images/equip/equipsmall/bazhezhongkai.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"纯净苍穹","img":"images/equip/equipsmall/chunjingcangqiong.png"}
+    ],
+    "equipSecond": [
+        {"name":"御灵之纱","img":"images/equip/equipsmall/yulingzhisha.png"},
+        {"name":"破妄之刃","img":"images/equip/equipsmall/powangzhiren.png"},
+        {"name":"驱雷","img":"images/equip/equipsmall/qulei.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "银算盘", "img": "images/talent/yinsuanpan.png"}
+    ],
+    "talentYin": [
+        {"name": "擂台猛虎", "img": "images/talent/leitaimenghu.png"},
+        {"name": "乐善好施", "img": "images/talent/leshanshaoshi.png"}
+    ],
+    "talentJin": [
+        {"name": "毒奶", "img": "images/talent/dunai.png"},
+        {"name": "全副武装", "img": "images/talent/quanfuwuzhuang.png"}
+    ],
+    "effectCard": [
+        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "发号施令", "img": "images/effectcard/fahaoshiling.png"},
+        {"name": "破镜之证", "img": "images/effectcard/pojingzhizheng.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"孙尚香","img":"images/heroes/shangxiangxiang.png"},
+                {"name":"牛头","img":"images/heroes/niutou.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "上阵棋子：孙尚香、牛头、弈星。特殊天赋前期正常运营。"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":true},
+                {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+                {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+                {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+                {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "上阵棋子：蔡文姬、扁鹊、芈月、西施、小乔、太乙真人。来毒奶天赋后，之前的高战棋子不动，停留在三级找觉醒蔡文姬、觉醒芈月和一张西施，锁血可直接拉5本，不然在4本找扁鹊、小乔，通过打出登场卡提高蔡文姬等级，通过效果卡提高扁鹊等级，小妲己效果卡多，加等级的全部给蔡文姬砸，蔡文姬100级才质变。"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":true},
+                {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+                {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+                {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+                {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "上阵棋子：蔡文姬、扁鹊、芈月、西施、小乔、太乙真人。拉五本后有姜子牙，可以换掉小乔，利用姜子牙的词条，打出卖出无阵营或除三分、逐鹿的卡牌提高全队等级。"
+        }
+    ],
+    "notice": [
+        "1、蔡文姬带霸者、名刀、纯净苍穹，扁鹊带圣杯、双倍刀、名刀。",
+        "2、刷蔡文姬等级是重中之重，蔡文姬没等级白搭。",
+        "3、如果玩赢律，最好有并购红利，基层提拔，等级会提升得特别快。",
+        "4、要充分利用小妲己刷牌机制，用小乔或姜子牙提高全队等级。"
+    ],
+    "positionImage": "images/position/26.zhuludunai.png"
+}
+,
     {
         "id": 27,
         "name": "姜导古币镜",
