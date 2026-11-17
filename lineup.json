@@ -1896,7 +1896,7 @@
     ],
     "equipFirst": [
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
-        {"name":"寒霜侵袭","img":"images/equip/equipsmall/hanfangqinxi.png"},
+        {"name":"寒霜侵袭","img":"images/equip/equipsmall/hanshuangqinxi.png"},
         {"name":"日渊","img":"images/equip/equipsmall/riyuan.png"}
     ],
     "equipSecond": [
@@ -1913,8 +1913,8 @@
         {"name": "幸运硬币", "img": "images/talent/xingyunyingbi.png"}
     ],
     "talentJin": [
-        {"name": "破败神威", "img": "images/talent/pobaishiwei.png"},
-        {"name": "强敌克星", "img": "images/talent/qiangdakexing.png"}
+        {"name": "破败神威", "img": "images/talent/pobaishenwei.png"},
+        {"name": "强敌克星", "img": "images/talent/qiangdikexing.png"}
     ],
     "effectCard": [
         {"name": "古币", "img": "images/effectcard/gubi.png"},
