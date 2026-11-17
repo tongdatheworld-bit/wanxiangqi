@@ -2101,7 +2101,7 @@
     "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
     "heroList": [
         {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
-        {"name":"马可波罗","img":"images/heroes/makebolo.png","isCore":false},
+        {"name":"马可波罗","img":"images/heroes/makeboluo.png","isCore":false},
         {"name":"铠","img":"images/heroes/kai.png","isCore":false},
         {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
         {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
@@ -2111,7 +2111,7 @@
     "funcHeroList": [
         {
             "name": "马可波罗",
-            "img": "images/heroes/makebolo.png",
+            "img": "images/heroes/makeboluo.png",
             "desc": "和百里守约联动"
         },
         {
@@ -2186,7 +2186,7 @@
             "title": "4-11回合",
             "heroList": [
                 {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
-                {"name":"马可波罗","img":"images/heroes/makebolo.png","isCore":false},
+                {"name":"马可波罗","img":"images/heroes/makeboluo.png","isCore":false},
                 {"name":"铠","img":"images/heroes/kai.png","isCore":false},
                 {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
                 {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
@@ -2199,7 +2199,7 @@
             "title": "12回合以后",
             "heroList": [
                 {"name":"百里守约","img":"images/heroes/bailishouyue.png","isCore":true},
-                {"name":"马可波罗","img":"images/heroes/makebolo.png","isCore":false},
+                {"name":"马可波罗","img":"images/heroes/makeboluo.png","isCore":false},
                 {"name":"铠","img":"images/heroes/kai.png","isCore":false},
                 {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
                 {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
