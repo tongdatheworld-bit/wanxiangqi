@@ -1766,7 +1766,7 @@
     "alternatePlayer": ["赢律", "嫦小娥"],
     "alternatePlayerImg": ["images/players/yinglv.png", "images/players/changxiaoe.png"],
     "hard": "简单",
-    "lineupCode": "103078162947891208（点击复制）",
+    "lineupCode": "25390447732756502（点击复制）",
     "ban位": ["河洛", "大河流域", "日落海"],
     "heroList": [
         {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":true},
