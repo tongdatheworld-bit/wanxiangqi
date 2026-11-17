@@ -1414,7 +1414,7 @@
             "title": "1-3回合",
             "heroList": [
                 {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
-                {"name":"苏烈","img":"images/heroes/sulie.png"}
+                {"name":"苏烈","img":"images/heroes/sulie.png"},
                  {"name":"弈星","img":"images/heroes/yixing.png"}
             ],
             "desc": "开局先上李元芳和苏烈，伞先不着急给，上弈星后升棋手等级到3级搜牌。第一轮竞拍优先抢：百里守约>铠>明世隐>钟馗>程咬金"
@@ -1439,7 +1439,7 @@
                 {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
                 {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
                 {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
-                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
                  {"name":"武则天","img":"images/heroes/wuzetian","isCore":false}
             ],
             "desc": "12回合后不断打合成，拿到效果牌，多余装备拿到打神器效果牌砸掉，优先机器头、泣血之剑。再就是注意不断观察场外局势调整站位。第三轮竞拍优先抢：众星闪耀>一线生机>能量超新星"
