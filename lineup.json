@@ -1839,24 +1839,134 @@
         ]
     },
     {
-        "id": 23,
-        "name": "阿离4.0狄仁杰",
-        "rank": "S",
-        "player": "阿离",
-        "playerImg": "images/players/ali.png",
-        "hard": "简单",
-        "lineupCode": "4227957486039058（点击复制）",
-        "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
-        "heroList": [
-            {"name":"狄仁杰","img":"images/heroes/direnjie.png","isCore":true},
-            {"name":"铠","img":"images/heroes/kai.png","isCore":false},
-            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
-            {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-        ]
-    },
+    "id": 23,
+    "name": "阿离伞狄仁杰",
+    "rank": "A",
+    "player": "阿离",
+    "playerImg": "images/players/ali.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "中等",
+    "lineupCode": "119404950929765496（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"狄仁杰","img":"images/heroes/direnjie.png","isCore":true},
+        {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+        {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "盾山",
+            "img": "images/heroes/dunshan.png",
+            "desc": "牺牲触发古币，第二回合给狄仁杰提升等级和攻速"
+        },
+        {
+            "name": "铠",
+            "img": "images/heroes/kai.png",
+            "desc": "提供临时等级给狄仁杰"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "降低对方主C临时等级"
+        },
+        {
+            "name": "程咬金",
+            "img": "images/heroes/chengyaojin.png",
+            "desc": "整备提供古币给狄仁杰提供等级和攻速"
+        },
+        {
+            "name": "明世隐",
+            "img": "images/heroes/mingshiyin.png",
+            "desc": "将铠提供的临时等级转换为真实等级"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给狄仁杰挂复活，提高容错"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"寒霜侵袭","img":"images/equip/equipsmall/hanfangqinxi.png"},
+        {"name":"日渊","img":"images/equip/equipsmall/riyuan.png"}
+    ],
+    "equipSecond": [
+        {"name":"套娃枪","img":"images/equip/equipsmall/taowaqiang.png"},
+        {"name":"破阵战芒","img":"images/equip/equipsmall/pozhenzhanmang.png"},
+        {"name":"末世","img":"images/equip/equipsmall/moshi.png"}
+    ],
+    "talentTong": [
+        {"name": "专注射击", "img": "images/talent/zhuanzhusheji.png"},
+        {"name": "复印机", "img": "images/talent/fuyinji.png"}
+    ],
+    "talentYin": [
+        {"name": "破阵战芒", "img": "images/talent/pozhenzhanmang.png"},
+        {"name": "幸运硬币", "img": "images/talent/xingyunyingbi.png"}
+    ],
+    "talentJin": [
+        {"name": "破败神威", "img": "images/talent/pobaishiwei.png"},
+        {"name": "强敌克星", "img": "images/talent/qiangdakexing.png"}
+    ],
+    "effectCard": [
+        {"name": "古币", "img": "images/effectcard/gubi.png"},
+        {"name": "精选武装", "img": "images/effectcard/jingxuanwuzhuang.png"},
+        {"name": "武装分解", "img": "images/effectcard/wuzhuangfenjie.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
+                {"name":"苏烈","img":"images/heroes/sulie.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "前期挂弈星、苏烈、李元芳，伞可以先给苏烈挂上吃击败。剩下升3级再开始搜牌启动。第一轮拍卖：狄仁杰>铠>明世隐>程咬金>盾山"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"狄仁杰","img":"images/heroes/direnjie.png","isCore":true},
+                {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+                {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false}
+            ],
+            "desc": "在3级优先找到狄仁杰和程咬金，需要觉醒狄仁杰，古币多多效果牌必拿。狄仁杰100级锁血后升5级。找到太乙真人上场提供复活，铠可以充当前排提供临时等级，李元芳换太乙。第二轮拍卖：太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"狄仁杰","img":"images/heroes/direnjie.png","isCore":true},
+                {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+                {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "第三轮拍卖：破镜之证/众星拱月/一线生机/能量超新星。持续喂古币到4.0攻速，升到棋手6级很关键，选择普攻一定次数转移天赋。直接全场无限瞬移，4.0攻速爆杀全场！"
+        }
+    ],
+    "notice": [
+        "1、打出位留给武则天和蒙犽，到决赛圈可以出售盾山换海月锁对方主C，有多余的人口可以让武则天或上官婉儿常驻。",
+        "2、随时调整站位，尽量不要让狄仁杰更早交出位移。",
+        "3、使用武装重构给狄仁杰把装备类型做满，针对不同敌人更换不同装备，针对敌人单C近战首推冰矛，召唤流或者体系阵容则建议用分裂弓。狄仁杰神装推荐强敌克星、末世、套娃枪、百锻刀来得早可以换上。",
+        "4、阿离6级专属选【蹁跹馈赠】，攻击增加转移次数，秘技强化优先：增伤+临时等级+吸血+转移次数+分身+护盾"
+    ],
+    "positionImage": "images/position/23.alisandirenjie.png"
+}
+,
    {
     "id": 24,
 "name": "阿离不死芈月",
