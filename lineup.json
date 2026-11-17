@@ -1764,7 +1764,7 @@
     "player": "小妲己",
     "playerImg": "images/players/xiaodaji.png",
     "alternatePlayer": ["赢律", "嫦小娥"],
-    "alternatePlayerImg": ["images/players/yinglv.png", "images/players/changxiao'e.png"],
+    "alternatePlayerImg": ["images/players/yinglv.png", "images/players/changxiaoe.png"],
     "hard": "简单",
     "lineupCode": "103078162947891208（点击复制）",
     "ban位": ["河洛", "大河流域", "日落海"],
@@ -1826,14 +1826,14 @@
     ],
     "talentYin": [
         {"name": "擂台猛虎", "img": "images/talent/leitaimenghu.png"},
-        {"name": "乐善好施", "img": "images/talent/leshanshaoshi.png"}
+        {"name": "乐善好施", "img": "images/talent/leshanhaoshi.png"}
     ],
     "talentJin": [
         {"name": "毒奶", "img": "images/talent/dunai.png"},
         {"name": "全副武装", "img": "images/talent/quanfuwuzhuang.png"}
     ],
     "effectCard": [
-        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"},
+        {"name": "武装重构", "img": "images/effectcard/wuzhuangchonggou.png"},
         {"name": "发号施令", "img": "images/effectcard/fahaoshiling.png"},
         {"name": "破镜之证", "img": "images/effectcard/pojingzhizheng.png"}
     ],
@@ -1841,8 +1841,8 @@
         {
             "title": "1-3回合",
             "heroList": [
-                {"name":"孙尚香","img":"images/heroes/shangxiangxiang.png"},
-                {"name":"牛头","img":"images/heroes/niutou.png"},
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"}
             ],
             "desc": "上阵棋子：孙尚香、牛头、弈星。特殊天赋前期正常运营。"
