@@ -894,7 +894,7 @@
     "equipSecond": [
         {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
-        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"}
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molvzhiren.png"}
     ],
     "talentTong": [
         {"name": "微弱优势", "img": "images/talent/weiruoyoushi.png"},
