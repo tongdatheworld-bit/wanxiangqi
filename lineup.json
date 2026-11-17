@@ -1389,7 +1389,7 @@
     ],
     "equipSecond": [
         {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
-        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molvzhiren.png"},
         {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"}
     ],
     "talentTong": [
