@@ -1584,27 +1584,136 @@
 }
 ,
     {
-        "id": 14,
-        "name": "香香大河开团射",
-        "rank": "A",
-        "player": "香香",
-        "playerImg": "images/players/xiangxiang.png",
-        "alternatePlayer": ["嬴律", "明先生"],
-    "alternatePlayerImg": ["images/players/yinglv.png", "images/players/mingxiansheng.png"],
-        "hard": "简单",
-        "lineupCode": "5126109938991208（点击复制）",
-        "ban位": ["逐鹿", "三分之地", "日落海", "河洛"],
-        "heroList": [
-            {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
-            {"name":"虞姬","img":"images/heroes/yuji.png","isCore":false},
-            {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
-            {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-            {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
-            {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false}
-        ],
-        "equip": []
-    },
+    "id": 14,
+    "name": "香香大河开团射",
+    "rank": "A",
+    "player": "香香",
+    "playerImg": "images/players/xiangxiang.png",
+    "alternatePlayer": ["嬴律","明先生"],
+    "alternatePlayerImg": ["images/players/yinglv.png","images/players/mingxiansheng.png"],
+    "hard": "简单",
+    "lineupCode": "2874310125357188（点击复制）",
+    "ban位": ["逐鹿", "河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
+        {"name":"虞姬","img":"images/heroes/yuji.png","isCore":false},
+        {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
+        {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
+        {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
+        {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "虞姬",
+            "img": "images/heroes/yuji.png",
+            "desc": "副C，提供开团效果，给场上随机棋子提供等级。"
+        },
+        {
+            "name": "鬼谷子",
+            "img": "images/heroes/guiguzi.png",
+            "desc": "图腾开团效果，分装备提高整体阵容坦度"
+        },
+        {
+            "name": "张良",
+            "img": "images/heroes/zhangliang.png",
+            "desc": "阵容开团给场上棋子提高等级，后期带名刀可控对方主C"
+        },
+        {
+            "name": "瑶",
+            "img": "images/heroes/yaomei.png",
+            "desc": "开团分装备，触发张良词条给全队提等级"
+        },
+        {
+            "name": "云中君",
+            "img": "images/heroes/yunzhongjun.png",
+            "desc": "开团给公孙离提等级，触发张良词条给全队提等级"
+        },
+        {
+            "name": "少司缘",
+            "img": "images/heroes/shaosiyuan.png",
+            "desc": "图腾在场，全队通过攻击次数获得永久等级"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"日渊","img":"images/equip/equipsmall/riyuan.png"},
+        {"name":"寒霜侵袭","img":"images/equip/equipsmall/hanbingqinxi.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"破晓","img":"images/equip/equipsmall/poxiao.png"},
+        {"name":"强敌克星","img":"images/equip/equipsmall/qiangdikexing.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "猪猪", "img": "images/talent/zhuzhu.png"}
+    ],
+    "talentYin": [
+        {"name": "化为熊灵", "img": "images/talent/huaweixiongling.png"},
+        {"name": "荆棘牢笼", "img": "images/talent/jingjilaolong.png"}
+    ],
+    "talentJin": [
+        {"name": "命运图腾", "img": "images/talent/mingyuntuteng.png"},
+        {"name": "强敌克星", "img": "images/talent/qiangdikexing.png"}
+    ],
+    "effectCard": [
+        {"name": "2阶英雄兑换券","img":"images/effectcard/2jieyingxionghuanquan.png"},
+        {"name": "无阵营英雄兑换券","img":"images/effectcard/wuzhengyingxionghuanquan.png"},
+        {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"牛魔","img":"images/heroes/niumao.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png"}
+            ],
+            "desc": "上阵棋子：牛头、弈星、干将、李元芳\n第一回合到牛魔干将，第二个回合我们补上元芳弈星，元芳会自动升级，到达时十级给我们香香的武器带来攻击力，弈星则是在我们升棋手等级时会额外获得两点经验，稳赚不赔，目标保持连胜，第三个回合将棋手等级升到二级。\n第一轮拍卖：公孙离>云中君>鬼谷子>瑶"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
+                {"name":"虞姬","img":"images/heroes/yuji.png"},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
+                {"name":"张良","img":"images/heroes/zhangliang.png"},
+                {"name":"瑶","img":"images/heroes/yaomei.png"},
+                {"name":"云中君","img":"images/heroes/yunzhongjun.png"},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"}
+            ],
+            "desc": "上阵棋子：公孙离、虞姬、鬼谷子、张良、瑶、云中君、少司缘\n棋手升到三级开始搜素体系牌。优先保证鬼谷子公孙离瑶姝在场，剩下四张谁先来上谁。三级觉醒公孙离后升级四本，在四级找其他牌觉醒，质量差不多直接升五级。\n第二轮拍卖：太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
+                {"name":"虞姬","img":"images/heroes/yuji.png"},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
+                {"name":"张良","img":"images/heroes/zhangliang.png"},
+                {"name":"瑶","img":"images/heroes/yaomei.png"},
+                {"name":"云中君","img":"images/heroes/yunzhongjun.png"},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"}
+            ],
+            "desc": "上阵棋子：公孙离、虞姬、鬼谷子、张良、瑶、云中君、少司缘\n第三轮拍卖：众星闪耀/扶摇直上/军械库\n五级不做停留直接上六！六级之后，我们就疯狂的找场上牌的合成开锦囊，找装备和移花接木，决赛局可上阵钟馗太乙，进一步提高阵容上限。"
+        }
+    ],
+    "notice": [
+        "1、利用大河流域开团词条的自动升级以及大河流域卡牌极强的战斗力配合我们香香的武器取得游戏胜利。",
+        "2、公孙离最优三件套：强敌克星、炽热支配者、日渊，打李信、猪八戒等高血量单核带寒霜侵袭、破晓、末世，瑶带破茧之衣或者名刀，看场上局势佩戴",
+        "3、通用站位鬼谷子第一排，少司缘左边沉底，公孙离则站在右边 。注意！在遇到逐鹿体系以及倒转体系还有单刺客体系时我们都需要改变站位。",
+        "4、后期下云中君上钟馗，多留移花接木打决赛。"
+    ],
+    "positionImage": "images/position/14.xiangxiang_dahe_kaituanshe.png"
+}
+,
     {
         "id": 15,
         "name": "明先生大河猪离",
