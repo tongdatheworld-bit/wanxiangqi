@@ -1902,7 +1902,7 @@
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
     ],
     "equipSecond": [
-        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molvzhiren.png"},
         {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
         {"name":"噬神之书","img":"images/equip/equipsmall/shishenzhishu.png"}
     ],
@@ -1912,7 +1912,7 @@
     ],
     "talentYin": [
         {"name": "猛虎擂台", "img": "images/talent/menghuleitai.png"},
-        {"name": "乐善好施", "img": "images/talent/leshanshaoshi.png"}
+        {"name": "乐善好施", "img": "images/talent/leshanhaoshi.png"}
     ],
     "talentJin": [
         {"name": "鬼神降临", "img": "images/talent/guishenjianglin.png"},
@@ -1921,14 +1921,14 @@
     "effectCard": [
         {"name": "唤醒","img":"images/effectcard/huanxing.png"},
         {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
-        {"name": "临证磨枪","img":"images/effectcard/linzhengmoqiang.png"}
+        {"name": "临阵磨枪","img":"images/effectcard/linzhenmoqiang.png"}
     ],
     "runStage": [
         {
             "title": "1-3回合",
             "heroList": [
                 {"name":"弈星","img":"images/heroes/yixing.png"},
-                {"name":"孙尚香","img":"images/heroes/shangxiang.png"}
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png"}
             ],
             "desc": "上阵棋子：弈星、孙尚香\n弈星过渡，优先拿孙尚香，靠登场被动攒免费刷新；觉醒孙尚香后，积攒能量提升棋子等级。\n第一轮拍卖：曹操>蔡文姬>貂蝉>赵云。"
         },
@@ -1964,7 +1964,7 @@
         "4、吕布装备推荐无尽+炽热+不死鸟，也可以带双信刀+反甲来打多点控制和反伤，周瑜可以带回蓝装或者肉装，像大书圣杯不死鸟。",
         "5、在11回合左右确保场上都觉醒和阵容质量保连胜之后，可以升6级囤一张秘技灵感爆发，再把奇才交给露娜复印出4张露娜，最后用秘技切多3张。"
     ],
-    "positionImage": "images/position/16.baige_sanfenlvbu.png"
+    "positionImage": "images/position/16.baigesanfenlvbu.png"
 }
 ,
     {
