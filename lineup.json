@@ -2404,14 +2404,14 @@
         {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
     ],
     "equipFirst": [
-        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjian.png"},
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"},
         {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
     ],
     "equipSecond": [
         {"name":"魂灭灵冠","img":"images/equip/equipsmall/hunmielingguan.png"},
         {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
-        {"name":"红麾","img":"images/equip/equipsmall/honghui.png"}
+        {"name":"红麾","img":"images/equip/equipsmall/hongmo.png"}
     ],
     "talentTong": [
         {"name": "里程碑", "img": "images/talent/lichengbei.png"},
@@ -2440,12 +2440,26 @@
         },
         {
             "title": "4-11回合",
-            "heroList": [],
+              "heroList": [
+                {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+                {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
             "desc": "第二轮被动继续开节，5-6回合升5本开始利用免费刷新找上官婉儿、李白、花木兰等体系卡。7回合开丰持续找体系卡。天赋技能等到6-7回合体系卡来得差不多了再开，持续提升队伍等级。\n第二轮拍卖：优先花木兰>婉儿>李白>露娜>武则天。"
         },
         {
             "title": "12回合以后",
-            "heroList": [],
+             "heroList": [
+                {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+                {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
             "desc": "第三轮拍卖：众星拱月（拉高花木兰等级）/破镜之证（拉高花木兰等级）/天籁琴音（婉儿没觉醒）/能量超新星（资源）/一线生机。\n12回合后的任务很简单，就是搜子弹，打子弹（给足花木兰复活次数够打赢对面），提升花木兰等级，优化装备，调站位。"
         }
     ],
