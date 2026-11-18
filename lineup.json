@@ -1718,12 +1718,12 @@
     "id": 15,
     "name": "明先生大河猪离",
     "rank": "A",
-    "player": "嬴律",
+    "player": "明先生",
     "playerImg": "images/players/yinglv.png",
-    "alternatePlayer": ["香香","明先生"],
-    "alternatePlayerImg": ["images/players/xiangxiang.png","images/players/mingxiansheng.png"],
+    "alternatePlayer": ["香香","赢律"],
+    "alternatePlayerImg": ["images/players/xiangxiang.png","images/players/yinglv.png"],
     "hard": "简单",
-    "lineupCode": "（点击复制）",
+    "lineupCode": "81682962224372016（点击复制）",
     "ban位": ["逐鹿", "河洛", "三分之地", "日落海"],
     "heroList": [
         {"name":"公孙离","img":"images/heroes/gongsunli.png","isCore":true},
@@ -1794,15 +1794,15 @@
         {"name": "强敌克星", "img": "images/talent/qiangdikexing.png"}
     ],
     "effectCard": [
-        {"name": "2阶英雄兑换券","img":"images/effectcard/2jieyingxionghuanquan.png"},
-        {"name": "无阵营英雄兑换券","img":"images/effectcard/wuzhengyingxionghuanquan.png"},
+        {"name": "2阶英雄兑换券","img":"images/effectcard/erjieyingxionghuanquan.png"},
+        {"name": "无阵营征召令","img":"images/effectcard/wuzhengyingzhengzhaoling.png"},
         {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"}
     ],
     "runStage": [
         {
             "title": "1-3回合",
             "heroList": [
-                {"name":"牛魔","img":"images/heroes/niumao.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
                 {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"}
             ],
