@@ -2974,7 +2974,7 @@
         {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false}
     ],
     "equipFirst": [
-        {"name":"无尽之刃","img":"images/equip/equipsmall/wujinzhiren.png"},
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"},
         {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
         {"name":"御灵之纱","img":"images/equip/equipsmall/yulingzhisha.png"}
     ],
@@ -2988,7 +2988,7 @@
         {"name": "猪猪", "img": "images/talent/zhuzhu.png"}
     ],
     "talentYin": [
-        {"name": "强制自强", "img": "images/talent/qiangzizixiang.png"},
+        {"name": "强者自强", "img": "images/talent/qiangzhezixiang.png"},
         {"name": "破妄之刃", "img": "images/talent/powangzhiren.png"}
     ],
     "talentJin": [
@@ -3006,7 +3006,7 @@
             "heroList": [
                 {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
-                {"name":"牛魔","img":"images/heroes/niumao.png"}
+                {"name":"牛魔","img":"images/heroes/niumo.png"}
             ],
             "desc": "上阵棋子：李元芳、弈星、牛魔\n开局抓弈星+李元芳过渡：弈星白嫖经验，李元芳整备产古币，牛魔根据场上质量，能赢下2回合才上。后拉三级开始找牌。\n第一轮拍卖：镜>程咬金>芈月>盾山"
         },
