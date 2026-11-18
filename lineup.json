@@ -1642,7 +1642,7 @@
     ],
     "equipFirst": [
         {"name":"日渊","img":"images/equip/equipsmall/riyuan.png"},
-        {"name":"寒霜侵袭","img":"images/equip/equipsmall/hanbingqinxi.png"},
+        {"name":"寒霜侵袭","img":"images/equip/equipsmall/hanshuangqinxi.png"},
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
     ],
     "equipSecond": [
