@@ -1663,8 +1663,8 @@
         {"name": "强敌克星", "img": "images/talent/qiangdikexing.png"}
     ],
     "effectCard": [
-        {"name": "2阶英雄兑换券","img":"images/effectcard/erjieyingxionghuanquan.png"},
-        {"name": "无阵营征召令","img":"images/effectcard/wuzhengyingzhengzhaoling.png"},
+        {"name": "2阶英雄兑换券","img":"images/effectcard/erjieyingxiongduihuanquan.png"},
+        {"name": "无阵营征召令","img":"images/effectcard/wuzhenyingzhengzhaoling.png"},
         {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"}
     ],
     "runStage": [
@@ -1711,7 +1711,7 @@
         "3、通用站位鬼谷子第一排，少司缘左边沉底，公孙离则站在右边 。注意！在遇到逐鹿体系以及倒转体系还有单刺客体系时我们都需要改变站位。",
         "4、后期下云中君上钟馗，多留移花接木打决赛。"
     ],
-    "positionImage": "images/position/14.xiangxiang_dahe_kaituanshe.png"
+    "positionImage": "images/position/14.xiangxiangdahekaituan.png"
 }
 ,
     {
@@ -1794,8 +1794,8 @@
         {"name": "强敌克星", "img": "images/talent/qiangdikexing.png"}
     ],
     "effectCard": [
-        {"name": "2阶英雄兑换券","img":"images/effectcard/erjieyingxionghuanquan.png"},
-        {"name": "无阵营征召令","img":"images/effectcard/wuzhengyingzhengzhaoling.png"},
+        {"name": "2阶英雄兑换券","img":"images/effectcard/erjieyingxiongduihuanquan.png"},
+        {"name": "无阵营征召令","img":"images/effectcard/wuzhenyingzhengzhaoling.png"},
         {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"}
     ],
     "runStage": [
@@ -1841,7 +1841,7 @@
         "4、瑶分装备优选破茧之衣、名刀，后期带一个制裁之刃，有铃铛给瑶带上。",
         "5、后期下云中君上钟馗，多留移花接木打决赛。"
     ],
-    "positionImage": "images/position/15.mingxiansheng_dahe_zhuli.png"
+    "positionImage": "images/position/15.mingxianshengdahezhuli.png"
 }
 ,
    
