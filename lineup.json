@@ -2988,7 +2988,7 @@
         {"name": "猪猪", "img": "images/talent/zhuzhu.png"}
     ],
     "talentYin": [
-        {"name": "强者自强", "img": "images/talent/qiangzhezixiang.png"},
+        {"name": "强者自强", "img": "images/talent/qiangzheziqiang.png"},
         {"name": "破妄之刃", "img": "images/talent/powangzhiren.png"}
     ],
     "talentJin": [
