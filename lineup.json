@@ -1730,7 +1730,7 @@
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
         {"name":"张良","img":"images/heroes/zhangliang.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ],
@@ -1752,7 +1752,7 @@
         },
         {
             "name": "瑶",
-            "img": "images/heroes/yao.png",
+            "img": "images/heroes/yaomei.png",
             "desc": "开团分装备，触发张良词条给全队提等级"
         },
         {
@@ -1815,7 +1815,7 @@
                 {"name":"猪八戒","img":"images/heroes/zhubajie.png"},
                 {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
                 {"name":"张良","img":"images/heroes/zhangliang.png"},
-                {"name":"瑶","img":"images/heroes/yao.png"},
+                {"name":"瑶","img":"images/heroes/yaomei.png"},
                 {"name":"云中君","img":"images/heroes/yunzhongjun.png"}
             ],
             "desc": "上阵棋子：公孙离、猪八戒、鬼谷子、张良、瑶、云中君\n四回合开天赋丰，这个阶段找齐体系，无脑合成提质，重铸公孙离装备。3本2阶卡基本觉醒后拉四级，如果质量好直接拉五级找所有三阶卡觉醒。\n第二轮拍卖：太乙真人"
@@ -1827,7 +1827,7 @@
                 {"name":"猪八戒","img":"images/heroes/zhubajie.png"},
                 {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
                 {"name":"张良","img":"images/heroes/zhangliang.png"},
-                {"name":"瑶","img":"images/heroes/yao.png"},
+                {"name":"瑶","img":"images/heroes/yaomei.png"},
                 {"name":"云中君","img":"images/heroes/yunzhongjun.png"},
                 {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
             ],
@@ -2348,28 +2348,117 @@
     "positionImage": "images/position/19.sunxiaobinsanfenhuanshuai.png"
 }
 ,
-    {
-        "id": 20,
-        "name": "明先生花木兰",
-        "rank": "S",
-        "player": "明先生",
-        "playerImg": "images/players/mingxiansheng.png",
-        "alternatePlayer": ["庄小鱼", "嬴律"],
-    "alternatePlayerImg": ["images/players/zhuangxiaoyu.png", "images/players/yinglv.png"],
-        "hard": "简单",
-        "lineupCode": "3833767766581410（点击复制）",
-        "ban位": ["大河流域", "逐鹿", "三分之地"],
-        "heroList": [
-            {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
-            {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
-            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
-            {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
-            {"name":"李白","img":"images/heroes/libai.png","isCore":false},
-            {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
-            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false}
-        ],
-        "equip": []
-    },
+   {
+    "id": 20,
+    "name": "明先生花木兰",
+    "rank": "S",
+    "player": "明先生",
+    "playerImg": "images/players/mingxiansheng.png",
+    "alternatePlayer": ["庄周","嬴律"],
+    "alternatePlayerImg": ["images/players/zhuangzhou.png","images/players/yinglv.png"],
+    "hard": "中等",
+    "lineupCode": "",
+    "ban位": ["逐鹿", "大河流域", "三分之地"],
+    "heroList": [
+        {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
+        {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+        {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "上官婉儿",
+            "img": "images/heroes/shangguanwaner.png",
+            "desc": "觉醒后，整备提供6枚古币，为花木兰提供复活次数，为全队提供"
+        },
+        {
+            "name": "李白",
+            "img": "images/heroes/libai.png",
+            "desc": "古币提质，古币提供的临时等级增加，给花木兰更多临时战力，花"
+        },
+        {
+            "name": "程咬金",
+            "img": "images/heroes/chengyaojin.png",
+            "desc": "阵容主T，整备提供古币，为花木兰提供复活次数"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "降低对方主C临时等级"
+        },
+        {
+            "name": "武则天",
+            "img": "images/heroes/wuzetian.png",
+            "desc": "登场提供古币，为花木兰提供临时战力及复活次数"
+        },
+        {
+            "name": "露娜",
+            "img": "images/heroes/luna.png",
+            "desc": "登场触发上官婉儿和程咬金整备效果，为花木兰积累复活次数"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjian.png"},
+        {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"魂灭灵冠","img":"images/equip/equipsmall/hunmielingguan.png"},
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
+        {"name":"红麾","img":"images/equip/equipsmall/honghui.png"}
+    ],
+    "talentTong": [
+        {"name": "里程碑", "img": "images/talent/lichengbei.png"},
+        {"name": "三十而立", "img": "images/talent/sanshierli.png"}
+    ],
+    "talentYin": [
+        {"name": "人才济济", "img": "images/talent/rencaijiji.png"},
+        {"name": "终极复印机", "img": "images/talent/zhongjifuyinji.png"}
+    ],
+    "talentJin": [
+        {"name": "暴君归来", "img": "images/talent/baojunguilai.png"},
+        {"name": "魂灭灵冠", "img": "images/talent/hunmielingguan.png"}
+    ],
+    "effectCard": [
+        {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
+        {"name": "全军整备","img":"images/effectcard/quanjunzhengbei.png"},
+        {"name": "唤醒","img":"images/effectcard/huanxing.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "单挂弈星、被动技能开节，走连败提升等级。\n第一轮拍卖：程咬金>凯>钟馗>盾山>其他高战力打工棋子。"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [],
+            "desc": "第二轮被动继续开节，5-6回合升5本开始利用免费刷新找上官婉儿、李白、花木兰等体系卡。7回合开丰持续找体系卡。天赋技能等到6-7回合体系卡来得差不多了再开，持续提升队伍等级。\n第二轮拍卖：优先花木兰>婉儿>李白>露娜>武则天。"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [],
+            "desc": "第三轮拍卖：众星拱月（拉高花木兰等级）/破镜之证（拉高花木兰等级）/天籁琴音（婉儿没觉醒）/能量超新星（资源）/一线生机。\n12回合后的任务很简单，就是搜子弹，打子弹（给足花木兰复活次数够打赢对面），提升花木兰等级，优化装备，调站位。"
+        }
+    ],
+    "notice": [
+        "1、木兰最优神器，魂灭灵冠、机器头、驱雷。",
+        "2、提高花木兰复活次数的资源有，露娜、唤醒、全员唤醒、整装待发、全员整备、太乙、河洛专属复活装备。",
+        "3、根据对手质量，判断要用多少资源就用多少资源，不要浪费。",
+        "4、花木兰没来前，先用李白打工，尽量少掉血。",
+        "5、明先生不必升6级，专属「飞龙在天」给的额外临时刷新和能量其实效果不多。"
+    ],
+    "positionImage": ""
+}
+,
     {
         "id": 21,
         "name": "小妲己鲸吞",
