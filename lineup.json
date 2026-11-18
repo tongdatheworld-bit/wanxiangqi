@@ -2354,8 +2354,8 @@
     "rank": "S",
     "player": "明先生",
     "playerImg": "images/players/mingxiansheng.png",
-    "alternatePlayer": ["庄周","嬴律"],
-    "alternatePlayerImg": ["images/players/zhuangzhou.png","images/players/yinglv.png"],
+    "alternatePlayer": ["庄小鱼","嬴律"],
+    "alternatePlayerImg": ["images/players/zhuangxiaoyu.png","images/players/yinglv.png"],
     "hard": "中等",
     "lineupCode": "",
     "ban位": ["逐鹿", "大河流域", "三分之地"],
@@ -2427,7 +2427,7 @@
     ],
     "effectCard": [
         {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
-        {"name": "全军整备","img":"images/effectcard/quanjunzhengbei.png"},
+        {"name": "全军动员","img":"images/effectcard/quanjundongyuan.png"},
         {"name": "唤醒","img":"images/effectcard/huanxing.png"}
     ],
     "runStage": [
