@@ -2055,7 +2055,7 @@
         {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
     ],
     "equipFirst": [
-        {"name":"金色圣剑","img":"images/equip/equipsmall/jinseishengjian.png"},
+        {"name":"金色圣剑","img":"images/equip/equipsmall/jinseshengjian.png"},
         {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"},
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
     ],
@@ -2086,7 +2086,7 @@
             "title": "1-3回合",
             "heroList": [
                 {"name":"狂铁","img":"images/heroes/kuangtie.png"},
-                {"name":"牛魔","img":"images/heroes/niumao.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"}
             ],
             "desc": "上阵棋子：狂铁、牛魔、弈星\n前三回合觉醒狂铁，一张牛头，一张弈星\n妲己第一张效果牌，分支1：拿研读会（经验+3）回合3升二级；分支2：拿刷新为后续搜牌提供机会；分支3：拿高级人才4本赌姜子牙、司空震、海诺。\n场上三张棋子，加上拍卖4张，如果效果卡拿2张棋子，4回合有机会直接上6人继续保血\n第一轮拍卖：亚瑟>其他日落海英雄"
@@ -2123,7 +2123,7 @@
         "4、小妲己司空震核心在于好的天赋，同路人、慕名而来、危险数字都是最佳经济天赋，可实现无限刷牌。",
         "5、效果牌的选择优先重铸司空震装备，其次全拿牌，有移花接木也留着打场面上打不过的对手。"
     ],
-    "positionImage": "images/position/18.xiaodaji_riluohai_daozhuan.png"
+    "positionImage": "images/position/18.xiaodajiriluohaidaozhuan.png"
 }
 ,
     {
