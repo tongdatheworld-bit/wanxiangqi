@@ -1846,26 +1846,127 @@
 ,
    
     {
-        "id": 16,
-        "name": "白歌三分吕布",
-        "rank": "S",
-        "player": "白歌",
-        "playerImg": "images/players/baige.png",
-        "alternatePlayer": ["镜", "孙小宾"],
-    "alternatePlayerImg": ["images/players/jing.png", "images/players/sunxiaobin.png"],
-        "hard": "中等",
-        "lineupCode": "9463061115304792（点击复制）",
-        "ban位": ["逐鹿", "大河流域", "河洛"],
-        "heroList": [
-            {"name":"吕布","img":"images/heroes/lvbu.png","isCore":true},
-            {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
-            {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":false},
-            {"name":"貂蝉","img":"images/heroes/diaochan.png","isCore":false},
-            {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
-            {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false}
-        ],
-        "equip": []
-    },
+    "id": 16,
+    "name": "白歌三分吕布",
+    "rank": "S",
+    "player": "白歌",
+    "playerImg": "images/players/baige.png",
+    "alternatePlayer": ["镜","孙小宾"],
+    "alternatePlayerImg": ["images/players/jing.png","images/players/sunxiaobin.png"],
+    "hard": "中等",
+    "lineupCode": "113212501442162816（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "河洛"],
+    "heroList": [
+        {"name":"曹操","img":"images/heroes/caocao.png","isCore":false},
+        {"name":"貂蝉","img":"images/heroes/diaochan.png","isCore":true},
+        {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":false},
+        {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
+        {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "曹操",
+            "img": "images/heroes/caocao.png",
+            "desc": "整备触发甄姬登场获得登场卡、触发貂蝉增加场上棋子等级。"
+        },
+        {
+            "name": "蔡文姬",
+            "img": "images/heroes/caiwenji.png",
+            "desc": "蔡文姬常驻场上，打出三分卡，增加队伍等级。"
+        },
+        {
+            "name": "小乔",
+            "img": "images/heroes/xiaoqiao.png",
+            "desc": "小乔常驻，登场卡登场增加全队等级。"
+        },
+        {
+            "name": "甄姬",
+            "img": "images/heroes/zhenji.png",
+            "desc": "甄姬登场获得登场卡，增加登场卡资源提高全队等级。"
+        },
+        {
+            "name": "吕布",
+            "img": "images/heroes/lvbu.png",
+            "desc": "后期超级换帅上场收割。"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"周瑜","img":"images/heroes/zhouyu.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
+        {"name":"诸葛亮","img":"images/heroes/zhugeliang.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
+        {"name":"贤者之书","img":"images/equip/equipsmall/xianzhezhishu.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"噬神之书","img":"images/equip/equipsmall/shishenzhishu.png"}
+    ],
+    "talentTong": [
+        {"name": "小电池包", "img": "images/talent/xiaodianchibao.png"},
+        {"name": "复印机", "img": "images/talent/fuyinji.png"}
+    ],
+    "talentYin": [
+        {"name": "猛虎擂台", "img": "images/talent/menghuleitai.png"},
+        {"name": "乐善好施", "img": "images/talent/leshanshaoshi.png"}
+    ],
+    "talentJin": [
+        {"name": "鬼神降临", "img": "images/talent/guishenjianglin.png"},
+        {"name": "泉水", "img": "images/talent/quanshui.png"}
+    ],
+    "effectCard": [
+        {"name": "唤醒","img":"images/effectcard/huanxing.png"},
+        {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
+        {"name": "临证磨枪","img":"images/effectcard/linzhengmoqiang.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"孙尚香","img":"images/heroes/shangxiang.png"}
+            ],
+            "desc": "上阵棋子：弈星、孙尚香\n弈星过渡，优先拿孙尚香，靠登场被动攒免费刷新；觉醒孙尚香后，积攒能量提升棋子等级。\n第一轮拍卖：曹操>蔡文姬>貂蝉>赵云。"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"曹操","img":"images/heroes/caocao.png"},
+                {"name":"貂蝉","img":"images/heroes/diaochan.png","isCore":true},
+                {"name":"蔡文姬","img":"images/heroes/caiwenji.png"},
+                {"name":"小乔","img":"images/heroes/xiaoqiao.png"},
+                {"name":"甄姬","img":"images/heroes/zhenji.png"},
+                {"name":"孙尚香","img":"images/heroes/shangxiang.png"}
+            ],
+            "desc": "上阵棋子：曹操、貂蝉、蔡文姬、小乔、甄姬、孙尚香\n卡等级慢慢搜蔡文姬、曹操、貂蝉完成觉醒；孙尚香留作过渡打工。二要核心觉醒完毕后，再升本到5级，稳住血量。8-11回合：拍卖注意抢吕布、甄姬、小乔，攒能量提升棋子等级，拉至5级慢D核心组件；留存遗志、换帅效果卡，两张均为三星，建议升6前D到。\n第二轮拍卖：小乔>甄姬>露娜>吕布>周瑜"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"曹操","img":"images/heroes/caocao.png"},
+                {"name":"貂蝉","img":"images/heroes/diaochan.png","isCore":true},
+                {"name":"蔡文姬","img":"images/heroes/caiwenji.png"},
+                {"name":"小乔","img":"images/heroes/xiaoqiao.png"},
+                {"name":"吕布","img":"images/heroes/lvbu.png"},
+                {"name":"甄姬","img":"images/heroes/zhenji.png"}
+            ],
+            "desc": "上阵棋子：曹操、貂蝉、蔡文姬、小乔、吕布、甄姬\n小乔等体系卡觉醒后，通过白歌刷牌技能提升全队等级，孙尚香等级传承掉，上吕布换帅，吕布觉醒后，回到手牌，再打出一张1级吕布换帅，打出觉醒吕布等级合并，俗称超级换帅。\n第三轮拍卖：能量超新星/扶摇直上/一线生机/超级复印机"
+        }
+    ],
+    "notice": [
+        "1、打出位留给露娜和其他三分登场牌，有同行时会相对比较难玩，所以依赖像复印机、小咖秀等觉醒英雄的天赋。",
+        "2、前排蔡文姬和曹操可以扛伤，后期就交给吕布和周瑜负责打aoe。",
+        "3、根据场上阵容、装备情况和来牌情况，可选择用诸葛亮当副C，补充伤害，甚至可以直接用诸葛亮当C位。",
+        "4、吕布装备推荐无尽+炽热+不死鸟，也可以带双信刀+反甲来打多点控制和反伤，周瑜可以带回蓝装或者肉装，像大书圣杯不死鸟。",
+        "5、在11回合左右确保场上都觉醒和阵容质量保连胜之后，可以升6级囤一张秘技灵感爆发，再把奇才交给露娜复印出4张露娜，最后用秘技切多3张。"
+    ],
+    "positionImage": "images/position/16.baige_sanfenlvbu.png"
+}
+,
     {
     "id": 17,
     "name": "低压赢率大河猪离",
