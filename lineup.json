@@ -2294,7 +2294,7 @@
     ],
     "talentYin": [
         {"name": "猛虎擂台", "img": "images/talent/menghuleitai.png"},
-        {"name": "乐善好施", "img": "images/talent/leshanshaoshi.png"}
+        {"name": "乐善好施", "img": "images/talent/leshanhaoshi.png"}
     ],
     "talentJin": [
         {"name": "鬼神降临", "img": "images/talent/guishenjianglin.png"},
@@ -2303,14 +2303,14 @@
     "effectCard": [
         {"name": "唤醒","img":"images/effectcard/huanxing.png"},
         {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
-        {"name": "临证磨枪","img":"images/effectcard/linzhengmoqiang.png"}
+        {"name": "临阵磨枪","img":"images/effectcard/linzhenmoqiang.png"}
     ],
     "runStage": [
         {
             "title": "1-3回合",
             "heroList": [
                 {"name":"弈星","img":"images/heroes/yixing.png"},
-                {"name":"孙尚香","img":"images/heroes/shangxiang.png"}
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png"}
             ],
             "desc": "上阵棋子：弈星、孙尚香\n弈星过渡，优先拿孙尚香，靠登场被动攒免费刷新，时光倒流给孙尚香，优先觉醒孙尚香；\n第一轮拍卖：曹操>蔡文姬>貂蝉>赵云。"
         },
@@ -2322,7 +2322,7 @@
                 {"name":"蔡文姬","img":"images/heroes/caiwenji.png"},
                 {"name":"小乔","img":"images/heroes/xiaoqiao.png"},
                 {"name":"甄姬","img":"images/heroes/zhenji.png"},
-                {"name":"孙尚香","img":"images/heroes/shangxiang.png"}
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png"}
             ],
             "desc": "上阵棋子：曹操、貂蝉、蔡文姬、小乔、甄姬、孙尚香\n觉醒孙尚香后，存8张英雄牌或效果牌打出第一个回环放在手里，上3本，存曹操、貂蝉、蔡文姬等三分体系卡打出第一个回环力争觉醒前期体系卡后上5本找小乔、甄姬、吕布、露娜等高阶核心卡，后存12张英雄卡和效果卡打出大回环。\n第二轮拍卖：小乔>甄姬>露娜>吕布>周瑜"
         },
@@ -2345,7 +2345,7 @@
         "3、根据场上阵容、装备情况和来牌情况，可选择用诸葛亮当副C，补充伤害，甚至可以直接用诸葛亮当C位。",
         "4、吕布装备推荐无尽+炽热+不死鸟，也可以带双信刀+反甲来打多点控制和反伤，周瑜可以带回蓝装或者肉装，像大书圣杯不死鸟。"
     ],
-    "positionImage": "images/position/19.sunxiaobin_sanfenhuanshuai.png"
+    "positionImage": "images/position/19.sunxiaobinsanfenhuanshuai.png"
 }
 ,
     {
