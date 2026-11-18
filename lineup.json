@@ -2716,25 +2716,137 @@
     "positionImage": "images/position/26.zhuludunai.png"
 }
 ,
-    {
-        "id": 27,
-        "name": "姜导古币镜",
-        "rank": "A",
-        "player": "姜导",
-        "playerImg": "images/players/jiangdao.png",
-        "hard": "简单",
-        "lineupCode": "90130314019473440（点击复制）",
-        "ban位": ["日落海", "三分之地", "大河流域"],
-        "heroList": [
-            {"name":"镜","img":"images/heroes/jing.png","isCore":true},
-            {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
-            {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
-            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-            {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false}
-        ]
-    },
+   {
+    "id": 27,
+    "name": "姜导古币镜",
+    "rank": "A",
+    "player": "姜导",
+    "playerImg": "images/players/jiangdao.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "简单",
+    "lineupCode": "28770007982715020（点击复制）",
+    "ban位": ["日落海", "三分之地", "大河流域"],
+    "heroList": [
+        {"name":"镜","img":"images/heroes/jing.png","isCore":true},
+        {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+        {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "李元芳",
+            "img": "images/heroes/liyuanfang.png",
+            "desc": "整备给最近的河洛棋子提供古币，触发镜词条，提升镜等级"
+        },
+        {
+            "name": "芈月",
+            "img": "images/heroes/miyue.png",
+            "desc": "芈月驻场，使用效果卡时，给镜提升等级"
+        },
+        {
+            "name": "西施",
+            "img": "images/heroes/xishi.png",
+            "desc": "整备：获得1张高阶推演战术。给镜减少蓝条，更快释放技能"
+        },
+        {
+            "name": "程咬金",
+            "img": "images/heroes/chengyaojin.png",
+            "desc": "整备给自身提供古币，并给古币，打出后触发镜词条，提升镜等级"
+        },
+        {
+            "name": "上官婉儿",
+            "img": "images/heroes/shangguanwaner.png",
+            "desc": "整备给河洛棋子提供古币，触发镜词条，提升镜等级"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给镜套复活，提高后期容错"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"无尽之刃","img":"images/equip/equipsmall/wujinzhiren.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"御灵之纱","img":"images/equip/equipsmall/yulingzhisha.png"}
+    ],
+    "equipSecond": [
+        {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"},
+        {"name":"破阵战芒","img":"images/equip/equipsmall/pozhenzhanmang.png"},
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "猪猪", "img": "images/talent/zhuzhu.png"}
+    ],
+    "talentYin": [
+        {"name": "强制自强", "img": "images/talent/qiangzizixiang.png"},
+        {"name": "破妄之刃", "img": "images/talent/powangzhiren.png"}
+    ],
+    "talentJin": [
+        {"name": "护命灵珠", "img": "images/talent/huminglingzhu.png"},
+        {"name": "罡气护体", "img": "images/talent/gangqihuti.png"}
+    ],
+    "effectCard": [
+        {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"},
+        {"name": "破镜之证","img":"images/effectcard/pojingzhizheng.png"},
+        {"name": "能量超新星","img":"images/effectcard/nengliangchaoxinxing.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"牛魔","img":"images/heroes/niumao.png"}
+            ],
+            "desc": "上阵棋子：李元芳、弈星、牛魔\n开局抓弈星+李元芳过渡：弈星白嫖经验，李元芳整备产古币，牛魔根据场上质量，能赢下2回合才上。后拉三级开始找牌。\n第一轮拍卖：镜>程咬金>芈月>盾山"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"镜","img":"images/heroes/jing.png","isCore":true},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
+                {"name":"芈月","img":"images/heroes/miyue.png"},
+                {"name":"西施","img":"images/heroes/xishi.png"},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png"},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png"}
+            ],
+            "desc": "上阵棋子：镜、李元芳、芈月、西施、程咬金、上官婉儿\n3本后，优先觉醒镜，镜吃效果牌+等级，每回合把姜导钦定主角的5个豆打完，最大化镜的等级提升，古币给程咬金提升前排坦度，中间打出位用梦奇、老夫子触发钦定主角效果。\n第二轮拍卖：上官婉儿>鲁班大师>太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"镜","img":"images/heroes/jing.png","isCore":true},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png"},
+                {"name":"芈月","img":"images/heroes/miyue.png"},
+                {"name":"西施","img":"images/heroes/xishi.png"},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png"},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "上阵棋子：镜、李元芳、芈月、西施、程咬金、上官婉儿、太乙真人\n6本后，补鲁班大师，觉醒后，傀儡直接获取镜的等级，提高阵容上限\n第三轮拍卖：扶摇直上/破镜之证/能量超新星/军械库"
+        }
+    ],
+    "notice": [
+        "1、姜导钦定主角给镜提升等级，芈月触发效果卡时给镜提升等级，西施给镜减蓝条，古币喂程咬金触发镜被动提升等级。",
+        "2、镜适配装备无尽，御灵，名刀。前期可以拿圣杯过渡，其他看局势更换免控。神器闪现权杖，破妄，机器头，战芒。",
+        "3、镜被强控制，强爆发阵容克制。",
+        "4、打出位梦奇、庄周、老夫子最佳，其次武则天，甄姬，老夫子打出后一定要打合成，武则天打出后古币给程咬金。",
+        "5、留遗志后期转给999大爹进一步提高阵容质量。",
+        "6、手上留钟馗，决赛上场提高夺冠概率。"
+    ],
+    "positionImage": "images/position/27.jiangdaogubijing.png"
+}
+,
     {
         "id": 28,
         "name": "嬴律雷霆战机",
