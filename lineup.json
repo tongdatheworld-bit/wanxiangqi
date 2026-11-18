@@ -1996,88 +1996,136 @@
     "positionImage": "images/position/17.yinglvdiyazhuli.png"
 }
 ,
-       {
-        "id": 18,
-        "name": "小妲己日落海司空震",
-        "rank": "S",
-        "player": "小妲己",
-        "playerImg": "images/players/xiaodaji.png",
-           "alternatePlayer": ["玉环"],
-    "alternatePlayerImg": ["images/players/yuhuan.png"],
-        "hard": "中等",
-        "lineupCode": "55226795263681668（点击复制）",
-        "ban位": ["大河流域"],
-        "heroList": [
-            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
-            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-            {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
-            {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
-            {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
-            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-        ],
-        "funcHeroList": [
-            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
-            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-            {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
-            {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
-            {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false}
-        ],
-        "backupHeroList": [
-            {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
-            {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
-            {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
-            {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false}
-        ],
-        "equipFirst": [
-            {"name":"金色圣剑","img":"images/equip/equipsmall/jinseshengjian.png"},
-            {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"},
-            {"name":"名刀·司命","img":"images/equip/equipsmall/mingdaosiming.png"}
-        ],
-        "equipSecond": [
-            {"name":"虚无法杖","img":"images/equip/equipsmall/xuwufazhang.png"},
-            {"name":"铸梦·逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
-            {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
-        ],
-        "runStage": [
-            {
-                "title": "1-3回合",
-                "heroList": [
-                    {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
-                    {"name":"海诺","img":"images/heroes/hainuo.png"},
-                    {"name":"莱西奥","img":"images/heroes/laixiao.png"},
-                    {"name":"亚瑟","img":"images/heroes/yase.png"}
-                ],
-                "desc": "开局先上狂铁+牛魔，后续再连续打出4张弈星并觉醒上场，随后棋手直接升5级。弈星务必优先觉醒，玉环需要快速升5级去找体系牌。狂铁和牛魔前期能赢2个回合就算立大功。第一轮竞拍优先抢：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
-            },
-            {
-                "title": "4-11回合",
-                "heroList": [
-                    {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
-                    {"name":"海诺","img":"images/heroes/hainuo.png"},
-                    {"name":"莱西奥","img":"images/heroes/laixiao.png"},
-                    {"name":"亚瑟","img":"images/heroes/yase.png"}
-                ],
-                "desc": "开局先上狂铁+牛魔，后续再连续打出4张弈星并觉醒上场，随后棋手直接升5级。弈星务必优先觉醒，玉环需要快速升5级去找体系牌。狂铁和牛魔前期能赢2个回合就算立大功。第一轮竞拍优先抢：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
-            },
-            {
-                "title": "12回合以后",
-                "heroList": [
-                    {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
-                    {"name":"海诺","img":"images/heroes/hainuo.png"},
-                    {"name":"莱西奥","img":"images/heroes/laixiao.png"},
-                    {"name":"亚瑟","img":"images/heroes/yase.png"}
-                ],
-                "desc": "开局先上狂铁+牛魔，后续再连续打出4张弈星并觉醒上场，随后棋手直接升5级。弈星务必优先觉醒，玉环需要快速升5级去找体系牌。狂铁和牛魔前期能赢2个回合就算立大功。第一轮竞拍优先抢：姬小满>亚瑟>2阶的日落海英雄>3阶的日落海英雄"
-            }
-        ],
-        "notice": [
-            "优先追司空震三星",
-            "不要乱D牌，卡利息上人口",
-            "留意对手的法系阵容"
-        ],
-        "positionImage": "images/position/90.ailimiyue.png"
-    },
+      {
+    "id": 18,
+    "name": "小妲己日落海倒转",
+    "rank": "S",
+    "player": "小妲己",
+    "playerImg": "images/players/xiaodaji.png",
+    "alternatePlayer": ["小妲己"],
+    "alternatePlayerImg": ["images/players/xiaodaji.png"],
+    "hard": "困难",
+    "lineupCode": "55226795263681668（点击复制）",
+    "ban位": ["大河流域"],
+    "heroList": [
+        {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+        {"name":"姜子牙","img":"images/heroes/jiangziya.png","isCore":false},
+        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+        {"name":"莱西奥","img":"images/heroes/laixiao.png","isCore":false},
+        {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "姜子牙",
+            "img": "images/heroes/jiangziya.png",
+            "desc": "姜子牙驻场，打出无阵营或非场上阵营棋子，提高全队等级"
+        },
+        {
+            "name": "姬小满",
+            "img": "images/heroes/jixiaoman.png",
+            "desc": "卖出场上棋子获得临时刷新"
+        },
+        {
+            "name": "亚瑟",
+            "img": "images/heroes/yase.png",
+            "desc": "亚瑟驻场，登场日落海棋子增加阿科米亚核心等级"
+        },
+        {
+            "name": "海诺",
+            "img": "images/heroes/hainuo.png",
+            "desc": "海诺驻场，阿科米亚核心等级增加时额外增加"
+        },
+        {
+            "name": "莱西奥",
+            "img": "images/heroes/laixiao.png",
+            "desc": "卖出场上棋子增加阿科米亚核心等级"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "决赛上钟馗降低对面主C等级"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"金色圣剑","img":"images/equip/equipsmall/jinseishengjian.png"},
+        {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"聚灵法杖","img":"images/equip/equipsmall/julingfazhang.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"虚无法杖","img":"images/equip/equipsmall/xuwufazhang.png"}
+    ],
+    "talentTong": [
+        {"name": "银算盘", "img": "images/talent/yinsuanpan.png"},
+        {"name": "防御领域", "img": "images/talent/fangyulingyu.png"}
+    ],
+    "talentYin": [
+        {"name": "金算盘", "img": "images/talent/jinsuanpan.png"},
+        {"name": "人才济济", "img": "images/talent/rencaijiji.png"}
+    ],
+    "talentJin": [
+        {"name": "能量汲取", "img": "images/talent/nengliangjiqu.png"},
+        {"name": "能量置换", "img": "images/talent/nengliangzhihuan.png"}
+    ],
+    "effectCard": [
+        {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"},
+        {"name": "精选武装","img":"images/effectcard/jingxuanwuzhuang.png"},
+        {"name": "军械库","img":"images/effectcard/junxieku.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"狂铁","img":"images/heroes/kuangtie.png"},
+                {"name":"牛魔","img":"images/heroes/niumao.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "上阵棋子：狂铁、牛魔、弈星\n前三回合觉醒狂铁，一张牛头，一张弈星\n妲己第一张效果牌，分支1：拿研读会（经验+3）回合3升二级；分支2：拿刷新为后续搜牌提供机会；分支3：拿高级人才4本赌姜子牙、司空震、海诺。\n场上三张棋子，加上拍卖4张，如果效果卡拿2张棋子，4回合有机会直接上6人继续保血\n第一轮拍卖：亚瑟>其他日落海英雄"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+                {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
+                {"name":"海诺","img":"images/heroes/hainuo.png"},
+                {"name":"莱西奥","img":"images/heroes/laixiao.png"},
+                {"name":"亚瑟","img":"images/heroes/yase.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "上阵棋子：司空震、姜子牙、海诺、莱西奥、亚瑟、太乙真人\n用觉醒狂铁、牛魔、奕星、拍卖卡和效果卡给的棋子打工过渡，争取赢下，4-7回合期间1-2能量效果卡可以拿下提战力顺便推进妲己天赋进度。妲己核心刷牌循环10回合必须启动，4次刷新有16次机会能量-1，除河洛卡外（司空震、钟馗除外），能量充裕全部买来打出，核心要甄姬、梦奇、庄周、老夫子（上阵需打一次合成）这种免费卡，次选嬴政、武则天、周瑜等这些登场效果卡。如果天赋有同路人，慕名而来，此阶段可以无限刷牌\n第二轮拍卖：姜子牙>司空震>海诺>莱西奥"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":true},
+                {"name":"姜子牙","img":"images/heroes/jiangziya.png"},
+                {"name":"海诺","img":"images/heroes/hainuo.png"},
+                {"name":"莱西奥","img":"images/heroes/laixiao.png"},
+                {"name":"亚瑟","img":"images/heroes/yase.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "上阵棋子：司空震、姜子牙、海诺、莱西奥、亚瑟、太乙真人\n第三轮拍卖：能量超新星>扶摇直上>天籁琴音>超级复印机。\n反复刷牌，重铸装备，调整站位，决赛上钟馗，提高获胜概率，妲己6级天赋优先使用6阶效果卡（双倍）。"
+        }
+    ],
+    "notice": [
+        "1、司空震金色圣剑必备，聚灵法杖是神装，看到必拿。",
+        "2、司空震基础等级和是否觉醒非常重要，直接决定了偷取核心等级的上限。在司空震觉醒后，本体333级，核心666级即可达成999级司空震。",
+        "3、本阵容最怕就是体系不全，如姜子牙一直不来打牌卖牌该刷的等级没刷到，要么就是司空震来得晚，等级起的晚，这个时候就先用海诺打工，能多苟会就多苟会。",
+        "4、小妲己司空震核心在于好的天赋，同路人、慕名而来、危险数字都是最佳经济天赋，可实现无限刷牌。",
+        "5、效果牌的选择优先重铸司空震装备，其次全拿牌，有移花接木也留着打场面上打不过的对手。"
+    ],
+    "positionImage": "images/position/18.xiaodaji_riluohai_daozhuan.png"
+}
+,
     {
         "id": 19,
         "name": "孙小宾三分换帅",
