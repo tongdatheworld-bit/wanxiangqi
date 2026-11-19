@@ -3465,9 +3465,9 @@
         {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"}
     ],
     "equipSecond": [
-        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molvzhiren.png"},
         {"name":"反伤重甲","img":"images/equip/equipsmall/fanshangzhongjia.png"},
-        {"name":"阿克米亚之子","img":"images/equip/equipsmall/akemiya zhizi.png"}
+        {"name":"阿克米亚之子","img":"images/equip/equipsmall/akemiyazhizi.png"}
     ],
     "talentTong": [
         {"name": "复印机", "img": "images/talent/fuyinji.png"},
@@ -3478,7 +3478,7 @@
         {"name": "战术模组", "img": "images/talent/zhanshumozu.png"}
     ],
     "talentJin": [
-        {"name": "升格", "img": "images/talent/shenge.png"},
+        {"name": "升格", "img": "images/talent/shengge.png"},
         {"name": "巨像", "img": "images/talent/juxiang.png"}
     ],
     "effectCard": [
