@@ -5065,7 +5065,7 @@
             "title": "12回合以后",
             "heroList": [
                 {"name":"镜","img":"images/heroes/jing.png"},
-                {"name":"猪八戒","img":"images/zhubajie.png"},
+                {"name":"猪八戒","img":"images/heroes/zhubajie.png"},
                 {"name":"芈月","img":"images/heroes/miyue.png"},
                 {"name":"姬小满","img":"images/heroes/jixiaoman.png"},
                 {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"},
