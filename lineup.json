@@ -3689,24 +3689,127 @@
     {
     "id": 39,
     "name": "明先生山鬼流",
-    "rank": "A",
+    "rank": "S",
     "player": "明先生",
     "playerImg": "images/players/mingxiansheng.png",
-        "alternatePlayer": ["嬴律", "武凤"],
-    "alternatePlayerImg": ["images/players/yinglv.png", "images/players/wufeng.png"],
-    "hard": "简单",
+    "alternatePlayer": ["嬴律"],
+    "alternatePlayerImg": ["images/players/yinglv.png"],
+    "hard": "中等",
     "lineupCode": "80557682811107548（点击复制）",
-    "ban位": ["三分之地"],
+    "ban位": ["河洛", "三分之地"],
     "heroList": [
         {"name":"大司命","img":"images/heroes/dasiming.png","isCore":true},
-        {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":false},
         {"name":"项羽","img":"images/heroes/xiangyu.png","isCore":false},
-        {"name":"蒙恬","img":"images/heroes/mengtian.png","isCore":false},
         {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
-        {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ]
-},
+        {"name":"蒙恬","img":"images/heroes/mengtian.png","isCore":false},
+        {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "项羽",
+            "img": "images/heroes/xiangyu.png",
+            "desc": "牺牲给召唤物提升等级，并让召唤物免疫控制"
+        },
+        {
+            "name": "蒙恬",
+            "img": "images/heroes/mengtian.png",
+            "desc": "蒙恬召唤士兵给山鬼提供等级"
+        },
+        {
+            "name": "米莱狄",
+            "img": "images/heroes/milaidi.png",
+            "desc": "米莱狄召唤机器人给山鬼提高等级"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "钟馗给左右两边棋子提供牺牲效果，触发牺牲效果给山鬼提高等级"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给项羽提供复活效果，项羽牺牲两次给山鬼提供等级"
+        },
+        {
+            "name": "鲁班大师",
+            "img": "images/heroes/lubandashi.png",
+            "desc": "上7人口后，鲁班大师觉醒后上场，机器傀儡复制山鬼等级"
+        }
+    ],
+    "backupHeroList": [],
+    "equipFirst": [
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
+        {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"生命魔典","img":"images/equip/equipsmall/shengmingmodian.png"},
+        {"name":"末世","img":"images/equip/equipsmall/moshi.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"}
+    ],
+    "talentTong": [
+        {"name": "小电池包", "img": "images/talent/xodianchibao.png"},
+        {"name": "复印机", "img": "images/talent/fuyinji.png"}
+    ],
+    "talentYin": [
+        {"name": "图腾启灵", "img": "images/talent/tutengqiling.png"},
+        {"name": "强力小弟", "img": "images/talent/qianglixiaodi.png"}
+    ],
+    "talentJin": [
+        {"name": "灵祭升华", "img": "images/talent/lingjishenghua.png"},
+        {"name": "生生不息", "img": "images/talent/shengshengbuxi.png"}
+    ],
+    "effectCard": [
+        {"name": "八方来援","img":"images/effectcard/bafanglaiyuan.png"},
+        {"name": "夺取之术","img":"images/effectcard/duoquzhishu.png"},
+        {"name": "阵营祝福","img":"images/effectcard/zhenyingzhufu.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "开局卦象选【节】，每回合+2能量，快速攒能量升人口。有弈星直接上阵，没有弈星就空城过渡。\n第一轮拍卖，优先拿米莱狄、项羽、蒙恬、钟馗，没刷到核心就拿普通过渡牌"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"大司命","img":"images/heroes/dasiming.png"},
+                {"name":"项羽","img":"images/heroes/xiangyu.png"},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png"},
+                {"name":"蒙恬","img":"images/heroes/mengtian.png"},
+                {"name":"米莱狄","img":"images/heroes/milaidi.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "棋手升到4级，切换卦象【丰】，拿到免费临时刷新，大量搜寻体系卡。优先觉醒大司命、米莱狄，其余体系卡各留存一张。第6回合解锁命运馈赠秘籍，优先选择加能量的【阴】。\n第二轮拍卖重点抢大司命、鲁班大师、太乙真人。"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"大司命","img":"images/heroes/dasiming.png"},
+                {"name":"项羽","img":"images/heroes/xiangyu.png"},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png"},
+                {"name":"蒙恬","img":"images/heroes/mengtian.png"},
+                {"name":"米莱狄","img":"images/heroes/milaidi.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"},
+                {"name":"鲁班大师","img":"images/heroes/lubandashi.png"}
+            ],
+            "desc": "上阵鲁班大师补强后期战力，继续追大司命等级。\n第三轮拍卖：破镜之证/狂飙/能量超新星"
+        }
+    ],
+    "notice": [
+        "1、核心C位大司命以及往生图腾（山鬼），核心机制三重叠加：牺牲词条英雄给山鬼提升等级，米莱狄、蒙恬召唤物，让山鬼持续吸收等级，鲁班大师傀儡吸收召唤物等级，搭配专属天赋，成型强度极高；",
+        "2、钟馗牺牲给太乙和大司命，太乙复活给项羽，项羽优先牺牲两次，项羽牺牲后山鬼免疫控制并加等级。",
+        "3、圣杯给米莱狄加速放技能加速山鬼启动，鸡爪加快大司命平A次数。优点：上手简单，自动叠等级，成型后山鬼上万血量，伤害极高。缺点：前期强度偏低，容易被血入；核心大司命来牌慢容易断层。",
+        "4、阵容上限：拿到本命天赋【灵祭升华】，等级最高的大河英雄获得所有图腾等级一半的临时等级，直接给进一步给山鬼+临时等级。",
+        "5、后期上鲁班大师，觉醒鲁班大师，傀儡直接偷取场上最高等级召唤物的等级。形成机关傀儡+山鬼的双高等级召唤物组合。"
+    ],
+    "positionImage": "images/position/39_mingxiansheng_shanguiliu.png"
+}
+,
     {
     "id": 40,
     "name": "香香三分登场",
