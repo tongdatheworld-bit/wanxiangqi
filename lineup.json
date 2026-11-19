@@ -4403,25 +4403,130 @@
 },
     {
     "id": 66,
-    "name": "明先生冰池派对",
+    "name": "明先生泳池派对",
     "rank": "A",
     "player": "明先生",
     "playerImg": "images/players/mingxiansheng.png",
-        "alternatePlayer": ["赢律"],
-    "alternatePlayerImg": ["images/players/yinglv.png"],
-    "hard": "简单",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "中等",
     "lineupCode": "130659608655536434（点击复制）",
     "ban位": ["大河流域", "河洛", "三分之地"],
     "heroList": [
         {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":true},
-        {"name":"亚连","img":"images/heroes/yalian.png","isCore":false},
         {"name":"朵莉亚","img":"images/heroes/duoliya.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
         {"name":"苍","img":"images/heroes/cang.png","isCore":false},
+        {"name":"亚连","img":"images/heroes/yalian.png","isCore":false},
         {"name":"雅典娜","img":"images/heroes/yadianna.png","isCore":false},
         {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false}
-    ]
-},
+    ],
+    "funcHeroList": [
+        {
+            "name": "朵莉亚",
+            "img": "images/heroes/duoliya.png",
+            "desc": "持续给全队回血回蓝，场上触发整备效果时，提升场上棋子和阿科米亚核心等级。"
+        },
+        {
+            "name": "少司缘",
+            "img": "images/heroes/shao siyuan.png",
+            "desc": "提供姻缘图腾，全队攻击增加等级"
+        },
+        {
+            "name": "苍",
+            "img": "images/heroes/cang.png",
+            "desc": "召唤物阵亡时产生爆炸效果"
+        },
+        {
+            "name": "亚连",
+            "img": "images/heroes/yalian.png",
+            "desc": "亚连整备给装备最多的棋子提升等级。"
+        },
+        {
+            "name": "雅典娜",
+            "img": "images/heroes/yadianna.png",
+            "desc": "主T，开团效果触发亚连和米莱迪的整备效果"
+        },
+        {
+            "name": "鲁班大师",
+            "img": "images/heroes/lubandashi.png",
+            "desc": "后期觉醒鲁班大师上场后，傀儡复制召唤物等级提高阵容上限"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"},
+        {"name":"阿克米亚之子","img":"images/equip/equipsmall/akemiya zhizi.png"},
+        {"name":"根源之力","img":"images/equip/equipsmall/genyuanzhili.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "日落海新援", "img": "images/talent/riluohaixinyuan.png"}
+    ],
+    "talentYin": [
+        {"name": "因缘际会", "img": "images/talent/yinyuanjihui.png"},
+        {"name": "强力小弟", "img": "images/talent/qianglixiaodi.png"}
+    ],
+    "talentJin": [
+        {"name": "升格", "img": "images/talent/shenge.png"},
+        {"name": "根源之力", "img": "images/talent/genyuanzhili.png"}
+    ],
+    "effectCard": [
+        {"name": "众星照耀","img":"images/effectcard/zhongxingzhaoyao.png"},
+        {"name": "全军动员","img":"images/effectcard/quanjundongyuan.png"},
+        {"name": "照影","img":"images/effectcard/zhaoying.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"狂铁","img":"images/heroes/kuangtie.png"}
+            ],
+            "desc": "前期可以拿狂铁过渡；拿弈星之后升级3本找体系卡，棋手二级时，免费刷新遇到米莱迪、亚连可以拿；\n第一轮拍卖：朵莉亚>米莱迪>苍>亚连>少司缘"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"米莱狄","img":"images/heroes/milaidi.png"},
+                {"name":"朵莉亚","img":"images/heroes/duoliya.png"},
+                {"name":"少司缘","img":"images/heroes/shao siyuan.png"},
+                {"name":"苍","img":"images/heroes/cang.png"},
+                {"name":"亚连","img":"images/heroes/yalian.png"},
+                {"name":"雅典娜","img":"images/heroes/yadianna.png"}
+            ],
+            "desc": "4回合升3级开始找牌；觉醒优先朵莉亚和米莱迪。米莱迪、朵莉亚觉醒之后就可以升4级找雅典娜。\n第二轮拍卖：雅典娜"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"米莱狄","img":"images/heroes/milaidi.png"},
+                {"name":"朵莉亚","img":"images/heroes/duoliya.png"},
+                {"name":"少司缘","img":"images/heroes/shao siyuan.png"},
+                {"name":"苍","img":"images/heroes/cang.png"},
+                {"name":"亚连","img":"images/heroes/yalian.png"},
+                {"name":"雅典娜","img":"images/heroes/yadianna.png"},
+                {"name":"鲁班大师","img":"images/heroes/lubandashi.png"}
+            ],
+            "desc": "后期上鲁班大师；鲁班大师傀儡复制召唤物等级提高阵容上限\n第三轮拍卖：众星照耀/能量超新星/扶摇直上"
+        }
+    ],
+    "notice": [
+        "1、核心辅助-朵莉亚：凭借朵莉亚大招的“泳池”，给队友回血回蓝，更快更多的释放技能；亚连、米莱迪每回合的整备配合朵莉亚词条，可以给全员提升等级；少司缘图腾，也可以给全员加等级；后期加鲁班大师。",
+        "2、米莱迪站角落记得带炽热，防止被钩；朵莉亚位于中心，保证“泳池”可以覆盖到全部队友",
+        "3、装备优先给朵莉亚：戒律之刃、圣杯、近卫荣耀；米莱迪：炽热、戒律之刃、自然法杖；肉装都给雅典娜。",
+        "4、最适配天赋升格，拿到大概率提高吃鸡概率。"
+    ],
+    "positionImage": "images/position/66.mingxianshengyongchipaidui.png"
+}
+,
     {
     "id": 67,
     "name": "三分诸葛貂蝉",
