@@ -4975,7 +4975,7 @@
         {"name":"镜","img":"images/heroes/jing.png","isCore":true},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
         {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
-        {"name":"孙尚香","img":"images/heroes/xiangshangxiang.png","isCore":false},
+        {"name":"孙尚香","img":"images/heroes/sunshangxiang.png","isCore":false},
         {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ],
@@ -4992,7 +4992,7 @@
         },
         {
             "name": "孙尚香",
-            "img": "images/heroes/xiangshangxiang.png",
+            "img": "images/heroes/sunshangxiang.png",
             "desc": "登场提供刷新次数"
         },
         {
@@ -5015,7 +5015,7 @@
         {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
     ],
     "equipFirst": [
-        {"name":"无尽之刃","img":"images/equip/equipsmall/wujinzhiren.png"},
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"},
         {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
         {"name":"御灵之纱","img":"images/equip/equipsmall/yulingzhisha.png"}
     ],
@@ -5038,14 +5038,14 @@
     ],
     "effectCard": [
         {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"},
-        {"name": "2阶英雄兑换券","img":"images/effectcard/2jieyingxionghuanduiquan.png"},
+        {"name": "2阶英雄兑换券","img":"images/effectcard/erjieyingxiongduihuanquan.png"},
         {"name": "能量超新星","img":"images/effectcard/nengliangchaoxinxing.png"}
     ],
     "runStage": [
         {
             "title": "1-3回合",
             "heroList": [
-                {"name":"孙尚香","img":"images/heroes/xiangshangxiang.png"},
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"}
             ],
             "desc": "看其他棋手是前期还是后期棋手，选择连胜开或者弈星连败升3。一般都是连胜开，选择牛魔、弈星、香香，香香的觉醒可以留到2本或者3本打锦囊。\n第一轮拍卖：镜>猪八戒>芈月>姬小满"
@@ -5056,7 +5056,7 @@
                 {"name":"镜","img":"images/heroes/jing.png"},
                 {"name":"猪八戒","img":"images/heroes/zhubajie.png"},
                 {"name":"芈月","img":"images/heroes/miyue.png"},
-                {"name":"孙尚香","img":"images/heroes/xiangshangxiang.png"},
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png"},
                 {"name":"姬小满","img":"images/heroes/jixiaoman.png"}
             ],
             "desc": "可拿曹c过渡拿免费刷新；宝藏牌来复制场上3张牌时曹c下场；前期优先觉醒小满，留小满等复制镜；牌没觉醒时，宝藏牌优先选复制场上3张牌；都觉醒时，看情况选择，求稳的选4效果牌，赌的选强化镜；在3本刷遗志，有遗志，看情况在10到12回合上4找太乙。\n第二轮拍卖：太乙"
