@@ -4410,7 +4410,7 @@
     "alternatePlayer": [],
     "alternatePlayerImg": [],
     "hard": "中等",
-    "lineupCode": "130659608655536434（点击复制）",
+    "lineupCode": "23141747913267200（点击复制）",
     "ban位": ["大河流域", "河洛", "三分之地"],
     "heroList": [
         {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":true},
@@ -4429,7 +4429,7 @@
         },
         {
             "name": "少司缘",
-            "img": "images/heroes/shao siyuan.png",
+            "img": "images/heroes/shaosiyuan.png",
             "desc": "提供姻缘图腾，全队攻击增加等级"
         },
         {
@@ -4458,12 +4458,12 @@
     ],
     "equipFirst": [
         {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
-        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molvzhiren.png"},
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
     ],
     "equipSecond": [
         {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"},
-        {"name":"阿克米亚之子","img":"images/equip/equipsmall/akemiya zhizi.png"},
+        {"name":"阿克米亚之子","img":"images/equip/equipsmall/akemiyazhizi.png"},
         {"name":"根源之力","img":"images/equip/equipsmall/genyuanzhili.png"}
     ],
     "talentTong": [
@@ -4475,11 +4475,11 @@
         {"name": "强力小弟", "img": "images/talent/qianglixiaodi.png"}
     ],
     "talentJin": [
-        {"name": "升格", "img": "images/talent/shenge.png"},
+        {"name": "升格", "img": "images/talent/shengge.png"},
         {"name": "根源之力", "img": "images/talent/genyuanzhili.png"}
     ],
     "effectCard": [
-        {"name": "众星照耀","img":"images/effectcard/zhongxingzhaoyao.png"},
+        {"name": "众星闪耀","img":"images/effectcard/zhongxingshanyao.png"},
         {"name": "全军动员","img":"images/effectcard/quanjundongyuan.png"},
         {"name": "照影","img":"images/effectcard/zhaoying.png"}
     ],
@@ -4497,7 +4497,7 @@
             "heroList": [
                 {"name":"米莱狄","img":"images/heroes/milaidi.png"},
                 {"name":"朵莉亚","img":"images/heroes/duoliya.png"},
-                {"name":"少司缘","img":"images/heroes/shao siyuan.png"},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"},
                 {"name":"苍","img":"images/heroes/cang.png"},
                 {"name":"亚连","img":"images/heroes/yalian.png"},
                 {"name":"雅典娜","img":"images/heroes/yadianna.png"}
@@ -4509,7 +4509,7 @@
             "heroList": [
                 {"name":"米莱狄","img":"images/heroes/milaidi.png"},
                 {"name":"朵莉亚","img":"images/heroes/duoliya.png"},
-                {"name":"少司缘","img":"images/heroes/shao siyuan.png"},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"},
                 {"name":"苍","img":"images/heroes/cang.png"},
                 {"name":"亚连","img":"images/heroes/yalian.png"},
                 {"name":"雅典娜","img":"images/heroes/yadianna.png"},
