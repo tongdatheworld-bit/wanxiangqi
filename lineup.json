@@ -786,8 +786,8 @@
 ],
 "effectCard": [
     {"name": "吸引人才", "img": "images/effectcard/xiyinrencai.png"},
-    {"name": "二阶英雄兑换券", "img": "images/effectcard/erjieyingxionghuanquan.png"},
-    {"name": "无阵营征召令", "img": "images/effectcard/wuzhengyingzhengzhaoling.png"}
+    {"name": "二阶英雄兑换券", "img": "images/effectcard/erjieyingxiongduihuanquan.png"},
+    {"name": "无阵营征召令", "img": "images/effectcard/wuzhenyingzhengzhaoling.png"}
 ],
     "runStage": [
         {
