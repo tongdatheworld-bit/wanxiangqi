@@ -3750,7 +3750,7 @@
         {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"}
     ],
     "talentTong": [
-        {"name": "小电池包", "img": "images/talent/xodianchibao.png"},
+        {"name": "小电池包", "img": "images/talent/xiaodianchibao.png"},
         {"name": "复印机", "img": "images/talent/fuyinji.png"}
     ],
     "talentYin": [
@@ -3807,7 +3807,7 @@
         "4、阵容上限：拿到本命天赋【灵祭升华】，等级最高的大河英雄获得所有图腾等级一半的临时等级，直接给进一步给山鬼+临时等级。",
         "5、后期上鲁班大师，觉醒鲁班大师，傀儡直接偷取场上最高等级召唤物的等级。形成机关傀儡+山鬼的双高等级召唤物组合。"
     ],
-    "positionImage": "images/position/39_mingxiansheng_shanguiliu.png"
+    "positionImage": "images/position/39.mingxianshengshangui.png"
 }
 ,
     {
