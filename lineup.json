@@ -4962,9 +4962,9 @@
 },
    {
     "id": 85,
-    "name": "马克养镜",
+    "name": "马可养镜",
     "rank": "S",
-    "player": "马克",
+    "player": "马可",
     "playerImg": "images/players/make.png",
     "alternatePlayer": [],
     "alternatePlayerImg": [],
@@ -5080,7 +5080,7 @@
         "3、核心打出位梦奇和老夫子，姬小满、芈月镜未觉醒时可考虑用复制镜复制场上核心卡，后面复制镜复制梦奇或者老夫子。",
         "4、宝藏牌在场上核心卡没觉醒时可选复制场上3名英雄牌，后面全选强化宝藏卡，实在没用选2张宝藏牌或者四张效果卡。"
     ],
-    "positionImage": "images/position/85_make_yangjing.png"
+    "positionImage": "images/position/85.makeyangjing.png"
 }
 ,
     {
