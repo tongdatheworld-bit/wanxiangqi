@@ -3403,24 +3403,133 @@
 
 ,
     {
-        "id": 30,
-        "name": "小妲己蒙恬召唤流",
-        "rank": "A",
-        "player": "小妲己",
-        "playerImg": "images/players/xiaodaji.png",
-        "hard": "中等",
-        "lineupCode": "46221456538793072（点击复制）",
-        "ban位": ["大河流域", "河洛", "三分之地"],
-        "heroList": [
-            {"name":"蒙恬","img":"images/heroes/mengtian.png","isCore":true},
-            {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":false},
-            {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-            {"name":"苍","img":"images/heroes/cang.png","isCore":false},
-            {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
-            {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-        ]
-    },
+    "id": 30,
+    "name": "小妲己蒙恬召唤流",
+    "rank": "S",
+    "player": "小妲己",
+    "playerImg": "images/players/xiaodaji.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "中等",
+    "lineupCode": "25956497680392198（点击复制）",
+    "ban位": ["大河流域", "河洛", "三分之地"],
+    "heroList": [
+        {"name":"蒙恬","img":"images/heroes/mengtian.png","isCore":true},
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+        {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":false},
+        {"name":"苍","img":"images/heroes/cang.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"鲁班大师","img":"images/heroes/lubandashi.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "芈月",
+            "img": "images/heroes/miyue.png",
+            "desc": "芈月驻场，使用效果卡时，给蒙恬提升等级"
+        },
+        {
+            "name": "西施",
+            "img": "images/heroes/xishi.png",
+            "desc": "整备：获得1张高阶推演战术。给蒙恬减少蓝条，更快释放技能"
+        },
+        {
+            "name": "米莱狄",
+            "img": "images/heroes/milaidi.png",
+            "desc": "米莱狄整备给召唤物临时等级。"
+        },
+        {
+            "name": "苍",
+            "img": "images/heroes/cang.png",
+            "desc": "召唤物自爆造成爆炸伤害，召唤次数越多伤害越爆炸"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给蒙恬套复活，提高容错进一步提高蒙恬后期召唤物爆炸伤害"
+        },
+        {
+            "name": "鲁班大师",
+            "img": "images/heroes/lubandashi.png",
+            "desc": "后期觉醒后打出，提高阵容上限"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"霸者重铠","img":"images/equip/equipsmall/bazhezhongkai.png"},
+        {"name":"聚灵水晶","img":"images/equip/equipsmall/julingshuijing.png"},
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"}
+    ],
+    "equipSecond": [
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"反伤重甲","img":"images/equip/equipsmall/fanshangzhongjia.png"},
+        {"name":"阿克米亚之子","img":"images/equip/equipsmall/akemiya zhizi.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "刻舟减蓝", "img": "images/talent/kezhoujianlan.png"}
+    ],
+    "talentYin": [
+        {"name": "强力小弟", "img": "images/talent/qianglixiaodi.png"},
+        {"name": "战术模组", "img": "images/talent/zhanshumozu.png"}
+    ],
+    "talentJin": [
+        {"name": "升格", "img": "images/talent/shenge.png"},
+        {"name": "巨像", "img": "images/talent/juxiang.png"}
+    ],
+    "effectCard": [
+        {"name": "破镜之证","img":"images/effectcard/pojingzhizheng.png"},
+        {"name": "发号施令","img":"images/effectcard/fahaoshiling.png"},
+        {"name": "众星拱月","img":"images/effectcard/zhongxinggongyue.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "1-3回合单挂弈星快速升三本。\n第一轮拍卖：蒙恬>芈月>米莱迪"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"蒙恬","img":"images/heroes/mengtian.png"},
+                {"name":"芈月","img":"images/heroes/miyue.png"},
+                {"name":"西施","img":"images/heroes/xishi.png"},
+                {"name":"米莱狄","img":"images/heroes/milaidi.png"},
+                {"name":"苍","img":"images/heroes/cang.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "3本找体系卡，蒙恬或者芈月觉醒一个，升4本，6人口上太乙，留打出位打老夫子、蒙犽、庄周，梦奇，获得效果牌，提升蒙恬等级。\n第二轮拍卖：太乙>鲁班大师>姜子牙。"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"蒙恬","img":"images/heroes/mengtian.png"},
+                {"name":"芈月","img":"images/heroes/miyue.png"},
+                {"name":"西施","img":"images/heroes/xishi.png"},
+                {"name":"米莱狄","img":"images/heroes/milaidi.png"},
+                {"name":"苍","img":"images/heroes/cang.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"},
+                {"name":"鲁班大师","img":"images/heroes/lubandashi.png"}
+            ],
+            "desc": "12回合以后（拉高强度，补容错）上6本，妲己让每回合效果卡用两次，优先用拍卖拿的6级效果后，后用西施的战术牌，不断提升蒙恬等级。决赛空位给钟馗或鲁班大师。\n第三轮拍卖：能量超新星/众星拱月/破镜之证。"
+        }
+    ],
+    "notice": [
+        "1、成型周期偏长，前期没觉醒容易被血入；怕爆发超高的阵容，蒙恬被秒输出直接断档。",
+        "2、主C蒙恬等级来源：芈月+打出效果卡。等级加速：打出位，打老夫子/蒙犽/庄周/梦奇。买牌妲己多给效果卡。阵容战力来源：蒙恬高等级，西施给战术牌降低蒙恬蓝量，苍给召唤物自爆，米莱狄整备给召唤物临时等级。",
+        "3、蒙恬装备圣杯、水晶、霸者重铠。",
+        "4、6级效果卡，小妲己上6级双倍用。6级效果卡用完，双倍效果卡用西施的把蒙恬蓝量降到10。",
+        "5、如果第二轮拍卖拿到姜子牙，可以常驻姜子牙打卖卡增加全队等级。"
+    ],
+    "positionImage": "images/position/30.xiaodajimengtian.png"
+}
+,
     {
         "id": 31,
         "name": "小妲己算盘",
