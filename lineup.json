@@ -4963,20 +4963,126 @@
     {
     "id": 85,
     "name": "马克养镜",
-    "rank": "B",
-    "player": "马可",
+    "rank": "S",
+    "player": "马克",
     "playerImg": "images/players/make.png",
-    "hard": "简单",
-    "lineupCode": "37775967858784280（点击复制）",
-    "ban位": ["河洛", "三分之地"],
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "困难",
+    "lineupCode": "107584241312667656",
+    "ban位": ["河洛", "大河流域"],
     "heroList": [
-        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
-        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
-        {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
         {"name":"镜","img":"images/heroes/jing.png","isCore":true},
+        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"孙尚香","img":"images/heroes/xiangshangxiang.png","isCore":false},
+        {"name":"姬小满","img":"images/heroes/jixiaoman.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ]
-},
+    ],
+    "funcHeroList": [
+        {
+            "name": "猪八戒",
+            "img": "images/heroes/zhubajie.png",
+            "desc": "猪八戒驻场，合成时，同阶棋子同步升级"
+        },
+        {
+            "name": "芈月",
+            "img": "images/heroes/miyue.png",
+            "desc": "芈月驻场，打出效果卡给镜提升等级"
+        },
+        {
+            "name": "孙尚香",
+            "img": "images/heroes/xiangshangxiang.png",
+            "desc": "登场提供刷新次数"
+        },
+        {
+            "name": "姬小满",
+            "img": "images/heroes/jixiaoman.png",
+            "desc": "姬小满驻场，卖出场上棋子提供临时免费刷新"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "太乙挂镜，提供复活，提高容错"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"无尽之刃","img":"images/equip/equipsmall/wujinzhiren.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"御灵之纱","img":"images/equip/equipsmall/yulingzhisha.png"}
+    ],
+    "equipSecond": [
+        {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"},
+        {"name":"破阵战芒","img":"images/equip/equipsmall/pozhenzhanmang.png"},
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"}
+    ],
+    "talentTong": [
+        {"name": "节能商店", "img": "images/talent/jienengshangdian.png"},
+        {"name": "银算盘", "img": "images/talent/yinsuanpan.png"}
+    ],
+    "talentYin": [
+        {"name": "群英荟萃", "img": "images/talent/qunyinghuicui.png"},
+        {"name": "金算盘", "img": "images/talent/jinsuanpan.png"}
+    ],
+    "talentJin": [
+        {"name": "全副武装", "img": "images/talent/quanfuwuzhuang.png"},
+        {"name": "慕名而来", "img": "images/talent/mumingerlai.png"}
+    ],
+    "effectCard": [
+        {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"},
+        {"name": "2阶英雄兑换券","img":"images/effectcard/2jieyingxionghuanduiquan.png"},
+        {"name": "能量超新星","img":"images/effectcard/nengliangchaoxinxing.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"孙尚香","img":"images/heroes/xiangshangxiang.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "看其他棋手是前期还是后期棋手，选择连胜开或者弈星连败升3。一般都是连胜开，选择牛魔、弈星、香香，香香的觉醒可以留到2本或者3本打锦囊。\n第一轮拍卖：镜>猪八戒>芈月>姬小满"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"镜","img":"images/heroes/jing.png"},
+                {"name":"猪八戒","img":"images/heroes/zhubajie.png"},
+                {"name":"芈月","img":"images/heroes/miyue.png"},
+                {"name":"孙尚香","img":"images/heroes/xiangshangxiang.png"},
+                {"name":"姬小满","img":"images/heroes/jixiaoman.png"}
+            ],
+            "desc": "可拿曹c过渡拿免费刷新；宝藏牌来复制场上3张牌时曹c下场；前期优先觉醒小满，留小满等复制镜；牌没觉醒时，宝藏牌优先选复制场上3张牌；都觉醒时，看情况选择，求稳的选4效果牌，赌的选强化镜；在3本刷遗志，有遗志，看情况在10到12回合上4找太乙。\n第二轮拍卖：太乙"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"镜","img":"images/heroes/jing.png"},
+                {"name":"猪八戒","img":"images/zhubajie.png"},
+                {"name":"芈月","img":"images/heroes/miyue.png"},
+                {"name":"姬小满","img":"images/heroes/jixiaoman.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"},
+                {"name":"吕布","img":"images/heroes/lvbu.png"}
+            ],
+            "desc": "3本上镜芈月猪小满香香，香香觉醒就丢，有算盘时香香不用留场；上4上5找一张传承，到后期遗志成海月或吕布，打单核海月扁鹊，打群吕布；禁大河上钟馗，禁河洛上瑶妹鬼谷子；4本复制太乙，金太乙回手，放普通太乙在场上，金太乙留给遗志的5阶大哥。\n第三轮拍卖：扶摇直上/能量超新星/4张效果卡"
+        }
+    ],
+    "notice": [
+        "1、禁河洛或大河可玩，推荐禁河洛玩。通过芈月和镜的词条打效果牌，提升镜的等级，复制镜复制梦奇提供效果牌，小满提供刷新，太乙提供容错，猪提供前排和合成等级。前中期通过镜稳血，后期看场上情况遗志给5阶大哥。",
+        "2、棋手3级时一直刷牌到12回合后才考虑升级，持续提高镜的等级。",
+        "3、核心打出位梦奇和老夫子，姬小满、芈月镜未觉醒时可考虑用复制镜复制场上核心卡，后面复制镜复制梦奇或者老夫子。",
+        "4、宝藏牌在场上核心卡没觉醒时可选复制场上3名英雄牌，后面全选强化宝藏卡，实在没用选2张宝藏牌或者四张效果卡。"
+    ],
+    "positionImage": "images/position/85_make_yangjing.png"
+}
+,
     {
     "id": 86,
     "name": "瑶妹大河开团",
