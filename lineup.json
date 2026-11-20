@@ -2498,25 +2498,60 @@
         "equip": []
     },
     {
-        "id": 22,
-        "name": "安琪拉爆盾廉颇",
-        "rank": "S",
-        "player": "安琪拉",
-        "playerImg": "images/players/anqila.png",
-        "alternatePlayer": ["小妲己"],
-    "alternatePlayerImg": ["images/players/xiaaodaji.png"],
-        "hard": "简单",
-        "lineupCode": "24263218411795460（点击复制）",
-        "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
-        "heroList": [
-            {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
-            {"name":"廉颇","img":"images/heroes/lianpo.png","isCore":true},
-            {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-            {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
-            {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-        ]
+    "id": 22,
+    "name": "安琪拉爆盾廉颇",
+    "rank": "A",
+    "player": "安琪拉",
+    "alternatePlayer": ["小妲己"],
+    "hard": "简单",
+    "lineupCode": "98577042057930754（点击复制）",
+    "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"廉颇","img":"images/heroes/lianpo.png","isCore":true},
+        {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "subHeroList": [
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png"},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png"},
+        {"name":"梦奇","img":"images/heroes/mengqi.png"}
+    ],
+    "equip": {
+        "best": ["霸者重铠", "不死鸟之眼", "反伤重甲"],
+        "alternate": ["机器头", "护命灵珠", "炽热支配者"]
     },
+    "talent": {
+        "copper": ["逐鹿新援", "复印机"],
+        "silver": ["自适应武装", "重装上阵"],
+        "gold": ["点兵点将", "护命灵珠"]
+    },
+    "effectCard": ["2阶英雄兑换券", "扶摇直上", "能量超新星"],
+    "stageOperate": [
+        {
+            "round": "1-3回合",
+            "desc": "上阵棋子：牛魔、弈星、干将莫邪\n弈星/牛魔打工，飞行器先挂弈星过渡，不D牌，存钱升本。优先拿棋手经验、资源类天赋。如外面强度过高，可以适度卖血攒经济。\n第一轮拍卖：廉颇>芈月>西施"
+        },
+        {
+            "round": "4-11回合",
+            "desc": "上阵棋子：廉颇、墨子、芈月、西施、扁鹊、太乙真人\n升到3本，小D搜廉颇、西施、墨子、芈月，搜到廉颇立刻把飞行器切换绑定廉颇，优先觉醒廉颇、芈月，用效果牌，用来触发芈月等级加成。后升5本找扁鹊，觉醒西施，打出效果牌减少廉颇蓝条。\n第二轮拍卖：扁鹊>太乙真人>鲁班大师"
+        },
+        {
+            "round": "12回合以后",
+            "desc": "上阵棋子：廉颇、墨子、芈月、西施、扁鹊、太乙真人\n搜到太乙直接上场补容错。整套体系全部就位，西施无限给廉颇刷推演战术，廉颇高频开盾。护盾破碎持续叠加墨子血量，扁鹊炸盾反复清场。\n第三轮拍卖：扶摇直上/能量超新星/军械库"
+        }
+    ],
+    "tips": [
+        "1、廉颇核心装备霸者重铠，不死鸟之眼、反伤甲，备选炽热支配者，神器推荐机器头、护命灵珠。",
+        "2、打出位选择梦奇、老夫子、庄周，加速获取效果牌提高廉颇等级。",
+        "3、期间有小明可以牵廉颇提升真实等级。",
+        "4、奇想优选：效果牌、低阶牌、同阵营、补给",
+        "5、改装优选：坐火箭、保送升级、拿来吧你、壮胆、变胖"
+    ]
+}
+,
     {
     "id": 23,
     "name": "阿离伞狄仁杰",
