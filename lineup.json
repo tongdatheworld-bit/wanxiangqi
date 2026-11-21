@@ -2757,7 +2757,7 @@
     "player": "阿离",
     "playerImg": "images/players/ali.png",
     "alternatePlayer": ["姜导","安琪拉"],
-    "alternatePlayerImg": ["images/players/jiangdao.png","images/players/jiangdao.png","images/players/yaomei.png","images/players/anqila.png"],
+    "alternatePlayerImg": ["images/players/jiangdao.png","images/players/anqila.png"],
     "hard": "简单",
     "lineupCode": "43406084531758154（点击复制）",
     "ban位": ["大河流域", "河洛", "日落海"],
