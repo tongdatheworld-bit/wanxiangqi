@@ -4970,11 +4970,11 @@
         {"name":"魂祭绝刃","img":"images/equip/equipsmall/hunjijueren.png"}
     ],
     "talentTong": [
-        {"name": "日落海新援", "img": "images/talent/ruoluohaixinyuan.png"},
+        {"name": "日落海新援", "img": "images/talent/riluohaixinyuan.png"},
         {"name": "防御领域", "img": "images/talent/fangyulingyu.png"}
     ],
     "talentYin": [
-        {"name": "日落海来客", "img": "images/talent/ruoluohailaike.png"},
+        {"name": "日落海来客", "img": "images/talent/riluohailaike.png"},
         {"name": "人才济济", "img": "images/talent/rencaijiji.png"}
     ],
     "talentJin": [
@@ -5014,7 +5014,7 @@
                 {"name":"韩信","img":"images/heroes/hanxin.png"},
                 {"name":"雅典娜","img":"images/heroes/yadianna.png"},
                 {"name":"云中君","img":"images/heroes/yunzhongjun.png"},
-                {"name":"亚连","img":"images/yalian.png"},
+                {"name":"亚连","img":"images/heroes/yalian.png"},
                 {"name":"狂铁","img":"images/heroes/kuangtie.png"},
                 {"name":"瑶","img":"images/heroes/yao.png"},
                 {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
@@ -5861,24 +5861,6 @@
 },
     {
     "id": 87,
-    "name": "姜导炸盾流",
-    "rank": "B",
-    "player": "姜导",
-    "playerImg": "images/players/jiangdao.png",
-    "hard": "简单",
-    "lineupCode": "39464817719035912（点击复制）",
-    "ban位": ["大河流域", "三分之地", "日落海"],
-    "heroList": [
-        {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
-        {"name":"芈月","img":"images/heroes/miyue.png","isCore":true},
-        {"name":"廉颇","img":"images/heroes/lianpo.png","isCore":false},
-        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ]
-},
-    {
-    "id": 88,
     "name": "姜导炸盾廉颇",
     "rank": "B",
     "player": "姜导",
