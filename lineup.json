@@ -4903,22 +4903,137 @@
     {
     "id": 65,
     "name": "姜导封神韩信",
-    "rank": "A",
+    "rank": "S",
     "player": "姜导",
     "playerImg": "images/players/jiangdao.png",
+    "alternatePlayer": ["明先生", "武凤"],
+    "alternatePlayerImg": ["images/players/mingxiansheng.png", "images/players/wufeng.png"],
     "hard": "中等",
-    "lineupCode": "9632021508689962（点击复制）",
-    "ban位": ["逐鹿", "河洛", "日落海"],
+    "lineupCode": "42844996283026444",
+    "ban位": ["逐鹿", "河洛", "三分之地"],
     "heroList": [
-        {"name":"狂铁","img":"images/heroes/kuangtie.png","isCore":false},
-        {"name":"亚连","img":"images/heroes/yalian.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
-        {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
         {"name":"韩信","img":"images/heroes/hanxin.png","isCore":true},
         {"name":"雅典娜","img":"images/heroes/yadianna.png","isCore":false},
+        {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
+        {"name":"亚连","img":"images/heroes/yalian.png","isCore":false},
+        {"name":"狂铁","img":"images/heroes/kuangtie.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ]
-},
+    ],
+    "funcHeroList": [
+        {
+            "name": "雅典娜",
+            "img": "images/heroes/yadianna.png",
+            "desc": "开团效果，开团时给亚连、狂铁提供整备效果，触发韩信被动加等级"
+        },
+        {
+            "name": "亚连",
+            "img": "images/heroes/yalian.png",
+            "desc": "整备效果，给装备最多的棋子加等级，触发韩信被动加等级"
+        },
+        {
+            "name": "狂铁",
+            "img": "images/heroes/kuangtie.png",
+            "desc": "整备效果，自身及阿克米亚核心加等级，触发韩信被动加等级"
+        },
+        {
+            "name": "云中君",
+            "img": "images/heroes/yunzhongjun.png",
+            "desc": "开团给装备最多的棋子加等级，触发韩信被动加等级"
+        },
+        {
+            "name": "瑶",
+            "img": "images/heroes/yao.png",
+            "desc": "开团分装备，保护韩信，施加控制效果，触发韩信被动加等级"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "开团保护韩信，增加容错，触发韩信被动加等级"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"}
+    ],
+    "equipSecond": [
+        {"name":"末世","img":"images/equip/equipsmall/moshi.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"魂祭绝刃","img":"images/equip/equipsmall/hunjijueren.png"}
+    ],
+    "talentTong": [
+        {"name": "日落海新援", "img": "images/talent/ruoluohaixinyuan.png"},
+        {"name": "防御领域", "img": "images/talent/fangyulingyu.png"}
+    ],
+    "talentYin": [
+        {"name": "日落海来客", "img": "images/talent/ruoluohailaike.png"},
+        {"name": "人才济济", "img": "images/talent/rencaijiji.png"}
+    ],
+    "talentJin": [
+        {"name": "全副武装", "img": "images/talent/quanfuwuzhuang.png"},
+        {"name": "人才济济", "img": "images/talent/rencaijiji.png"}
+    ],
+    "effectCard": [
+        {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"},
+        {"name": "闪现突击者","img":"images/effectcard/shanxiantujizhe.png"},
+        {"name": "广纳良才","img":"images/effectcard/guangnaliangcai.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
+                {"name":"狂铁","img":"images/heroes/kuangtie.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "上阵棋子：牛魔、狂铁、弈星\n优先拿弈星、狂铁打工，小幅连败收攒经济升人口。选秀优先抢体系卡，没有就拿日落海棋子打工。血量健康可以继续贪经济，不用强行保血，目标攒钱等韩信。\n第一轮拍卖：云中君>瑶"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"韩信","img":"images/heroes/hanxin.png"},
+                {"name":"雅典娜","img":"images/heroes/yadianna.png"},
+                {"name":"云中君","img":"images/heroes/yunzhongjun.png"},
+                {"name":"亚连","img":"images/heroes/yalian.png"},
+                {"name":"狂铁","img":"images/heroes/kuangtie.png"},
+                {"name":"瑶","img":"images/heroes/yao.png"}
+            ],
+            "desc": "上阵棋子：韩信、雅典娜、云中君、亚连、狂铁、瑶\n4-7回合（上4人口，找体系卡，准备启动）效果牌拿给牌的（日落海最好），快速拉到4级开始找到韩信，并立刻【钦定主角】绑定韩信。每回合尽力打满钦定主角5次上限，废牌先打出再卖掉，不浪费等级层数。目标尽快把韩信养到25级解锁封神一瞬。\n8-12回合（5人口成型，封神爆发期）\n卡在5人口运营，不用急着升6。韩信使用封神一瞬，开启双倍等级成长，凑齐三件装备给到韩信，吃满亚连、云中君效果。利用雅典娜开团 + 亚连狂铁整备，触发韩信被动，配合姜导钦定主角双线叠级。\n第二轮拍卖：韩信>雅典娜>太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"韩信","img":"images/heroes/hanxin.png"},
+                {"name":"雅典娜","img":"images/heroes/yadianna.png"},
+                {"name":"云中君","img":"images/heroes/yunzhongjun.png"},
+                {"name":"亚连","img":"images/yalian.png"},
+                {"name":"狂铁","img":"images/heroes/kuangtie.png"},
+                {"name":"瑶","img":"images/heroes/yao.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "上阵棋子：韩信、雅典娜、云中君、亚连、狂铁、瑶、太乙真人\n12回合以后（无限叠级，决战吃鸡）\n拍卖拿扶摇直上，能量超新星，上6解锁完美演出，体系继续叠等级，钦定主角5次必拿满，太乙真人留在场上，复活保护韩信，数百级韩信，碾压全场。\n第三轮拍卖：扶摇直上/能量超新星/军械库"
+        }
+    ],
+    "notice": [
+        "1、韩信词条：场上任意英雄触发整备或者开团，韩信获得永久等级，觉醒后收益翻倍。雅典娜开团，同时触发亚连、狂铁的整备效果；亚连、狂铁整备生效，再次触发韩信增级，形成连环循环。",
+        "2、姜导钦定主角：每回合打出英雄 / 效果牌，韩信稳定额外涨等级，独立于韩信词条，两套增长互不冲突。打出位置优先级：露娜>梦奇>甄姬>庄周>蒙犽",
+        "3、额外等级来源：亚连 + 云中君装备词条，韩信穿戴三件装备，持续获取等级加成。",
+        "4、封神一瞬强化：韩信25级解锁封神一瞬，后续所有等级提升直接 + 1，叠级收益直接翻倍。太乙真人复活保命，防止韩信被秒打断整套等级循环；瑶妹附身给韩信增加属性。",
+        "5、核心装备（韩信）必须凑齐三件装备，激活亚连 + 云中君装备增级词条，神器优先锻造末世。后期：无尽+名刀+末世，爆发、续航、追击拉满。挂件捡剩余散件装备，多余装备可以分解。",
+        "6、最优天赋推荐天赋原则：优先经济、日落海棋子、等级成长，其次战斗增伤。"
+    ],
+    "positionImage": "images/position/65_jiangdao_fengshenhanxin.png"
+}
+,
     {
     "id": 66,
     "name": "明先生泳池派对",
