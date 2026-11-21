@@ -4083,21 +4083,129 @@
     "rank": "A",
     "player": "安琪拉",
     "playerImg": "images/players/anqila.png",
-        "alternatePlayer": ["小妲己"],
-    "alternatePlayerImg": ["images/players/xiaodaji.png"],
+    "alternatePlayer": ["阿离"],
+    "alternatePlayerImg": ["images/players/ali.png"],
     "hard": "中等",
-    "lineupCode": "56914315710236676（点击复制）",
+    "lineupCode": "7942099170929678",
     "ban位": ["河洛", "三分之地", "日落海"],
     "heroList": [
+        {"name":"刘邦","img":"images/heroes/liubang.png","isCore":true},
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
         {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
-        {"name":"刘邦","img":"images/heroes/liubang.png","isCore":true}
-    ]
-},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "鬼谷子",
+            "img": "images/heroes/guiguzi.png",
+            "desc": "在场时，召唤往生图腾，刘邦炸盾给刘邦提供永久等级，鬼谷子给附近棋子分配玄微子"
+        },
+        {
+            "name": "少司缘",
+            "img": "images/heroes/shaosiyuan.png",
+            "desc": "在场时，召唤因缘图腾，刘邦炸盾给刘邦提供永久等级"
+        },
+        {
+            "name": "大司命",
+            "img": "images/heroes/dasiming.png",
+            "desc": "在场时，召唤先知图腾，刘邦炸盾给刘邦提供永久等级"
+        },
+        {
+            "name": "瑶",
+            "img": "images/heroes/yao.png",
+            "desc": "开团给全队分装备，附身刘邦保护刘邦，并提供控制效果"
+        },
+        {
+            "name": "扁鹊",
+            "img": "images/heroes/bianque.png",
+            "desc": "友方单位护盾被击破时，对周围敌人造成该英雄最大生命值10%（20%）的法术伤害（冷却1秒）。给刘邦提供炸盾效果"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给刘邦套复活，提高容错。"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"纯净苍穹","img":"images/equip/equipsmall/chunjingcangqiong.png"},
+        {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"},
+        {"name":"金色圣剑","img":"images/equip/equipsmall/jinseshengjian.png"}
+    ],
+    "equipSecond": [
+        {"name":"末世","img":"images/equip/equipsmall/moshi.png"},
+        {"name":"噬神之书","img":"images/equip/equipsmall/shishenzhishu.png"},
+        {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"}
+    ],
+    "talentTong": [
+        {"name": "小电池包", "img": "images/talent/xiaodianchibao.png"},
+        {"name": "微弱优势", "img": "images/talent/weiruoyoushi.png"}
+    ],
+    "talentYin": [
+        {"name": "图腾启灵", "img": "images/talent/tutengqiling.png"},
+        {"name": "生命绽放", "img": "images/talent/shengmingzhanfang.png"}
+    ],
+    "talentJin": [
+        {"name": "虚妄转生", "img": "images/talent/xuwangzhuansheng.png"},
+        {"name": "灵祭升华", "img": "images/talent/lingjishenghua.png"}
+    ],
+    "effectCard": [
+        {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"},
+        {"name": "能量超新星","img":"images/effectcard/nengliangchaoxinxing.png"},
+        {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"干将","img":"images/heroes/ganjiang.png"}
+            ],
+            "desc": "看场外局势，能胜上弈星、牛魔、干将打工，飞行器挂干将过渡。不D牌，存钱升本。外面强度都很高，单挂弈星快速升本找体系，天赋优先棋手经验、能量类。\n第一轮拍卖：鬼谷子>少司缘>明世隐"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"刘邦","img":"images/heroes/liubang.png"},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"},
+                {"name":"大司命","img":"images/heroes/dasiming.png"},
+                {"name":"瑶","img":"images/heroes/yao.png"},
+                {"name":"扁鹊","img":"images/heroes/bianque.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "升到4本，大D搜刘邦、扁鹊；鬼谷子、少司缘、大司命各留1张即可，不用觉醒。找到刘邦后把飞行器切换绑定刘邦，开始攒图腾叠等级。搜到太乙可以直接上场补容错。\n第二轮拍卖：刘邦>扁鹊>太乙真人>大司命"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"刘邦","img":"images/heroes/liubang.png"},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"},
+                {"name":"大司命","img":"images/heroes/dasiming.png"},
+                {"name":"瑶","img":"images/heroes/yao.png"},
+                {"name":"扁鹊","img":"images/heroes/bianque.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "阵容全部补齐，每回合稳定生成图腾，刘邦等级持续暴涨。利用太乙复活防止被刺客秒杀。靠扁鹊炸盾清场，决赛碾压对手。\n第三轮拍卖：扶摇直上/能量超新星/众星拱月/军械库"
+        }
+    ],
+    "notice": [
+        "1、三个图腾英雄必备，最大化刘邦等级。",
+        "2、自爆前期少炸自己人，尽量保血；中后期多炸自己人，快速拉高全队等级",
+        "3、期间有小明可以牵廉颇提升真实等级。",
+        "4、奇想优选：同阵营、补给",
+        "5、改装优选：上强度、站好了、杠上了、秒变脆皮。"
+    ],
+    "positionImage": "images/position/44_anqila_liubangzhadun.png"
+}
+,
 {
     "id": 45,
     "name": "重装凯（兄妹）",
