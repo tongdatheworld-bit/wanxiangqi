@@ -6121,7 +6121,7 @@
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
     ],
     "equipSecond": [
-        {"name":"魔律之刃","img":"images/equip/equipsmall/moluzhiren.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molvzhiren.png"},
         {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
         {"name":"噬神之书","img":"images/equip/equipsmall/shishenzhishu.png"}
     ],
@@ -6158,7 +6158,7 @@
                 {"name":"蔡文姬","img":"images/heroes/caiwenji.png","isCore":false},
                 {"name":"小乔","img":"images/heroes/xiaoqiao.png","isCore":false},
                 {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
-                {"name":"孙尚香","img":"images/heroes/shangxiang.png","isCore":false}
+                {"name":"孙尚香","img":"images/heroes/sunshangxiang.png","isCore":false}
             ],
             "desc": "上阵棋子：曹操、貂蝉、蔡文姬、小乔、甄姬、孙尚香\n卡等级慢搜孙尚香、蔡文姬、曹操、貂蝉，找到四张卡启动，到4级找小乔，利于万镜复制小乔觉醒，8-11回合：拍卖注意抢吕布、甄姬、小乔，攒能量提升棋手等级，拉至5级慢D核心组件；留存遗志、换帅效果卡，两张均为三星，建议升6前D到。\n第二轮拍卖：小乔>甄姬>露娜>吕布>周瑜"
         },
