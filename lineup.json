@@ -2495,7 +2495,7 @@
             {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
             {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":false}
         ],
-        "equip": [],
+        "equip": []
     },
     {
     "id": 22,
@@ -5178,25 +5178,136 @@
         {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false}
     ]
 },
-    {
+   {
     "id": 68,
     "name": "姜导封神玄策",
     "rank": "A",
     "player": "姜导",
     "playerImg": "images/players/jiangdao.png",
+    "alternatePlayer": ["阿离"],
+    "alternatePlayerImg": ["images/players/ali.png"],
     "hard": "简单",
-    "lineupCode": "3833645743492112（点击复制）",
+    "lineupCode": "122783890055024658（点击复制）",
     "ban位": ["大河流域", "逐鹿", "日落海", "三分之地"],
     "heroList": [
-        {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
         {"name":"百里玄策","img":"images/heroes/bailixuance.png","isCore":true},
+        {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
         {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
         {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
         {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
         {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ]
-},
+    ],
+    "funcHeroList": [
+        {
+            "name": "李元芳",
+            "img": "images/heroes/liyuanfang.png",
+            "desc": "驻场整备，为玄策提供古币。"
+        },
+        {
+            "name": "盾山",
+            "img": "images/heroes/dunshan.png",
+            "desc": "盾山牺牲给古币，打出古币给玄策提供等级，增加姜导的豆。"
+        },
+        {
+            "name": "程咬金",
+            "img": "images/heroes/chengyaojin.png",
+            "desc": "驻场整备，为玄策提供古币。"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "降低对方主C等级。"
+        },
+        {
+            "name": "上官婉儿",
+            "img": "images/heroes/shangguanwaner.png",
+            "desc": "驻场整备，为玄策提供古币。"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "为玄策提供复活，保容错。"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"甄姬","img":"images/heroes/zhenji.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhuzhuzhufeng.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"无尽之刃","img":"images/equip/equipsmall/wujinzhiren.png"}
+    ],
+    "equipSecond": [
+        {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
+        {"name":"末世","img":"images/equip/equipsmall/moshi.png"},
+        {"name":"破阵战芒","img":"images/equip/equipsmall/pozhenzhanmang.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "刻舟减蓝", "img": "images/talent/kezhoujianlan.png"}
+    ],
+    "talentYin": [
+        {"name": "古币翻新", "img": "images/talent/gubinfanxin.png"},
+        {"name": "幸运硬币", "img": "images/talent/xingyunyingbi.png"}
+    ],
+    "talentJin": [
+        {"name": "升职", "img": "images/talent/shengzhi.png"},
+        {"name": "全副武装", "img": "images/talent/quanfuwuzhuang.png"}
+    ],
+    "effectCard": [
+        {"name": "古币多多", "img": "images/effectcard/gubinduoduo.png"},
+        {"name": "遗志", "img": "images/effectcard/yizhi.png"},
+        {"name": "扶摇直上", "img": "images/effectcard/fuyaozhishang.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [],
+            "desc": "1回合：只买1张一星打工卡，无牌直接空城，不乱花钱。\n2回合：有奕星直接升2人口，利用免费刷新找玄策、元芳、盾山，不硬D。\n3回合：重点搜玄策！找到玄策立刻锁定主角绑定核心。\n第一轮拍卖：百里玄策>程咬金>盾山"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"百里玄策","img":"images/heroes/bailixuance.png","isCore":true},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
+                {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "上阵棋子：\n拍卖结束，慢速D牌，争取觉醒玄策，盾山只留一张，元芳不急追，可以用梦奇来拿。玄策觉醒后，升4人口补齐体系，空位全部挂高质量打工卡，稳住血量、保留经济。疯狂叠玄策等级，全力冲刺25级解锁封神一瞬秘技，解锁封神一瞬，吃满品阶×5高额初始等级，开启双倍成长。\n囤好【临阵摸枪】，玄策单回合击杀五人以上再使用，单次暴涨二三十级。\n第二轮拍卖：太乙真人>露娜>上官婉儿"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"百里玄策","img":"images/heroes/bailixuance.png","isCore":true},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
+                {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "第三轮拍卖：扶摇直上/能量超新星/军械库\n持续打牌叠等级，轻松养成几百级玄策。6级大招完美演出，玄策自带吸血+免控，容错直接拉满。装备替换：自带免控buff，卸掉免控装，全换输出装拉满斩杀。\n前期抽到遗志直接终极变身：卖完全场挂件，只留海月+玄策，继承全部等级，直接成型海月大爹，无解吃鸡。"
+        }
+    ],
+    "notice": [
+        "1、这套阵容核心只有一个：极致单核养成。前期找到玄策直接钦定主角，利用每回合打牌被动稳定叠等级。梦奇优先级极高，在姜导体系内属于1.5倍豆子，打出一次等于别人叠一次半等级，提速非常夸张。",
+        "2、所有杂牌先打出再卖掉，不浪费每一次被动层数。",
+        "3、前期稳血过渡，尽快冲上25级解锁封神一瞬，获得高额初始等级+双倍成长。",
+        "4、中后期依靠【临阵摸枪】天赋、海量打牌被动，把玄策等级堆到几百级。",
+        "5、终极玩法：抽到遗志后清空全场挂件，只留玄策+海月，继承全部等级，直接锁鸡。"
+    ],
+    "positionImage": "images/position/68.jiangdaofengshenxuance.png"
+}
+,
     {
     "id": 69,
     "name": "安琪拉芈月",
