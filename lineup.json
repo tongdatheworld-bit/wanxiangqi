@@ -4566,22 +4566,132 @@
     {
     "id": 64,
     "name": "安琪拉自爆海月",
-    "rank": "A",
+    "rank": "S",
     "player": "安琪拉",
     "playerImg": "images/players/anqila.png",
-    "hard": "中等",
-    "lineupCode": "44529416734963712（点击复制）",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "困难",
+    "lineupCode": "72681344200555530",
     "ban位": ["逐鹿", "河洛", "三分之地", "日落海"],
     "heroList": [
-        {"name":"海月","img":"images/heroes/haiyue.png","isCore":true},
+        {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":true},
+        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
         {"name":"鬼谷子","img":"images/heroes/guiguzi.png","isCore":false},
         {"name":"少司缘","img":"images/heroes/shaosiyuan.png","isCore":false},
-        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"大司命","img":"images/heroes/dasiming.png","isCore":false},
-        {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png","isCore":false},
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":false},
+        {"name":"杨玉环","img":"images/heroes/yangyuhuan.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
-    ]
-},
+    ],
+    "funcHeroList": [
+        {
+            "name": "鬼谷子",
+            "img": "images/heroes/guiguzi.png",
+            "desc": "在场时，召唤往生图腾，东皇太一吸收图腾临时等级。"
+        },
+        {
+            "name": "少司缘",
+            "img": "images/heroes/shaosiyuan.png",
+            "desc": "在场时，召唤因缘图腾，东皇太一吸收图腾临时等级。"
+        },
+        {
+            "name": "大司命",
+            "img": "images/heroes/dasiming.png",
+            "desc": "在场时，召唤先知图腾，东皇太一吸收图腾临时等级。"
+        },
+        {
+            "name": "海月",
+            "img": "images/heroes/haiyue.png",
+            "desc": "副C，拉对面主C"
+        },
+        {
+            "name": "杨玉环",
+            "img": "images/heroes/yangyuhuan.png",
+            "desc": "给全队加血，提高后期阵容上限"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给东皇或者海月套复活"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"霸者重铠","img":"images/equip/equipsmall/bazhezhongkai.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"}
+    ],
+    "equipSecond": [
+        {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"}
+    ],
+    "talentTong": [
+        {"name": "小电池包", "img": "images/talent/xiaodianchibao.png"},
+        {"name": "大河新援", "img": "images/talent/dahexinyuan.png"}
+    ],
+    "talentYin": [
+        {"name": "扩编名额", "img": "images/talent/kuobianming'e.png"},
+        {"name": "紧急行动", "img": "images/talent/jinjixingdong.png"}
+    ],
+    "talentJin": [
+        {"name": "泉水", "img": "images/talent/quanshui.png"},
+        {"name": "灵祭升华", "img": "images/talent/lingjishenghua.png"}
+    ],
+    "effectCard": [
+        {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"},
+        {"name": "能量超新星","img":"images/effectcard/nengliangchaoxinxing.png"},
+        {"name": "军械库","img":"images/effectcard/junxieku.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
+                {"name":"干将","img":"images/heroes/ganjiang.png"}
+            ],
+            "desc": "外面强度高，单挂弈星拉等级，外面强度低上牛魔、干将保血尽量胜。\n经济类天赋优先拿，上3本开顿悟时刻。\n第一轮拍卖：少司缘>鬼谷子>明世隐"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png"},
+                {"name":"大司命","img":"images/heroes/dasiming.png"},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"},
+                {"name":"海月","img":"images/heroes/haiyue.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "捡大河棋子过渡，速升5本，通过飞行器自爆消灭大部分敌方英雄，控制血量。\n第二轮拍卖：海月>东皇太一>大司命>太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"东皇太一","img":"images/heroes/donghuangtaiyi.png"},
+                {"name":"大司命","img":"images/heroes/dasiming.png"},
+                {"name":"鬼谷子","img":"images/heroes/guiguzi.png"},
+                {"name":"少司缘","img":"images/heroes/shaosiyuan.png"},
+                {"name":"海月","img":"images/heroes/haiyue.png"},
+                {"name":"杨玉环","img":"images/heroes/yangyuhuan.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "5本后找体系牌，找到海月后所有英雄一起放前排，用定向毁灭提升等级，牌搜齐后存钱上6本。后期明世隐换杨玉环。\n第三轮拍卖：一线生机/扶摇直上/军械库"
+        }
+    ],
+    "notice": [
+        "1、三个图腾英雄必备，最大化东皇等级。",
+        "2、自爆前期少炸自己人，尽量保血；中后期多炸自己人，快速拉高全队等级",
+        "3、期间有小明可以牵廉颇提升真实等级。",
+        "4、奇想优选：同阵营、补给",
+        "5、改装优选：定向毁灭、耍赖皮、热情扩散、泄气皮球、开团秒跟、贴膜"
+    ],
+    "positionImage": "images/position/64_anqila_zibaohaiyue.png"
+}
+,
     {
     "id": 65,
     "name": "姜导封神韩信",
