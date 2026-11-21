@@ -5239,9 +5239,9 @@
         {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false}
     ],
     "equipFirst": [
-        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhuzhuzhufeng.png"},
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
         {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
-        {"name":"无尽之刃","img":"images/equip/equipsmall/wujinzhiren.png"}
+        {"name":"无尽","img":"images/equip/equipsmall/wujinjujian.png"}
     ],
     "equipSecond": [
         {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
@@ -5253,7 +5253,7 @@
         {"name": "刻舟减蓝", "img": "images/talent/kezhoujianlan.png"}
     ],
     "talentYin": [
-        {"name": "古币翻新", "img": "images/talent/gubinfanxin.png"},
+        {"name": "古币翻新", "img": "images/talent/gubifanxin.png"},
         {"name": "幸运硬币", "img": "images/talent/xingyunyingbi.png"}
     ],
     "talentJin": [
@@ -5261,14 +5261,17 @@
         {"name": "全副武装", "img": "images/talent/quanfuwuzhuang.png"}
     ],
     "effectCard": [
-        {"name": "古币多多", "img": "images/effectcard/gubinduoduo.png"},
+        {"name": "古币多多", "img": "images/effectcard/gubiduoduo.png"},
         {"name": "遗志", "img": "images/effectcard/yizhi.png"},
         {"name": "扶摇直上", "img": "images/effectcard/fuyaozhishang.png"}
     ],
     "runStage": [
         {
             "title": "1-3回合",
-            "heroList": [],
+            "heroList": [
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png","isCore":false},
+                {"name":"弈星","img":"images/heroes/yixing.png","isCore":false}
+             ],
             "desc": "1回合：只买1张一星打工卡，无牌直接空城，不乱花钱。\n2回合：有奕星直接升2人口，利用免费刷新找玄策、元芳、盾山，不硬D。\n3回合：重点搜玄策！找到玄策立刻锁定主角绑定核心。\n第一轮拍卖：百里玄策>程咬金>盾山"
         },
         {
