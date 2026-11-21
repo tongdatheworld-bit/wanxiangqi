@@ -4811,19 +4811,115 @@
     "rank": "A",
     "player": "镜",
     "playerImg": "images/players/jing.png",
+    "alternatePlayer": ["嫦小娥"],
+    "alternatePlayerImg": ["images/players/changxiao'e.png"],
     "hard": "中等",
-    "lineupCode": "66486415483056146（点击复制）",
-    "ban位": ["逐鹿", "河洛", "日落海"],
+    "lineupCode": "18075198332475406（点击复制）",
+    "ban位": ["日落海", "逐鹿"],
     "heroList": [
         {"name":"马超","img":"images/heroes/machao.png","isCore":true},
-        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
         {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
-        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "瑶",
+            "img": "images/heroes/yao.png",
+            "desc": "附身马超保护，打出控制加速马超使用技能"
+        },
+        {
+            "name": "猪八戒",
+            "img": "images/heroes/zhubajie.png",
+            "desc": "猪八戒驻场，打出三阶英雄合成时，同步增加全体三阶英雄等级"
+        },
+        {
+            "name": "刘禅",
+            "img": "images/heroes/liushan.png",
+            "desc": "场上棋子使用技能时增加临时等级"
+        },
+        {
+            "name": "明世隐",
+            "img": "images/heroes/mingshiyin.png",
+            "desc": "将马超的临时等级转化为真实等级"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "为马超提供复活，增加容错。"
+        }
+    ],
+    "backupHeroList": [
         {"name":"吕布","img":"images/heroes/lvbu.png","isCore":false}
-    ]
-},{
+    ],
+    "equipFirst": [
+        {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"}
+    ],
+    "equipSecond": [
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "微弱优势", "img": "images/talent/weiruyoushi.png"}
+    ],
+    "talentYin": [
+        {"name": "消费返利", "img": "images/talent/xiaofeifanli.png"},
+        {"name": "重装上阵", "img": "images/talent/chongzhuangshangzhen.png"}
+    ],
+    "talentJin": [
+        {"name": "泉水", "img": "images/talent/quanshui.png"},
+        {"name": "小咖秀", "img": "images/talent/xiaokaxiu.png"}
+    ],
+    "effectCard": [
+        {"name": "3阶英雄兑换券","img":"images/effectcard/3jieyingxionghuanduiquan.png"},
+        {"name": "能量超新星","img":"images/effectcard/nengliangchaoxinxing.png"},
+        {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "上阵棋子：弈星\n单挂弈星直升3级\n第一轮拍卖：马超>瑶>猪八戒>刘禅>明世隐"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"马超","img":"images/heroes/machao.png","isCore":true},
+                {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+                {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
+                {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false}
+            ],
+            "desc": "上阵棋子：马超、瑶、猪八戒、刘禅、明世隐\n上三本后，开始找核心体系牌，马超前期很弱，需要靠刘禅，明世隐组合快速提升等级，利用镜片和万镜快速完成猪八戒、马超、明世隐、刘禅觉醒，瑶妹挂一张，体系牌齐全后，可升4本或5本继续找核心体系牌。\n第二轮拍卖：太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"马超","img":"images/heroes/machao.png","isCore":true},
+                {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+                {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
+                {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "上阵棋子：马超、瑶、猪八戒、刘禅、明世隐、太乙真人\n第三轮拍卖：扶摇直上/能量超新星/军械库\n不断通过合成，重铸装备提高阵容上限。"
+        }
+    ],
+    "notice": [
+        "1、马瑶高机动性来配合小明和刘禅快速攒等级，前期很弱，因为一直需要卖血来攒到3级刷牌；",
+        "2、马瑶对装备要求很高，马超装备最优：自然法杖、无尽巨剑、炽热支配者，瑶带破茧之衣。",
+        "3、利用镜片快速完成，马超、猪八戒、刘禅、明世隐觉醒，挂一张后期再找觉醒。"
+    ],
+    "positionImage": "images/position/56.jingmaya.png"
+}
+,{
     "id": 57,
     "name": "镜日落海整备流",
     "rank": "A",
