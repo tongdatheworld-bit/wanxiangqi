@@ -4760,7 +4760,7 @@
             "heroList": [
                 {"name":"弈星","img":"images/heroes/yixing.png"},
                 {"name":"牛魔","img":"images/heroes/niumo.png"},
-                {"name":"干将","img":"images/heroes/ganjiang.png"}
+                {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"}
             ],
             "desc": "外面强度高，单挂弈星拉等级，外面强度低上牛魔、干将保血尽量胜。\n经济类天赋优先拿，上3本开顿悟时刻。\n第一轮拍卖：少司缘>鬼谷子>明世隐"
         },
