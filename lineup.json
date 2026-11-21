@@ -3926,26 +3926,130 @@
         ]
     },
     {
-        "id": 36,
-        "name": "明先生逐鹿蒙犽",
-        "rank": "A",
-        "player": "明先生",
-        "playerImg": "images/players/mingxiansheng.png",
-        "alternatePlayer": ["姜导", "小妲己"],
-    "alternatePlayerImg": ["images/players/jiangdao.png", "images/players/xiaodaji.png"],
-        "hard": "中等",
-        "lineupCode": "80558214278639676（点击复制）",
-        "ban位": ["大河流域", "河洛", "日落海","三分"],
-        "heroList": [
-            {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
-            {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
-            {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
-            {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
-            {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false},
-            {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
-            {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
-        ]
-    },
+    "id": 36,
+    "name": "明先生逐鹿蒙犽",
+    "rank": "A",
+    "player": "明先生",
+    "playerImg": "images/players/mingxiansheng.png",
+    "alternatePlayer": ["嬴律", "小妲己"],
+    "alternatePlayerImg": ["images/players/yinglv.png", "images/players/xiaodaji.png"],
+    "hard": "简单",
+    "lineupCode": "68740694526605330（点击复制）",
+    "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+        {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+        {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "芈月",
+            "img": "images/heroes/miyue.png",
+            "desc": "芈月驻场，使用效果卡时，给蒙犽提升等级。"
+        },
+        {
+            "name": "西施",
+            "img": "images/heroes/xishi.png",
+            "desc": "整备：获得1张高阶推演战术。给蒙犽减少蓝条，更快释放技能。"
+        },
+        {
+            "name": "白起",
+            "img": "images/heroes/baiqi.png",
+            "desc": "每回合首次使用效果牌时，获得1张援护战术。给全队增加坦度。"
+        },
+        {
+            "name": "庄周",
+            "img": "images/heroes/zhuangzhou.png",
+            "desc": "登场给招募战术。"
+        },
+        {
+            "name": "鲁班七号",
+            "img": "images/heroes/lubanqihao.png",
+            "desc": "合成3次给战术牌，提供大量资源。"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给蒙犽提供复活，增加容错。"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"}
+    ],
+    "equipSecond": [
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
+        {"name":"魂祭绝刃","img":"images/equip/equipsmall/hunjijueren.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "微弱优势", "img": "images/talent/weiruyoushi.png"}
+    ],
+    "talentYin": [
+        {"name": "贤士登门", "img": "images/talent/xianshidengmen.png"},
+        {"name": "重装上阵", "img": "images/talent/zhongzhuangshangzhen.png"}
+    ],
+    "talentJin": [
+        {"name": "春风化雨", "img": "images/talent/chunfenghuayu.png"},
+        {"name": "不义之财", "img": "images/talent/buyizhicai.png"}
+    ],
+    "effectCard": [
+        {"name": "集体唤醒", "img": "images/effectcard/jitihuanxing.png"},
+        {"name": "众星拱月", "img": "images/effectcard/zhongxinggongyue.png"},
+        {"name": "武装重构", "img": "images/effectcard/wuzhongchonggou.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "上阵棋子：弈星\n前期可以单挂弈星迅速升级，天赋开节\n第一轮拍卖：芈月>西施>白起"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
+                {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+                {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+                {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+                {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+                {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false}
+            ],
+            "desc": "上阵棋子：蒙犽、庄周、芈月、西施、白起、鲁班七号\n4回合上四本空一轮，5回合开丰开始找体系卡，优先觉醒芈月、西施、蒙犽。通过不断打出效果卡提升蒙犽等级。锁血后上5级找太乙真人、鲁班七号提高阵容上限。\n第二轮拍卖：蒙犽>庄周>太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":true},
+                {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+                {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+                {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+                {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
+                {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false}
+            ],
+            "desc": "上阵棋子：蒙犽、庄周、芈月、西施、白起、鲁班七号、太乙真人\n在5本不断招牌打合成，提高阵容等级，装备不对重铸获取最优装备，装备多了可以砸神器机器头、吸血进一步提高阵容上限。\n第三轮拍卖：能量超新星/众星拱月/破镜之证/军械库"
+        }
+    ],
+    "notice": [
+        "1、蒙犽十分克制单核阵容，普通装备最优无尽、法源之杯、名刀；",
+        "2、老夫子作为打出位，上场后打合成再卖掉获取招募战术提高蒙犽等级；",
+        "3、对方有强控，要换炽热支配者，特别是对面有钟馗的时候，要注意站位；",
+        "4、对方有安琪拉，注意不要把蒙犽放对角；"
+    ],
+    "positionImage": "images/position/36.mingxianshengzhulumengya.png"
+}
+,
     {
         "id": 37,
         "name": "嬴律逐鹿蒙犽",
