@@ -4832,7 +4832,7 @@
     "alternatePlayer": ["闹闹", "嬴律"],
     "alternatePlayerImg": ["images/players/naonao.png", "images/players/yinglv.png"],
     "hard": "简单",
-    "lineupCode": "（点击复制）",
+    "lineupCode": "13571598705078286（点击复制）",
     "ban位": ["逐鹿", "河洛", "大河流域", "三分之地"],
     "heroList": [
         {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
