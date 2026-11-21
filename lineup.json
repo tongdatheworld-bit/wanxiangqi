@@ -2502,9 +2502,11 @@
     "name": "安琪拉爆盾廉颇",
     "rank": "A",
     "player": "安琪拉",
+    "playerImg": "images/players/anqila.png",
     "alternatePlayer": ["小妲己"],
+    "alternatePlayerImg": ["images/players/xiaodaji.png"],
     "hard": "简单",
-    "lineupCode": "98577042057930754（点击复制）",
+    "lineupCode": "98577042057930754",
     "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
     "heroList": [
         {"name":"廉颇","img":"images/heroes/lianpo.png","isCore":true},
@@ -2514,43 +2516,110 @@
         {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
         {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
     ],
-    "subHeroList": [
-        {"name":"庄周","img":"images/heroes/zhuangzhou.png"},
-        {"name":"老夫子","img":"images/heroes/laofuzi.png"},
-        {"name":"梦奇","img":"images/heroes/mengqi.png"}
-    ],
-    "equip": {
-        "best": ["霸者重铠", "不死鸟之眼", "反伤重甲"],
-        "alternate": ["机器头", "护命灵珠", "炽热支配者"]
-    },
-    "talent": {
-        "copper": ["逐鹿新援", "复印机"],
-        "silver": ["自适应武装", "重装上阵"],
-        "gold": ["点兵点将", "护命灵珠"]
-    },
-    "effectCard": ["2阶英雄兑换券", "扶摇直上", "能量超新星"],
-    "stageOperate": [
+    "funcHeroList": [
         {
-            "round": "1-3回合",
-            "desc": "上阵棋子：牛魔、弈星、干将莫邪\n弈星/牛魔打工，飞行器先挂弈星过渡，不D牌，存钱升本。优先拿棋手经验、资源类天赋。如外面强度过高，可以适度卖血攒经济。\n第一轮拍卖：廉颇>芈月>西施"
+            "name": "墨子",
+            "img": "images/heroes/mozi.png",
+            "desc": "友方单位护盾被击破时，该单位生命值上限永久+30（60）。不断提高廉颇生命值。"
         },
         {
-            "round": "4-11回合",
-            "desc": "上阵棋子：廉颇、墨子、芈月、西施、扁鹊、太乙真人\n升到3本，小D搜廉颇、西施、墨子、芈月，搜到廉颇立刻把飞行器切换绑定廉颇，优先觉醒廉颇、芈月，用效果牌，用来触发芈月等级加成。后升5本找扁鹊，觉醒西施，打出效果牌减少廉颇蓝条。\n第二轮拍卖：扁鹊>太乙真人>鲁班大师"
+            "name": "芈月",
+            "img": "images/heroes/miyue.png",
+            "desc": "每当你使用效果牌时，己方穿戴装备最多的1名【逐鹿】英雄等级+1（2）。给廉颇提高永久等级。"
         },
         {
-            "round": "12回合以后",
-            "desc": "上阵棋子：廉颇、墨子、芈月、西施、扁鹊、太乙真人\n搜到太乙直接上场补容错。整套体系全部就位，西施无限给廉颇刷推演战术，廉颇高频开盾。护盾破碎持续叠加墨子血量，扁鹊炸盾反复清场。\n第三轮拍卖：扶摇直上/能量超新星/军械库"
+            "name": "西施",
+            "img": "images/heroes/xishi.png",
+            "desc": "整备：获得1张推演战术。给廉颇减少蓝条"
+        },
+        {
+            "name": "扁鹊",
+            "img": "images/heroes/bianque.png",
+            "desc": "友方单位护盾被击破时，对周围敌人造成该英雄最大生命值10%（20%）的法术伤害（冷却1秒）。廉颇爆盾核心"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "给廉颇套复活，增加容错。"
         }
     ],
-    "tips": [
+    "backupHeroList": [
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false},
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"霸者重铠","img":"images/equip/equipsmall/bazhezhongkai.png"},
+        {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"},
+        {"name":"反伤重甲","img":"images/equip/equipsmall/fanshangzhongjia.png"}
+    ],
+    "equipSecond": [
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
+        {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "talentTong": [
+        {"name": "逐鹿新援", "img": "images/talent/zhuluxinyuan.png"},
+        {"name": "复印机", "img": "images/talent/fuyinji.png"}
+    ],
+    "talentYin": [
+        {"name": "自适应武装", "img": "images/talent/zishiyingwuzhuang.png"},
+        {"name": "重装上阵", "img": "images/talent/zhongzhuangshangzhen.png"}
+    ],
+    "talentJin": [
+        {"name": "点兵点将", "img": "images/talent/dianbingdianjiang.png"},
+        {"name": "护命灵珠", "img": "images/talent/huminglingzhu.png"}
+    ],
+    "effectCard": [
+        {"name": "2阶英雄兑换券","img":"images/effectcard/2jieyingxionghuanduiquan.png"},
+        {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"},
+        {"name": "能量超新星","img":"images/effectcard/nengliangchaoxinxing.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"}
+            ],
+            "desc": "弈星/牛魔打工，飞行器先挂弈星过渡，不D牌，存钱升本。优先拿棋手经验、资源类天赋。如外面强度过高，可以适度卖血攒经济。\n第一轮拍卖：廉颇>芈月>西施"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"廉颇","img":"images/heroes/lianpo.png"},
+                {"name":"墨子","img":"images/heroes/mozi.png"},
+                {"name":"芈月","img":"images/heroes/miyue.png"},
+                {"name":"西施","img":"images/heroes/xishi.png"},
+                {"name":"扁鹊","img":"images/heroes/bianque.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "升到3本，小D搜廉颇、西施、墨子、芈月，搜到廉颇立刻把飞行器切换绑定廉颇，优先觉醒廉颇、芈月，用效果牌，用来触发芈月等级加成。后升5本找扁鹊，觉醒西施，打出效果牌减少廉颇蓝条。\n第二轮拍卖：扁鹊>太乙真人>鲁班大师"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"廉颇","img":"images/heroes/lianpo.png"},
+                {"name":"墨子","img":"images/heroes/mozi.png"},
+                {"name":"芈月","img":"images/heroes/miyue.png"},
+                {"name":"西施","img":"images/heroes/xishi.png"},
+                {"name":"扁鹊","img":"images/heroes/bianque.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"}
+            ],
+            "desc": "搜到太乙直接上场补容错。整套体系全部就位，西施无限给廉颇刷推演战术，廉颇高频开盾。护盾破碎持续叠加墨子血量，扁鹊炸盾反复清场。\n第三轮拍卖：扶摇直上/能量超新星/军械库"
+        }
+    ],
+    "notice": [
         "1、廉颇核心装备霸者重铠，不死鸟之眼、反伤甲，备选炽热支配者，神器推荐机器头、护命灵珠。",
         "2、打出位选择梦奇、老夫子、庄周，加速获取效果牌提高廉颇等级。",
         "3、期间有小明可以牵廉颇提升真实等级。",
         "4、奇想优选：效果牌、低阶牌、同阵营、补给",
         "5、改装优选：坐火箭、保送升级、拿来吧你、壮胆、变胖"
-    ]
+    ],
+    "positionImage": "images/position/22_anqila_baodunlianpo.png"
 }
+
 ,
     {
     "id": 23,
