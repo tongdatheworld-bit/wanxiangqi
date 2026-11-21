@@ -2571,7 +2571,7 @@
         {"name": "护命灵珠", "img": "images/talent/huminglingzhu.png"}
     ],
     "effectCard": [
-        {"name": "2阶英雄兑换券","img":"images/effectcard/2jieyingxionghuanduiquan.png"},
+        {"name": "2阶英雄兑换券","img":"images/effectcard/erjieyingxiongduihuanquan.png"},
         {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"},
         {"name": "能量超新星","img":"images/effectcard/nengliangchaoxinxing.png"}
     ],
@@ -2617,7 +2617,7 @@
         "4、奇想优选：效果牌、低阶牌、同阵营、补给",
         "5、改装优选：坐火箭、保送升级、拿来吧你、壮胆、变胖"
     ],
-    "positionImage": "images/position/22_anqila_baodunlianpo.png"
+    "positionImage": "images/position/22.anqilabaodunlianpo.png"
 }
 
 ,
@@ -4165,7 +4165,7 @@
             "heroList": [
                 {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
-                {"name":"干将","img":"images/heroes/ganjiang.png"}
+                {"name":"干将","img":"images/heroes/ganjiangmoye.png"}
             ],
             "desc": "看场外局势，能胜上弈星、牛魔、干将打工，飞行器挂干将过渡。不D牌，存钱升本。外面强度都很高，单挂弈星快速升本找体系，天赋优先棋手经验、能量类。\n第一轮拍卖：鬼谷子>少司缘>明世隐"
         },
@@ -4203,7 +4203,7 @@
         "4、奇想优选：同阵营、补给",
         "5、改装优选：上强度、站好了、杠上了、秒变脆皮。"
     ],
-    "positionImage": "images/position/44_anqila_liubangzhadun.png"
+    "positionImage": "images/position/44.anqilaliubangzhadun.png"
 }
 ,
 {
@@ -4742,7 +4742,7 @@
         {"name": "大河新援", "img": "images/talent/dahexinyuan.png"}
     ],
     "talentYin": [
-        {"name": "扩编名额", "img": "images/talent/kuobianming'e.png"},
+        {"name": "扩编名额", "img": "images/talent/kuobianminge.png"},
         {"name": "紧急行动", "img": "images/talent/jinjixingdong.png"}
     ],
     "talentJin": [
@@ -4797,7 +4797,7 @@
         "4、奇想优选：同阵营、补给",
         "5、改装优选：定向毁灭、耍赖皮、热情扩散、泄气皮球、开团秒跟、贴膜"
     ],
-    "positionImage": "images/position/64_anqila_zibaohaiyue.png"
+    "positionImage": "images/position/64.anqilazibaohaiyue.png"
 }
 ,
     {
@@ -5051,7 +5051,7 @@
         {"name": "复印机", "img": "images/talent/fuyinji.png"}
     ],
     "talentYin": [
-        {"name": "强者自强", "img": "images/talent/qiangzeziqiang.png"},
+        {"name": "强者自强", "img": "images/talent/qiangzheziqiang.png"},
         {"name": "重装上阵", "img": "images/talent/zhongzhuangshangzhen.png"}
     ],
     "talentJin": [
@@ -5109,7 +5109,7 @@
         "5、奇想优选：效果牌、低价牌。",
         "6、改装优选：上强度、站好了、杠上了、秒变脆皮。"
     ],
-    "positionImage": "images/position/69_anqila_miyue.png"
+    "positionImage": "images/position/69.anqilamiyue.png"
 }
 ,
     {
