@@ -4235,20 +4235,106 @@
 },
 {
     "id": 41,
-    "name": "镜999猪虎",
+    "name": "镜猪虎999",
     "rank": "A",
     "player": "镜",
     "playerImg": "images/players/jing.png",
-    "hard": "简单",
-    "lineupCode": "5355386554329126（点击复制）",
-    "ban位": ["无限制"],
+    "alternatePlayer": ["孙小宾"],
+    "alternatePlayerImg": ["images/players/sunxiaobin.png"],
+    "hard": "困难",
+    "lineupCode": "34400746981693452（点击复制）",
+    "ban位": ["河洛", "三分之地", "日落海", "大河流域", "逐鹿"],
     "heroList": [
-        {"name":"阿轲","img":"images/heroes/ake.png","isCore":false},
+        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
+        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
-        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":true}
-    ]
-},
+        {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "猪八戒",
+            "img": "images/heroes/zhubajie.png",
+            "desc": "主T，3阶牌合成时，全部3阶棋子等级共同提升"
+        },
+        {
+            "name": "明世隐",
+            "img": "images/heroes/mingshiyin.png",
+            "desc": "将裴擒虎的临时等级转化为真实等级"
+        },
+        {
+            "name": "阿轲",
+            "img": "images/heroes/ake.png",
+            "desc": "登场给全阵容提升等级"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"影牙","img":"images/equip/equipsmall/yingya.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"}
+    ],
+    "equipSecond": [
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"破阵战芒","img":"images/equip/equipsmall/pozhenzhanmang.png"}
+    ],
+    "talentTong": [
+        {"name": "先苦后甜", "img": "images/talent/xiankuhoutian.png"},
+        {"name": "微弱优势", "img": "images/talent/weiruyoushi.png"}
+    ],
+    "talentYin": [
+        {"name": "协同一致", "img": "images/talent/xietongyizhi.png"},
+        {"name": "中坚力量", "img": "images/talent/zhongjianliliang.png"}
+    ],
+    "talentJin": [
+        {"name": "四海来援", "img": "images/talent/sihailaiyuan.png"},
+        {"name": "强者恒强", "img": "images/talent/qiangzhehengqiang.png"}
+    ],
+    "effectCard": [
+        {"name": "临阵磨枪","img":"images/effectcard/linzhenmoqiang.png"},
+        {"name": "遗志","img":"images/effectcard/yizhi.png"},
+        {"name": "传承","img":"images/effectcard/chuancheng.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "开局商店拿弈星，没有弈星直接空城。每回合优先使用镜棋手技能拿镜像牌。\n全程连败，拿到免费刷新；血量最低，拍卖分钱更多，方便抢体系卡。\n第一轮拍卖：猪八戒 > 明世隐 > 阿轲 > 裴擒虎。"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
+                {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
+            ],
+            "desc": "上阵棋子：猪八戒、裴擒虎、明世隐、阿轲\n升到3级，用连败免费刷新搜寻四张核心体系卡。每回合优先使用镜技能获取镜像，集齐4张体系卡之后，开始启动：依次上场猪八戒、裴擒虎、明世隐、阿轲，每打出一张，消耗一张镜像。打出4张镜像触发秘技万镜，直接复制场上四名英雄到手牌。\n三级锦囊重点搜寻【遗志】，刷到临阵磨枪效果卡务必拿下，是后期双999关键。利用镜像反复打出体系卡，快速完成全部英雄觉醒。8-11回合升4级找传承\n第二轮拍卖：露娜"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
+                {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
+            ],
+            "desc": "上阵棋子：猪八戒、裴擒虎、明世隐、阿轲\n拿到传承与遗志，启动终极操作：传承阿轲，小明卖掉，遗志老虎，场上出现900+大猪。\n上阵四张觉醒老虎，打出临阵磨枪触发老虎整备效果，完成双900+猪八戒+裴擒虎。\n第二轮拍卖：众星闪耀/军械库/展翅腾飞"
+        }
+    ],
+    "notice": [
+        "1、每回合优先拿镜像牌（存够至少4张启动）：5-7回合在三级找齐猪八戒、阿轲、明世隐、裴擒虎，打一张本体，打一张镜像，后用万镜复制场上4张体系卡，达成所有英雄差一张觉醒，后买卡到全员觉醒。",
+        "2、全队平均等级200-250级后，先传承小明、阿轲后卖掉，再遗志老虎，此时猪等级保底900+，再登场4张老虎直接觉醒，使用临阵磨枪整备老虎，达成猪虎双900+，甚至双999。",
+        "3、核心装备：猪八戒反甲、不死鸟必备，堆坦度站场；裴擒虎影牙、无尽、炽热，拉高爆发。多余散件给到明世隐、阿轲。",
+        "4、拿到传承遗志后，上阵四张觉醒老虎，打出临阵磨枪触发老虎整备效果，完成双900+猪八戒+裴擒虎。"
+    ],
+    "positionImage": "images/position/41.jingzhuhu999.png"
+}
+,
 {
     "id": 42,
     "name": "嫦小娥艾琳",
