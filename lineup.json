@@ -16,7 +16,7 @@
         {"name":"李白","img":"images/heroes/libai.png","isCore":false},
         {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
         {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
-        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},asl
         {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
     ],
    "funcHeroList": [
@@ -3816,7 +3816,7 @@
     ],
     "equipFirst": [
         {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"},
-        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molvzhiren.png"},
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
     ],
     "equipSecond": [
@@ -3825,7 +3825,7 @@
         {"name":"噬神之书","img":"images/equip/equipsmall/shishenzhishu.png"}
     ],
     "talentTong": [
-        {"name": "好聚好散", "img": "images/talent/haojuhosan.png"},
+        {"name": "好聚好散", "img": "images/talent/haojuhaosan.png"},
         {"name": "加速成长", "img": "images/talent/jiasuchengzhang.png"}
     ],
     "talentYin": [
@@ -3846,7 +3846,7 @@
             "title": "1-3回合",
             "heroList": [
                 {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"},
-                {"name":"牛头","img":"images/heroes/niutou.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"孙膑","img":"images/heroes/sunbin.png"}
             ],
             "desc": "上阵棋子：干将莫邪、牛头、孙膑\n开局上牛头、干将，后觉醒干将莫邪并上孙膑，不断通过觉醒干将和伞技能快速提升干将等级。\n第一轮拍卖：刘禅>明世隐"
@@ -3855,7 +3855,7 @@
             "title": "4-11回合",
             "heroList": [
                 {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"},
-                {"name":"牛头","img":"images/heroes/niutou.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"孙膑","img":"images/heroes/sunbin.png"},
                 {"name":"曜","img":"images/heroes/yao.png"},
                 {"name":"刘禅","img":"images/heroes/liushan.png"},
