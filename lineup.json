@@ -4246,7 +4246,7 @@
     "ban位": ["河洛", "三分之地", "日落海", "大河流域", "逐鹿"],
     "heroList": [
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
-        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
     ],
@@ -4282,7 +4282,7 @@
     ],
     "talentTong": [
         {"name": "先苦后甜", "img": "images/talent/xiankuhoutian.png"},
-        {"name": "微弱优势", "img": "images/talent/weiruyoushi.png"}
+        {"name": "微弱优势", "img": "images/talent/weiruoyoushi.png"}
     ],
     "talentYin": [
         {"name": "协同一致", "img": "images/talent/xietongyizhi.png"},
@@ -4309,7 +4309,7 @@
             "title": "4-11回合",
             "heroList": [
                 {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
-                {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+                {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
                 {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
                 {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
             ],
@@ -4319,7 +4319,7 @@
             "title": "12回合以后",
             "heroList": [
                 {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
-                {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+                {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
                 {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
                 {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
             ],
@@ -4759,7 +4759,7 @@
     ],
     "effectCard": [
         {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
-        {"name": "整装待发","img":"images/effectcard/zhengzhuangdaifa.png"},
+        {"name": "linzhenmoqiang","img":"images/effectcard/linzhenmoqiang.png"},
         {"name": "唤醒","img":"images/effectcard/huanxing.png"}
     ],
     "runStage": [
@@ -4818,7 +4818,7 @@
     "ban位": ["日落海", "逐鹿"],
     "heroList": [
         {"name":"马超","img":"images/heroes/machao.png","isCore":true},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
         {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
@@ -4827,7 +4827,7 @@
     "funcHeroList": [
         {
             "name": "瑶",
-            "img": "images/heroes/yao.png",
+            "img": "images/heroes/yaomei.png",
             "desc": "附身马超保护，打出控制加速马超使用技能"
         },
         {
@@ -4892,7 +4892,7 @@
             "title": "4-11回合",
             "heroList": [
                 {"name":"马超","img":"images/heroes/machao.png","isCore":true},
-                {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+                {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
                 {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
                 {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
                 {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false}
@@ -4903,7 +4903,7 @@
             "title": "12回合以后",
             "heroList": [
                 {"name":"马超","img":"images/heroes/machao.png","isCore":true},
-                {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+                {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
                 {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
                 {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
                 {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
