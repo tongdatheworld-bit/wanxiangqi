@@ -3768,25 +3768,125 @@
     "positionImage": "images/position/32.xiaodajileitingzhanji.png"
 }
 ,
-    {
-        "id": 33,
-        "name": "阿离遗志转生",
-        "rank": "A",
-        "player": "阿离",
-        "playerImg": "images/players/ali.png",
-        "hard": "困难",
-        "lineupCode": "123341259261075608（点击复制）",
-        "ban位": ["河洛", "三分之地", "日落海"],
-        "heroList": [
-            {"name":"海月","img":"images/heroes/haiyue.png","isCore":true},
-            {"name":"司空震","img":"images/heroes/sikongzhen.png","isCore":false},
-            {"name":"苏烈","img":"images/heroes/sulie.png","isCore":false},
-            {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-            {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false}
-        ]
-    },
+   {
+    "id": 33,
+    "name": "阿离遗志转生",
+    "rank": "S",
+    "player": "阿离",
+    "playerImg": "images/players/ali.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "难",
+    "lineupCode": "101391791825043464",
+    "ban位": ["河洛", "三分之地", "日落海"],
+    "heroList": [
+        {"name":"海月","img":"images/heroes/haiyue.png","isCore":true},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+        {"name":"瑶","img":"images/heroes/yao.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "扁鹊",
+            "img": "images/heroes/bianque.png",
+            "desc": "给海月提供炸盾效果"
+        },
+        {
+            "name": "瑶",
+            "img": "images/heroes/yao.png",
+            "desc": "驻场分装备，给海月提供保护并给对方施加控制"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "为海月提供复活"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "降低对方主C临时等级"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"刘禅","img":"images/heroes/liushan.png","isCore":false},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"云中君","img":"images/heroes/yunzhongjun.png","isCore":false},
+        {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/molüzhiren.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"护命灵珠","img":"images/equip/equipsmall/huminglingzhu.png"},
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
+        {"name":"噬神之书","img":"images/equip/equipsmall/shishenzhishu.png"}
+    ],
+    "talentTong": [
+        {"name": "好聚好散", "img": "images/talent/haojuhosan.png"},
+        {"name": "加速成长", "img": "images/talent/jiasuchengzhang.png"}
+    ],
+    "talentYin": [
+        {"name": "终极复印机", "img": "images/talent/zhongjifuyinji.png"},
+        {"name": "小小的助力", "img": "images/talent/xiaoxiaodezhuli.png"}
+    ],
+    "talentJin": [
+        {"name": "护命灵珠", "img": "images/talent/huminglingzhu.png"},
+        {"name": "泉水", "img": "images/talent/quanshui.png"}
+    ],
+    "effectCard": [
+        {"name": "遗志","img":"images/effectcard/yizhi.png"},
+        {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"},
+        {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"},
+                {"name":"牛头","img":"images/heroes/niutou.png"},
+                {"name":"孙膑","img":"images/heroes/sunbin.png"}
+            ],
+            "desc": "上阵棋子：干将莫邪、牛头、孙膑\n开局上牛头、干将，后觉醒干将莫邪并上孙膑，不断通过觉醒干将和伞技能快速提升干将等级。\n第一轮拍卖：刘禅>明世隐"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"},
+                {"name":"牛头","img":"images/heroes/niutou.png"},
+                {"name":"孙膑","img":"images/heroes/sunbin.png"},
+                {"name":"曜","img":"images/heroes/yao.png"},
+                {"name":"刘禅","img":"images/heroes/liushan.png"},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png"},
+                {"name":"猪八戒","img":"images/heroes/zhubajie.png"}
+            ],
+            "desc": "上阵棋子：干将莫邪、牛头、孙膑、曜、刘禅、明世隐、猪八戒\n上阵一张曜，在1本-2本不断找干将莫邪打合成，干将100级以上后升3本，有刘禅、明世隐、猪八戒可上进一步提高干将等级，不强求，并继续找遗志。\n第二轮拍卖：海月>太乙真人>扁鹊"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"海月","img":"images/heroes/haiyue.png"},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png"},
+                {"name":"扁鹊","img":"images/heroes/bianque.png"},
+                {"name":"瑶","img":"images/heroes/yao.png"},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png"},
+                {"name":"云中君","img":"images/heroes/yunzhongjun.png"},
+                {"name":"吕布","img":"images/heroes/lvbu.png"}
+            ],
+            "desc": "上阵棋子：海月、钟馗、扁鹊、瑶、太乙真人、云中君、吕布\n上5本后，找到一张海月，卖掉除干将以外的棋子，遗志干将，海月登场，后找到其他挂件，阵容大成。核心挂件太乙、扁鹊、钟馗、瑶，吕布提供吸血、云中君开团提供等级。\n第三轮拍卖：扶摇直上/能量超新星/军械库"
+        }
+    ],
+    "notice": [
+        "1、遗志可在2级和3级通过不断打干将合成找到，3级以上就不好找到了。",
+        "2、有5阶英雄兑换券的天赋尽量都拿，便于更快找到大哥。",
+        "3、海月适配装备不死鸟之眼、炽热法杖、魔律之刃，神器护命灵珠，噬神之书、机器头。",
+        "4、实在找不到海月，吕布、周瑜和其他强力四阶棋子（李信、李白、韩信、艾琳等）是下位选择。"
+    ],
+    "positionImage": "images/position/33_ali_yizhizhuansheng.png"
+}
+,
     {
         "id": 34,
         "name": "乔汐河洛司空震",
