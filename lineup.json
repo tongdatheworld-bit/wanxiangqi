@@ -4117,15 +4117,15 @@
     ],
     "talentTong": [
         {"name": "复印机", "img": "images/talent/fuyinji.png"},
-        {"name": "微弱优势", "img": "images/talent/weiruyoushi.png"}
+        {"name": "微弱优势", "img": "images/talent/weiruoyoushi.png"}
     ],
     "talentYin": [
         {"name": "贤士登门", "img": "images/talent/xianshidengmen.png"},
-        {"name": "重装上阵", "img": "images/talent/chongzhuangshangzhen.png"}
+        {"name": "重装上阵", "img": "images/talent/zhongzhuangshangzhen.png"}
     ],
     "talentJin": [
         {"name": "春风化雨", "img": "images/talent/chunfenghuayu.png"},
-        {"name": "不义之财", "img": "images/talent/buyizhicai.png"}
+        {"name": "意外之财", "img": "images/talent/意外之财.png"}
     ],
     "effectCard": [
         {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
