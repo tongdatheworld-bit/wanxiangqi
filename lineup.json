@@ -5083,23 +5083,123 @@
     ]
 },{
     "id": 54,
-    "name": "白歌雷霆战机",
+    "name": "白歌宾雷雷霆战机",
     "rank": "A",
     "player": "白歌",
     "playerImg": "images/players/baige.png",
+    "alternatePlayer": ["嬴律","明先生"],
+    "alternatePlayerImg": ["images/players/yinglv.png","images/players/mingxiansheng.png"],
     "hard": "中等",
     "lineupCode": "94633913646845974（点击复制）",
-    "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
+    "ban位": ["日落海", "三分之地", "大河流域", "河洛"],
     "heroList": [
-        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"嬴政","img":"images/heroes/yingzheng.png","isCore":true},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
         {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
         {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
-        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+        {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "芈月",
+            "img": "images/heroes/miyue.png",
+            "desc": "芈月驻场，使用效果卡时，给嬴政提升等级。"
+        },
+        {
+            "name": "西施",
+            "img": "images/heroes/xishi.png",
+            "desc": "整备：获得1张高阶推演战术。给嬴政减少蓝条，更快释放技能。"
+        },
+        {
+            "name": "白起",
+            "img": "images/heroes/baiqi.png",
+            "desc": "每回合首次使用效果牌时，获得1张援护战术。给全队增加坦度。"
+        },
+        {
+            "name": "庄周",
+            "img": "images/heroes/zhuangzhou.png",
+            "desc": "登场给招募战术。"
+        },
+        {
+            "name": "鲁班七号",
+            "img": "images/heroes/lubanqihao.png",
+            "desc": "合成3次给战术牌，提供大量资源。"
+        }
+    ],
+    "backupHeroList": [
         {"name":"蒙犽","img":"images/heroes/mengya.png","isCore":false},
-        {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false},
-        {"name":"嬴政","img":"images/heroes/yingzheng.png","isCore":true}
-    ]
-},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"破茧之衣","img":"images/equip/equipsmall/pojianzhiyi.png"},
+        {"name":"虚无法杖","img":"images/equip/equipsmall/xuwufazhang.png"}
+    ],
+    "equipSecond": [
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
+        {"name":"噬神之书","img":"images/equip/equipsmall/shishenzhishu.png"},
+        {"name":"破妄之刃","img":"images/equip/equipsmall/powangzhiren.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "逐鹿新援", "img": "images/talent/zhuluxinyuan.png"}
+    ],
+    "talentYin": [
+        {"name": "贤士登门", "img": "images/talent/xianshidengmen.png"},
+        {"name": "同路人", "img": "images/talent/tongluren.png"}
+    ],
+    "talentJin": [
+        {"name": "春风化雨", "img": "images/talent/chunfenghuayu.png"},
+        {"name": "令行如流", "img": "images/talent/lingxingruliu.png"}
+    ],
+    "effectCard": [
+        {"name": "众星拱月","img":"images/effectcard/zhongxinggongyue.png"},
+        {"name": "破镜之证","img":"images/effectcard/pojingzhizheng.png"},
+        {"name": "发号施令","img":"images/effectcard/fahaoshiling.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "上阵棋子：弈星\n开局单挂弈星，后走连败上4本。\n第一轮拍卖：芈月>西施>白起"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"嬴政","img":"images/heroes/yingzheng.png","isCore":true},
+                {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+                {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+                {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+                {"name":"芈月","img":"images/heroes/miyue.png","isCore":false}
+            ],
+            "desc": "上阵棋子：嬴政、庄周、西施、白起、芈月\n4本开始找体系卡，上本期间体系卡全部拿下，优先觉醒芈月。老夫子可以作为打出位上阵后打合成后卖掉。期间通过白歌天赋不断复制场上棋子，快速锁血。\n第二轮拍卖：鲁班七号>嬴政>庄周>蒙犽"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"嬴政","img":"images/heroes/yingzheng.png","isCore":true},
+                {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false},
+                {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+                {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+                {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+                {"name":"鲁班七号","img":"images/heroes/lubanqihao.png","isCore":false}
+            ],
+            "desc": "上阵棋子：嬴政、庄周、西施、白起、芈月、鲁班七号\n上6本后继续奇才切庄周，打出大量效果卡提升嬴政等级，决赛上觉醒鲁班大师提高上限。后期通过不断打牌加速获得效果卡提升嬴政等级。\n第三轮拍卖：能量超新星/军械库/破镜之证"
+        }
+    ],
+    "notice": [
+        "1、嬴政阵容本身强度并不高，刚需高等级嬴政和适配神器才能突破上限，加快刷牌获取神器是关键。",
+        "2、危险数字、慕名而来、同路人是进一步提高上限的天赋，来了必选。",
+        "3、后期对面有钟馗嬴政如果没有免控记得调整站位避免被勾到。",
+        "4、芈月是嬴政的等级发动机，一定要早点觉醒。",
+        "5、阵容不要固定蒙犽，只做打出位。"
+    ],
+    "positionImage": "images/position/54.baigebinleileitingzhanji.png"
+}
+,
     {
     "id": 55,
     "name": "镜三分倒转",
