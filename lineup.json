@@ -2484,7 +2484,7 @@
     "alternatePlayer": ["嬴律","明先生"],
     "alternatePlayerImg": ["images/players/yinglv.png","images/players/mingxiansheng.png"],
     "hard": "中等",
-    "lineupCode": "103078162947891208（点击复制）",
+    "lineupCode": "109836041126371330（点击复制）",
     "ban位": ["日落海", "三分之地", "大河流域", "河洛"],
     "heroList": [
         {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":true},
