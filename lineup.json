@@ -4771,7 +4771,7 @@
     "alternatePlayer": ["嬴律","明先生"],
     "alternatePlayerImg": ["images/players/yinglv.png","images/players/mingxiansheng.png"],
     "hard": "中等",
-    "lineupCode": "（点击复制）",
+    "lineupCode": "113774212063414284（点击复制）",
     "ban位": ["日落海", "三分之地", "大河流域", "河洛"],
     "heroList": [
         {"name":"嬴政","img":"images/heroes/yingzheng.png","isCore":true},
