@@ -5338,23 +5338,135 @@
 },
     {
     "id": 62,
-    "name": "基层提拔炸盾耀（逐鹿）",
-    "rank": "A",
+    "name": "基层提拔炸盾曜（逐星）",
+    "rank": "B",
     "player": "嬴律",
     "playerImg": "images/players/yinglv.png",
+    "alternatePlayer": ["阿离","姜导"],
+    "alternatePlayerImg": ["images/players/ali.png","images/players/jiangdao.png"],
     "hard": "简单",
-    "lineupCode": "3435399493396666（点击复制）",
+    "lineupCode": "3435399549339666（点击复制）",
     "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
     "heroList": [
-        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
-        {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
-        {"name":"芈月","img":"images/heroes/miyue.png","isCore":true},
+        {"name":"曜","img":"images/heroes/yao.png","isCore":true},
         {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
-        {"name":"西施","img":"images/heroes/xishi.png","isCore":false},
+        {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
         {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
-        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false}
-    ]
-},
+        {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+        {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
+        {"name":"西施","img":"images/heroes/xishi.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "墨子",
+            "img": "images/heroes/mozi.png",
+            "desc": "曜的护盾被击破后永久增加生命值"
+        },
+        {
+            "name": "芈月",
+            "img": "images/heroes/miyue.png",
+            "desc": "每当你使用效果牌时，己方穿戴装备最多的1名【逐鹿】英雄等级+1（2）。给曜提高永久等级。"
+        },
+        {
+            "name": "白起",
+            "img": "images/heroes/baiqi.png",
+            "desc": "白起驻场使用效果牌时，提供援护战术。"
+        },
+        {
+            "name": "扁鹊",
+            "img": "images/heroes/bianque.png",
+            "desc": "友方单位护盾被击破时，对周围敌人造成该英雄最大生命值10%（20%）的法术伤害（冷却1秒）。曜爆盾核心"
+        },
+        {
+            "name": "孙膑",
+            "img": "images/heroes/sunbin.png",
+            "desc": "场上棋子释放技能时，增加等级"
+        },
+        {
+            "name": "西施",
+            "img": "images/heroes/xishi.png",
+            "desc": "整备：获得1张推演战术。给曜减少蓝条"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"梦奇","img":"images/heroes/mengqi.png","isCore":false},
+        {"name":"老夫子","img":"images/heroes/laofuzi.png","isCore":false},
+        {"name":"庄周","img":"images/heroes/zhuangzhou.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
+        {"name":"不死鸟之眼","img":"images/equip/equipsmall/businiaozhiyan.png"},
+        {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"}
+    ],
+    "equipSecond": [
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"御灵之纱","img":"images/equip/equipsmall/yulingzhisha.png"}
+    ],
+    "talentTong": [
+        {"name": "复印机", "img": "images/talent/fuyinji.png"},
+        {"name": "微弱优势", "img": "images/talent/weiruyoushi.png"}
+    ],
+    "talentYin": [
+        {"name": "随机进化", "img": "images/talent/suijijinhua.png"},
+        {"name": "如法炮制", "img": "images/talent/ruifapaozhi.png"}
+    ],
+    "talentJin": [
+        {"name": "逐星", "img": "images/talent/zhuxing.png"},
+        {"name": "意外之财", "img": "images/talent/yiwaizhicai.png"}
+    ],
+    "effectCard": [
+        {"name": "传承","img":"images/effectcard/chuancheng.png"},
+        {"name": "遗志","img":"images/effectcard/yizhi.png"},
+        {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"曜","img":"images/heroes/yao.png"},
+                {"name":"孙膑","img":"images/heroes/sunbin.png"},
+                {"name":"牛魔","img":"images/heroes/niumeng.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"}
+            ],
+            "desc": "上阵棋子：曜、孙膑、牛魔、弈星\n战略决策选择基层提拔，打出合成曜、孙膑，打出牛魔吃牛肉，弈星上阵升级。\n第一轮拍卖：芈月>墨子>西施>白起"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"曜","img":"images/heroes/yao.png","isCore":true},
+                {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
+                {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+                {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+                {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+                {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
+                {"name":"西施","img":"images/heroes/xishi.png","isCore":false}
+            ],
+            "desc": "上阵棋子：曜、墨子、芈月、白起、扁鹊、孙膑、西施\n曜百级后，上4级找其他体系卡，特别是扁鹊，实现炸盾效果，如果天赋拿到逐星，上李白进化曜的技能后卖掉李白。第二个战略决策选择并购红利，至高决策选择投资回报、协同增效。\n第二轮拍卖：扁鹊>太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"曜","img":"images/heroes/yao.png","isCore":true},
+                {"name":"墨子","img":"images/heroes/mozi.png","isCore":false},
+                {"name":"芈月","img":"images/heroes/miyue.png","isCore":false},
+                {"name":"白起","img":"images/heroes/baiqi.png","isCore":false},
+                {"name":"扁鹊","img":"images/heroes/bianque.png","isCore":false},
+                {"name":"孙膑","img":"images/heroes/sunbin.png","isCore":false},
+                {"name":"西施","img":"images/heroes/xishi.png","isCore":false}
+            ],
+            "desc": "上阵棋子：曜、墨子、芈月、白起、扁鹊、孙膑、西施\n12回合后拉6本，开绝对压制，不断提高曜的质量，如没有逐星天赋，遗志传承找大哥提高阵容上限。\n第三轮拍卖：扶摇直上/能量超新星/破镜之证/众星拱月"
+        }
+    ],
+    "notice": [
+        "1、曜适配装备筑梦逐风、不死鸟之眼、凝渊，根据场上情况选择名刀、炽热支配者；",
+        "2、战略决策最优基层提拔、并购红利；",
+        "3、至高决策优选：投资回报、协同增效",
+        "4、阵容本身后期强度低，没有逐星吃烂分都有难度。"
+    ],
+    "positionImage": "images/position/62.jicengtibazhadunyao.png"
+}
+,
     {
     "id": 63,
     "name": "孙小宾999猪虎",
