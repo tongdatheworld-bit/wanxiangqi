@@ -5405,11 +5405,11 @@
     ],
     "talentTong": [
         {"name": "复印机", "img": "images/talent/fuyinji.png"},
-        {"name": "微弱优势", "img": "images/talent/weiruyoushi.png"}
+        {"name": "微弱优势", "img": "images/talent/weiruoyoushi.png"}
     ],
     "talentYin": [
         {"name": "随机进化", "img": "images/talent/suijijinhua.png"},
-        {"name": "如法炮制", "img": "images/talent/ruifapaozhi.png"}
+        {"name": "如法炮制", "img": "images/talent/rufapaozhi.png"}
     ],
     "talentJin": [
         {"name": "逐星", "img": "images/talent/zhuxing.png"},
@@ -5426,7 +5426,7 @@
             "heroList": [
                 {"name":"曜","img":"images/heroes/yao.png"},
                 {"name":"孙膑","img":"images/heroes/sunbin.png"},
-                {"name":"牛魔","img":"images/heroes/niumeng.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"}
             ],
             "desc": "上阵棋子：曜、孙膑、牛魔、弈星\n战略决策选择基层提拔，打出合成曜、孙膑，打出牛魔吃牛肉，弈星上阵升级。\n第一轮拍卖：芈月>墨子>西施>白起"
