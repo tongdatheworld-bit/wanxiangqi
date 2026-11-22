@@ -4889,7 +4889,7 @@
     "playerImg": "images/players/sunxiaobin.png",
     "alternatePlayer": ["明先生","小妲己"],
     "alternatePlayerImg": ["images/players/mingxiansheng.png","images/players/xiaodaji.png"],
-    "hard": "简单",
+    "hard": "中等",
     "lineupCode": "129536810758673424（点击复制）",
     "ban位": ["大河流域", "河洛", "三分之地", "日落海"],
     "heroList": [
@@ -4939,7 +4939,7 @@
     "equipFirst": [
         {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"},
         {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
-        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujiang.png"}
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"}
     ],
     "equipSecond": [
         {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
@@ -4948,11 +4948,11 @@
     ],
     "talentTong": [
         {"name": "复印机", "img": "images/talent/fuyinji.png"},
-        {"name": "微弱优势", "img": "images/talent/weiruyoushi.png"}
+        {"name": "微弱优势", "img": "images/talent/weiruoyoushi.png"}
     ],
     "talentYin": [
         {"name": "贤士登门", "img": "images/talent/xianshidengmen.png"},
-        {"name": "重装上阵", "img": "images/talent/chongzhuangshangzhen.png"}
+        {"name": "重装上阵", "img": "images/talent/zhongzhuangshangzhen.png"}
     ],
     "talentJin": [
         {"name": "春风化雨", "img": "images/talent/chunfenghuayu.png"},
@@ -4961,7 +4961,7 @@
     "effectCard": [
         {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
         {"name": "众星拱月","img":"images/effectcard/zhongxinggongyue.png"},
-        {"name": "武装重构","img":"images/effectcard/wuzhongchonggou.png"}
+        {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"}
     ],
     "runStage": [
         {
