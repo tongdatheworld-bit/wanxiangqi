@@ -5480,7 +5480,7 @@
     "ban位": ["河洛", "三分之地", "日落海", "大河流域", "逐鹿"],
     "heroList": [
         {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
-        {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+        {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
         {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
     ],
@@ -5507,7 +5507,7 @@
     "equipFirst": [
         {"name":"影牙","img":"images/equip/equipsmall/yingya.png"},
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
-        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujiang.png"}
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"}
     ],
     "equipSecond": [
         {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
@@ -5516,14 +5516,14 @@
     ],
     "talentTong": [
         {"name": "先苦后甜", "img": "images/talent/xiankuhoutian.png"},
-        {"name": "微弱优势", "img": "images/talent/weiruyoushi.png"}
+        {"name": "微弱优势", "img": "images/talent/weiruoyoushi.png"}
     ],
     "talentYin": [
         {"name": "协同一致", "img": "images/talent/xietongyizhi.png"},
         {"name": "中坚力量", "img": "images/talent/zhongjianliliang.png"}
     ],
     "talentJin": [
-        {"name": "四海来源", "img": "images/talent/sihaiyuanlai.png"},
+        {"name": "四海来源", "img": "images/talent/sihailaiyuan.png"},
         {"name": "强者恒强", "img": "images/talent/qiangzhehengqiang.png"}
     ],
     "effectCard": [
@@ -5544,7 +5544,7 @@
             "title": "4-11回合",
             "heroList": [
                 {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
-                {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+                {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
                 {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
                 {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
             ],
@@ -5554,7 +5554,7 @@
             "title": "12回合以后",
             "heroList": [
                 {"name":"猪八戒","img":"images/heroes/zhubajie.png","isCore":false},
-                {"name":"裴擒虎","img":"images/heroes/peiqinghu.png","isCore":true},
+                {"name":"裴擒虎","img":"images/heroes/peiqinhu.png","isCore":true},
                 {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
                 {"name":"阿轲","img":"images/heroes/ake.png","isCore":false}
             ],
