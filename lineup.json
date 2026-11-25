@@ -5102,7 +5102,7 @@
     "alternatePlayer": ["嬴律","明先生"],
     "alternatePlayerImg": ["images/players/yinglv.png","images/players/mingxiansheng.png"],
     "hard": "中等",
-    "lineupCode": "（点击复制）",
+    "lineupCode": "120529611504499876（点击复制）",
     "ban位": ["逐鹿", "大河流域", "三分之地"],
     "heroList": [
         {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
@@ -6881,23 +6881,133 @@
 },
     {
     "id": 72,
-    "name": "闹闹日落海整备  999",
-    "rank": "A",
+    "name": "闹闹日落海整备流",
+    "rank": "S",
     "player": "闹闹",
     "playerImg": "images/players/naonao.png",
+    "alternatePlayer": ["镜","嬴律"],
+    "alternatePlayerImg": ["images/players/jing.png","images/players/yinglv.png"],
     "hard": "简单",
-    "lineupCode": "5466384310749730（点击复制）",
-    "ban位": ["逐鹿", "三分之地", "日落海"],
+    "lineupCode": "54663845310749730（点击复制）",
+    "ban位": ["逐鹿", "河洛", "大河流域", "三分之地"],
     "heroList": [
-        {"name":"亚连","img":"images/heroes/yalian.png","isCore":true},
-        {"name":"安琪拉","img":"images/heroes/anqila.png","isCore":false},
         {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
-        {"name":"朵莉亚","img":"images/heroes/duoliya.png","isCore":false},
         {"name":"雅典娜","img":"images/heroes/yadianna.png","isCore":false},
+        {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":false},
+        {"name":"安琪拉","img":"images/heroes/anqila.png","isCore":true},
+        {"name":"朵莉亚","img":"images/heroes/duoliya.png","isCore":false},
+        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "雅典娜",
+            "img": "images/heroes/yadianna.png",
+            "desc": "雅典娜开团触发日落海整备英雄整备效果"
+        },
+        {
+            "name": "亚瑟",
+            "img": "images/heroes/yase.png",
+            "desc": "亚瑟驻场，打出日落海棋子，增加核心等级"
+        },
+        {
+            "name": "米莱狄",
+            "img": "images/heroes/milaidi.png",
+            "desc": "整备提高核心等级"
+        },
+        {
+            "name": "朵莉亚",
+            "img": "images/heroes/duoliya.png",
+            "desc": "整备中转站，当其他日落海英雄触发整备效果时进一步提高全队等级和核心等级"
+        },
+        {
+            "name": "海诺",
+            "img": "images/heroes/hainuo.png",
+            "desc": "核心等级提高时，进一步加速等级提高"
+        },
+        {
+            "name": "露娜",
+            "img": "images/heroes/luna.png",
+            "desc": "登场触发场上棋子整备效果。"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"亚连","img":"images/heroes/yalian.png","isCore":false},
+        {"name":"马可波罗","img":"images/heroes/makepoluo.png","isCore":false},
         {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
-        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false}
-    ]
-},
+        {"name":"狂铁","img":"images/heroes/kuangtie.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"虚无法杖","img":"images/equip/equipsmall/xuwufazhang.png"},
+        {"name":"法源之杯","img":"images/equip/equipsmall/fayuanzhibei.png"}
+    ],
+    "equipSecond": [
+        {"name":"名刀司命","img":"images/equip/equipsmall/mingdaosiming.png"},
+        {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"},
+        {"name":"痛苦面具","img":"images/equip/equipsmall/tongkumianju.png"}
+    ],
+    "talentTong": [
+        {"name": "日落海新援", "img": "images/talent/riluohaixinyuan.png"},
+        {"name": "复印机", "img": "images/talent/fuyinji.png"}
+    ],
+    "talentYin": [
+        {"name": "同路人", "img": "images/talent/tongluren.png"},
+        {"name": "能量改造", "img": "images/talent/nenglianggaizao.png"}
+    ],
+    "talentJin": [
+        {"name": "定向传输", "img": "images/talent/dingxiangchuanshu.png"},
+        {"name": "能量汲取", "img": "images/talent/nengliangjiqu.png"}
+    ],
+    "effectCard": [
+        {"name": "传承","img":"images/effectcard/chuancheng.png"},
+        {"name": "全军动员","img":"images/effectcard/quanjundongyuan.png"},
+        {"name": "扶摇直上","img":"images/effectcard/fuyaozhishang.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"狂铁","img":"images/heroes/kuangtie.png"},
+                {"name":"亚连","img":"images/heroes/yalian.png"}
+            ],
+            "desc": "上阵棋子：弈星、狂铁、亚连\n开局天赋选到日落海，每回合打出被动天赋牌，不断获取日落海棋子，利用天赋给的日落海棋子+弈星拉5级启动。\n第一轮拍卖：亚瑟>安琪拉>朵莉亚>亚连>米莱狄"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"亚瑟","img":"images/heroes/yase.png","isCore":false},
+                {"name":"米莱狄","img":"images/heroes/milaidi.png","isCore":false},
+                {"name":"安琪拉","img":"images/heroes/anqila.png","isCore":true},
+                {"name":"朵莉亚","img":"images/heroes/duoliya.png","isCore":false},
+                {"name":"雅典娜","img":"images/heroes/yadianna.png","isCore":false},
+                {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false}
+            ],
+            "desc": "上阵棋子：亚瑟、米莱狄、安琪拉、朵莉亚、雅典娜、海诺\n日落海棋子打工，快速拉5-6本，利用朋友多多和日落海天赋不断堆叠核心等级。\n第二轮拍卖：海诺>艾琳>露娜>太乙真人"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"雅典娜","img":"images/heroes/yadianna.png","isCore":false},
+                {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+                {"name":"安琪拉","img":"images/heroes/anqila.png","isCore":true},
+                {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
+                {"name":"艾琳","img":"images/heroes/ailin.png","isCore":false}
+            ],
+            "desc": "上阵棋子：雅典娜、海诺、安琪拉、露娜、艾琳\n后期核心等级到达1000左右，或者根据自身血量，传承掉场上战力弱的棋子，将核心等级集中在主T雅典娜，艾琳、海诺、露娜身上，并上场太乙真人、钟馗、瑶增加上限。\n第三轮拍卖：扶摇直上/众星闪耀/军械库"
+        }
+    ],
+    "notice": [
+        "1、全员觉醒配合亚瑟效果频繁打出阵容牌可以快速加阿米娅等级，后期海诺，艾琳，安琪拉都可主C跟据对面阵容和理想选主C，后期留两三个吃满阿米娅等级；",
+        "2、中期利用安琪拉和米莱迪作为主要战力打连胜；",
+        "3、利用马可波罗、亚瑟和整备英雄不断提高核心等级；",
+        "4、艾琳装备优先炽热，名刀，寒霜侵袭，其次金色圣剑，神器噬神之书、末世，主坦也可给极寒风暴给对面减速，灵活点看自己有的和对面特性看着给。",
+        "5、核心天赋：能量汲取、能量改造、定向传输"
+    ],
+    "positionImage": "images/position/72.naonaoriluohaizhengbeiliu.png"
+}
+,
     {
     "id": 73,
     "name": "闹闹大河龙蛇",
