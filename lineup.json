@@ -6933,7 +6933,7 @@
     ],
     "backupHeroList": [
         {"name":"亚连","img":"images/heroes/yalian.png","isCore":false},
-        {"name":"马可波罗","img":"images/heroes/makepoluo.png","isCore":false},
+        {"name":"马可波罗","img":"images/heroes/makeboluo.png","isCore":false},
         {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
         {"name":"狂铁","img":"images/heroes/kuangtie.png","isCore":false}
     ],
