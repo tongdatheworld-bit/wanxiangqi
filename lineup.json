@@ -5149,7 +5149,7 @@
         {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
     ],
     "equipFirst": [
-        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjian.png"},
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"},
         {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
         {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
     ],
@@ -5172,14 +5172,14 @@
     ],
     "effectCard": [
         {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
-        {"name": "全军整备","img":"images/effectcard/quanjunzhengbei.png"},
+        {"name": "全军动员","img":"images/effectcard/quanjundongyuan.png"},
         {"name": "唤醒","img":"images/effectcard/huanxing.png"}
     ],
     "runStage": [
         {
             "title": "1-3回合",
             "heroList": [
-                {"name":"牛魔","img":"images/heroes/niumow.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"苏烈","img":"images/heroes/sulie.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
                 {"name":"李元芳","img":"images/heroes/liyuanfang.png"}
