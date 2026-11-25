@@ -5095,23 +5095,134 @@
 ,
 {
     "id": 50,
-    "name": "庄小鱼无限复活木兰",
-    "rank": "A",
+    "name": "庄小鱼河洛花木兰",
+    "rank": "S",
     "player": "庄小鱼",
     "playerImg": "images/players/zhuangxiaoyu.png",
-    "hard": "简单",
-    "lineupCode": "120529611504499876（点击复制）",
-    "ban位": ["逐鹿", "大河流域", "三分"],
+    "alternatePlayer": ["嬴律","明先生"],
+    "alternatePlayerImg": ["images/players/yinglv.png","images/players/mingxiansheng.png"],
+    "hard": "中等",
+    "lineupCode": "（点击复制）",
+    "ban位": ["逐鹿", "大河流域", "三分之地"],
     "heroList": [
-        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
-        {"name":"海诺","img":"images/heroes/hainuo.png","isCore":false},
+        {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
         {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
         {"name":"李白","img":"images/heroes/libai.png","isCore":false},
-        {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
-        {"name":"露娜","img":"images/heroes/luna.png","isCore":false},
-        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false}
-    ]
-},
+        {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "上官婉儿",
+            "img": "images/heroes/shangguanwaner.png",
+            "desc": "觉醒后，整备提供6枚古币，为花木兰提供复活次数，为全队提供整体等级"
+        },
+        {
+            "name": "李白",
+            "img": "images/heroes/libai.png",
+            "desc": "古币提质，古币提供的临时等级增加，给花木兰更多临时战力，花木兰没来前的打工棋子"
+        },
+        {
+            "name": "程咬金",
+            "img": "images/heroes/chengyaojin.png",
+            "desc": "阵容主T，整备提供古币，为花木兰提供复活次数"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "降低对方主C临时等级"
+        },
+        {
+            "name": "武则天",
+            "img": "images/heroes/wuzetian.png",
+            "desc": "登场提供古币，为花木兰提供临时战力及复活次数"
+        },
+        {
+            "name": "露娜",
+            "img": "images/heroes/luna.png",
+            "desc": "登场触发上官婉儿和程咬金整备效果，为花木兰积累复活次数"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjian.png"},
+        {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"}
+    ],
+    "equipSecond": [
+        {"name":"魂灭灵冠","img":"images/equip/equipsmall/hunmielingguan.png"},
+        {"name":"机器头","img":"images/equip/equipsmall/jiqitou.png"},
+        {"name":"红蘑","img":"images/equip/equipsmall/hongmo.png"}
+    ],
+    "talentTong": [
+        {"name": "里程碑", "img": "images/talent/lichengbei.png"},
+        {"name": "三十而立", "img": "images/talent/sanshierli.png"}
+    ],
+    "talentYin": [
+        {"name": "人才济济", "img": "images/talent/rencaijiji.png"},
+        {"name": "终极复印机", "img": "images/talent/zhongjifuyinji.png"}
+    ],
+    "talentJin": [
+        {"name": "暴君归来", "img": "images/talent/baojunguilai.png"},
+        {"name": "魂灭灵冠", "img": "images/talent/hunmielingguan.png"}
+    ],
+    "effectCard": [
+        {"name": "集体唤醒","img":"images/effectcard/jitihuanxing.png"},
+        {"name": "全军整备","img":"images/effectcard/quanjunzhengbei.png"},
+        {"name": "唤醒","img":"images/effectcard/huanxing.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"牛魔","img":"images/heroes/niumow.png"},
+                {"name":"苏烈","img":"images/heroes/sulie.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"李元芳","img":"images/heroes/liyuanfang.png"}
+            ],
+            "desc": "上阵棋子：牛魔、苏烈、弈星、李元芳\n前三回合打连胜，保血量，上场2张河洛牌，第一轮拍卖拿一个河洛牌，直升5级。\n第一轮拍卖：程咬金>凯>钟馗>盾山"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+                {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+            ],
+            "desc": "上阵棋子：花木兰，上官婉儿，李白，武则天，程咬金，钟馗，露娜\n4回合开始，不D牌直升5级，5级时卖掉除苏烈、李元芳和第一轮拍卖拿到的河洛牌，三张河洛牌开启如梦似幻，凑齐阵容体系，不足的开D。直到凑齐体系，存露娜、整备、唤醒效果卡。\n第二轮拍卖：优先花木兰>婉儿>露娜>李白>武则天。"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":true},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+                {"name":"武则天","img":"images/heroes/wuzetian.png","isCore":false},
+                {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"露娜","img":"images/heroes/luna.png","isCore":false}
+            ],
+            "desc": "上阵棋子：花木兰，上官婉儿，李白，武则天，程咬金，钟馗，露娜\n第三轮拍卖：众星拱月（拉高花木兰等级）/破镜之证（拉高花木兰等级）/天籁琴音（婉儿没觉醒）/能量超新星（资源）/一线生机。\n12回合后的任务很简单，就是搜子弹，打子弹（给足花木兰复活次数够打赢对面），提升花木兰等级，优化装备，调站位。注意手里有梦幻商店，尽量在场上河洛体系都觉醒，上场露娜的时候打出，有概率获得露娜。"
+        }
+    ],
+    "notice": [
+        "1、木兰最优神器，魂灭灵冠、机器头、驱雷。",
+        "2、提高花木兰复活次数的资源有，露娜、唤醒、全员唤醒、整装待发、全员整备、太乙、河洛专属复活装备。",
+        "3、根据对手质量，判断要用多少资源就用多少资源，不要浪费。",
+        "4、花木兰没来前，先用李白打工，尽量少掉血。",
+        "5、熟练掌握庄小鱼套牌机制，3张河洛牌、6张河洛牌时打出如梦似幻，梦幻商店等场上有露娜时打出，最好体系都觉醒，如急需婉儿觉醒，也可以打出。"
+    ],
+    "positionImage": "images/position/50.zhuangxiaoyuheluohuamulan.png"
+}
+,
     {
     "id": 51,
     "name": "庄小鱼逐鹿蒙犽",
