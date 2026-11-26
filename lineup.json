@@ -3736,22 +3736,135 @@
 }
 ,
     {
-        "id": 31,
-        "name": "小妲己算盘",
-        "rank": "A",
-        "player": "小妲己",
-        "playerImg": "images/players/xiaodaji.png",
-        "hard": "中等",
-        "lineupCode": "32710035416721434（点击复制）",
-        "ban位": ["逐鹿", "河洛", "三分之地", "日落海", "大河"],
-        "heroList": [
-            {"name":"韩信","img":"images/heroes/hanxin.png","isCore":true},
-            {"name":"姜子牙","img":"images/heroes/jiangziya","isCore":false},
-            {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false},
-            {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false},
-            {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false}
-        ]
-    },
+    "id": 31,
+    "name": "阿离伞李信",
+    "rank": "S",
+    "player": "阿离",
+    "playerImg": "images/players/ali.png",
+    "alternatePlayer": [],
+    "alternatePlayerImg": [],
+    "hard": "中等",
+    "lineupCode": "（点击复制）",
+    "ban位": ["大河流域", "三分之地", "日落海", "逐鹿"],
+    "heroList": [
+        {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
+        {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+        {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+        {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+        {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+        {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false},
+        {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+    ],
+    "funcHeroList": [
+        {
+            "name": "明世隐",
+            "img": "images/heroes/mingshiyin.png",
+            "desc": "距离最近的英雄，临时等级中的2级可转化为永久等级。登场：可转化的等级+2。给李信加真实等级。"
+        },
+        {
+            "name": "钟馗",
+            "img": "images/heroes/zhongkui.png",
+            "desc": "自身及左右1格的英雄获得牺牲：击败者等级临时降低10%（20%）（每场战斗限1次）。"
+        },
+        {
+            "name": "铠",
+            "img": "images/heroes/kai.png",
+            "desc": "牺牲：你的【河洛】英雄获得5（10）临时等级。前期战力，后期牺牲给李信加等级。"
+        },
+        {
+            "name": "上官婉儿",
+            "img": "images/heroes/shangguanwaner.png",
+            "desc": "整备：随机对3（6）名不同【河洛】英雄使用1张古币。放钟馗旁边变牺牲送掉。"
+        },
+        {
+            "name": "花木兰",
+            "img": "images/heroes/huamulan.png",
+            "desc": "本回合每使用5张古币牌，获得1次复生（总复生次数：1）。牺牲：临时等级+10（20）。牺牲给李信加等级（后期副C）。"
+        },
+        {
+            "name": "太乙真人",
+            "img": "images/heroes/taiyizhenren.png",
+            "desc": "提供复活。放钟馗旁边变牺牲送掉。"
+        }
+    ],
+    "backupHeroList": [
+        {"name":"李白","img":"images/heroes/libai.png","isCore":false},
+        {"name":"程咬金","img":"images/heroes/chengyaojin.png","isCore":false},
+        {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false}
+    ],
+    "equipFirst": [
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjian.png"},
+        {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
+        {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"}
+    ],
+    "equipSecond": [
+        {"name":"筑梦逐风","img":"images/equip/equipsmall/zhumengzhufeng.png"},
+        {"name":"炽热支配者","img":"images/equip/equipsmall/chirezhipeizhe.png"},
+        {"name":"魔律之刃","img":"images/equip/equipsmall/moluzhiren.png"}
+    ],
+    "talentTong": [
+        {"name": "微弱优势", "img": "images/talent/weiruoyoushi.png"},
+        {"name": "复印机", "img": "images/talent/fuyinji.png"}
+    ],
+    "talentYin": [
+        {"name": "献祭之赐", "img": "images/talent/xianjizhici.png"},
+        {"name": "透支", "img": "images/talent/touzhi.png"}
+    ],
+    "talentJin": [
+        {"name": "暴君归来", "img": "images/talent/baojunguilai.png"},
+        {"name": "泉水", "img": "images/talent/quanshui.png"}
+    ],
+    "effectCard": [
+        {"name": "武装重构","img":"images/effectcard/wuzhongchonggou.png"},
+        {"name": "狂飙三倍速","img":"images/effectcard/kuangbiaosanbeisu.png"},
+        {"name": "移花接木","img":"images/effectcard/yihuajiemu.png"}
+    ],
+    "runStage": [
+        {
+            "title": "1-3回合",
+            "heroList": [
+                {"name":"牛魔","img":"images/heroes/niumow.png"},
+                {"name":"弈星","img":"images/heroes/yixing.png"},
+                {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"}
+            ],
+            "desc": "上阵棋子：牛魔、弈星、干将莫邪\n前三回合连胜，伞直接挂干将、尽快觉醒干将，如果前期能打出连胜，可以上牛魔吃牛肉，弈星上阵升级多给经验，1本多拿干将，留在2本打合成找遗志后续遗志给李信，实在找不到可以等红叶染枫直接转李信。\n第一轮拍卖：铠>明世隐>钟馗>程咬金>盾山"
+        },
+        {
+            "title": "4-11回合",
+            "heroList": [
+                {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "上阵棋子：李信、明世隐、钟馗、铠、上官婉儿、花木兰、太乙真人\n4-8回合继续找遗志，养干将等级，干将到100级以上后，开始拉等级，找体系卡，重点是上4本找到一张李信变阵。9回合后必须完成变阵，不然大概率暴毙。\n第二轮拍卖：李信>太乙真人>花木兰>杨玉环"
+        },
+        {
+            "title": "12回合以后",
+            "heroList": [
+                {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
+                {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
+                {"name":"钟馗","img":"images/heroes/zhongkui.png","isCore":false},
+                {"name":"铠","img":"images/heroes/kai.png","isCore":false},
+                {"name":"上官婉儿","img":"images/heroes/shangguanwaner.png","isCore":false},
+                {"name":"花木兰","img":"images/heroes/huamulan.png","isCore":false},
+                {"name":"太乙真人","img":"images/heroes/taiyizhenren.png","isCore":false}
+            ],
+            "desc": "上阵棋子：李信、明世隐、钟馗、铠、上官婉儿、花木兰、太乙真人\n体系构筑完成，不断通过李信击杀开伞，选择枫叶舞技能，调整装备与站位争取前三。\n第三轮拍卖：众星拱月/军械库/名刀/狂飙三倍速"
+        }
+    ],
+    "notice": [
+        "1、打出位留武则天、露娜触发古币给李信提等级。",
+        "2、钟馗是核心功能卡，能提供多2个牺牲词条。",
+        "3、李信装备推荐无尽巨剑+自然法杖+凝渊，备选筑梦逐风、炽热支配者、魔律之刃。",
+        "4、枫叶舞技能优先：枫华之刃/红枫疾舞/一叶双生/斗转星移/红叶染枫，6级大招选枫叶洪流。"
+    ],
+    "positionImage": "images/position/31.alilanxin.png"
+}
+,
     {
     "id": 32,
     "name": "小妲己雷霆战机",
