@@ -6341,7 +6341,7 @@
     ],
     "backupHeroList": [
         {"name":"明世隐","img":"images/heroes/mingshiyin.png","isCore":false},
-        {"name":"瑶","img":"images/heroes/yao.png","isCore":false}
+        {"name":"瑶","img":"images/heroes/yaomei.png","isCore":false}
     ],
     "equipFirst": [
         {"name":"霸者重铠","img":"images/equip/equipsmall/bazhezhongkai.png"},
