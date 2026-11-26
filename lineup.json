@@ -3815,7 +3815,7 @@
         {"name": "泉水", "img": "images/talent/quanshui.png"}
     ],
     "effectCard": [
-        {"name": "武装重构","img":"images/effectcard/wuzhongchonggou.png"},
+        {"name": "武装重构","img":"images/effectcard/wuzhuangchonggou.png"},
         {"name": "狂飙三倍速","img":"images/effectcard/kuangbiaosanbeisu.png"},
         {"name": "移花接木","img":"images/effectcard/yihuajiemu.png"}
     ],
@@ -3823,7 +3823,7 @@
         {
             "title": "1-3回合",
             "heroList": [
-                {"name":"牛魔","img":"images/heroes/niumow.png"},
+                {"name":"牛魔","img":"images/heroes/niumo.png"},
                 {"name":"弈星","img":"images/heroes/yixing.png"},
                 {"name":"干将莫邪","img":"images/heroes/ganjiangmoye.png"}
             ],
