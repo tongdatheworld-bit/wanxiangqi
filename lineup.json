@@ -3744,7 +3744,7 @@
     "alternatePlayer": [],
     "alternatePlayerImg": [],
     "hard": "中等",
-    "lineupCode": "'61985823627835400（点击复制）",
+    "lineupCode": "61985823627835400（点击复制）",
     "ban位": ["大河流域", "三分之地", "日落海", "逐鹿"],
     "heroList": [
         {"name":"李信","img":"images/heroes/lixin.png","isCore":true},
