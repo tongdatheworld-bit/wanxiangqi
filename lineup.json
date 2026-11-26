@@ -3793,7 +3793,7 @@
         {"name":"盾山","img":"images/heroes/dunshan.png","isCore":false}
     ],
     "equipFirst": [
-        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjian.png"},
+        {"name":"无尽巨剑","img":"images/equip/equipsmall/wujinjujian.png"},
         {"name":"凝渊","img":"images/equip/equipsmall/ningyuan.png"},
         {"name":"自然法杖","img":"images/equip/equipsmall/ziranfazhang.png"}
     ],
@@ -3861,7 +3861,7 @@
         "3、李信装备推荐无尽巨剑+自然法杖+凝渊，备选筑梦逐风、炽热支配者、魔律之刃。",
         "4、枫叶舞技能优先：枫华之刃/红枫疾舞/一叶双生/斗转星移/红叶染枫，6级大招选枫之洪流。"
     ],
-    "positionImage": "images/position/31.alilanxin.png"
+    "positionImage": "images/position/31.alisanlixin.png"
 }
 ,
     {
